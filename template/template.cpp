@@ -1,6 +1,6 @@
 /** ฅ^>ω<^ฅ author: serna37 */
 #ifdef LOCAL
-#include "template/debug.hpp"
+#include <template/debug.hpp>
 #else
 #define debug(...)
 #endif
