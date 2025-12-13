@@ -1,6 +1,6 @@
 #pragma once
 
-#include "template/inf.hpp"
+#include "library/other/inf.hpp"
 
 /**
  * 最小値モノイド
