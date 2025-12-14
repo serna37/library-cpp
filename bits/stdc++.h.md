@@ -59,7 +59,7 @@ data:
   path: bits/stdc++.h
   requiredBy:
   - template/template.cpp
-  timestamp: '2025-12-14 19:42:26+09:00'
+  timestamp: '2025-12-14 19:49:40+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bits/stdc++.h
