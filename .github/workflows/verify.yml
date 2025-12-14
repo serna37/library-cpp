@@ -13,6 +13,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        ref: gh-pages
+
+    - name: Update Pages Branch
+      run: |
+        git merge main
+
+    - uses: actions/checkout@v4
+      with:
+        ref: main
 
     - name: Set up Python
       uses: actions/setup-python@v4
