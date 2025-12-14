@@ -4,13 +4,13 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: template/template.cpp
-    title: template/template.cpp
+    title: "\u0E05^>\u03C9<^\u0E05"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: h
   _verificationStatusIcon: ':warning:'
   attributes:
-    document_title: "\u30AB\u30B9\u30BF\u30E0stdc++.h */"
+    document_title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
     links:
     - http://www.gnu.org/licenses/>.
   bundledCode: "#line 1 \"bits/stdc++.h\"\n// C++ includes used for precompiling -*-\
@@ -28,8 +28,8 @@ data:
     \ Public License and\n// a copy of the GCC Runtime Library Exception along with\
     \ this program;\n// see the files COPYING3 and COPYING.RUNTIME respectively. \
     \ If not, see\n// <http://www.gnu.org/licenses/>.\n\n/** @file stdc++.h\n *  This\
-    \ is an implementation file for a precompiled header.\n */\n\n/** @brief \u30AB\
-    \u30B9\u30BF\u30E0stdc++.h */\n#include <algorithm>\n#include <bitset>\n#include\
+    \ is an implementation file for a precompiled header.\n */\n\n/**\n * @brief \u30AB\
+    \u30B9\u30BF\u30E0stdc++.h\n */\n#include <algorithm>\n#include <bitset>\n#include\
     \ <complex>\n#include <deque>\n#include <iomanip>\n#include <iostream>\n#include\
     \ <limits.h>\n#include <map>\n#include <math.h>\n#include <numeric>\n#include\
     \ <queue>\n#include <set>\n#include <sstream>\n#include <stack>\n#include <string>\n\
@@ -50,7 +50,7 @@ data:
     \ copy of the GCC Runtime Library Exception along with this program;\n// see the\
     \ files COPYING3 and COPYING.RUNTIME respectively.  If not, see\n// <http://www.gnu.org/licenses/>.\n\
     \n/** @file stdc++.h\n *  This is an implementation file for a precompiled header.\n\
-    \ */\n\n/** @brief \u30AB\u30B9\u30BF\u30E0stdc++.h */\n#include <algorithm>\n\
+    \ */\n\n/**\n * @brief \u30AB\u30B9\u30BF\u30E0stdc++.h\n */\n#include <algorithm>\n\
     #include <bitset>\n#include <complex>\n#include <deque>\n#include <iomanip>\n\
     #include <iostream>\n#include <limits.h>\n#include <map>\n#include <math.h>\n\
     #include <numeric>\n#include <queue>\n#include <set>\n#include <sstream>\n#include\
@@ -61,7 +61,7 @@ data:
   path: bits/stdc++.h
   requiredBy:
   - template/template.cpp
-  timestamp: '2025-12-14 21:38:33+09:00'
+  timestamp: '2025-12-14 21:43:20+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bits/stdc++.h
@@ -69,5 +69,5 @@ layout: document
 redirect_from:
 - /library/bits/stdc++.h
 - /library/bits/stdc++.h.html
-title: "\u30AB\u30B9\u30BF\u30E0stdc++.h */"
+title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
 ---

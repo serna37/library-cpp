@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: library/other/inf.hpp
-    title: "INF\u5B9A\u6570 */"
+    title: "INF\u5B9A\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -13,13 +13,13 @@ data:
     document_title: "\u6700\u5C0F\u5024\u30E2\u30CE\u30A4\u30C9"
     links: []
   bundledCode: "#line 2 \"library/monoid/min.hpp\"\n\n#line 2 \"library/other/inf.hpp\"\
-    \n\n/** @brief INF\u5B9A\u6570 */\ntemplate <class T> constexpr T inf = 0;\ntemplate\
-    \ <> constexpr int inf<int> = 1e9;\ntemplate <> constexpr long long inf<long long>\
-    \ = 1e18;\n#line 4 \"library/monoid/min.hpp\"\n\n/**\n * \u6700\u5C0F\u5024\u30E2\
-    \u30CE\u30A4\u30C9\n * @brief \u6700\u5C0F\u5024\u30E2\u30CE\u30A4\u30C9\n */\n\
-    template <typename T> struct Mmin {\n    using value_type = T;\n    static constexpr\
-    \ T e = inf<T>;\n    static constexpr T op(const T &x, const T &y) noexcept {\n\
-    \        return min(x, y);\n    }\n};\n"
+    \n\n/**\n * @brief INF\u5B9A\u6570\n */\ntemplate <class T> constexpr T inf =\
+    \ 0;\ntemplate <> constexpr int inf<int> = 1e9;\ntemplate <> constexpr long long\
+    \ inf<long long> = 1e18;\n#line 4 \"library/monoid/min.hpp\"\n\n/**\n * \u6700\
+    \u5C0F\u5024\u30E2\u30CE\u30A4\u30C9\n * @brief \u6700\u5C0F\u5024\u30E2\u30CE\
+    \u30A4\u30C9\n */\ntemplate <typename T> struct Mmin {\n    using value_type =\
+    \ T;\n    static constexpr T e = inf<T>;\n    static constexpr T op(const T &x,\
+    \ const T &y) noexcept {\n        return min(x, y);\n    }\n};\n"
   code: "#pragma once\n\n#include \"library/other/inf.hpp\"\n\n/**\n * \u6700\u5C0F\
     \u5024\u30E2\u30CE\u30A4\u30C9\n * @brief \u6700\u5C0F\u5024\u30E2\u30CE\u30A4\
     \u30C9\n */\ntemplate <typename T> struct Mmin {\n    using value_type = T;\n\
@@ -30,7 +30,7 @@ data:
   isVerificationFile: false
   path: library/monoid/min.hpp
   requiredBy: []
-  timestamp: '2025-12-14 21:38:33+09:00'
+  timestamp: '2025-12-14 21:43:20+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/monoid/min.hpp

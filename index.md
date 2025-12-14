@@ -5,12 +5,12 @@ data:
     pages:
     - icon: ':warning:'
       path: bits/stdc++.h
-      title: "\u30AB\u30B9\u30BF\u30E0stdc++.h */"
+      title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - name: bundler
     pages:
     - icon: ':warning:'
       path: bundler/main.cpp
-      title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC */"
+      title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC"
   - name: library/datastruct
     pages:
     - icon: ':warning:'
@@ -25,15 +25,15 @@ data:
     pages:
     - icon: ':warning:'
       path: library/other/inf.hpp
-      title: "INF\u5B9A\u6570 */"
+      title: "INF\u5B9A\u6570"
   - name: template
     pages:
     - icon: ':warning:'
       path: template/debug.hpp
-      title: "debug\u51FA\u529B */"
+      title: "debug\u51FA\u529B"
     - icon: ':warning:'
       path: template/template.cpp
-      title: template/template.cpp
+      title: "\u0E05^>\u03C9<^\u0E05"
   verificationCategories: []
 layout: toppage
 ---

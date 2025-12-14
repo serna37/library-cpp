@@ -7,12 +7,11 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    document_title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC\
-      \ */"
+    document_title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC"
     links:
     - https://github.com/ZOI-dayo/cpp-bundler
-  bundledCode: "#line 1 \"bundler/main.cpp\"\n/** @brief C++\u30E9\u30A4\u30D6\u30E9\
-    \u30EA\u30D0\u30F3\u30C9\u30E9\u30FC */\n// https://github.com/ZOI-dayo/cpp-bundler\n\
+  bundledCode: "#line 1 \"bundler/main.cpp\"\n/**\n * @brief C++\u30E9\u30A4\u30D6\
+    \u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC\n */\n// https://github.com/ZOI-dayo/cpp-bundler\n\
     // \u3092Fork\u3057\u305F\u3082\u306E\n#include <algorithm>\n#include <cassert>\n\
     #include <deque>\n#include <filesystem>\n#include <fstream>\n#include <iostream>\n\
     #include <optional>\n#include <set>\n#include <stack>\n#include <string>\n#include\
@@ -82,8 +81,8 @@ data:
     \u3064\u304B\u308A\u307E\u305B\u3093\u3067\u3057\u305F\u3002\");\n    return 1;\n\
     \  }\n\n  set<Path> skip_target;\n  read_file(src_file, include_path, skip_target,\
     \ default_define_set);\n}\n"
-  code: "/** @brief C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC\
-    \ */\n// https://github.com/ZOI-dayo/cpp-bundler\n// \u3092Fork\u3057\u305F\u3082\
+  code: "/**\n * @brief C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC\
+    \n */\n// https://github.com/ZOI-dayo/cpp-bundler\n// \u3092Fork\u3057\u305F\u3082\
     \u306E\n#include <algorithm>\n#include <cassert>\n#include <deque>\n#include <filesystem>\n\
     #include <fstream>\n#include <iostream>\n#include <optional>\n#include <set>\n\
     #include <stack>\n#include <string>\n#include <unistd.h>\n\nusing namespace std;\n\
@@ -157,7 +156,7 @@ data:
   isVerificationFile: false
   path: bundler/main.cpp
   requiredBy: []
-  timestamp: '2025-12-14 21:38:33+09:00'
+  timestamp: '2025-12-14 21:43:20+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundler/main.cpp
@@ -165,5 +164,5 @@ layout: document
 redirect_from:
 - /library/bundler/main.cpp
 - /library/bundler/main.cpp.html
-title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC */"
+title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC"
 ---

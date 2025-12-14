@@ -7,12 +7,12 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    document_title: "debug\u51FA\u529B */"
+    document_title: "debug\u51FA\u529B"
     links:
     - https://zenn.dev/sassan/articles/19db660e4da0a4
-  bundledCode: "#line 2 \"template/debug.hpp\"\n\n/** @brief debug\u51FA\u529B */\n\
-    #include <cxxabi.h>\n#include <iostream>\n#include <map>\n#include <queue>\n#include\
-    \ <set>\n#include <stack>\nusing std::cerr;\nusing std::deque;\nusing std::map;\n\
+  bundledCode: "#line 2 \"template/debug.hpp\"\n\n/**\n * @brief debug\u51FA\u529B\
+    \n */\n#include <cxxabi.h>\n#include <iostream>\n#include <map>\n#include <queue>\n\
+    #include <set>\n#include <stack>\nusing std::cerr;\nusing std::deque;\nusing std::map;\n\
     using std::multiset;\nusing std::pair;\nusing std::priority_queue;\nusing std::queue;\n\
     using std::set;\nusing std::stack;\nusing std::string;\nusing std::tuple;\nusing\
     \ std::vector;\n// =====================================\n// \u533A\u5207\u308A\
@@ -128,10 +128,10 @@ data:
     \ \" << name << \"\\033[m => \";\n    _print(v);\n    _print_LF();\n}\n#define\
     \ debug(...) print(__VA_ARGS__, #__VA_ARGS__)\n// cpp_dump\n// https://zenn.dev/sassan/articles/19db660e4da0a4\n\
     // #include \"cpp-dump.hpp\"\n// #define debug(...) cpp_dump(__VA_ARGS__)\n"
-  code: "#pragma once\n\n/** @brief debug\u51FA\u529B */\n#include <cxxabi.h>\n#include\
-    \ <iostream>\n#include <map>\n#include <queue>\n#include <set>\n#include <stack>\n\
-    using std::cerr;\nusing std::deque;\nusing std::map;\nusing std::multiset;\nusing\
-    \ std::pair;\nusing std::priority_queue;\nusing std::queue;\nusing std::set;\n\
+  code: "#pragma once\n\n/**\n * @brief debug\u51FA\u529B\n */\n#include <cxxabi.h>\n\
+    #include <iostream>\n#include <map>\n#include <queue>\n#include <set>\n#include\
+    \ <stack>\nusing std::cerr;\nusing std::deque;\nusing std::map;\nusing std::multiset;\n\
+    using std::pair;\nusing std::priority_queue;\nusing std::queue;\nusing std::set;\n\
     using std::stack;\nusing std::string;\nusing std::tuple;\nusing std::vector;\n\
     // =====================================\n// \u533A\u5207\u308A\u6587\u5B57\u7CFB\
     \n// =====================================\n// array: \u30A4\u30F3\u30C7\u30C3\
@@ -250,7 +250,7 @@ data:
   isVerificationFile: false
   path: template/debug.hpp
   requiredBy: []
-  timestamp: '2025-12-14 21:38:33+09:00'
+  timestamp: '2025-12-14 21:43:20+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: template/debug.hpp
@@ -258,5 +258,5 @@ layout: document
 redirect_from:
 - /library/template/debug.hpp
 - /library/template/debug.hpp.html
-title: "debug\u51FA\u529B */"
+title: "debug\u51FA\u529B"
 ---
