@@ -28,7 +28,7 @@ data:
   isVerificationFile: false
   path: library/monoid/min.hpp
   requiredBy: []
-  timestamp: '2025-12-14 19:39:55+09:00'
+  timestamp: '2025-12-14 19:40:44+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/monoid/min.hpp
