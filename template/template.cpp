@@ -1,4 +1,7 @@
-/** ฅ^>ω<^ฅ author: serna37 */
+/**
+ * @brief ฅ^>ω<^ฅ
+ * @author: serna37
+ */
 #ifdef LOCAL
 #include <template/debug.hpp>
 #else
