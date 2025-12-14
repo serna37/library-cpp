@@ -18,7 +18,7 @@ jobs:
 
     - name: Update Pages Branch
       run: |
-        git merge main
+        git merge origin/main
 
     - uses: actions/checkout@v4
       with:
