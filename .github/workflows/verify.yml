@@ -18,6 +18,10 @@ jobs:
 
     - name: Update Pages Branch
       run: |
+        echo "テスト"
+        git branch -a
+        git branch -r
+        git status
         git merge origin/main
 
     - uses: actions/checkout@v4
