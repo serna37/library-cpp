@@ -14,18 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        ref: gh-pages
-
-    - name: Update Pages Branch
-      run: |
-        echo "テスト"
-        git branch -a
-        git branch -r
-        git status
-        git merge origin/main
-
-    - uses: actions/checkout@v4
-      with:
         ref: main
 
     - name: Set up Python
@@ -39,4 +27,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         YUKICODER_TOKEN: ${{ secrets.YUKICODER_TOKEN }}
         GH_PAT: ${{ secrets.GH_PAT }}
-      run: oj-verify all
+      run: git pull && oj-verify all
