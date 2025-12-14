@@ -32,9 +32,6 @@ data:
       path: template/debug.hpp
       title: template/debug.hpp
     - icon: ':warning:'
-      path: template/dummy.cpp
-      title: template/dummy.cpp
-    - icon: ':warning:'
       path: template/template.cpp
       title: template/template.cpp
   verificationCategories: []
