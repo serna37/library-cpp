@@ -1,4 +1,9 @@
-[![serna37](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Fserna37)](https://atcoder.jp/users/serna37)
+<!-- AtCoder -->
+<div>
+  <a href="https://atcoder.jp/users/serna37">
+    <img src="https://badgen.org/img/atcoder/serna37/rating/algorithm?style=flat&label=serna37" />
+  </a>
+</div>
 
 # C++ ライブラリ
 C++での競技プログラミング向けに構築した、アルゴリズムとデータ構造のライブラリです
