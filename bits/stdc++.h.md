@@ -10,6 +10,7 @@ data:
   _pathExtension: h
   _verificationStatusIcon: ':warning:'
   attributes:
+    document_title: "\u30AB\u30B9\u30BF\u30E0stdc++.h */"
     links:
     - http://www.gnu.org/licenses/>.
   bundledCode: "#line 1 \"bits/stdc++.h\"\n// C++ includes used for precompiling -*-\
@@ -27,12 +28,13 @@ data:
     \ Public License and\n// a copy of the GCC Runtime Library Exception along with\
     \ this program;\n// see the files COPYING3 and COPYING.RUNTIME respectively. \
     \ If not, see\n// <http://www.gnu.org/licenses/>.\n\n/** @file stdc++.h\n *  This\
-    \ is an implementation file for a precompiled header.\n */\n\n#include <algorithm>\n\
-    #include <bitset>\n#include <complex>\n#include <deque>\n#include <iomanip>\n\
-    #include <iostream>\n#include <limits.h>\n#include <map>\n#include <math.h>\n\
-    #include <numeric>\n#include <queue>\n#include <set>\n#include <sstream>\n#include\
-    \ <stack>\n#include <string>\n#include <tuple>\n#include <unordered_map>\n#include\
-    \ <unordered_set>\n#include <utility>\n#include <vector>\n\n"
+    \ is an implementation file for a precompiled header.\n */\n\n/** @brief \u30AB\
+    \u30B9\u30BF\u30E0stdc++.h */\n#include <algorithm>\n#include <bitset>\n#include\
+    \ <complex>\n#include <deque>\n#include <iomanip>\n#include <iostream>\n#include\
+    \ <limits.h>\n#include <map>\n#include <math.h>\n#include <numeric>\n#include\
+    \ <queue>\n#include <set>\n#include <sstream>\n#include <stack>\n#include <string>\n\
+    #include <tuple>\n#include <unordered_map>\n#include <unordered_set>\n#include\
+    \ <utility>\n#include <vector>\n\n"
   code: "// C++ includes used for precompiling -*- C++ -*-\n\n// Copyright (C) 2003-2023\
     \ Free Software Foundation, Inc.\n//\n// This file is part of the GNU ISO C++\
     \ Library.  This library is free\n// software; you can redistribute it and/or\
@@ -48,18 +50,18 @@ data:
     \ copy of the GCC Runtime Library Exception along with this program;\n// see the\
     \ files COPYING3 and COPYING.RUNTIME respectively.  If not, see\n// <http://www.gnu.org/licenses/>.\n\
     \n/** @file stdc++.h\n *  This is an implementation file for a precompiled header.\n\
-    \ */\n\n#include <algorithm>\n#include <bitset>\n#include <complex>\n#include\
-    \ <deque>\n#include <iomanip>\n#include <iostream>\n#include <limits.h>\n#include\
-    \ <map>\n#include <math.h>\n#include <numeric>\n#include <queue>\n#include <set>\n\
-    #include <sstream>\n#include <stack>\n#include <string>\n#include <tuple>\n#include\
-    \ <unordered_map>\n#include <unordered_set>\n#include <utility>\n#include <vector>\n\
-    \n"
+    \ */\n\n/** @brief \u30AB\u30B9\u30BF\u30E0stdc++.h */\n#include <algorithm>\n\
+    #include <bitset>\n#include <complex>\n#include <deque>\n#include <iomanip>\n\
+    #include <iostream>\n#include <limits.h>\n#include <map>\n#include <math.h>\n\
+    #include <numeric>\n#include <queue>\n#include <set>\n#include <sstream>\n#include\
+    \ <stack>\n#include <string>\n#include <tuple>\n#include <unordered_map>\n#include\
+    \ <unordered_set>\n#include <utility>\n#include <vector>\n\n"
   dependsOn: []
   isVerificationFile: false
   path: bits/stdc++.h
   requiredBy:
   - template/template.cpp
-  timestamp: '2025-12-14 19:55:47+09:00'
+  timestamp: '2025-12-14 21:38:33+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bits/stdc++.h
@@ -67,5 +69,5 @@ layout: document
 redirect_from:
 - /library/bits/stdc++.h
 - /library/bits/stdc++.h.html
-title: bits/stdc++.h
+title: "\u30AB\u30B9\u30BF\u30E0stdc++.h */"
 ---

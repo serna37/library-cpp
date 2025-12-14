@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: bits/stdc++.h
-    title: bits/stdc++.h
+    title: "\u30AB\u30B9\u30BF\u30E0stdc++.h */"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -24,7 +24,7 @@ data:
   isVerificationFile: false
   path: template/template.cpp
   requiredBy: []
-  timestamp: '2025-12-14 19:55:47+09:00'
+  timestamp: '2025-12-14 21:38:33+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: template/template.cpp

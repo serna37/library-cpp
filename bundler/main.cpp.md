@@ -7,16 +7,19 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
+    document_title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC\
+      \ */"
     links:
-    - "https://github.com/ZOI-dayo/cpp-bundler\u3092Fork\u3057\u307E\u3057\u305F"
-  bundledCode: "#line 1 \"bundler/main.cpp\"\n// https://github.com/ZOI-dayo/cpp-bundler\u3092\
-    Fork\u3057\u307E\u3057\u305F\n#include <algorithm>\n#include <cassert>\n#include\
-    \ <deque>\n#include <filesystem>\n#include <fstream>\n#include <iostream>\n#include\
-    \ <optional>\n#include <set>\n#include <stack>\n#include <string>\n#include <unistd.h>\n\
-    \nusing namespace std;\nnamespace fs = filesystem;\nusing Path = fs::path;\n\n\
-    // \u30D8\u30C3\u30C0\u30D5\u30A1\u30A4\u30EB\u306E\u7D76\u5BFE\u30D1\u30B9\u3092\
-    \u63A2\u3059\nPath lookup_header(const Path include_file, const Path current_file,\
-    \ const deque<Path>& include_path) {\n  assert(include_file.is_relative());\n\
+    - https://github.com/ZOI-dayo/cpp-bundler
+  bundledCode: "#line 1 \"bundler/main.cpp\"\n/** @brief C++\u30E9\u30A4\u30D6\u30E9\
+    \u30EA\u30D0\u30F3\u30C9\u30E9\u30FC */\n// https://github.com/ZOI-dayo/cpp-bundler\n\
+    // \u3092Fork\u3057\u305F\u3082\u306E\n#include <algorithm>\n#include <cassert>\n\
+    #include <deque>\n#include <filesystem>\n#include <fstream>\n#include <iostream>\n\
+    #include <optional>\n#include <set>\n#include <stack>\n#include <string>\n#include\
+    \ <unistd.h>\n\nusing namespace std;\nnamespace fs = filesystem;\nusing Path =\
+    \ fs::path;\n\n// \u30D8\u30C3\u30C0\u30D5\u30A1\u30A4\u30EB\u306E\u7D76\u5BFE\
+    \u30D1\u30B9\u3092\u63A2\u3059\nPath lookup_header(const Path include_file, const\
+    \ Path current_file, const deque<Path>& include_path) {\n  assert(include_file.is_relative());\n\
     \  assert(current_file.is_absolute());\n  assert(all_of(include_path.begin(),\
     \ include_path.end(), [](auto&& p) { return p.is_absolute(); }));\n  auto check_exist\
     \ = [&](Path p) {\n    cerr << p / include_file << endl;\n    if(fs::exists(p\
@@ -79,8 +82,9 @@ data:
     \u3064\u304B\u308A\u307E\u305B\u3093\u3067\u3057\u305F\u3002\");\n    return 1;\n\
     \  }\n\n  set<Path> skip_target;\n  read_file(src_file, include_path, skip_target,\
     \ default_define_set);\n}\n"
-  code: "// https://github.com/ZOI-dayo/cpp-bundler\u3092Fork\u3057\u307E\u3057\u305F\
-    \n#include <algorithm>\n#include <cassert>\n#include <deque>\n#include <filesystem>\n\
+  code: "/** @brief C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC\
+    \ */\n// https://github.com/ZOI-dayo/cpp-bundler\n// \u3092Fork\u3057\u305F\u3082\
+    \u306E\n#include <algorithm>\n#include <cassert>\n#include <deque>\n#include <filesystem>\n\
     #include <fstream>\n#include <iostream>\n#include <optional>\n#include <set>\n\
     #include <stack>\n#include <string>\n#include <unistd.h>\n\nusing namespace std;\n\
     namespace fs = filesystem;\nusing Path = fs::path;\n\n// \u30D8\u30C3\u30C0\u30D5\
@@ -153,7 +157,7 @@ data:
   isVerificationFile: false
   path: bundler/main.cpp
   requiredBy: []
-  timestamp: '2025-12-14 19:55:47+09:00'
+  timestamp: '2025-12-14 21:38:33+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundler/main.cpp
@@ -161,5 +165,5 @@ layout: document
 redirect_from:
 - /library/bundler/main.cpp
 - /library/bundler/main.cpp.html
-title: bundler/main.cpp
+title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC */"
 ---
