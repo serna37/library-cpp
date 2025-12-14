@@ -1,4 +1,6 @@
 #pragma once
+
+/** @brief debug出力 */
 #include <cxxabi.h>
 #include <iostream>
 #include <map>

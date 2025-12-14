@@ -26,6 +26,7 @@
  *  This is an implementation file for a precompiled header.
  */
 
+/** @brief カスタムstdc++.h */
 #include <algorithm>
 #include <bitset>
 #include <complex>

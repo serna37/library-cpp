@@ -4,6 +4,7 @@
 
 /**
  * 最小値モノイド
+ * @brief 最小値モノイド
  */
 template <typename T> struct Mmin {
     using value_type = T;

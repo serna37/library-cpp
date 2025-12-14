@@ -1,4 +1,6 @@
-// https://github.com/ZOI-dayo/cpp-bundlerをForkしました
+/** @brief C++ライブラリバンドラー */
+// https://github.com/ZOI-dayo/cpp-bundler
+// をForkしたもの
 #include <algorithm>
 #include <cassert>
 #include <deque>

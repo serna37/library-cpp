@@ -2,7 +2,7 @@
 
 /**
  * Segment Tree
- * @brief 1点更新 区間取得
+ * @brief Segment Tree 1点更新 区間取得
  */
 template <typename Monoid> struct SegTree {
     using M = Monoid;
