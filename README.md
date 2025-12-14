@@ -8,3 +8,4 @@ C++での競技プログラミング向けに構築した、アルゴリズム�
 - 私の[dotfiles](https://github.com/serna37/dotfiles/blob/master/cpp.zsh)中に、関連コマンドが作成されています
 - VerifyとPagesは[online-judge-tools/verification-helper](https://github.com/online-judge-tools/verification-helper/blob/master/README.ja.md)を使用
 
+
