@@ -1,11 +1,6 @@
 #pragma once
-
-#include "library/other/inf.hpp"
-
-/**
- * 最小値モノイド
- * @brief 最小値モノイド
- */
+#include "library/const.hpp"
+// 最小値モノイド
 template <typename T> struct Mmin {
     using value_type = T;
     static constexpr T e = inf<T>;
