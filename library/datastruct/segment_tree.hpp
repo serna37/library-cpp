@@ -1,7 +1,5 @@
 #pragma once
-
 /**
- * Segment Tree
  * @brief Segment Tree 1点更新 区間取得
  */
 template <typename Monoid> struct SegTree {
@@ -22,9 +20,11 @@ template <typename Monoid> struct SegTree {
     }
 
   public:
+    // サイズを入れて初期化
     SegTree(int n) : N(n) {
         init();
     }
+    // 元の配列を入れて初期化
     SegTree(const vector<T> &a) : N(a.size()) {
         init();
         for (int i = 0; i < N; ++i) node[i + size] = a[i];
@@ -33,18 +33,22 @@ template <typename Monoid> struct SegTree {
     T operator[](int i) {
         return node[i + size];
     }
+    // 全ての要素を取得
     vector<T> getall() {
         return {node.begin() + size, node.begin() + size + N};
     }
+    // i番目をxに変更
     void set(int i, const T &x) {
         node[i += size] = x;
         while (i >>= 1) update(i);
     }
+    // i番目にxを適用
     void act(int i, const T &x) {
         i += size;
         node[i] = M::op(node[i], x);
         while (i >>= 1) update(i);
     }
+    // 区間[l,r)を取得
     T prod(int l, int r) {
         T L = M::e, R = M::e;
         for (l += size, r += size; l < r; l >>= 1, r >>= 1) {
@@ -53,6 +57,7 @@ template <typename Monoid> struct SegTree {
         }
         return M::op(L, R);
     }
+    // 根を取得
     T top() {
         return node[1];
     }
