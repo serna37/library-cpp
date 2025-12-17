@@ -34,7 +34,7 @@ data:
     \ <limits.h>\n#include <map>\n#include <math.h>\n#include <numeric>\n#include\
     \ <queue>\n#include <set>\n#include <sstream>\n#include <stack>\n#include <string>\n\
     #include <tuple>\n#include <unordered_map>\n#include <unordered_set>\n#include\
-    \ <utility>\n#include <vector>\n\n"
+    \ <utility>\n#include <vector>\n#include <cassert>\n\n"
   code: "// C++ includes used for precompiling -*- C++ -*-\n\n// Copyright (C) 2003-2023\
     \ Free Software Foundation, Inc.\n//\n// This file is part of the GNU ISO C++\
     \ Library.  This library is free\n// software; you can redistribute it and/or\
@@ -55,13 +55,14 @@ data:
     #include <iostream>\n#include <limits.h>\n#include <map>\n#include <math.h>\n\
     #include <numeric>\n#include <queue>\n#include <set>\n#include <sstream>\n#include\
     \ <stack>\n#include <string>\n#include <tuple>\n#include <unordered_map>\n#include\
-    \ <unordered_set>\n#include <utility>\n#include <vector>\n\n"
+    \ <unordered_set>\n#include <utility>\n#include <vector>\n#include <cassert>\n\
+    \n"
   dependsOn: []
   isVerificationFile: false
   path: bits/stdc++.h
   requiredBy:
   - template/template.cpp
-  timestamp: '2025-12-14 21:43:20+09:00'
+  timestamp: '2025-12-17 23:43:16+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bits/stdc++.h
