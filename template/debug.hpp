@@ -1,5 +1,4 @@
 #pragma once
-
 /**
  * @brief debug出力
  */
