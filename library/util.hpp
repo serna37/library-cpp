@@ -45,6 +45,26 @@ auto divCeil = []<class T>(T a, T b) -> T {
 auto divFloor = []<class T>(T a, T b) -> T {
 	return a / b - (((a ^ b) < 0 and a % b != 0) ? 1 : 0);
 };
+// iをjで緩和 min
+template <typename T1, typename T2>
+    requires totally_ordered_with<T1, T2> && assignable_from<T1&, T2>
+inline bool chmin(T1& i, const T2 j) noexcept {
+    if (i > j) {
+        i = j;
+        return true;
+    }
+    return false;
+}
+// iをjで緩和 max
+template <typename T1, typename T2>
+    requires totally_ordered_with<T1, T2> && assignable_from<T1&, T2>
+inline bool chmax(T1& i, const T2 j) noexcept {
+    if (i < j) {
+        i = j;
+        return true;
+    }
+    return false;
+}
 // all match
 template <typename T, typename F> bool allMatch(vector<T> &v, F f) {
     return all_of(all(v), f);
@@ -88,6 +108,10 @@ template <typename T> void sort(vector<T> &v) {
 // ソート(大きい順)
 template <typename T> void sortRev(vector<T> &v) {
     sort(rall(v));
+}
+// リバース
+template <typename T> void reverse(vector<T> &v) {
+    reverse(all(v));
 }
 // 重複削除
 template <typename T> void distinct(vector<T> &v) {
