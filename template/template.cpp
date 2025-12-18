@@ -1,6 +1,7 @@
 /**
  * @brief ฅ^>ω<^ฅ
  * @author serna37
+ * @note https://serna37.github.io/library-cpp/
  */
 #ifdef LOCAL
 #include "template/debug.hpp"
