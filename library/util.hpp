@@ -7,6 +7,10 @@ using ll = long long;
 #define int long long
 #define all(x) begin(x), end(x)
 #define rall(x) rbegin(x), rend(x)
+template <typename Tp>
+using reverse_queue = priority_queue<Tp, vector<Tp>, greater<Tp>>;
+template <typename T>
+using vec2 = vector<vector<T>>;
 // 2次元配列
 template <typename T>
 inline vector<vector<T>> make_vec2(const int H, const int W, const T& init) {
@@ -117,6 +121,14 @@ template <typename T> void reverse(vector<T> &v) {
 template <typename T> void distinct(vector<T> &v) {
     sort(all(v));
     v.erase(unique(all(v)), v.end());
+}
+// set multisetでのerase
+template <typename T> void erase(set<T> &st, T &v) {
+    st.erase(st.find(v));
+}
+// set multisetでのerase
+template <typename T> void erase(multiset<T> &st, T &v) {
+    st.erase(st.find(v));
 }
 // 行列の転置
 template <typename T> vector<vector<T>> transpose(vector<vector<T>> G) {
