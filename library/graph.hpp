@@ -31,7 +31,7 @@ template <typename T> struct Graph {
         G[to].push_back({to, from, 1, -1});
     }
     // デバッグ表示
-    void debug() {
+    void dump() {
         for (int i = 0; i < (int)G.size(); ++i) {
             cerr << i << ": ";
             for (auto &&edge : G[i]) {
