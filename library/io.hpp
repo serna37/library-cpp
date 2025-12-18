@@ -10,14 +10,6 @@ template <typename T> inline istream &operator>>(istream &s, vector<T> &v) {
     }
     return s;
 }
-// Yes No 出力
-inline void yn(bool isok) {
-    cout << (isok ? "Yes" : "No") << endl;
-}
-// YES NO 出力
-inline void YN(bool isok) {
-    cout << (isok ? "YES" : "NO") << endl;
-}
 // cout << vectorで出力(1次元まで)
 template <typename T>
 inline ostream &operator<<(ostream &s, const vector<T> &v) {
@@ -35,4 +27,11 @@ template <typename T> void coutGrid(vector<vector<T>> &G) {
         cout << v;
     }
 }
-// TODO グラフのcinとか
+// Yes No 出力
+inline void yn(bool isok) {
+    cout << (isok ? "Yes" : "No") << endl;
+}
+// YES NO 出力
+inline void YN(bool isok) {
+    cout << (isok ? "YES" : "NO") << endl;
+}
