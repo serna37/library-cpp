@@ -13,8 +13,6 @@ using namespace std;
 #include "library/io.hpp"
 #include "library/const.hpp"
 #include "library/util.hpp"
-//#include "library/string.hpp"
-//#include "library/geo.hpp"
 int main() {
     cin.tie(0)->sync_with_stdio(0);
     cout << fixed << setprecision(20);
