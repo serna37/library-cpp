@@ -9,12 +9,12 @@ using ll = long long;
 #define rall(x) rbegin(x), rend(x)
 // 2次元配列
 template <typename T>
-inline vector<vector<T>> make_vec2(const size_t H, const size_t W, const T& init) {
+inline vector<vector<T>> make_vec2(const int H, const int W, const T& init) {
     return vector<vector<T>>(H, vector<T>(W, init));
 }
 // 2次元配列
 template <typename T>
-inline vector<vector<T>> make_vec2(const size_t H, const size_t W) {
+inline vector<vector<T>> make_vec2(const int H, const int W) {
     return vector<vector<T>>(H, vector<T>(W));
 }
 // int → char
