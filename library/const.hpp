@@ -15,8 +15,8 @@ constexpr int MAX_INT = 2e6;  // 基本long longを使用
 constexpr long long MAX = 2e6;
 constexpr double PI = acos(-1);
 // 下右上左 DRUL
-constexpr vector<int> dx = {0, 1, 0, -1};
-constexpr vector<int> dy = {1, 0, -1, 0};
+const vector<int> dx = {0, 1, 0, -1};
+const vector<int> dy = {1, 0, -1, 0};
 // 8方向
-constexpr vector<int> dx8 = {0, 1, 0, -1, 1, -1, 1, -1};
-constexpr vector<int> dy8 = {1, 0, -1, 0, 1, 1, -1, -1};
+const vector<int> dx8 = {0, 1, 0, -1, 1, -1, 1, -1};
+const vector<int> dy8 = {1, 0, -1, 0, 1, 1, -1, -1};
