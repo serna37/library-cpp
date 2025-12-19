@@ -151,3 +151,14 @@ inline vector<int> coordinate(vector<int> &A) {
     for (auto &&v : A) ++coordinate[v];
     return coordinate;
 }
+/**
+ * 順列全探索
+ * 順列の全パターン中でやりたい関数を入れる
+ * 例) permu(A, [&]() { cout << A; });
+ */
+template <typename T, typename F> inline void permu(vector<T> &A, F f) {
+    sort(A);
+    do {
+        f();
+    } while(next_permutation(all(A)));
+}
