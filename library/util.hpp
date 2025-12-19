@@ -45,6 +45,7 @@ auto divCeil = []<class T>(T a, T b) -> T {
 auto divFloor = []<class T>(T a, T b) -> T {
 	return a / b - (((a ^ b) < 0 and a % b != 0) ? 1 : 0);
 };
+// TODO 数値系 modとか階乗、素数、約数とか
 // iをjで緩和 min
 template <typename T1, typename T2>
     requires totally_ordered_with<T1, T2> && assignable_from<T1&, T2>
@@ -145,12 +146,16 @@ template <int N, typename T> inline auto unpack(vector<T> &&G) {
     }
     return res;
 }
+// TODO マージテク
 // 数直線上での個数になおす
 inline vector<int> coordinate(vector<int> &A) {
     vector<int> coordinate(MAX);
     for (auto &&v : A) ++coordinate[v];
     return coordinate;
 }
+// TODO 座標圧縮
+// TODO 転倒数
+// TODO 累積和系
 /**
  * 順列全探索 O(N!) Nは10〜12程度
  * 順列の全パターン中でやりたい関数を入れる
@@ -181,3 +186,4 @@ template <typename T> inline vector<vector<T>> search_bit(vector<T> &A) {
     }
     return res;
 }
+// TODO にぶたん系
