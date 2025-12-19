@@ -12,17 +12,6 @@ auto noneMatch = []<class T, class F>(vector<T> &v, F f) {
 auto anyMatch = []<class T, class F>(vector<T> &v, F f) {
     return any_of(all(v), f);
 };
-auto filter = []<class T, class F>(vector<T> &v, F f) {
-    vector<T> res;
-    for (auto &&e : v)
-        if (f(e)) res.push_back(e);
-    return res;
-};
-auto map = []<class T, class F>(vector<T> &v, F f) {
-    vector<T> res;
-    for (auto &&e : v) res.push_back(f(e));
-    return res;
-};
 auto sort_asc = []<class T>(vector<T> &v) { sort(all(v)); };
 auto sort_desc = []<class T>(vector<T> &v) { sort(rall(v)); };
 template <typename T> void reverse(vector<T> &v) {
