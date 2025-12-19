@@ -3,3 +3,4 @@
 -Wall
 -Wextra
 -Wshadow
+-Wno-unqualified-std-cast-call
