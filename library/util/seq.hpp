@@ -1,7 +1,11 @@
 #pragma once
 auto len = []<class T>(vector<T> &v) { return (int)v.size(); };
-auto min = []<class T>(vector<T> &v) { return *min_element(all(v)); };
-auto max = []<class T>(vector<T> &v) { return *max_element(all(v)); };
+template <typename T> T min(vector<T> &v) {
+    return *min_element(all(v));
+}
+template <typename T> T max(vector<T> &v) {
+    return *max_element(all(v));
+}
 auto sum = [](vector<long long> &v) { return accumulate(all(v), 0ll); };
 auto allMatch = []<class T, class F>(vector<T> &v, F f) {
     return all_of(all(v), f);
