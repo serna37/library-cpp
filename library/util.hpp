@@ -162,3 +162,22 @@ template <typename T, typename F> inline void permu(vector<T> &A, F f) {
         f();
     } while(next_permutation(all(A)));
 }
+/**
+ * bit全探索
+ * 集合Aの全パターンの部分集合を返す
+ * {1,2,3} -> {}, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}, {1,2,3}
+ */
+template <typename T> inline vector<vector<T>> bit(vector<T> &A) {
+    int N = A.size();
+    vector<vector<T>> res;
+    for (long long bit = 0; bit < (1ll << N); ++bit) {
+        vector<T> tmp;
+        for (int k = 0; k < N; ++k) {
+            if (bit & (1ll << k)) {
+                tmp.push_back(A[k]);
+            }
+        }
+        res.push_back(tmp);
+    }
+    return res;
+}
