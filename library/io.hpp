@@ -22,7 +22,7 @@ inline ostream &operator<<(ostream &s, const vector<T> &v) {
     return s;
 }
 // 行列を出力
-template <typename T> void coutGrid(vector<vector<T>> &G) {
+template <typename T> inline void coutGrid(vector<vector<T>> &G) {
     for (auto &&v : G) {
         cout << v;
     }
