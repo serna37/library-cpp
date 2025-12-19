@@ -5,7 +5,7 @@
  * 例) search_permu(A, [&](){cout << A;} );
  */
 auto search_permu = []<class T, class F>(vector<T> &A, F f) {
-    sort(A);
+    sort(A.begin(), A.end());
     do {
         f();
     } while (next_permutation(all(A)));
