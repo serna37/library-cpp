@@ -8,7 +8,7 @@ auto search_permu = []<class T, class F>(vector<T> &A, F f) {
     sort(A);
     do {
         f();
-    } while(next_permutation(all(A)));
+    } while (next_permutation(all(A)));
 };
 /**
  * bit全探索 O(2^N) Nは20前後

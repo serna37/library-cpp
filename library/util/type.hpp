@@ -1,12 +1,13 @@
 #pragma once
-template <typename T> using reverse_queue = priority_queue<T, vector<T>, greater<T>>;
+template <typename T>
+using reverse_queue = priority_queue<T, vector<T>, greater<T>>;
 template <typename T> using vec2 = vector<vector<T>>;
-auto make_vec2 = []<class T>(int H, int W, T &init) {
+template <typename T> vec2<T> make_vec2(int H, int W, T &init) {
     return vector<vector<T>>(H, vector<T>(W, init));
-};
-auto make_vec2 = []<class T>(int H, int W) {
+}
+template <typename T> vec2<T> make_vec2(int H, int W) {
     return vector<vector<T>>(H, vector<T>(W));
-};
+}
 char int_to_char(int x) {
     return (char)(x + '0');
 }

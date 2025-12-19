@@ -1,16 +1,8 @@
 #pragma once
-auto len = []<class T>(vector<T> &v) {
-    return (int)v.size();
-};
-auto min = []<class T>(vector<T> &v) {
-    return *min_element(all(v));
-};
-auto max = []<class T>(vector<T> &v) {
-    return *max_element(all(v));
-};
-auto sum = [](vector<long long> &v) {
-    return accumulate(all(v), 0ll);
-};
+auto len = []<class T>(vector<T> &v) { return (int)v.size(); };
+auto min = []<class T>(vector<T> &v) { return *min_element(all(v)); };
+auto max = []<class T>(vector<T> &v) { return *max_element(all(v)); };
+auto sum = [](vector<long long> &v) { return accumulate(all(v), 0ll); };
 auto allMatch = []<class T, class F>(vector<T> &v, F f) {
     return all_of(all(v), f);
 };
@@ -22,7 +14,8 @@ auto anyMatch = []<class T, class F>(vector<T> &v, F f) {
 };
 auto filter = []<class T, class F>(vector<T> &v, F f) {
     vector<T> res;
-    for (auto &&e : v) if (f(e)) res.push_back(e);
+    for (auto &&e : v)
+        if (f(e)) res.push_back(e);
     return res;
 };
 auto map = []<class T, class F>(vector<T> &v, F f) {
@@ -30,27 +23,23 @@ auto map = []<class T, class F>(vector<T> &v, F f) {
     for (auto &&e : v) res.push_back(f(e));
     return res;
 };
-auto sort_asc = []<class T>(vector<T> &v) {
-    sort(all(v));
-};
-auto sort_desc = []<class T>(vector<T> &v) {
-    sort(rall(v));
-};
-auto reverse = []<class T>(vector<T> &v) {
+auto sort_asc = []<class T>(vector<T> &v) { sort(all(v)); };
+auto sort_desc = []<class T>(vector<T> &v) { sort(rall(v)); };
+template <typename T> void reverse(vector<T> &v) {
     reverse(all(v));
-};
+}
 auto distinct = []<class T>(vector<T> &v) {
     sort(all(v));
     v.erase(unique(all(v)), v.end());
 };
 // setから要素削除
-auto erase = []<class T>(set<T> &st, T &v) {
+template <typename T> void erase(set<T> &st, T &v) {
     st.erase(st.find(v));
-};
+}
 // multisetから要素削除
-auto erase = []<class T>(multiset<T> &st, T &v) {
+template <typename T> void erase(multiset<T> &st, T &v) {
     st.erase(st.find(v));
-};
+}
 // 行列の転置
 auto transpose = []<class T>(vector<vector<T>> &G) {
     int H = G.size(), W = G[0].size();

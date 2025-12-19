@@ -9,12 +9,12 @@ template <typename T> struct Edge {
     T cost;
     int id;
     Edge(int from, int to, T cost = 1, int id = -1)
-        : from(from), to(to), cost(cost), id(id){};
+        : from(from), to(to), cost(cost), id(id) {};
 };
 // グラフ
 template <typename T> struct Graph {
     vector<vector<Edge<T>>> G;
-    Graph(int N) : G(N){};
+    Graph(int N) : G(N) {};
     vector<Edge<T>> operator[](T v) const {
         return G[v];
     }
@@ -42,7 +42,8 @@ template <typename T> struct Graph {
     }
 };
 // BFS bfs(G); bfs(G, vector<int>{0});
-template <typename T> vector<int> bfs(const Graph<T> &G, const vector<int> &starts = {0}) {
+template <typename T>
+vector<int> bfs(const Graph<T> &G, const vector<int> &starts = {0}) {
     queue<int> q;
     vector<int> dis(2e6, -1);
     for (auto &&v : starts) {
