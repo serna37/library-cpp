@@ -141,6 +141,15 @@ template <typename T> vector<vector<T>> transpose(vector<vector<T>> G) {
     }
     return _G;
 }
+// vector分割代入用。Gは破壊。auto [a,b]=unpack<2>(G);できる
+template <int N, typename T>
+auto unpack(vector<T> &&G) {
+    array<T, N> res;
+    for (int i = 0; i < N; ++i) {
+        res[i] = move(G[i]);
+    }
+    return res;
+}
 // 数直線上での個数になおす
 vector<int> coordinate(vector<int> &A) {
     vector<int> coordinate(MAX);
