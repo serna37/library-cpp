@@ -1,4 +1,11 @@
 #pragma once
+struct IoSetup {
+    IoSetup() {
+        cin.tie(0)->sync_with_stdio(0);
+        cout << fixed << setprecision(20);
+        cerr << fixed << setprecision(10);
+    }
+} iosetup;
 template <typename T> istream &operator>>(istream &s, vector<T> &v) {
     for (auto &&e : v) s >> e;
     return s;
