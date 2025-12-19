@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: bits
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: bits/stdc++.h
       title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - name: bundler
@@ -11,36 +11,63 @@ data:
     - icon: ':warning:'
       path: bundler/main.cpp
       title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC"
-  - name: library
-    pages:
-    - icon: ':warning:'
-      path: library/const.hpp
-      title: "\u5B9A\u6570"
-    - icon: ':warning:'
-      path: library/io.hpp
-      title: "IO\u95A2\u9023"
-    - icon: ':warning:'
-      path: library/util.hpp
-      title: "\u30E6\u30FC\u30C6\u30A3\u30EA\u30C6\u30A3"
   - name: library/datastruct
     pages:
     - icon: ':warning:'
       path: library/datastruct/segment_tree.hpp
       title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+  - name: library
+    pages:
+    - icon: ':warning:'
+      path: library/graph.hpp
+      title: "\u30B0\u30E9\u30D5"
   - name: library/monoid
     pages:
     - icon: ':warning:'
       path: library/monoid/min.hpp
       title: library/monoid/min.hpp
+  - name: library/util
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: library/util/common.hpp
+      title: "\u5171\u901A"
+    - icon: ':heavy_check_mark:'
+      path: library/util/const.hpp
+      title: "\u5B9A\u6570"
+    - icon: ':heavy_check_mark:'
+      path: library/util/io.hpp
+      title: "IO\u95A2\u9023"
+    - icon: ':heavy_check_mark:'
+      path: library/util/math.hpp
+      title: "\u6570\u5B66\u7CFB"
+    - icon: ':heavy_check_mark:'
+      path: library/util/search.hpp
+      title: "\u63A2\u7D22"
+    - icon: ':heavy_check_mark:'
+      path: library/util/seq.hpp
+      title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
+    - icon: ':heavy_check_mark:'
+      path: library/util/type.hpp
+      title: "\u578B"
+  - name: .
+    pages:
+    - icon: ':warning:'
+      path: main.cpp
+      title: main.cpp
   - name: template
     pages:
     - icon: ':warning:'
       path: template/debug.hpp
       title: "debug\u51FA\u529B"
-    - icon: ':warning:'
-      path: template/template.cpp
+    - icon: ':heavy_check_mark:'
+      path: template/template.hpp
       title: "\u0E05^>\u03C9<^\u0E05"
-  verificationCategories: []
+  verificationCategories:
+  - name: tests
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/template.test.cpp
+      title: tests/template.test.cpp
 layout: toppage
 ---
 <!-- AtCoder -->
@@ -57,4 +84,12 @@ C++での競技プログラミング向けに構築した、アルゴリズム�
 - 私の[dotfiles](https://github.com/serna37/dotfiles/blob/master/cpp.zsh)中に、関連コマンドが作成されています
 - VerifyとPagesは[online-judge-tools/verification-helper](https://github.com/online-judge-tools/verification-helper/blob/master/README.ja.md)を使用
 
-
+# 開発ルール
+- 必要な場合のみ、関数に説明コメントをつける
+  - 1行で済む場合は`// xxx`のスタイルで記載
+  - 複数行の場合、`Doxygen`で記載
+  - `[coc.nvim](https://github.com/neoclide/coc.nvim)`での予測変換で表示されることを意識する
+- 用意する関数は、種別ごとにファイル分けする
+- 依存は最小限にする
+- `template`使用はラムダ式のほうが記述量が少ないことが多いため、ラムダ優先で記述
+- できるだけテストする

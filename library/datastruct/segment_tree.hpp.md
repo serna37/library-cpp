@@ -91,7 +91,7 @@ data:
   isVerificationFile: false
   path: library/datastruct/segment_tree.hpp
   requiredBy: []
-  timestamp: '2025-12-17 23:43:16+09:00'
+  timestamp: '2025-12-19 22:18:23+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/datastruct/segment_tree.hpp

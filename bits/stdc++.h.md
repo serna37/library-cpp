@@ -3,12 +3,18 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: template/template.cpp
+    path: main.cpp
+    title: main.cpp
+  - icon: ':heavy_check_mark:'
+    path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/template.test.cpp
+    title: tests/template.test.cpp
   _isVerificationFailed: false
   _pathExtension: h
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
     links:
@@ -34,7 +40,7 @@ data:
     \ <limits.h>\n#include <map>\n#include <math.h>\n#include <numeric>\n#include\
     \ <queue>\n#include <set>\n#include <sstream>\n#include <stack>\n#include <string>\n\
     #include <tuple>\n#include <unordered_map>\n#include <unordered_set>\n#include\
-    \ <utility>\n#include <vector>\n#include <cassert>\n\n"
+    \ <utility>\n#include <vector>\n#include <array>\n#include <cassert>\n\n"
   code: "// C++ includes used for precompiling -*- C++ -*-\n\n// Copyright (C) 2003-2023\
     \ Free Software Foundation, Inc.\n//\n// This file is part of the GNU ISO C++\
     \ Library.  This library is free\n// software; you can redistribute it and/or\
@@ -55,16 +61,18 @@ data:
     #include <iostream>\n#include <limits.h>\n#include <map>\n#include <math.h>\n\
     #include <numeric>\n#include <queue>\n#include <set>\n#include <sstream>\n#include\
     \ <stack>\n#include <string>\n#include <tuple>\n#include <unordered_map>\n#include\
-    \ <unordered_set>\n#include <utility>\n#include <vector>\n#include <cassert>\n\
-    \n"
+    \ <unordered_set>\n#include <utility>\n#include <vector>\n#include <array>\n#include\
+    \ <cassert>\n\n"
   dependsOn: []
   isVerificationFile: false
   path: bits/stdc++.h
   requiredBy:
-  - template/template.cpp
-  timestamp: '2025-12-17 23:43:16+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  - template/template.hpp
+  - main.cpp
+  timestamp: '2025-12-19 22:18:23+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/template.test.cpp
 documentation_of: bits/stdc++.h
 layout: document
 redirect_from:
