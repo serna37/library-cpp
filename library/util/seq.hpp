@@ -3,32 +3,39 @@
 /**              配列・数列                 */
 /** ======================================= */
 #pragma once
-auto len = []<class T>(vector<T> &v) { return (int)v.size(); };
 template <typename T> T min(vector<T> &v) {
     return *min_element(all(v));
 }
 template <typename T> T max(vector<T> &v) {
     return *max_element(all(v));
 }
+auto len = []<class T>(vector<T> &v) { return (int)v.size(); };
 auto sum = [](vector<long long> &v) { return accumulate(all(v), 0ll); };
-auto allMatch = []<class T, class F>(vector<T> &v, F f) {
+auto countif = []<class T, class F>(T &v, F f) {
+    int cnt = 0;
+    for (auto &&e : v) {
+        if (f(e)) ++cnt;
+    }
+    return cnt;
+};
+auto all_match = []<class T, class F>(vector<T> &v, F f) {
     return all_of(all(v), f);
 };
-auto noneMatch = []<class T, class F>(vector<T> &v, F f) {
+auto none_match = []<class T, class F>(vector<T> &v, F f) {
     return none_of(all(v), f);
 };
-auto anyMatch = []<class T, class F>(vector<T> &v, F f) {
+auto any_match = []<class T, class F>(vector<T> &v, F f) {
     return any_of(all(v), f);
+};
+auto distinct = []<class T>(vector<T> &v) {
+    sort(all(v));
+    v.erase(unique(all(v)), v.end());
 };
 auto sort_asc = []<class T>(vector<T> &v) { sort(all(v)); };
 auto sort_desc = []<class T>(vector<T> &v) { sort(rall(v)); };
 template <typename T> void reverse(vector<T> &v) {
     reverse(all(v));
 }
-auto distinct = []<class T>(vector<T> &v) {
-    sort(all(v));
-    v.erase(unique(all(v)), v.end());
-};
 // setから要素削除
 template <typename T> void erase(set<T> &st, T &v) {
     st.erase(st.find(v));
@@ -49,8 +56,7 @@ auto transpose = []<class T>(vector<vector<T>> &G) {
     return _G;
 };
 /**
- * 分割代入できるようにする
- * Gは破壊。
+ * 分割代入できるようにする Gは破壊。
  * auto [a,b] = unpack<2>(move(G));
  */
 template <int N, typename T> auto unpack(vector<T> &&G) {

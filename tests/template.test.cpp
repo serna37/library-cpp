@@ -30,9 +30,9 @@ signed main() {
     // char_to_int
     assert(3 == char_to_int('3'));
     // toString
-    assert("3" == toString(3));
+    assert("3" == int_to_string(3));
     // toInteger
-    assert(3 == toInteger("3"));
+    assert(3 == string_to_int("3"));
     // ===== library/util/seq.hpp =====
     vector<int> v{1, 3, 2, 4, 5, 5};
     // len
@@ -44,11 +44,11 @@ signed main() {
     // sum
     assert(20 == sum(v));
     // allMatch
-    assert(allMatch(v, [](int x) { return x < 6; }));
+    assert(all_match(v, [](int x) { return x < 6; }));
     // nonMatch
-    assert(!noneMatch(v, [](int x) { return x < 6; }));
+    assert(!none_match(v, [](int x) { return x < 6; }));
     // anyMatch
-    assert(anyMatch(v, [](int x) { return x < 6; }));
+    assert(any_match(v, [](int x) { return x < 6; }));
     // sort_asc
     sort_asc(v);
     vector<int> asc{1, 2, 3, 4, 5, 5};
@@ -77,7 +77,7 @@ signed main() {
     assert(mst == mexp);
     // transpose
     int H = 4, W = 4;
-    vec2<int> G = make_vec2<int>(H, W);
+    vec2<int> G = make_vec2(H, W);
     int t = 0;
     for (auto &&r : G) {
         ++t;
@@ -106,11 +106,11 @@ signed main() {
     }
     // ===== library/util/math.hpp =====
     // divCeil
-    assert(2 == divCeil(5, 3));
-    assert(2 == divCeil(-5, -3));
+    assert(2 == div_ceil(5, 3));
+    assert(2 == div_ceil(-5, -3));
     // divFloor
-    assert(1 == divFloor(5, 3));
-    assert(1 == divFloor(-5, -3));
+    assert(1 == div_floor(5, 3));
+    assert(1 == div_floor(-5, -3));
     // ===== library/util/search.hpp =====
     // search_permu
     vector<int> permA{1, 2, 3};
