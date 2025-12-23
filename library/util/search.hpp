@@ -9,7 +9,7 @@
  * 例) search_permu(A, [&](){cout << A;} );
  */
 auto search_permu = []<class T, class F>(vector<T> &A, F f) {
-    sort(A.begin(), A.end());
+    sort(all(A));
     do {
         f();
     } while (next_permutation(all(A)));
@@ -33,4 +33,38 @@ auto search_bit = []<class T>(vector<T> &A) {
     }
     return res;
 };
-// TODO にぶたん系
+/**
+ * 整数上の二分探索
+ *     L R
+ * x x x o o o o
+ *       ↑ここを求める
+ * 条件：5 <= xなら、L=4, R=5
+ */
+auto search_bi = []<class F>(F f) {
+    long long L = 0, R = 1, MID = 0;
+    while (!f(R)) R <<= 1;
+    while (abs(R - L) > 1) {
+        MID = L + (R - L) / 2;
+        (f(MID) ? R : L) = MID;
+    }
+    return make_pair(L, R);
+};
+/**
+ * 実数上の二分探索
+ *     L R
+ * x x x o o o o
+ *       ↑ここを求める
+ * 条件：3.5 <= xなら、L=3.5, R=3.5 (LRの誤差がEPS内)
+ */
+auto search_bi_real = []<class F>(F f) {
+    double L = 0, R = 1, MID = 0;
+    while (!f(R)) R *= 2;
+    auto ABS = [&]() { return abs(R - L) > EPS; };
+    auto REL = [&]() { return abs(R - L) / max(R, L) > EPS; };
+    while (ABS() and REL()) {
+        MID = L + (R - L) / 2;
+        (f(MID) ? R : L) = MID;
+    }
+    return make_pair(L, R);
+};
+// TODO lower_boundとかのやつ
