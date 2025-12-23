@@ -15,5 +15,5 @@ using namespace std;
 #include "library/util/type.hpp"
 #include "library/util/const.hpp"
 #include "library/util/seq.hpp"
-#include "library/util/math.hpp"
+#include "library/util/number.hpp"
 #include "library/util/search.hpp"
