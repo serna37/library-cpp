@@ -1,3 +1,7 @@
+
+/** ======================================= */
+/**              配列・数列                 */
+/** ======================================= */
 #pragma once
 auto len = []<class T>(vector<T> &v) { return (int)v.size(); };
 template <typename T> T min(vector<T> &v) {

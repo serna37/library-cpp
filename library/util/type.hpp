@@ -1,3 +1,7 @@
+
+/** ======================================= */
+/**                 型                      */
+/** ======================================= */
 #pragma once
 template <typename T>
 using reverse_queue = priority_queue<T, vector<T>, greater<T>>;
