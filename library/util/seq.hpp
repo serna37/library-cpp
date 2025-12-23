@@ -84,6 +84,12 @@ vector<int> coordinate(vector<int> &A) {
     for (auto &&v : A) ++res[v];
     return res;
 }
-// TODO 座標圧縮
 // TODO 転倒数
+// 座標圧縮 圧縮後の種類数を返却
+auto zip_coordinate = []<class T>(vector<T> &A) {
+    vector<T> cvt = A;
+    distinct(cvt);
+    for (auto &v : A) v = lower_bound(all(cvt), v) - cvt.begin();
+    return (int)cvt.size();
+};
 // TODO 累積和系
