@@ -84,12 +84,23 @@ vector<int> coordinate(vector<int> &A) {
     for (auto &&v : A) ++res[v];
     return res;
 }
-// TODO 転倒数
 // 座標圧縮 圧縮後の種類数を返却
 auto zip_coordinate = []<class T>(vector<T> &A) {
     vector<T> cvt = A;
     distinct(cvt);
     for (auto &v : A) v = lower_bound(all(cvt), v) - cvt.begin();
     return (int)cvt.size();
+};
+// 転倒数 右に倒れるA_i > A_j (i < j)の回数
+auto inversion_number = []<class T>(vector<T> &A) {
+    auto sz = zip_coordinate(A);
+    vector<int> fwk(sz + 1);
+    long long inv = 0, N = A.size();
+    for (int i = 0; i < N; ++i) {
+        for (int f = sz; f; f -= f & -f) inv += fwk[f];
+        for (int f = A[i] + 1; f; f -= f & -f) inv -= fwk[f];
+        for (int f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];
+    }
+    return inv;
 };
 // TODO 累積和系
