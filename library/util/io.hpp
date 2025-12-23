@@ -16,17 +16,18 @@ template <typename T> istream &operator>>(istream &s, vector<T> &v) {
 }
 template <typename T> ostream &operator<<(ostream &s, vector<T> &v) {
     int i = 0;
-    for (auto &&e : v) {
-        if (i++) s << " ";
-        s << e;
-    }
-    s << endl;
+    for (auto &&e : v) s << (i++ ? " " : "") << e;
     return s;
 }
-// 行列を出力
-auto coutGrid = []<class T>(vector<vector<T>> &G) {
-    for (auto &&v : G) cout << v;
-};
+template <typename T> void print(vector<vector<T>> &G) {
+    for (auto &&v : G) cout << v << endl;
+}
+template <typename T, typename U> void print(pair<T, U> &p) {
+    cout << p.first << " " << p.second << endl;
+}
+template <typename T> void print(T &v) {
+    cout << v << endl;
+}
 void yn(bool o) {
     cout << (o ? "Yes" : "No") << endl;
 }
