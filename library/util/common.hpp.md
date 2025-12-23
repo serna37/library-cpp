@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: main.cpp
-    title: main.cpp
+    title: "\U0001F36A\U0001F9F8\U0001F43E"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
@@ -17,39 +17,28 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: '#line 2 "library/util/common.hpp"
-
-    #define int long long
-
-    #define all(x) begin(x), end(x)
-
-    #define rall(x) rbegin(x), rend(x)
-
-    auto chmin = []<class T>(T &i, T &j) { return i > j && (i = j, true); };
-
-    auto chmax = []<class T>(T &i, T &j) { return i < j && (i = j, true); };
-
-    '
-  code: '#pragma once
-
-    #define int long long
-
-    #define all(x) begin(x), end(x)
-
-    #define rall(x) rbegin(x), rend(x)
-
-    auto chmin = []<class T>(T &i, T &j) { return i > j && (i = j, true); };
-
-    auto chmax = []<class T>(T &i, T &j) { return i < j && (i = j, true); };
-
-    '
+  bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
+    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
+    \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
+    \  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
+    , line 187, in bundle\n    bundler.update(path)\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
+    , line 312, in update\n    raise BundleErrorAt(path, i + 1, \"#pragma once found\
+    \ in a non-first line\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
+    \ library/util/common.hpp: line 5: #pragma once found in a non-first line\n"
+  code: "\n/** ======================================= */\n/**              \u5171\
+    \u901A                       */\n/** ======================================= */\n\
+    #pragma once\n#define int long long\n#define all(x) begin(x), end(x)\n#define\
+    \ rall(x) rbegin(x), rend(x)\nauto chmin = []<class T>(T &i, T &j) { return i\
+    \ > j && (i = j, true); };\nauto chmax = []<class T>(T &i, T &j) { return i <\
+    \ j && (i = j, true); };\n"
   dependsOn: []
   isVerificationFile: false
   path: library/util/common.hpp
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2025-12-19 22:18:23+09:00'
+  timestamp: '2025-12-23 22:08:05+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp

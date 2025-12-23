@@ -14,8 +14,8 @@ data:
     path: library/util/io.hpp
     title: "IO\u95A2\u9023"
   - icon: ':heavy_check_mark:'
-    path: library/util/math.hpp
-    title: "\u6570\u5B66\u7CFB"
+    path: library/util/number.hpp
+    title: "\u6570\u306E\u6027\u8CEA"
   - icon: ':heavy_check_mark:'
     path: library/util/search.hpp
     title: "\u63A2\u7D22"
@@ -62,36 +62,36 @@ data:
     \    // ===== library/util/type.hpp =====\n    // int_to_char\n    assert('3'\
     \ == int_to_char(3));\n    // int_to_alph\n    assert('d' == int_to_alph(3));\n\
     \    // char_to_int\n    assert(3 == char_to_int('3'));\n    // toString\n   \
-    \ assert(\"3\" == toString(3));\n    // toInteger\n    assert(3 == toInteger(\"\
+    \ assert(\"3\" == int_to_string(3));\n    // toInteger\n    assert(3 == string_to_int(\"\
     3\"));\n    // ===== library/util/seq.hpp =====\n    vector<int> v{1, 3, 2, 4,\
     \ 5, 5};\n    // len\n    assert(6 == len(v));\n    // min\n    assert(1 == min(v));\n\
     \    // max\n    assert(5 == max(v));\n    // sum\n    assert(20 == sum(v));\n\
-    \    // allMatch\n    assert(allMatch(v, [](int x) { return x < 6; }));\n    //\
-    \ nonMatch\n    assert(!noneMatch(v, [](int x) { return x < 6; }));\n    // anyMatch\n\
-    \    assert(anyMatch(v, [](int x) { return x < 6; }));\n    // sort_asc\n    sort_asc(v);\n\
-    \    vector<int> asc{1, 2, 3, 4, 5, 5};\n    assert(v == asc);\n    // sort_desc\n\
-    \    sort_desc(v);\n    vector<int> desc{5, 5, 4, 3, 2, 1};\n    assert(v == desc);\n\
-    \    // reverse\n    reverse(v);\n    assert(v == asc);\n    // distinct\n   \
-    \ distinct(v);\n    vector<int> dis{1, 2, 3, 4, 5};\n    assert(v == dis);\n \
-    \   // erase (set)\n    set<int> st{1, 2, 3, 4, 5};\n    int val = 3;\n    erase(st,\
-    \ val);\n    set<int> exp{1, 2, 4, 5};\n    assert(st == exp);\n    // erase (multiset)\n\
-    \    multiset<int> mst{1, 2, 3, 4, 5};\n    erase(mst, val);\n    multiset<int>\
-    \ mexp{1, 2, 4, 5};\n    assert(mst == mexp);\n    // transpose\n    int H = 4,\
-    \ W = 4;\n    vec2<int> G = make_vec2<int>(H, W);\n    int t = 0;\n    for (auto\
-    \ &&r : G) {\n        ++t;\n        for (auto &&e : r) {\n            e = t++;\n\
-    \        }\n    }\n    auto P = transpose(G);\n    vec2<int> expP{\n        {1,\
-    \ 6, 11, 16}, {2, 7, 12, 17}, {3, 8, 13, 18}, {4, 9, 14, 19}};\n    assert(P ==\
-    \ expP);\n    // unpack\n    vec2<int> tmp{{1, 2}, {3, 4}};\n    auto [a, b] =\
-    \ unpack<2>(move(tmp));\n    vector<int> expa{1, 2};\n    vector<int> expb{3,\
-    \ 4};\n    assert(a == expa);\n    assert(b == expb);\n    // coordinate\n   \
-    \ vector<int> arr{2, 3, 5, 7, 11, 13};\n    vector<int> co = coordinate(arr);\n\
+    \    // allMatch\n    assert(all_match(v, [](int x) { return x < 6; }));\n   \
+    \ // nonMatch\n    assert(!none_match(v, [](int x) { return x < 6; }));\n    //\
+    \ anyMatch\n    assert(any_match(v, [](int x) { return x < 6; }));\n    // sort_asc\n\
+    \    sort_asc(v);\n    vector<int> asc{1, 2, 3, 4, 5, 5};\n    assert(v == asc);\n\
+    \    // sort_desc\n    sort_desc(v);\n    vector<int> desc{5, 5, 4, 3, 2, 1};\n\
+    \    assert(v == desc);\n    // reverse\n    reverse(v);\n    assert(v == asc);\n\
+    \    // distinct\n    distinct(v);\n    vector<int> dis{1, 2, 3, 4, 5};\n    assert(v\
+    \ == dis);\n    // erase (set)\n    set<int> st{1, 2, 3, 4, 5};\n    int val =\
+    \ 3;\n    erase(st, val);\n    set<int> exp{1, 2, 4, 5};\n    assert(st == exp);\n\
+    \    // erase (multiset)\n    multiset<int> mst{1, 2, 3, 4, 5};\n    erase(mst,\
+    \ val);\n    multiset<int> mexp{1, 2, 4, 5};\n    assert(mst == mexp);\n    //\
+    \ transpose\n    int H = 4, W = 4;\n    vec2<int> G = make_vec2(H, W);\n    int\
+    \ t = 0;\n    for (auto &&r : G) {\n        ++t;\n        for (auto &&e : r) {\n\
+    \            e = t++;\n        }\n    }\n    auto P = transpose(G);\n    vec2<int>\
+    \ expP{\n        {1, 6, 11, 16}, {2, 7, 12, 17}, {3, 8, 13, 18}, {4, 9, 14, 19}};\n\
+    \    assert(P == expP);\n    // unpack\n    vec2<int> tmp{{1, 2}, {3, 4}};\n \
+    \   auto [a, b] = unpack<2>(move(tmp));\n    vector<int> expa{1, 2};\n    vector<int>\
+    \ expb{3, 4};\n    assert(a == expa);\n    assert(b == expb);\n    // coordinate\n\
+    \    vector<int> arr{2, 3, 5, 7, 11, 13};\n    vector<int> co = coordinate(arr);\n\
     \    for (int k = 1; k < 13; ++k) {\n        int cnt =\n            k == 2 or\
     \ k == 3 or k == 5 or k == 7 or k == 11 or k == 13 ? 1 : 0;\n        assert(co[k]\
     \ == cnt);\n    }\n    // ===== library/util/math.hpp =====\n    // divCeil\n\
-    \    assert(2 == divCeil(5, 3));\n    assert(2 == divCeil(-5, -3));\n    // divFloor\n\
-    \    assert(1 == divFloor(5, 3));\n    assert(1 == divFloor(-5, -3));\n    //\
-    \ ===== library/util/search.hpp =====\n    // search_permu\n    vector<int> permA{1,\
-    \ 2, 3};\n    vec2<int> permB;\n    search_permu(permA, [&]() { permB.push_back(permA);\
+    \    assert(2 == div_ceil(5, 3));\n    assert(2 == div_ceil(-5, -3));\n    //\
+    \ divFloor\n    assert(1 == div_floor(5, 3));\n    assert(1 == div_floor(-5, -3));\n\
+    \    // ===== library/util/search.hpp =====\n    // search_permu\n    vector<int>\
+    \ permA{1, 2, 3};\n    vec2<int> permB;\n    search_permu(permA, [&]() { permB.push_back(permA);\
     \ });\n    vec2<int> expPermB{{1, 2, 3}, {1, 3, 2}, {2, 1, 3},\n             \
     \          {2, 3, 1}, {3, 1, 2}, {3, 2, 1}};\n    assert(permB == expPermB);\n\
     \    // search_bit\n    vector<int> bitA{1, 2, 3};\n    vec2<int> bitB = search_bit(bitA);\n\
@@ -105,12 +105,12 @@ data:
   - library/util/type.hpp
   - library/util/const.hpp
   - library/util/seq.hpp
-  - library/util/math.hpp
+  - library/util/number.hpp
   - library/util/search.hpp
   isVerificationFile: true
   path: tests/template.test.cpp
   requiredBy: []
-  timestamp: '2025-12-19 22:18:23+09:00'
+  timestamp: '2025-12-23 22:08:05+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/template.test.cpp

@@ -38,8 +38,8 @@ data:
       path: library/util/io.hpp
       title: "IO\u95A2\u9023"
     - icon: ':heavy_check_mark:'
-      path: library/util/math.hpp
-      title: "\u6570\u5B66\u7CFB"
+      path: library/util/number.hpp
+      title: "\u6570\u306E\u6027\u8CEA"
     - icon: ':heavy_check_mark:'
       path: library/util/search.hpp
       title: "\u63A2\u7D22"
@@ -53,7 +53,7 @@ data:
     pages:
     - icon: ':warning:'
       path: main.cpp
-      title: main.cpp
+      title: "\U0001F36A\U0001F9F8\U0001F43E"
   - name: template
     pages:
     - icon: ':warning:'
@@ -88,7 +88,7 @@ C++での競技プログラミング向けに構築した、アルゴリズム�
 - 必要な場合のみ、関数に説明コメントをつける
   - 1行で済む場合は`// xxx`のスタイルで記載
   - 複数行の場合、`Doxygen`で記載
-  - `[coc.nvim](https://github.com/neoclide/coc.nvim)`での予測変換で表示されることを意識する
+  - [`coc.nvim`](https://github.com/neoclide/coc.nvim)での予測変換で表示されることを意識する
 - 用意する関数は、種別ごとにファイル分けする
 - 依存は最小限にする
 - `template`使用はラムダ式のほうが記述量が少ないことが多いため、ラムダ優先で記述
