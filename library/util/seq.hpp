@@ -58,7 +58,26 @@ template <int N, typename T> auto unpack(vector<T> &&G) {
     for (int i = 0; i < N; ++i) res[i] = move(G[i]);
     return res;
 }
-// TODO マージテク
+// AをBにマージテク vector
+template <typename T> void merge(vector<T> &A, vector<T> &B) {
+    if (A.size() > B.size()) swap(A, B);
+    for (auto &&v : A) B.push_back(v);
+    A.clear();
+}
+// AをBにマージテク set
+template <typename T> void merge(set<T> &A, set<T> &B) {
+    if (A.size() > B.size()) swap(A, B);
+    for (auto &&v : A) B.insert(v);
+    A.clear();
+}
+// AをBにマージテク マージ操作をラムダ化
+template <typename T, typename F> void merge(T &A, T &B, F f) {
+    if (A.size() > B.size()) swap(A, B);
+    for (auto &&v : A) {
+        f(B, v);
+    }
+    A.clear();
+}
 // 数直線上での個数になおす
 vector<int> coordinate(vector<int> &A) {
     vector<int> res(MAX);
