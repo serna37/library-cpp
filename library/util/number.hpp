@@ -3,7 +3,7 @@
 /**           数の性質                      */
 /** ======================================= */
 #pragma once
-struct Number {
+class Number {
   private:
     // mod階乗のメモ配列
     vector<long long> _mf;

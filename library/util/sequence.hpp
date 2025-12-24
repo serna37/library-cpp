@@ -3,7 +3,7 @@
 /**              配列・数列                 */
 /** ======================================= */
 #pragma once
-struct Sequence {
+class Sequence {
     template <typename T> T min(const vector<T> &v) {
         return *min_element(all(v));
     }
