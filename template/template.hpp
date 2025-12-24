@@ -14,6 +14,11 @@ using namespace std;
 #include "library/def/io.hpp"
 #include "library/def/type.hpp"
 #include "library/def/const.hpp"
-#include "library/util/seq.hpp"
+#include "library/util/sequence.hpp"
 #include "library/util/number.hpp"
 #include "library/util/search.hpp"
+namespace lib {
+Number num;
+Sequence seq;
+Search search;
+}; // namespace lib
