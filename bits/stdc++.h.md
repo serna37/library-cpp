@@ -5,16 +5,16 @@ data:
   - icon: ':warning:'
     path: main.cpp
     title: "\U0001F36A\U0001F9F8\U0001F43E"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/template.test.cpp
     title: tests/template.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: h
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     document_title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
     links:
@@ -69,8 +69,8 @@ data:
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2025-12-23 22:08:05+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2025-12-24 17:14:06+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/template.test.cpp
 documentation_of: bits/stdc++.h

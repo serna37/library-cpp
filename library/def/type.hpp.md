@@ -5,16 +5,16 @@ data:
   - icon: ':warning:'
     path: main.cpp
     title: "\U0001F36A\U0001F9F8\U0001F43E"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/template.test.cpp
     title: tests/template.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -25,26 +25,30 @@ data:
     , line 187, in bundle\n    bundler.update(path)\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 312, in update\n    raise BundleErrorAt(path, i + 1, \"#pragma once found\
     \ in a non-first line\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
-    \ library/util/const.hpp: line 5: #pragma once found in a non-first line\n"
-  code: "\n/** ======================================= */\n/**              \u5B9A\
-    \u6570                       */\n/** ======================================= */\n\
-    #pragma once\nconst long long INF = 1e18;\nconst long long MAX = 2e6;\nconst long\
-    \ long MOD = 998244353;\nconst long long MOD7 = 1e9 + 7;\nconst long double EPS\
-    \ = 1e-14;\nconst double PI = acos(-1);\n// \u4E0B\u53F3\u4E0A\u5DE6 DRUL\nconst\
-    \ vector<int> dx = {0, 1, 0, -1};\nconst vector<int> dy = {1, 0, -1, 0};\n// 8\u65B9\
-    \u5411\nconst vector<int> dx8 = {0, 1, 0, -1, 1, -1, 1, -1};\nconst vector<int>\
-    \ dy8 = {1, 0, -1, 0, 1, 1, -1, -1};\n"
+    \ library/def/type.hpp: line 5: #pragma once found in a non-first line\n"
+  code: "\n/** ======================================= */\n/**                 \u578B\
+    \                      */\n/** ======================================= */\n#pragma\
+    \ once\ntemplate <typename T>\nusing reverse_queue = priority_queue<T, vector<T>,\
+    \ greater<T>>;\ntemplate <typename T> using vec2 = vector<vector<T>>;\nvec2<int>\
+    \ make_vec2(int H, int W, int init = 0) {\n    return vector<vector<int>>(H, vector<int>(W,\
+    \ init));\n}\nchar int_to_char(int x) {\n    return (char)(x + '0');\n}\nchar\
+    \ int_to_alph(int x) {\n    return (char)(x + 'a');\n}\nint char_to_int(char c)\
+    \ {\n    return (int)(c - '0');\n}\nstring int_to_string(long long x) {\n    return\
+    \ to_string(x);\n}\nlong long string_to_int(string s) {\n    return stoll(s);\n\
+    }\n"
   dependsOn: []
   isVerificationFile: false
-  path: library/util/const.hpp
+  path: library/def/type.hpp
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2025-12-23 22:08:05+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2025-12-24 17:14:06+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/template.test.cpp
-documentation_of: library/util/const.hpp
+documentation_of: library/def/type.hpp
 layout: document
-title: "\u5B9A\u6570"
+title: "\u578B"
 ---
+
+型のエイリアスや、型変換などをまとめる

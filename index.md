@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: bits
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: bits/stdc++.h
       title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - name: bundler
@@ -16,6 +16,20 @@ data:
     - icon: ':warning:'
       path: library/datastruct/segment_tree.hpp
       title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+  - name: library/def
+    pages:
+    - icon: ':x:'
+      path: library/def/common.hpp
+      title: "\u5171\u901A"
+    - icon: ':x:'
+      path: library/def/const.hpp
+      title: "\u5B9A\u6570"
+    - icon: ':x:'
+      path: library/def/io.hpp
+      title: "IO\u95A2\u9023"
+    - icon: ':x:'
+      path: library/def/type.hpp
+      title: "\u578B"
   - name: library
     pages:
     - icon: ':warning:'
@@ -28,27 +42,15 @@ data:
       title: library/monoid/min.hpp
   - name: library/util
     pages:
-    - icon: ':heavy_check_mark:'
-      path: library/util/common.hpp
-      title: "\u5171\u901A"
-    - icon: ':heavy_check_mark:'
-      path: library/util/const.hpp
-      title: "\u5B9A\u6570"
-    - icon: ':heavy_check_mark:'
-      path: library/util/io.hpp
-      title: "IO\u95A2\u9023"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/util/number.hpp
       title: "\u6570\u306E\u6027\u8CEA"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/util/search.hpp
       title: "\u63A2\u7D22"
-    - icon: ':heavy_check_mark:'
-      path: library/util/seq.hpp
+    - icon: ':x:'
+      path: library/util/sequence.hpp
       title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
-    - icon: ':heavy_check_mark:'
-      path: library/util/type.hpp
-      title: "\u578B"
   - name: .
     pages:
     - icon: ':warning:'
@@ -59,13 +61,13 @@ data:
     - icon: ':warning:'
       path: template/debug.hpp
       title: "debug\u51FA\u529B"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: template/template.hpp
       title: "\u0E05^>\u03C9<^\u0E05"
   verificationCategories:
   - name: tests
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/template.test.cpp
       title: tests/template.test.cpp
 layout: toppage

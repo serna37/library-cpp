@@ -5,16 +5,16 @@ data:
   - icon: ':warning:'
     path: main.cpp
     title: "\U0001F36A\U0001F9F8\U0001F43E"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/template.test.cpp
     title: tests/template.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -25,24 +25,24 @@ data:
     , line 187, in bundle\n    bundler.update(path)\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 312, in update\n    raise BundleErrorAt(path, i + 1, \"#pragma once found\
     \ in a non-first line\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
-    \ library/util/common.hpp: line 5: #pragma once found in a non-first line\n"
+    \ library/def/common.hpp: line 5: #pragma once found in a non-first line\n"
   code: "\n/** ======================================= */\n/**              \u5171\
     \u901A                       */\n/** ======================================= */\n\
     #pragma once\n#define int long long\n#define all(x) begin(x), end(x)\n#define\
-    \ rall(x) rbegin(x), rend(x)\nauto chmin = []<class T>(T &i, T &j) { return i\
-    \ > j && (i = j, true); };\nauto chmax = []<class T>(T &i, T &j) { return i <\
-    \ j && (i = j, true); };\n"
+    \ rall(x) rbegin(x), rend(x)\nauto chmin = []<class T>(T &i, const T &j) { return\
+    \ i > j && (i = j, true); };\nauto chmax = []<class T>(T &i, const T &j) { return\
+    \ i < j && (i = j, true); };\n"
   dependsOn: []
   isVerificationFile: false
-  path: library/util/common.hpp
+  path: library/def/common.hpp
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2025-12-23 22:08:05+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2025-12-24 17:14:06+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/template.test.cpp
-documentation_of: library/util/common.hpp
+documentation_of: library/def/common.hpp
 layout: document
 title: "\u5171\u901A"
 ---

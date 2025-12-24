@@ -1,38 +1,38 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
-  - icon: ':heavy_check_mark:'
-    path: library/util/common.hpp
+  - icon: ':x:'
+    path: library/def/common.hpp
     title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
-    path: library/util/const.hpp
+  - icon: ':x:'
+    path: library/def/const.hpp
     title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
-    path: library/util/io.hpp
+  - icon: ':x:'
+    path: library/def/io.hpp
     title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
+    path: library/def/type.hpp
+    title: "\u578B"
+  - icon: ':x:'
     path: library/util/number.hpp
     title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/util/search.hpp
     title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: library/util/seq.hpp
+  - icon: ':x:'
+    path: library/util/sequence.hpp
     title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
-    path: library/util/type.hpp
-    title: "\u578B"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
@@ -100,18 +100,18 @@ data:
   dependsOn:
   - template/template.hpp
   - bits/stdc++.h
-  - library/util/common.hpp
-  - library/util/io.hpp
-  - library/util/type.hpp
-  - library/util/const.hpp
-  - library/util/seq.hpp
+  - library/def/common.hpp
+  - library/def/io.hpp
+  - library/def/type.hpp
+  - library/def/const.hpp
+  - library/util/sequence.hpp
   - library/util/number.hpp
   - library/util/search.hpp
   isVerificationFile: true
   path: tests/template.test.cpp
   requiredBy: []
-  timestamp: '2025-12-23 22:08:05+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2025-12-24 17:14:06+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/template.test.cpp
 layout: document
