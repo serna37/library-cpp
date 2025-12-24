@@ -4,6 +4,7 @@
 /** ======================================= */
 #pragma once
 class Sequence {
+  public:
     template <typename T> T min(const vector<T> &v) {
         return *min_element(all(v));
     }
