@@ -5,16 +5,16 @@ data:
   - icon: ':warning:'
     path: main.cpp
     title: "\U0001F36A\U0001F9F8\U0001F43E"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
     title: tests/template.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -58,16 +58,52 @@ data:
     \ ABS = [&]() { return abs(R - L) > EPS; };\n        auto REL = [&]() { return\
     \ abs(R - L) / max(R, L) > EPS; };\n        while (ABS() and REL()) {\n      \
     \      MID = L + (R - L) / 2;\n            (f(MID) ? R : L) = MID;\n        }\n\
-    \        return make_pair(L, R);\n    }\n};\n// TODO lower_bound\u3068\u304B\u306E\
-    \u3084\u3064\n"
+    \        return make_pair(L, R);\n    }\n    // \u4EE5\u4E0B\u306E\u8981\u7D20\
+    \u6570\n    template <typename T> int bi_le_cnt(vector<T> &v, const T &x) {\n\
+    \        sort(all(v));\n        return upper_bound(all(v), x) - v.begin();\n \
+    \   }\n    // \u4EE5\u4E0B\u306E\u5024 \u5B58\u5728\u3057\u306A\u3044\u5834\u5408\
+    -INF\n    template <typename T> T bi_le_val(vector<T> &v, const T &x) {\n    \
+    \    sort(all(v));\n        auto it = upper_bound(all(v), x);\n        return\
+    \ (it == v.begin() ? -INF : *--it);\n    }\n    // \u4EE5\u4E0B\u306E\u5024  \u5B58\
+    \u5728\u3057\u306A\u3044\u5834\u5408-INF\n    template <typename T> T bi_le_val(const\
+    \ set<T> &st, const T &x) {\n        auto it = st.upper_bound(x);\n        return\
+    \ (it == st.begin() ? -INF : *--it);\n    }\n    // \u4EE5\u4E0A\u306E\u8981\u7D20\
+    \u6570\n    template <typename T> int bi_ge_cnt(vector<T> &v, const T &x) {\n\
+    \        sort(all(v));\n        return v.end() - lower_bound(all(v), x);\n   \
+    \ }\n    // \u4EE5\u4E0A\u306E\u6700\u5C0F\u5024 \u5B58\u5728\u3057\u306A\u3044\
+    \u5834\u5408 INF\n    template <typename T> T bi_ge_val(vector<T> &v, const T\
+    \ &x) {\n        sort(all(v));\n        auto it = lower_bound(all(v), x);\n  \
+    \      return (it == v.end() ? INF : *it);\n    }\n    // \u4EE5\u4E0A\u306E\u6700\
+    \u5C0F\u5024 \u5B58\u5728\u3057\u306A\u3044\u5834\u5408 INF\n    template <typename\
+    \ T> T bi_ge_val(const set<T> &st, const T &x) {\n        auto it = st.lower_bound(x);\n\
+    \        return (it == st.end() ? INF : *it);\n    }\n    // \u672A\u6E80\u306E\
+    \u8981\u7D20\u6570\n    template <typename T> int bi_lt_cnt(vector<T> &v, const\
+    \ T &x) {\n        sort(all(v));\n        return lower_bound(all(v), x) - v.begin();\n\
+    \    }\n    // \u672A\u6E80\u306E\u6700\u5927\u5024 \u5B58\u5728\u3057\u306A\u3044\
+    \u5834\u5408 -INF\n    template <typename T> T bi_lt_val(vector<T> &v, const T\
+    \ &x) {\n        sort(all(v));\n        auto it = lower_bound(all(v), x);\n  \
+    \      return (it == v.begin() ? -INF : *--it);\n    }\n    // \u672A\u6E80\u306E\
+    \u6700\u5927\u5024 \u5B58\u5728\u3057\u306A\u3044\u5834\u5408 -INF\n    template\
+    \ <typename T> T bi_lt_val(const set<T> &st, const T &x) {\n        auto it =\
+    \ st.lower_bound(x);\n        return (it == st.begin() ? -INF : *--it);\n    }\n\
+    \    // \u3088\u308A\u4E0A\u306E\u8981\u7D20\u6570\n    template <typename T>\
+    \ int bi_gt_cnt(vector<T> &v, const T &x) {\n        sort(all(v));\n        return\
+    \ v.end() - upper_bound(all(v), x);\n    }\n    // \u3088\u308A\u4E0A\u306E\u6700\
+    \u5C0F\u5024 \u5B58\u5728\u3057\u306A\u3044\u5834\u5408 INF\n    template <typename\
+    \ T> T bi_gt_val(vector<T> &v, const T &x) {\n        sort(all(v));\n        auto\
+    \ it = upper_bound(all(v), x);\n        return (it == v.end() ? INF : *it);\n\
+    \    }\n    // \u3088\u308A\u4E0A\u306E\u6700\u5C0F\u5024 \u5B58\u5728\u3057\u306A\
+    \u3044\u5834\u5408 INF\n    template <typename T> T bi_gt_val(const set<T> &st,\
+    \ const T &x) {\n        auto it = st.upper_bound(x);\n        return (it == st.end()\
+    \ ? INF : *it);\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/util/search.hpp
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2025-12-24 17:14:06+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2025-12-27 20:56:04+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp
 documentation_of: library/util/search.hpp
