@@ -29,16 +29,18 @@ data:
   code: "\n/** ======================================= */\n/**              \u5171\
     \u901A                       */\n/** ======================================= */\n\
     #pragma once\n#define int long long\n#define all(x) begin(x), end(x)\n#define\
-    \ rall(x) rbegin(x), rend(x)\nauto chmin = []<class T>(T &i, const T &j) { return\
-    \ i > j && (i = j, true); };\nauto chmax = []<class T>(T &i, const T &j) { return\
-    \ i < j && (i = j, true); };\n"
+    \ rall(x) rbegin(x), rend(x)\n#define $(idx) (std::get<(idx)>(std::forward_as_tuple(_args...)))\n\
+    // lambda($(0) + $(1))\u3068\u3067\u304D\u308B\n#define lambda(...) ([&](auto\
+    \ &&..._args) { return (__VA_ARGS__); })\nauto chmin = []<class T>(T &i, const\
+    \ T &j) { return i > j && (i = j, true); };\nauto chmax = []<class T>(T &i, const\
+    \ T &j) { return i < j && (i = j, true); };\n"
   dependsOn: []
   isVerificationFile: false
   path: library/def/common.hpp
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2025-12-27 20:56:04+09:00'
+  timestamp: '2025-12-27 21:03:10+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp
