@@ -11,11 +11,6 @@ data:
     - icon: ':warning:'
       path: bundler/main.cpp
       title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC"
-  - name: library/datastruct
-    pages:
-    - icon: ':warning:'
-      path: library/datastruct/segment_tree.hpp
-      title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
   - name: library/def
     pages:
     - icon: ':heavy_check_mark:'
@@ -30,21 +25,32 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/def/type.hpp
       title: "\u578B"
-  - name: library
+  - name: library/struct
     pages:
     - icon: ':warning:'
-      path: library/graph.hpp
-      title: "\u30B0\u30E9\u30D5"
-  - name: library/monoid
-    pages:
+      path: library/struct/fenwick_tree.hpp
+      title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\
+        \u307F"
     - icon: ':warning:'
-      path: library/monoid/min.hpp
-      title: library/monoid/min.hpp
+      path: library/struct/graph.hpp
+      title: library/struct/graph.hpp
+    - icon: ':warning:'
+      path: library/struct/monoid.hpp
+      title: library/struct/monoid.hpp
+    - icon: ':warning:'
+      path: library/struct/segment_tree.hpp
+      title: "SegmentTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+    - icon: ':warning:'
+      path: library/struct/union_find.hpp
+      title: UnionFind
   - name: library/util
     pages:
     - icon: ':heavy_check_mark:'
       path: library/util/geometry.hpp
       title: "\u5E7E\u4F55"
+    - icon: ':warning:'
+      path: library/util/grid.hpp
+      title: library/util/grid.hpp
     - icon: ':heavy_check_mark:'
       path: library/util/number.hpp
       title: "\u6570\u306E\u6027\u8CEA"
