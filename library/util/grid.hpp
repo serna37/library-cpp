@@ -18,5 +18,6 @@ class Grid {
         return _G;
     }
     // TODO グリッド中での4方向とか8方向のBFSとかほしいかなぁ
+    // TODO ドキュメント
 };
 

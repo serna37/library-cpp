@@ -30,3 +30,4 @@ template <typename U> struct MonoidMin {
     }
 };
 // TODO ほかのも
+// TODO ドキュメント

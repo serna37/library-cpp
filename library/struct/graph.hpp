@@ -104,4 +104,5 @@ struct Graph {
         return sorted;
     }
     // TODO sccとか
+    // TODO ドキュメント
 };

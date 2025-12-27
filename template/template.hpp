@@ -25,4 +25,5 @@ String str;
 Sequence seq;
 Search search;
 Geometry geo;
+// TODO グリッド
 }; // namespace lib
