@@ -69,5 +69,68 @@ class Search {
         }
         return make_pair(L, R);
     }
+    // 以下の要素数
+    template <typename T> int bi_le_cnt(vector<T> &v, const T &x) {
+        sort(all(v));
+        return upper_bound(all(v), x) - v.begin();
+    }
+    // 以下の値 存在しない場合-INF
+    template <typename T> T bi_le_val(vector<T> &v, const T &x) {
+        sort(all(v));
+        auto it = upper_bound(all(v), x);
+        return (it == v.begin() ? -INF : *--it);
+    }
+    // 以下の値  存在しない場合-INF
+    template <typename T> T bi_le_val(const set<T> &st, const T &x) {
+        auto it = st.upper_bound(x);
+        return (it == st.begin() ? -INF : *--it);
+    }
+    // 以上の要素数
+    template <typename T> int bi_ge_cnt(vector<T> &v, const T &x) {
+        sort(all(v));
+        return v.end() - lower_bound(all(v), x);
+    }
+    // 以上の最小値 存在しない場合 INF
+    template <typename T> T bi_ge_val(vector<T> &v, const T &x) {
+        sort(all(v));
+        auto it = lower_bound(all(v), x);
+        return (it == v.end() ? INF : *it);
+    }
+    // 以上の最小値 存在しない場合 INF
+    template <typename T> T bi_ge_val(const set<T> &st, const T &x) {
+        auto it = st.lower_bound(x);
+        return (it == st.end() ? INF : *it);
+    }
+    // 未満の要素数
+    template <typename T> int bi_lt_cnt(vector<T> &v, const T &x) {
+        sort(all(v));
+        return lower_bound(all(v), x) - v.begin();
+    }
+    // 未満の最大値 存在しない場合 -INF
+    template <typename T> T bi_lt_val(vector<T> &v, const T &x) {
+        sort(all(v));
+        auto it = lower_bound(all(v), x);
+        return (it == v.begin() ? -INF : *--it);
+    }
+    // 未満の最大値 存在しない場合 -INF
+    template <typename T> T bi_lt_val(const set<T> &st, const T &x) {
+        auto it = st.lower_bound(x);
+        return (it == st.begin() ? -INF : *--it);
+    }
+    // より上の要素数
+    template <typename T> int bi_gt_cnt(vector<T> &v, const T &x) {
+        sort(all(v));
+        return v.end() - upper_bound(all(v), x);
+    }
+    // より上の最小値 存在しない場合 INF
+    template <typename T> T bi_gt_val(vector<T> &v, const T &x) {
+        sort(all(v));
+        auto it = upper_bound(all(v), x);
+        return (it == v.end() ? INF : *it);
+    }
+    // より上の最小値 存在しない場合 INF
+    template <typename T> T bi_gt_val(const set<T> &st, const T &x) {
+        auto it = st.upper_bound(x);
+        return (it == st.end() ? INF : *it);
+    }
 };
-// TODO lower_boundとかのやつ
