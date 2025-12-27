@@ -18,7 +18,7 @@ using namespace std;
 #include "library/util/number.hpp"
 #include "library/util/search.hpp"
 namespace lib {
-Number num;
 Sequence seq;
+Number num;
 Search search;
 }; // namespace lib

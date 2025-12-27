@@ -109,6 +109,6 @@ class Sequence {
             for (int f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];
         }
         return inv;
-    };
+    }
 };
 // TODO 累積和系
