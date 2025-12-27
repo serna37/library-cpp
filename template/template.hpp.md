@@ -64,7 +64,7 @@ data:
     library/util/string.hpp\"\n#include \"library/util/sequence.hpp\"\n#include \"\
     library/util/search.hpp\"\n#include \"library/util/geometry.hpp\"\nnamespace lib\
     \ {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGeometry geo;\n\
-    }; // namespace lib\n"
+    // TODO \u30B0\u30EA\u30C3\u30C9\n}; // namespace lib\n"
   dependsOn:
   - bits/stdc++.h
   - library/def/common.hpp
@@ -80,7 +80,7 @@ data:
   path: template/template.hpp
   requiredBy:
   - main.cpp
-  timestamp: '2025-12-27 21:21:17+09:00'
+  timestamp: '2025-12-27 21:28:40+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp

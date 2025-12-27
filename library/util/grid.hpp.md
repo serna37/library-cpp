@@ -26,12 +26,13 @@ data:
     \ (int j = 0; j < W; ++j) {\n                _G[j][i] = G[i][j];\n           \
     \ }\n        }\n        return _G;\n    }\n    // TODO \u30B0\u30EA\u30C3\u30C9\
     \u4E2D\u3067\u306E4\u65B9\u5411\u3068\u304B8\u65B9\u5411\u306EBFS\u3068\u304B\u307B\
-    \u3057\u3044\u304B\u306A\u3041\n};\n\n"
+    \u3057\u3044\u304B\u306A\u3041\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\
+    \n};\n\n"
   dependsOn: []
   isVerificationFile: false
   path: library/util/grid.hpp
   requiredBy: []
-  timestamp: '2025-12-27 21:21:17+09:00'
+  timestamp: '2025-12-27 21:28:40+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/util/grid.hpp

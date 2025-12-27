@@ -61,12 +61,13 @@ data:
     \ (!seen[to]) f(f, to);\n            }\n            sorted.push_back(v);\n   \
     \     };\n        for (int i = 0; i < N; ++i) {\n            if (!seen[i]) dfs(dfs,\
     \ i);\n        }\n        reverse(all(sorted));\n        return sorted;\n    }\n\
-    \    // TODO scc\u3068\u304B\n};\n"
+    \    // TODO scc\u3068\u304B\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\
+    \n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/struct/graph.hpp
   requiredBy: []
-  timestamp: '2025-12-27 21:21:17+09:00'
+  timestamp: '2025-12-27 21:28:40+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/struct/graph.hpp

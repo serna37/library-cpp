@@ -135,7 +135,7 @@ data:
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2025-12-27 21:21:17+09:00'
+  timestamp: '2025-12-27 21:28:40+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp
