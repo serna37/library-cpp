@@ -65,6 +65,10 @@ class Sequence {
         for (int i = 0; i < N; ++i) res[i] = move(G[i]);
         return res;
     }
+    // 連番生成
+    template <typename T> void renban(vector<T> &v, T start = 0) {
+        iota(all(v), start);
+    }
     // AをBにマージテク vector
     template <typename T> void merge(vector<T> &A, vector<T> &B) {
         if (A.size() > B.size()) swap(A, B);
