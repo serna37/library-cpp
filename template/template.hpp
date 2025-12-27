@@ -17,8 +17,10 @@ using namespace std;
 #include "library/util/sequence.hpp"
 #include "library/util/number.hpp"
 #include "library/util/search.hpp"
+#include "library/util/geometry.hpp"
 namespace lib {
 Sequence seq;
 Number num;
 Search search;
+Geometry geo;
 }; // namespace lib
