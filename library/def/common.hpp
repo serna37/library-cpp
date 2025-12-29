@@ -11,3 +11,9 @@
 #define lambda(...) ([&](auto &&..._args) { return (__VA_ARGS__); })
 auto chmin = []<class T>(T &i, const T &j) { return i > j && (i = j, true); };
 auto chmax = []<class T>(T &i, const T &j) { return i < j && (i = j, true); };
+// [a, b)で乱数生成 メルセンヌツイスタ
+auto random_mersenne_twister = [](int a = 1, int b = 1e5 + 1) {
+    uniform_int_distribution<int> dist(a, b - 1);
+    mt19937 mt(chrono::steady_clock::now().time_since_epoch().count());
+    return dist(mt);
+};
