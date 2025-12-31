@@ -103,6 +103,11 @@ struct Graph {
         reverse(all(sorted));
         return sorted;
     }
-    // TODO sccとか
+    // TODO cc
+    // TODO scc
+    // TODO ベルマンフォード
+    // TODO サイクル検出
+    // TODO クラスカル
+    // TODO ワーシャルフロイド
     // TODO ドキュメント
 };
