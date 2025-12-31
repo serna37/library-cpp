@@ -20,6 +20,9 @@ data:
     path: library/util/geometry.hpp
     title: "\u5E7E\u4F55"
   - icon: ':x:'
+    path: library/util/grid.hpp
+    title: "\u30B0\u30EA\u30C3\u30C9"
+  - icon: ':x:'
     path: library/util/number.hpp
     title: "\u6570\u306E\u6027\u8CEA"
   - icon: ':x:'
@@ -61,14 +64,15 @@ data:
     \n#include \"template/template.hpp\"\n/*\ntemplate.hpp\u304B\u3089\u547C\u3093\
     \u3067\u3044\u308B\nlibrary/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\
     \u30C8\n\u51FA\u529B\u3059\u308B\u3068\u554F\u984C\u306B\u6B63\u89E3\u3067\u304D\
-    \u306A\u3044\u306E\u3067assert\u306E\u307F\n*/\n// TODO\n// ===== library/util/gepmetry.hpp\
-    \ =====\nvoid test_geometry() {\n}\n// ===== library/util/number.hpp =====\nvoid\
-    \ test_number() {\n}\n// ===== library/util/search.hpp =====\nvoid test_search()\
-    \ {\n}\n// ===== library/util/sequence.hpp =====\nvoid test_sequence() {\n}\n\
-    // ===== library/util/string.hpp =====\nvoid test_string() {\n}\nsigned main()\
-    \ {\n    // URL\u306E\u554F\u984C\u306E\u7B54\u3048\u306F\u3053\u308C\u3060\u3051\
-    \n    cout << \"Hello World\" << endl;\n    test_geometry();\n    test_number();\n\
-    \    test_search();\n    test_sequence();\n    test_string();\n}\n"
+    \u306A\u3044\u306E\u3067assert\u306E\u307F\n*/\n// ===== library/util/number.hpp\
+    \ =====\nvoid test_number() {\n}\n// ===== library/util/string.hpp =====\nvoid\
+    \ test_string() {\n}\n// ===== library/util/sequence.hpp =====\nvoid test_sequence()\
+    \ {\n}\n// ===== library/util/search.hpp =====\nvoid test_search() {\n}\n// =====\
+    \ library/util/grid.hpp =====\nvoid test_grid() {\n}\n// ===== library/util/gepmetry.hpp\
+    \ =====\nvoid test_geometry() {\n}\nsigned main() {\n    test_number();\n    test_string();\n\
+    \    test_sequence();\n    test_search();\n    test_grid();\n    test_geometry();\n\
+    \    // URL\u306E\u554F\u984C\u306E\u7B54\u3048\u306F\u3053\u308C\u3060\u3051\n\
+    \    cout << \"Hello World\" << endl;\n}\n"
   dependsOn:
   - template/template.hpp
   - bits/stdc++.h
@@ -80,11 +84,12 @@ data:
   - library/util/string.hpp
   - library/util/sequence.hpp
   - library/util/search.hpp
+  - library/util/grid.hpp
   - library/util/geometry.hpp
   isVerificationFile: true
   path: tests/template.test.cpp
   requiredBy: []
-  timestamp: '2025-12-31 17:06:46+09:00'
+  timestamp: '2025-12-31 17:14:29+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/template.test.cpp

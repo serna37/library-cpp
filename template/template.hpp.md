@@ -20,6 +20,9 @@ data:
     path: library/util/geometry.hpp
     title: "\u5E7E\u4F55"
   - icon: ':x:'
+    path: library/util/grid.hpp
+    title: "\u30B0\u30EA\u30C3\u30C9"
+  - icon: ':x:'
     path: library/util/number.hpp
     title: "\u6570\u306E\u6027\u8CEA"
   - icon: ':x:'
@@ -62,9 +65,9 @@ data:
     \n#include \"library/def/io.hpp\"\n#include \"library/def/type.hpp\"\n#include\
     \ \"library/def/const.hpp\"\n#include \"library/util/number.hpp\"\n#include \"\
     library/util/string.hpp\"\n#include \"library/util/sequence.hpp\"\n#include \"\
-    library/util/search.hpp\"\n#include \"library/util/geometry.hpp\"\nnamespace lib\
-    \ {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGeometry geo;\n\
-    // TODO \u30B0\u30EA\u30C3\u30C9\n}; // namespace lib\n"
+    library/util/search.hpp\"\n#include \"library/util/grid.hpp\"\n#include \"library/util/geometry.hpp\"\
+    \nnamespace lib {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGrid\
+    \ grid;\nGeometry geo;\n}; // namespace lib\n"
   dependsOn:
   - bits/stdc++.h
   - library/def/common.hpp
@@ -75,12 +78,13 @@ data:
   - library/util/string.hpp
   - library/util/sequence.hpp
   - library/util/search.hpp
+  - library/util/grid.hpp
   - library/util/geometry.hpp
   isVerificationFile: false
   path: template/template.hpp
   requiredBy:
   - main.cpp
-  timestamp: '2025-12-31 17:06:46+09:00'
+  timestamp: '2025-12-31 17:14:29+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/template.test.cpp

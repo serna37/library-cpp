@@ -48,7 +48,7 @@ data:
     - icon: ':x:'
       path: library/util/geometry.hpp
       title: "\u5E7E\u4F55"
-    - icon: ':warning:'
+    - icon: ':x:'
       path: library/util/grid.hpp
       title: "\u30B0\u30EA\u30C3\u30C9"
     - icon: ':x:'

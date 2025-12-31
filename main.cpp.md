@@ -20,6 +20,9 @@ data:
     path: library/util/geometry.hpp
     title: "\u5E7E\u4F55"
   - icon: ':x:'
+    path: library/util/grid.hpp
+    title: "\u30B0\u30EA\u30C3\u30C9"
+  - icon: ':x:'
     path: library/util/number.hpp
     title: "\u6570\u306E\u6027\u8CEA"
   - icon: ':x:'
@@ -67,11 +70,12 @@ data:
   - library/util/string.hpp
   - library/util/sequence.hpp
   - library/util/search.hpp
+  - library/util/grid.hpp
   - library/util/geometry.hpp
   isVerificationFile: false
   path: main.cpp
   requiredBy: []
-  timestamp: '2025-12-31 17:06:46+09:00'
+  timestamp: '2025-12-31 17:14:29+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: main.cpp
