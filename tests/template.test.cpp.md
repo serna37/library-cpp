@@ -1,44 +1,44 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/def/common.hpp
     title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/def/const.hpp
     title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/def/io.hpp
     title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/def/type.hpp
     title: "\u578B"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/util/geometry.hpp
     title: "\u5E7E\u4F55"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/util/number.hpp
     title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/util/search.hpp
     title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/util/sequence.hpp
     title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/util/string.hpp
     title: "\u6587\u5B57\u5217"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
@@ -84,8 +84,8 @@ data:
   isVerificationFile: true
   path: tests/template.test.cpp
   requiredBy: []
-  timestamp: '2025-12-27 21:28:40+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2025-12-31 17:06:46+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/template.test.cpp
 layout: document

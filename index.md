@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: bits
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: bits/stdc++.h
       title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - name: bundler
@@ -13,16 +13,16 @@ data:
       title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC"
   - name: library/def
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/def/common.hpp
       title: "\u5171\u901A"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/def/const.hpp
       title: "\u5B9A\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/def/io.hpp
       title: "IO\u95A2\u9023"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/def/type.hpp
       title: "\u578B"
   - name: library/struct
@@ -33,10 +33,10 @@ data:
         \u307F"
     - icon: ':warning:'
       path: library/struct/graph.hpp
-      title: library/struct/graph.hpp
+      title: "\u30B0\u30E9\u30D5"
     - icon: ':warning:'
       path: library/struct/monoid.hpp
-      title: library/struct/monoid.hpp
+      title: "\u30E2\u30CE\u30A4\u30C9"
     - icon: ':warning:'
       path: library/struct/segment_tree.hpp
       title: "SegmentTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
@@ -45,22 +45,22 @@ data:
       title: UnionFind
   - name: library/util
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/util/geometry.hpp
       title: "\u5E7E\u4F55"
     - icon: ':warning:'
       path: library/util/grid.hpp
-      title: library/util/grid.hpp
-    - icon: ':heavy_check_mark:'
+      title: "\u30B0\u30EA\u30C3\u30C9"
+    - icon: ':x:'
       path: library/util/number.hpp
       title: "\u6570\u306E\u6027\u8CEA"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/util/search.hpp
       title: "\u63A2\u7D22"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/util/sequence.hpp
       title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/util/string.hpp
       title: "\u6587\u5B57\u5217"
   - name: .
@@ -73,13 +73,13 @@ data:
     - icon: ':warning:'
       path: template/debug.hpp
       title: "debug\u51FA\u529B"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: template/template.hpp
       title: "\u0E05^>\u03C9<^\u0E05"
   verificationCategories:
   - name: tests
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/template.test.cpp
       title: tests/template.test.cpp
 layout: toppage

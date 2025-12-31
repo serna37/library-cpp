@@ -5,16 +5,16 @@ data:
   - icon: ':warning:'
     path: main.cpp
     title: "\U0001F36A\U0001F9F8\U0001F43E"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/template.test.cpp
     title: tests/template.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -33,15 +33,19 @@ data:
     // lambda($(0) + $(1))\u3068\u3067\u304D\u308B\n#define lambda(...) ([&](auto\
     \ &&..._args) { return (__VA_ARGS__); })\nauto chmin = []<class T>(T &i, const\
     \ T &j) { return i > j && (i = j, true); };\nauto chmax = []<class T>(T &i, const\
-    \ T &j) { return i < j && (i = j, true); };\n"
+    \ T &j) { return i < j && (i = j, true); };\n// [a, b)\u3067\u4E71\u6570\u751F\
+    \u6210 \u30E1\u30EB\u30BB\u30F3\u30CC\u30C4\u30A4\u30B9\u30BF\nauto random_mersenne_twister\
+    \ = [](int a = 1, int b = 1e5 + 1) {\n    uniform_int_distribution<int> dist(a,\
+    \ b - 1);\n    mt19937 mt(chrono::steady_clock::now().time_since_epoch().count());\n\
+    \    return dist(mt);\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/def/common.hpp
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2025-12-27 21:28:40+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2025-12-31 17:06:46+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/template.test.cpp
 documentation_of: library/def/common.hpp

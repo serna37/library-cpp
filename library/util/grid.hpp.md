@@ -24,21 +24,38 @@ data:
     \ &G) {\n        int H = G.size(), W = G[0].size();\n        vector<vector<T>>\
     \ _G(W, vector<T>(H));\n        for (int i = 0; i < H; ++i) {\n            for\
     \ (int j = 0; j < W; ++j) {\n                _G[j][i] = G[i][j];\n           \
-    \ }\n        }\n        return _G;\n    }\n    // TODO \u30B0\u30EA\u30C3\u30C9\
-    \u4E2D\u3067\u306E4\u65B9\u5411\u3068\u304B8\u65B9\u5411\u306EBFS\u3068\u304B\u307B\
-    \u3057\u3044\u304B\u306A\u3041\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\
-    \n};\n\n"
+    \ }\n        }\n        return _G;\n    }\n    // XXX \u4EE5\u4E0B\u3092\u3044\
+    \u3044\u611F\u3058\u306B\u3057\u305F\u3082\u306E\u306B\u3001\u6539\u826F\u3059\
+    \u308B!\n    // TODO 4\u65B9 or 8\u65B9\u306B\u884C\u304F\u30EB\u30FC\u30D7\u51E6\
+    \u7406\n    // TODO \u9818\u57DF\u5916\u3001\u884C\u3051\u306A\u3044\u30DE\u30B9\
+    \u306E\u30D5\u30A3\u30EB\u30BF\u51E6\u7406\n    // TODO \u884C\u3063\u305F\u7D50\
+    \u679C\u3069\u3046\u3059\u308B\uFF1F\u6700\u77ED\u8DDD\u96E2\u3092\u6C42\u3081\
+    \u308B or \u30E9\u30E0\u30C0\u306B\u3059\u308B\n    template <typename T, typename\
+    \ F> void bfs(vector<vector<T>> &G, F f) {\n        int H = G.size(), W = G[0].size();\n\
+    \        for (int i = 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j)\
+    \ {\n                for (int k = 0; k < 4; ++k) {\n                    int y\
+    \ = i + dy[k], x = j + dx[k];\n                    if (y < 0 or x < 0 or H <=\
+    \ y or W <= x) continue;\n                    f();\n                }\n      \
+    \      }\n        }\n    }\n    template <typename T, typename F>\n    void bfs(vector<string>\
+    \ &G, string alw, F f) {\n        int H = G.size(), W = G[0].size();\n       \
+    \ for (int i = 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n \
+    \               for (int k = 0; k < 4; ++k) {\n                    int y = i +\
+    \ dy[k], x = j + dx[k];\n                    if (y < 0 or x < 0 or H <= y or W\
+    \ <= x) continue;\n                    if (alw.find(G[y][x]) == string::npos)\
+    \ continue;\n                    f();\n                }\n            }\n    \
+    \    }\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/util/grid.hpp
   requiredBy: []
-  timestamp: '2025-12-27 21:28:40+09:00'
+  timestamp: '2025-12-31 17:06:46+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/util/grid.hpp
 layout: document
-redirect_from:
-- /library/library/util/grid.hpp
-- /library/library/util/grid.hpp.html
-title: library/util/grid.hpp
+title: "\u30B0\u30EA\u30C3\u30C9"
 ---
+
+グリッド上の動き。グラフというよりマス目的な平面上でのもの
+
+

@@ -5,16 +5,16 @@ data:
   - icon: ':warning:'
     path: main.cpp
     title: "\U0001F36A\U0001F9F8\U0001F43E"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/template.test.cpp
     title: tests/template.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -95,15 +95,16 @@ data:
     \    }\n    // \u3088\u308A\u4E0A\u306E\u6700\u5C0F\u5024 \u5B58\u5728\u3057\u306A\
     \u3044\u5834\u5408 INF\n    template <typename T> T bi_gt_val(const set<T> &st,\
     \ const T &x) {\n        auto it = st.upper_bound(x);\n        return (it == st.end()\
-    \ ? INF : *it);\n    }\n};\n"
+    \ ? INF : *it);\n    }\n    // TODO \u30E1\u30E2\u5316\u518D\u5E30\n    // TODO\
+    \ DFS\u9806\u5217\n    // TODO DFS\u9806\u5217 \u5358\u8ABF\u5897\u52A0\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/util/search.hpp
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2025-12-27 21:28:40+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2025-12-31 17:06:46+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/template.test.cpp
 documentation_of: library/util/search.hpp

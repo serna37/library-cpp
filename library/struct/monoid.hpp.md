@@ -25,19 +25,38 @@ data:
     \ _op(x, y);\n    }\n    T e() {\n        return _e;\n    }\n};\ntemplate <typename\
     \ U> struct MonoidMin {\n    using T = U;\n    T op(const T &x, const T &y) {\n\
     \        return min(x, y);\n    }\n    T e() {\n        return INF;\n    }\n};\n\
-    // TODO \u307B\u304B\u306E\u3082\n// TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\
-    \n"
+    template <typename U> struct MonoidMax {\n    using T = U;\n    T op(const T &x,\
+    \ const T &y) {\n        return max(x, y);\n    }\n    T e() {\n        return\
+    \ -INF;\n    }\n};\ntemplate <typename U> struct MonoidAdd {\n    using T = U;\n\
+    \    T op(const T &x, const T &y) {\n        return x + y;\n    }\n    T e() {\n\
+    \        return 0ll;\n    }\n};\ntemplate <typename U> struct MonoidMul {\n  \
+    \  using T = U;\n    T op(const T &x, const T &y) {\n        return x * y;\n \
+    \   }\n    T e() {\n        return 1ll;\n    }\n};\ntemplate <typename U> struct\
+    \ MonoidGcd {\n    using T = U;\n    T op(const T &x, const T &y) {\n        return\
+    \ gcd(x, y);\n    }\n    T e() {\n        return 0ll;\n    }\n};\ntemplate <typename\
+    \ U> struct MonoidLcm {\n    using T = U;\n    T op(const T &x, const T &y) {\n\
+    \        return lcm(x, y);\n    }\n    T e() {\n        return 1ll;\n    }\n};\n\
+    template <typename U> struct MonoidXor {\n    using T = U;\n    T op(const T &x,\
+    \ const T &y) {\n        return x ^ y;\n    }\n    T e() {\n        return 0ll;\n\
+    \    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/struct/monoid.hpp
   requiredBy: []
-  timestamp: '2025-12-27 21:28:40+09:00'
+  timestamp: '2025-12-31 17:06:46+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/struct/monoid.hpp
 layout: document
-redirect_from:
-- /library/library/struct/monoid.hpp
-- /library/library/struct/monoid.hpp.html
-title: library/struct/monoid.hpp
+title: "\u30E2\u30CE\u30A4\u30C9"
 ---
+
+
+カスタム性として
+
+```cpp
+Monoid m(-1e9, [](int a, int b) { return max(a, b); });
+```
+
+その他、有名なモノイドを作っておく
+

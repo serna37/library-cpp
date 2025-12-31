@@ -61,19 +61,28 @@ data:
     \ (!seen[to]) f(f, to);\n            }\n            sorted.push_back(v);\n   \
     \     };\n        for (int i = 0; i < N; ++i) {\n            if (!seen[i]) dfs(dfs,\
     \ i);\n        }\n        reverse(all(sorted));\n        return sorted;\n    }\n\
-    \    // TODO scc\u3068\u304B\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\
-    \n};\n"
+    \    // TODO cc\n    // TODO scc\n    // TODO \u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\
+    \u30FC\u30C9\n    // TODO \u30B5\u30A4\u30AF\u30EB\u691C\u51FA\n    // TODO \u30AF\
+    \u30E9\u30B9\u30AB\u30EB\n    // TODO \u30EF\u30FC\u30B7\u30E3\u30EB\u30D5\u30ED\
+    \u30A4\u30C9\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/struct/graph.hpp
   requiredBy: []
-  timestamp: '2025-12-27 21:28:40+09:00'
+  timestamp: '2025-12-31 17:06:46+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/struct/graph.hpp
 layout: document
-redirect_from:
-- /library/library/struct/graph.hpp
-- /library/library/struct/graph.hpp.html
-title: library/struct/graph.hpp
+title: "\u30B0\u30E9\u30D5"
 ---
+
+
+いろいろ含んだグラフの構造体
+
+- 経路復元
+- BFS 最短経路 複数始点
+- Dijkstra 最小コスト経路 複数始点
+- DAGのトポロジカルソート
+- TODO いろいろ追加中
+
