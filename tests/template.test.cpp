@@ -8,29 +8,35 @@ library/util/xxx.hppのユニットテスト
 */
 // ===== library/util/number.hpp =====
 void test_number() {
+    // TODO test
 }
 // ===== library/util/string.hpp =====
 void test_string() {
+    // TODO test
 }
 // ===== library/util/sequence.hpp =====
 void test_sequence() {
+    // TODO test
 }
 // ===== library/util/search.hpp =====
 void test_search() {
+    // TODO test
 }
 // ===== library/util/grid.hpp =====
 void test_grid() {
+    // TODO test
 }
 // ===== library/util/gepmetry.hpp =====
 void test_geometry() {
+    // TODO test
 }
 signed main() {
+    // URLの問題の答えはこれだけ
+    cout << "Hello World" << endl;
     test_number();
     test_string();
     test_sequence();
     test_search();
     test_grid();
     test_geometry();
-    // URLの問題の答えはこれだけ
-    cout << "Hello World" << endl;
 }
