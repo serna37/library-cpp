@@ -5,16 +5,16 @@ data:
   - icon: ':warning:'
     path: main.cpp
     title: "\U0001F36A\U0001F9F8\U0001F43E"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
     title: tests/template.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: h
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
     links:
@@ -41,7 +41,7 @@ data:
     \ <queue>\n#include <set>\n#include <sstream>\n#include <stack>\n#include <string>\n\
     #include <tuple>\n#include <unordered_map>\n#include <unordered_set>\n#include\
     \ <utility>\n#include <vector>\n#include <array>\n#include <cassert>\n#include\
-    \ <random>\n\n"
+    \ <random>\n#include <chrono>\n\n"
   code: "// C++ includes used for precompiling -*- C++ -*-\n// Copyright (C) 2003-2023\
     \ Free Software Foundation, Inc.\n//\n// This file is part of the GNU ISO C++\
     \ Library.  This library is free\n// software; you can redistribute it and/or\
@@ -63,15 +63,15 @@ data:
     #include <numeric>\n#include <queue>\n#include <set>\n#include <sstream>\n#include\
     \ <stack>\n#include <string>\n#include <tuple>\n#include <unordered_map>\n#include\
     \ <unordered_set>\n#include <utility>\n#include <vector>\n#include <array>\n#include\
-    \ <cassert>\n#include <random>\n\n"
+    \ <cassert>\n#include <random>\n#include <chrono>\n\n"
   dependsOn: []
   isVerificationFile: false
   path: bits/stdc++.h
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2025-12-31 17:14:29+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2025-12-31 17:18:03+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp
 documentation_of: bits/stdc++.h

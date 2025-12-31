@@ -43,7 +43,7 @@ data:
   isVerificationFile: false
   path: library/struct/monoid.hpp
   requiredBy: []
-  timestamp: '2025-12-31 17:14:29+09:00'
+  timestamp: '2025-12-31 17:18:03+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/struct/monoid.hpp
