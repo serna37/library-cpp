@@ -17,7 +17,34 @@ class Grid {
         }
         return _G;
     }
-    // TODO グリッド中での4方向とか8方向のBFSとかほしいかなぁ
-    // TODO ドキュメント
+    // XXX 以下をいい感じにしたものに、改良する!
+    // TODO 4方 or 8方に行くループ処理
+    // TODO 領域外、行けないマスのフィルタ処理
+    // TODO 行った結果どうする？最短距離を求める or ラムダにする
+    template <typename T, typename F> void bfs(vector<vector<T>> &G, F f) {
+        int H = G.size(), W = G[0].size();
+        for (int i = 0; i < H; ++i) {
+            for (int j = 0; j < W; ++j) {
+                for (int k = 0; k < 4; ++k) {
+                    int y = i + dy[k], x = j + dx[k];
+                    if (y < 0 or x < 0 or H <= y or W <= x) continue;
+                    f();
+                }
+            }
+        }
+    }
+    template <typename T, typename F>
+    void bfs(vector<string> &G, string alw, F f) {
+        int H = G.size(), W = G[0].size();
+        for (int i = 0; i < H; ++i) {
+            for (int j = 0; j < W; ++j) {
+                for (int k = 0; k < 4; ++k) {
+                    int y = i + dy[k], x = j + dx[k];
+                    if (y < 0 or x < 0 or H <= y or W <= x) continue;
+                    if (alw.find(G[y][x]) == string::npos) continue;
+                    f();
+                }
+            }
+        }
+    }
 };
-
