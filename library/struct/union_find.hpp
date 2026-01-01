@@ -4,11 +4,10 @@
  */
 struct UnionFind {
   private:
-    int N;
     vector<int> parent, size;
 
   public:
-    UnionFind(int N) : N(N) {
+    UnionFind(int N) {
         parent.assign(N, -1);
         size.assign(N, 1);
     }
