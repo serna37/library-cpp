@@ -949,13 +949,14 @@ data:
   isVerificationFile: false
   path: bundle.cpp
   requiredBy: []
-  timestamp: '2026-01-01 11:08:36+09:00'
+  timestamp: '2026-01-01 11:13:30+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundle.cpp
 layout: document
-redirect_from:
-- /library/bundle.cpp
-- /library/bundle.cpp.html
-title: "\u0E05^>\u03C9<^\u0E05"
+title: "\u30D0\u30F3\u30C9\u30EB\u5F8C\u306E\u30B5\u30F3\u30D7\u30EB"
 ---
+
+`bundler/main.cpp`実行後に生成される`main.cpp`のサンプル。
+これを提出する。
+

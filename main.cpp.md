@@ -95,13 +95,14 @@ data:
   isVerificationFile: false
   path: main.cpp
   requiredBy: []
-  timestamp: '2026-01-01 11:08:36+09:00'
+  timestamp: '2026-01-01 11:13:30+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: main.cpp
 layout: document
-redirect_from:
-- /library/main.cpp
-- /library/main.cpp.html
-title: "\U0001F36A\U0001F9F8\U0001F43E"
+title: "main\u30D5\u30A1\u30A4\u30EB"
 ---
+
+プログラムを書くファイル。 解き終わったらバンドルする。
+ライブラリで用意したものは`lib:xxx.`とすることで予測変換で見やすい。
+

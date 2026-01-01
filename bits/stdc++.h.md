@@ -4,10 +4,10 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: bundle.cpp
-    title: "\u0E05^>\u03C9<^\u0E05"
+    title: "\u30D0\u30F3\u30C9\u30EB\u5F8C\u306E\u30B5\u30F3\u30D7\u30EB"
   - icon: ':warning:'
     path: main.cpp
-    title: "\U0001F36A\U0001F9F8\U0001F43E"
+    title: "main\u30D5\u30A1\u30A4\u30EB"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
@@ -74,7 +74,7 @@ data:
   - template/template.hpp
   - main.cpp
   - bundle.cpp
-  timestamp: '2026-01-01 11:08:36+09:00'
+  timestamp: '2026-01-01 11:13:30+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp
