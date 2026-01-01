@@ -6,6 +6,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: bits/stdc++.h
       title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
+  - name: .
+    pages:
+    - icon: ':warning:'
+      path: bundle.cpp
+      title: "\u0E05^>\u03C9<^\u0E05"
+    - icon: ':warning:'
+      path: main.cpp
+      title: "\U0001F36A\U0001F9F8\U0001F43E"
   - name: bundler
     pages:
     - icon: ':warning:'
@@ -63,11 +71,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/util/string.hpp
       title: "\u6587\u5B57\u5217"
-  - name: .
-    pages:
-    - icon: ':warning:'
-      path: main.cpp
-      title: "\U0001F36A\U0001F9F8\U0001F43E"
   - name: template
     pages:
     - icon: ':warning:'

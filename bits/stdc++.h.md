@@ -3,6 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
+    path: bundle.cpp
+    title: "\u0E05^>\u03C9<^\u0E05"
+  - icon: ':warning:'
     path: main.cpp
     title: "\U0001F36A\U0001F9F8\U0001F43E"
   - icon: ':heavy_check_mark:'
@@ -70,7 +73,8 @@ data:
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2026-01-01 11:05:25+09:00'
+  - bundle.cpp
+  timestamp: '2026-01-01 11:08:36+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp
