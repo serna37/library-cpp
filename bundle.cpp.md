@@ -171,17 +171,12 @@ data:
     \ T> void erase(set<T> &st, T &v) {\n        st.erase(st.find(v));\n    }\n  \
     \  // multiset\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename T>\
     \ void erase(multiset<T> &st, T &v) {\n        st.erase(st.find(v));\n    }\n\
-    \    // \u884C\u5217\u306E\u8EE2\u7F6E\n    template <typename T>\n    vector<vector<T>>\
-    \ transpose(const vector<vector<T>> &G) {\n        int H = G.size(), W = G[0].size();\n\
-    \        vector<vector<T>> _G(W, vector<T>(H));\n        for (int i = 0; i < H;\
-    \ ++i) {\n            for (int j = 0; j < W; ++j) {\n                _G[j][i]\
-    \ = G[i][j];\n            }\n        }\n        return _G;\n    }\n    /**\n \
-    \    * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\u306B\u3059\u308B\
-    \ G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n     */\n\
-    \    template <int N, typename T> auto unpack(vector<T> &&G) {\n        array<T,\
-    \ N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n        for\
-    \ (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n    }\n \
-    \   // \u9023\u756A\u751F\u6210\n    template <typename T> void renban(vector<T>\
+    \    /**\n     * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\u306B\u3059\
+    \u308B G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n  \
+    \   */\n    template <int N, typename T> auto unpack(vector<T> &&G) {\n      \
+    \  array<T, N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n \
+    \       for (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n\
+    \    }\n    // \u9023\u756A\u751F\u6210\n    template <typename T> void renban(vector<T>\
     \ &v, T start = 0) {\n        iota(all(v), start);\n    }\n    // A\u3092B\u306B\
     \u30DE\u30FC\u30B8\u30C6\u30AF vector\n    template <typename T> void merge(vector<T>\
     \ &A, vector<T> &B) {\n        if (A.size() > B.size()) swap(A, B);\n        for\
@@ -367,117 +362,11 @@ data:
     \u5EA6\n     * 18\u6841\u4F7F\u3046\u306A\u30892\u3067\u5272\u3089\u305Along long\u3067\
     \u8FD4\u3059\u3053\u3068\n     */\n    template <typename T>\n    double area_square(T\
     \ x1, T y1, T x2, T y2, T x3, T y3, T x4, T y4) {\n        return hypot(x1 - x3,\
-    \ y1 - y3) * hypot(x2 - x4, y2 - y4) / 2.0;\n    }\n};\n\n\n/** =======================================\
-    \ */\n/**               \u30B0\u30E9\u30D5                    */\n/** =======================================\
-    \ */\n\nstruct Edge {\n    int from, to;\n    long long cost;\n    Edge(int from,\
-    \ int to, long long cost = 1)\n        : from(from), to(to), cost(cost) {\n  \
-    \  }\n};\nstruct Graph {\n  private:\n    int N;\n    vector<vector<Edge>> G;\n\
-    \n  public:\n    Graph(int N) : N(N), G(N) {\n    }\n    vector<Edge> operator[](int\
-    \ v) {\n        return G[v];\n    }\n    int size() {\n        return N;\n   \
-    \ }\n    // (\u6709\u5411)\u8FBA\u3092\u5F35\u308B\n    void add(int from, int\
-    \ to, long long cost = 1) {\n        G[from].push_back(Edge(from, to, cost));\n\
-    \    }\n    // (\u53CC\u65B9\u5411)\u8FBA\u3092\u5F35\u308B\n    void add_both(int\
-    \ from, int to) {\n        G[from].push_back(Edge(from, to));\n        G[to].push_back(Edge(to,\
-    \ from));\n    }\n    // \u7D4C\u8DEF\u5FA9\u5143\n    vector<int> route_restore(const\
-    \ vector<int> &route, int goal) {\n        vector<int> path = {goal};\n      \
-    \  while (!~route[path.back()]) path.push_back(route[path.back()]);\n        reverse(all(path));\n\
-    \        return path;\n    }\n    /**\n     * BFS \u6700\u77ED\u7D4C\u8DEF \u8907\
-    \u6570\u59CB\u70B9\n     * @return \u6700\u77ED\u8DDD\u96E2\u3001\u7D4C\u8DEF\n\
-    \     */\n    pair<vector<int>, vector<int>> bfs(const vector<int> &starts = {0})\
-    \ {\n        queue<int> q;\n        vector<int> dis(N, -1), route(N, -1);\n  \
-    \      for (auto &&v : starts) q.push(v), dis[v] = 0;\n        while (!q.empty())\
-    \ {\n            int v = q.front();\n            q.pop();\n            for (auto\
-    \ &&[from, to, cost] : G[v]) {\n                if (~dis[to]) continue;\n    \
-    \            dis[to] = dis[from] + 1;\n                q.push(to);\n         \
-    \       route[to] = v;\n            }\n        }\n        return {dis, route};\n\
-    \    }\n    /**\n     * Dijkstra \u6700\u5C0F\u30B3\u30B9\u30C8\u7D4C\u8DEF \u8907\
-    \u6570\u59CB\u70B9\n     * @return \u6700\u5C0F\u30B3\u30B9\u30C8\u3001\u7D4C\u8DEF\
-    \n     */\n    pair<vector<long long>, vector<int>> dijkstra(const vector<int>\
-    \ &starts = {\n                                                      0}) {\n \
-    \       reverse_queue<pair<long long, int>> q; // \u30B3\u30B9\u30C8(\u5C0F\u3055\
-    \u3044\u9806), \u9802\u70B9\n        vector<long long> weight(N, INF);\n     \
-    \   vector<int> route(N, -1);\n        for (auto &&v : starts) q.emplace(0, v),\
-    \ weight[v] = 0;\n        while (!q.empty()) {\n            auto [w, v] = q.top();\n\
-    \            q.pop();\n            if (weight[v] < w) continue;\n            for\
-    \ (auto &&[from, to, cost] : G[v]) {\n                long long next_w = w + cost;\n\
-    \                if (weight[to] <= next_w) continue;\n                weight[to]\
-    \ = next_w;\n                q.emplace(weight[to], to);\n                route[to]\
-    \ = v;\n            }\n        }\n        return {weight, route};\n    }\n   \
-    \ /**\n     * DAG\u306E\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\n\
-    \     */\n    vector<int> topological_sort() {\n        // TODO \u9589\u8DEF\u691C\
-    \u77E5\u3057\u3066\u7A7A\u914D\u5217\u3092\u8FD4\u5374\u3068\u304B\n        vector<int>\
-    \ seen(N, 0), sorted;\n        auto dfs = [&](auto &f, int v) -> void {\n    \
-    \        seen[v] = 1;\n            for (auto &&[from, to, cost] : G[v]) {\n  \
-    \              if (!seen[to]) f(f, to);\n            }\n            sorted.push_back(v);\n\
-    \        };\n        for (int i = 0; i < N; ++i) {\n            if (!seen[i])\
-    \ dfs(dfs, i);\n        }\n        reverse(all(sorted));\n        return sorted;\n\
-    \    }\n    // TODO cc\n    // TODO scc\n    // TODO \u30D9\u30EB\u30DE\u30F3\u30D5\
-    \u30A9\u30FC\u30C9\n    // TODO \u30B5\u30A4\u30AF\u30EB\u691C\u51FA\n    // TODO\
-    \ \u30AF\u30E9\u30B9\u30AB\u30EB\n    // TODO \u30EF\u30FC\u30B7\u30E3\u30EB\u30D5\
-    \u30ED\u30A4\u30C9\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\n};\n\n\n\
-    /**\n * @brief UnionFind\n */\nstruct UnionFind {\n  private:\n    vector<int>\
-    \ parent, size;\n\n  public:\n    UnionFind(int N) {\n        parent.assign(N,\
-    \ -1);\n        size.assign(N, 1);\n    }\n    // \u81EA\u5206\u306E\u30B0\u30EB\
-    \u30FC\u30D7\u306E\u30B5\u30A4\u30BA\n    int operator[](int p) {\n        return\
-    \ size[find(p)];\n    }\n    // p\u306E\u89AA\u3092\u898B\u3064\u3051\u308B\n\
-    \    int find(int p) {\n        return !~parent[p] ? p : (parent[p] = find(parent[p]));\n\
-    \    }\n    // a\u3068b\u3092\u540C\u3058\u30B0\u30EB\u30FC\u30D7\u306B\u3059\u308B\
-    \ \u64CD\u4F5C\u3057\u305F\u3089true\n    bool unite(int a, int b) {\n       \
-    \ int x = find(a), y = find(b);\n        if (x == y) return false;\n        if\
-    \ (size[x] > size[y]) swap(x, y);\n        parent[x] = y, size[y] += size[x];\n\
-    \        return true;\n    }\n};\n\n\n/**\n * @brief FenwicTree 1\u70B9\u66F4\u65B0\
-    \ \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F\n */\nstruct FenwickTree {\n  private:\n\
-    \    int N;\n    vector<int> fwk;\n\n  public:\n    FenwickTree(int N) : N(N)\
-    \ {\n        fwk.assign(N + 1, 0);\n    }\n    FenwickTree(const vector<int> &A)\
-    \ : N(A.size()) {\n        fwk.assign(N + 1, 0);\n        for (int i = 1; i <=\
-    \ N; ++i) {\n            fwk[i] += A[i - 1];\n            if (i + (i & -i) <=\
-    \ N) fwk[i + (i & -i)] += fwk[i];\n        }\n    }\n    // \u5024\u3092\u52A0\
-    \u3048\u308B\n    void add(int i, const int &x) {\n        for (++i; i <= N; i\
-    \ += i & -i) fwk[i] += x;\n    }\n    // \u03A3[0, i]\n    int sum(int i) {\n\
-    \        int ans = 0;\n        for (++i; i; i -= i & -i) ans += fwk[i];\n    \
-    \    return ans;\n    }\n};\n\n\n/**\n * @brief SegmentTree 1\u70B9\u66F4\u65B0\
-    \ \u533A\u9593\u53D6\u5F97\n */\ntemplate <class Monoid> struct SegmentTree {\n\
-    \    using T = typename Monoid::T;\n\n  private:\n    Monoid M;\n    int N, size,\
-    \ log = 1;\n    vector<T> node;\n    void init() {\n        while ((1 << log)\
-    \ < N) ++log;\n        node.assign((size = 1 << log) << 1, M.e());\n    }\n\n\
-    \  public:\n    SegmentTree(Monoid M, int N) : M(M), N(N) {\n        init();\n\
-    \    }\n    SegmentTree(Monoid M, const vector<T> &A) : M(M), N(A.size()) {\n\
-    \        init();\n        for (int i = 0; i < N; ++i) node[i + size] = A[i];\n\
-    \        for (int i = size - 1; i >= 1; --i)\n            node[i] = M.op(node[i\
-    \ << 1 | 0], node[i << 1 | 1]);\n    }\n    // \u8981\u7D20i\u306E\u5024\u3092\
-    x\u306B\u3059\u308B\n    void set(int i, const T &x) {\n        node[i += size]\
-    \ = x;\n        while (i >>= 1) node[i] = M.op(node[i << 1 | 0], node[i << 1 |\
-    \ 1]);\n    }\n    // \u6F14\u7B97[l,r)\n    T prod(int l, int r) {\n        T\
-    \ L = M.e(), R = M.e();\n        for (l += size, r += size; l < r; l >>= 1, r\
-    \ >>= 1) {\n            if (l & 1) L = M.op(L, node[l++]);\n            if (r\
-    \ & 1) R = M.op(node[--r], R);\n        }\n        return M.op(L, R);\n    }\n\
-    };\n\n\n/** ======================================= */\n/**              \u30E2\
-    \u30CE\u30A4\u30C9                   */\n/** =======================================\
-    \ */\n\ntemplate <typename U, typename F> struct Monoid {\n    using T = U;\n\n\
-    \  private:\n    T _e;\n    F _op;\n\n  public:\n    Monoid(T e, F op) : _e(e),\
-    \ _op(op) {\n    }\n    T op(const T &x, const T &y) {\n        return _op(x,\
-    \ y);\n    }\n    T e() {\n        return _e;\n    }\n};\ntemplate <typename U\
-    \ = int> struct MonoidMin {\n    using T = U;\n    T op(const T &x, const T &y)\
-    \ {\n        return min(x, y);\n    }\n    T e() {\n        return INF;\n    }\n\
-    };\ntemplate <typename U = int> struct MonoidMax {\n    using T = U;\n    T op(const\
-    \ T &x, const T &y) {\n        return max(x, y);\n    }\n    T e() {\n       \
-    \ return -INF;\n    }\n};\ntemplate <typename U = int> struct MonoidAdd {\n  \
-    \  using T = U;\n    T op(const T &x, const T &y) {\n        return x + y;\n \
-    \   }\n    T e() {\n        return 0ll;\n    }\n};\ntemplate <typename U = int>\
-    \ struct MonoidMul {\n    using T = U;\n    T op(const T &x, const T &y) {\n \
-    \       return x * y;\n    }\n    T e() {\n        return 1ll;\n    }\n};\ntemplate\
-    \ <typename U = int> struct MonoidGcd {\n    using T = U;\n    T op(const T &x,\
-    \ const T &y) {\n        return gcd(x, y);\n    }\n    T e() {\n        return\
-    \ 0ll;\n    }\n};\ntemplate <typename U = int> struct MonoidLcm {\n    using T\
-    \ = U;\n    T op(const T &x, const T &y) {\n        return lcm(x, y);\n    }\n\
-    \    T e() {\n        return 1ll;\n    }\n};\ntemplate <typename U = int> struct\
-    \ MonoidXor {\n    using T = U;\n    T op(const T &x, const T &y) {\n        return\
-    \ x ^ y;\n    }\n    T e() {\n        return 0ll;\n    }\n};\n\nnamespace lib\
-    \ {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\nGeometry\
-    \ geo;\n}; // namespace lib\nvoid solve();\nsigned main() {\n    solve();\n}\n\
-    // -----------------------------------------\n// #include \"template/template.hpp\"\
-    \ is done.\n// -----------------------------------------\n\n/**\n * @brief \U0001F36A\
-    \U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n\n"
+    \ y1 - y3) * hypot(x2 - x4, y2 - y4) / 2.0;\n    }\n};\n\nnamespace lib {\nNumber\
+    \ num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\nGeometry geo;\n\
+    }; // namespace lib\nvoid solve();\nsigned main() {\n    solve();\n}\n// -----------------------------------------\n\
+    // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n\
+    \n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n\n"
   code: "/**\n * @brief \u0E05^>\u03C9<^\u0E05\n * @author serna37\n * @note https://serna37.github.io/library-cpp/\n\
     \ */\n#ifdef LOCAL\n\n#else\n#define debug(...)\n#endif\n#include <bits/stdc++.h>\n\
     using namespace std;\n\n/** ======================================= */\n/**  \
@@ -635,17 +524,12 @@ data:
     \ T> void erase(set<T> &st, T &v) {\n        st.erase(st.find(v));\n    }\n  \
     \  // multiset\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename T>\
     \ void erase(multiset<T> &st, T &v) {\n        st.erase(st.find(v));\n    }\n\
-    \    // \u884C\u5217\u306E\u8EE2\u7F6E\n    template <typename T>\n    vector<vector<T>>\
-    \ transpose(const vector<vector<T>> &G) {\n        int H = G.size(), W = G[0].size();\n\
-    \        vector<vector<T>> _G(W, vector<T>(H));\n        for (int i = 0; i < H;\
-    \ ++i) {\n            for (int j = 0; j < W; ++j) {\n                _G[j][i]\
-    \ = G[i][j];\n            }\n        }\n        return _G;\n    }\n    /**\n \
-    \    * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\u306B\u3059\u308B\
-    \ G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n     */\n\
-    \    template <int N, typename T> auto unpack(vector<T> &&G) {\n        array<T,\
-    \ N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n        for\
-    \ (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n    }\n \
-    \   // \u9023\u756A\u751F\u6210\n    template <typename T> void renban(vector<T>\
+    \    /**\n     * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\u306B\u3059\
+    \u308B G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n  \
+    \   */\n    template <int N, typename T> auto unpack(vector<T> &&G) {\n      \
+    \  array<T, N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n \
+    \       for (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n\
+    \    }\n    // \u9023\u756A\u751F\u6210\n    template <typename T> void renban(vector<T>\
     \ &v, T start = 0) {\n        iota(all(v), start);\n    }\n    // A\u3092B\u306B\
     \u30DE\u30FC\u30B8\u30C6\u30AF vector\n    template <typename T> void merge(vector<T>\
     \ &A, vector<T> &B) {\n        if (A.size() > B.size()) swap(A, B);\n        for\
@@ -831,123 +715,17 @@ data:
     \u5EA6\n     * 18\u6841\u4F7F\u3046\u306A\u30892\u3067\u5272\u3089\u305Along long\u3067\
     \u8FD4\u3059\u3053\u3068\n     */\n    template <typename T>\n    double area_square(T\
     \ x1, T y1, T x2, T y2, T x3, T y3, T x4, T y4) {\n        return hypot(x1 - x3,\
-    \ y1 - y3) * hypot(x2 - x4, y2 - y4) / 2.0;\n    }\n};\n\n\n/** =======================================\
-    \ */\n/**               \u30B0\u30E9\u30D5                    */\n/** =======================================\
-    \ */\n\nstruct Edge {\n    int from, to;\n    long long cost;\n    Edge(int from,\
-    \ int to, long long cost = 1)\n        : from(from), to(to), cost(cost) {\n  \
-    \  }\n};\nstruct Graph {\n  private:\n    int N;\n    vector<vector<Edge>> G;\n\
-    \n  public:\n    Graph(int N) : N(N), G(N) {\n    }\n    vector<Edge> operator[](int\
-    \ v) {\n        return G[v];\n    }\n    int size() {\n        return N;\n   \
-    \ }\n    // (\u6709\u5411)\u8FBA\u3092\u5F35\u308B\n    void add(int from, int\
-    \ to, long long cost = 1) {\n        G[from].push_back(Edge(from, to, cost));\n\
-    \    }\n    // (\u53CC\u65B9\u5411)\u8FBA\u3092\u5F35\u308B\n    void add_both(int\
-    \ from, int to) {\n        G[from].push_back(Edge(from, to));\n        G[to].push_back(Edge(to,\
-    \ from));\n    }\n    // \u7D4C\u8DEF\u5FA9\u5143\n    vector<int> route_restore(const\
-    \ vector<int> &route, int goal) {\n        vector<int> path = {goal};\n      \
-    \  while (!~route[path.back()]) path.push_back(route[path.back()]);\n        reverse(all(path));\n\
-    \        return path;\n    }\n    /**\n     * BFS \u6700\u77ED\u7D4C\u8DEF \u8907\
-    \u6570\u59CB\u70B9\n     * @return \u6700\u77ED\u8DDD\u96E2\u3001\u7D4C\u8DEF\n\
-    \     */\n    pair<vector<int>, vector<int>> bfs(const vector<int> &starts = {0})\
-    \ {\n        queue<int> q;\n        vector<int> dis(N, -1), route(N, -1);\n  \
-    \      for (auto &&v : starts) q.push(v), dis[v] = 0;\n        while (!q.empty())\
-    \ {\n            int v = q.front();\n            q.pop();\n            for (auto\
-    \ &&[from, to, cost] : G[v]) {\n                if (~dis[to]) continue;\n    \
-    \            dis[to] = dis[from] + 1;\n                q.push(to);\n         \
-    \       route[to] = v;\n            }\n        }\n        return {dis, route};\n\
-    \    }\n    /**\n     * Dijkstra \u6700\u5C0F\u30B3\u30B9\u30C8\u7D4C\u8DEF \u8907\
-    \u6570\u59CB\u70B9\n     * @return \u6700\u5C0F\u30B3\u30B9\u30C8\u3001\u7D4C\u8DEF\
-    \n     */\n    pair<vector<long long>, vector<int>> dijkstra(const vector<int>\
-    \ &starts = {\n                                                      0}) {\n \
-    \       reverse_queue<pair<long long, int>> q; // \u30B3\u30B9\u30C8(\u5C0F\u3055\
-    \u3044\u9806), \u9802\u70B9\n        vector<long long> weight(N, INF);\n     \
-    \   vector<int> route(N, -1);\n        for (auto &&v : starts) q.emplace(0, v),\
-    \ weight[v] = 0;\n        while (!q.empty()) {\n            auto [w, v] = q.top();\n\
-    \            q.pop();\n            if (weight[v] < w) continue;\n            for\
-    \ (auto &&[from, to, cost] : G[v]) {\n                long long next_w = w + cost;\n\
-    \                if (weight[to] <= next_w) continue;\n                weight[to]\
-    \ = next_w;\n                q.emplace(weight[to], to);\n                route[to]\
-    \ = v;\n            }\n        }\n        return {weight, route};\n    }\n   \
-    \ /**\n     * DAG\u306E\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\n\
-    \     */\n    vector<int> topological_sort() {\n        // TODO \u9589\u8DEF\u691C\
-    \u77E5\u3057\u3066\u7A7A\u914D\u5217\u3092\u8FD4\u5374\u3068\u304B\n        vector<int>\
-    \ seen(N, 0), sorted;\n        auto dfs = [&](auto &f, int v) -> void {\n    \
-    \        seen[v] = 1;\n            for (auto &&[from, to, cost] : G[v]) {\n  \
-    \              if (!seen[to]) f(f, to);\n            }\n            sorted.push_back(v);\n\
-    \        };\n        for (int i = 0; i < N; ++i) {\n            if (!seen[i])\
-    \ dfs(dfs, i);\n        }\n        reverse(all(sorted));\n        return sorted;\n\
-    \    }\n    // TODO cc\n    // TODO scc\n    // TODO \u30D9\u30EB\u30DE\u30F3\u30D5\
-    \u30A9\u30FC\u30C9\n    // TODO \u30B5\u30A4\u30AF\u30EB\u691C\u51FA\n    // TODO\
-    \ \u30AF\u30E9\u30B9\u30AB\u30EB\n    // TODO \u30EF\u30FC\u30B7\u30E3\u30EB\u30D5\
-    \u30ED\u30A4\u30C9\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\n};\n\n\n\
-    /**\n * @brief UnionFind\n */\nstruct UnionFind {\n  private:\n    vector<int>\
-    \ parent, size;\n\n  public:\n    UnionFind(int N) {\n        parent.assign(N,\
-    \ -1);\n        size.assign(N, 1);\n    }\n    // \u81EA\u5206\u306E\u30B0\u30EB\
-    \u30FC\u30D7\u306E\u30B5\u30A4\u30BA\n    int operator[](int p) {\n        return\
-    \ size[find(p)];\n    }\n    // p\u306E\u89AA\u3092\u898B\u3064\u3051\u308B\n\
-    \    int find(int p) {\n        return !~parent[p] ? p : (parent[p] = find(parent[p]));\n\
-    \    }\n    // a\u3068b\u3092\u540C\u3058\u30B0\u30EB\u30FC\u30D7\u306B\u3059\u308B\
-    \ \u64CD\u4F5C\u3057\u305F\u3089true\n    bool unite(int a, int b) {\n       \
-    \ int x = find(a), y = find(b);\n        if (x == y) return false;\n        if\
-    \ (size[x] > size[y]) swap(x, y);\n        parent[x] = y, size[y] += size[x];\n\
-    \        return true;\n    }\n};\n\n\n/**\n * @brief FenwicTree 1\u70B9\u66F4\u65B0\
-    \ \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F\n */\nstruct FenwickTree {\n  private:\n\
-    \    int N;\n    vector<int> fwk;\n\n  public:\n    FenwickTree(int N) : N(N)\
-    \ {\n        fwk.assign(N + 1, 0);\n    }\n    FenwickTree(const vector<int> &A)\
-    \ : N(A.size()) {\n        fwk.assign(N + 1, 0);\n        for (int i = 1; i <=\
-    \ N; ++i) {\n            fwk[i] += A[i - 1];\n            if (i + (i & -i) <=\
-    \ N) fwk[i + (i & -i)] += fwk[i];\n        }\n    }\n    // \u5024\u3092\u52A0\
-    \u3048\u308B\n    void add(int i, const int &x) {\n        for (++i; i <= N; i\
-    \ += i & -i) fwk[i] += x;\n    }\n    // \u03A3[0, i]\n    int sum(int i) {\n\
-    \        int ans = 0;\n        for (++i; i; i -= i & -i) ans += fwk[i];\n    \
-    \    return ans;\n    }\n};\n\n\n/**\n * @brief SegmentTree 1\u70B9\u66F4\u65B0\
-    \ \u533A\u9593\u53D6\u5F97\n */\ntemplate <class Monoid> struct SegmentTree {\n\
-    \    using T = typename Monoid::T;\n\n  private:\n    Monoid M;\n    int N, size,\
-    \ log = 1;\n    vector<T> node;\n    void init() {\n        while ((1 << log)\
-    \ < N) ++log;\n        node.assign((size = 1 << log) << 1, M.e());\n    }\n\n\
-    \  public:\n    SegmentTree(Monoid M, int N) : M(M), N(N) {\n        init();\n\
-    \    }\n    SegmentTree(Monoid M, const vector<T> &A) : M(M), N(A.size()) {\n\
-    \        init();\n        for (int i = 0; i < N; ++i) node[i + size] = A[i];\n\
-    \        for (int i = size - 1; i >= 1; --i)\n            node[i] = M.op(node[i\
-    \ << 1 | 0], node[i << 1 | 1]);\n    }\n    // \u8981\u7D20i\u306E\u5024\u3092\
-    x\u306B\u3059\u308B\n    void set(int i, const T &x) {\n        node[i += size]\
-    \ = x;\n        while (i >>= 1) node[i] = M.op(node[i << 1 | 0], node[i << 1 |\
-    \ 1]);\n    }\n    // \u6F14\u7B97[l,r)\n    T prod(int l, int r) {\n        T\
-    \ L = M.e(), R = M.e();\n        for (l += size, r += size; l < r; l >>= 1, r\
-    \ >>= 1) {\n            if (l & 1) L = M.op(L, node[l++]);\n            if (r\
-    \ & 1) R = M.op(node[--r], R);\n        }\n        return M.op(L, R);\n    }\n\
-    };\n\n\n/** ======================================= */\n/**              \u30E2\
-    \u30CE\u30A4\u30C9                   */\n/** =======================================\
-    \ */\n\ntemplate <typename U, typename F> struct Monoid {\n    using T = U;\n\n\
-    \  private:\n    T _e;\n    F _op;\n\n  public:\n    Monoid(T e, F op) : _e(e),\
-    \ _op(op) {\n    }\n    T op(const T &x, const T &y) {\n        return _op(x,\
-    \ y);\n    }\n    T e() {\n        return _e;\n    }\n};\ntemplate <typename U\
-    \ = int> struct MonoidMin {\n    using T = U;\n    T op(const T &x, const T &y)\
-    \ {\n        return min(x, y);\n    }\n    T e() {\n        return INF;\n    }\n\
-    };\ntemplate <typename U = int> struct MonoidMax {\n    using T = U;\n    T op(const\
-    \ T &x, const T &y) {\n        return max(x, y);\n    }\n    T e() {\n       \
-    \ return -INF;\n    }\n};\ntemplate <typename U = int> struct MonoidAdd {\n  \
-    \  using T = U;\n    T op(const T &x, const T &y) {\n        return x + y;\n \
-    \   }\n    T e() {\n        return 0ll;\n    }\n};\ntemplate <typename U = int>\
-    \ struct MonoidMul {\n    using T = U;\n    T op(const T &x, const T &y) {\n \
-    \       return x * y;\n    }\n    T e() {\n        return 1ll;\n    }\n};\ntemplate\
-    \ <typename U = int> struct MonoidGcd {\n    using T = U;\n    T op(const T &x,\
-    \ const T &y) {\n        return gcd(x, y);\n    }\n    T e() {\n        return\
-    \ 0ll;\n    }\n};\ntemplate <typename U = int> struct MonoidLcm {\n    using T\
-    \ = U;\n    T op(const T &x, const T &y) {\n        return lcm(x, y);\n    }\n\
-    \    T e() {\n        return 1ll;\n    }\n};\ntemplate <typename U = int> struct\
-    \ MonoidXor {\n    using T = U;\n    T op(const T &x, const T &y) {\n        return\
-    \ x ^ y;\n    }\n    T e() {\n        return 0ll;\n    }\n};\n\nnamespace lib\
-    \ {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\nGeometry\
-    \ geo;\n}; // namespace lib\nvoid solve();\nsigned main() {\n    solve();\n}\n\
-    // -----------------------------------------\n// #include \"template/template.hpp\"\
-    \ is done.\n// -----------------------------------------\n\n/**\n * @brief \U0001F36A\
-    \U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n\n"
+    \ y1 - y3) * hypot(x2 - x4, y2 - y4) / 2.0;\n    }\n};\n\nnamespace lib {\nNumber\
+    \ num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\nGeometry geo;\n\
+    }; // namespace lib\nvoid solve();\nsigned main() {\n    solve();\n}\n// -----------------------------------------\n\
+    // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n\
+    \n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n\n"
   dependsOn:
   - bits/stdc++.h
   isVerificationFile: false
   path: bundle.cpp
   requiredBy: []
-  timestamp: '2026-01-01 17:26:37+09:00'
+  timestamp: '2026-01-01 17:41:21+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundle.cpp

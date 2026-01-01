@@ -82,7 +82,18 @@ data:
     \    assert(lib::num.modpow(2, 10, MOD) == 1024);\n    assert(lib::num.modinv(2,\
     \ MOD) == 499122177);\n    assert(lib::num.modfact(10, MOD) == 3628800);\n   \
     \ assert(lib::num.mod_combination(10, 5, MOD) == 252);\n}\n// ===== library/util/string.hpp\
-    \ =====\nvoid test_string() {\n    // TODO test\n}\n// ===== library/util/sequence.hpp\
+    \ =====\nvoid test_string() {\n    assert(lib::str.is_low('A') == false);\n  \
+    \  assert(lib::str.is_low('a') == true);\n    assert(lib::str.is_upp('A') == true);\n\
+    \    assert(lib::str.is_upp('a') == false);\n    assert(lib::str.transform_lower(\"\
+    AbC\") == \"abc\");\n    assert(lib::str.transform_upper(\"AbC\") == \"ABC\");\n\
+    \    assert(lib::str.lpad(\"ABC\", 6) == \"000ABC\");\n    assert(lib::str.rpad(\"\
+    ABC\", 6) == \"ABC000\");\n    vector<int> exp_finds = {0, 3, 6, 9};\n    assert(lib::str.finds(\"\
+    abcaefahia\", \"a\") == exp_finds);\n    vector<string> exp_split = {\"aa\", \"\
+    bb\", \"cc\"};\n    assert(lib::str.split(\"aa,bb,cc\", ',') == exp_split);\n\
+    \    assert(lib::str.split_multi(\"aa,bb/cc\", \",/\") == exp_split);\n    assert(lib::str.str_range(\"\
+    abc123abc\", 3, 6) == \"123a\");\n    vector<int> exp_z_algo = {13, 0, 0, 0, 3,\
+    \ 0, 0, 1, 0, 2, 0, 0, 1};\n    vector<int> val_z_algo = lib::str.z_algo(\"abc1abca3abZa\"\
+    );\n    assert(val_z_algo == exp_z_algo);\n}\n// ===== library/util/sequence.hpp\
     \ =====\nvoid test_sequence() {\n    // TODO test\n}\n// ===== library/util/search.hpp\
     \ =====\nvoid test_search() {\n    vector<int> A = {1, 2, 3};\n    vector<vector<int>>\
     \ val_perm;\n    vector<vector<int>> exp_perm = {{1, 2, 3}, {1, 3, 2}, {2, 1,\
@@ -136,7 +147,7 @@ data:
   isVerificationFile: true
   path: tests/template.test.cpp
   requiredBy: []
-  timestamp: '2026-01-01 17:26:37+09:00'
+  timestamp: '2026-01-01 17:41:21+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/template.test.cpp
