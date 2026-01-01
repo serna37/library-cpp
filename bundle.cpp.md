@@ -322,37 +322,36 @@ data:
     \    }\n    // \u3088\u308A\u4E0A\u306E\u6700\u5C0F\u5024 \u5B58\u5728\u3057\u306A\
     \u3044\u5834\u5408 INF\n    template <typename T> T bi_gt_val(const set<T> &st,\
     \ const T &x) {\n        auto it = st.upper_bound(x);\n        return (it == st.end()\
-    \ ? INF : *it);\n    }\n    // TODO \u30E1\u30E2\u5316\u518D\u5E30\n    // TODO\
-    \ DFS\u9806\u5217\n    // TODO DFS\u9806\u5217 \u5358\u8ABF\u5897\u52A0\n};\n\n\
-    \n/** ======================================= */\n/**               \u30B0\u30EA\
-    \u30C3\u30C9                  */\n/** =======================================\
+    \ ? INF : *it);\n    }\n    // \u30E1\u30E2\u5316\u518D\u5E30 !!\u30B3\u30D4\u30DA\
+    \u7528!! \u95A2\u6570\u5185\u3092\u30DA\u30FC\u30B9\u30C8\u3057\u3066\u66F8\u304D\
+    \u63DB\u3048\u3066\u4F7F\u3046\n    void dfs_memo() {\n        map<int, int> memo;\n\
+    \        auto dfs = [&](auto f, int n) {\n            if (n <= 1) return n;\n\
+    \            if (memo.count(n)) return memo[n];\n            return memo[n] =\
+    \ f(f, n - 1) + f(f, n - 2);\n        };\n        // int ans = dfs(dfs, N);\n\
+    \    }\n};\n\n\n/** ======================================= */\n/**          \
+    \     \u30B0\u30EA\u30C3\u30C9                  */\n/** =======================================\
     \ */\n\nclass Grid {\n  public:\n    // \u884C\u5217\u306E\u8EE2\u7F6E\n    template\
     \ <typename T>\n    vector<vector<T>> transpose(const vector<vector<T>> &G) {\n\
     \        int H = G.size(), W = G[0].size();\n        vector<vector<T>> _G(W, vector<T>(H));\n\
     \        for (int i = 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j)\
     \ {\n                _G[j][i] = G[i][j];\n            }\n        }\n        return\
-    \ _G;\n    }\n    // XXX \u4EE5\u4E0B\u3092\u3044\u3044\u611F\u3058\u306B\u3057\
-    \u305F\u3082\u306E\u306B\u3001\u6539\u826F\u3059\u308B!\n    // TODO 4\u65B9 or\
-    \ 8\u65B9\u306B\u884C\u304F\u30EB\u30FC\u30D7\u51E6\u7406\n    // TODO \u9818\u57DF\
-    \u5916\u3001\u884C\u3051\u306A\u3044\u30DE\u30B9\u306E\u30D5\u30A3\u30EB\u30BF\
-    \u51E6\u7406\n    // TODO \u884C\u3063\u305F\u7D50\u679C\u3069\u3046\u3059\u308B\
-    \uFF1F\u6700\u77ED\u8DDD\u96E2\u3092\u6C42\u3081\u308B or \u30E9\u30E0\u30C0\u306B\
-    \u3059\u308B\n    template <typename T, typename F> void bfs(vector<vector<T>>\
+    \ _G;\n    }\n    // \u30B0\u30EA\u30C3\u30C94\u65B9\u3092\u898B\u308BBFS \u5F15\
+    \u6570f(y, x)\n    template <typename T, typename F> void bfs(vector<vector<T>>\
     \ &G, F f) {\n        int H = G.size(), W = G[0].size();\n        for (int i =\
     \ 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n              \
     \  for (int k = 0; k < 4; ++k) {\n                    int y = i + dy[k], x = j\
     \ + dx[k];\n                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n\
-    \                    f();\n                }\n            }\n        }\n    }\n\
-    \    template <typename T, typename F>\n    void bfs(vector<string> &G, string\
-    \ alw, F f) {\n        int H = G.size(), W = G[0].size();\n        for (int i\
-    \ = 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n            \
-    \    for (int k = 0; k < 4; ++k) {\n                    int y = i + dy[k], x =\
-    \ j + dx[k];\n                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n\
-    \                    if (alw.find(G[y][x]) == string::npos) continue;\n      \
-    \              f();\n                }\n            }\n        }\n    }\n};\n\n\
-    \n/** ======================================= */\n/**               \u5E7E\u4F55\
-    \                      */\n/** ======================================= */\n\n\
-    class Geometry {\n  public:\n    // \u5EA6\u6570\u6CD5 \u2192 \u5F27\u5EA6\u6CD5\
+    \                    f(y, x);\n                }\n            }\n        }\n \
+    \   }\n    // \u30B0\u30EA\u30C3\u30C98\u65B9\u3092\u898B\u308BBFS \u5F15\u6570\
+    f(y, x)\n    template <typename T, typename F> void bfs8(vector<vector<T>> &G,\
+    \ F f) {\n        int H = G.size(), W = G[0].size();\n        for (int i = 0;\
+    \ i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n                for\
+    \ (int k = 0; k < 8; ++k) {\n                    int y = i + dy8[k], x = j + dx8[k];\n\
+    \                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n     \
+    \               f(y, x);\n                }\n            }\n        }\n    }\n\
+    };\n\n\n/** ======================================= */\n/**               \u5E7E\
+    \u4F55                      */\n/** ======================================= */\n\
+    \nclass Geometry {\n  public:\n    // \u5EA6\u6570\u6CD5 \u2192 \u5F27\u5EA6\u6CD5\
     \n    double deg_to_rad(double d) {\n        return d * PI / 180;\n    }\n   \
     \ // \u5F27\u5EA6\u6CD5 \u2192 \u5EA6\u6570\u6CD5\n    double rad_to_deg(double\
     \ r) {\n        return r * 180 / PI;\n    }\n    // \u504F\u89D2\u3092\u30E9\u30B8\
@@ -416,27 +415,27 @@ data:
     \u30A9\u30FC\u30C9\n    // TODO \u30B5\u30A4\u30AF\u30EB\u691C\u51FA\n    // TODO\
     \ \u30AF\u30E9\u30B9\u30AB\u30EB\n    // TODO \u30EF\u30FC\u30B7\u30E3\u30EB\u30D5\
     \u30ED\u30A4\u30C9\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\n};\n\n\n\
-    /**\n * @brief UnionFind\n */\nstruct UnionFind {\n  private:\n    int N;\n  \
-    \  vector<int> parent, size;\n\n  public:\n    UnionFind(int N) : N(N) {\n   \
-    \     parent.assign(N, -1);\n        size.assign(N, 1);\n    }\n    // \u81EA\u5206\
-    \u306E\u30B0\u30EB\u30FC\u30D7\u306E\u30B5\u30A4\u30BA\n    int operator[](int\
-    \ p) {\n        return size[find(p)];\n    }\n    // p\u306E\u89AA\u3092\u898B\
-    \u3064\u3051\u308B\n    int find(int p) {\n        return !~parent[p] ? p : (parent[p]\
-    \ = find(parent[p]));\n    }\n    // a\u3068b\u3092\u540C\u3058\u30B0\u30EB\u30FC\
-    \u30D7\u306B\u3059\u308B \u64CD\u4F5C\u3057\u305F\u3089true\n    bool unite(int\
-    \ a, int b) {\n        int x = find(a), y = find(b);\n        if (x == y) return\
-    \ false;\n        if (size[x] > size[y]) swap(x, y);\n        parent[x] = y, size[y]\
-    \ += size[x];\n        return true;\n    }\n};\n\n\n/**\n * @brief FenwicTree\
-    \ 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F\n */\nstruct\
-    \ FenwickTree {\n  private:\n    int N;\n    vector<int> fwk;\n\n  public:\n \
-    \   FenwickTree(int N) : N(N) {\n        fwk.assign(N + 1, 0);\n    }\n    FenwickTree(const\
-    \ vector<int> &A) : N(A.size()) {\n        fwk.assign(N + 1, 0);\n        for\
-    \ (int i = 1; i <= N; ++i) {\n            fwk[i] += A[i - 1];\n            if\
-    \ (i + (i & -i) <= N) fwk[i + (i & -i)] += fwk[i];\n        }\n    }\n    // \u5024\
-    \u3092\u52A0\u3048\u308B\n    void add(int i, const int &x) {\n        for (++i;\
-    \ i <= N; i += i & -i) fwk[i] += x;\n    }\n    // \u03A3[0, i]\n    int sum(int\
-    \ i) {\n        int ans = 0;\n        for (++i; i; i -= i & -i) ans += fwk[i];\n\
-    \        return ans;\n    }\n};\n\n\n/**\n * @brief SegmentTree 1\u70B9\u66F4\u65B0\
+    /**\n * @brief UnionFind\n */\nstruct UnionFind {\n  private:\n    vector<int>\
+    \ parent, size;\n\n  public:\n    UnionFind(int N) {\n        parent.assign(N,\
+    \ -1);\n        size.assign(N, 1);\n    }\n    // \u81EA\u5206\u306E\u30B0\u30EB\
+    \u30FC\u30D7\u306E\u30B5\u30A4\u30BA\n    int operator[](int p) {\n        return\
+    \ size[find(p)];\n    }\n    // p\u306E\u89AA\u3092\u898B\u3064\u3051\u308B\n\
+    \    int find(int p) {\n        return !~parent[p] ? p : (parent[p] = find(parent[p]));\n\
+    \    }\n    // a\u3068b\u3092\u540C\u3058\u30B0\u30EB\u30FC\u30D7\u306B\u3059\u308B\
+    \ \u64CD\u4F5C\u3057\u305F\u3089true\n    bool unite(int a, int b) {\n       \
+    \ int x = find(a), y = find(b);\n        if (x == y) return false;\n        if\
+    \ (size[x] > size[y]) swap(x, y);\n        parent[x] = y, size[y] += size[x];\n\
+    \        return true;\n    }\n};\n\n\n/**\n * @brief FenwicTree 1\u70B9\u66F4\u65B0\
+    \ \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F\n */\nstruct FenwickTree {\n  private:\n\
+    \    int N;\n    vector<int> fwk;\n\n  public:\n    FenwickTree(int N) : N(N)\
+    \ {\n        fwk.assign(N + 1, 0);\n    }\n    FenwickTree(const vector<int> &A)\
+    \ : N(A.size()) {\n        fwk.assign(N + 1, 0);\n        for (int i = 1; i <=\
+    \ N; ++i) {\n            fwk[i] += A[i - 1];\n            if (i + (i & -i) <=\
+    \ N) fwk[i + (i & -i)] += fwk[i];\n        }\n    }\n    // \u5024\u3092\u52A0\
+    \u3048\u308B\n    void add(int i, const int &x) {\n        for (++i; i <= N; i\
+    \ += i & -i) fwk[i] += x;\n    }\n    // \u03A3[0, i]\n    int sum(int i) {\n\
+    \        int ans = 0;\n        for (++i; i; i -= i & -i) ans += fwk[i];\n    \
+    \    return ans;\n    }\n};\n\n\n/**\n * @brief SegmentTree 1\u70B9\u66F4\u65B0\
     \ \u533A\u9593\u53D6\u5F97\n */\ntemplate <class Monoid> struct SegmentTree {\n\
     \    using T = typename Monoid::T;\n\n  private:\n    Monoid M;\n    int N, size,\
     \ log = 1;\n    vector<T> node;\n    void init() {\n        while ((1 << log)\
@@ -787,37 +786,36 @@ data:
     \    }\n    // \u3088\u308A\u4E0A\u306E\u6700\u5C0F\u5024 \u5B58\u5728\u3057\u306A\
     \u3044\u5834\u5408 INF\n    template <typename T> T bi_gt_val(const set<T> &st,\
     \ const T &x) {\n        auto it = st.upper_bound(x);\n        return (it == st.end()\
-    \ ? INF : *it);\n    }\n    // TODO \u30E1\u30E2\u5316\u518D\u5E30\n    // TODO\
-    \ DFS\u9806\u5217\n    // TODO DFS\u9806\u5217 \u5358\u8ABF\u5897\u52A0\n};\n\n\
-    \n/** ======================================= */\n/**               \u30B0\u30EA\
-    \u30C3\u30C9                  */\n/** =======================================\
+    \ ? INF : *it);\n    }\n    // \u30E1\u30E2\u5316\u518D\u5E30 !!\u30B3\u30D4\u30DA\
+    \u7528!! \u95A2\u6570\u5185\u3092\u30DA\u30FC\u30B9\u30C8\u3057\u3066\u66F8\u304D\
+    \u63DB\u3048\u3066\u4F7F\u3046\n    void dfs_memo() {\n        map<int, int> memo;\n\
+    \        auto dfs = [&](auto f, int n) {\n            if (n <= 1) return n;\n\
+    \            if (memo.count(n)) return memo[n];\n            return memo[n] =\
+    \ f(f, n - 1) + f(f, n - 2);\n        };\n        // int ans = dfs(dfs, N);\n\
+    \    }\n};\n\n\n/** ======================================= */\n/**          \
+    \     \u30B0\u30EA\u30C3\u30C9                  */\n/** =======================================\
     \ */\n\nclass Grid {\n  public:\n    // \u884C\u5217\u306E\u8EE2\u7F6E\n    template\
     \ <typename T>\n    vector<vector<T>> transpose(const vector<vector<T>> &G) {\n\
     \        int H = G.size(), W = G[0].size();\n        vector<vector<T>> _G(W, vector<T>(H));\n\
     \        for (int i = 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j)\
     \ {\n                _G[j][i] = G[i][j];\n            }\n        }\n        return\
-    \ _G;\n    }\n    // XXX \u4EE5\u4E0B\u3092\u3044\u3044\u611F\u3058\u306B\u3057\
-    \u305F\u3082\u306E\u306B\u3001\u6539\u826F\u3059\u308B!\n    // TODO 4\u65B9 or\
-    \ 8\u65B9\u306B\u884C\u304F\u30EB\u30FC\u30D7\u51E6\u7406\n    // TODO \u9818\u57DF\
-    \u5916\u3001\u884C\u3051\u306A\u3044\u30DE\u30B9\u306E\u30D5\u30A3\u30EB\u30BF\
-    \u51E6\u7406\n    // TODO \u884C\u3063\u305F\u7D50\u679C\u3069\u3046\u3059\u308B\
-    \uFF1F\u6700\u77ED\u8DDD\u96E2\u3092\u6C42\u3081\u308B or \u30E9\u30E0\u30C0\u306B\
-    \u3059\u308B\n    template <typename T, typename F> void bfs(vector<vector<T>>\
+    \ _G;\n    }\n    // \u30B0\u30EA\u30C3\u30C94\u65B9\u3092\u898B\u308BBFS \u5F15\
+    \u6570f(y, x)\n    template <typename T, typename F> void bfs(vector<vector<T>>\
     \ &G, F f) {\n        int H = G.size(), W = G[0].size();\n        for (int i =\
     \ 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n              \
     \  for (int k = 0; k < 4; ++k) {\n                    int y = i + dy[k], x = j\
     \ + dx[k];\n                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n\
-    \                    f();\n                }\n            }\n        }\n    }\n\
-    \    template <typename T, typename F>\n    void bfs(vector<string> &G, string\
-    \ alw, F f) {\n        int H = G.size(), W = G[0].size();\n        for (int i\
-    \ = 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n            \
-    \    for (int k = 0; k < 4; ++k) {\n                    int y = i + dy[k], x =\
-    \ j + dx[k];\n                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n\
-    \                    if (alw.find(G[y][x]) == string::npos) continue;\n      \
-    \              f();\n                }\n            }\n        }\n    }\n};\n\n\
-    \n/** ======================================= */\n/**               \u5E7E\u4F55\
-    \                      */\n/** ======================================= */\n\n\
-    class Geometry {\n  public:\n    // \u5EA6\u6570\u6CD5 \u2192 \u5F27\u5EA6\u6CD5\
+    \                    f(y, x);\n                }\n            }\n        }\n \
+    \   }\n    // \u30B0\u30EA\u30C3\u30C98\u65B9\u3092\u898B\u308BBFS \u5F15\u6570\
+    f(y, x)\n    template <typename T, typename F> void bfs8(vector<vector<T>> &G,\
+    \ F f) {\n        int H = G.size(), W = G[0].size();\n        for (int i = 0;\
+    \ i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n                for\
+    \ (int k = 0; k < 8; ++k) {\n                    int y = i + dy8[k], x = j + dx8[k];\n\
+    \                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n     \
+    \               f(y, x);\n                }\n            }\n        }\n    }\n\
+    };\n\n\n/** ======================================= */\n/**               \u5E7E\
+    \u4F55                      */\n/** ======================================= */\n\
+    \nclass Geometry {\n  public:\n    // \u5EA6\u6570\u6CD5 \u2192 \u5F27\u5EA6\u6CD5\
     \n    double deg_to_rad(double d) {\n        return d * PI / 180;\n    }\n   \
     \ // \u5F27\u5EA6\u6CD5 \u2192 \u5EA6\u6570\u6CD5\n    double rad_to_deg(double\
     \ r) {\n        return r * 180 / PI;\n    }\n    // \u504F\u89D2\u3092\u30E9\u30B8\
@@ -881,27 +879,27 @@ data:
     \u30A9\u30FC\u30C9\n    // TODO \u30B5\u30A4\u30AF\u30EB\u691C\u51FA\n    // TODO\
     \ \u30AF\u30E9\u30B9\u30AB\u30EB\n    // TODO \u30EF\u30FC\u30B7\u30E3\u30EB\u30D5\
     \u30ED\u30A4\u30C9\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\n};\n\n\n\
-    /**\n * @brief UnionFind\n */\nstruct UnionFind {\n  private:\n    int N;\n  \
-    \  vector<int> parent, size;\n\n  public:\n    UnionFind(int N) : N(N) {\n   \
-    \     parent.assign(N, -1);\n        size.assign(N, 1);\n    }\n    // \u81EA\u5206\
-    \u306E\u30B0\u30EB\u30FC\u30D7\u306E\u30B5\u30A4\u30BA\n    int operator[](int\
-    \ p) {\n        return size[find(p)];\n    }\n    // p\u306E\u89AA\u3092\u898B\
-    \u3064\u3051\u308B\n    int find(int p) {\n        return !~parent[p] ? p : (parent[p]\
-    \ = find(parent[p]));\n    }\n    // a\u3068b\u3092\u540C\u3058\u30B0\u30EB\u30FC\
-    \u30D7\u306B\u3059\u308B \u64CD\u4F5C\u3057\u305F\u3089true\n    bool unite(int\
-    \ a, int b) {\n        int x = find(a), y = find(b);\n        if (x == y) return\
-    \ false;\n        if (size[x] > size[y]) swap(x, y);\n        parent[x] = y, size[y]\
-    \ += size[x];\n        return true;\n    }\n};\n\n\n/**\n * @brief FenwicTree\
-    \ 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F\n */\nstruct\
-    \ FenwickTree {\n  private:\n    int N;\n    vector<int> fwk;\n\n  public:\n \
-    \   FenwickTree(int N) : N(N) {\n        fwk.assign(N + 1, 0);\n    }\n    FenwickTree(const\
-    \ vector<int> &A) : N(A.size()) {\n        fwk.assign(N + 1, 0);\n        for\
-    \ (int i = 1; i <= N; ++i) {\n            fwk[i] += A[i - 1];\n            if\
-    \ (i + (i & -i) <= N) fwk[i + (i & -i)] += fwk[i];\n        }\n    }\n    // \u5024\
-    \u3092\u52A0\u3048\u308B\n    void add(int i, const int &x) {\n        for (++i;\
-    \ i <= N; i += i & -i) fwk[i] += x;\n    }\n    // \u03A3[0, i]\n    int sum(int\
-    \ i) {\n        int ans = 0;\n        for (++i; i; i -= i & -i) ans += fwk[i];\n\
-    \        return ans;\n    }\n};\n\n\n/**\n * @brief SegmentTree 1\u70B9\u66F4\u65B0\
+    /**\n * @brief UnionFind\n */\nstruct UnionFind {\n  private:\n    vector<int>\
+    \ parent, size;\n\n  public:\n    UnionFind(int N) {\n        parent.assign(N,\
+    \ -1);\n        size.assign(N, 1);\n    }\n    // \u81EA\u5206\u306E\u30B0\u30EB\
+    \u30FC\u30D7\u306E\u30B5\u30A4\u30BA\n    int operator[](int p) {\n        return\
+    \ size[find(p)];\n    }\n    // p\u306E\u89AA\u3092\u898B\u3064\u3051\u308B\n\
+    \    int find(int p) {\n        return !~parent[p] ? p : (parent[p] = find(parent[p]));\n\
+    \    }\n    // a\u3068b\u3092\u540C\u3058\u30B0\u30EB\u30FC\u30D7\u306B\u3059\u308B\
+    \ \u64CD\u4F5C\u3057\u305F\u3089true\n    bool unite(int a, int b) {\n       \
+    \ int x = find(a), y = find(b);\n        if (x == y) return false;\n        if\
+    \ (size[x] > size[y]) swap(x, y);\n        parent[x] = y, size[y] += size[x];\n\
+    \        return true;\n    }\n};\n\n\n/**\n * @brief FenwicTree 1\u70B9\u66F4\u65B0\
+    \ \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F\n */\nstruct FenwickTree {\n  private:\n\
+    \    int N;\n    vector<int> fwk;\n\n  public:\n    FenwickTree(int N) : N(N)\
+    \ {\n        fwk.assign(N + 1, 0);\n    }\n    FenwickTree(const vector<int> &A)\
+    \ : N(A.size()) {\n        fwk.assign(N + 1, 0);\n        for (int i = 1; i <=\
+    \ N; ++i) {\n            fwk[i] += A[i - 1];\n            if (i + (i & -i) <=\
+    \ N) fwk[i + (i & -i)] += fwk[i];\n        }\n    }\n    // \u5024\u3092\u52A0\
+    \u3048\u308B\n    void add(int i, const int &x) {\n        for (++i; i <= N; i\
+    \ += i & -i) fwk[i] += x;\n    }\n    // \u03A3[0, i]\n    int sum(int i) {\n\
+    \        int ans = 0;\n        for (++i; i; i -= i & -i) ans += fwk[i];\n    \
+    \    return ans;\n    }\n};\n\n\n/**\n * @brief SegmentTree 1\u70B9\u66F4\u65B0\
     \ \u533A\u9593\u53D6\u5F97\n */\ntemplate <class Monoid> struct SegmentTree {\n\
     \    using T = typename Monoid::T;\n\n  private:\n    Monoid M;\n    int N, size,\
     \ log = 1;\n    vector<T> node;\n    void init() {\n        while ((1 << log)\
@@ -949,7 +947,7 @@ data:
   isVerificationFile: false
   path: bundle.cpp
   requiredBy: []
-  timestamp: '2026-01-01 11:13:30+09:00'
+  timestamp: '2026-01-01 16:14:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundle.cpp

@@ -95,15 +95,20 @@ data:
     \    }\n    // \u3088\u308A\u4E0A\u306E\u6700\u5C0F\u5024 \u5B58\u5728\u3057\u306A\
     \u3044\u5834\u5408 INF\n    template <typename T> T bi_gt_val(const set<T> &st,\
     \ const T &x) {\n        auto it = st.upper_bound(x);\n        return (it == st.end()\
-    \ ? INF : *it);\n    }\n    // TODO \u30E1\u30E2\u5316\u518D\u5E30\n    // TODO\
-    \ DFS\u9806\u5217\n    // TODO DFS\u9806\u5217 \u5358\u8ABF\u5897\u52A0\n};\n"
+    \ ? INF : *it);\n    }\n    // \u30E1\u30E2\u5316\u518D\u5E30 !!\u30B3\u30D4\u30DA\
+    \u7528!! \u95A2\u6570\u5185\u3092\u30DA\u30FC\u30B9\u30C8\u3057\u3066\u66F8\u304D\
+    \u63DB\u3048\u3066\u4F7F\u3046\n    void dfs_memo() {\n        map<int, int> memo;\n\
+    \        auto dfs = [&](auto f, int n) {\n            if (n <= 1) return n;\n\
+    \            if (memo.count(n)) return memo[n];\n            return memo[n] =\
+    \ f(f, n - 1) + f(f, n - 2);\n        };\n        // int ans = dfs(dfs, N);\n\
+    \    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/util/search.hpp
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2026-01-01 11:13:30+09:00'
+  timestamp: '2026-01-01 16:14:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp
@@ -116,3 +121,4 @@ title: "\u63A2\u7D22"
 - 順列全探索
 - bit全探索
 - 二分探索
+- メモ化再帰

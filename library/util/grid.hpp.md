@@ -33,33 +33,28 @@ data:
     \ &G) {\n        int H = G.size(), W = G[0].size();\n        vector<vector<T>>\
     \ _G(W, vector<T>(H));\n        for (int i = 0; i < H; ++i) {\n            for\
     \ (int j = 0; j < W; ++j) {\n                _G[j][i] = G[i][j];\n           \
-    \ }\n        }\n        return _G;\n    }\n    // XXX \u4EE5\u4E0B\u3092\u3044\
-    \u3044\u611F\u3058\u306B\u3057\u305F\u3082\u306E\u306B\u3001\u6539\u826F\u3059\
-    \u308B!\n    // TODO 4\u65B9 or 8\u65B9\u306B\u884C\u304F\u30EB\u30FC\u30D7\u51E6\
-    \u7406\n    // TODO \u9818\u57DF\u5916\u3001\u884C\u3051\u306A\u3044\u30DE\u30B9\
-    \u306E\u30D5\u30A3\u30EB\u30BF\u51E6\u7406\n    // TODO \u884C\u3063\u305F\u7D50\
-    \u679C\u3069\u3046\u3059\u308B\uFF1F\u6700\u77ED\u8DDD\u96E2\u3092\u6C42\u3081\
-    \u308B or \u30E9\u30E0\u30C0\u306B\u3059\u308B\n    template <typename T, typename\
+    \ }\n        }\n        return _G;\n    }\n    // \u30B0\u30EA\u30C3\u30C94\u65B9\
+    \u3092\u898B\u308BBFS \u5F15\u6570f(y, x)\n    template <typename T, typename\
     \ F> void bfs(vector<vector<T>> &G, F f) {\n        int H = G.size(), W = G[0].size();\n\
     \        for (int i = 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j)\
     \ {\n                for (int k = 0; k < 4; ++k) {\n                    int y\
     \ = i + dy[k], x = j + dx[k];\n                    if (y < 0 or x < 0 or H <=\
-    \ y or W <= x) continue;\n                    f();\n                }\n      \
-    \      }\n        }\n    }\n    template <typename T, typename F>\n    void bfs(vector<string>\
-    \ &G, string alw, F f) {\n        int H = G.size(), W = G[0].size();\n       \
-    \ for (int i = 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n \
-    \               for (int k = 0; k < 4; ++k) {\n                    int y = i +\
-    \ dy[k], x = j + dx[k];\n                    if (y < 0 or x < 0 or H <= y or W\
-    \ <= x) continue;\n                    if (alw.find(G[y][x]) == string::npos)\
-    \ continue;\n                    f();\n                }\n            }\n    \
-    \    }\n    }\n};\n"
+    \ y or W <= x) continue;\n                    f(y, x);\n                }\n  \
+    \          }\n        }\n    }\n    // \u30B0\u30EA\u30C3\u30C98\u65B9\u3092\u898B\
+    \u308BBFS \u5F15\u6570f(y, x)\n    template <typename T, typename F> void bfs8(vector<vector<T>>\
+    \ &G, F f) {\n        int H = G.size(), W = G[0].size();\n        for (int i =\
+    \ 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n              \
+    \  for (int k = 0; k < 8; ++k) {\n                    int y = i + dy8[k], x =\
+    \ j + dx8[k];\n                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n\
+    \                    f(y, x);\n                }\n            }\n        }\n \
+    \   }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/util/grid.hpp
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2026-01-01 11:13:30+09:00'
+  timestamp: '2026-01-01 16:14:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp
