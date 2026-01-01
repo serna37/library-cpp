@@ -90,7 +90,7 @@ struct Graph {
     vector<int> topological_sort() {
         // TODO 閉路検知して空配列を返却とか
         vector<int> seen(N, 0), sorted;
-        auto dfs = [&](auto &f, int v) {
+        auto dfs = [&](auto &f, int v) -> void {
             seen[v] = 1;
             for (auto &&[from, to, cost] : G[v]) {
                 if (!seen[to]) f(f, to);
