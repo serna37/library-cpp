@@ -1,11 +1,20 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: main.cpp
+    title: "\U0001F36A\U0001F9F8\U0001F43E"
+  - icon: ':heavy_check_mark:'
+    path: template/template.hpp
+    title: "\u0E05^>\u03C9<^\u0E05"
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/template.test.cpp
+    title: tests/template.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -56,22 +65,25 @@ data:
     \ /**\n     * DAG\u306E\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\n\
     \     */\n    vector<int> topological_sort() {\n        // TODO \u9589\u8DEF\u691C\
     \u77E5\u3057\u3066\u7A7A\u914D\u5217\u3092\u8FD4\u5374\u3068\u304B\n        vector<int>\
-    \ seen(N, 0), sorted;\n        auto dfs = [&](auto &f, int v) {\n            seen[v]\
-    \ = 1;\n            for (auto &&[from, to, cost] : G[v]) {\n                if\
-    \ (!seen[to]) f(f, to);\n            }\n            sorted.push_back(v);\n   \
-    \     };\n        for (int i = 0; i < N; ++i) {\n            if (!seen[i]) dfs(dfs,\
-    \ i);\n        }\n        reverse(all(sorted));\n        return sorted;\n    }\n\
-    \    // TODO cc\n    // TODO scc\n    // TODO \u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\
-    \u30FC\u30C9\n    // TODO \u30B5\u30A4\u30AF\u30EB\u691C\u51FA\n    // TODO \u30AF\
-    \u30E9\u30B9\u30AB\u30EB\n    // TODO \u30EF\u30FC\u30B7\u30E3\u30EB\u30D5\u30ED\
-    \u30A4\u30C9\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\n};\n"
+    \ seen(N, 0), sorted;\n        auto dfs = [&](auto &f, int v) -> void {\n    \
+    \        seen[v] = 1;\n            for (auto &&[from, to, cost] : G[v]) {\n  \
+    \              if (!seen[to]) f(f, to);\n            }\n            sorted.push_back(v);\n\
+    \        };\n        for (int i = 0; i < N; ++i) {\n            if (!seen[i])\
+    \ dfs(dfs, i);\n        }\n        reverse(all(sorted));\n        return sorted;\n\
+    \    }\n    // TODO cc\n    // TODO scc\n    // TODO \u30D9\u30EB\u30DE\u30F3\u30D5\
+    \u30A9\u30FC\u30C9\n    // TODO \u30B5\u30A4\u30AF\u30EB\u691C\u51FA\n    // TODO\
+    \ \u30AF\u30E9\u30B9\u30AB\u30EB\n    // TODO \u30EF\u30FC\u30B7\u30E3\u30EB\u30D5\
+    \u30ED\u30A4\u30C9\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/struct/graph.hpp
-  requiredBy: []
-  timestamp: '2025-12-31 17:18:03+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  requiredBy:
+  - template/template.hpp
+  - main.cpp
+  timestamp: '2026-01-01 11:05:25+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/template.test.cpp
 documentation_of: library/struct/graph.hpp
 layout: document
 title: "\u30B0\u30E9\u30D5"

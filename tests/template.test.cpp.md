@@ -17,6 +17,21 @@ data:
     path: library/def/type.hpp
     title: "\u578B"
   - icon: ':heavy_check_mark:'
+    path: library/struct/fenwick_tree.hpp
+    title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F"
+  - icon: ':heavy_check_mark:'
+    path: library/struct/graph.hpp
+    title: "\u30B0\u30E9\u30D5"
+  - icon: ':heavy_check_mark:'
+    path: library/struct/monoid.hpp
+    title: "\u30E2\u30CE\u30A4\u30C9"
+  - icon: ':heavy_check_mark:'
+    path: library/struct/segment_tree.hpp
+    title: "SegmentTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+  - icon: ':heavy_check_mark:'
+    path: library/struct/union_find.hpp
+    title: UnionFind
+  - icon: ':heavy_check_mark:'
     path: library/util/geometry.hpp
     title: "\u5E7E\u4F55"
   - icon: ':heavy_check_mark:'
@@ -65,14 +80,15 @@ data:
     \u3067\u3044\u308B\nlibrary/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\
     \u30C8\n\u51FA\u529B\u3059\u308B\u3068\u554F\u984C\u306B\u6B63\u89E3\u3067\u304D\
     \u306A\u3044\u306E\u3067assert\u306E\u307F\n*/\n// ===== library/util/number.hpp\
-    \ =====\nvoid test_number() {\n}\n// ===== library/util/string.hpp =====\nvoid\
-    \ test_string() {\n}\n// ===== library/util/sequence.hpp =====\nvoid test_sequence()\
-    \ {\n}\n// ===== library/util/search.hpp =====\nvoid test_search() {\n}\n// =====\
-    \ library/util/grid.hpp =====\nvoid test_grid() {\n}\n// ===== library/util/gepmetry.hpp\
-    \ =====\nvoid test_geometry() {\n}\nsigned main() {\n    test_number();\n    test_string();\n\
-    \    test_sequence();\n    test_search();\n    test_grid();\n    test_geometry();\n\
-    \    // URL\u306E\u554F\u984C\u306E\u7B54\u3048\u306F\u3053\u308C\u3060\u3051\n\
-    \    cout << \"Hello World\" << endl;\n}\n"
+    \ =====\nvoid test_number() {\n    // TODO test\n}\n// ===== library/util/string.hpp\
+    \ =====\nvoid test_string() {\n    // TODO test\n}\n// ===== library/util/sequence.hpp\
+    \ =====\nvoid test_sequence() {\n    // TODO test\n}\n// ===== library/util/search.hpp\
+    \ =====\nvoid test_search() {\n    // TODO test\n}\n// ===== library/util/grid.hpp\
+    \ =====\nvoid test_grid() {\n    // TODO test\n}\n// ===== library/util/gepmetry.hpp\
+    \ =====\nvoid test_geometry() {\n    // TODO test\n}\nvoid solve() {\n    // URL\u306E\
+    \u554F\u984C\u306E\u7B54\u3048\u306F\u3053\u308C\u3060\u3051\n    cout << \"Hello\
+    \ World\" << endl;\n    test_number();\n    test_string();\n    test_sequence();\n\
+    \    test_search();\n    test_grid();\n    test_geometry();\n}\n"
   dependsOn:
   - template/template.hpp
   - bits/stdc++.h
@@ -86,10 +102,15 @@ data:
   - library/util/search.hpp
   - library/util/grid.hpp
   - library/util/geometry.hpp
+  - library/struct/graph.hpp
+  - library/struct/union_find.hpp
+  - library/struct/fenwick_tree.hpp
+  - library/struct/segment_tree.hpp
+  - library/struct/monoid.hpp
   isVerificationFile: true
   path: tests/template.test.cpp
   requiredBy: []
-  timestamp: '2025-12-31 17:18:03+09:00'
+  timestamp: '2026-01-01 11:05:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/template.test.cpp

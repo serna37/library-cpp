@@ -1,11 +1,20 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: main.cpp
+    title: "\U0001F36A\U0001F9F8\U0001F43E"
+  - icon: ':heavy_check_mark:'
+    path: template/template.hpp
+    title: "\u0E05^>\u03C9<^\u0E05"
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/template.test.cpp
+    title: tests/template.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "SegmentTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
     links: []
@@ -45,10 +54,13 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/struct/segment_tree.hpp
-  requiredBy: []
-  timestamp: '2025-12-31 17:18:03+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  requiredBy:
+  - template/template.hpp
+  - main.cpp
+  timestamp: '2026-01-01 11:05:25+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/template.test.cpp
 documentation_of: library/struct/segment_tree.hpp
 layout: document
 redirect_from:
