@@ -30,7 +30,7 @@ void test_grid() {
 void test_geometry() {
     // TODO test
 }
-signed main() {
+void solve() {
     // URLの問題の答えはこれだけ
     cout << "Hello World" << endl;
     test_number();
