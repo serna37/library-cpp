@@ -47,7 +47,43 @@ void test_sequence() {
 }
 // ===== library/util/search.hpp =====
 void test_search() {
-    // TODO test
+    vector<int> A = {1, 2, 3};
+    vector<vector<int>> val_perm;
+    vector<vector<int>> exp_perm = {{1, 2, 3}, {1, 3, 2}, {2, 1, 3},
+                                    {2, 3, 1}, {3, 1, 2}, {3, 2, 1}};
+    lib::search.perm(A, [&]() { val_perm.push_back(A); });
+    assert(val_perm == exp_perm);
+    A = {1, 2, 3};
+    vector<vector<int>> val_bit = lib::search.bit(A);
+    vector<vector<int>> exp_bit = {{},  {1},    {2},    {1, 2},
+                                   {3}, {1, 3}, {2, 3}, {1, 2, 3}};
+    assert(val_bit == exp_bit);
+    auto [L, R] = lib::search.bi([](int x) { return x >= 5; });
+    assert(L == 4 and R == 5);
+    auto [l, r] = lib::search.bi_real([](int x) { return x >= 3.5; });
+    assert(l < 4.1 and r < 4.1);
+    A = {1, 2, 3, 4, 5, 6, 8, 9, 10};
+    set<int> st = {1, 2, 3, 4, 5, 6, 8, 9, 10};
+    assert(lib::search.bi_le_cnt(A, 7ll) == 6);
+    assert(lib::search.bi_le_val(A, 7ll) == 6);
+    assert(lib::search.bi_le_val(A, 0ll) == -INF);
+    assert(lib::search.bi_le_val(st, 7ll) == 6);
+    assert(lib::search.bi_le_val(st, 0ll) == -INF);
+    assert(lib::search.bi_ge_cnt(A, 7ll) == 3);
+    assert(lib::search.bi_ge_val(A, 7ll) == 8);
+    assert(lib::search.bi_ge_val(A, 11ll) == INF);
+    assert(lib::search.bi_ge_val(st, 7ll) == 8);
+    assert(lib::search.bi_ge_val(st, 11ll) == INF);
+    assert(lib::search.bi_lt_cnt(A, 7ll) == 6);
+    assert(lib::search.bi_lt_val(A, 7ll) == 6);
+    assert(lib::search.bi_lt_val(A, 0ll) == -INF);
+    assert(lib::search.bi_lt_val(st, 7ll) == 6);
+    assert(lib::search.bi_lt_val(st, 0ll) == -INF);
+    assert(lib::search.bi_gt_cnt(A, 7ll) == 3);
+    assert(lib::search.bi_gt_val(A, 7ll) == 8);
+    assert(lib::search.bi_gt_val(A, 11ll) == INF);
+    assert(lib::search.bi_gt_val(st, 7ll) == 8);
+    assert(lib::search.bi_gt_val(st, 11ll) == INF);
 }
 // ===== library/util/grid.hpp =====
 void test_grid() {
@@ -56,14 +92,13 @@ void test_grid() {
     vector<vector<int>> exp_tx = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
     assert(T == exp_tx);
     int cnt = 0;
-    lib::grid.bfs(G, [&](int y, int x) {
+    auto f = [&](int y, int x) {
         if (G[y][x] == 5) ++cnt;
-    });
+    };
+    lib::grid.bfs(G, f);
     assert(cnt == 4);
     cnt = 0;
-    lib::grid.bfs8(G, [&](int y, int x) {
-        if (G[y][x] == 5) ++cnt;
-    });
+    lib::grid.bfs8(G, f);
     assert(cnt == 8);
 }
 // ===== library/util/gepmetry.hpp =====
