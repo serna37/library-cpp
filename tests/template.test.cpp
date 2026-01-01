@@ -55,7 +55,12 @@ void test_grid() {
 }
 // ===== library/util/gepmetry.hpp =====
 void test_geometry() {
-    // TODO test
+    assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(45)) == 45);
+    assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(361)) <
+           361); // 誤差があるので不等式
+    assert(lib::geo.arc_tan(24, 35) < 0.97);
+    assert(lib::geo.area_triangle(1, 1, 2, 3, 5, 6) == 1.5);
+    assert(lib::geo.area_square(1, 1, 2, 2, 4, 4, 7, 7) == 15);
 }
 void solve() {
     // URLの問題の答えはこれだけ
