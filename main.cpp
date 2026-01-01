@@ -2,5 +2,5 @@
 /**
  * @brief 🍪🧸🐾
  */
-signed main() {
+void solve() {
 }

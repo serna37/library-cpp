@@ -33,3 +33,10 @@ Search search;
 Grid grid;
 Geometry geo;
 }; // namespace lib
+void solve();
+signed main() {
+    solve();
+}
+// -----------------------------------------
+// #include "template/template.hpp" is done.
+// -----------------------------------------
