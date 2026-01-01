@@ -143,6 +143,4 @@ class Search {
         };
         // int ans = dfs(dfs, N);
     }
-    // TODO DFS順列
-    // TODO DFS順列 単調増加
 };
