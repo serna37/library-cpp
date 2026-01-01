@@ -3,7 +3,7 @@
 /**              モノイド                   */
 /** ======================================= */
 #pragma once
-template <typename U = int, typename F> struct Monoid {
+template <typename U, typename F> struct Monoid {
     using T = U;
 
   private:
