@@ -1,20 +1,11 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: main.cpp
-    title: "main\u30D5\u30A1\u30A4\u30EB"
-  - icon: ':heavy_check_mark:'
-    path: template/template.hpp
-    title: "\u0E05^>\u03C9<^\u0E05"
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: tests/template.test.cpp
-    title: tests/template.test.cpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -77,13 +68,10 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/struct/graph.hpp
-  requiredBy:
-  - template/template.hpp
-  - main.cpp
-  timestamp: '2026-01-01 16:14:32+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - tests/template.test.cpp
+  requiredBy: []
+  timestamp: '2026-01-01 17:26:37+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: library/struct/graph.hpp
 layout: document
 title: "\u30B0\u30E9\u30D5"

@@ -17,21 +17,6 @@ data:
     path: library/def/type.hpp
     title: "\u578B"
   - icon: ':heavy_check_mark:'
-    path: library/struct/fenwick_tree.hpp
-    title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F"
-  - icon: ':heavy_check_mark:'
-    path: library/struct/graph.hpp
-    title: "\u30B0\u30E9\u30D5"
-  - icon: ':heavy_check_mark:'
-    path: library/struct/monoid.hpp
-    title: "\u30E2\u30CE\u30A4\u30C9"
-  - icon: ':heavy_check_mark:'
-    path: library/struct/segment_tree.hpp
-    title: "SegmentTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
-  - icon: ':heavy_check_mark:'
-    path: library/struct/union_find.hpp
-    title: UnionFind
-  - icon: ':heavy_check_mark:'
     path: library/util/geometry.hpp
     title: "\u5E7E\u4F55"
   - icon: ':heavy_check_mark:'
@@ -80,15 +65,61 @@ data:
     \u3067\u3044\u308B\nlibrary/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\
     \u30C8\n\u51FA\u529B\u3059\u308B\u3068\u554F\u984C\u306B\u6B63\u89E3\u3067\u304D\
     \u306A\u3044\u306E\u3067assert\u306E\u307F\n*/\n// ===== library/util/number.hpp\
-    \ =====\nvoid test_number() {\n    // TODO test\n}\n// ===== library/util/string.hpp\
+    \ =====\nvoid test_number() {\n    assert(lib::num.div_ceil(10, 2) == 5);\n  \
+    \  assert(lib::num.div_ceil(11, 2) == 6);\n    assert(lib::num.div_floor(10, 2)\
+    \ == 5);\n    assert(lib::num.div_floor(11, 2) == 5);\n    assert(lib::num.factorial(0)\
+    \ == 1);\n    assert(lib::num.factorial(1) == 1);\n    assert(lib::num.factorial(2)\
+    \ == 2);\n    assert(lib::num.factorial(3) == 6);\n    assert(lib::num.combination(0,\
+    \ 0) == 1);\n    assert(lib::num.combination(1, 0) == 1);\n    assert(lib::num.combination(1,\
+    \ 1) == 1);\n    assert(lib::num.combination(2, 0) == 1);\n    assert(lib::num.combination(3,\
+    \ 2) == 3);\n    assert(lib::num.digit_sum(1234) == 10);\n    assert(lib::num.base_convert(\"\
+    1001\", 2, 10) == \"9\");\n    vector<int> val_divisors = lib::num.divisors(12);\n\
+    \    lib::seq.sort_asc(val_divisors);\n    vector<int> exp_divisors = {1, 2, 3,\
+    \ 4, 6, 12};\n    assert(val_divisors == exp_divisors);\n    assert(lib::num.prime_test(57)\
+    \ == false); // Grothendieck\n    assert(lib::num.prime_test(97) == true);\n \
+    \   map<int, int> val_prime_fact = lib::num.prime_fact(100);\n    map<int, int>\
+    \ exp_prime_fact = {{2, 2}, {5, 2}};\n    assert(val_prime_fact == exp_prime_fact);\n\
+    \    assert(lib::num.modpow(2, 10, MOD) == 1024);\n    assert(lib::num.modinv(2,\
+    \ MOD) == 499122177);\n    assert(lib::num.modfact(10, MOD) == 3628800);\n   \
+    \ assert(lib::num.mod_combination(10, 5, MOD) == 252);\n}\n// ===== library/util/string.hpp\
     \ =====\nvoid test_string() {\n    // TODO test\n}\n// ===== library/util/sequence.hpp\
     \ =====\nvoid test_sequence() {\n    // TODO test\n}\n// ===== library/util/search.hpp\
-    \ =====\nvoid test_search() {\n    // TODO test\n}\n// ===== library/util/grid.hpp\
-    \ =====\nvoid test_grid() {\n    // TODO test\n}\n// ===== library/util/gepmetry.hpp\
-    \ =====\nvoid test_geometry() {\n    // TODO test\n}\nvoid solve() {\n    // URL\u306E\
-    \u554F\u984C\u306E\u7B54\u3048\u306F\u3053\u308C\u3060\u3051\n    cout << \"Hello\
-    \ World\" << endl;\n    test_number();\n    test_string();\n    test_sequence();\n\
-    \    test_search();\n    test_grid();\n    test_geometry();\n}\n"
+    \ =====\nvoid test_search() {\n    vector<int> A = {1, 2, 3};\n    vector<vector<int>>\
+    \ val_perm;\n    vector<vector<int>> exp_perm = {{1, 2, 3}, {1, 3, 2}, {2, 1,\
+    \ 3},\n                                    {2, 3, 1}, {3, 1, 2}, {3, 2, 1}};\n\
+    \    lib::search.perm(A, [&]() { val_perm.push_back(A); });\n    assert(val_perm\
+    \ == exp_perm);\n    A = {1, 2, 3};\n    vector<vector<int>> val_bit = lib::search.bit(A);\n\
+    \    vector<vector<int>> exp_bit = {{},  {1},    {2},    {1, 2},\n           \
+    \                        {3}, {1, 3}, {2, 3}, {1, 2, 3}};\n    assert(val_bit\
+    \ == exp_bit);\n    auto [L, R] = lib::search.bi([](int x) { return x >= 5; });\n\
+    \    assert(L == 4 and R == 5);\n    auto [l, r] = lib::search.bi_real([](int\
+    \ x) { return x >= 3.5; });\n    assert(l < 4.1 and r < 4.1);\n    A = {1, 2,\
+    \ 3, 4, 5, 6, 8, 9, 10};\n    set<int> st = {1, 2, 3, 4, 5, 6, 8, 9, 10};\n  \
+    \  assert(lib::search.bi_le_cnt(A, 7ll) == 6);\n    assert(lib::search.bi_le_val(A,\
+    \ 7ll) == 6);\n    assert(lib::search.bi_le_val(A, 0ll) == -INF);\n    assert(lib::search.bi_le_val(st,\
+    \ 7ll) == 6);\n    assert(lib::search.bi_le_val(st, 0ll) == -INF);\n    assert(lib::search.bi_ge_cnt(A,\
+    \ 7ll) == 3);\n    assert(lib::search.bi_ge_val(A, 7ll) == 8);\n    assert(lib::search.bi_ge_val(A,\
+    \ 11ll) == INF);\n    assert(lib::search.bi_ge_val(st, 7ll) == 8);\n    assert(lib::search.bi_ge_val(st,\
+    \ 11ll) == INF);\n    assert(lib::search.bi_lt_cnt(A, 7ll) == 6);\n    assert(lib::search.bi_lt_val(A,\
+    \ 7ll) == 6);\n    assert(lib::search.bi_lt_val(A, 0ll) == -INF);\n    assert(lib::search.bi_lt_val(st,\
+    \ 7ll) == 6);\n    assert(lib::search.bi_lt_val(st, 0ll) == -INF);\n    assert(lib::search.bi_gt_cnt(A,\
+    \ 7ll) == 3);\n    assert(lib::search.bi_gt_val(A, 7ll) == 8);\n    assert(lib::search.bi_gt_val(A,\
+    \ 11ll) == INF);\n    assert(lib::search.bi_gt_val(st, 7ll) == 8);\n    assert(lib::search.bi_gt_val(st,\
+    \ 11ll) == INF);\n}\n// ===== library/util/grid.hpp =====\nvoid test_grid() {\n\
+    \    vector<vector<int>> G = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    auto T =\
+    \ lib::grid.transpose(G);\n    vector<vector<int>> exp_tx = {{1, 4, 7}, {2, 5,\
+    \ 8}, {3, 6, 9}};\n    assert(T == exp_tx);\n    int cnt = 0;\n    auto f = [&](int\
+    \ y, int x) {\n        if (G[y][x] == 5) ++cnt;\n    };\n    lib::grid.bfs(G,\
+    \ f);\n    assert(cnt == 4);\n    cnt = 0;\n    lib::grid.bfs8(G, f);\n    assert(cnt\
+    \ == 8);\n}\n// ===== library/util/gepmetry.hpp =====\nvoid test_geometry() {\n\
+    \    assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(45)) == 45);\n    assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(361))\
+    \ <\n           361); // \u8AA4\u5DEE\u304C\u3042\u308B\u306E\u3067\u4E0D\u7B49\
+    \u5F0F\n    assert(lib::geo.arc_tan(24, 35) < 0.97);\n    assert(lib::geo.area_triangle(1,\
+    \ 1, 2, 3, 5, 6) == 1.5);\n    assert(lib::geo.area_square(1, 1, 2, 2, 4, 4, 7,\
+    \ 7) == 15);\n}\nvoid solve() {\n    // URL\u306E\u554F\u984C\u306E\u7B54\u3048\
+    \u306F\u3053\u308C\u3060\u3051\n    cout << \"Hello World\" << endl;\n    test_number();\n\
+    \    test_string();\n    test_sequence();\n    test_search();\n    test_grid();\n\
+    \    test_geometry();\n}\n"
   dependsOn:
   - template/template.hpp
   - bits/stdc++.h
@@ -102,15 +133,10 @@ data:
   - library/util/search.hpp
   - library/util/grid.hpp
   - library/util/geometry.hpp
-  - library/struct/graph.hpp
-  - library/struct/union_find.hpp
-  - library/struct/fenwick_tree.hpp
-  - library/struct/segment_tree.hpp
-  - library/struct/monoid.hpp
   isVerificationFile: true
   path: tests/template.test.cpp
   requiredBy: []
-  timestamp: '2026-01-01 16:14:32+09:00'
+  timestamp: '2026-01-01 17:26:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/template.test.cpp

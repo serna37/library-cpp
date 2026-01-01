@@ -17,21 +17,6 @@ data:
     path: library/def/type.hpp
     title: "\u578B"
   - icon: ':heavy_check_mark:'
-    path: library/struct/fenwick_tree.hpp
-    title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F"
-  - icon: ':heavy_check_mark:'
-    path: library/struct/graph.hpp
-    title: "\u30B0\u30E9\u30D5"
-  - icon: ':heavy_check_mark:'
-    path: library/struct/monoid.hpp
-    title: "\u30E2\u30CE\u30A4\u30C9"
-  - icon: ':heavy_check_mark:'
-    path: library/struct/segment_tree.hpp
-    title: "SegmentTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
-  - icon: ':heavy_check_mark:'
-    path: library/struct/union_find.hpp
-    title: UnionFind
-  - icon: ':heavy_check_mark:'
     path: library/util/geometry.hpp
     title: "\u5E7E\u4F55"
   - icon: ':heavy_check_mark:'
@@ -81,12 +66,10 @@ data:
     \ \"library/def/const.hpp\"\n#include \"library/util/number.hpp\"\n#include \"\
     library/util/string.hpp\"\n#include \"library/util/sequence.hpp\"\n#include \"\
     library/util/search.hpp\"\n#include \"library/util/grid.hpp\"\n#include \"library/util/geometry.hpp\"\
-    \n#include \"library/struct/graph.hpp\"\n#include \"library/struct/union_find.hpp\"\
-    \n#include \"library/struct/fenwick_tree.hpp\"\n#include \"library/struct/segment_tree.hpp\"\
-    \n#include \"library/struct/monoid.hpp\"\nnamespace lib {\nNumber num;\nString\
-    \ str;\nSequence seq;\nSearch search;\nGrid grid;\nGeometry geo;\n}; // namespace\
-    \ lib\nvoid solve();\nsigned main() {\n    solve();\n}\n// -----------------------------------------\n\
-    // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n"
+    \nnamespace lib {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGrid\
+    \ grid;\nGeometry geo;\n}; // namespace lib\nvoid solve();\nsigned main() {\n\
+    \    solve();\n}\n// -----------------------------------------\n// #include \"\
+    template/template.hpp\" is done.\n// -----------------------------------------\n"
   dependsOn:
   - bits/stdc++.h
   - library/def/common.hpp
@@ -99,16 +82,11 @@ data:
   - library/util/search.hpp
   - library/util/grid.hpp
   - library/util/geometry.hpp
-  - library/struct/graph.hpp
-  - library/struct/union_find.hpp
-  - library/struct/fenwick_tree.hpp
-  - library/struct/segment_tree.hpp
-  - library/struct/monoid.hpp
   isVerificationFile: false
   path: template/template.hpp
   requiredBy:
   - main.cpp
-  timestamp: '2026-01-01 16:14:32+09:00'
+  timestamp: '2026-01-01 17:26:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp

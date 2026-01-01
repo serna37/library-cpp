@@ -46,17 +46,12 @@ data:
     \ T> void erase(set<T> &st, T &v) {\n        st.erase(st.find(v));\n    }\n  \
     \  // multiset\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename T>\
     \ void erase(multiset<T> &st, T &v) {\n        st.erase(st.find(v));\n    }\n\
-    \    // \u884C\u5217\u306E\u8EE2\u7F6E\n    template <typename T>\n    vector<vector<T>>\
-    \ transpose(const vector<vector<T>> &G) {\n        int H = G.size(), W = G[0].size();\n\
-    \        vector<vector<T>> _G(W, vector<T>(H));\n        for (int i = 0; i < H;\
-    \ ++i) {\n            for (int j = 0; j < W; ++j) {\n                _G[j][i]\
-    \ = G[i][j];\n            }\n        }\n        return _G;\n    }\n    /**\n \
-    \    * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\u306B\u3059\u308B\
-    \ G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n     */\n\
-    \    template <int N, typename T> auto unpack(vector<T> &&G) {\n        array<T,\
-    \ N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n        for\
-    \ (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n    }\n \
-    \   // \u9023\u756A\u751F\u6210\n    template <typename T> void renban(vector<T>\
+    \    /**\n     * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\u306B\u3059\
+    \u308B G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n  \
+    \   */\n    template <int N, typename T> auto unpack(vector<T> &&G) {\n      \
+    \  array<T, N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n \
+    \       for (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n\
+    \    }\n    // \u9023\u756A\u751F\u6210\n    template <typename T> void renban(vector<T>\
     \ &v, T start = 0) {\n        iota(all(v), start);\n    }\n    // A\u3092B\u306B\
     \u30DE\u30FC\u30B8\u30C6\u30AF vector\n    template <typename T> void merge(vector<T>\
     \ &A, vector<T> &B) {\n        if (A.size() > B.size()) swap(A, B);\n        for\
@@ -135,7 +130,7 @@ data:
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2026-01-01 16:14:32+09:00'
+  timestamp: '2026-01-01 17:26:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp

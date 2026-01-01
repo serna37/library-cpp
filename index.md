@@ -35,20 +35,20 @@ data:
       title: "\u578B"
   - name: library/struct
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: library/struct/fenwick_tree.hpp
       title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\
         \u307F"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: library/struct/graph.hpp
       title: "\u30B0\u30E9\u30D5"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: library/struct/monoid.hpp
       title: "\u30E2\u30CE\u30A4\u30C9"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: library/struct/segment_tree.hpp
       title: "SegmentTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: library/struct/union_find.hpp
       title: UnionFind
   - name: library/util
