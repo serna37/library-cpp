@@ -53,6 +53,8 @@ void test_string() {
     assert(lib::str.split("aa,bb,cc", ',') == exp_split);
     assert(lib::str.split_multi("aa,bb/cc", ",/") == exp_split);
     assert(lib::str.str_range("abc123abc", 3, 6) == "123a");
+    vector<pair<char, int>> exp_runlen = {{'a', 3}, {'b', 2}, {'c', 1}};
+    assert(lib::str.run_length("aaabbc") == exp_runlen);
     vector<int> exp_z_algo = {13, 0, 0, 0, 3, 0, 0, 1, 0, 2, 0, 0, 1};
     vector<int> val_z_algo = lib::str.z_algo("abc1abca3abZa");
     assert(val_z_algo == exp_z_algo);
