@@ -20,11 +20,6 @@ using namespace std;
 #include "library/util/search.hpp"
 #include "library/util/grid.hpp"
 #include "library/util/geometry.hpp"
-#include "library/struct/graph.hpp"
-#include "library/struct/union_find.hpp"
-#include "library/struct/fenwick_tree.hpp"
-#include "library/struct/segment_tree.hpp"
-#include "library/struct/monoid.hpp"
 namespace lib {
 Number num;
 String str;
