@@ -3,7 +3,7 @@
 /**              モノイド                   */
 /** ======================================= */
 #pragma once
-template <typename U, typename F> struct Monoid {
+template <typename U = int, typename F> struct Monoid {
     using T = U;
 
   private:
@@ -20,7 +20,7 @@ template <typename U, typename F> struct Monoid {
         return _e;
     }
 };
-template <typename U> struct MonoidMin {
+template <typename U = int> struct MonoidMin {
     using T = U;
     T op(const T &x, const T &y) {
         return min(x, y);
@@ -29,7 +29,7 @@ template <typename U> struct MonoidMin {
         return INF;
     }
 };
-template <typename U> struct MonoidMax {
+template <typename U = int> struct MonoidMax {
     using T = U;
     T op(const T &x, const T &y) {
         return max(x, y);
@@ -38,7 +38,7 @@ template <typename U> struct MonoidMax {
         return -INF;
     }
 };
-template <typename U> struct MonoidAdd {
+template <typename U = int> struct MonoidAdd {
     using T = U;
     T op(const T &x, const T &y) {
         return x + y;
@@ -47,7 +47,7 @@ template <typename U> struct MonoidAdd {
         return 0ll;
     }
 };
-template <typename U> struct MonoidMul {
+template <typename U = int> struct MonoidMul {
     using T = U;
     T op(const T &x, const T &y) {
         return x * y;
@@ -56,7 +56,7 @@ template <typename U> struct MonoidMul {
         return 1ll;
     }
 };
-template <typename U> struct MonoidGcd {
+template <typename U = int> struct MonoidGcd {
     using T = U;
     T op(const T &x, const T &y) {
         return gcd(x, y);
@@ -65,7 +65,7 @@ template <typename U> struct MonoidGcd {
         return 0ll;
     }
 };
-template <typename U> struct MonoidLcm {
+template <typename U = int> struct MonoidLcm {
     using T = U;
     T op(const T &x, const T &y) {
         return lcm(x, y);
@@ -74,7 +74,7 @@ template <typename U> struct MonoidLcm {
         return 1ll;
     }
 };
-template <typename U> struct MonoidXor {
+template <typename U = int> struct MonoidXor {
     using T = U;
     T op(const T &x, const T &y) {
         return x ^ y;
