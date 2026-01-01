@@ -133,7 +133,16 @@ class Search {
         auto it = st.upper_bound(x);
         return (it == st.end() ? INF : *it);
     }
-    // TODO メモ化再帰
+    // メモ化再帰 !!コピペ用!! 関数内をペーストして書き換えて使う
+    void dfs_memo() {
+        map<int, int> memo;
+        auto dfs = [&](auto f, int n) {
+            if (n <= 1) return n;
+            if (memo.count(n)) return memo[n];
+            return memo[n] = f(f, n - 1) + f(f, n - 2);
+        };
+        // int ans = dfs(dfs, N);
+    }
     // TODO DFS順列
     // TODO DFS順列 単調増加
 };
