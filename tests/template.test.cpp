@@ -51,7 +51,20 @@ void test_search() {
 }
 // ===== library/util/grid.hpp =====
 void test_grid() {
-    // TODO test
+    vector<vector<int>> G = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    auto T = lib::grid.transpose(G);
+    vector<vector<int>> exp_tx = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
+    assert(T == exp_tx);
+    int cnt = 0;
+    lib::grid.bfs(G, [&](int y, int x) {
+        if (G[y][x] == 5) ++cnt;
+    });
+    assert(cnt == 4);
+    cnt = 0;
+    lib::grid.bfs8(G, [&](int y, int x) {
+        if (G[y][x] == 5) ++cnt;
+    });
+    assert(cnt == 8);
 }
 // ===== library/util/gepmetry.hpp =====
 void test_geometry() {
