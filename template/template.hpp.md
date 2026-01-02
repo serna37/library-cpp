@@ -40,6 +40,15 @@ data:
     title: "main\u30D5\u30A1\u30A4\u30EB"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: tests/struct.fenwick_tree.test.cpp
+    title: "\U0001F36A\U0001F9F8\U0001F43E"
+  - icon: ':heavy_check_mark:'
+    path: tests/struct.segment_tree.test.cpp
+    title: "\U0001F36A\U0001F9F8\U0001F43E"
+  - icon: ':heavy_check_mark:'
+    path: tests/struct.union_find.test.cpp
+    title: "\U0001F36A\U0001F9F8\U0001F43E"
+  - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
     title: tests/template.test.cpp
   _isVerificationFailed: false
@@ -86,10 +95,13 @@ data:
   path: template/template.hpp
   requiredBy:
   - main.cpp
-  timestamp: '2026-01-02 11:22:30+09:00'
+  timestamp: '2026-01-02 11:58:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/struct.fenwick_tree.test.cpp
   - tests/template.test.cpp
+  - tests/struct.segment_tree.test.cpp
+  - tests/struct.union_find.test.cpp
 documentation_of: template/template.hpp
 layout: document
 redirect_from:

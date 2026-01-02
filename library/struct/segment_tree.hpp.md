@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/struct.segment_tree.test.cpp
+    title: "\U0001F36A\U0001F9F8\U0001F43E"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "SegmentTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
     links: []
@@ -46,9 +49,10 @@ data:
   isVerificationFile: false
   path: library/struct/segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-02 11:22:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-02 11:58:07+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/struct.segment_tree.test.cpp
 documentation_of: library/struct/segment_tree.hpp
 layout: document
 redirect_from:

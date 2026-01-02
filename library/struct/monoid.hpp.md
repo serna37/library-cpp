@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/struct.segment_tree.test.cpp
+    title: "\U0001F36A\U0001F9F8\U0001F43E"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -23,29 +26,30 @@ data:
     \ T = U;\n\n  private:\n    T _e;\n    F _op;\n\n  public:\n    Monoid(T e, F\
     \ op) : _e(e), _op(op) {\n    }\n    T op(const T &x, const T &y) {\n        return\
     \ _op(x, y);\n    }\n    T e() {\n        return _e;\n    }\n};\ntemplate <typename\
-    \ U = int> struct MonoidMin {\n    using T = U;\n    T op(const T &x, const T\
-    \ &y) {\n        return min(x, y);\n    }\n    T e() {\n        return INF;\n\
-    \    }\n};\ntemplate <typename U = int> struct MonoidMax {\n    using T = U;\n\
-    \    T op(const T &x, const T &y) {\n        return max(x, y);\n    }\n    T e()\
-    \ {\n        return -INF;\n    }\n};\ntemplate <typename U = int> struct MonoidAdd\
-    \ {\n    using T = U;\n    T op(const T &x, const T &y) {\n        return x +\
-    \ y;\n    }\n    T e() {\n        return 0ll;\n    }\n};\ntemplate <typename U\
-    \ = int> struct MonoidMul {\n    using T = U;\n    T op(const T &x, const T &y)\
-    \ {\n        return x * y;\n    }\n    T e() {\n        return 1ll;\n    }\n};\n\
-    template <typename U = int> struct MonoidGcd {\n    using T = U;\n    T op(const\
-    \ T &x, const T &y) {\n        return gcd(x, y);\n    }\n    T e() {\n       \
-    \ return 0ll;\n    }\n};\ntemplate <typename U = int> struct MonoidLcm {\n   \
-    \ using T = U;\n    T op(const T &x, const T &y) {\n        return lcm(x, y);\n\
-    \    }\n    T e() {\n        return 1ll;\n    }\n};\ntemplate <typename U = int>\
-    \ struct MonoidXor {\n    using T = U;\n    T op(const T &x, const T &y) {\n \
-    \       return x ^ y;\n    }\n    T e() {\n        return 0ll;\n    }\n};\n"
+    \ U> struct MonoidMin {\n    using T = U;\n    T op(const T &x, const T &y) {\n\
+    \        return min(x, y);\n    }\n    T e() {\n        return 2147483647;\n \
+    \   }\n};\ntemplate <typename U> struct MonoidMax {\n    using T = U;\n    T op(const\
+    \ T &x, const T &y) {\n        return max(x, y);\n    }\n    T e() {\n       \
+    \ return -2147483647;\n    }\n};\ntemplate <typename U> struct MonoidAdd {\n \
+    \   using T = U;\n    T op(const T &x, const T &y) {\n        return x + y;\n\
+    \    }\n    T e() {\n        return 0ll;\n    }\n};\ntemplate <typename U> struct\
+    \ MonoidMul {\n    using T = U;\n    T op(const T &x, const T &y) {\n        return\
+    \ x * y;\n    }\n    T e() {\n        return 1ll;\n    }\n};\ntemplate <typename\
+    \ U> struct MonoidGcd {\n    using T = U;\n    T op(const T &x, const T &y) {\n\
+    \        return gcd(x, y);\n    }\n    T e() {\n        return 0ll;\n    }\n};\n\
+    template <typename U> struct MonoidLcm {\n    using T = U;\n    T op(const T &x,\
+    \ const T &y) {\n        return lcm(x, y);\n    }\n    T e() {\n        return\
+    \ 1ll;\n    }\n};\ntemplate <typename U> struct MonoidXor {\n    using T = U;\n\
+    \    T op(const T &x, const T &y) {\n        return x ^ y;\n    }\n    T e() {\n\
+    \        return 0ll;\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/struct/monoid.hpp
   requiredBy: []
-  timestamp: '2026-01-02 11:22:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-02 11:58:07+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/struct.segment_tree.test.cpp
 documentation_of: library/struct/monoid.hpp
 layout: document
 title: "\u30E2\u30CE\u30A4\u30C9"

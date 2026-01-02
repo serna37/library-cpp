@@ -17,6 +17,12 @@ data:
     path: library/def/type.hpp
     title: "\u578B"
   - icon: ':heavy_check_mark:'
+    path: library/struct/monoid.hpp
+    title: "\u30E2\u30CE\u30A4\u30C9"
+  - icon: ':heavy_check_mark:'
+    path: library/struct/segment_tree.hpp
+    title: "SegmentTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+  - icon: ':heavy_check_mark:'
     path: library/util/geometry.hpp
     title: "\u5E7E\u4F55"
   - icon: ':heavy_check_mark:'
@@ -41,10 +47,13 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A
     document_title: "\U0001F36A\U0001F9F8\U0001F43E"
-    links: []
+    links:
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -57,8 +66,14 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#include \"template/template.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\
-    \n */\nvoid solve() {\n}\n"
+  code: "#define PROBLEM                                                         \
+    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A\"\
+    \n#include \"template/template.hpp\"\n#include \"library/struct/segment_tree.hpp\"\
+    \n#include \"library/struct/monoid.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\
+    \n */\nvoid solve() {\n    int N, Q;\n    cin >> N >> Q;\n    SegmentTree seg(MonoidMin<int>(),\
+    \ N);\n    while (Q--) {\n        int com, x, y;\n        cin >> com >> x >> y;\n\
+    \        if (com == 0) {\n            seg.set(x, y);\n        }\n        if (com\
+    \ == 1) {\n            print(seg.prod(x, y + 1));\n        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
   - bits/stdc++.h
@@ -72,17 +87,18 @@ data:
   - library/util/search.hpp
   - library/util/grid.hpp
   - library/util/geometry.hpp
-  isVerificationFile: false
-  path: main.cpp
+  - library/struct/segment_tree.hpp
+  - library/struct/monoid.hpp
+  isVerificationFile: true
+  path: tests/struct.segment_tree.test.cpp
   requiredBy: []
   timestamp: '2026-01-02 11:58:07+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: main.cpp
+documentation_of: tests/struct.segment_tree.test.cpp
 layout: document
-title: "main\u30D5\u30A1\u30A4\u30EB"
+redirect_from:
+- /verify/tests/struct.segment_tree.test.cpp
+- /verify/tests/struct.segment_tree.test.cpp.html
+title: "\U0001F36A\U0001F9F8\U0001F43E"
 ---
-
-プログラムを書くファイル。 解き終わったらバンドルする。
-ライブラリで用意したものは`lib:xxx.`とすることで予測変換で見やすい。
-

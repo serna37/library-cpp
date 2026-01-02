@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/struct.union_find.test.cpp
+    title: "\U0001F36A\U0001F9F8\U0001F43E"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: UnionFind
     links: []
@@ -36,9 +39,10 @@ data:
   isVerificationFile: false
   path: library/struct/union_find.hpp
   requiredBy: []
-  timestamp: '2026-01-02 11:22:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-02 11:58:07+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/struct.union_find.test.cpp
 documentation_of: library/struct/union_find.hpp
 layout: document
 redirect_from:
