@@ -1,6 +1,6 @@
 #pragma once
 /**
- * @brief debug出力
+ * @brief めっちゃ見やすいdebug出力
  */
 #include <cxxabi.h>
 #include <iostream>
