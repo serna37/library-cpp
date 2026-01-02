@@ -365,14 +365,14 @@ class Sequence {
         sort(rall(v));
     }
     template <typename T> void reverse(vector<T> &v) {
-        reverse(all(v));
+        std::reverse(all(v));
     }
     // setから要素削除
-    template <typename T> void erase(set<T> &st, T &v) {
+    template <typename T> void erase(set<T> &st, const T &v) {
         st.erase(st.find(v));
     }
     // multisetから要素削除
-    template <typename T> void erase(multiset<T> &st, T &v) {
+    template <typename T> void erase(multiset<T> &st, const T &v) {
         st.erase(st.find(v));
     }
     /**
@@ -434,21 +434,21 @@ class Sequence {
         return inv;
     }
     // 累積和 S[i]=Σ(0,i-1)  Σ[l,r)=S[r]-S[l]
-    template <typename T> vector<long long> zeta(vector<T> &A) {
+    template <typename T> vector<long long> zeta(const vector<T> &A) {
         int N = A.size();
         vector<long long> S(N + 1);
         for (int i = 0; i < N; ++i) S[i + 1] = S[i] + A[i];
         return S;
     }
     // 反転累積和 S[i]=Aiから右全部  Σ(0,i-1)+Σ(i,last)=S[i]+R[i]
-    template <typename T> vector<long long> zeta_rev(vector<T> &A) {
+    template <typename T> vector<long long> zeta_rev(const vector<T> &A) {
         int N = A.size();
         vector<long long> R(N + 1);
         for (int i = N - 1; i >= 0; --i) R[i] = R[i + 1] + A[i];
         return R;
     }
     // 二項差での累積和 S[i]=Σ(0,i-1)  Σ[l,r)=S[r]-S[l]
-    template <typename T> vector<long long> zeta_diff(vector<T> &A) {
+    template <typename T> vector<long long> zeta_diff(const vector<T> &A) {
         int N = A.size();
         vector<long long> S(N + 1);
         for (int i = 0; i < N; ++i) {
@@ -458,7 +458,7 @@ class Sequence {
         return S;
     }
     // 二項差での反転累積和 S[i]=Aiから右全部  Σ(0,i-1)+Σ(i,last)=S[i]+R[i]
-    template <typename T> vector<long long> zeta_rev_diff(vector<T> &A) {
+    template <typename T> vector<long long> zeta_rev_diff(const vector<T> &A) {
         int N = A.size();
         vector<long long> R(N + 1);
         for (int i = N - 1; i >= 0; --i) {
@@ -471,7 +471,7 @@ class Sequence {
      * 2次元平面での累積和
      * 包除: (s,t)~(x,y) = S[y][x]-S[y][s]-S[t][x]+S[t][s]
      */
-    template <typename T> vector<vector<long long>> zeta_2D(vector<T> &G) {
+    template <typename T> vector<vector<long long>> zeta_2D(const vector<T> &G) {
         int H = G.size(), W = G[0].size();
         vector<vector<long long>> S(H + 1, vector<long long>(W + 1));
         for (int i = 0; i < H; ++i) { // 横向き
@@ -495,7 +495,7 @@ class Sequence {
      *            S[Rx][Ly][Lz] - S[Lx][Ly][Lz];
      */
     template <typename T>
-    vector<vector<vector<long long>>> zeta_3D(vector<vector<vector<T>>> &A) {
+    vector<vector<vector<long long>>> zeta_3D(const vector<vector<vector<T>>> &A) {
         vector<vector<vector<long long>>> S;
         int szx = A.size(), szy = A[0].size(), szz = A[0][0].size();
         S.resize(szx + 1, vector<vector<long long>>(
@@ -513,7 +513,7 @@ class Sequence {
         return S;
     }
     // 各項の差の数列 メビウス変換
-    template <typename T> vector<long long> moebius(vector<T> &A) {
+    template <typename T> vector<long long> moebius(const vector<T> &A) {
         int N = A.size();
         vector<long long> D(N - 1);
         for (int i = 0; i < N; ++i) D[i] = A[i + 1] - A[i];
