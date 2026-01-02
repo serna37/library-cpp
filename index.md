@@ -18,7 +18,7 @@ data:
     pages:
     - icon: ':warning:'
       path: bundler/main.cpp
-      title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9\u30FC"
+      title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9"
   - name: library/def
     pages:
     - icon: ':heavy_check_mark:'

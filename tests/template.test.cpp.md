@@ -91,41 +91,97 @@ data:
     abcaefahia\", \"a\") == exp_finds);\n    vector<string> exp_split = {\"aa\", \"\
     bb\", \"cc\"};\n    assert(lib::str.split(\"aa,bb,cc\", ',') == exp_split);\n\
     \    assert(lib::str.split_multi(\"aa,bb/cc\", \",/\") == exp_split);\n    assert(lib::str.str_range(\"\
-    abc123abc\", 3, 6) == \"123a\");\n    vector<int> exp_z_algo = {13, 0, 0, 0, 3,\
-    \ 0, 0, 1, 0, 2, 0, 0, 1};\n    vector<int> val_z_algo = lib::str.z_algo(\"abc1abca3abZa\"\
-    );\n    assert(val_z_algo == exp_z_algo);\n}\n// ===== library/util/sequence.hpp\
-    \ =====\nvoid test_sequence() {\n    // TODO test\n}\n// ===== library/util/search.hpp\
-    \ =====\nvoid test_search() {\n    vector<int> A = {1, 2, 3};\n    vector<vector<int>>\
-    \ val_perm;\n    vector<vector<int>> exp_perm = {{1, 2, 3}, {1, 3, 2}, {2, 1,\
-    \ 3},\n                                    {2, 3, 1}, {3, 1, 2}, {3, 2, 1}};\n\
-    \    lib::search.perm(A, [&]() { val_perm.push_back(A); });\n    assert(val_perm\
-    \ == exp_perm);\n    A = {1, 2, 3};\n    vector<vector<int>> val_bit = lib::search.bit(A);\n\
-    \    vector<vector<int>> exp_bit = {{},  {1},    {2},    {1, 2},\n           \
-    \                        {3}, {1, 3}, {2, 3}, {1, 2, 3}};\n    assert(val_bit\
-    \ == exp_bit);\n    auto [L, R] = lib::search.bi([](int x) { return x >= 5; });\n\
-    \    assert(L == 4 and R == 5);\n    auto [l, r] = lib::search.bi_real([](int\
-    \ x) { return x >= 3.5; });\n    assert(l < 4.1 and r < 4.1);\n    A = {1, 2,\
-    \ 3, 4, 5, 6, 8, 9, 10};\n    set<int> st = {1, 2, 3, 4, 5, 6, 8, 9, 10};\n  \
-    \  assert(lib::search.bi_le_cnt(A, 7ll) == 6);\n    assert(lib::search.bi_le_val(A,\
-    \ 7ll) == 6);\n    assert(lib::search.bi_le_val(A, 0ll) == -INF);\n    assert(lib::search.bi_le_val(st,\
-    \ 7ll) == 6);\n    assert(lib::search.bi_le_val(st, 0ll) == -INF);\n    assert(lib::search.bi_ge_cnt(A,\
-    \ 7ll) == 3);\n    assert(lib::search.bi_ge_val(A, 7ll) == 8);\n    assert(lib::search.bi_ge_val(A,\
-    \ 11ll) == INF);\n    assert(lib::search.bi_ge_val(st, 7ll) == 8);\n    assert(lib::search.bi_ge_val(st,\
-    \ 11ll) == INF);\n    assert(lib::search.bi_lt_cnt(A, 7ll) == 6);\n    assert(lib::search.bi_lt_val(A,\
-    \ 7ll) == 6);\n    assert(lib::search.bi_lt_val(A, 0ll) == -INF);\n    assert(lib::search.bi_lt_val(st,\
-    \ 7ll) == 6);\n    assert(lib::search.bi_lt_val(st, 0ll) == -INF);\n    assert(lib::search.bi_gt_cnt(A,\
-    \ 7ll) == 3);\n    assert(lib::search.bi_gt_val(A, 7ll) == 8);\n    assert(lib::search.bi_gt_val(A,\
-    \ 11ll) == INF);\n    assert(lib::search.bi_gt_val(st, 7ll) == 8);\n    assert(lib::search.bi_gt_val(st,\
-    \ 11ll) == INF);\n}\n// ===== library/util/grid.hpp =====\nvoid test_grid() {\n\
-    \    vector<vector<int>> G = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    auto T =\
-    \ lib::grid.transpose(G);\n    vector<vector<int>> exp_tx = {{1, 4, 7}, {2, 5,\
-    \ 8}, {3, 6, 9}};\n    assert(T == exp_tx);\n    int cnt = 0;\n    auto f = [&](int\
-    \ y, int x) {\n        if (G[y][x] == 5) ++cnt;\n    };\n    lib::grid.bfs(G,\
-    \ f);\n    assert(cnt == 4);\n    cnt = 0;\n    lib::grid.bfs8(G, f);\n    assert(cnt\
-    \ == 8);\n}\n// ===== library/util/gepmetry.hpp =====\nvoid test_geometry() {\n\
-    \    assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(45)) == 45);\n    assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(361))\
-    \ <\n           361); // \u8AA4\u5DEE\u304C\u3042\u308B\u306E\u3067\u4E0D\u7B49\
-    \u5F0F\n    assert(lib::geo.arc_tan(24, 35) < 0.97);\n    assert(lib::geo.area_triangle(1,\
+    abc123abc\", 3, 6) == \"123a\");\n    vector<pair<char, int>> exp_runlen = {{'a',\
+    \ 3}, {'b', 2}, {'c', 1}};\n    assert(lib::str.run_length(\"aaabbc\") == exp_runlen);\n\
+    \    vector<int> exp_z_algo = {13, 0, 0, 0, 3, 0, 0, 1, 0, 2, 0, 0, 1};\n    vector<int>\
+    \ val_z_algo = lib::str.z_algo(\"abc1abca3abZa\");\n    assert(val_z_algo == exp_z_algo);\n\
+    }\n// ===== library/util/sequence.hpp =====\nvoid test_sequence() {\n    vector<int>\
+    \ A = {1, 3, 2, 5, 8, 13, 2, 9, 3, 5};\n    assert(lib::seq.min(A) == 1);\n  \
+    \  assert(lib::seq.max(A) == 13);\n    assert(lib::seq.sum(A) == 51);\n    vector<int>\
+    \ evens = {0, 2, 4, 6};\n    vector<int> odds = {1, 3, 5, 7};\n    auto is_even\
+    \ = [](int x) { return x % 2 == 0; };\n    assert(lib::seq.all_match(evens, is_even));\n\
+    \    assert(lib::seq.none_match(odds, is_even));\n    assert(lib::seq.any_match(A,\
+    \ is_even));\n    vector<int> exp_distinct = {1, 2, 3, 5, 8, 9, 13};\n    lib::seq.distinct(A);\n\
+    \    assert(A == exp_distinct);\n    A = {1, 3, 2, 5, 8, 13, 2, 9, 3, 5};\n  \
+    \  vector<int> exp_asc = {1, 2, 2, 3, 3, 5, 5, 8, 9, 13};\n    lib::seq.sort_asc(A);\n\
+    \    assert(A == exp_asc);\n    A = {1, 3, 2, 5, 8, 13, 2, 9, 3, 5};\n    vector<int>\
+    \ exp_desc = {13, 9, 8, 5, 5, 3, 3, 2, 2, 1};\n    lib::seq.sort_desc(A);\n  \
+    \  assert(A == exp_desc);\n    A = {1, 3, 2, 5, 8, 13, 2, 9, 3, 5};\n    vector<int>\
+    \ exp_rev = {5, 3, 9, 2, 13, 8, 5, 2, 3, 1};\n    lib::seq.reverse(A);\n    assert(A\
+    \ == exp_rev);\n    set<int> st = {1, 2, 3, 4, 6, 7, 9, 11};\n    set<int> exp_erase\
+    \ = {1, 2, 3, 6, 7, 9, 11};\n    lib::seq.erase(st, 4ll);\n    assert(st == exp_erase);\n\
+    \    multiset<int> mst = {1, 2, 3, 4, 4, 4, 6, 7, 9, 11};\n    multiset<int> exp_merase\
+    \ = {1, 2, 3, 4, 4, 6, 7, 9, 11};\n    lib::seq.erase(mst, 4ll);\n    assert(mst\
+    \ == exp_merase);\n    A = {1, 2};\n    auto [a, b] = lib::seq.unpack<2>(move(A));\n\
+    \    assert(a == 1 and b == 2);\n    vector<int> val_renban(10);\n    vector<int>\
+    \ exp_renban = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};\n    lib::seq.renban(val_renban);\n\
+    \    assert(val_renban == exp_renban);\n    A = {1, 2, 3};\n    vector<int> B\
+    \ = {1, 2, 3, 4, 5};\n    lib::seq.merge(A, B);\n    vector<int> exp_merge_vec\
+    \ = {1, 2, 3, 4, 5, 1, 2, 3};\n    assert(B == exp_merge_vec);\n    set<int> stA\
+    \ = {1, 2, 3};\n    set<int> stB = {1, 2, 3, 4, 5};\n    set<int> exp_merge_set\
+    \ = {1, 1, 2, 2, 3, 3, 4, 5};\n    lib::seq.merge(stA, stB);\n    assert(stB ==\
+    \ exp_merge_set);\n    map<int, int> mpA = {{1, 1}, {2, 2}};\n    map<int, int>\
+    \ mpB = {{1, 1}, {2, 2}, {3, 3}};\n    auto mergeF = [&](map<int, int> &B, pair<int,\
+    \ int> v) {\n        return B[v.first] += v.second;\n    };\n    lib::seq.merge(mpA,\
+    \ mpB, mergeF);\n    map<int, int> exp_merge_map = {{1, 2}, {2, 4}, {3, 3}};\n\
+    \    assert(mpB == exp_merge_map);\n    A = {1, 2, 2, 5, 6};\n    vector<int>\
+    \ val_coordinate = lib::seq.coordinate(A);\n    vector<int> exp_coordinate = {0,\
+    \ 1, 2, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0};\n    for (int i = 0; i < 10; ++i) {\n \
+    \       assert(val_coordinate[i] == exp_coordinate[i]);\n    }\n    A = {1, 2,\
+    \ 2, 8, 10, 88};\n    int zip_cnt = lib::seq.zip_coordinate(A);\n    assert(zip_cnt\
+    \ == 5);\n    vector<int> exp_zip = {0, 1, 1, 2, 3, 4};\n    assert(A == exp_zip);\n\
+    \    A = {1, 3, 9, 3, 8, 2, 99, 4};\n    int inv = lib::seq.inversion_number(A);\n\
+    \    assert(inv == 9);\n    A = {1, 2, 5, 8, 3, 2, 9};\n    vector<int> S = lib::seq.zeta(A);\n\
+    \    vector<int> exp_zeta = {0, 1, 3, 8, 16, 19, 21, 30};\n    assert(S == exp_zeta);\n\
+    \    S = lib::seq.zeta_rev(A);\n    vector<int> exp_zeta_rev = {30, 29, 27, 22,\
+    \ 14, 11, 9, 0};\n    assert(S == exp_zeta_rev);\n    S = lib::seq.zeta_diff(A);\n\
+    \    vector<int> exp_zeta_diff = {0, 0, 1, 1, 4, 4, 5, 5};\n    assert(S == exp_zeta_diff);\n\
+    \    S = lib::seq.zeta_rev_diff(A);\n    vector<int> exp_zeta_rev_diff = {15,\
+    \ 15, 12, 12, 7, 7, 0, 0};\n    assert(S == exp_zeta_rev_diff);\n    vector<vector<int>>\
+    \ G = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    vector<vector<int>> S2 = lib::seq.zeta_2D(G);\n\
+    \    vector<vector<int>> exp_zeta_2D = {\n        {0, 0, 0, 0}, {0, 1, 3, 6},\
+    \ {0, 5, 12, 21}, {0, 12, 27, 45}};\n    assert(S2 == exp_zeta_2D);\n    vector<vector<vector<int>>>\
+    \ G3 = {{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}},\n                                 \
+    \     {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}},\n                                   \
+    \   {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}};\n    auto S3 = lib::seq.zeta_3D(G3);\n\
+    \    vector<vector<vector<int>>> exp_zeta_3D = {\n        {{0, 0, 0, 0}, {0, 0,\
+    \ 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}},\n        {{0, 0, 0, 0}, {0, 1, 3, 6}, {0,\
+    \ 5, 12, 21}, {0, 12, 27, 45}},\n        {{0, 0, 0, 0}, {0, 2, 6, 12}, {0, 10,\
+    \ 24, 42}, {0, 24, 54, 90}},\n        {{0, 0, 0, 0}, {0, 3, 9, 18}, {0, 15, 36,\
+    \ 63}, {0, 36, 81, 135}}};\n    assert(S3 == exp_zeta_3D);\n    vector<int> R\
+    \ = lib::seq.moebius(A);\n    vector<int> exp_moebius = {1, 3, 3, -5, -1, 7};\n\
+    \    assert(R == exp_moebius);\n}\n// ===== library/util/search.hpp =====\nvoid\
+    \ test_search() {\n    vector<int> A = {1, 2, 3};\n    vector<vector<int>> val_perm;\n\
+    \    vector<vector<int>> exp_perm = {{1, 2, 3}, {1, 3, 2}, {2, 1, 3},\n      \
+    \                              {2, 3, 1}, {3, 1, 2}, {3, 2, 1}};\n    lib::search.perm(A,\
+    \ [&]() { val_perm.push_back(A); });\n    assert(val_perm == exp_perm);\n    A\
+    \ = {1, 2, 3};\n    vector<vector<int>> val_bit = lib::search.bit(A);\n    vector<vector<int>>\
+    \ exp_bit = {{},  {1},    {2},    {1, 2},\n                                  \
+    \ {3}, {1, 3}, {2, 3}, {1, 2, 3}};\n    assert(val_bit == exp_bit);\n    auto\
+    \ [L, R] = lib::search.bi([](int x) { return x >= 5; });\n    assert(L == 4 and\
+    \ R == 5);\n    auto [l, r] = lib::search.bi_real([](int x) { return x >= 3.5;\
+    \ });\n    assert(l < 4.1 and r < 4.1);\n    A = {1, 2, 3, 4, 5, 6, 8, 9, 10};\n\
+    \    set<int> st = {1, 2, 3, 4, 5, 6, 8, 9, 10};\n    assert(lib::search.bi_le_cnt(A,\
+    \ 7ll) == 6);\n    assert(lib::search.bi_le_val(A, 7ll) == 6);\n    assert(lib::search.bi_le_val(A,\
+    \ 0ll) == -INF);\n    assert(lib::search.bi_le_val(st, 7ll) == 6);\n    assert(lib::search.bi_le_val(st,\
+    \ 0ll) == -INF);\n    assert(lib::search.bi_ge_cnt(A, 7ll) == 3);\n    assert(lib::search.bi_ge_val(A,\
+    \ 7ll) == 8);\n    assert(lib::search.bi_ge_val(A, 11ll) == INF);\n    assert(lib::search.bi_ge_val(st,\
+    \ 7ll) == 8);\n    assert(lib::search.bi_ge_val(st, 11ll) == INF);\n    assert(lib::search.bi_lt_cnt(A,\
+    \ 7ll) == 6);\n    assert(lib::search.bi_lt_val(A, 7ll) == 6);\n    assert(lib::search.bi_lt_val(A,\
+    \ 0ll) == -INF);\n    assert(lib::search.bi_lt_val(st, 7ll) == 6);\n    assert(lib::search.bi_lt_val(st,\
+    \ 0ll) == -INF);\n    assert(lib::search.bi_gt_cnt(A, 7ll) == 3);\n    assert(lib::search.bi_gt_val(A,\
+    \ 7ll) == 8);\n    assert(lib::search.bi_gt_val(A, 11ll) == INF);\n    assert(lib::search.bi_gt_val(st,\
+    \ 7ll) == 8);\n    assert(lib::search.bi_gt_val(st, 11ll) == INF);\n}\n// =====\
+    \ library/util/grid.hpp =====\nvoid test_grid() {\n    vector<vector<int>> G =\
+    \ {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    auto T = lib::grid.transpose(G);\n \
+    \   vector<vector<int>> exp_tx = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};\n    assert(T\
+    \ == exp_tx);\n    int cnt = 0;\n    auto f = [&](int y, int x) {\n        if\
+    \ (G[y][x] == 5) ++cnt;\n    };\n    lib::grid.bfs(G, f);\n    assert(cnt == 4);\n\
+    \    cnt = 0;\n    lib::grid.bfs8(G, f);\n    assert(cnt == 8);\n}\n// ===== library/util/gepmetry.hpp\
+    \ =====\nvoid test_geometry() {\n    assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(45))\
+    \ == 45);\n    assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(361)) <\n      \
+    \     361); // \u8AA4\u5DEE\u304C\u3042\u308B\u306E\u3067\u4E0D\u7B49\u5F0F\n\
+    \    assert(lib::geo.arc_tan(24, 35) < 0.97);\n    assert(lib::geo.area_triangle(1,\
     \ 1, 2, 3, 5, 6) == 1.5);\n    assert(lib::geo.area_square(1, 1, 2, 2, 4, 4, 7,\
     \ 7) == 15);\n}\nvoid solve() {\n    // URL\u306E\u554F\u984C\u306E\u7B54\u3048\
     \u306F\u3053\u308C\u3060\u3051\n    cout << \"Hello World\" << endl;\n    test_number();\n\
@@ -147,7 +203,7 @@ data:
   isVerificationFile: true
   path: tests/template.test.cpp
   requiredBy: []
-  timestamp: '2026-01-01 17:41:21+09:00'
+  timestamp: '2026-01-02 11:20:33+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/template.test.cpp
