@@ -1,5 +1,5 @@
 /**
- * @brief C++ライブラリバンドラー
+ * @brief C++ライブラリバンドラ
  */
 // https://github.com/ZOI-dayo/cpp-bundler
 // をForkしたもの
