@@ -166,16 +166,16 @@ data:
     \  sort(all(v));\n        v.erase(unique(all(v)), v.end());\n    }\n    template\
     \ <typename T> void sort_asc(vector<T> &v) {\n        sort(all(v));\n    }\n \
     \   template <typename T> void sort_desc(vector<T> &v) {\n        sort(rall(v));\n\
-    \    }\n    template <typename T> void reverse(vector<T> &v) {\n        reverse(all(v));\n\
+    \    }\n    template <typename T> void reverse(vector<T> &v) {\n        std::reverse(all(v));\n\
     \    }\n    // set\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename\
-    \ T> void erase(set<T> &st, T &v) {\n        st.erase(st.find(v));\n    }\n  \
-    \  // multiset\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename T>\
-    \ void erase(multiset<T> &st, T &v) {\n        st.erase(st.find(v));\n    }\n\
-    \    /**\n     * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\u306B\u3059\
-    \u308B G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n  \
-    \   */\n    template <int N, typename T> auto unpack(vector<T> &&G) {\n      \
-    \  array<T, N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n \
-    \       for (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n\
+    \ T> void erase(set<T> &st, const T &v) {\n        st.erase(st.find(v));\n   \
+    \ }\n    // multiset\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename\
+    \ T> void erase(multiset<T> &st, const T &v) {\n        st.erase(st.find(v));\n\
+    \    }\n    /**\n     * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\
+    \u306B\u3059\u308B G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n\
+    \     */\n    template <int N, typename T> auto unpack(vector<T> &&G) {\n    \
+    \    array<T, N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n\
+    \        for (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n\
     \    }\n    // \u9023\u756A\u751F\u6210\n    template <typename T> void renban(vector<T>\
     \ &v, T start = 0) {\n        iota(all(v), start);\n    }\n    // A\u3092B\u306B\
     \u30DE\u30FC\u30B8\u30C6\u30AF vector\n    template <typename T> void merge(vector<T>\
@@ -202,27 +202,27 @@ data:
     \ & -f) inv += fwk[f];\n            for (int f = A[i] + 1; f; f -= f & -f) inv\
     \ -= fwk[f];\n            for (int f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];\n\
     \        }\n        return inv;\n    }\n    // \u7D2F\u7A4D\u548C S[i]=\u03A3\
-    (0,i-1)  \u03A3[l,r)=S[r]-S[l]\n    template <typename T> vector<long long> zeta(vector<T>\
-    \ &A) {\n        int N = A.size();\n        vector<long long> S(N + 1);\n    \
-    \    for (int i = 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n        return S;\n\
-    \    }\n    // \u53CD\u8EE2\u7D2F\u7A4D\u548C S[i]=Ai\u304B\u3089\u53F3\u5168\u90E8\
-    \  \u03A3(0,i-1)+\u03A3(i,last)=S[i]+R[i]\n    template <typename T> vector<long\
-    \ long> zeta_rev(vector<T> &A) {\n        int N = A.size();\n        vector<long\
+    (0,i-1)  \u03A3[l,r)=S[r]-S[l]\n    template <typename T> vector<long long> zeta(const\
+    \ vector<T> &A) {\n        int N = A.size();\n        vector<long long> S(N +\
+    \ 1);\n        for (int i = 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n        return\
+    \ S;\n    }\n    // \u53CD\u8EE2\u7D2F\u7A4D\u548C S[i]=Ai\u304B\u3089\u53F3\u5168\
+    \u90E8  \u03A3(0,i-1)+\u03A3(i,last)=S[i]+R[i]\n    template <typename T> vector<long\
+    \ long> zeta_rev(const vector<T> &A) {\n        int N = A.size();\n        vector<long\
     \ long> R(N + 1);\n        for (int i = N - 1; i >= 0; --i) R[i] = R[i + 1] +\
     \ A[i];\n        return R;\n    }\n    // \u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\
     \u7A4D\u548C S[i]=\u03A3(0,i-1)  \u03A3[l,r)=S[r]-S[l]\n    template <typename\
-    \ T> vector<long long> zeta_diff(vector<T> &A) {\n        int N = A.size();\n\
+    \ T> vector<long long> zeta_diff(const vector<T> &A) {\n        int N = A.size();\n\
     \        vector<long long> S(N + 1);\n        for (int i = 0; i < N; ++i) {\n\
     \            S[i + 1] = S[i];\n            if (i & 1) S[i + 1] += abs(A[i] - A[i\
     \ - 1]);\n        }\n        return S;\n    }\n    // \u4E8C\u9805\u5DEE\u3067\
     \u306E\u53CD\u8EE2\u7D2F\u7A4D\u548C S[i]=Ai\u304B\u3089\u53F3\u5168\u90E8  \u03A3\
     (0,i-1)+\u03A3(i,last)=S[i]+R[i]\n    template <typename T> vector<long long>\
-    \ zeta_rev_diff(vector<T> &A) {\n        int N = A.size();\n        vector<long\
+    \ zeta_rev_diff(const vector<T> &A) {\n        int N = A.size();\n        vector<long\
     \ long> R(N + 1);\n        for (int i = N - 1; i >= 0; --i) {\n            R[i]\
     \ = R[i + 1];\n            if (i & 1) R[i] += abs((i + 1 < N ? A[i + 1] : 0) -\
     \ A[i]);\n        }\n        return R;\n    }\n    /**\n     * 2\u6B21\u5143\u5E73\
     \u9762\u3067\u306E\u7D2F\u7A4D\u548C\n     * \u5305\u9664: (s,t)~(x,y) = S[y][x]-S[y][s]-S[t][x]+S[t][s]\n\
-    \     */\n    template <typename T> vector<vector<long long>> zeta_2D(vector<T>\
+    \     */\n    template <typename T> vector<vector<long long>> zeta_2D(const vector<T>\
     \ &G) {\n        int H = G.size(), W = G[0].size();\n        vector<vector<long\
     \ long>> S(H + 1, vector<long long>(W + 1));\n        for (int i = 0; i < H; ++i)\
     \ { // \u6A2A\u5411\u304D\n            for (int j = 0; j < W; ++j) {\n       \
@@ -234,7 +234,7 @@ data:
     \     *   S[Rxyz] - S[Lxyz]\n     *          = S[Rx][Ry][Rz] - S[Lx][Ry][Rz] -\
     \ S[Rx][Ly][Rz] -\n     *            S[Rx][Ry][Lz] + S[Lx][Ly][Rz] + S[Lx][Ry][Lz]\
     \ +\n     *            S[Rx][Ly][Lz] - S[Lx][Ly][Lz];\n     */\n    template <typename\
-    \ T>\n    vector<vector<vector<long long>>> zeta_3D(vector<vector<vector<T>>>\
+    \ T>\n    vector<vector<vector<long long>>> zeta_3D(const vector<vector<vector<T>>>\
     \ &A) {\n        vector<vector<vector<long long>>> S;\n        int szx = A.size(),\
     \ szy = A[0].size(), szz = A[0][0].size();\n        S.resize(szx + 1, vector<vector<long\
     \ long>>(\n                              szy + 1, vector<long long>(szz + 1, 0)));\n\
@@ -246,9 +246,9 @@ data:
     \        S[x][y - 1][z - 1] + S[x - 1][y - 1][z - 1];\n                }\n   \
     \         }\n        }\n        return S;\n    }\n    // \u5404\u9805\u306E\u5DEE\
     \u306E\u6570\u5217 \u30E1\u30D3\u30A6\u30B9\u5909\u63DB\n    template <typename\
-    \ T> vector<long long> moebius(vector<T> &A) {\n        int N = A.size();\n  \
-    \      vector<long long> D(N - 1);\n        for (int i = 0; i < N; ++i) D[i] =\
-    \ A[i + 1] - A[i];\n        return D;\n    }\n};\n\n\n/** =======================================\
+    \ T> vector<long long> moebius(const vector<T> &A) {\n        int N = A.size();\n\
+    \        vector<long long> D(N - 1);\n        for (int i = 0; i < N; ++i) D[i]\
+    \ = A[i + 1] - A[i];\n        return D;\n    }\n};\n\n\n/** =======================================\
     \ */\n/**               \u63A2\u7D22                      */\n/** =======================================\
     \ */\n\nclass Search {\n  public:\n    /**\n     * \u9806\u5217\u5168\u63A2\u7D22\
     \ O(N!) N\u306F10\u301C12\u7A0B\u5EA6\n     * \u9806\u5217\u306E\u5168\u30D1\u30BF\
@@ -519,16 +519,16 @@ data:
     \  sort(all(v));\n        v.erase(unique(all(v)), v.end());\n    }\n    template\
     \ <typename T> void sort_asc(vector<T> &v) {\n        sort(all(v));\n    }\n \
     \   template <typename T> void sort_desc(vector<T> &v) {\n        sort(rall(v));\n\
-    \    }\n    template <typename T> void reverse(vector<T> &v) {\n        reverse(all(v));\n\
+    \    }\n    template <typename T> void reverse(vector<T> &v) {\n        std::reverse(all(v));\n\
     \    }\n    // set\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename\
-    \ T> void erase(set<T> &st, T &v) {\n        st.erase(st.find(v));\n    }\n  \
-    \  // multiset\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename T>\
-    \ void erase(multiset<T> &st, T &v) {\n        st.erase(st.find(v));\n    }\n\
-    \    /**\n     * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\u306B\u3059\
-    \u308B G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n  \
-    \   */\n    template <int N, typename T> auto unpack(vector<T> &&G) {\n      \
-    \  array<T, N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n \
-    \       for (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n\
+    \ T> void erase(set<T> &st, const T &v) {\n        st.erase(st.find(v));\n   \
+    \ }\n    // multiset\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename\
+    \ T> void erase(multiset<T> &st, const T &v) {\n        st.erase(st.find(v));\n\
+    \    }\n    /**\n     * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\
+    \u306B\u3059\u308B G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n\
+    \     */\n    template <int N, typename T> auto unpack(vector<T> &&G) {\n    \
+    \    array<T, N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n\
+    \        for (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n\
     \    }\n    // \u9023\u756A\u751F\u6210\n    template <typename T> void renban(vector<T>\
     \ &v, T start = 0) {\n        iota(all(v), start);\n    }\n    // A\u3092B\u306B\
     \u30DE\u30FC\u30B8\u30C6\u30AF vector\n    template <typename T> void merge(vector<T>\
@@ -555,27 +555,27 @@ data:
     \ & -f) inv += fwk[f];\n            for (int f = A[i] + 1; f; f -= f & -f) inv\
     \ -= fwk[f];\n            for (int f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];\n\
     \        }\n        return inv;\n    }\n    // \u7D2F\u7A4D\u548C S[i]=\u03A3\
-    (0,i-1)  \u03A3[l,r)=S[r]-S[l]\n    template <typename T> vector<long long> zeta(vector<T>\
-    \ &A) {\n        int N = A.size();\n        vector<long long> S(N + 1);\n    \
-    \    for (int i = 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n        return S;\n\
-    \    }\n    // \u53CD\u8EE2\u7D2F\u7A4D\u548C S[i]=Ai\u304B\u3089\u53F3\u5168\u90E8\
-    \  \u03A3(0,i-1)+\u03A3(i,last)=S[i]+R[i]\n    template <typename T> vector<long\
-    \ long> zeta_rev(vector<T> &A) {\n        int N = A.size();\n        vector<long\
+    (0,i-1)  \u03A3[l,r)=S[r]-S[l]\n    template <typename T> vector<long long> zeta(const\
+    \ vector<T> &A) {\n        int N = A.size();\n        vector<long long> S(N +\
+    \ 1);\n        for (int i = 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n        return\
+    \ S;\n    }\n    // \u53CD\u8EE2\u7D2F\u7A4D\u548C S[i]=Ai\u304B\u3089\u53F3\u5168\
+    \u90E8  \u03A3(0,i-1)+\u03A3(i,last)=S[i]+R[i]\n    template <typename T> vector<long\
+    \ long> zeta_rev(const vector<T> &A) {\n        int N = A.size();\n        vector<long\
     \ long> R(N + 1);\n        for (int i = N - 1; i >= 0; --i) R[i] = R[i + 1] +\
     \ A[i];\n        return R;\n    }\n    // \u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\
     \u7A4D\u548C S[i]=\u03A3(0,i-1)  \u03A3[l,r)=S[r]-S[l]\n    template <typename\
-    \ T> vector<long long> zeta_diff(vector<T> &A) {\n        int N = A.size();\n\
+    \ T> vector<long long> zeta_diff(const vector<T> &A) {\n        int N = A.size();\n\
     \        vector<long long> S(N + 1);\n        for (int i = 0; i < N; ++i) {\n\
     \            S[i + 1] = S[i];\n            if (i & 1) S[i + 1] += abs(A[i] - A[i\
     \ - 1]);\n        }\n        return S;\n    }\n    // \u4E8C\u9805\u5DEE\u3067\
     \u306E\u53CD\u8EE2\u7D2F\u7A4D\u548C S[i]=Ai\u304B\u3089\u53F3\u5168\u90E8  \u03A3\
     (0,i-1)+\u03A3(i,last)=S[i]+R[i]\n    template <typename T> vector<long long>\
-    \ zeta_rev_diff(vector<T> &A) {\n        int N = A.size();\n        vector<long\
+    \ zeta_rev_diff(const vector<T> &A) {\n        int N = A.size();\n        vector<long\
     \ long> R(N + 1);\n        for (int i = N - 1; i >= 0; --i) {\n            R[i]\
     \ = R[i + 1];\n            if (i & 1) R[i] += abs((i + 1 < N ? A[i + 1] : 0) -\
     \ A[i]);\n        }\n        return R;\n    }\n    /**\n     * 2\u6B21\u5143\u5E73\
     \u9762\u3067\u306E\u7D2F\u7A4D\u548C\n     * \u5305\u9664: (s,t)~(x,y) = S[y][x]-S[y][s]-S[t][x]+S[t][s]\n\
-    \     */\n    template <typename T> vector<vector<long long>> zeta_2D(vector<T>\
+    \     */\n    template <typename T> vector<vector<long long>> zeta_2D(const vector<T>\
     \ &G) {\n        int H = G.size(), W = G[0].size();\n        vector<vector<long\
     \ long>> S(H + 1, vector<long long>(W + 1));\n        for (int i = 0; i < H; ++i)\
     \ { // \u6A2A\u5411\u304D\n            for (int j = 0; j < W; ++j) {\n       \
@@ -587,7 +587,7 @@ data:
     \     *   S[Rxyz] - S[Lxyz]\n     *          = S[Rx][Ry][Rz] - S[Lx][Ry][Rz] -\
     \ S[Rx][Ly][Rz] -\n     *            S[Rx][Ry][Lz] + S[Lx][Ly][Rz] + S[Lx][Ry][Lz]\
     \ +\n     *            S[Rx][Ly][Lz] - S[Lx][Ly][Lz];\n     */\n    template <typename\
-    \ T>\n    vector<vector<vector<long long>>> zeta_3D(vector<vector<vector<T>>>\
+    \ T>\n    vector<vector<vector<long long>>> zeta_3D(const vector<vector<vector<T>>>\
     \ &A) {\n        vector<vector<vector<long long>>> S;\n        int szx = A.size(),\
     \ szy = A[0].size(), szz = A[0][0].size();\n        S.resize(szx + 1, vector<vector<long\
     \ long>>(\n                              szy + 1, vector<long long>(szz + 1, 0)));\n\
@@ -599,9 +599,9 @@ data:
     \        S[x][y - 1][z - 1] + S[x - 1][y - 1][z - 1];\n                }\n   \
     \         }\n        }\n        return S;\n    }\n    // \u5404\u9805\u306E\u5DEE\
     \u306E\u6570\u5217 \u30E1\u30D3\u30A6\u30B9\u5909\u63DB\n    template <typename\
-    \ T> vector<long long> moebius(vector<T> &A) {\n        int N = A.size();\n  \
-    \      vector<long long> D(N - 1);\n        for (int i = 0; i < N; ++i) D[i] =\
-    \ A[i + 1] - A[i];\n        return D;\n    }\n};\n\n\n/** =======================================\
+    \ T> vector<long long> moebius(const vector<T> &A) {\n        int N = A.size();\n\
+    \        vector<long long> D(N - 1);\n        for (int i = 0; i < N; ++i) D[i]\
+    \ = A[i + 1] - A[i];\n        return D;\n    }\n};\n\n\n/** =======================================\
     \ */\n/**               \u63A2\u7D22                      */\n/** =======================================\
     \ */\n\nclass Search {\n  public:\n    /**\n     * \u9806\u5217\u5168\u63A2\u7D22\
     \ O(N!) N\u306F10\u301C12\u7A0B\u5EA6\n     * \u9806\u5217\u306E\u5168\u30D1\u30BF\
@@ -725,7 +725,7 @@ data:
   isVerificationFile: false
   path: bundle.cpp
   requiredBy: []
-  timestamp: '2026-01-02 11:20:33+09:00'
+  timestamp: '2026-01-02 11:22:30+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundle.cpp
