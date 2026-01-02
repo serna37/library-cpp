@@ -14,20 +14,6 @@ using namespace std;
 #include "library/def/io.hpp"
 #include "library/def/type.hpp"
 #include "library/def/const.hpp"
-#include "library/util/number.hpp"
-#include "library/util/string.hpp"
-#include "library/util/sequence.hpp"
-#include "library/util/search.hpp"
-#include "library/util/grid.hpp"
-#include "library/util/geometry.hpp"
-namespace lib {
-Number num;
-String str;
-Sequence seq;
-Search search;
-Grid grid;
-Geometry geo;
-}; // namespace lib
 void solve();
 signed main() {
     solve();
