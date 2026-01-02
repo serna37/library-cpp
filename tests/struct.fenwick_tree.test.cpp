@@ -3,7 +3,7 @@
 #include "template/template.hpp"
 #include "library/struct/fenwick_tree.hpp"
 /**
- * @brief 🍪🧸🐾
+ * @brief Fenwick Treeのテスト:RSQ
  */
 void solve() {
     int N, Q;

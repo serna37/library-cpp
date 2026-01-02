@@ -3,7 +3,7 @@
 #include "template/template.hpp"
 #include "library/struct/union_find.hpp"
 /**
- * @brief 🍪🧸🐾
+ * @brief Union Findのテスト
  */
 void solve() {
     int N, Q;

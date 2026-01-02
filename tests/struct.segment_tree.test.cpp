@@ -4,7 +4,7 @@
 #include "library/struct/segment_tree.hpp"
 #include "library/struct/monoid.hpp"
 /**
- * @brief 🍪🧸🐾
+ * @brief セグ木のテスト:RMQ
  */
 void solve() {
     int N, Q;
