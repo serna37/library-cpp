@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/struct.segment_tree.test.cpp
-    title: "\U0001F36A\U0001F9F8\U0001F43E"
+    title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -46,7 +46,7 @@ data:
   isVerificationFile: false
   path: library/struct/monoid.hpp
   requiredBy: []
-  timestamp: '2026-01-02 11:58:07+09:00'
+  timestamp: '2026-01-02 22:06:17+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/struct.segment_tree.test.cpp

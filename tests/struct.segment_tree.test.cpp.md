@@ -23,24 +23,6 @@ data:
     path: library/struct/segment_tree.hpp
     title: "SegmentTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
   - icon: ':heavy_check_mark:'
-    path: library/util/geometry.hpp
-    title: "\u5E7E\u4F55"
-  - icon: ':heavy_check_mark:'
-    path: library/util/grid.hpp
-    title: "\u30B0\u30EA\u30C3\u30C9"
-  - icon: ':heavy_check_mark:'
-    path: library/util/number.hpp
-    title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':heavy_check_mark:'
-    path: library/util/search.hpp
-    title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: library/util/sequence.hpp
-    title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
-    path: library/util/string.hpp
-    title: "\u6587\u5B57\u5217"
-  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedRequiredBy: []
@@ -51,7 +33,7 @@ data:
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A
-    document_title: "\U0001F36A\U0001F9F8\U0001F43E"
+    document_title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -69,11 +51,12 @@ data:
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A\"\
     \n#include \"template/template.hpp\"\n#include \"library/struct/segment_tree.hpp\"\
-    \n#include \"library/struct/monoid.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\
-    \n */\nvoid solve() {\n    int N, Q;\n    cin >> N >> Q;\n    SegmentTree seg(MonoidMin<int>(),\
-    \ N);\n    while (Q--) {\n        int com, x, y;\n        cin >> com >> x >> y;\n\
-    \        if (com == 0) {\n            seg.set(x, y);\n        }\n        if (com\
-    \ == 1) {\n            print(seg.prod(x, y + 1));\n        }\n    }\n}\n"
+    \n#include \"library/struct/monoid.hpp\"\n/**\n * @brief \u30BB\u30B0\u6728\u306E\
+    \u30C6\u30B9\u30C8:RMQ\n */\nvoid solve() {\n    int N, Q;\n    cin >> N >> Q;\n\
+    \    SegmentTree seg(MonoidMin<int>(), N);\n    while (Q--) {\n        int com,\
+    \ x, y;\n        cin >> com >> x >> y;\n        if (com == 0) {\n            seg.set(x,\
+    \ y);\n        }\n        if (com == 1) {\n            print(seg.prod(x, y + 1));\n\
+    \        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
   - bits/stdc++.h
@@ -81,18 +64,12 @@ data:
   - library/def/io.hpp
   - library/def/type.hpp
   - library/def/const.hpp
-  - library/util/number.hpp
-  - library/util/string.hpp
-  - library/util/sequence.hpp
-  - library/util/search.hpp
-  - library/util/grid.hpp
-  - library/util/geometry.hpp
   - library/struct/segment_tree.hpp
   - library/struct/monoid.hpp
   isVerificationFile: true
   path: tests/struct.segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-02 11:58:07+09:00'
+  timestamp: '2026-01-02 22:06:17+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/struct.segment_tree.test.cpp
@@ -100,5 +77,5 @@ layout: document
 redirect_from:
 - /verify/tests/struct.segment_tree.test.cpp
 - /verify/tests/struct.segment_tree.test.cpp.html
-title: "\U0001F36A\U0001F9F8\U0001F43E"
+title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
 ---

@@ -2,25 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
-    path: main.cpp
-    title: "main\u30D5\u30A1\u30A4\u30EB"
   - icon: ':heavy_check_mark:'
-    path: template/template.hpp
-    title: "\u0E05^>\u03C9<^\u0E05"
+    path: template/lib.hpp
+    title: "library/util/*.hpp\u306Einclude\u7528"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/struct.fenwick_tree.test.cpp
-    title: "\U0001F36A\U0001F9F8\U0001F43E"
-  - icon: ':heavy_check_mark:'
-    path: tests/struct.segment_tree.test.cpp
-    title: "\U0001F36A\U0001F9F8\U0001F43E"
-  - icon: ':heavy_check_mark:'
-    path: tests/struct.union_find.test.cpp
-    title: "\U0001F36A\U0001F9F8\U0001F43E"
-  - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
-    title: tests/template.test.cpp
+    title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -61,15 +49,11 @@ data:
   isVerificationFile: false
   path: library/util/grid.hpp
   requiredBy:
-  - template/template.hpp
-  - main.cpp
-  timestamp: '2026-01-02 11:58:07+09:00'
+  - template/lib.hpp
+  timestamp: '2026-01-02 22:06:17+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/struct.fenwick_tree.test.cpp
   - tests/template.test.cpp
-  - tests/struct.segment_tree.test.cpp
-  - tests/struct.union_find.test.cpp
 documentation_of: library/util/grid.hpp
 layout: document
 title: "\u30B0\u30EA\u30C3\u30C9"

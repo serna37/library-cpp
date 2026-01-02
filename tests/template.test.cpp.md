@@ -35,6 +35,9 @@ data:
     path: library/util/string.hpp
     title: "\u6587\u5B57\u5217"
   - icon: ':heavy_check_mark:'
+    path: template/lib.hpp
+    title: "library/util/*.hpp\u306Einclude\u7528"
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedRequiredBy: []
@@ -45,6 +48,8 @@ data:
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
+    document_title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\
+      \u30C8"
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -61,30 +66,29 @@ data:
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
-    \n#include \"template/template.hpp\"\n/*\ntemplate.hpp\u304B\u3089\u547C\u3093\
-    \u3067\u3044\u308B\nlibrary/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\
-    \u30C8\n\u51FA\u529B\u3059\u308B\u3068\u554F\u984C\u306B\u6B63\u89E3\u3067\u304D\
-    \u306A\u3044\u306E\u3067assert\u306E\u307F\n*/\n// ===== library/util/number.hpp\
-    \ =====\nvoid test_number() {\n    assert(lib::num.div_ceil(10, 2) == 5);\n  \
-    \  assert(lib::num.div_ceil(11, 2) == 6);\n    assert(lib::num.div_floor(10, 2)\
-    \ == 5);\n    assert(lib::num.div_floor(11, 2) == 5);\n    assert(lib::num.factorial(0)\
-    \ == 1);\n    assert(lib::num.factorial(1) == 1);\n    assert(lib::num.factorial(2)\
-    \ == 2);\n    assert(lib::num.factorial(3) == 6);\n    assert(lib::num.combination(0,\
-    \ 0) == 1);\n    assert(lib::num.combination(1, 0) == 1);\n    assert(lib::num.combination(1,\
-    \ 1) == 1);\n    assert(lib::num.combination(2, 0) == 1);\n    assert(lib::num.combination(3,\
-    \ 2) == 3);\n    assert(lib::num.digit_sum(1234) == 10);\n    assert(lib::num.base_convert(\"\
-    1001\", 2, 10) == \"9\");\n    vector<int> val_divisors = lib::num.divisors(12);\n\
-    \    lib::seq.sort_asc(val_divisors);\n    vector<int> exp_divisors = {1, 2, 3,\
-    \ 4, 6, 12};\n    assert(val_divisors == exp_divisors);\n    assert(lib::num.prime_test(57)\
-    \ == false); // Grothendieck\n    assert(lib::num.prime_test(97) == true);\n \
-    \   map<int, int> val_prime_fact = lib::num.prime_fact(100);\n    map<int, int>\
-    \ exp_prime_fact = {{2, 2}, {5, 2}};\n    assert(val_prime_fact == exp_prime_fact);\n\
-    \    assert(lib::num.modpow(2, 10, MOD) == 1024);\n    assert(lib::num.modinv(2,\
-    \ MOD) == 499122177);\n    assert(lib::num.modfact(10, MOD) == 3628800);\n   \
-    \ assert(lib::num.mod_combination(10, 5, MOD) == 252);\n}\n// ===== library/util/string.hpp\
-    \ =====\nvoid test_string() {\n    assert(lib::str.is_low('A') == false);\n  \
-    \  assert(lib::str.is_low('a') == true);\n    assert(lib::str.is_upp('A') == true);\n\
-    \    assert(lib::str.is_upp('a') == false);\n    assert(lib::str.transform_lower(\"\
+    \n#include \"template/template.hpp\"\n#include \"template/lib.hpp\"\n/**\n * @brief\
+    \ library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8\n * \u51FA\
+    \u529B\u3059\u308B\u3068\u554F\u984C\u306B\u6B63\u89E3\u3067\u304D\u306A\u3044\
+    \u306E\u3067assert\u306E\u307F\n */\n// ===== library/util/number.hpp =====\n\
+    void test_number() {\n    assert(lib::num.div_ceil(10, 2) == 5);\n    assert(lib::num.div_ceil(11,\
+    \ 2) == 6);\n    assert(lib::num.div_floor(10, 2) == 5);\n    assert(lib::num.div_floor(11,\
+    \ 2) == 5);\n    assert(lib::num.factorial(0) == 1);\n    assert(lib::num.factorial(1)\
+    \ == 1);\n    assert(lib::num.factorial(2) == 2);\n    assert(lib::num.factorial(3)\
+    \ == 6);\n    assert(lib::num.combination(0, 0) == 1);\n    assert(lib::num.combination(1,\
+    \ 0) == 1);\n    assert(lib::num.combination(1, 1) == 1);\n    assert(lib::num.combination(2,\
+    \ 0) == 1);\n    assert(lib::num.combination(3, 2) == 3);\n    assert(lib::num.digit_sum(1234)\
+    \ == 10);\n    assert(lib::num.base_convert(\"1001\", 2, 10) == \"9\");\n    vector<int>\
+    \ val_divisors = lib::num.divisors(12);\n    lib::seq.sort_asc(val_divisors);\n\
+    \    vector<int> exp_divisors = {1, 2, 3, 4, 6, 12};\n    assert(val_divisors\
+    \ == exp_divisors);\n    assert(lib::num.prime_test(57) == false); // Grothendieck\n\
+    \    assert(lib::num.prime_test(97) == true);\n    map<int, int> val_prime_fact\
+    \ = lib::num.prime_fact(100);\n    map<int, int> exp_prime_fact = {{2, 2}, {5,\
+    \ 2}};\n    assert(val_prime_fact == exp_prime_fact);\n    assert(lib::num.modpow(2,\
+    \ 10, MOD) == 1024);\n    assert(lib::num.modinv(2, MOD) == 499122177);\n    assert(lib::num.modfact(10,\
+    \ MOD) == 3628800);\n    assert(lib::num.mod_combination(10, 5, MOD) == 252);\n\
+    }\n// ===== library/util/string.hpp =====\nvoid test_string() {\n    assert(lib::str.is_low('A')\
+    \ == false);\n    assert(lib::str.is_low('a') == true);\n    assert(lib::str.is_upp('A')\
+    \ == true);\n    assert(lib::str.is_upp('a') == false);\n    assert(lib::str.transform_lower(\"\
     AbC\") == \"abc\");\n    assert(lib::str.transform_upper(\"AbC\") == \"ABC\");\n\
     \    assert(lib::str.lpad(\"ABC\", 6) == \"000ABC\");\n    assert(lib::str.rpad(\"\
     ABC\", 6) == \"ABC000\");\n    vector<int> exp_finds = {0, 3, 6, 9};\n    assert(lib::str.finds(\"\
@@ -194,6 +198,7 @@ data:
   - library/def/io.hpp
   - library/def/type.hpp
   - library/def/const.hpp
+  - template/lib.hpp
   - library/util/number.hpp
   - library/util/string.hpp
   - library/util/sequence.hpp
@@ -203,7 +208,7 @@ data:
   isVerificationFile: true
   path: tests/template.test.cpp
   requiredBy: []
-  timestamp: '2026-01-02 11:58:07+09:00'
+  timestamp: '2026-01-02 22:06:17+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/template.test.cpp
@@ -211,5 +216,5 @@ layout: document
 redirect_from:
 - /verify/tests/template.test.cpp
 - /verify/tests/template.test.cpp.html
-title: tests/template.test.cpp
+title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
 ---

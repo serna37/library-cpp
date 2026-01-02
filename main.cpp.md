@@ -17,24 +17,6 @@ data:
     path: library/def/type.hpp
     title: "\u578B"
   - icon: ':heavy_check_mark:'
-    path: library/util/geometry.hpp
-    title: "\u5E7E\u4F55"
-  - icon: ':heavy_check_mark:'
-    path: library/util/grid.hpp
-    title: "\u30B0\u30EA\u30C3\u30C9"
-  - icon: ':heavy_check_mark:'
-    path: library/util/number.hpp
-    title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':heavy_check_mark:'
-    path: library/util/search.hpp
-    title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: library/util/sequence.hpp
-    title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
-    path: library/util/string.hpp
-    title: "\u6587\u5B57\u5217"
-  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedRequiredBy: []
@@ -57,8 +39,11 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#include \"template/template.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\
-    \n */\nvoid solve() {\n}\n"
+  code: "#include \"template/template.hpp\"\n// #include \"template/lib.hpp\"\n//\
+    \ #include \"library/struct/graph.hpp\"\n// #include \"library/struct/union_find.hpp\"\
+    \n// #include \"library/struct/fenwick_tree.hpp\"\n// #include \"library/struct/monoid.hpp\"\
+    \n// #include \"library/struct/segment_tree.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\
+    \U0001F43E\n */\nvoid solve() {\n}\n"
   dependsOn:
   - template/template.hpp
   - bits/stdc++.h
@@ -66,16 +51,10 @@ data:
   - library/def/io.hpp
   - library/def/type.hpp
   - library/def/const.hpp
-  - library/util/number.hpp
-  - library/util/string.hpp
-  - library/util/sequence.hpp
-  - library/util/search.hpp
-  - library/util/grid.hpp
-  - library/util/geometry.hpp
   isVerificationFile: false
   path: main.cpp
   requiredBy: []
-  timestamp: '2026-01-02 11:58:07+09:00'
+  timestamp: '2026-01-02 22:06:17+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: main.cpp

@@ -11,16 +11,16 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/struct.fenwick_tree.test.cpp
-    title: "\U0001F36A\U0001F9F8\U0001F43E"
+    title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
   - icon: ':heavy_check_mark:'
     path: tests/struct.segment_tree.test.cpp
-    title: "\U0001F36A\U0001F9F8\U0001F43E"
+    title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
   - icon: ':heavy_check_mark:'
     path: tests/struct.union_find.test.cpp
-    title: "\U0001F36A\U0001F9F8\U0001F43E"
+    title: "Union Find\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
-    title: tests/template.test.cpp
+    title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -51,7 +51,7 @@ data:
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2026-01-02 11:58:07+09:00'
+  timestamp: '2026-01-02 22:06:17+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/struct.fenwick_tree.test.cpp

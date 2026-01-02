@@ -16,24 +16,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/def/type.hpp
     title: "\u578B"
-  - icon: ':heavy_check_mark:'
-    path: library/util/geometry.hpp
-    title: "\u5E7E\u4F55"
-  - icon: ':heavy_check_mark:'
-    path: library/util/grid.hpp
-    title: "\u30B0\u30EA\u30C3\u30C9"
-  - icon: ':heavy_check_mark:'
-    path: library/util/number.hpp
-    title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':heavy_check_mark:'
-    path: library/util/search.hpp
-    title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: library/util/sequence.hpp
-    title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
-    path: library/util/string.hpp
-    title: "\u6587\u5B57\u5217"
   _extendedRequiredBy:
   - icon: ':warning:'
     path: main.cpp
@@ -41,16 +23,16 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/struct.fenwick_tree.test.cpp
-    title: "\U0001F36A\U0001F9F8\U0001F43E"
+    title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
   - icon: ':heavy_check_mark:'
     path: tests/struct.segment_tree.test.cpp
-    title: "\U0001F36A\U0001F9F8\U0001F43E"
+    title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
   - icon: ':heavy_check_mark:'
     path: tests/struct.union_find.test.cpp
-    title: "\U0001F36A\U0001F9F8\U0001F43E"
+    title: "Union Find\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
-    title: tests/template.test.cpp
+    title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -72,30 +54,20 @@ data:
     \ */\n#ifdef LOCAL\n#include \"template/debug.hpp\"\n#else\n#define debug(...)\n\
     #endif\n#include <bits/stdc++.h>\nusing namespace std;\n#include \"library/def/common.hpp\"\
     \n#include \"library/def/io.hpp\"\n#include \"library/def/type.hpp\"\n#include\
-    \ \"library/def/const.hpp\"\n#include \"library/util/number.hpp\"\n#include \"\
-    library/util/string.hpp\"\n#include \"library/util/sequence.hpp\"\n#include \"\
-    library/util/search.hpp\"\n#include \"library/util/grid.hpp\"\n#include \"library/util/geometry.hpp\"\
-    \nnamespace lib {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGrid\
-    \ grid;\nGeometry geo;\n}; // namespace lib\nvoid solve();\nsigned main() {\n\
-    \    solve();\n}\n// -----------------------------------------\n// #include \"\
-    template/template.hpp\" is done.\n// -----------------------------------------\n"
+    \ \"library/def/const.hpp\"\nvoid solve();\nsigned main() {\n    solve();\n}\n\
+    // -----------------------------------------\n// #include \"template/template.hpp\"\
+    \ is done.\n// -----------------------------------------\n"
   dependsOn:
   - bits/stdc++.h
   - library/def/common.hpp
   - library/def/io.hpp
   - library/def/type.hpp
   - library/def/const.hpp
-  - library/util/number.hpp
-  - library/util/string.hpp
-  - library/util/sequence.hpp
-  - library/util/search.hpp
-  - library/util/grid.hpp
-  - library/util/geometry.hpp
   isVerificationFile: false
   path: template/template.hpp
   requiredBy:
   - main.cpp
-  timestamp: '2026-01-02 11:58:07+09:00'
+  timestamp: '2026-01-02 22:06:17+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/struct.fenwick_tree.test.cpp
