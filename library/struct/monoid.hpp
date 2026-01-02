@@ -20,25 +20,25 @@ template <typename U, typename F> struct Monoid {
         return _e;
     }
 };
-template <typename U = int> struct MonoidMin {
+template <typename U> struct MonoidMin {
     using T = U;
     T op(const T &x, const T &y) {
         return min(x, y);
     }
     T e() {
-        return INF;
+        return 2147483647;
     }
 };
-template <typename U = int> struct MonoidMax {
+template <typename U> struct MonoidMax {
     using T = U;
     T op(const T &x, const T &y) {
         return max(x, y);
     }
     T e() {
-        return -INF;
+        return -2147483647;
     }
 };
-template <typename U = int> struct MonoidAdd {
+template <typename U> struct MonoidAdd {
     using T = U;
     T op(const T &x, const T &y) {
         return x + y;
@@ -47,7 +47,7 @@ template <typename U = int> struct MonoidAdd {
         return 0ll;
     }
 };
-template <typename U = int> struct MonoidMul {
+template <typename U> struct MonoidMul {
     using T = U;
     T op(const T &x, const T &y) {
         return x * y;
@@ -56,7 +56,7 @@ template <typename U = int> struct MonoidMul {
         return 1ll;
     }
 };
-template <typename U = int> struct MonoidGcd {
+template <typename U> struct MonoidGcd {
     using T = U;
     T op(const T &x, const T &y) {
         return gcd(x, y);
@@ -65,7 +65,7 @@ template <typename U = int> struct MonoidGcd {
         return 0ll;
     }
 };
-template <typename U = int> struct MonoidLcm {
+template <typename U> struct MonoidLcm {
     using T = U;
     T op(const T &x, const T &y) {
         return lcm(x, y);
@@ -74,7 +74,7 @@ template <typename U = int> struct MonoidLcm {
         return 1ll;
     }
 };
-template <typename U = int> struct MonoidXor {
+template <typename U> struct MonoidXor {
     using T = U;
     T op(const T &x, const T &y) {
         return x ^ y;
