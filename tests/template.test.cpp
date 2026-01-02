@@ -61,7 +61,109 @@ void test_string() {
 }
 // ===== library/util/sequence.hpp =====
 void test_sequence() {
-    // TODO test
+    vector<int> A = {1, 3, 2, 5, 8, 13, 2, 9, 3, 5};
+    assert(lib::seq.min(A) == 1);
+    assert(lib::seq.max(A) == 13);
+    assert(lib::seq.sum(A) == 51);
+    vector<int> evens = {0, 2, 4, 6};
+    vector<int> odds = {1, 3, 5, 7};
+    auto is_even = [](int x) { return x % 2 == 0; };
+    assert(lib::seq.all_match(evens, is_even));
+    assert(lib::seq.none_match(odds, is_even));
+    assert(lib::seq.any_match(A, is_even));
+    vector<int> exp_distinct = {1, 2, 3, 5, 8, 9, 13};
+    lib::seq.distinct(A);
+    assert(A == exp_distinct);
+    A = {1, 3, 2, 5, 8, 13, 2, 9, 3, 5};
+    vector<int> exp_asc = {1, 2, 2, 3, 3, 5, 5, 8, 9, 13};
+    lib::seq.sort_asc(A);
+    assert(A == exp_asc);
+    A = {1, 3, 2, 5, 8, 13, 2, 9, 3, 5};
+    vector<int> exp_desc = {13, 9, 8, 5, 5, 3, 3, 2, 2, 1};
+    lib::seq.sort_desc(A);
+    assert(A == exp_desc);
+    A = {1, 3, 2, 5, 8, 13, 2, 9, 3, 5};
+    vector<int> exp_rev = {5, 3, 9, 2, 13, 8, 5, 2, 3, 1};
+    lib::seq.reverse(A);
+    assert(A == exp_rev);
+    set<int> st = {1, 2, 3, 4, 6, 7, 9, 11};
+    set<int> exp_erase = {1, 2, 3, 6, 7, 9, 11};
+    lib::seq.erase(st, 4ll);
+    assert(st == exp_erase);
+    multiset<int> mst = {1, 2, 3, 4, 4, 4, 6, 7, 9, 11};
+    multiset<int> exp_merase = {1, 2, 3, 4, 4, 6, 7, 9, 11};
+    lib::seq.erase(mst, 4ll);
+    assert(mst == exp_merase);
+    A = {1, 2};
+    auto [a, b] = lib::seq.unpack<2>(move(A));
+    assert(a == 1 and b == 2);
+    vector<int> val_renban(10);
+    vector<int> exp_renban = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    lib::seq.renban(val_renban);
+    assert(val_renban == exp_renban);
+    A = {1, 2, 3};
+    vector<int> B = {1, 2, 3, 4, 5};
+    lib::seq.merge(A, B);
+    vector<int> exp_merge_vec = {1, 2, 3, 4, 5, 1, 2, 3};
+    assert(B == exp_merge_vec);
+    set<int> stA = {1, 2, 3};
+    set<int> stB = {1, 2, 3, 4, 5};
+    set<int> exp_merge_set = {1, 1, 2, 2, 3, 3, 4, 5};
+    lib::seq.merge(stA, stB);
+    assert(stB == exp_merge_set);
+    map<int, int> mpA = {{1, 1}, {2, 2}};
+    map<int, int> mpB = {{1, 1}, {2, 2}, {3, 3}};
+    auto mergeF = [&](map<int, int> &B, pair<int, int> v) {
+        return B[v.first] += v.second;
+    };
+    lib::seq.merge(mpA, mpB, mergeF);
+    map<int, int> exp_merge_map = {{1, 2}, {2, 4}, {3, 3}};
+    assert(mpB == exp_merge_map);
+    A = {1, 2, 2, 5, 6};
+    vector<int> val_coordinate = lib::seq.coordinate(A);
+    vector<int> exp_coordinate = {0, 1, 2, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0};
+    for (int i = 0; i < 10; ++i) {
+        assert(val_coordinate[i] == exp_coordinate[i]);
+    }
+    A = {1, 2, 2, 8, 10, 88};
+    int zip_cnt = lib::seq.zip_coordinate(A);
+    assert(zip_cnt == 5);
+    vector<int> exp_zip = {0, 1, 1, 2, 3, 4};
+    assert(A == exp_zip);
+    A = {1, 3, 9, 3, 8, 2, 99, 4};
+    int inv = lib::seq.inversion_number(A);
+    assert(inv == 9);
+    A = {1, 2, 5, 8, 3, 2, 9};
+    vector<int> S = lib::seq.zeta(A);
+    vector<int> exp_zeta = {0, 1, 3, 8, 16, 19, 21, 30};
+    assert(S == exp_zeta);
+    S = lib::seq.zeta_rev(A);
+    vector<int> exp_zeta_rev = {30, 29, 27, 22, 14, 11, 9, 0};
+    assert(S == exp_zeta_rev);
+    S = lib::seq.zeta_diff(A);
+    vector<int> exp_zeta_diff = {0, 0, 1, 1, 4, 4, 5, 5};
+    assert(S == exp_zeta_diff);
+    S = lib::seq.zeta_rev_diff(A);
+    vector<int> exp_zeta_rev_diff = {15, 15, 12, 12, 7, 7, 0, 0};
+    assert(S == exp_zeta_rev_diff);
+    vector<vector<int>> G = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    vector<vector<int>> S2 = lib::seq.zeta_2D(G);
+    vector<vector<int>> exp_zeta_2D = {
+        {0, 0, 0, 0}, {0, 1, 3, 6}, {0, 5, 12, 21}, {0, 12, 27, 45}};
+    assert(S2 == exp_zeta_2D);
+    vector<vector<vector<int>>> G3 = {{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}},
+                                      {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}},
+                                      {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}};
+    auto S3 = lib::seq.zeta_3D(G3);
+    vector<vector<vector<int>>> exp_zeta_3D = {
+        {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}},
+        {{0, 0, 0, 0}, {0, 1, 3, 6}, {0, 5, 12, 21}, {0, 12, 27, 45}},
+        {{0, 0, 0, 0}, {0, 2, 6, 12}, {0, 10, 24, 42}, {0, 24, 54, 90}},
+        {{0, 0, 0, 0}, {0, 3, 9, 18}, {0, 15, 36, 63}, {0, 36, 81, 135}}};
+    assert(S3 == exp_zeta_3D);
+    vector<int> R = lib::seq.moebius(A);
+    vector<int> exp_moebius = {1, 3, 3, -5, -1, 7};
+    assert(R == exp_moebius);
 }
 // ===== library/util/search.hpp =====
 void test_search() {
