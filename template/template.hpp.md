@@ -1,19 +1,22 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
+    path: bits/includes.h
+    title: "\u5FC5\u8981\u306Ainclude\u3092\u7528\u610F"
+  - icon: ':heavy_check_mark:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/def/common.hpp
     title: "\u5171\u901A"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/def/const.hpp
     title: "\u5B9A\u6570"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/def/io.hpp
     title: "IO\u95A2\u9023"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/def/type.hpp
     title: "\u578B"
   _extendedRequiredBy:
@@ -21,16 +24,16 @@ data:
     path: main.cpp
     title: "main\u30D5\u30A1\u30A4\u30EB"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/struct.dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
   - icon: ':heavy_check_mark:'
     path: tests/struct.fenwick_tree.test.cpp
     title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/struct.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/struct.segment_tree.test.cpp
     title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
   - icon: ':heavy_check_mark:'
@@ -39,9 +42,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
     title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u0E05^>\u03C9<^\u0E05"
     links:
@@ -58,12 +61,13 @@ data:
     \ #ifndef other than include guards\n"
   code: "/**\n * @brief \u0E05^>\u03C9<^\u0E05\n * @author serna37\n * @note https://serna37.github.io/library-cpp/\n\
     \ */\n#ifdef LOCAL\n#include \"template/debug.hpp\"\n#else\n#define debug(...)\n\
-    #endif\n#include <bits/stdc++.h>\nusing namespace std;\n#include \"library/def/common.hpp\"\
-    \n#include \"library/def/io.hpp\"\n#include \"library/def/type.hpp\"\n#include\
-    \ \"library/def/const.hpp\"\nvoid solve();\nsigned main() {\n    solve();\n}\n\
-    // -----------------------------------------\n// #include \"template/template.hpp\"\
-    \ is done.\n// -----------------------------------------\n"
+    #endif\n#include \"bits/includes.h\"\n#include <bits/stdc++.h>\nusing namespace\
+    \ std;\n#include \"library/def/common.hpp\"\n#include \"library/def/io.hpp\"\n\
+    #include \"library/def/type.hpp\"\n#include \"library/def/const.hpp\"\nvoid solve();\n\
+    signed main() {\n    solve();\n}\n// -----------------------------------------\n\
+    // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n"
   dependsOn:
+  - bits/includes.h
   - bits/stdc++.h
   - library/def/common.hpp
   - library/def/io.hpp
@@ -73,8 +77,8 @@ data:
   path: template/template.hpp
   requiredBy:
   - main.cpp
-  timestamp: '2026-01-03 21:07:12+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2026-01-03 21:26:04+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/struct.lazy_segment_tree.test.cpp
   - tests/struct.fenwick_tree.test.cpp

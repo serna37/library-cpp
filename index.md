@@ -3,7 +3,10 @@ data:
   libraryCategories:
   - name: bits
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
+      path: bits/includes.h
+      title: "\u5FC5\u8981\u306Ainclude\u3092\u7528\u610F"
+    - icon: ':heavy_check_mark:'
       path: bits/stdc++.h
       title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - name: .
@@ -21,21 +24,21 @@ data:
       title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9"
   - name: library/def
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/def/common.hpp
       title: "\u5171\u901A"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/def/const.hpp
       title: "\u5B9A\u6570"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/def/io.hpp
       title: "IO\u95A2\u9023"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/def/type.hpp
       title: "\u578B"
   - name: library/struct
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/struct/dual_segment_tree.hpp
       title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
     - icon: ':heavy_check_mark:'
@@ -45,13 +48,13 @@ data:
     - icon: ':warning:'
       path: library/struct/graph.hpp
       title: "\u30B0\u30E9\u30D5"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/struct/lazy_segment_tree.hpp
       title: "Lazy Segment Tree \u533A\u9593\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/struct/monoid.hpp
       title: "\u30E2\u30CE\u30A4\u30C9"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/struct/segment_tree.hpp
       title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
     - icon: ':heavy_check_mark:'
@@ -85,22 +88,22 @@ data:
     - icon: ':heavy_check_mark:'
       path: template/lib.hpp
       title: "library/util/*.hpp\u306Einclude\u7528"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: "\u0E05^>\u03C9<^\u0E05"
   verificationCategories:
   - name: tests
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/struct.dual_segment_tree.test.cpp
       title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
     - icon: ':heavy_check_mark:'
       path: tests/struct.fenwick_tree.test.cpp
       title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/struct.lazy_segment_tree.test.cpp
       title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/struct.segment_tree.test.cpp
       title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
     - icon: ':heavy_check_mark:'

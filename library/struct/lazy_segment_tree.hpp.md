@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/struct.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "Lazy Segment Tree \u533A\u9593\u66F4\u65B0 \u533A\u9593\u53D6\
       \u5F97"
@@ -20,14 +20,14 @@ data:
     \ UpdOp = function<U(U, U)>;\n    using ActOp = function<T(T, U, int)>;\n\n  private:\n\
     \    ProdOp prod_op;\n    UpdOp upd_op;\n    ActOp act_op;\n    T prod_e;\n  \
     \  U upd_e;\n    int N, size, log = 1;\n    vector<T> node;\n    vector<U> lazy;\n\
-    \    void init() {\n        while ((1 << log) < N) ++log;\n        node.assign((size\
-    \ = 1 << log) << 1, prod_e);\n        lazy.assign(size, upd_e);\n    }\n    void\
-    \ update(int i) {\n        node[i] = prod_op(node[i << 1 | 0], node[i << 1 | 1]);\n\
-    \    }\n    void apply_at(int k, U a) {\n        int topbit = k == 0 ? -1 : 31\
-    \ - __builtin_clz(k);\n        long long sz = 1 << (log - topbit);\n        node[k]\
-    \ = act_op(node[k], a, sz);\n        if (k < size) lazy[k] = upd_op(lazy[k], a);\n\
-    \    }\n    void propagate(int k) {\n        if (lazy[k] == upd_e) return;\n \
-    \       apply_at((k << 1 | 0), lazy[k]);\n        apply_at((k << 1 | 1), lazy[k]);\n\
+    \    void init() {\n        while ((1ll << log) < N) ++log;\n        node.assign((size\
+    \ = 1ll << log) << 1, prod_e);\n        lazy.assign(size, upd_e);\n    }\n   \
+    \ void update(int i) {\n        node[i] = prod_op(node[i << 1 | 0], node[i <<\
+    \ 1 | 1]);\n    }\n    void apply_at(int k, U a) {\n        int topbit = k ==\
+    \ 0 ? -1 : 31 - __builtin_clzll(k);\n        long long sz = 1 << (log - topbit);\n\
+    \        node[k] = act_op(node[k], a, sz);\n        if (k < size) lazy[k] = upd_op(lazy[k],\
+    \ a);\n    }\n    void propagate(int k) {\n        if (lazy[k] == upd_e) return;\n\
+    \        apply_at((k << 1 | 0), lazy[k]);\n        apply_at((k << 1 | 1), lazy[k]);\n\
     \        lazy[k] = upd_e;\n    }\n\n  public:\n    LazySegmentTree(ProdOp prod_op,\
     \ T prod_e, UpdOp upd_op, U upd_e,\n                    ActOp act_op, int n)\n\
     \        : prod_op(prod_op), prod_e(prod_e), upd_op(upd_op), upd_e(upd_e),\n \
@@ -86,12 +86,12 @@ data:
     \ = function<T(T, T)>;\n    using UpdOp = function<U(U, U)>;\n    using ActOp\
     \ = function<T(T, U, int)>;\n\n  private:\n    ProdOp prod_op;\n    UpdOp upd_op;\n\
     \    ActOp act_op;\n    T prod_e;\n    U upd_e;\n    int N, size, log = 1;\n \
-    \   vector<T> node;\n    vector<U> lazy;\n    void init() {\n        while ((1\
-    \ << log) < N) ++log;\n        node.assign((size = 1 << log) << 1, prod_e);\n\
+    \   vector<T> node;\n    vector<U> lazy;\n    void init() {\n        while ((1ll\
+    \ << log) < N) ++log;\n        node.assign((size = 1ll << log) << 1, prod_e);\n\
     \        lazy.assign(size, upd_e);\n    }\n    void update(int i) {\n        node[i]\
     \ = prod_op(node[i << 1 | 0], node[i << 1 | 1]);\n    }\n    void apply_at(int\
-    \ k, U a) {\n        int topbit = k == 0 ? -1 : 31 - __builtin_clz(k);\n     \
-    \   long long sz = 1 << (log - topbit);\n        node[k] = act_op(node[k], a,\
+    \ k, U a) {\n        int topbit = k == 0 ? -1 : 31 - __builtin_clzll(k);\n   \
+    \     long long sz = 1 << (log - topbit);\n        node[k] = act_op(node[k], a,\
     \ sz);\n        if (k < size) lazy[k] = upd_op(lazy[k], a);\n    }\n    void propagate(int\
     \ k) {\n        if (lazy[k] == upd_e) return;\n        apply_at((k << 1 | 0),\
     \ lazy[k]);\n        apply_at((k << 1 | 1), lazy[k]);\n        lazy[k] = upd_e;\n\
@@ -150,8 +150,8 @@ data:
   isVerificationFile: false
   path: library/struct/lazy_segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-03 21:07:12+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2026-01-03 21:26:04+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/struct.lazy_segment_tree.test.cpp
 documentation_of: library/struct/lazy_segment_tree.hpp

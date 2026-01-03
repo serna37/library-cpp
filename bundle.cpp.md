@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   _extendedRequiredBy: []
@@ -15,11 +15,18 @@ data:
     - https://serna37.github.io/library-cpp/
   bundledCode: "#line 1 \"bundle.cpp\"\n/**\n * @brief \u0E05^>\u03C9<^\u0E05\n *\
     \ @author serna37\n * @note https://serna37.github.io/library-cpp/\n */\n#ifdef\
-    \ LOCAL\n\n#else\n#define debug(...)\n#endif\n#include <bits/stdc++.h>\nusing\
-    \ namespace std;\n\n/** ======================================= */\n/**      \
-    \        \u5171\u901A                       */\n/** =======================================\
-    \ */\n\n#define int long long\n#define all(x) begin(x), end(x)\n#define rall(x)\
-    \ rbegin(x), rend(x)\n#define $(idx) (std::get<(idx)>(std::forward_as_tuple(_args...)))\n\
+    \ LOCAL\n\n#else\n#define debug(...)\n#endif\n/**\n * @brief \u5FC5\u8981\u306A\
+    include\u3092\u7528\u610F\n */\n#include <algorithm>\n#include <array>\n#include\
+    \ <bitset>\n#include <cassert>\n#include <complex>\n#include <chrono>\n#include\
+    \ <deque>\n#include <functional>\n#include <iomanip>\n#include <iostream>\n#include\
+    \ <limits.h>\n#include <map>\n#include <math.h>\n#include <numeric>\n#include\
+    \ <queue>\n#include <random>\n#include <set>\n#include <sstream>\n#include <stack>\n\
+    #include <string>\n#include <tuple>\n#include <unordered_map>\n#include <unordered_set>\n\
+    #include <utility>\n#include <vector>\n\n#include <bits/stdc++.h>\nusing namespace\
+    \ std;\n\n/** ======================================= */\n/**              \u5171\
+    \u901A                       */\n/** ======================================= */\n\
+    \n#define int long long\n#define all(x) begin(x), end(x)\n#define rall(x) rbegin(x),\
+    \ rend(x)\n#define $(idx) (std::get<(idx)>(std::forward_as_tuple(_args...)))\n\
     // lambda($(0) + $(1))\u3068\u3067\u304D\u308B\n#define lambda(...) ([&](auto\
     \ &&..._args) { return (__VA_ARGS__); })\nauto chmin = []<class T>(T &i, const\
     \ T &j) { return i > j && (i = j, true); };\nauto chmax = []<class T>(T &i, const\
@@ -61,14 +68,22 @@ data:
     \ is done.\n// -----------------------------------------\n\n// #include \"template/lib.hpp\"\
     \n// #include \"library/struct/graph.hpp\"\n// #include \"library/struct/union_find.hpp\"\
     \n// #include \"library/struct/fenwick_tree.hpp\"\n// #include \"library/struct/monoid.hpp\"\
-    \n// #include \"library/struct/segment_tree.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\
-    \U0001F43E\n */\nvoid solve() {\n}\n\n"
+    \n// #include \"library/struct/segment_tree.hpp\"\n// #include \"library/struct/dual_segment_tree.hpp\"\
+    \n// #include \"library/struct/lazy_segment_tree.hpp\"\n/**\n * @brief \U0001F36A\
+    \U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n\n"
   code: "/**\n * @brief \u0E05^>\u03C9<^\u0E05\n * @author serna37\n * @note https://serna37.github.io/library-cpp/\n\
-    \ */\n#ifdef LOCAL\n\n#else\n#define debug(...)\n#endif\n#include <bits/stdc++.h>\n\
-    using namespace std;\n\n/** ======================================= */\n/**  \
-    \            \u5171\u901A                       */\n/** =======================================\
-    \ */\n\n#define int long long\n#define all(x) begin(x), end(x)\n#define rall(x)\
-    \ rbegin(x), rend(x)\n#define $(idx) (std::get<(idx)>(std::forward_as_tuple(_args...)))\n\
+    \ */\n#ifdef LOCAL\n\n#else\n#define debug(...)\n#endif\n/**\n * @brief \u5FC5\
+    \u8981\u306Ainclude\u3092\u7528\u610F\n */\n#include <algorithm>\n#include <array>\n\
+    #include <bitset>\n#include <cassert>\n#include <complex>\n#include <chrono>\n\
+    #include <deque>\n#include <functional>\n#include <iomanip>\n#include <iostream>\n\
+    #include <limits.h>\n#include <map>\n#include <math.h>\n#include <numeric>\n#include\
+    \ <queue>\n#include <random>\n#include <set>\n#include <sstream>\n#include <stack>\n\
+    #include <string>\n#include <tuple>\n#include <unordered_map>\n#include <unordered_set>\n\
+    #include <utility>\n#include <vector>\n\n#include <bits/stdc++.h>\nusing namespace\
+    \ std;\n\n/** ======================================= */\n/**              \u5171\
+    \u901A                       */\n/** ======================================= */\n\
+    \n#define int long long\n#define all(x) begin(x), end(x)\n#define rall(x) rbegin(x),\
+    \ rend(x)\n#define $(idx) (std::get<(idx)>(std::forward_as_tuple(_args...)))\n\
     // lambda($(0) + $(1))\u3068\u3067\u304D\u308B\n#define lambda(...) ([&](auto\
     \ &&..._args) { return (__VA_ARGS__); })\nauto chmin = []<class T>(T &i, const\
     \ T &j) { return i > j && (i = j, true); };\nauto chmax = []<class T>(T &i, const\
@@ -110,14 +125,15 @@ data:
     \ is done.\n// -----------------------------------------\n\n// #include \"template/lib.hpp\"\
     \n// #include \"library/struct/graph.hpp\"\n// #include \"library/struct/union_find.hpp\"\
     \n// #include \"library/struct/fenwick_tree.hpp\"\n// #include \"library/struct/monoid.hpp\"\
-    \n// #include \"library/struct/segment_tree.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\
-    \U0001F43E\n */\nvoid solve() {\n}\n\n"
+    \n// #include \"library/struct/segment_tree.hpp\"\n// #include \"library/struct/dual_segment_tree.hpp\"\
+    \n// #include \"library/struct/lazy_segment_tree.hpp\"\n/**\n * @brief \U0001F36A\
+    \U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n\n"
   dependsOn:
   - bits/stdc++.h
   isVerificationFile: false
   path: bundle.cpp
   requiredBy: []
-  timestamp: '2026-01-03 21:07:12+09:00'
+  timestamp: '2026-01-03 21:26:04+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundle.cpp

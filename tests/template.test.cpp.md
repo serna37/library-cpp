@@ -1,19 +1,22 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
+    path: bits/includes.h
+    title: "\u5FC5\u8981\u306Ainclude\u3092\u7528\u610F"
+  - icon: ':heavy_check_mark:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/def/common.hpp
     title: "\u5171\u901A"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/def/const.hpp
     title: "\u5B9A\u6570"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/def/io.hpp
     title: "IO\u95A2\u9023"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/def/type.hpp
     title: "\u578B"
   - icon: ':heavy_check_mark:'
@@ -37,7 +40,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: template/lib.hpp
     title: "library/util/*.hpp\u306Einclude\u7528"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedRequiredBy: []
@@ -193,6 +196,7 @@ data:
     \    test_geometry();\n}\n"
   dependsOn:
   - template/template.hpp
+  - bits/includes.h
   - bits/stdc++.h
   - library/def/common.hpp
   - library/def/io.hpp
@@ -208,7 +212,7 @@ data:
   isVerificationFile: true
   path: tests/template.test.cpp
   requiredBy: []
-  timestamp: '2026-01-03 21:07:12+09:00'
+  timestamp: '2026-01-03 21:26:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/template.test.cpp

@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/struct.dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
     links: []
@@ -16,8 +16,8 @@ data:
     \ Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97\n */\ntemplate <typename\
     \ T> struct DualSegmentTree {\n    using F = function<T(T, T)>;\n\n  private:\n\
     \    F op;\n    T e;\n    int N, size, log = 1;\n    vector<T> node;\n    void\
-    \ init() {\n        while ((1 << log) < N) ++log;\n        node.assign((size =\
-    \ 1 << log) << 1, e);\n    }\n    void apply_at(int k, T a) {\n        node[k]\
+    \ init() {\n        while ((1ll << log) < N) ++log;\n        node.assign((size\
+    \ = 1ll << log) << 1, e);\n    }\n    void apply_at(int k, T a) {\n        node[k]\
     \ = op(node[k], a);\n    }\n    void propagate(int k) {\n        if (node[k] ==\
     \ e) return;\n        apply_at((k << 1 | 0), node[k]);\n        apply_at((k <<\
     \ 1 | 1), node[k]);\n        node[k] = e;\n    }\n\n  public:\n    DualSegmentTree(F\
@@ -36,9 +36,9 @@ data:
   code: "#pragma once\n/**\n * @brief Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\
     \u53D6\u5F97\n */\ntemplate <typename T> struct DualSegmentTree {\n    using F\
     \ = function<T(T, T)>;\n\n  private:\n    F op;\n    T e;\n    int N, size, log\
-    \ = 1;\n    vector<T> node;\n    void init() {\n        while ((1 << log) < N)\
-    \ ++log;\n        node.assign((size = 1 << log) << 1, e);\n    }\n    void apply_at(int\
-    \ k, T a) {\n        node[k] = op(node[k], a);\n    }\n    void propagate(int\
+    \ = 1;\n    vector<T> node;\n    void init() {\n        while ((1ll << log) <\
+    \ N) ++log;\n        node.assign((size = 1ll << log) << 1, e);\n    }\n    void\
+    \ apply_at(int k, T a) {\n        node[k] = op(node[k], a);\n    }\n    void propagate(int\
     \ k) {\n        if (node[k] == e) return;\n        apply_at((k << 1 | 0), node[k]);\n\
     \        apply_at((k << 1 | 1), node[k]);\n        node[k] = e;\n    }\n\n  public:\n\
     \    DualSegmentTree(F op, T e, int n) : op(op), e(e), N(n) {\n        init();\n\
@@ -57,8 +57,8 @@ data:
   isVerificationFile: false
   path: library/struct/dual_segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-03 21:07:12+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2026-01-03 21:26:04+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/struct.dual_segment_tree.test.cpp
 documentation_of: library/struct/dual_segment_tree.hpp
