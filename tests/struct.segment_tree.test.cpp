@@ -1,8 +1,8 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A"
 #include "template/template.hpp"
-#include "library/struct/segment_tree.hpp"
 #include "library/struct/monoid.hpp"
+#include "library/struct/segment_tree.hpp"
 /**
  * @brief セグ木のテスト:RMQ
  */

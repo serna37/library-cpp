@@ -1,8 +1,8 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D"
 #include "template/template.hpp"
-#include "library/struct/dual_segment_tree.hpp"
 #include "library/struct/monoid.hpp"
+#include "library/struct/dual_segment_tree.hpp"
 /**
  * @brief 双対セグ木のテスト:RUQ
  */
