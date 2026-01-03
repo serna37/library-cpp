@@ -33,33 +33,37 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/def/type.hpp
       title: "\u578B"
+  - name: library/graph
+    pages:
+    - icon: ':warning:'
+      path: library/graph/edge.hpp
+      title: "\u8FBA"
+    - icon: ':warning:'
+      path: library/graph/graph.hpp
+      title: "\u30B0\u30E9\u30D5"
+    - icon: ':warning:'
+      path: library/graph/min_span_tree.hpp
+      title: "\u6700\u5C0F\u5168\u57DF\u6728"
+  - name: library/segtree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: library/segtree/dual_segment_tree.hpp
+      title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
+    - icon: ':heavy_check_mark:'
+      path: library/segtree/fenwick_tree.hpp
+      title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\
+        \u307F"
+    - icon: ':heavy_check_mark:'
+      path: library/segtree/lazy_segment_tree.hpp
+      title: "Lazy Segment Tree \u533A\u9593\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+    - icon: ':heavy_check_mark:'
+      path: library/segtree/segment_tree.hpp
+      title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
   - name: library/struct
     pages:
     - icon: ':heavy_check_mark:'
-      path: library/struct/dual_segment_tree.hpp
-      title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
-    - icon: ':warning:'
-      path: library/struct/edge.hpp
-      title: "\u8FBA"
-    - icon: ':heavy_check_mark:'
-      path: library/struct/fenwick_tree.hpp
-      title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\
-        \u307F"
-    - icon: ':warning:'
-      path: library/struct/graph.hpp
-      title: "\u30B0\u30E9\u30D5"
-    - icon: ':heavy_check_mark:'
-      path: library/struct/lazy_segment_tree.hpp
-      title: "Lazy Segment Tree \u533A\u9593\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
-    - icon: ':warning:'
-      path: library/struct/min_span_tree.hpp
-      title: "\u6700\u5C0F\u5168\u57DF\u6728"
-    - icon: ':heavy_check_mark:'
       path: library/struct/monoid.hpp
       title: "\u30E2\u30CE\u30A4\u30C9"
-    - icon: ':heavy_check_mark:'
-      path: library/struct/segment_tree.hpp
-      title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
     - icon: ':heavy_check_mark:'
       path: library/struct/union_find.hpp
       title: UnionFind
@@ -101,16 +105,16 @@ data:
   - name: tests
     pages:
     - icon: ':heavy_check_mark:'
-      path: tests/struct.dual_segment_tree.test.cpp
+      path: tests/segtree.dual_segment_tree.test.cpp
       title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
     - icon: ':heavy_check_mark:'
-      path: tests/struct.fenwick_tree.test.cpp
+      path: tests/segtree.fenwick_tree.test.cpp
       title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
     - icon: ':heavy_check_mark:'
-      path: tests/struct.lazy_segment_tree.test.cpp
+      path: tests/segtree.lazy_segment_tree.test.cpp
       title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
     - icon: ':heavy_check_mark:'
-      path: tests/struct.segment_tree.test.cpp
+      path: tests/segtree.segment_tree.test.cpp
       title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
     - icon: ':heavy_check_mark:'
       path: tests/struct.union_find.test.cpp

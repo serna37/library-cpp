@@ -63,11 +63,8 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#include \"template/template.hpp\"\n// #include \"library/struct/graph.hpp\"\
-    \n// #include \"library/struct/union_find.hpp\"\n// #include \"library/struct/fenwick_tree.hpp\"\
-    \n// #include \"library/struct/monoid.hpp\"\n// #include \"library/struct/segment_tree.hpp\"\
-    \n// #include \"library/struct/dual_segment_tree.hpp\"\n// #include \"library/struct/lazy_segment_tree.hpp\"\
-    \n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n"
+  code: "#include \"template/template.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\
+    \n */\nvoid solve() {\n}\n"
   dependsOn:
   - template/template.hpp
   - template/includes.hpp
@@ -86,7 +83,7 @@ data:
   isVerificationFile: false
   path: main.cpp
   requiredBy: []
-  timestamp: '2026-01-03 22:46:07+09:00'
+  timestamp: '2026-01-03 23:04:42+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: main.cpp

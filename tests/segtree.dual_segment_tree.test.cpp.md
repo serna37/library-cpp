@@ -17,11 +17,11 @@ data:
     path: library/def/type.hpp
     title: "\u578B"
   - icon: ':heavy_check_mark:'
+    path: library/segtree/dual_segment_tree.hpp
+    title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
+  - icon: ':heavy_check_mark:'
     path: library/struct/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
-  - icon: ':heavy_check_mark:'
-    path: library/struct/segment_tree.hpp
-    title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
   - icon: ':heavy_check_mark:'
     path: library/util/geometry.hpp
     title: "\u5E7E\u4F55"
@@ -56,10 +56,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A
-    document_title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
+    document_title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -73,14 +73,15 @@ data:
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
-    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A\"\
-    \n#include \"template/template.hpp\"\n#include \"library/struct/monoid.hpp\"\n\
-    #include \"library/struct/segment_tree.hpp\"\n/**\n * @brief \u30BB\u30B0\u6728\
-    \u306E\u30C6\u30B9\u30C8:RMQ\n */\nvoid solve() {\n    int N, Q;\n    cin >> N\
-    \ >> Q;\n    SegmentTree<int> seg(Monoid::Min::op, Monoid::Min::e, N);\n    while\
-    \ (Q--) {\n        int com, x, y;\n        cin >> com >> x >> y;\n        if (com\
-    \ == 0) {\n            seg.set(x, y);\n        }\n        if (com == 1) {\n  \
-    \          print(seg.prod(x, y + 1));\n        }\n    }\n}\n"
+    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D\"\
+    \n#include \"template/template.hpp\"\n#include \"library/segtree/dual_segment_tree.hpp\"\
+    \n/**\n * @brief \u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ\n\
+    \ */\nvoid solve() {\n    int N, Q;\n    cin >> N >> Q;\n    DualSegmentTree<int>\
+    \ seg(Monoid::Set::op, Monoid::Set::e, N);\n    while (Q--) {\n        int com;\n\
+    \        cin >> com;\n        if (com == 0) {\n            int l, r, x;\n    \
+    \        cin >> l >> r >> x;\n            seg.apply(l, r + 1, x);\n        }\n\
+    \        if (com == 1) {\n            int k;\n            cin >> k;\n        \
+    \    print(seg[k]);\n        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
   - template/includes.hpp
@@ -96,18 +97,18 @@ data:
   - library/util/search.hpp
   - library/util/grid.hpp
   - library/util/geometry.hpp
+  - library/segtree/dual_segment_tree.hpp
   - library/struct/monoid.hpp
-  - library/struct/segment_tree.hpp
   isVerificationFile: true
-  path: tests/struct.segment_tree.test.cpp
+  path: tests/segtree.dual_segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-03 22:46:07+09:00'
+  timestamp: '2026-01-03 23:04:42+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/struct.segment_tree.test.cpp
+documentation_of: tests/segtree.dual_segment_tree.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/struct.segment_tree.test.cpp
-- /verify/tests/struct.segment_tree.test.cpp.html
-title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
+- /verify/tests/segtree.dual_segment_tree.test.cpp
+- /verify/tests/segtree.dual_segment_tree.test.cpp.html
+title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
 ---

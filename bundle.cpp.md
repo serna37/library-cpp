@@ -370,11 +370,7 @@ data:
     \ {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\nGeometry\
     \ geo;\n}; // namespace lib\n// -----------------------------------------\n//\
     \ #include \"template/lib.hpp\" is done.\n// -----------------------------------------\n\
-    \n\n// #include \"library/struct/graph.hpp\"\n// #include \"library/struct/union_find.hpp\"\
-    \n// #include \"library/struct/fenwick_tree.hpp\"\n// #include \"library/struct/monoid.hpp\"\
-    \n// #include \"library/struct/segment_tree.hpp\"\n// #include \"library/struct/dual_segment_tree.hpp\"\
-    \n// #include \"library/struct/lazy_segment_tree.hpp\"\n/**\n * @brief \U0001F36A\
-    \U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n\n"
+    \n\n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n\n"
   code: "/**\n * @brief \u0E05^>\u03C9<^\u0E05\n * @author serna37\n * @note https://serna37.github.io/library-cpp/\n\
     \ */\n#ifdef LOCAL\n\n#else\n#define debug(...)\n#endif\n#include <algorithm>\n\
     #include <array>\n#include <bitset>\n#include <cassert>\n#include <complex>\n\
@@ -731,17 +727,13 @@ data:
     \ {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\nGeometry\
     \ geo;\n}; // namespace lib\n// -----------------------------------------\n//\
     \ #include \"template/lib.hpp\" is done.\n// -----------------------------------------\n\
-    \n\n// #include \"library/struct/graph.hpp\"\n// #include \"library/struct/union_find.hpp\"\
-    \n// #include \"library/struct/fenwick_tree.hpp\"\n// #include \"library/struct/monoid.hpp\"\
-    \n// #include \"library/struct/segment_tree.hpp\"\n// #include \"library/struct/dual_segment_tree.hpp\"\
-    \n// #include \"library/struct/lazy_segment_tree.hpp\"\n/**\n * @brief \U0001F36A\
-    \U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n\n"
+    \n\n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n\n"
   dependsOn:
   - bits/stdc++.h
   isVerificationFile: false
   path: bundle.cpp
   requiredBy: []
-  timestamp: '2026-01-03 22:46:07+09:00'
+  timestamp: '2026-01-03 23:04:42+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundle.cpp

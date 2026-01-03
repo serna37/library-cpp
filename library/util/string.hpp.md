@@ -13,16 +13,16 @@ data:
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/struct.dual_segment_tree.test.cpp
+    path: tests/segtree.dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
   - icon: ':heavy_check_mark:'
-    path: tests/struct.fenwick_tree.test.cpp
+    path: tests/segtree.fenwick_tree.test.cpp
     title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
   - icon: ':heavy_check_mark:'
-    path: tests/struct.lazy_segment_tree.test.cpp
+    path: tests/segtree.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
   - icon: ':heavy_check_mark:'
-    path: tests/struct.segment_tree.test.cpp
+    path: tests/segtree.segment_tree.test.cpp
     title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
   - icon: ':heavy_check_mark:'
     path: tests/struct.union_find.test.cpp
@@ -134,14 +134,14 @@ data:
   - template/lib.hpp
   - template/template.hpp
   - main.cpp
-  timestamp: '2026-01-03 22:46:07+09:00'
+  timestamp: '2026-01-03 23:04:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/struct.lazy_segment_tree.test.cpp
-  - tests/struct.fenwick_tree.test.cpp
+  - tests/segtree.dual_segment_tree.test.cpp
+  - tests/segtree.segment_tree.test.cpp
   - tests/template.test.cpp
-  - tests/struct.dual_segment_tree.test.cpp
-  - tests/struct.segment_tree.test.cpp
+  - tests/segtree.lazy_segment_tree.test.cpp
+  - tests/segtree.fenwick_tree.test.cpp
   - tests/struct.union_find.test.cpp
 documentation_of: library/util/string.hpp
 layout: document

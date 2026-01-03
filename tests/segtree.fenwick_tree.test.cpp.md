@@ -17,7 +17,7 @@ data:
     path: library/def/type.hpp
     title: "\u578B"
   - icon: ':heavy_check_mark:'
-    path: library/struct/fenwick_tree.hpp
+    path: library/segtree/fenwick_tree.hpp
     title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F"
   - icon: ':heavy_check_mark:'
     path: library/util/geometry.hpp
@@ -71,7 +71,7 @@ data:
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B\"\
-    \n#include \"template/template.hpp\"\n#include \"library/struct/fenwick_tree.hpp\"\
+    \n#include \"template/template.hpp\"\n#include \"library/segtree/fenwick_tree.hpp\"\
     \n/**\n * @brief Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ\n */\nvoid solve() {\n\
     \    int N, Q;\n    cin >> N >> Q;\n    FenwickTree fwk(N);\n    while (Q--) {\n\
     \        int com, x, y;\n        cin >> com >> x >> y;\n        if (com == 0)\
@@ -93,17 +93,17 @@ data:
   - library/util/search.hpp
   - library/util/grid.hpp
   - library/util/geometry.hpp
-  - library/struct/fenwick_tree.hpp
+  - library/segtree/fenwick_tree.hpp
   isVerificationFile: true
-  path: tests/struct.fenwick_tree.test.cpp
+  path: tests/segtree.fenwick_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-03 22:46:07+09:00'
+  timestamp: '2026-01-03 23:04:42+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/struct.fenwick_tree.test.cpp
+documentation_of: tests/segtree.fenwick_tree.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/struct.fenwick_tree.test.cpp
-- /verify/tests/struct.fenwick_tree.test.cpp.html
+- /verify/tests/segtree.fenwick_tree.test.cpp
+- /verify/tests/segtree.fenwick_tree.test.cpp.html
 title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
 ---

@@ -1,16 +1,25 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: library/segtree/dual_segment_tree.hpp
+    title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
+  - icon: ':heavy_check_mark:'
+    path: library/segtree/lazy_segment_tree.hpp
+    title: "Lazy Segment Tree \u533A\u9593\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+  - icon: ':heavy_check_mark:'
+    path: library/segtree/segment_tree.hpp
+    title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/struct.dual_segment_tree.test.cpp
+    path: tests/segtree.dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
   - icon: ':heavy_check_mark:'
-    path: tests/struct.lazy_segment_tree.test.cpp
+    path: tests/segtree.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
   - icon: ':heavy_check_mark:'
-    path: tests/struct.segment_tree.test.cpp
+    path: tests/segtree.segment_tree.test.cpp
     title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -94,13 +103,16 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/struct/monoid.hpp
-  requiredBy: []
-  timestamp: '2026-01-03 22:46:07+09:00'
+  requiredBy:
+  - library/segtree/segment_tree.hpp
+  - library/segtree/lazy_segment_tree.hpp
+  - library/segtree/dual_segment_tree.hpp
+  timestamp: '2026-01-03 23:04:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/struct.lazy_segment_tree.test.cpp
-  - tests/struct.dual_segment_tree.test.cpp
-  - tests/struct.segment_tree.test.cpp
+  - tests/segtree.dual_segment_tree.test.cpp
+  - tests/segtree.segment_tree.test.cpp
+  - tests/segtree.lazy_segment_tree.test.cpp
 documentation_of: library/struct/monoid.hpp
 layout: document
 title: "\u30E2\u30CE\u30A4\u30C9"

@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/struct.fenwick_tree.test.cpp
+    path: tests/segtree.fenwick_tree.test.cpp
     title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -13,7 +13,7 @@ data:
     document_title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\
       \u306E\u307F"
     links: []
-  bundledCode: "#line 2 \"library/struct/fenwick_tree.hpp\"\n/**\n * @brief FenwicTree\
+  bundledCode: "#line 2 \"library/segtree/fenwick_tree.hpp\"\n/**\n * @brief FenwicTree\
     \ 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F\n */\nstruct\
     \ FenwickTree {\n  private:\n    int N;\n    vector<int> fwk;\n\n  public:\n \
     \   FenwickTree(int N) : N(N) {\n        fwk.assign(N + 1, 0);\n    }\n    FenwickTree(const\
@@ -37,16 +37,16 @@ data:
     };\n"
   dependsOn: []
   isVerificationFile: false
-  path: library/struct/fenwick_tree.hpp
+  path: library/segtree/fenwick_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-03 22:46:07+09:00'
+  timestamp: '2026-01-03 23:04:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/struct.fenwick_tree.test.cpp
-documentation_of: library/struct/fenwick_tree.hpp
+  - tests/segtree.fenwick_tree.test.cpp
+documentation_of: library/segtree/fenwick_tree.hpp
 layout: document
 redirect_from:
-- /library/library/struct/fenwick_tree.hpp
-- /library/library/struct/fenwick_tree.hpp.html
+- /library/library/segtree/fenwick_tree.hpp
+- /library/library/segtree/fenwick_tree.hpp.html
 title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F"
 ---
