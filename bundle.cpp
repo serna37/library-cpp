@@ -790,6 +790,9 @@ class Geometry {
     }
 };
 
+/**
+ * @brief util系
+ */
 namespace lib {
 Number num;
 String str;

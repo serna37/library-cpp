@@ -1,6 +1,6 @@
 ---
 title: テンプレート
-documentation_of: //template/template.cpp
+documentation_of: //template/template.hpp
 ---
 
 いろいろ入れるテンプレ。
