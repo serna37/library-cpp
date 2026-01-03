@@ -28,7 +28,7 @@ template <typename U> struct MonoidMin {
         return min(x, y);
     }
     T e() {
-        return 2147483647;
+        return INT_MAX;
     }
 };
 // 最大値モノイド
@@ -38,7 +38,7 @@ template <typename U> struct MonoidMax {
         return max(x, y);
     }
     T e() {
-        return -2147483647;
+        return -INT_MAX;
     }
 };
 // 加算モノイド
@@ -85,10 +85,10 @@ template <typename U> struct MonoidLcm {
 template <typename U> struct MonoidSet {
     using T = U;
     T op(const T &x, const T &y) {
-        return y == 2147483647 ? x : y;
+        return y == INT_MAX ? x : y;
     }
     T e() {
-        return 2147483647;
+        return INT_MAX;
     }
 };
 // 排他的論理和モノイド
