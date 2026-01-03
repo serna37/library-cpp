@@ -1,5 +1,5 @@
 #pragma once
-#include "library/struct/edge.hpp"
+#include "library/graph/edge.hpp"
 /**
  * @brief グラフ
  */
