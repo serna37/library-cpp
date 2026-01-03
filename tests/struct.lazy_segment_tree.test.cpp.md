@@ -27,7 +27,7 @@ data:
     title: "\u5E7E\u4F55"
   - icon: ':heavy_check_mark:'
     path: library/util/grid.hpp
-    title: "\u30B0\u30EA\u30C3\u30C9"
+    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
   - icon: ':heavy_check_mark:'
     path: library/util/number.hpp
     title: "\u6570\u306E\u6027\u8CEA"
@@ -36,7 +36,7 @@ data:
     title: "\u63A2\u7D22"
   - icon: ':heavy_check_mark:'
     path: library/util/sequence.hpp
-    title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
+    title: "\u914D\u5217\u30FB\u6570\u5217"
   - icon: ':heavy_check_mark:'
     path: library/util/string.hpp
     title: "\u6587\u5B57\u5217"
@@ -105,7 +105,7 @@ data:
   isVerificationFile: true
   path: tests/struct.lazy_segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-03 22:10:36+09:00'
+  timestamp: '2026-01-03 22:41:21+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/struct.lazy_segment_tree.test.cpp

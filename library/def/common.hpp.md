@@ -59,7 +59,7 @@ data:
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2026-01-03 22:10:36+09:00'
+  timestamp: '2026-01-03 22:41:21+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/struct.lazy_segment_tree.test.cpp

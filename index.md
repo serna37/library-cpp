@@ -38,6 +38,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/struct/dual_segment_tree.hpp
       title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
+    - icon: ':warning:'
+      path: library/struct/edge.hpp
+      title: "\u8FBA"
     - icon: ':heavy_check_mark:'
       path: library/struct/fenwick_tree.hpp
       title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\
@@ -48,6 +51,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/struct/lazy_segment_tree.hpp
       title: "Lazy Segment Tree \u533A\u9593\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+    - icon: ':warning:'
+      path: library/struct/min_span_tree.hpp
+      title: "\u6700\u5C0F\u5168\u57DF\u6728"
     - icon: ':heavy_check_mark:'
       path: library/struct/monoid.hpp
       title: "\u30E2\u30CE\u30A4\u30C9"
@@ -64,7 +70,7 @@ data:
       title: "\u5E7E\u4F55"
     - icon: ':heavy_check_mark:'
       path: library/util/grid.hpp
-      title: "\u30B0\u30EA\u30C3\u30C9"
+      title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
     - icon: ':heavy_check_mark:'
       path: library/util/number.hpp
       title: "\u6570\u306E\u6027\u8CEA"
@@ -73,7 +79,7 @@ data:
       title: "\u63A2\u7D22"
     - icon: ':heavy_check_mark:'
       path: library/util/sequence.hpp
-      title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
+      title: "\u914D\u5217\u30FB\u6570\u5217"
     - icon: ':heavy_check_mark:'
       path: library/util/string.hpp
       title: "\u6587\u5B57\u5217"

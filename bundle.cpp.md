@@ -67,57 +67,54 @@ data:
     \ */\n/**              main                       */\n/** =======================================\
     \ */\nvoid solve();\nsigned main() {\n    solve();\n}\n// -----------------------------------------\n\
     // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n\
-    \n/** ======================================= */\n/**           \u6570\u306E\u6027\
-    \u8CEA                      */\n/** ======================================= */\n\
-    \nclass Number {\n  private:\n    // mod\u968E\u4E57\u306E\u30E1\u30E2\u914D\u5217\
-    \n    vector<long long> _mf;\n\n  public:\n    // \u5272\u308A\u4E0B\u3052\uFF08\
-    \u8CA0\u306E\u5834\u54080\u5074\u3078\u4E38\u3081\u306A\u3044\uFF09\n    template\
-    \ <typename T> T div_ceil(T a, T b) {\n        return a / b + (((a ^ b) > 0 and\
-    \ a % b != 0) ? 1 : 0);\n    }\n    // \u5272\u308A\u4E0A\u3052\uFF08\u8CA0\u306E\
-    \u5834\u54080\u5074\u3078\u4E38\u3081\u306A\u3044\uFF09\n    template <typename\
-    \ T> T div_floor(T a, T b) {\n        return a / b - (((a ^ b) < 0 and a % b !=\
-    \ 0) ? 1 : 0);\n    }\n    // \u968E\u4E57 \u30CA\u30A4\u30FC\u30D6\n    long\
-    \ long factorial(int N) {\n        long long res = 1;\n        while (N > 0) res\
-    \ *= N--;\n        return res;\n    }\n    // nCk\n    long long combination(int\
-    \ n, int k) {\n        if (k < 0 || n < k) return 0ll;\n        long long res\
-    \ = 1;\n        for (int i = 1; i <= k; ++i) {\n            res *= n--;\n    \
-    \        res /= i;\n        }\n        return res;\n    }\n    // \u6841\u548C\
-    \n    int digit_sum(int a, int N = 10) {\n        int res = 0;\n        while\
-    \ (a != 0) {\n            res += a % N;\n            a /= N;\n        }\n    \
-    \    return res;\n    }\n    // \u9032\u6570\u5909\u63DB from\u3068to\u306F10\u3092\
-    \u8D85\u3048\u306A\u3044\u3053\u3068\n    string base_convert(string a, int from,\
-    \ int to) {\n        long long cvt = 0ll; // 10\u9032\u6570\u306B\u76F4\u3059\n\
-    \        for (auto &&v : a) cvt = cvt * from + (int)(v - '0');\n        if (cvt\
-    \ == 0) return \"0\";\n        string res = \"\"; // to\u9032\u6570\u306B\u76F4\
-    \u3059\n        while (cvt) {    // 10\u9032\u6570\u3067\u8868\u305B\u308B\u7BC4\
-    \u56F2\u306E\u6587\u5B57\u3057\u304B\u6271\u3063\u3066\u3044\u306A\u3044\n   \
-    \         res = (char)(cvt % to + '0') + res;\n            cvt /= to;\n      \
-    \  }\n        return res;\n    }\n    // \u7D04\u6570\u5217\u6319\n    vector<int>\
-    \ divisors(int a) {\n        vector<int> res;\n        for (int i = 1; i * i <=\
-    \ a; ++i) {\n            if (a % i != 0) continue;\n            res.push_back(i);\n\
-    \            if (a / i != i) res.push_back(a / i);\n        }\n        return\
-    \ res;\n    }\n    // \u7D20\u6570\u5224\u5B9A\n    bool prime_test(int N) {\n\
-    \        if (N == 2) return true;\n        if (N == 1 or N % 2 == 0) return false;\n\
-    \        for (int i = 3; i * i <= N; i += 2) {\n            if (N % i == 0) return\
-    \ false;\n        }\n        return true;\n    }\n    // \u7D20\u56E0\u6570\u5206\
-    \u89E3\n    map<int, int> prime_fact(int N) {\n        map<int, int> P;\n    \
-    \    for (int i = 2; i * i <= N; ++i) {\n            while (N % i == 0) {\n  \
-    \              ++P[i];\n                N /= i;\n            }\n        }\n  \
-    \      if (N > 1) ++P[N];\n        return P;\n    }\n    // \u4E8C\u5206\u7D2F\
-    \u4E57(mod)\n    long long modpow(long long a, long long n, long long m) {\n \
-    \       long long res = 1ll;\n        while (n > 0) {\n            if (n & 1)\
-    \ res = res * a % m;\n            a = a * a % m;\n            n >>= 1ll;\n   \
-    \     }\n        return res;\n    }\n    // Fermat\u306E\u5C0F\u5B9A\u7406 \u9006\
-    \u5143\u3092\u6C42\u3081\u308B\n    long long modinv(long long a, long long m)\
-    \ {\n        return modpow(a, m - 2, m);\n    }\n    // mod\u968E\u4E57\n    long\
-    \ long modfact(int x, long long m) {\n        if ((int)_mf.size() > x) return\
-    \ _mf[x];\n        if (_mf.empty()) _mf.push_back(1);\n        for (int i = _mf.size();\
-    \ i <= x; ++i) _mf.push_back(_mf.back() * i % m);\n        return _mf[x];\n  \
-    \  }\n    // mod\u7D44\u307F\u5408\u308F\u305BnCk\n    long long mod_combination(int\
-    \ n, int k, long long m) {\n        return modfact(n, m) * modinv(modfact(k, m),\
-    \ m) % m *\n               modinv(modfact(n - k, m), m) % m;\n    }\n};\n\n\n\
-    /** ======================================= */\n/**              \u6587\u5B57\u5217\
-    \                     */\n/** ======================================= */\n\nclass\
+    \n/**\n * @brief \u6570\u306E\u6027\u8CEA\n */\nclass Number {\n  private:\n \
+    \   // mod\u968E\u4E57\u306E\u30E1\u30E2\u914D\u5217\n    vector<long long> _mf;\n\
+    \n  public:\n    // \u5272\u308A\u4E0B\u3052\uFF08\u8CA0\u306E\u5834\u54080\u5074\
+    \u3078\u4E38\u3081\u306A\u3044\uFF09\n    template <typename T> T div_ceil(T a,\
+    \ T b) {\n        return a / b + (((a ^ b) > 0 and a % b != 0) ? 1 : 0);\n   \
+    \ }\n    // \u5272\u308A\u4E0A\u3052\uFF08\u8CA0\u306E\u5834\u54080\u5074\u3078\
+    \u4E38\u3081\u306A\u3044\uFF09\n    template <typename T> T div_floor(T a, T b)\
+    \ {\n        return a / b - (((a ^ b) < 0 and a % b != 0) ? 1 : 0);\n    }\n \
+    \   // \u968E\u4E57 \u30CA\u30A4\u30FC\u30D6\n    long long factorial(int N) {\n\
+    \        long long res = 1;\n        while (N > 0) res *= N--;\n        return\
+    \ res;\n    }\n    // nCk\n    long long combination(int n, int k) {\n       \
+    \ if (k < 0 || n < k) return 0ll;\n        long long res = 1;\n        for (int\
+    \ i = 1; i <= k; ++i) {\n            res *= n--;\n            res /= i;\n    \
+    \    }\n        return res;\n    }\n    // \u6841\u548C\n    int digit_sum(int\
+    \ a, int N = 10) {\n        int res = 0;\n        while (a != 0) {\n         \
+    \   res += a % N;\n            a /= N;\n        }\n        return res;\n    }\n\
+    \    // \u9032\u6570\u5909\u63DB from\u3068to\u306F10\u3092\u8D85\u3048\u306A\u3044\
+    \u3053\u3068\n    string base_convert(string a, int from, int to) {\n        long\
+    \ long cvt = 0ll; // 10\u9032\u6570\u306B\u76F4\u3059\n        for (auto &&v :\
+    \ a) cvt = cvt * from + (int)(v - '0');\n        if (cvt == 0) return \"0\";\n\
+    \        string res = \"\"; // to\u9032\u6570\u306B\u76F4\u3059\n        while\
+    \ (cvt) {    // 10\u9032\u6570\u3067\u8868\u305B\u308B\u7BC4\u56F2\u306E\u6587\
+    \u5B57\u3057\u304B\u6271\u3063\u3066\u3044\u306A\u3044\n            res = (char)(cvt\
+    \ % to + '0') + res;\n            cvt /= to;\n        }\n        return res;\n\
+    \    }\n    // \u7D04\u6570\u5217\u6319\n    vector<int> divisors(int a) {\n \
+    \       vector<int> res;\n        for (int i = 1; i * i <= a; ++i) {\n       \
+    \     if (a % i != 0) continue;\n            res.push_back(i);\n            if\
+    \ (a / i != i) res.push_back(a / i);\n        }\n        return res;\n    }\n\
+    \    // \u7D20\u6570\u5224\u5B9A\n    bool prime_test(int N) {\n        if (N\
+    \ == 2) return true;\n        if (N == 1 or N % 2 == 0) return false;\n      \
+    \  for (int i = 3; i * i <= N; i += 2) {\n            if (N % i == 0) return false;\n\
+    \        }\n        return true;\n    }\n    // \u7D20\u56E0\u6570\u5206\u89E3\
+    \n    map<int, int> prime_fact(int N) {\n        map<int, int> P;\n        for\
+    \ (int i = 2; i * i <= N; ++i) {\n            while (N % i == 0) {\n         \
+    \       ++P[i];\n                N /= i;\n            }\n        }\n        if\
+    \ (N > 1) ++P[N];\n        return P;\n    }\n    // \u4E8C\u5206\u7D2F\u4E57(mod)\n\
+    \    long long modpow(long long a, long long n, long long m) {\n        long long\
+    \ res = 1ll;\n        while (n > 0) {\n            if (n & 1) res = res * a %\
+    \ m;\n            a = a * a % m;\n            n >>= 1ll;\n        }\n        return\
+    \ res;\n    }\n    // Fermat\u306E\u5C0F\u5B9A\u7406 \u9006\u5143\u3092\u6C42\u3081\
+    \u308B\n    long long modinv(long long a, long long m) {\n        return modpow(a,\
+    \ m - 2, m);\n    }\n    // mod\u968E\u4E57\n    long long modfact(int x, long\
+    \ long m) {\n        if ((int)_mf.size() > x) return _mf[x];\n        if (_mf.empty())\
+    \ _mf.push_back(1);\n        for (int i = _mf.size(); i <= x; ++i) _mf.push_back(_mf.back()\
+    \ * i % m);\n        return _mf[x];\n    }\n    // mod\u7D44\u307F\u5408\u308F\
+    \u305BnCk\n    long long mod_combination(int n, int k, long long m) {\n      \
+    \  return modfact(n, m) * modinv(modfact(k, m), m) % m *\n               modinv(modfact(n\
+    \ - k, m), m) % m;\n    }\n};\n\n\n/**\n * @brief \u6587\u5B57\u5217\n */\nclass\
     \ String {\n  public:\n    bool is_low(char c) {\n        return islower(c) !=\
     \ 0;\n    }\n    bool is_upp(char c) {\n        return isupper(c) != 0;\n    }\n\
     \    // \u5C0F\u6587\u5B57\u306B\u5909\u63DB\n    string transform_lower(string\
@@ -162,63 +159,62 @@ data:
     \ < n; ++i) {\n            int &k = z[i];\n            k = (j + z[j] <= i) ? 0\
     \ : min(j + z[j] - i, z[i - j]);\n            while (i + k < n and S[k] == S[i\
     \ + k]) ++k;\n            if (j + z[j] < i + z[i]) j = i;\n        }\n       \
-    \ return z;\n    }\n};\n\n\n/** ======================================= */\n/**\
-    \              \u914D\u5217\u30FB\u6570\u5217                 */\n/** =======================================\
-    \ */\n\nclass Sequence {\n  public:\n    template <typename T> T min(const vector<T>\
-    \ &v) {\n        return *min_element(all(v));\n    }\n    template <typename T>\
-    \ T max(const vector<T> &v) {\n        return *max_element(all(v));\n    }\n \
-    \   template <typename T> long long sum(const vector<T> &v) {\n        return\
-    \ accumulate(all(v), 0ll);\n    }\n    template <typename T, typename F> bool\
-    \ all_match(const vector<T> &v, F f) {\n        return all_of(all(v), f);\n  \
-    \  }\n    template <typename T, typename F> bool none_match(const vector<T> &v,\
-    \ F f) {\n        return none_of(all(v), f);\n    }\n    template <typename T,\
-    \ typename F> bool any_match(const vector<T> &v, F f) {\n        return any_of(all(v),\
-    \ f);\n    }\n    template <typename T> void distinct(vector<T> &v) {\n      \
-    \  sort(all(v));\n        v.erase(unique(all(v)), v.end());\n    }\n    template\
-    \ <typename T> void sort_asc(vector<T> &v) {\n        sort(all(v));\n    }\n \
-    \   template <typename T> void sort_desc(vector<T> &v) {\n        sort(rall(v));\n\
-    \    }\n    template <typename T> void reverse(vector<T> &v) {\n        std::reverse(all(v));\n\
-    \    }\n    // set\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename\
-    \ T> void erase(set<T> &st, const T &v) {\n        st.erase(st.find(v));\n   \
-    \ }\n    // multiset\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename\
-    \ T> void erase(multiset<T> &st, const T &v) {\n        st.erase(st.find(v));\n\
-    \    }\n    /**\n     * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\
-    \u306B\u3059\u308B G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n\
-    \     */\n    template <int N, typename T> auto unpack(vector<T> &&G) {\n    \
-    \    array<T, N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n\
-    \        for (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n\
-    \    }\n    // \u9023\u756A\u751F\u6210\n    template <typename T> void renban(vector<T>\
-    \ &v, T start = 0) {\n        iota(all(v), start);\n    }\n    // A\u3092B\u306B\
-    \u30DE\u30FC\u30B8\u30C6\u30AF vector\n    template <typename T> void merge(vector<T>\
-    \ &A, vector<T> &B) {\n        if (A.size() > B.size()) swap(A, B);\n        for\
-    \ (auto &&v : A) B.push_back(v);\n        A.clear();\n    }\n    // A\u3092B\u306B\
-    \u30DE\u30FC\u30B8\u30C6\u30AF set\n    template <typename T> void merge(set<T>\
-    \ &A, set<T> &B) {\n        if (A.size() > B.size()) swap(A, B);\n        for\
-    \ (auto &&v : A) B.insert(v);\n        A.clear();\n    }\n    // A\u3092B\u306B\
-    \u30DE\u30FC\u30B8\u30C6\u30AF \u30DE\u30FC\u30B8\u64CD\u4F5C\u3092\u30E9\u30E0\
-    \u30C0\u5316\n    template <typename T, typename F> void merge(T &A, T &B, F f)\
-    \ {\n        if (A.size() > B.size()) swap(A, B);\n        for (auto &&v : A)\
-    \ {\n            f(B, v);\n        }\n        A.clear();\n    }\n    // \u6570\
-    \u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u306B\u306A\u304A\u3059\n    vector<int>\
-    \ coordinate(const vector<int> &A) {\n        vector<int> res(MAX);\n        for\
-    \ (auto &&v : A) ++res[v];\n        return res;\n    }\n    // \u5EA7\u6A19\u5727\
-    \u7E2E \u5727\u7E2E\u5F8C\u306E\u7A2E\u985E\u6570\u3092\u8FD4\u5374\n    template\
-    \ <typename T> int zip_coordinate(vector<T> &A) {\n        vector<T> cvt = A;\n\
-    \        distinct(cvt);\n        for (auto &v : A) v = lower_bound(all(cvt), v)\
-    \ - cvt.begin();\n        return (int)cvt.size();\n    }\n    // \u8EE2\u5012\u6570\
-    \ \u53F3\u306B\u5012\u308C\u308BA_i > A_j (i < j)\u306E\u56DE\u6570\n    template\
-    \ <typename T> long long inversion_number(vector<T> &A) {\n        int sz = zip_coordinate(A);\n\
-    \        vector<int> fwk(sz + 1);\n        long long inv = 0, N = A.size();\n\
-    \        for (int i = 0; i < N; ++i) {\n            for (int f = sz; f; f -= f\
-    \ & -f) inv += fwk[f];\n            for (int f = A[i] + 1; f; f -= f & -f) inv\
-    \ -= fwk[f];\n            for (int f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];\n\
-    \        }\n        return inv;\n    }\n    // \u7D2F\u7A4D\u548C S[i]=\u03A3\
-    (0,i-1)  \u03A3[l,r)=S[r]-S[l]\n    template <typename T> vector<long long> zeta(const\
-    \ vector<T> &A) {\n        int N = A.size();\n        vector<long long> S(N +\
-    \ 1);\n        for (int i = 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n        return\
-    \ S;\n    }\n    // \u53CD\u8EE2\u7D2F\u7A4D\u548C S[i]=Ai\u304B\u3089\u53F3\u5168\
-    \u90E8  \u03A3(0,i-1)+\u03A3(i,last)=S[i]+R[i]\n    template <typename T> vector<long\
-    \ long> zeta_rev(const vector<T> &A) {\n        int N = A.size();\n        vector<long\
+    \ return z;\n    }\n};\n\n\n/**\n * @brief \u914D\u5217\u30FB\u6570\u5217\n */\n\
+    class Sequence {\n  public:\n    template <typename T> T min(const vector<T> &v)\
+    \ {\n        return *min_element(all(v));\n    }\n    template <typename T> T\
+    \ max(const vector<T> &v) {\n        return *max_element(all(v));\n    }\n   \
+    \ template <typename T> long long sum(const vector<T> &v) {\n        return accumulate(all(v),\
+    \ 0ll);\n    }\n    template <typename T, typename F> bool all_match(const vector<T>\
+    \ &v, F f) {\n        return all_of(all(v), f);\n    }\n    template <typename\
+    \ T, typename F> bool none_match(const vector<T> &v, F f) {\n        return none_of(all(v),\
+    \ f);\n    }\n    template <typename T, typename F> bool any_match(const vector<T>\
+    \ &v, F f) {\n        return any_of(all(v), f);\n    }\n    template <typename\
+    \ T> void distinct(vector<T> &v) {\n        sort(all(v));\n        v.erase(unique(all(v)),\
+    \ v.end());\n    }\n    template <typename T> void sort_asc(vector<T> &v) {\n\
+    \        sort(all(v));\n    }\n    template <typename T> void sort_desc(vector<T>\
+    \ &v) {\n        sort(rall(v));\n    }\n    template <typename T> void reverse(vector<T>\
+    \ &v) {\n        std::reverse(all(v));\n    }\n    // set\u304B\u3089\u8981\u7D20\
+    \u524A\u9664\n    template <typename T> void erase(set<T> &st, const T &v) {\n\
+    \        st.erase(st.find(v));\n    }\n    // multiset\u304B\u3089\u8981\u7D20\
+    \u524A\u9664\n    template <typename T> void erase(multiset<T> &st, const T &v)\
+    \ {\n        st.erase(st.find(v));\n    }\n    /**\n     * \u5206\u5272\u4EE3\u5165\
+    \u3067\u304D\u308B\u3088\u3046\u306B\u3059\u308B G\u306F\u7834\u58CA\u3002\n \
+    \    * auto [a,b] = unpack<2>(move(G));\n     */\n    template <int N, typename\
+    \ T> auto unpack(vector<T> &&G) {\n        array<T, N> res; // vector -> array\u5909\
+    \u63DB\u3059\u308B\u3060\u3051\n        for (int i = 0; i < N; ++i) res[i] = move(G[i]);\n\
+    \        return res;\n    }\n    // \u9023\u756A\u751F\u6210\n    template <typename\
+    \ T> void renban(vector<T> &v, T start = 0) {\n        iota(all(v), start);\n\
+    \    }\n    // A\u3092B\u306B\u30DE\u30FC\u30B8\u30C6\u30AF vector\n    template\
+    \ <typename T> void merge(vector<T> &A, vector<T> &B) {\n        if (A.size()\
+    \ > B.size()) swap(A, B);\n        for (auto &&v : A) B.push_back(v);\n      \
+    \  A.clear();\n    }\n    // A\u3092B\u306B\u30DE\u30FC\u30B8\u30C6\u30AF set\n\
+    \    template <typename T> void merge(set<T> &A, set<T> &B) {\n        if (A.size()\
+    \ > B.size()) swap(A, B);\n        for (auto &&v : A) B.insert(v);\n        A.clear();\n\
+    \    }\n    // A\u3092B\u306B\u30DE\u30FC\u30B8\u30C6\u30AF \u30DE\u30FC\u30B8\
+    \u64CD\u4F5C\u3092\u30E9\u30E0\u30C0\u5316\n    template <typename T, typename\
+    \ F> void merge(T &A, T &B, F f) {\n        if (A.size() > B.size()) swap(A, B);\n\
+    \        for (auto &&v : A) {\n            f(B, v);\n        }\n        A.clear();\n\
+    \    }\n    // \u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u306B\u306A\u304A\
+    \u3059\n    vector<int> coordinate(const vector<int> &A) {\n        vector<int>\
+    \ res(MAX);\n        for (auto &&v : A) ++res[v];\n        return res;\n    }\n\
+    \    // \u5EA7\u6A19\u5727\u7E2E \u5727\u7E2E\u5F8C\u306E\u7A2E\u985E\u6570\u3092\
+    \u8FD4\u5374\n    template <typename T> int zip_coordinate(vector<T> &A) {\n \
+    \       vector<T> cvt = A;\n        distinct(cvt);\n        for (auto &v : A)\
+    \ v = lower_bound(all(cvt), v) - cvt.begin();\n        return (int)cvt.size();\n\
+    \    }\n    // \u8EE2\u5012\u6570 \u53F3\u306B\u5012\u308C\u308BA_i > A_j (i <\
+    \ j)\u306E\u56DE\u6570\n    template <typename T> long long inversion_number(vector<T>\
+    \ &A) {\n        int sz = zip_coordinate(A);\n        vector<int> fwk(sz + 1);\n\
+    \        long long inv = 0, N = A.size();\n        for (int i = 0; i < N; ++i)\
+    \ {\n            for (int f = sz; f; f -= f & -f) inv += fwk[f];\n           \
+    \ for (int f = A[i] + 1; f; f -= f & -f) inv -= fwk[f];\n            for (int\
+    \ f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];\n        }\n        return inv;\n\
+    \    }\n    // \u7D2F\u7A4D\u548C S[i]=\u03A3(0,i-1)  \u03A3[l,r)=S[r]-S[l]\n\
+    \    template <typename T> vector<long long> zeta(const vector<T> &A) {\n    \
+    \    int N = A.size();\n        vector<long long> S(N + 1);\n        for (int\
+    \ i = 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n        return S;\n    }\n    //\
+    \ \u53CD\u8EE2\u7D2F\u7A4D\u548C S[i]=Ai\u304B\u3089\u53F3\u5168\u90E8  \u03A3\
+    (0,i-1)+\u03A3(i,last)=S[i]+R[i]\n    template <typename T> vector<long long>\
+    \ zeta_rev(const vector<T> &A) {\n        int N = A.size();\n        vector<long\
     \ long> R(N + 1);\n        for (int i = N - 1; i >= 0; --i) R[i] = R[i + 1] +\
     \ A[i];\n        return R;\n    }\n    // \u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\
     \u7A4D\u548C S[i]=\u03A3(0,i-1)  \u03A3[l,r)=S[r]-S[l]\n    template <typename\
@@ -233,8 +229,8 @@ data:
     \ = R[i + 1];\n            if (i & 1) R[i] += abs((i + 1 < N ? A[i + 1] : 0) -\
     \ A[i]);\n        }\n        return R;\n    }\n    /**\n     * 2\u6B21\u5143\u5E73\
     \u9762\u3067\u306E\u7D2F\u7A4D\u548C\n     * \u5305\u9664: (s,t)~(x,y) = S[y][x]-S[y][s]-S[t][x]+S[t][s]\n\
-    \     */\n    template <typename T> vector<vector<long long>> zeta_2D(const vector<T>\
-    \ &G) {\n        int H = G.size(), W = G[0].size();\n        vector<vector<long\
+    \     */\n    template <typename T>\n    vector<vector<long long>> zeta_2D(const\
+    \ vector<T> &G) {\n        int H = G.size(), W = G[0].size();\n        vector<vector<long\
     \ long>> S(H + 1, vector<long long>(W + 1));\n        for (int i = 0; i < H; ++i)\
     \ { // \u6A2A\u5411\u304D\n            for (int j = 0; j < W; ++j) {\n       \
     \         S[i + 1][j + 1] = S[i + 1][j] + G[i][j];\n            }\n        }\n\
@@ -245,7 +241,7 @@ data:
     \     *   S[Rxyz] - S[Lxyz]\n     *          = S[Rx][Ry][Rz] - S[Lx][Ry][Rz] -\
     \ S[Rx][Ly][Rz] -\n     *            S[Rx][Ry][Lz] + S[Lx][Ly][Rz] + S[Lx][Ry][Lz]\
     \ +\n     *            S[Rx][Ly][Lz] - S[Lx][Ly][Lz];\n     */\n    template <typename\
-    \ T>\n    vector<vector<vector<long long>>> zeta_3D(const vector<vector<vector<T>>>\
+    \ T>\n    vector<vector<vector<long long>>>\n    zeta_3D(const vector<vector<vector<T>>>\
     \ &A) {\n        vector<vector<vector<long long>>> S;\n        int szx = A.size(),\
     \ szy = A[0].size(), szz = A[0][0].size();\n        S.resize(szx + 1, vector<vector<long\
     \ long>>(\n                              szy + 1, vector<long long>(szz + 1, 0)));\n\
@@ -259,9 +255,8 @@ data:
     \u306E\u6570\u5217 \u30E1\u30D3\u30A6\u30B9\u5909\u63DB\n    template <typename\
     \ T> vector<long long> moebius(const vector<T> &A) {\n        int N = A.size();\n\
     \        vector<long long> D(N - 1);\n        for (int i = 0; i < N; ++i) D[i]\
-    \ = A[i + 1] - A[i];\n        return D;\n    }\n};\n\n\n/** =======================================\
-    \ */\n/**               \u63A2\u7D22                      */\n/** =======================================\
-    \ */\n\nclass Search {\n  public:\n    /**\n     * \u9806\u5217\u5168\u63A2\u7D22\
+    \ = A[i + 1] - A[i];\n        return D;\n    }\n};\n\n\n/**\n * @brief \u63A2\u7D22\
+    \n */\nclass Search {\n  public:\n    /**\n     * \u9806\u5217\u5168\u63A2\u7D22\
     \ O(N!) N\u306F10\u301C12\u7A0B\u5EA6\n     * \u9806\u5217\u306E\u5168\u30D1\u30BF\
     \u30FC\u30F3\u4E2D\u3067\u3084\u308A\u305F\u3044\u95A2\u6570\u3092\u5165\u308C\
     \u308B\n     * \u4F8B) search_permu(A, [&](){cout << A;} );\n     */\n    template\
@@ -334,49 +329,46 @@ data:
     \        auto dfs = [&](auto f, int n) {\n            if (n <= 1) return n;\n\
     \            if (memo.count(n)) return memo[n];\n            return memo[n] =\
     \ f(f, n - 1) + f(f, n - 2);\n        };\n        (void)dfs; // unused\n     \
-    \   // int ans = dfs(dfs, N);\n    }\n};\n\n\n/** =======================================\
-    \ */\n/**               \u30B0\u30EA\u30C3\u30C9                  */\n/** =======================================\
-    \ */\n\nclass Grid {\n  public:\n    // \u884C\u5217\u306E\u8EE2\u7F6E\n    template\
-    \ <typename T>\n    vector<vector<T>> transpose(const vector<vector<T>> &G) {\n\
-    \        int H = G.size(), W = G[0].size();\n        vector<vector<T>> _G(W, vector<T>(H));\n\
+    \   // int ans = dfs(dfs, N);\n    }\n};\n\n\n/**\n * @brief \u30AF\u3099\u30EA\
+    \u30C3\u30C8\u3099\n */\nclass Grid {\n  public:\n    // \u884C\u5217\u306E\u8EE2\
+    \u7F6E\n    template <typename T>\n    vector<vector<T>> transpose(const vector<vector<T>>\
+    \ &G) {\n        int H = G.size(), W = G[0].size();\n        vector<vector<T>>\
+    \ _G(W, vector<T>(H));\n        for (int i = 0; i < H; ++i) {\n            for\
+    \ (int j = 0; j < W; ++j) {\n                _G[j][i] = G[i][j];\n           \
+    \ }\n        }\n        return _G;\n    }\n    // \u30B0\u30EA\u30C3\u30C94\u65B9\
+    \u3092\u898B\u308BBFS \u5F15\u6570f(y, x)\n    template <typename T, typename\
+    \ F> void bfs(vector<vector<T>> &G, F f) {\n        int H = G.size(), W = G[0].size();\n\
     \        for (int i = 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j)\
-    \ {\n                _G[j][i] = G[i][j];\n            }\n        }\n        return\
-    \ _G;\n    }\n    // \u30B0\u30EA\u30C3\u30C94\u65B9\u3092\u898B\u308BBFS \u5F15\
-    \u6570f(y, x)\n    template <typename T, typename F> void bfs(vector<vector<T>>\
+    \ {\n                for (int k = 0; k < 4; ++k) {\n                    int y\
+    \ = i + dy[k], x = j + dx[k];\n                    if (y < 0 or x < 0 or H <=\
+    \ y or W <= x) continue;\n                    f(y, x);\n                }\n  \
+    \          }\n        }\n    }\n    // \u30B0\u30EA\u30C3\u30C98\u65B9\u3092\u898B\
+    \u308BBFS \u5F15\u6570f(y, x)\n    template <typename T, typename F> void bfs8(vector<vector<T>>\
     \ &G, F f) {\n        int H = G.size(), W = G[0].size();\n        for (int i =\
     \ 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n              \
-    \  for (int k = 0; k < 4; ++k) {\n                    int y = i + dy[k], x = j\
-    \ + dx[k];\n                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n\
+    \  for (int k = 0; k < 8; ++k) {\n                    int y = i + dy8[k], x =\
+    \ j + dx8[k];\n                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n\
     \                    f(y, x);\n                }\n            }\n        }\n \
-    \   }\n    // \u30B0\u30EA\u30C3\u30C98\u65B9\u3092\u898B\u308BBFS \u5F15\u6570\
-    f(y, x)\n    template <typename T, typename F> void bfs8(vector<vector<T>> &G,\
-    \ F f) {\n        int H = G.size(), W = G[0].size();\n        for (int i = 0;\
-    \ i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n                for\
-    \ (int k = 0; k < 8; ++k) {\n                    int y = i + dy8[k], x = j + dx8[k];\n\
-    \                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n     \
-    \               f(y, x);\n                }\n            }\n        }\n    }\n\
-    };\n\n\n/** ======================================= */\n/**               \u5E7E\
-    \u4F55                      */\n/** ======================================= */\n\
-    \nclass Geometry {\n  public:\n    // \u5EA6\u6570\u6CD5 \u2192 \u5F27\u5EA6\u6CD5\
-    \n    double deg_to_rad(double d) {\n        return d * PI / 180;\n    }\n   \
-    \ // \u5F27\u5EA6\u6CD5 \u2192 \u5EA6\u6570\u6CD5\n    double rad_to_deg(double\
-    \ r) {\n        return r * 180 / PI;\n    }\n    // \u504F\u89D2\u3092\u30E9\u30B8\
-    \u30A2\u30F3\u3067\u8FD4\u3059\n    double arc_tan(double x, double y) {\n   \
-    \     return atan2(y, x);\n    }\n    /**\n     * \u4E09\u89D2\u5F62\u306E\u9762\
-    \u7A4D\n     * double\u306F\u6841\u6570\u8868\u73FE11bit\u3092\u9664\u304D\u3001\
-    52bit\u7A0B\u5EA6\u306E\u7CBE\u5EA6\n     * 18\u6841\u4F7F\u3046\u306A\u30892\u3067\
-    \u5272\u3089\u305Along long\u3067\u8FD4\u3059\u3053\u3068\n     */\n    template\
-    \ <typename T>\n    double area_triangle(T x1, T y1, T x2, T y2, T x3, T y3) {\n\
-    \        return abs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1)) / 2.0;\n  \
-    \  }\n    /**\n     * \u56DB\u89D2\u5F62\u306E\u9762\u7A4D\n     * double\u306F\
-    \u6841\u6570\u8868\u73FE11bit\u3092\u9664\u304D\u300152bit\u7A0B\u5EA6\u306E\u7CBE\
-    \u5EA6\n     * 18\u6841\u4F7F\u3046\u306A\u30892\u3067\u5272\u3089\u305Along long\u3067\
-    \u8FD4\u3059\u3053\u3068\n     */\n    template <typename T>\n    double area_square(T\
-    \ x1, T y1, T x2, T y2, T x3, T y3, T x4, T y4) {\n        return hypot(x1 - x3,\
-    \ y1 - y3) * hypot(x2 - x4, y2 - y4) / 2.0;\n    }\n};\n\nnamespace lib {\nNumber\
-    \ num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\nGeometry geo;\n\
-    }; // namespace lib\n// -----------------------------------------\n// #include\
-    \ \"template/lib.hpp\" is done.\n// -----------------------------------------\n\
+    \   }\n};\n\n\n/**\n * @brief \u5E7E\u4F55\n */\nclass Geometry {\n  public:\n\
+    \    // \u5EA6\u6570\u6CD5 \u2192 \u5F27\u5EA6\u6CD5\n    double deg_to_rad(double\
+    \ d) {\n        return d * PI / 180;\n    }\n    // \u5F27\u5EA6\u6CD5 \u2192\
+    \ \u5EA6\u6570\u6CD5\n    double rad_to_deg(double r) {\n        return r * 180\
+    \ / PI;\n    }\n    // \u504F\u89D2\u3092\u30E9\u30B8\u30A2\u30F3\u3067\u8FD4\u3059\
+    \n    double arc_tan(double x, double y) {\n        return atan2(y, x);\n    }\n\
+    \    /**\n     * \u4E09\u89D2\u5F62\u306E\u9762\u7A4D\n     * double\u306F\u6841\
+    \u6570\u8868\u73FE11bit\u3092\u9664\u304D\u300152bit\u7A0B\u5EA6\u306E\u7CBE\u5EA6\
+    \n     * 18\u6841\u4F7F\u3046\u306A\u30892\u3067\u5272\u3089\u305Along long\u3067\
+    \u8FD4\u3059\u3053\u3068\n     */\n    template <typename T>\n    double area_triangle(T\
+    \ x1, T y1, T x2, T y2, T x3, T y3) {\n        return abs((x2 - x1) * (y3 - y1)\
+    \ - (x3 - x1) * (y2 - y1)) / 2.0;\n    }\n    /**\n     * \u56DB\u89D2\u5F62\u306E\
+    \u9762\u7A4D\n     * double\u306F\u6841\u6570\u8868\u73FE11bit\u3092\u9664\u304D\
+    \u300152bit\u7A0B\u5EA6\u306E\u7CBE\u5EA6\n     * 18\u6841\u4F7F\u3046\u306A\u3089\
+    2\u3067\u5272\u3089\u305Along long\u3067\u8FD4\u3059\u3053\u3068\n     */\n  \
+    \  template <typename T>\n    double area_square(T x1, T y1, T x2, T y2, T x3,\
+    \ T y3, T x4, T y4) {\n        return hypot(x1 - x3, y1 - y3) * hypot(x2 - x4,\
+    \ y2 - y4) / 2.0;\n    }\n};\n\nnamespace lib {\nNumber num;\nString str;\nSequence\
+    \ seq;\nSearch search;\nGrid grid;\nGeometry geo;\n}; // namespace lib\n// -----------------------------------------\n\
+    // #include \"template/lib.hpp\" is done.\n// -----------------------------------------\n\
     \n\n// #include \"library/struct/graph.hpp\"\n// #include \"library/struct/union_find.hpp\"\
     \n// #include \"library/struct/fenwick_tree.hpp\"\n// #include \"library/struct/monoid.hpp\"\
     \n// #include \"library/struct/segment_tree.hpp\"\n// #include \"library/struct/dual_segment_tree.hpp\"\
@@ -435,57 +427,54 @@ data:
     \ */\n/**              main                       */\n/** =======================================\
     \ */\nvoid solve();\nsigned main() {\n    solve();\n}\n// -----------------------------------------\n\
     // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n\
-    \n/** ======================================= */\n/**           \u6570\u306E\u6027\
-    \u8CEA                      */\n/** ======================================= */\n\
-    \nclass Number {\n  private:\n    // mod\u968E\u4E57\u306E\u30E1\u30E2\u914D\u5217\
-    \n    vector<long long> _mf;\n\n  public:\n    // \u5272\u308A\u4E0B\u3052\uFF08\
-    \u8CA0\u306E\u5834\u54080\u5074\u3078\u4E38\u3081\u306A\u3044\uFF09\n    template\
-    \ <typename T> T div_ceil(T a, T b) {\n        return a / b + (((a ^ b) > 0 and\
-    \ a % b != 0) ? 1 : 0);\n    }\n    // \u5272\u308A\u4E0A\u3052\uFF08\u8CA0\u306E\
-    \u5834\u54080\u5074\u3078\u4E38\u3081\u306A\u3044\uFF09\n    template <typename\
-    \ T> T div_floor(T a, T b) {\n        return a / b - (((a ^ b) < 0 and a % b !=\
-    \ 0) ? 1 : 0);\n    }\n    // \u968E\u4E57 \u30CA\u30A4\u30FC\u30D6\n    long\
-    \ long factorial(int N) {\n        long long res = 1;\n        while (N > 0) res\
-    \ *= N--;\n        return res;\n    }\n    // nCk\n    long long combination(int\
-    \ n, int k) {\n        if (k < 0 || n < k) return 0ll;\n        long long res\
-    \ = 1;\n        for (int i = 1; i <= k; ++i) {\n            res *= n--;\n    \
-    \        res /= i;\n        }\n        return res;\n    }\n    // \u6841\u548C\
-    \n    int digit_sum(int a, int N = 10) {\n        int res = 0;\n        while\
-    \ (a != 0) {\n            res += a % N;\n            a /= N;\n        }\n    \
-    \    return res;\n    }\n    // \u9032\u6570\u5909\u63DB from\u3068to\u306F10\u3092\
-    \u8D85\u3048\u306A\u3044\u3053\u3068\n    string base_convert(string a, int from,\
-    \ int to) {\n        long long cvt = 0ll; // 10\u9032\u6570\u306B\u76F4\u3059\n\
-    \        for (auto &&v : a) cvt = cvt * from + (int)(v - '0');\n        if (cvt\
-    \ == 0) return \"0\";\n        string res = \"\"; // to\u9032\u6570\u306B\u76F4\
-    \u3059\n        while (cvt) {    // 10\u9032\u6570\u3067\u8868\u305B\u308B\u7BC4\
-    \u56F2\u306E\u6587\u5B57\u3057\u304B\u6271\u3063\u3066\u3044\u306A\u3044\n   \
-    \         res = (char)(cvt % to + '0') + res;\n            cvt /= to;\n      \
-    \  }\n        return res;\n    }\n    // \u7D04\u6570\u5217\u6319\n    vector<int>\
-    \ divisors(int a) {\n        vector<int> res;\n        for (int i = 1; i * i <=\
-    \ a; ++i) {\n            if (a % i != 0) continue;\n            res.push_back(i);\n\
-    \            if (a / i != i) res.push_back(a / i);\n        }\n        return\
-    \ res;\n    }\n    // \u7D20\u6570\u5224\u5B9A\n    bool prime_test(int N) {\n\
-    \        if (N == 2) return true;\n        if (N == 1 or N % 2 == 0) return false;\n\
-    \        for (int i = 3; i * i <= N; i += 2) {\n            if (N % i == 0) return\
-    \ false;\n        }\n        return true;\n    }\n    // \u7D20\u56E0\u6570\u5206\
-    \u89E3\n    map<int, int> prime_fact(int N) {\n        map<int, int> P;\n    \
-    \    for (int i = 2; i * i <= N; ++i) {\n            while (N % i == 0) {\n  \
-    \              ++P[i];\n                N /= i;\n            }\n        }\n  \
-    \      if (N > 1) ++P[N];\n        return P;\n    }\n    // \u4E8C\u5206\u7D2F\
-    \u4E57(mod)\n    long long modpow(long long a, long long n, long long m) {\n \
-    \       long long res = 1ll;\n        while (n > 0) {\n            if (n & 1)\
-    \ res = res * a % m;\n            a = a * a % m;\n            n >>= 1ll;\n   \
-    \     }\n        return res;\n    }\n    // Fermat\u306E\u5C0F\u5B9A\u7406 \u9006\
-    \u5143\u3092\u6C42\u3081\u308B\n    long long modinv(long long a, long long m)\
-    \ {\n        return modpow(a, m - 2, m);\n    }\n    // mod\u968E\u4E57\n    long\
-    \ long modfact(int x, long long m) {\n        if ((int)_mf.size() > x) return\
-    \ _mf[x];\n        if (_mf.empty()) _mf.push_back(1);\n        for (int i = _mf.size();\
-    \ i <= x; ++i) _mf.push_back(_mf.back() * i % m);\n        return _mf[x];\n  \
-    \  }\n    // mod\u7D44\u307F\u5408\u308F\u305BnCk\n    long long mod_combination(int\
-    \ n, int k, long long m) {\n        return modfact(n, m) * modinv(modfact(k, m),\
-    \ m) % m *\n               modinv(modfact(n - k, m), m) % m;\n    }\n};\n\n\n\
-    /** ======================================= */\n/**              \u6587\u5B57\u5217\
-    \                     */\n/** ======================================= */\n\nclass\
+    \n/**\n * @brief \u6570\u306E\u6027\u8CEA\n */\nclass Number {\n  private:\n \
+    \   // mod\u968E\u4E57\u306E\u30E1\u30E2\u914D\u5217\n    vector<long long> _mf;\n\
+    \n  public:\n    // \u5272\u308A\u4E0B\u3052\uFF08\u8CA0\u306E\u5834\u54080\u5074\
+    \u3078\u4E38\u3081\u306A\u3044\uFF09\n    template <typename T> T div_ceil(T a,\
+    \ T b) {\n        return a / b + (((a ^ b) > 0 and a % b != 0) ? 1 : 0);\n   \
+    \ }\n    // \u5272\u308A\u4E0A\u3052\uFF08\u8CA0\u306E\u5834\u54080\u5074\u3078\
+    \u4E38\u3081\u306A\u3044\uFF09\n    template <typename T> T div_floor(T a, T b)\
+    \ {\n        return a / b - (((a ^ b) < 0 and a % b != 0) ? 1 : 0);\n    }\n \
+    \   // \u968E\u4E57 \u30CA\u30A4\u30FC\u30D6\n    long long factorial(int N) {\n\
+    \        long long res = 1;\n        while (N > 0) res *= N--;\n        return\
+    \ res;\n    }\n    // nCk\n    long long combination(int n, int k) {\n       \
+    \ if (k < 0 || n < k) return 0ll;\n        long long res = 1;\n        for (int\
+    \ i = 1; i <= k; ++i) {\n            res *= n--;\n            res /= i;\n    \
+    \    }\n        return res;\n    }\n    // \u6841\u548C\n    int digit_sum(int\
+    \ a, int N = 10) {\n        int res = 0;\n        while (a != 0) {\n         \
+    \   res += a % N;\n            a /= N;\n        }\n        return res;\n    }\n\
+    \    // \u9032\u6570\u5909\u63DB from\u3068to\u306F10\u3092\u8D85\u3048\u306A\u3044\
+    \u3053\u3068\n    string base_convert(string a, int from, int to) {\n        long\
+    \ long cvt = 0ll; // 10\u9032\u6570\u306B\u76F4\u3059\n        for (auto &&v :\
+    \ a) cvt = cvt * from + (int)(v - '0');\n        if (cvt == 0) return \"0\";\n\
+    \        string res = \"\"; // to\u9032\u6570\u306B\u76F4\u3059\n        while\
+    \ (cvt) {    // 10\u9032\u6570\u3067\u8868\u305B\u308B\u7BC4\u56F2\u306E\u6587\
+    \u5B57\u3057\u304B\u6271\u3063\u3066\u3044\u306A\u3044\n            res = (char)(cvt\
+    \ % to + '0') + res;\n            cvt /= to;\n        }\n        return res;\n\
+    \    }\n    // \u7D04\u6570\u5217\u6319\n    vector<int> divisors(int a) {\n \
+    \       vector<int> res;\n        for (int i = 1; i * i <= a; ++i) {\n       \
+    \     if (a % i != 0) continue;\n            res.push_back(i);\n            if\
+    \ (a / i != i) res.push_back(a / i);\n        }\n        return res;\n    }\n\
+    \    // \u7D20\u6570\u5224\u5B9A\n    bool prime_test(int N) {\n        if (N\
+    \ == 2) return true;\n        if (N == 1 or N % 2 == 0) return false;\n      \
+    \  for (int i = 3; i * i <= N; i += 2) {\n            if (N % i == 0) return false;\n\
+    \        }\n        return true;\n    }\n    // \u7D20\u56E0\u6570\u5206\u89E3\
+    \n    map<int, int> prime_fact(int N) {\n        map<int, int> P;\n        for\
+    \ (int i = 2; i * i <= N; ++i) {\n            while (N % i == 0) {\n         \
+    \       ++P[i];\n                N /= i;\n            }\n        }\n        if\
+    \ (N > 1) ++P[N];\n        return P;\n    }\n    // \u4E8C\u5206\u7D2F\u4E57(mod)\n\
+    \    long long modpow(long long a, long long n, long long m) {\n        long long\
+    \ res = 1ll;\n        while (n > 0) {\n            if (n & 1) res = res * a %\
+    \ m;\n            a = a * a % m;\n            n >>= 1ll;\n        }\n        return\
+    \ res;\n    }\n    // Fermat\u306E\u5C0F\u5B9A\u7406 \u9006\u5143\u3092\u6C42\u3081\
+    \u308B\n    long long modinv(long long a, long long m) {\n        return modpow(a,\
+    \ m - 2, m);\n    }\n    // mod\u968E\u4E57\n    long long modfact(int x, long\
+    \ long m) {\n        if ((int)_mf.size() > x) return _mf[x];\n        if (_mf.empty())\
+    \ _mf.push_back(1);\n        for (int i = _mf.size(); i <= x; ++i) _mf.push_back(_mf.back()\
+    \ * i % m);\n        return _mf[x];\n    }\n    // mod\u7D44\u307F\u5408\u308F\
+    \u305BnCk\n    long long mod_combination(int n, int k, long long m) {\n      \
+    \  return modfact(n, m) * modinv(modfact(k, m), m) % m *\n               modinv(modfact(n\
+    \ - k, m), m) % m;\n    }\n};\n\n\n/**\n * @brief \u6587\u5B57\u5217\n */\nclass\
     \ String {\n  public:\n    bool is_low(char c) {\n        return islower(c) !=\
     \ 0;\n    }\n    bool is_upp(char c) {\n        return isupper(c) != 0;\n    }\n\
     \    // \u5C0F\u6587\u5B57\u306B\u5909\u63DB\n    string transform_lower(string\
@@ -530,63 +519,62 @@ data:
     \ < n; ++i) {\n            int &k = z[i];\n            k = (j + z[j] <= i) ? 0\
     \ : min(j + z[j] - i, z[i - j]);\n            while (i + k < n and S[k] == S[i\
     \ + k]) ++k;\n            if (j + z[j] < i + z[i]) j = i;\n        }\n       \
-    \ return z;\n    }\n};\n\n\n/** ======================================= */\n/**\
-    \              \u914D\u5217\u30FB\u6570\u5217                 */\n/** =======================================\
-    \ */\n\nclass Sequence {\n  public:\n    template <typename T> T min(const vector<T>\
-    \ &v) {\n        return *min_element(all(v));\n    }\n    template <typename T>\
-    \ T max(const vector<T> &v) {\n        return *max_element(all(v));\n    }\n \
-    \   template <typename T> long long sum(const vector<T> &v) {\n        return\
-    \ accumulate(all(v), 0ll);\n    }\n    template <typename T, typename F> bool\
-    \ all_match(const vector<T> &v, F f) {\n        return all_of(all(v), f);\n  \
-    \  }\n    template <typename T, typename F> bool none_match(const vector<T> &v,\
-    \ F f) {\n        return none_of(all(v), f);\n    }\n    template <typename T,\
-    \ typename F> bool any_match(const vector<T> &v, F f) {\n        return any_of(all(v),\
-    \ f);\n    }\n    template <typename T> void distinct(vector<T> &v) {\n      \
-    \  sort(all(v));\n        v.erase(unique(all(v)), v.end());\n    }\n    template\
-    \ <typename T> void sort_asc(vector<T> &v) {\n        sort(all(v));\n    }\n \
-    \   template <typename T> void sort_desc(vector<T> &v) {\n        sort(rall(v));\n\
-    \    }\n    template <typename T> void reverse(vector<T> &v) {\n        std::reverse(all(v));\n\
-    \    }\n    // set\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename\
-    \ T> void erase(set<T> &st, const T &v) {\n        st.erase(st.find(v));\n   \
-    \ }\n    // multiset\u304B\u3089\u8981\u7D20\u524A\u9664\n    template <typename\
-    \ T> void erase(multiset<T> &st, const T &v) {\n        st.erase(st.find(v));\n\
-    \    }\n    /**\n     * \u5206\u5272\u4EE3\u5165\u3067\u304D\u308B\u3088\u3046\
-    \u306B\u3059\u308B G\u306F\u7834\u58CA\u3002\n     * auto [a,b] = unpack<2>(move(G));\n\
-    \     */\n    template <int N, typename T> auto unpack(vector<T> &&G) {\n    \
-    \    array<T, N> res; // vector -> array\u5909\u63DB\u3059\u308B\u3060\u3051\n\
-    \        for (int i = 0; i < N; ++i) res[i] = move(G[i]);\n        return res;\n\
-    \    }\n    // \u9023\u756A\u751F\u6210\n    template <typename T> void renban(vector<T>\
-    \ &v, T start = 0) {\n        iota(all(v), start);\n    }\n    // A\u3092B\u306B\
-    \u30DE\u30FC\u30B8\u30C6\u30AF vector\n    template <typename T> void merge(vector<T>\
-    \ &A, vector<T> &B) {\n        if (A.size() > B.size()) swap(A, B);\n        for\
-    \ (auto &&v : A) B.push_back(v);\n        A.clear();\n    }\n    // A\u3092B\u306B\
-    \u30DE\u30FC\u30B8\u30C6\u30AF set\n    template <typename T> void merge(set<T>\
-    \ &A, set<T> &B) {\n        if (A.size() > B.size()) swap(A, B);\n        for\
-    \ (auto &&v : A) B.insert(v);\n        A.clear();\n    }\n    // A\u3092B\u306B\
-    \u30DE\u30FC\u30B8\u30C6\u30AF \u30DE\u30FC\u30B8\u64CD\u4F5C\u3092\u30E9\u30E0\
-    \u30C0\u5316\n    template <typename T, typename F> void merge(T &A, T &B, F f)\
-    \ {\n        if (A.size() > B.size()) swap(A, B);\n        for (auto &&v : A)\
-    \ {\n            f(B, v);\n        }\n        A.clear();\n    }\n    // \u6570\
-    \u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u306B\u306A\u304A\u3059\n    vector<int>\
-    \ coordinate(const vector<int> &A) {\n        vector<int> res(MAX);\n        for\
-    \ (auto &&v : A) ++res[v];\n        return res;\n    }\n    // \u5EA7\u6A19\u5727\
-    \u7E2E \u5727\u7E2E\u5F8C\u306E\u7A2E\u985E\u6570\u3092\u8FD4\u5374\n    template\
-    \ <typename T> int zip_coordinate(vector<T> &A) {\n        vector<T> cvt = A;\n\
-    \        distinct(cvt);\n        for (auto &v : A) v = lower_bound(all(cvt), v)\
-    \ - cvt.begin();\n        return (int)cvt.size();\n    }\n    // \u8EE2\u5012\u6570\
-    \ \u53F3\u306B\u5012\u308C\u308BA_i > A_j (i < j)\u306E\u56DE\u6570\n    template\
-    \ <typename T> long long inversion_number(vector<T> &A) {\n        int sz = zip_coordinate(A);\n\
-    \        vector<int> fwk(sz + 1);\n        long long inv = 0, N = A.size();\n\
-    \        for (int i = 0; i < N; ++i) {\n            for (int f = sz; f; f -= f\
-    \ & -f) inv += fwk[f];\n            for (int f = A[i] + 1; f; f -= f & -f) inv\
-    \ -= fwk[f];\n            for (int f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];\n\
-    \        }\n        return inv;\n    }\n    // \u7D2F\u7A4D\u548C S[i]=\u03A3\
-    (0,i-1)  \u03A3[l,r)=S[r]-S[l]\n    template <typename T> vector<long long> zeta(const\
-    \ vector<T> &A) {\n        int N = A.size();\n        vector<long long> S(N +\
-    \ 1);\n        for (int i = 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n        return\
-    \ S;\n    }\n    // \u53CD\u8EE2\u7D2F\u7A4D\u548C S[i]=Ai\u304B\u3089\u53F3\u5168\
-    \u90E8  \u03A3(0,i-1)+\u03A3(i,last)=S[i]+R[i]\n    template <typename T> vector<long\
-    \ long> zeta_rev(const vector<T> &A) {\n        int N = A.size();\n        vector<long\
+    \ return z;\n    }\n};\n\n\n/**\n * @brief \u914D\u5217\u30FB\u6570\u5217\n */\n\
+    class Sequence {\n  public:\n    template <typename T> T min(const vector<T> &v)\
+    \ {\n        return *min_element(all(v));\n    }\n    template <typename T> T\
+    \ max(const vector<T> &v) {\n        return *max_element(all(v));\n    }\n   \
+    \ template <typename T> long long sum(const vector<T> &v) {\n        return accumulate(all(v),\
+    \ 0ll);\n    }\n    template <typename T, typename F> bool all_match(const vector<T>\
+    \ &v, F f) {\n        return all_of(all(v), f);\n    }\n    template <typename\
+    \ T, typename F> bool none_match(const vector<T> &v, F f) {\n        return none_of(all(v),\
+    \ f);\n    }\n    template <typename T, typename F> bool any_match(const vector<T>\
+    \ &v, F f) {\n        return any_of(all(v), f);\n    }\n    template <typename\
+    \ T> void distinct(vector<T> &v) {\n        sort(all(v));\n        v.erase(unique(all(v)),\
+    \ v.end());\n    }\n    template <typename T> void sort_asc(vector<T> &v) {\n\
+    \        sort(all(v));\n    }\n    template <typename T> void sort_desc(vector<T>\
+    \ &v) {\n        sort(rall(v));\n    }\n    template <typename T> void reverse(vector<T>\
+    \ &v) {\n        std::reverse(all(v));\n    }\n    // set\u304B\u3089\u8981\u7D20\
+    \u524A\u9664\n    template <typename T> void erase(set<T> &st, const T &v) {\n\
+    \        st.erase(st.find(v));\n    }\n    // multiset\u304B\u3089\u8981\u7D20\
+    \u524A\u9664\n    template <typename T> void erase(multiset<T> &st, const T &v)\
+    \ {\n        st.erase(st.find(v));\n    }\n    /**\n     * \u5206\u5272\u4EE3\u5165\
+    \u3067\u304D\u308B\u3088\u3046\u306B\u3059\u308B G\u306F\u7834\u58CA\u3002\n \
+    \    * auto [a,b] = unpack<2>(move(G));\n     */\n    template <int N, typename\
+    \ T> auto unpack(vector<T> &&G) {\n        array<T, N> res; // vector -> array\u5909\
+    \u63DB\u3059\u308B\u3060\u3051\n        for (int i = 0; i < N; ++i) res[i] = move(G[i]);\n\
+    \        return res;\n    }\n    // \u9023\u756A\u751F\u6210\n    template <typename\
+    \ T> void renban(vector<T> &v, T start = 0) {\n        iota(all(v), start);\n\
+    \    }\n    // A\u3092B\u306B\u30DE\u30FC\u30B8\u30C6\u30AF vector\n    template\
+    \ <typename T> void merge(vector<T> &A, vector<T> &B) {\n        if (A.size()\
+    \ > B.size()) swap(A, B);\n        for (auto &&v : A) B.push_back(v);\n      \
+    \  A.clear();\n    }\n    // A\u3092B\u306B\u30DE\u30FC\u30B8\u30C6\u30AF set\n\
+    \    template <typename T> void merge(set<T> &A, set<T> &B) {\n        if (A.size()\
+    \ > B.size()) swap(A, B);\n        for (auto &&v : A) B.insert(v);\n        A.clear();\n\
+    \    }\n    // A\u3092B\u306B\u30DE\u30FC\u30B8\u30C6\u30AF \u30DE\u30FC\u30B8\
+    \u64CD\u4F5C\u3092\u30E9\u30E0\u30C0\u5316\n    template <typename T, typename\
+    \ F> void merge(T &A, T &B, F f) {\n        if (A.size() > B.size()) swap(A, B);\n\
+    \        for (auto &&v : A) {\n            f(B, v);\n        }\n        A.clear();\n\
+    \    }\n    // \u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u306B\u306A\u304A\
+    \u3059\n    vector<int> coordinate(const vector<int> &A) {\n        vector<int>\
+    \ res(MAX);\n        for (auto &&v : A) ++res[v];\n        return res;\n    }\n\
+    \    // \u5EA7\u6A19\u5727\u7E2E \u5727\u7E2E\u5F8C\u306E\u7A2E\u985E\u6570\u3092\
+    \u8FD4\u5374\n    template <typename T> int zip_coordinate(vector<T> &A) {\n \
+    \       vector<T> cvt = A;\n        distinct(cvt);\n        for (auto &v : A)\
+    \ v = lower_bound(all(cvt), v) - cvt.begin();\n        return (int)cvt.size();\n\
+    \    }\n    // \u8EE2\u5012\u6570 \u53F3\u306B\u5012\u308C\u308BA_i > A_j (i <\
+    \ j)\u306E\u56DE\u6570\n    template <typename T> long long inversion_number(vector<T>\
+    \ &A) {\n        int sz = zip_coordinate(A);\n        vector<int> fwk(sz + 1);\n\
+    \        long long inv = 0, N = A.size();\n        for (int i = 0; i < N; ++i)\
+    \ {\n            for (int f = sz; f; f -= f & -f) inv += fwk[f];\n           \
+    \ for (int f = A[i] + 1; f; f -= f & -f) inv -= fwk[f];\n            for (int\
+    \ f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];\n        }\n        return inv;\n\
+    \    }\n    // \u7D2F\u7A4D\u548C S[i]=\u03A3(0,i-1)  \u03A3[l,r)=S[r]-S[l]\n\
+    \    template <typename T> vector<long long> zeta(const vector<T> &A) {\n    \
+    \    int N = A.size();\n        vector<long long> S(N + 1);\n        for (int\
+    \ i = 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n        return S;\n    }\n    //\
+    \ \u53CD\u8EE2\u7D2F\u7A4D\u548C S[i]=Ai\u304B\u3089\u53F3\u5168\u90E8  \u03A3\
+    (0,i-1)+\u03A3(i,last)=S[i]+R[i]\n    template <typename T> vector<long long>\
+    \ zeta_rev(const vector<T> &A) {\n        int N = A.size();\n        vector<long\
     \ long> R(N + 1);\n        for (int i = N - 1; i >= 0; --i) R[i] = R[i + 1] +\
     \ A[i];\n        return R;\n    }\n    // \u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\
     \u7A4D\u548C S[i]=\u03A3(0,i-1)  \u03A3[l,r)=S[r]-S[l]\n    template <typename\
@@ -601,8 +589,8 @@ data:
     \ = R[i + 1];\n            if (i & 1) R[i] += abs((i + 1 < N ? A[i + 1] : 0) -\
     \ A[i]);\n        }\n        return R;\n    }\n    /**\n     * 2\u6B21\u5143\u5E73\
     \u9762\u3067\u306E\u7D2F\u7A4D\u548C\n     * \u5305\u9664: (s,t)~(x,y) = S[y][x]-S[y][s]-S[t][x]+S[t][s]\n\
-    \     */\n    template <typename T> vector<vector<long long>> zeta_2D(const vector<T>\
-    \ &G) {\n        int H = G.size(), W = G[0].size();\n        vector<vector<long\
+    \     */\n    template <typename T>\n    vector<vector<long long>> zeta_2D(const\
+    \ vector<T> &G) {\n        int H = G.size(), W = G[0].size();\n        vector<vector<long\
     \ long>> S(H + 1, vector<long long>(W + 1));\n        for (int i = 0; i < H; ++i)\
     \ { // \u6A2A\u5411\u304D\n            for (int j = 0; j < W; ++j) {\n       \
     \         S[i + 1][j + 1] = S[i + 1][j] + G[i][j];\n            }\n        }\n\
@@ -613,7 +601,7 @@ data:
     \     *   S[Rxyz] - S[Lxyz]\n     *          = S[Rx][Ry][Rz] - S[Lx][Ry][Rz] -\
     \ S[Rx][Ly][Rz] -\n     *            S[Rx][Ry][Lz] + S[Lx][Ly][Rz] + S[Lx][Ry][Lz]\
     \ +\n     *            S[Rx][Ly][Lz] - S[Lx][Ly][Lz];\n     */\n    template <typename\
-    \ T>\n    vector<vector<vector<long long>>> zeta_3D(const vector<vector<vector<T>>>\
+    \ T>\n    vector<vector<vector<long long>>>\n    zeta_3D(const vector<vector<vector<T>>>\
     \ &A) {\n        vector<vector<vector<long long>>> S;\n        int szx = A.size(),\
     \ szy = A[0].size(), szz = A[0][0].size();\n        S.resize(szx + 1, vector<vector<long\
     \ long>>(\n                              szy + 1, vector<long long>(szz + 1, 0)));\n\
@@ -627,9 +615,8 @@ data:
     \u306E\u6570\u5217 \u30E1\u30D3\u30A6\u30B9\u5909\u63DB\n    template <typename\
     \ T> vector<long long> moebius(const vector<T> &A) {\n        int N = A.size();\n\
     \        vector<long long> D(N - 1);\n        for (int i = 0; i < N; ++i) D[i]\
-    \ = A[i + 1] - A[i];\n        return D;\n    }\n};\n\n\n/** =======================================\
-    \ */\n/**               \u63A2\u7D22                      */\n/** =======================================\
-    \ */\n\nclass Search {\n  public:\n    /**\n     * \u9806\u5217\u5168\u63A2\u7D22\
+    \ = A[i + 1] - A[i];\n        return D;\n    }\n};\n\n\n/**\n * @brief \u63A2\u7D22\
+    \n */\nclass Search {\n  public:\n    /**\n     * \u9806\u5217\u5168\u63A2\u7D22\
     \ O(N!) N\u306F10\u301C12\u7A0B\u5EA6\n     * \u9806\u5217\u306E\u5168\u30D1\u30BF\
     \u30FC\u30F3\u4E2D\u3067\u3084\u308A\u305F\u3044\u95A2\u6570\u3092\u5165\u308C\
     \u308B\n     * \u4F8B) search_permu(A, [&](){cout << A;} );\n     */\n    template\
@@ -702,49 +689,46 @@ data:
     \        auto dfs = [&](auto f, int n) {\n            if (n <= 1) return n;\n\
     \            if (memo.count(n)) return memo[n];\n            return memo[n] =\
     \ f(f, n - 1) + f(f, n - 2);\n        };\n        (void)dfs; // unused\n     \
-    \   // int ans = dfs(dfs, N);\n    }\n};\n\n\n/** =======================================\
-    \ */\n/**               \u30B0\u30EA\u30C3\u30C9                  */\n/** =======================================\
-    \ */\n\nclass Grid {\n  public:\n    // \u884C\u5217\u306E\u8EE2\u7F6E\n    template\
-    \ <typename T>\n    vector<vector<T>> transpose(const vector<vector<T>> &G) {\n\
-    \        int H = G.size(), W = G[0].size();\n        vector<vector<T>> _G(W, vector<T>(H));\n\
+    \   // int ans = dfs(dfs, N);\n    }\n};\n\n\n/**\n * @brief \u30AF\u3099\u30EA\
+    \u30C3\u30C8\u3099\n */\nclass Grid {\n  public:\n    // \u884C\u5217\u306E\u8EE2\
+    \u7F6E\n    template <typename T>\n    vector<vector<T>> transpose(const vector<vector<T>>\
+    \ &G) {\n        int H = G.size(), W = G[0].size();\n        vector<vector<T>>\
+    \ _G(W, vector<T>(H));\n        for (int i = 0; i < H; ++i) {\n            for\
+    \ (int j = 0; j < W; ++j) {\n                _G[j][i] = G[i][j];\n           \
+    \ }\n        }\n        return _G;\n    }\n    // \u30B0\u30EA\u30C3\u30C94\u65B9\
+    \u3092\u898B\u308BBFS \u5F15\u6570f(y, x)\n    template <typename T, typename\
+    \ F> void bfs(vector<vector<T>> &G, F f) {\n        int H = G.size(), W = G[0].size();\n\
     \        for (int i = 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j)\
-    \ {\n                _G[j][i] = G[i][j];\n            }\n        }\n        return\
-    \ _G;\n    }\n    // \u30B0\u30EA\u30C3\u30C94\u65B9\u3092\u898B\u308BBFS \u5F15\
-    \u6570f(y, x)\n    template <typename T, typename F> void bfs(vector<vector<T>>\
+    \ {\n                for (int k = 0; k < 4; ++k) {\n                    int y\
+    \ = i + dy[k], x = j + dx[k];\n                    if (y < 0 or x < 0 or H <=\
+    \ y or W <= x) continue;\n                    f(y, x);\n                }\n  \
+    \          }\n        }\n    }\n    // \u30B0\u30EA\u30C3\u30C98\u65B9\u3092\u898B\
+    \u308BBFS \u5F15\u6570f(y, x)\n    template <typename T, typename F> void bfs8(vector<vector<T>>\
     \ &G, F f) {\n        int H = G.size(), W = G[0].size();\n        for (int i =\
     \ 0; i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n              \
-    \  for (int k = 0; k < 4; ++k) {\n                    int y = i + dy[k], x = j\
-    \ + dx[k];\n                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n\
+    \  for (int k = 0; k < 8; ++k) {\n                    int y = i + dy8[k], x =\
+    \ j + dx8[k];\n                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n\
     \                    f(y, x);\n                }\n            }\n        }\n \
-    \   }\n    // \u30B0\u30EA\u30C3\u30C98\u65B9\u3092\u898B\u308BBFS \u5F15\u6570\
-    f(y, x)\n    template <typename T, typename F> void bfs8(vector<vector<T>> &G,\
-    \ F f) {\n        int H = G.size(), W = G[0].size();\n        for (int i = 0;\
-    \ i < H; ++i) {\n            for (int j = 0; j < W; ++j) {\n                for\
-    \ (int k = 0; k < 8; ++k) {\n                    int y = i + dy8[k], x = j + dx8[k];\n\
-    \                    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n     \
-    \               f(y, x);\n                }\n            }\n        }\n    }\n\
-    };\n\n\n/** ======================================= */\n/**               \u5E7E\
-    \u4F55                      */\n/** ======================================= */\n\
-    \nclass Geometry {\n  public:\n    // \u5EA6\u6570\u6CD5 \u2192 \u5F27\u5EA6\u6CD5\
-    \n    double deg_to_rad(double d) {\n        return d * PI / 180;\n    }\n   \
-    \ // \u5F27\u5EA6\u6CD5 \u2192 \u5EA6\u6570\u6CD5\n    double rad_to_deg(double\
-    \ r) {\n        return r * 180 / PI;\n    }\n    // \u504F\u89D2\u3092\u30E9\u30B8\
-    \u30A2\u30F3\u3067\u8FD4\u3059\n    double arc_tan(double x, double y) {\n   \
-    \     return atan2(y, x);\n    }\n    /**\n     * \u4E09\u89D2\u5F62\u306E\u9762\
-    \u7A4D\n     * double\u306F\u6841\u6570\u8868\u73FE11bit\u3092\u9664\u304D\u3001\
-    52bit\u7A0B\u5EA6\u306E\u7CBE\u5EA6\n     * 18\u6841\u4F7F\u3046\u306A\u30892\u3067\
-    \u5272\u3089\u305Along long\u3067\u8FD4\u3059\u3053\u3068\n     */\n    template\
-    \ <typename T>\n    double area_triangle(T x1, T y1, T x2, T y2, T x3, T y3) {\n\
-    \        return abs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1)) / 2.0;\n  \
-    \  }\n    /**\n     * \u56DB\u89D2\u5F62\u306E\u9762\u7A4D\n     * double\u306F\
-    \u6841\u6570\u8868\u73FE11bit\u3092\u9664\u304D\u300152bit\u7A0B\u5EA6\u306E\u7CBE\
-    \u5EA6\n     * 18\u6841\u4F7F\u3046\u306A\u30892\u3067\u5272\u3089\u305Along long\u3067\
-    \u8FD4\u3059\u3053\u3068\n     */\n    template <typename T>\n    double area_square(T\
-    \ x1, T y1, T x2, T y2, T x3, T y3, T x4, T y4) {\n        return hypot(x1 - x3,\
-    \ y1 - y3) * hypot(x2 - x4, y2 - y4) / 2.0;\n    }\n};\n\nnamespace lib {\nNumber\
-    \ num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\nGeometry geo;\n\
-    }; // namespace lib\n// -----------------------------------------\n// #include\
-    \ \"template/lib.hpp\" is done.\n// -----------------------------------------\n\
+    \   }\n};\n\n\n/**\n * @brief \u5E7E\u4F55\n */\nclass Geometry {\n  public:\n\
+    \    // \u5EA6\u6570\u6CD5 \u2192 \u5F27\u5EA6\u6CD5\n    double deg_to_rad(double\
+    \ d) {\n        return d * PI / 180;\n    }\n    // \u5F27\u5EA6\u6CD5 \u2192\
+    \ \u5EA6\u6570\u6CD5\n    double rad_to_deg(double r) {\n        return r * 180\
+    \ / PI;\n    }\n    // \u504F\u89D2\u3092\u30E9\u30B8\u30A2\u30F3\u3067\u8FD4\u3059\
+    \n    double arc_tan(double x, double y) {\n        return atan2(y, x);\n    }\n\
+    \    /**\n     * \u4E09\u89D2\u5F62\u306E\u9762\u7A4D\n     * double\u306F\u6841\
+    \u6570\u8868\u73FE11bit\u3092\u9664\u304D\u300152bit\u7A0B\u5EA6\u306E\u7CBE\u5EA6\
+    \n     * 18\u6841\u4F7F\u3046\u306A\u30892\u3067\u5272\u3089\u305Along long\u3067\
+    \u8FD4\u3059\u3053\u3068\n     */\n    template <typename T>\n    double area_triangle(T\
+    \ x1, T y1, T x2, T y2, T x3, T y3) {\n        return abs((x2 - x1) * (y3 - y1)\
+    \ - (x3 - x1) * (y2 - y1)) / 2.0;\n    }\n    /**\n     * \u56DB\u89D2\u5F62\u306E\
+    \u9762\u7A4D\n     * double\u306F\u6841\u6570\u8868\u73FE11bit\u3092\u9664\u304D\
+    \u300152bit\u7A0B\u5EA6\u306E\u7CBE\u5EA6\n     * 18\u6841\u4F7F\u3046\u306A\u3089\
+    2\u3067\u5272\u3089\u305Along long\u3067\u8FD4\u3059\u3053\u3068\n     */\n  \
+    \  template <typename T>\n    double area_square(T x1, T y1, T x2, T y2, T x3,\
+    \ T y3, T x4, T y4) {\n        return hypot(x1 - x3, y1 - y3) * hypot(x2 - x4,\
+    \ y2 - y4) / 2.0;\n    }\n};\n\nnamespace lib {\nNumber num;\nString str;\nSequence\
+    \ seq;\nSearch search;\nGrid grid;\nGeometry geo;\n}; // namespace lib\n// -----------------------------------------\n\
+    // #include \"template/lib.hpp\" is done.\n// -----------------------------------------\n\
     \n\n// #include \"library/struct/graph.hpp\"\n// #include \"library/struct/union_find.hpp\"\
     \n// #include \"library/struct/fenwick_tree.hpp\"\n// #include \"library/struct/monoid.hpp\"\
     \n// #include \"library/struct/segment_tree.hpp\"\n// #include \"library/struct/dual_segment_tree.hpp\"\
@@ -755,7 +739,7 @@ data:
   isVerificationFile: false
   path: bundle.cpp
   requiredBy: []
-  timestamp: '2026-01-03 22:10:36+09:00'
+  timestamp: '2026-01-03 22:41:21+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundle.cpp
