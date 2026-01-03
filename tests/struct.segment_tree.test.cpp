@@ -9,7 +9,7 @@
 void solve() {
     int N, Q;
     cin >> N >> Q;
-    SegmentTree seg(MonoidMin<int>(), N);
+    SegmentTree<int> seg(Monoid::Min::op, Monoid::Min::e, N);
     while (Q--) {
         int com, x, y;
         cin >> com >> x >> y;
