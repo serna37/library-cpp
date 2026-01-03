@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: library/graph/min_span_tree.hpp
+    title: "\u6700\u5C0F\u5168\u57DF\u6728"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/struct.union_find.test.cpp
@@ -38,8 +41,9 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/struct/union_find.hpp
-  requiredBy: []
-  timestamp: '2026-01-03 23:06:50+09:00'
+  requiredBy:
+  - library/graph/min_span_tree.hpp
+  timestamp: '2026-01-03 23:10:18+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/struct.union_find.test.cpp

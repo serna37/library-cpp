@@ -1,6 +1,12 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: library/graph/edge.hpp
+    title: "\u8FBA"
+  - icon: ':heavy_check_mark:'
+    path: library/struct/union_find.hpp
+    title: UnionFind
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -9,27 +15,34 @@ data:
   attributes:
     document_title: "\u6700\u5C0F\u5168\u57DF\u6728"
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
-    \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
-    \  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
-    , line 187, in bundle\n    bundler.update(path)\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
-    \                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n \
-    \ File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: library/struct/edge.hpp:\
-    \ line -1: no such header\n"
-  code: "#pragma once\n#include \"library/struct/edge.hpp\"\n#include \"library/struct/union_find.hpp\"\
+  bundledCode: "#line 2 \"library/graph/edge.hpp\"\n/**\n * @brief \u8FBA\n */\nstruct\
+    \ Edge {\n    int from, to;\n    long long cost;\n    Edge(int from, int to, long\
+    \ long cost = 1)\n        : from(from), to(to), cost(cost) {\n    }\n};\n#line\
+    \ 2 \"library/struct/union_find.hpp\"\n/**\n * @brief UnionFind\n */\nstruct UnionFind\
+    \ {\n  private:\n    vector<int> parent, size;\n\n  public:\n    UnionFind(int\
+    \ N) {\n        parent.assign(N, -1);\n        size.assign(N, 1);\n    }\n   \
+    \ // \u81EA\u5206\u306E\u30B0\u30EB\u30FC\u30D7\u306E\u30B5\u30A4\u30BA\n    int\
+    \ operator[](int p) {\n        return size[find(p)];\n    }\n    // p\u306E\u89AA\
+    \u3092\u898B\u3064\u3051\u308B\n    int find(int p) {\n        return !~parent[p]\
+    \ ? p : (parent[p] = find(parent[p]));\n    }\n    // a\u3068b\u3092\u540C\u3058\
+    \u30B0\u30EB\u30FC\u30D7\u306B\u3059\u308B \u64CD\u4F5C\u3057\u305F\u3089true\n\
+    \    bool unite(int a, int b) {\n        int x = find(a), y = find(b);\n     \
+    \   if (x == y) return false;\n        if (size[x] > size[y]) swap(x, y);\n  \
+    \      parent[x] = y, size[y] += size[x];\n        return true;\n    }\n};\n#line\
+    \ 4 \"library/graph/min_span_tree.hpp\"\n/**\n * @brief \u6700\u5C0F\u5168\u57DF\
+    \u6728\n */\nstruct MinSpanTree {\n    long long cost;\n    vector<Edge> edges;\n\
+    };\n// TODO \u30AF\u30E9\u30B9\u30AB\u30EB\n"
+  code: "#pragma once\n#include \"library/graph/edge.hpp\"\n#include \"library/struct/union_find.hpp\"\
     \n/**\n * @brief \u6700\u5C0F\u5168\u57DF\u6728\n */\nstruct MinSpanTree {\n \
     \   long long cost;\n    vector<Edge> edges;\n};\n// TODO \u30AF\u30E9\u30B9\u30AB\
     \u30EB\n"
-  dependsOn: []
+  dependsOn:
+  - library/graph/edge.hpp
+  - library/struct/union_find.hpp
   isVerificationFile: false
   path: library/graph/min_span_tree.hpp
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2026-01-03 23:10:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/graph/min_span_tree.hpp

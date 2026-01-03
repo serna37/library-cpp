@@ -1,7 +1,13 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: library/graph/graph.hpp
+    title: "\u30B0\u30E9\u30D5"
+  - icon: ':warning:'
+    path: library/graph/min_span_tree.hpp
+    title: "\u6700\u5C0F\u5168\u57DF\u6728"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -18,8 +24,10 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/graph/edge.hpp
-  requiredBy: []
-  timestamp: '2026-01-03 23:06:50+09:00'
+  requiredBy:
+  - library/graph/min_span_tree.hpp
+  - library/graph/graph.hpp
+  timestamp: '2026-01-03 23:10:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/graph/edge.hpp
