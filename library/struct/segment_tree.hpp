@@ -6,10 +6,10 @@ template <typename T> struct SegmentTree {
     using F = function<T(T, T)>;
 
   private:
+    F op;
+    T e;
     int N, size, log = 1;
     vector<T> node;
-    T e;
-    F op;
     void init() {
         while ((1 << log) < N) ++log;
         node.assign((size = 1 << log) << 1, e);

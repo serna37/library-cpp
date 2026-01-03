@@ -9,7 +9,7 @@
 void solve() {
     int N, Q;
     cin >> N >> Q;
-    DualSegmentTree seg(MonoidSet<int>(), N);
+    DualSegmentTree<int> seg(Monoid::Set::op, Monoid::Set::e, N);
     while (Q--) {
         int com;
         cin >> com;

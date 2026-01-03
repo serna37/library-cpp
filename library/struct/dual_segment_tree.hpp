@@ -2,32 +2,33 @@
 /**
  * @brief Dual Segment Tree 区間更新 1点取得
  */
-template <class Monoid> struct DualSegmentTree {
-    using T = typename Monoid::T;
+template <typename T> struct DualSegmentTree {
+    using F = function<T(T, T)>;
 
   private:
-    Monoid M;
+    F op;
+    T e;
     int N, size, log = 1;
     vector<T> node;
     void init() {
         while ((1 << log) < N) ++log;
-        node.assign((size = 1 << log) << 1, M.e());
+        node.assign((size = 1 << log) << 1, e);
     }
     void apply_at(int k, T a) {
-        node[k] = M.op(node[k], a);
+        node[k] = op(node[k], a);
     }
     void propagate(int k) {
-        if (node[k] == M.e()) return;
+        if (node[k] == e) return;
         apply_at((k << 1 | 0), node[k]);
         apply_at((k << 1 | 1), node[k]);
-        node[k] = M.e();
+        node[k] = e;
     }
 
   public:
-    DualSegmentTree(Monoid M, int n) : M(M), N(n) {
+    DualSegmentTree(F op, T e, int n) : op(op), e(e), N(n) {
         init();
     }
-    DualSegmentTree(Monoid M, const vector<T> &a) : M(M), N(a.size()) {
+    DualSegmentTree(F op, T e, const vector<T> &a) : op(op), e(e), N(a.size()) {
         init();
         for (int i = 0; i < N; ++i) node[i + size] = a[i];
     }
