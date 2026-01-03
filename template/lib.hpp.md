@@ -1,29 +1,29 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/util/geometry.hpp
     title: "\u5E7E\u4F55"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/util/grid.hpp
     title: "\u30B0\u30EA\u30C3\u30C9"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/util/number.hpp
     title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/util/search.hpp
     title: "\u63A2\u7D22"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/util/sequence.hpp
     title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/util/string.hpp
     title: "\u6587\u5B57\u5217"
   _extendedRequiredBy:
   - icon: ':warning:'
     path: main.cpp
     title: "main\u30D5\u30A1\u30A4\u30EB"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedVerifiedWith:
@@ -42,12 +42,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/struct.union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
     title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -108,8 +108,8 @@ data:
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2026-01-03 21:52:15+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2026-01-03 22:01:29+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/struct.lazy_segment_tree.test.cpp
   - tests/struct.fenwick_tree.test.cpp

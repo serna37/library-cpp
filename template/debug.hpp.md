@@ -125,9 +125,9 @@ data:
     \          break;\n        }\n        if (i++) _print_sep();\n        _print(x.front());\n\
     \        x.pop_front();\n    }\n    _print_a_end();\n}\n// =====================================\n\
     // base\n// =====================================\ntemplate <typename T> void\
-    \ print(const T &v, const string &name) {\n    cerr << \"\\033[90m[debug]\\033[36m\
-    \ \" << name << \"\\033[m => \";\n    _print(v);\n    _print_LF();\n}\n#define\
-    \ debug(...) print(__VA_ARGS__, #__VA_ARGS__)\n// cpp_dump\n// https://zenn.dev/sassan/articles/19db660e4da0a4\n\
+    \ print_debug(const T &v, const string &name) {\n    cerr << \"\\033[90m[debug]\\\
+    033[36m \" << name << \"\\033[m => \";\n    _print(v);\n    _print_LF();\n}\n\
+    #define debug(...) print_debug(__VA_ARGS__, #__VA_ARGS__)\n// cpp_dump\n// https://zenn.dev/sassan/articles/19db660e4da0a4\n\
     // #include \"cpp-dump.hpp\"\n// #define debug(...) cpp_dump(__VA_ARGS__)\n"
   code: "#pragma once\n/**\n * @brief \u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044\
     debug\u51FA\u529B\n */\n#include <cxxabi.h>\n#include <iostream>\n#include <map>\n\
@@ -243,15 +243,15 @@ data:
     \          break;\n        }\n        if (i++) _print_sep();\n        _print(x.front());\n\
     \        x.pop_front();\n    }\n    _print_a_end();\n}\n// =====================================\n\
     // base\n// =====================================\ntemplate <typename T> void\
-    \ print(const T &v, const string &name) {\n    cerr << \"\\033[90m[debug]\\033[36m\
-    \ \" << name << \"\\033[m => \";\n    _print(v);\n    _print_LF();\n}\n#define\
-    \ debug(...) print(__VA_ARGS__, #__VA_ARGS__)\n// cpp_dump\n// https://zenn.dev/sassan/articles/19db660e4da0a4\n\
+    \ print_debug(const T &v, const string &name) {\n    cerr << \"\\033[90m[debug]\\\
+    033[36m \" << name << \"\\033[m => \";\n    _print(v);\n    _print_LF();\n}\n\
+    #define debug(...) print_debug(__VA_ARGS__, #__VA_ARGS__)\n// cpp_dump\n// https://zenn.dev/sassan/articles/19db660e4da0a4\n\
     // #include \"cpp-dump.hpp\"\n// #define debug(...) cpp_dump(__VA_ARGS__)\n"
   dependsOn: []
   isVerificationFile: false
   path: template/debug.hpp
   requiredBy: []
-  timestamp: '2026-01-03 21:52:15+09:00'
+  timestamp: '2026-01-03 22:01:29+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: template/debug.hpp

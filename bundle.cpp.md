@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   _extendedRequiredBy: []
@@ -755,7 +755,7 @@ data:
   isVerificationFile: false
   path: bundle.cpp
   requiredBy: []
-  timestamp: '2026-01-03 21:52:15+09:00'
+  timestamp: '2026-01-03 22:01:29+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundle.cpp
