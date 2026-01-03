@@ -1,4 +1,5 @@
 #pragma once
+#include "library/struct/monoid.hpp"
 /**
  * @brief Lazy Segment Tree 区間更新 区間取得
  * @note 演算op e 更新op e 作用op

@@ -1,8 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F"
 #include "template/template.hpp"
-#include "library/struct/monoid.hpp"
-#include "library/struct/lazy_segment_tree.hpp"
+#include "library/segtree/lazy_segment_tree.hpp"
 /**
  * @brief 遅延セグ木のテスト:RMQ RUQ
  */

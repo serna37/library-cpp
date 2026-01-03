@@ -1,5 +1,6 @@
 #pragma once
 #include "library/struct/edge.hpp"
+#include "library/struct/union_find.hpp"
 /**
  * @brief 最小全域木
  */

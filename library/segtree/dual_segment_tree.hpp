@@ -1,4 +1,5 @@
 #pragma once
+#include "library/struct/monoid.hpp"
 /**
  * @brief Dual Segment Tree 区間更新 1点取得
  */

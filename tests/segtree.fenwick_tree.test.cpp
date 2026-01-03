@@ -1,23 +1,24 @@
 #define PROBLEM                                                                \
-    "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A"
+    "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B"
 #include "template/template.hpp"
-#include "library/struct/monoid.hpp"
-#include "library/struct/segment_tree.hpp"
+#include "library/segtree/fenwick_tree.hpp"
 /**
- * @brief セグ木のテスト:RMQ
+ * @brief Fenwick Treeのテスト:RSQ
  */
 void solve() {
     int N, Q;
     cin >> N >> Q;
-    SegmentTree<int> seg(Monoid::Min::op, Monoid::Min::e, N);
+    FenwickTree fwk(N);
     while (Q--) {
         int com, x, y;
         cin >> com >> x >> y;
         if (com == 0) {
-            seg.set(x, y);
+            --x;
+            fwk.add(x, y);
         }
         if (com == 1) {
-            print(seg.prod(x, y + 1));
+            --x, --y;
+            print(fwk.sum(y) - fwk.sum(x - 1));
         }
     }
 }
