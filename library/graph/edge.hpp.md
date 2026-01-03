@@ -19,7 +19,7 @@ data:
   isVerificationFile: false
   path: library/graph/edge.hpp
   requiredBy: []
-  timestamp: '2026-01-03 23:04:42+09:00'
+  timestamp: '2026-01-03 23:06:50+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/graph/edge.hpp

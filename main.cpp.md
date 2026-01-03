@@ -50,7 +50,8 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     document_title: "\U0001F36A\U0001F9F8\U0001F43E"
-    links: []
+    links:
+    - https://serna37.github.io/library-cpp/
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -64,7 +65,7 @@ data:
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#include \"template/template.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\
-    \n */\nvoid solve() {\n}\n"
+    \n * @note https://serna37.github.io/library-cpp/\n */\nvoid solve() {\n}\n"
   dependsOn:
   - template/template.hpp
   - template/includes.hpp
@@ -83,7 +84,7 @@ data:
   isVerificationFile: false
   path: main.cpp
   requiredBy: []
-  timestamp: '2026-01-03 23:04:42+09:00'
+  timestamp: '2026-01-03 23:06:50+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: main.cpp
