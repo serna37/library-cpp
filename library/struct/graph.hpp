@@ -1,15 +1,8 @@
-
-/** ======================================= */
-/**               グラフ                    */
-/** ======================================= */
 #pragma once
-struct Edge {
-    int from, to;
-    long long cost;
-    Edge(int from, int to, long long cost = 1)
-        : from(from), to(to), cost(cost) {
-    }
-};
+#include "library/struct/edge.hpp"
+/**
+ * @brief グラフ
+ */
 struct Graph {
   private:
     int N;
@@ -29,9 +22,9 @@ struct Graph {
         G[from].push_back(Edge(from, to, cost));
     }
     // (双方向)辺を張る
-    void add_both(int from, int to) {
-        G[from].push_back(Edge(from, to));
-        G[to].push_back(Edge(to, from));
+    void add_both(int from, int to, long long cost = 1) {
+        G[from].push_back(Edge(from, to, cost));
+        G[to].push_back(Edge(to, from, cost));
     }
     // 経路復元
     vector<int> route_restore(const vector<int> &route, int goal) {
@@ -84,6 +77,9 @@ struct Graph {
         }
         return {weight, route};
     }
+    // TODO ベルマンフォード
+    // TODO ワーシャルフロイド
+    // TODO サイクル検出
     /**
      * DAGのトポロジカルソート
      */
@@ -105,9 +101,6 @@ struct Graph {
     }
     // TODO cc
     // TODO scc
-    // TODO ベルマンフォード
-    // TODO サイクル検出
     // TODO クラスカル
-    // TODO ワーシャルフロイド
     // TODO ドキュメント
 };
