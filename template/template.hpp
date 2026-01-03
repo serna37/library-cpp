@@ -15,6 +15,9 @@ using namespace std;
 #include "library/def/io.hpp"
 #include "library/def/type.hpp"
 #include "library/def/const.hpp"
+/** ======================================= */
+/**              main                       */
+/** ======================================= */
 void solve();
 signed main() {
     solve();
@@ -22,3 +25,4 @@ signed main() {
 // -----------------------------------------
 // #include "template/template.hpp" is done.
 // -----------------------------------------
+#include "template/lib.hpp"

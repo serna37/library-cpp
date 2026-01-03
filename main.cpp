@@ -1,5 +1,4 @@
 #include "template/template.hpp"
-// #include "template/lib.hpp"
 // #include "library/struct/graph.hpp"
 // #include "library/struct/union_find.hpp"
 // #include "library/struct/fenwick_tree.hpp"
