@@ -105,7 +105,7 @@ data:
   isVerificationFile: true
   path: tests/struct.lazy_segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-03 22:01:29+09:00'
+  timestamp: '2026-01-03 22:10:36+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/struct.lazy_segment_tree.test.cpp

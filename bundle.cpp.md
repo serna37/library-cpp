@@ -333,9 +333,9 @@ data:
     \u63DB\u3048\u3066\u4F7F\u3046\n    void dfs_memo() {\n        map<int, int> memo;\n\
     \        auto dfs = [&](auto f, int n) {\n            if (n <= 1) return n;\n\
     \            if (memo.count(n)) return memo[n];\n            return memo[n] =\
-    \ f(f, n - 1) + f(f, n - 2);\n        };\n        // int ans = dfs(dfs, N);\n\
-    \    }\n};\n\n\n/** ======================================= */\n/**          \
-    \     \u30B0\u30EA\u30C3\u30C9                  */\n/** =======================================\
+    \ f(f, n - 1) + f(f, n - 2);\n        };\n        (void)dfs; // unused\n     \
+    \   // int ans = dfs(dfs, N);\n    }\n};\n\n\n/** =======================================\
+    \ */\n/**               \u30B0\u30EA\u30C3\u30C9                  */\n/** =======================================\
     \ */\n\nclass Grid {\n  public:\n    // \u884C\u5217\u306E\u8EE2\u7F6E\n    template\
     \ <typename T>\n    vector<vector<T>> transpose(const vector<vector<T>> &G) {\n\
     \        int H = G.size(), W = G[0].size();\n        vector<vector<T>> _G(W, vector<T>(H));\n\
@@ -701,9 +701,9 @@ data:
     \u63DB\u3048\u3066\u4F7F\u3046\n    void dfs_memo() {\n        map<int, int> memo;\n\
     \        auto dfs = [&](auto f, int n) {\n            if (n <= 1) return n;\n\
     \            if (memo.count(n)) return memo[n];\n            return memo[n] =\
-    \ f(f, n - 1) + f(f, n - 2);\n        };\n        // int ans = dfs(dfs, N);\n\
-    \    }\n};\n\n\n/** ======================================= */\n/**          \
-    \     \u30B0\u30EA\u30C3\u30C9                  */\n/** =======================================\
+    \ f(f, n - 1) + f(f, n - 2);\n        };\n        (void)dfs; // unused\n     \
+    \   // int ans = dfs(dfs, N);\n    }\n};\n\n\n/** =======================================\
+    \ */\n/**               \u30B0\u30EA\u30C3\u30C9                  */\n/** =======================================\
     \ */\n\nclass Grid {\n  public:\n    // \u884C\u5217\u306E\u8EE2\u7F6E\n    template\
     \ <typename T>\n    vector<vector<T>> transpose(const vector<vector<T>> &G) {\n\
     \        int H = G.size(), W = G[0].size();\n        vector<vector<T>> _G(W, vector<T>(H));\n\
@@ -755,7 +755,7 @@ data:
   isVerificationFile: false
   path: bundle.cpp
   requiredBy: []
-  timestamp: '2026-01-03 22:01:29+09:00'
+  timestamp: '2026-01-03 22:10:36+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundle.cpp
