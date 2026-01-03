@@ -8,6 +8,35 @@
 #else
 #define debug(...)
 #endif
+/**
+ * @brief 必要なincludeを用意
+ */
+#include <algorithm>
+#include <array>
+#include <bitset>
+#include <cassert>
+#include <complex>
+#include <chrono>
+#include <deque>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <limits.h>
+#include <map>
+#include <math.h>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <tuple>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -126,6 +155,8 @@ signed main() {
 // #include "library/struct/fenwick_tree.hpp"
 // #include "library/struct/monoid.hpp"
 // #include "library/struct/segment_tree.hpp"
+// #include "library/struct/dual_segment_tree.hpp"
+// #include "library/struct/lazy_segment_tree.hpp"
 /**
  * @brief 🍪🧸🐾
  */
