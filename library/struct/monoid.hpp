@@ -3,101 +3,61 @@
 /**              モノイド                   */
 /** ======================================= */
 #pragma once
-// カスタムモノイド
-template <typename U, typename F> struct Monoid {
-    using T = U;
-
-  private:
-    T _e;
-    F _op;
-
-  public:
-    Monoid(T e, F op) : _e(e), _op(op) {
-    }
-    T op(const T &x, const T &y) {
-        return _op(x, y);
-    }
-    T e() {
-        return _e;
-    }
-};
-// 最小値モノイド
-template <typename U> struct MonoidMin {
-    using T = U;
-    T op(const T &x, const T &y) {
-        return min(x, y);
-    }
-    T e() {
-        return INT_MAX;
-    }
-};
-// 最大値モノイド
-template <typename U> struct MonoidMax {
-    using T = U;
-    T op(const T &x, const T &y) {
-        return max(x, y);
-    }
-    T e() {
-        return -INT_MAX;
-    }
-};
-// 加算モノイド
-template <typename U> struct MonoidAdd {
-    using T = U;
-    T op(const T &x, const T &y) {
-        return x + y;
-    }
-    T e() {
-        return 0ll;
-    }
-};
-// 乗算モノイド
-template <typename U> struct MonoidMul {
-    using T = U;
-    T op(const T &x, const T &y) {
-        return x * y;
-    }
-    T e() {
-        return 1ll;
-    }
-};
-// 最大公約数モノイド
-template <typename U> struct MonoidGcd {
-    using T = U;
-    T op(const T &x, const T &y) {
-        return gcd(x, y);
-    }
-    T e() {
-        return 0ll;
-    }
-};
-// 最小公倍数モノイド
-template <typename U> struct MonoidLcm {
-    using T = U;
-    T op(const T &x, const T &y) {
-        return lcm(x, y);
-    }
-    T e() {
-        return 1ll;
-    }
-};
-// 代入モノイド
-template <typename U> struct MonoidSet {
-    using T = U;
-    T op(const T &x, const T &y) {
-        return y == INT_MAX ? x : y;
-    }
-    T e() {
-        return INT_MAX;
-    }
-};
-// 排他的論理和モノイド
-template <typename U> struct MonoidXor {
-    using T = U;
-    T op(const T &x, const T &y) {
-        return x ^ y;
-    }
-    T e() {
-        return 0ll;
-    }
+struct Monoid {
+    // 最小値
+    struct Min {
+        static constexpr int e = INT_MAX;
+        static int op(int x, int y) {
+            return min(x, y);
+        }
+    };
+    // 最大値
+    struct Max {
+        static constexpr int e = -INT_MAX;
+        static int op(int x, int y) {
+            return max(x, y);
+        }
+    };
+    // 加算
+    struct Add {
+        static constexpr int e = 0;
+        static int op(int x, int y) {
+            return x + y;
+        }
+    };
+    // 乗算
+    struct Mul {
+        static constexpr int e = 1;
+        static int op(int x, int y) {
+            return x * y;
+        }
+    };
+    // 代入
+    struct Set {
+        static constexpr int e = INT_MAX;
+        static int op(int x, int y) {
+            return y == INT_MAX ? x : y;
+        }
+    };
+    // 最大公約数
+    struct Gcd {
+        static constexpr int e = 0;
+        static int op(int x, int y) {
+            return gcd(x, y);
+        }
+    };
+    // 最小公倍数
+    struct Lcm {
+        static constexpr int e = 1;
+        static int op(int x, int y) {
+            return lcm(x, y);
+        }
+    };
+    // 排他的論理和
+    struct Xor {
+        static constexpr int e = 0;
+        static int op(int x, int y) {
+            return x ^ y;
+        }
+    };
 };

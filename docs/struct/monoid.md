@@ -4,11 +4,10 @@ documentation_of: //library/struct/monoid.hpp
 ---
 
 
-カスタム性として
+有名なモノイドを作っておく。以下のように呼べる。
 
 ```cpp
-Monoid m(-1e9, [](int a, int b) { return max(a, b); });
+SegmentTree<int> seg(Monoid::Min::op, Monoid::Min::e, N);
 ```
 
-その他、有名なモノイドを作っておく
 
