@@ -703,6 +703,7 @@ class Search {
             if (memo.count(n)) return memo[n];
             return memo[n] = f(f, n - 1) + f(f, n - 2);
         };
+        (void)dfs; // unused
         // int ans = dfs(dfs, N);
     }
 };
