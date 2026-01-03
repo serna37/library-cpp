@@ -5,7 +5,7 @@ data:
   - icon: ':warning:'
     path: main.cpp
     title: "main\u30D5\u30A1\u30A4\u30EB"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedVerifiedWith:
@@ -24,12 +24,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/struct.union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/template.test.cpp
     title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -59,8 +59,8 @@ data:
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2026-01-03 21:39:29+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-03 21:52:15+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/struct.lazy_segment_tree.test.cpp
   - tests/struct.fenwick_tree.test.cpp

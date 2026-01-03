@@ -1,24 +1,45 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/common.hpp
     title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/const.hpp
     title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/io.hpp
     title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/type.hpp
     title: "\u578B"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
+    path: library/util/geometry.hpp
+    title: "\u5E7E\u4F55"
+  - icon: ':question:'
+    path: library/util/grid.hpp
+    title: "\u30B0\u30EA\u30C3\u30C9"
+  - icon: ':question:'
+    path: library/util/number.hpp
+    title: "\u6570\u306E\u6027\u8CEA"
+  - icon: ':question:'
+    path: library/util/search.hpp
+    title: "\u63A2\u7D22"
+  - icon: ':question:'
+    path: library/util/sequence.hpp
+    title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
+  - icon: ':question:'
+    path: library/util/string.hpp
+    title: "\u6587\u5B57\u5217"
+  - icon: ':question:'
     path: template/includes.hpp
     title: "\u57FA\u672Cinclude\u7528"
+  - icon: ':question:'
+    path: template/lib.hpp
+    title: "library/util/*.hpp\u306Einclude\u7528"
   _extendedRequiredBy:
   - icon: ':warning:'
     path: main.cpp
@@ -39,12 +60,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/struct.union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/template.test.cpp
     title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "\u0E05^>\u03C9<^\u0E05"
     links:
@@ -63,9 +84,11 @@ data:
     \ */\n#ifdef LOCAL\n#include \"template/debug.hpp\"\n#else\n#define debug(...)\n\
     #endif\n#include \"template/includes.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
     \ std;\n#include \"library/def/common.hpp\"\n#include \"library/def/io.hpp\"\n\
-    #include \"library/def/type.hpp\"\n#include \"library/def/const.hpp\"\nvoid solve();\n\
-    signed main() {\n    solve();\n}\n// -----------------------------------------\n\
-    // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n"
+    #include \"library/def/type.hpp\"\n#include \"library/def/const.hpp\"\n/** =======================================\
+    \ */\n/**              main                       */\n/** =======================================\
+    \ */\nvoid solve();\nsigned main() {\n    solve();\n}\n// -----------------------------------------\n\
+    // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n\
+    #include \"template/lib.hpp\"\n"
   dependsOn:
   - template/includes.hpp
   - bits/stdc++.h
@@ -73,12 +96,19 @@ data:
   - library/def/io.hpp
   - library/def/type.hpp
   - library/def/const.hpp
+  - template/lib.hpp
+  - library/util/number.hpp
+  - library/util/string.hpp
+  - library/util/sequence.hpp
+  - library/util/search.hpp
+  - library/util/grid.hpp
+  - library/util/geometry.hpp
   isVerificationFile: false
   path: template/template.hpp
   requiredBy:
   - main.cpp
-  timestamp: '2026-01-03 21:39:29+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-03 21:52:15+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/struct.lazy_segment_tree.test.cpp
   - tests/struct.fenwick_tree.test.cpp

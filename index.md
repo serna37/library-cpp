@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: bits
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: bits/stdc++.h
       title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - name: .
@@ -21,16 +21,16 @@ data:
       title: "C++\u30E9\u30A4\u30D6\u30E9\u30EA\u30D0\u30F3\u30C9\u30E9"
   - name: library/def
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/def/common.hpp
       title: "\u5171\u901A"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/def/const.hpp
       title: "\u5B9A\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/def/io.hpp
       title: "IO\u95A2\u9023"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/def/type.hpp
       title: "\u578B"
   - name: library/struct
@@ -59,22 +59,22 @@ data:
       title: UnionFind
   - name: library/util
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/util/geometry.hpp
       title: "\u5E7E\u4F55"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/util/grid.hpp
       title: "\u30B0\u30EA\u30C3\u30C9"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/util/number.hpp
       title: "\u6570\u306E\u6027\u8CEA"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/util/search.hpp
       title: "\u63A2\u7D22"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/util/sequence.hpp
       title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/util/string.hpp
       title: "\u6587\u5B57\u5217"
   - name: template
@@ -82,13 +82,13 @@ data:
     - icon: ':warning:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/includes.hpp
       title: "\u57FA\u672Cinclude\u7528"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/lib.hpp
       title: "library/util/*.hpp\u306Einclude\u7528"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/template.hpp
       title: "\u0E05^>\u03C9<^\u0E05"
   verificationCategories:
@@ -109,7 +109,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/struct.union_find.test.cpp
       title: "Union Find\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/template.test.cpp
       title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
 layout: toppage

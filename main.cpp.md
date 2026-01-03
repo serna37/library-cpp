@@ -1,25 +1,46 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/common.hpp
     title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/const.hpp
     title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/io.hpp
     title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/type.hpp
     title: "\u578B"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
+    path: library/util/geometry.hpp
+    title: "\u5E7E\u4F55"
+  - icon: ':question:'
+    path: library/util/grid.hpp
+    title: "\u30B0\u30EA\u30C3\u30C9"
+  - icon: ':question:'
+    path: library/util/number.hpp
+    title: "\u6570\u306E\u6027\u8CEA"
+  - icon: ':question:'
+    path: library/util/search.hpp
+    title: "\u63A2\u7D22"
+  - icon: ':question:'
+    path: library/util/sequence.hpp
+    title: "\u914D\u5217\u30FB\u96C6\u5408\u30FB\u6570\u5217"
+  - icon: ':question:'
+    path: library/util/string.hpp
+    title: "\u6587\u5B57\u5217"
+  - icon: ':question:'
     path: template/includes.hpp
     title: "\u57FA\u672Cinclude\u7528"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
+    path: template/lib.hpp
+    title: "library/util/*.hpp\u306Einclude\u7528"
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedRequiredBy: []
@@ -42,12 +63,11 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#include \"template/template.hpp\"\n// #include \"template/lib.hpp\"\n//\
-    \ #include \"library/struct/graph.hpp\"\n// #include \"library/struct/union_find.hpp\"\
-    \n// #include \"library/struct/fenwick_tree.hpp\"\n// #include \"library/struct/monoid.hpp\"\
-    \n// #include \"library/struct/segment_tree.hpp\"\n// #include \"library/struct/dual_segment_tree.hpp\"\
-    \n// #include \"library/struct/lazy_segment_tree.hpp\"\n/**\n * @brief \U0001F36A\
-    \U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n"
+  code: "#include \"template/template.hpp\"\n// #include \"library/struct/graph.hpp\"\
+    \n// #include \"library/struct/union_find.hpp\"\n// #include \"library/struct/fenwick_tree.hpp\"\
+    \n// #include \"library/struct/monoid.hpp\"\n// #include \"library/struct/segment_tree.hpp\"\
+    \n// #include \"library/struct/dual_segment_tree.hpp\"\n// #include \"library/struct/lazy_segment_tree.hpp\"\
+    \n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n"
   dependsOn:
   - template/template.hpp
   - template/includes.hpp
@@ -56,10 +76,17 @@ data:
   - library/def/io.hpp
   - library/def/type.hpp
   - library/def/const.hpp
+  - template/lib.hpp
+  - library/util/number.hpp
+  - library/util/string.hpp
+  - library/util/sequence.hpp
+  - library/util/search.hpp
+  - library/util/grid.hpp
+  - library/util/geometry.hpp
   isVerificationFile: false
   path: main.cpp
   requiredBy: []
-  timestamp: '2026-01-03 21:39:29+09:00'
+  timestamp: '2026-01-03 21:52:15+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: main.cpp
