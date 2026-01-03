@@ -1,8 +1,7 @@
-
-/** ======================================= */
-/**              モノイド                   */
-/** ======================================= */
 #pragma once
+/**
+ * @brief モノイド
+ */
 struct Monoid {
     // 最小値
     struct Min {
@@ -61,6 +60,9 @@ struct Monoid {
         }
     };
 };
+/**
+ * @brief モノイド作用
+ */
 struct MonoidAct {
     // 演算: 加算  更新: 加算
     struct AddAdd {

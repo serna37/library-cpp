@@ -4,6 +4,9 @@
 #include "library/util/search.hpp"
 #include "library/util/grid.hpp"
 #include "library/util/geometry.hpp"
+/**
+ * @brief util系
+ */
 namespace lib {
 Number num;
 String str;

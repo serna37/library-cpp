@@ -1,8 +1,7 @@
-
-/** ======================================= */
-/**              配列・数列                 */
-/** ======================================= */
 #pragma once
+/**
+ * @brief 配列・数列
+ */
 class Sequence {
   public:
     template <typename T> T min(const vector<T> &v) {
@@ -140,7 +139,8 @@ class Sequence {
      * 2次元平面での累積和
      * 包除: (s,t)~(x,y) = S[y][x]-S[y][s]-S[t][x]+S[t][s]
      */
-    template <typename T> vector<vector<long long>> zeta_2D(const vector<T> &G) {
+    template <typename T>
+    vector<vector<long long>> zeta_2D(const vector<T> &G) {
         int H = G.size(), W = G[0].size();
         vector<vector<long long>> S(H + 1, vector<long long>(W + 1));
         for (int i = 0; i < H; ++i) { // 横向き
@@ -164,7 +164,8 @@ class Sequence {
      *            S[Rx][Ly][Lz] - S[Lx][Ly][Lz];
      */
     template <typename T>
-    vector<vector<vector<long long>>> zeta_3D(const vector<vector<vector<T>>> &A) {
+    vector<vector<vector<long long>>>
+    zeta_3D(const vector<vector<vector<T>>> &A) {
         vector<vector<vector<long long>>> S;
         int szx = A.size(), szy = A[0].size(), szz = A[0][0].size();
         S.resize(szx + 1, vector<vector<long long>>(
