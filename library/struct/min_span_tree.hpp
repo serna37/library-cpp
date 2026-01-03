@@ -1,0 +1,10 @@
+#pragma once
+#include "library/struct/edge.hpp"
+/**
+ * @brief 最小全域木
+ */
+struct MinSpanTree {
+    long long cost;
+    vector<Edge> edges;
+};
+// TODO クラスカル
