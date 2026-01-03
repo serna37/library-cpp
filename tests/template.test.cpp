@@ -1,7 +1,6 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include "template/template.hpp"
-#include "template/lib.hpp"
 /**
  * @brief library/util/xxx.hppのユニットテスト
  * 出力すると問題に正解できないのでassertのみ
