@@ -8,6 +8,7 @@
 #else
 #define debug(...)
 #endif
+#include "bits/includes.h"
 #include <bits/stdc++.h>
 using namespace std;
 #include "library/def/common.hpp"
