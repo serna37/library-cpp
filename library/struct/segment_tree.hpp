@@ -11,8 +11,8 @@ template <typename T> struct SegmentTree {
     int N, size, log = 1;
     vector<T> node;
     void init() {
-        while ((1 << log) < N) ++log;
-        node.assign((size = 1 << log) << 1, e);
+        while ((1ll << log) < N) ++log;
+        node.assign((size = 1ll << log) << 1, e);
     }
 
   public:

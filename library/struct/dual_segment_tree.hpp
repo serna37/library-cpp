@@ -11,8 +11,8 @@ template <typename T> struct DualSegmentTree {
     int N, size, log = 1;
     vector<T> node;
     void init() {
-        while ((1 << log) < N) ++log;
-        node.assign((size = 1 << log) << 1, e);
+        while ((1ll << log) < N) ++log;
+        node.assign((size = 1ll << log) << 1, e);
     }
     void apply_at(int k, T a) {
         node[k] = op(node[k], a);

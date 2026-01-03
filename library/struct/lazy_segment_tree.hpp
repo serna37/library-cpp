@@ -18,15 +18,15 @@ template <typename T, typename U> struct LazySegmentTree {
     vector<T> node;
     vector<U> lazy;
     void init() {
-        while ((1 << log) < N) ++log;
-        node.assign((size = 1 << log) << 1, prod_e);
+        while ((1ll << log) < N) ++log;
+        node.assign((size = 1ll << log) << 1, prod_e);
         lazy.assign(size, upd_e);
     }
     void update(int i) {
         node[i] = prod_op(node[i << 1 | 0], node[i << 1 | 1]);
     }
     void apply_at(int k, U a) {
-        int topbit = k == 0 ? -1 : 31 - __builtin_clz(k);
+        int topbit = k == 0 ? -1 : 31 - __builtin_clzll(k);
         long long sz = 1 << (log - topbit);
         node[k] = act_op(node[k], a, sz);
         if (k < size) lazy[k] = upd_op(lazy[k], a);
