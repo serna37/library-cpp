@@ -4,9 +4,6 @@ data:
   - name: bits
     pages:
     - icon: ':heavy_check_mark:'
-      path: bits/includes.h
-      title: "\u5FC5\u8981\u306Ainclude\u3092\u7528\u610F"
-    - icon: ':heavy_check_mark:'
       path: bits/stdc++.h
       title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - name: .
@@ -85,6 +82,9 @@ data:
     - icon: ':warning:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
+    - icon: ':heavy_check_mark:'
+      path: template/includes.hpp
+      title: "\u57FA\u672Cinclude\u7528"
     - icon: ':heavy_check_mark:'
       path: template/lib.hpp
       title: "library/util/*.hpp\u306Einclude\u7528"

@@ -2,9 +2,6 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: bits/includes.h
-    title: "\u5FC5\u8981\u306Ainclude\u3092\u7528\u610F"
-  - icon: ':heavy_check_mark:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - icon: ':heavy_check_mark:'
@@ -37,6 +34,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/util/string.hpp
     title: "\u6587\u5B57\u5217"
+  - icon: ':heavy_check_mark:'
+    path: template/includes.hpp
+    title: "\u57FA\u672Cinclude\u7528"
   - icon: ':heavy_check_mark:'
     path: template/lib.hpp
     title: "library/util/*.hpp\u306Einclude\u7528"
@@ -196,7 +196,7 @@ data:
     \    test_geometry();\n}\n"
   dependsOn:
   - template/template.hpp
-  - bits/includes.h
+  - template/includes.hpp
   - bits/stdc++.h
   - library/def/common.hpp
   - library/def/io.hpp
@@ -212,7 +212,7 @@ data:
   isVerificationFile: true
   path: tests/template.test.cpp
   requiredBy: []
-  timestamp: '2026-01-03 21:26:04+09:00'
+  timestamp: '2026-01-03 21:39:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/template.test.cpp

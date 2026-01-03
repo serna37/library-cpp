@@ -2,9 +2,6 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: bits/includes.h
-    title: "\u5FC5\u8981\u306Ainclude\u3092\u7528\u610F"
-  - icon: ':heavy_check_mark:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - icon: ':heavy_check_mark:'
@@ -22,6 +19,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/struct/union_find.hpp
     title: UnionFind
+  - icon: ':heavy_check_mark:'
+    path: template/includes.hpp
+    title: "\u57FA\u672Cinclude\u7528"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
@@ -58,7 +58,7 @@ data:
     \ print(uf.find(x) == uf.find(y) ? 1 : 0);\n        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - bits/includes.h
+  - template/includes.hpp
   - bits/stdc++.h
   - library/def/common.hpp
   - library/def/io.hpp
@@ -68,7 +68,7 @@ data:
   isVerificationFile: true
   path: tests/struct.union_find.test.cpp
   requiredBy: []
-  timestamp: '2026-01-03 21:26:04+09:00'
+  timestamp: '2026-01-03 21:39:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/struct.union_find.test.cpp

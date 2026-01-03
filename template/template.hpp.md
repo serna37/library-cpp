@@ -2,9 +2,6 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: bits/includes.h
-    title: "\u5FC5\u8981\u306Ainclude\u3092\u7528\u610F"
-  - icon: ':heavy_check_mark:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - icon: ':heavy_check_mark:'
@@ -19,6 +16,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/def/type.hpp
     title: "\u578B"
+  - icon: ':heavy_check_mark:'
+    path: template/includes.hpp
+    title: "\u57FA\u672Cinclude\u7528"
   _extendedRequiredBy:
   - icon: ':warning:'
     path: main.cpp
@@ -61,13 +61,13 @@ data:
     \ #ifndef other than include guards\n"
   code: "/**\n * @brief \u0E05^>\u03C9<^\u0E05\n * @author serna37\n * @note https://serna37.github.io/library-cpp/\n\
     \ */\n#ifdef LOCAL\n#include \"template/debug.hpp\"\n#else\n#define debug(...)\n\
-    #endif\n#include \"bits/includes.h\"\n#include <bits/stdc++.h>\nusing namespace\
+    #endif\n#include \"template/includes.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
     \ std;\n#include \"library/def/common.hpp\"\n#include \"library/def/io.hpp\"\n\
     #include \"library/def/type.hpp\"\n#include \"library/def/const.hpp\"\nvoid solve();\n\
     signed main() {\n    solve();\n}\n// -----------------------------------------\n\
     // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n"
   dependsOn:
-  - bits/includes.h
+  - template/includes.hpp
   - bits/stdc++.h
   - library/def/common.hpp
   - library/def/io.hpp
@@ -77,7 +77,7 @@ data:
   path: template/template.hpp
   requiredBy:
   - main.cpp
-  timestamp: '2026-01-03 21:26:04+09:00'
+  timestamp: '2026-01-03 21:39:29+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/struct.lazy_segment_tree.test.cpp
