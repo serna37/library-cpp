@@ -3,6 +3,7 @@
 /**              モノイド                   */
 /** ======================================= */
 #pragma once
+// カスタムモノイド
 template <typename U, typename F> struct Monoid {
     using T = U;
 
@@ -20,6 +21,7 @@ template <typename U, typename F> struct Monoid {
         return _e;
     }
 };
+// 最小値モノイド
 template <typename U> struct MonoidMin {
     using T = U;
     T op(const T &x, const T &y) {
@@ -29,6 +31,7 @@ template <typename U> struct MonoidMin {
         return 2147483647;
     }
 };
+// 最大値モノイド
 template <typename U> struct MonoidMax {
     using T = U;
     T op(const T &x, const T &y) {
@@ -38,6 +41,7 @@ template <typename U> struct MonoidMax {
         return -2147483647;
     }
 };
+// 加算モノイド
 template <typename U> struct MonoidAdd {
     using T = U;
     T op(const T &x, const T &y) {
@@ -47,6 +51,7 @@ template <typename U> struct MonoidAdd {
         return 0ll;
     }
 };
+// 乗算モノイド
 template <typename U> struct MonoidMul {
     using T = U;
     T op(const T &x, const T &y) {
@@ -56,6 +61,7 @@ template <typename U> struct MonoidMul {
         return 1ll;
     }
 };
+// 最大公約数モノイド
 template <typename U> struct MonoidGcd {
     using T = U;
     T op(const T &x, const T &y) {
@@ -65,6 +71,7 @@ template <typename U> struct MonoidGcd {
         return 0ll;
     }
 };
+// 最小公倍数モノイド
 template <typename U> struct MonoidLcm {
     using T = U;
     T op(const T &x, const T &y) {
@@ -74,6 +81,7 @@ template <typename U> struct MonoidLcm {
         return 1ll;
     }
 };
+// 排他的論理和モノイド
 template <typename U> struct MonoidXor {
     using T = U;
     T op(const T &x, const T &y) {
