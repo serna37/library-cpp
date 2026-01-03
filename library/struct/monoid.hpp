@@ -92,4 +92,5 @@ struct MonoidAct {
             return a == Monoid::Set::e ? node : a;
         }
     };
+    // TODO もっと増やす
 };

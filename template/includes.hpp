@@ -1,6 +1,3 @@
-/**
- * @brief 必要なincludeを用意
- */
 #include <algorithm>
 #include <array>
 #include <bitset>
@@ -26,3 +23,6 @@
 #include <unordered_set>
 #include <utility>
 #include <vector>
+// -----------------------------------------
+// #include "template/includes.hpp" is done.
+// -----------------------------------------

@@ -8,9 +8,6 @@
 #else
 #define debug(...)
 #endif
-/**
- * @brief 必要なincludeを用意
- */
 #include <algorithm>
 #include <array>
 #include <bitset>
@@ -36,6 +33,9 @@
 #include <unordered_set>
 #include <utility>
 #include <vector>
+// -----------------------------------------
+// #include "template/includes.hpp" is done.
+// -----------------------------------------
 
 #include <bits/stdc++.h>
 using namespace std;
