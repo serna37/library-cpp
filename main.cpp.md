@@ -1,22 +1,22 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/common.hpp
     title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/const.hpp
     title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/io.hpp
     title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/def/type.hpp
     title: "\u578B"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u0E05^>\u03C9<^\u0E05"
   _extendedRequiredBy: []
@@ -42,8 +42,9 @@ data:
   code: "#include \"template/template.hpp\"\n// #include \"template/lib.hpp\"\n//\
     \ #include \"library/struct/graph.hpp\"\n// #include \"library/struct/union_find.hpp\"\
     \n// #include \"library/struct/fenwick_tree.hpp\"\n// #include \"library/struct/monoid.hpp\"\
-    \n// #include \"library/struct/segment_tree.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\
-    \U0001F43E\n */\nvoid solve() {\n}\n"
+    \n// #include \"library/struct/segment_tree.hpp\"\n// #include \"library/struct/dual_segment_tree.hpp\"\
+    \n// #include \"library/struct/lazy_segment_tree.hpp\"\n/**\n * @brief \U0001F36A\
+    \U0001F9F8\U0001F43E\n */\nvoid solve() {\n}\n"
   dependsOn:
   - template/template.hpp
   - bits/stdc++.h
@@ -54,7 +55,7 @@ data:
   isVerificationFile: false
   path: main.cpp
   requiredBy: []
-  timestamp: '2026-01-02 22:06:17+09:00'
+  timestamp: '2026-01-03 21:07:12+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: main.cpp

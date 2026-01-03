@@ -77,7 +77,7 @@ data:
   path: library/util/number.hpp
   requiredBy:
   - template/lib.hpp
-  timestamp: '2026-01-02 22:06:17+09:00'
+  timestamp: '2026-01-03 21:07:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/template.test.cpp
