@@ -81,6 +81,16 @@ template <typename U> struct MonoidLcm {
         return 1ll;
     }
 };
+// 代入モノイド
+template <typename U> struct MonoidSet {
+    using T = U;
+    T op(const T &x, const T &y) {
+        return y == 2147483647 ? x : y;
+    }
+    T e() {
+        return 2147483647;
+    }
+};
 // 排他的論理和モノイド
 template <typename U> struct MonoidXor {
     using T = U;
