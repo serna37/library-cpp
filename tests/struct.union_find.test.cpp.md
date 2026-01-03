@@ -45,7 +45,7 @@ data:
     title: "library/util/*.hpp\u306Einclude\u7528"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
-    title: "\u0E05^>\u03C9<^\u0E05"
+    title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -96,7 +96,7 @@ data:
   isVerificationFile: true
   path: tests/struct.union_find.test.cpp
   requiredBy: []
-  timestamp: '2026-01-03 22:41:21+09:00'
+  timestamp: '2026-01-03 22:46:07+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/struct.union_find.test.cpp

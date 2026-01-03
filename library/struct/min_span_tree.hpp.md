@@ -26,7 +26,7 @@ data:
   isVerificationFile: false
   path: library/struct/min_span_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-03 22:41:21+09:00'
+  timestamp: '2026-01-03 22:46:07+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/struct/min_span_tree.hpp

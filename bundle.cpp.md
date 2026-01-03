@@ -366,9 +366,10 @@ data:
     2\u3067\u5272\u3089\u305Along long\u3067\u8FD4\u3059\u3053\u3068\n     */\n  \
     \  template <typename T>\n    double area_square(T x1, T y1, T x2, T y2, T x3,\
     \ T y3, T x4, T y4) {\n        return hypot(x1 - x3, y1 - y3) * hypot(x2 - x4,\
-    \ y2 - y4) / 2.0;\n    }\n};\n\nnamespace lib {\nNumber num;\nString str;\nSequence\
-    \ seq;\nSearch search;\nGrid grid;\nGeometry geo;\n}; // namespace lib\n// -----------------------------------------\n\
-    // #include \"template/lib.hpp\" is done.\n// -----------------------------------------\n\
+    \ y2 - y4) / 2.0;\n    }\n};\n\n/**\n * @brief util\u7CFB\n */\nnamespace lib\
+    \ {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\nGeometry\
+    \ geo;\n}; // namespace lib\n// -----------------------------------------\n//\
+    \ #include \"template/lib.hpp\" is done.\n// -----------------------------------------\n\
     \n\n// #include \"library/struct/graph.hpp\"\n// #include \"library/struct/union_find.hpp\"\
     \n// #include \"library/struct/fenwick_tree.hpp\"\n// #include \"library/struct/monoid.hpp\"\
     \n// #include \"library/struct/segment_tree.hpp\"\n// #include \"library/struct/dual_segment_tree.hpp\"\
@@ -726,9 +727,10 @@ data:
     2\u3067\u5272\u3089\u305Along long\u3067\u8FD4\u3059\u3053\u3068\n     */\n  \
     \  template <typename T>\n    double area_square(T x1, T y1, T x2, T y2, T x3,\
     \ T y3, T x4, T y4) {\n        return hypot(x1 - x3, y1 - y3) * hypot(x2 - x4,\
-    \ y2 - y4) / 2.0;\n    }\n};\n\nnamespace lib {\nNumber num;\nString str;\nSequence\
-    \ seq;\nSearch search;\nGrid grid;\nGeometry geo;\n}; // namespace lib\n// -----------------------------------------\n\
-    // #include \"template/lib.hpp\" is done.\n// -----------------------------------------\n\
+    \ y2 - y4) / 2.0;\n    }\n};\n\n/**\n * @brief util\u7CFB\n */\nnamespace lib\
+    \ {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\nGeometry\
+    \ geo;\n}; // namespace lib\n// -----------------------------------------\n//\
+    \ #include \"template/lib.hpp\" is done.\n// -----------------------------------------\n\
     \n\n// #include \"library/struct/graph.hpp\"\n// #include \"library/struct/union_find.hpp\"\
     \n// #include \"library/struct/fenwick_tree.hpp\"\n// #include \"library/struct/monoid.hpp\"\
     \n// #include \"library/struct/segment_tree.hpp\"\n// #include \"library/struct/dual_segment_tree.hpp\"\
@@ -739,7 +741,7 @@ data:
   isVerificationFile: false
   path: bundle.cpp
   requiredBy: []
-  timestamp: '2026-01-03 22:41:21+09:00'
+  timestamp: '2026-01-03 22:46:07+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: bundle.cpp

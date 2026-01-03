@@ -107,7 +107,7 @@ data:
   path: template/template.hpp
   requiredBy:
   - main.cpp
-  timestamp: '2026-01-03 22:41:21+09:00'
+  timestamp: '2026-01-03 22:46:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/struct.lazy_segment_tree.test.cpp
@@ -118,8 +118,10 @@ data:
   - tests/struct.union_find.test.cpp
 documentation_of: template/template.hpp
 layout: document
-redirect_from:
-- /library/template/template.hpp
-- /library/template/template.hpp.html
-title: "\u0E05^>\u03C9<^\u0E05"
+title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
 ---
+
+いろいろ入れるテンプレ。
+
+最終的にこれ1行のみのincludeですませ、バンドルして提出
+
