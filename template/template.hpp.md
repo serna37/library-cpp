@@ -107,7 +107,7 @@ data:
   path: template/template.hpp
   requiredBy:
   - main.cpp
-  timestamp: '2026-01-05 21:13:50+09:00'
+  timestamp: '2026-01-05 21:21:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp
