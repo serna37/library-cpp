@@ -1,9 +1,9 @@
 #pragma once
 /**
- * 星空木
- * https://rsk0315.hatenablog.com/entry/2019/06/21/174953
- * @brief 区間加算 区間max取得
- * @brief rev = trueで区間minに変更
+ * @brief 星空木 区間加算 区間min/max取得
+ * @note https://rsk0315.hatenablog.com/entry/2019/06/21/174953
+ *
+ * `rev = true` で区間minに変更
  */
 template <bool rev = false> struct StarrySkyTree {
   private:

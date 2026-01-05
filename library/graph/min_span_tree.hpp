@@ -2,7 +2,7 @@
 #include "library/graph/edge.hpp"
 #include "library/struct/union_find.hpp"
 /**
- * @brief 最小全域木
+ * @brief 最小全域木 (kruskal)
  */
 struct MinSpanTree {
     long long cost;

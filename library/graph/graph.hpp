@@ -309,5 +309,4 @@ struct Graph {
         }
         return res;
     }
-    // TODO ドキュメント
 };

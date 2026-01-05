@@ -1,6 +1,6 @@
 #pragma once
 /**
- * @brief UnionFind
+ * @brief UnionFind 素集合データ構造
  */
 struct UnionFind {
   private:
