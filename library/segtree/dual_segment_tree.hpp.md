@@ -50,12 +50,11 @@ data:
     \  \u66F4\u65B0: \u4EE3\u5165\n    struct MinSet {\n        static constexpr int\
     \ op(const int &node, const int &a,\n                                const int\
     \ &size) {\n            (void)size; // unused\n            return a == Monoid::Set::e\
-    \ ? node : a;\n        }\n    };\n    // TODO \u3082\u3063\u3068\u5897\u3084\u3059\
-    \n};\n#line 3 \"library/segtree/dual_segment_tree.hpp\"\n/**\n * @brief Dual Segment\
-    \ Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97\n */\ntemplate <typename T>\
-    \ struct DualSegmentTree {\n    using F = function<T(T, T)>;\n\n  private:\n \
-    \   F op;\n    T e;\n    int N, size, log = 1;\n    vector<T> node;\n    void\
-    \ init() {\n        while ((1ll << log) < N) ++log;\n        node.assign((size\
+    \ ? node : a;\n        }\n    };\n};\n#line 3 \"library/segtree/dual_segment_tree.hpp\"\
+    \n/**\n * @brief Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97\
+    \n */\ntemplate <typename T> struct DualSegmentTree {\n    using F = function<T(T,\
+    \ T)>;\n\n  private:\n    F op;\n    T e;\n    int N, size, log = 1;\n    vector<T>\
+    \ node;\n    void init() {\n        while ((1ll << log) < N) ++log;\n        node.assign((size\
     \ = 1ll << log) << 1, e);\n    }\n    void apply_at(int k, T a) {\n        node[k]\
     \ = op(node[k], a);\n    }\n    void propagate(int k) {\n        if (node[k] ==\
     \ e) return;\n        apply_at((k << 1 | 0), node[k]);\n        apply_at((k <<\
@@ -98,7 +97,7 @@ data:
   isVerificationFile: false
   path: library/segtree/dual_segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-05 21:30:29+09:00'
+  timestamp: '2026-01-05 21:42:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp

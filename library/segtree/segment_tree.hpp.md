@@ -50,24 +50,23 @@ data:
     \  \u66F4\u65B0: \u4EE3\u5165\n    struct MinSet {\n        static constexpr int\
     \ op(const int &node, const int &a,\n                                const int\
     \ &size) {\n            (void)size; // unused\n            return a == Monoid::Set::e\
-    \ ? node : a;\n        }\n    };\n    // TODO \u3082\u3063\u3068\u5897\u3084\u3059\
-    \n};\n#line 3 \"library/segtree/segment_tree.hpp\"\n/**\n * @brief Segment Tree\
-    \ 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97\n */\ntemplate <typename T> struct\
-    \ SegmentTree {\n    using F = function<T(T, T)>;\n\n  private:\n    F op;\n \
-    \   T e;\n    int N, size, log = 1;\n    vector<T> node;\n    void init() {\n\
-    \        while ((1ll << log) < N) ++log;\n        node.assign((size = 1ll << log)\
-    \ << 1, e);\n    }\n\n  public:\n    SegmentTree(F op, T e, int N) : op(op), e(e),\
-    \ N(N) {\n        init();\n    }\n    SegmentTree(F op, T e, const vector<T> &A)\
-    \ : op(op), e(e), N(A.size()) {\n        init();\n        for (int i = 0; i <\
-    \ N; ++i) node[i + size] = A[i];\n        for (int i = size - 1; i >= 1; --i)\n\
-    \            node[i] = op(node[i << 1 | 0], node[i << 1 | 1]);\n    }\n    //\
-    \ \u8981\u7D20i\u306E\u5024\u3092x\u306B\u3059\u308B\n    void set(int i, const\
-    \ T &x) {\n        node[i += size] = x;\n        while (i >>= 1) node[i] = op(node[i\
-    \ << 1 | 0], node[i << 1 | 1]);\n    }\n    // \u6F14\u7B97[l,r)\n    T prod(int\
-    \ l, int r) {\n        T L = e, R = e;\n        for (l += size, r += size; l <\
-    \ r; l >>= 1, r >>= 1) {\n            if (l & 1) L = op(L, node[l++]);\n     \
-    \       if (r & 1) R = op(node[--r], R);\n        }\n        return op(L, R);\n\
-    \    }\n};\n"
+    \ ? node : a;\n        }\n    };\n};\n#line 3 \"library/segtree/segment_tree.hpp\"\
+    \n/**\n * @brief Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97\n */\n\
+    template <typename T> struct SegmentTree {\n    using F = function<T(T, T)>;\n\
+    \n  private:\n    F op;\n    T e;\n    int N, size, log = 1;\n    vector<T> node;\n\
+    \    void init() {\n        while ((1ll << log) < N) ++log;\n        node.assign((size\
+    \ = 1ll << log) << 1, e);\n    }\n\n  public:\n    SegmentTree(F op, T e, int\
+    \ N) : op(op), e(e), N(N) {\n        init();\n    }\n    SegmentTree(F op, T e,\
+    \ const vector<T> &A) : op(op), e(e), N(A.size()) {\n        init();\n       \
+    \ for (int i = 0; i < N; ++i) node[i + size] = A[i];\n        for (int i = size\
+    \ - 1; i >= 1; --i)\n            node[i] = op(node[i << 1 | 0], node[i << 1 |\
+    \ 1]);\n    }\n    // \u8981\u7D20i\u306E\u5024\u3092x\u306B\u3059\u308B\n   \
+    \ void set(int i, const T &x) {\n        node[i += size] = x;\n        while (i\
+    \ >>= 1) node[i] = op(node[i << 1 | 0], node[i << 1 | 1]);\n    }\n    // \u6F14\
+    \u7B97[l,r)\n    T prod(int l, int r) {\n        T L = e, R = e;\n        for\
+    \ (l += size, r += size; l < r; l >>= 1, r >>= 1) {\n            if (l & 1) L\
+    \ = op(L, node[l++]);\n            if (r & 1) R = op(node[--r], R);\n        }\n\
+    \        return op(L, R);\n    }\n};\n"
   code: "#pragma once\n#include \"library/struct/monoid.hpp\"\n/**\n * @brief Segment\
     \ Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97\n */\ntemplate <typename T>\
     \ struct SegmentTree {\n    using F = function<T(T, T)>;\n\n  private:\n    F\
@@ -90,7 +89,7 @@ data:
   isVerificationFile: false
   path: library/segtree/segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-05 21:30:29+09:00'
+  timestamp: '2026-01-05 21:42:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.segment_tree.test.cpp

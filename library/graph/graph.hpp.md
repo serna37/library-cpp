@@ -151,8 +151,7 @@ data:
     \ components) {\n            Graph sub(N);\n            for (auto &&v : comp)\
     \ {\n                for (auto &&[from, to, cost] : G[v]) {\n                \
     \    sub.add(from, to, cost);\n                }\n            }\n            res.push_back(sub);\n\
-    \        }\n        return res;\n    }\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\
-    \u30C8\n};\n"
+    \        }\n        return res;\n    }\n};\n"
   code: "#pragma once\n#include \"library/graph/edge.hpp\"\n/**\n * @brief \u30B0\u30E9\
     \u30D5\n */\nstruct Graph {\n  private:\n    int N;\n    vector<vector<Edge>>\
     \ G;\n    /**\n     * \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3 O(V+E)\n    \
@@ -289,20 +288,31 @@ data:
     \ components) {\n            Graph sub(N);\n            for (auto &&v : comp)\
     \ {\n                for (auto &&[from, to, cost] : G[v]) {\n                \
     \    sub.add(from, to, cost);\n                }\n            }\n            res.push_back(sub);\n\
-    \        }\n        return res;\n    }\n    // TODO \u30C9\u30AD\u30E5\u30E1\u30F3\
-    \u30C8\n};\n"
+    \        }\n        return res;\n    }\n};\n"
   dependsOn:
   - library/graph/edge.hpp
   isVerificationFile: false
   path: library/graph/graph.hpp
   requiredBy: []
-  timestamp: '2026-01-05 21:30:29+09:00'
+  timestamp: '2026-01-05 21:42:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/graph/graph.hpp
 layout: document
-redirect_from:
-- /library/library/graph/graph.hpp
-- /library/library/graph/graph.hpp.html
 title: "\u30B0\u30E9\u30D5"
 ---
+
+
+いろいろ含んだグラフの構造体
+
+- 経路復元
+- BFS
+- Dijkstra
+- DAGのトポロジカルソート
+- BellmanFord
+- WarshallFroyd
+- 閉路検出
+- DAGのトポロジカルソート
+- 連結成分分解
+- 強連結成分分解
+

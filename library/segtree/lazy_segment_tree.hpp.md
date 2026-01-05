@@ -51,34 +51,33 @@ data:
     \  \u66F4\u65B0: \u4EE3\u5165\n    struct MinSet {\n        static constexpr int\
     \ op(const int &node, const int &a,\n                                const int\
     \ &size) {\n            (void)size; // unused\n            return a == Monoid::Set::e\
-    \ ? node : a;\n        }\n    };\n    // TODO \u3082\u3063\u3068\u5897\u3084\u3059\
-    \n};\n#line 3 \"library/segtree/lazy_segment_tree.hpp\"\n/**\n * @brief Lazy Segment\
-    \ Tree \u533A\u9593\u66F4\u65B0 \u533A\u9593\u53D6\u5F97\n * @note \u6F14\u7B97\
-    op e \u66F4\u65B0op e \u4F5C\u7528op\n */\ntemplate <typename T, typename U> struct\
-    \ LazySegmentTree {\n    using ProdOp = function<T(T, T)>;\n    using UpdOp =\
-    \ function<U(U, U)>;\n    using ActOp = function<T(T, U, int)>;\n\n  private:\n\
-    \    ProdOp prod_op;\n    UpdOp upd_op;\n    ActOp act_op;\n    T prod_e;\n  \
-    \  U upd_e;\n    int N, size, log = 1;\n    vector<T> node;\n    vector<U> lazy;\n\
-    \    void init() {\n        while ((1ll << log) < N) ++log;\n        node.assign((size\
-    \ = 1ll << log) << 1, prod_e);\n        lazy.assign(size, upd_e);\n    }\n   \
-    \ void update(int i) {\n        node[i] = prod_op(node[i << 1 | 0], node[i <<\
-    \ 1 | 1]);\n    }\n    void apply_at(int k, U a) {\n        int topbit = k ==\
-    \ 0 ? -1 : 31 - __builtin_clzll(k);\n        long long sz = 1 << (log - topbit);\n\
-    \        node[k] = act_op(node[k], a, sz);\n        if (k < size) lazy[k] = upd_op(lazy[k],\
-    \ a);\n    }\n    void propagate(int k) {\n        if (lazy[k] == upd_e) return;\n\
-    \        apply_at((k << 1 | 0), lazy[k]);\n        apply_at((k << 1 | 1), lazy[k]);\n\
-    \        lazy[k] = upd_e;\n    }\n\n  public:\n    LazySegmentTree(ProdOp prod_op,\
-    \ T prod_e, UpdOp upd_op, U upd_e,\n                    ActOp act_op, int n)\n\
-    \        : prod_op(prod_op), prod_e(prod_e), upd_op(upd_op), upd_e(upd_e),\n \
-    \         act_op(act_op), N(n) {\n        init();\n    }\n    LazySegmentTree(ProdOp\
-    \ prod_op, T prod_e, UpdOp upd_op, U upd_e,\n                    ActOp act_op,\
-    \ const vector<T> &a)\n        : prod_op(prod_op), prod_e(prod_e), upd_op(upd_op),\
-    \ upd_e(upd_e),\n          act_op(act_op), N(a.size()) {\n        init();\n  \
-    \      for (int i = 0; i < N; ++i) node[i + size] = a[i];\n        for (int i\
-    \ = size - 1; i >= 1; --i) update(i);\n    }\n    T operator[](int p) {\n    \
-    \    p += size;\n        for (int i = log; i >= 1; --i) propagate(p >> i);\n \
-    \       return node[p];\n    }\n    // \u5168\u533A\u9593\u3092\u53D6\u5F97\n\
-    \    vector<T> getall() {\n        for (int i = 1; i < size; ++i) propagate(i);\n\
+    \ ? node : a;\n        }\n    };\n};\n#line 3 \"library/segtree/lazy_segment_tree.hpp\"\
+    \n/**\n * @brief Lazy Segment Tree \u533A\u9593\u66F4\u65B0 \u533A\u9593\u53D6\
+    \u5F97\n * @note \u6F14\u7B97op e \u66F4\u65B0op e \u4F5C\u7528op\n */\ntemplate\
+    \ <typename T, typename U> struct LazySegmentTree {\n    using ProdOp = function<T(T,\
+    \ T)>;\n    using UpdOp = function<U(U, U)>;\n    using ActOp = function<T(T,\
+    \ U, int)>;\n\n  private:\n    ProdOp prod_op;\n    UpdOp upd_op;\n    ActOp act_op;\n\
+    \    T prod_e;\n    U upd_e;\n    int N, size, log = 1;\n    vector<T> node;\n\
+    \    vector<U> lazy;\n    void init() {\n        while ((1ll << log) < N) ++log;\n\
+    \        node.assign((size = 1ll << log) << 1, prod_e);\n        lazy.assign(size,\
+    \ upd_e);\n    }\n    void update(int i) {\n        node[i] = prod_op(node[i <<\
+    \ 1 | 0], node[i << 1 | 1]);\n    }\n    void apply_at(int k, U a) {\n       \
+    \ int topbit = k == 0 ? -1 : 31 - __builtin_clzll(k);\n        long long sz =\
+    \ 1 << (log - topbit);\n        node[k] = act_op(node[k], a, sz);\n        if\
+    \ (k < size) lazy[k] = upd_op(lazy[k], a);\n    }\n    void propagate(int k) {\n\
+    \        if (lazy[k] == upd_e) return;\n        apply_at((k << 1 | 0), lazy[k]);\n\
+    \        apply_at((k << 1 | 1), lazy[k]);\n        lazy[k] = upd_e;\n    }\n\n\
+    \  public:\n    LazySegmentTree(ProdOp prod_op, T prod_e, UpdOp upd_op, U upd_e,\n\
+    \                    ActOp act_op, int n)\n        : prod_op(prod_op), prod_e(prod_e),\
+    \ upd_op(upd_op), upd_e(upd_e),\n          act_op(act_op), N(n) {\n        init();\n\
+    \    }\n    LazySegmentTree(ProdOp prod_op, T prod_e, UpdOp upd_op, U upd_e,\n\
+    \                    ActOp act_op, const vector<T> &a)\n        : prod_op(prod_op),\
+    \ prod_e(prod_e), upd_op(upd_op), upd_e(upd_e),\n          act_op(act_op), N(a.size())\
+    \ {\n        init();\n        for (int i = 0; i < N; ++i) node[i + size] = a[i];\n\
+    \        for (int i = size - 1; i >= 1; --i) update(i);\n    }\n    T operator[](int\
+    \ p) {\n        p += size;\n        for (int i = log; i >= 1; --i) propagate(p\
+    \ >> i);\n        return node[p];\n    }\n    // \u5168\u533A\u9593\u3092\u53D6\
+    \u5F97\n    vector<T> getall() {\n        for (int i = 1; i < size; ++i) propagate(i);\n\
     \        return {node.begin() + size, node.begin() + size + N};\n    }\n    //\
     \ \u8981\u7D20p\u306B\u5024x\u3092\u4EE3\u5165\u3059\u308B\n    void set(int p,\
     \ const T &x) {\n        p += size;\n        for (int i = log; i >= 1; --i) propagate(p\
@@ -191,7 +190,7 @@ data:
   isVerificationFile: false
   path: library/segtree/lazy_segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-05 21:30:29+09:00'
+  timestamp: '2026-01-05 21:42:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.lazy_segment_tree.test.cpp

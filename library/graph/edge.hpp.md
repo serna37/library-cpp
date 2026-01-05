@@ -7,7 +7,7 @@ data:
     title: "\u30B0\u30E9\u30D5"
   - icon: ':warning:'
     path: library/graph/min_span_tree.hpp
-    title: "\u6700\u5C0F\u5168\u57DF\u6728"
+    title: "\u6700\u5C0F\u5168\u57DF\u6728 (kruskal)"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -27,7 +27,7 @@ data:
   requiredBy:
   - library/graph/min_span_tree.hpp
   - library/graph/graph.hpp
-  timestamp: '2026-01-05 21:30:29+09:00'
+  timestamp: '2026-01-05 21:42:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/graph/edge.hpp

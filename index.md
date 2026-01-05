@@ -43,7 +43,7 @@ data:
       title: "\u30B0\u30E9\u30D5"
     - icon: ':warning:'
       path: library/graph/min_span_tree.hpp
-      title: "\u6700\u5C0F\u5168\u57DF\u6728"
+      title: "\u6700\u5C0F\u5168\u57DF\u6728 (kruskal)"
   - name: library/polynomial
     pages:
     - icon: ':warning:'
@@ -69,7 +69,8 @@ data:
       title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
     - icon: ':warning:'
       path: library/segtree/starry_sky_tree.hpp
-      title: "\u533A\u9593\u52A0\u7B97 \u533A\u9593max\u53D6\u5F97"
+      title: "\u661F\u7A7A\u6728 \u533A\u9593\u52A0\u7B97 \u533A\u9593min/max\u53D6\
+        \u5F97"
   - name: library/struct
     pages:
     - icon: ':heavy_check_mark:'
@@ -80,7 +81,7 @@ data:
       title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
     - icon: ':heavy_check_mark:'
       path: library/struct/union_find.hpp
-      title: UnionFind
+      title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   - name: library/util
     pages:
     - icon: ':heavy_check_mark:'

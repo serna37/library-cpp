@@ -18,7 +18,7 @@ data:
     title: "\u578B"
   - icon: ':heavy_check_mark:'
     path: library/struct/union_find.hpp
-    title: UnionFind
+    title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   - icon: ':heavy_check_mark:'
     path: library/util/geometry.hpp
     title: "\u5E7E\u4F55"
@@ -96,7 +96,7 @@ data:
   isVerificationFile: true
   path: tests/struct.union_find.test.cpp
   requiredBy: []
-  timestamp: '2026-01-05 21:30:29+09:00'
+  timestamp: '2026-01-05 21:42:32+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/struct.union_find.test.cpp

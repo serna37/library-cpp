@@ -62,8 +62,7 @@ data:
     \  \u66F4\u65B0: \u4EE3\u5165\n    struct MinSet {\n        static constexpr int\
     \ op(const int &node, const int &a,\n                                const int\
     \ &size) {\n            (void)size; // unused\n            return a == Monoid::Set::e\
-    \ ? node : a;\n        }\n    };\n    // TODO \u3082\u3063\u3068\u5897\u3084\u3059\
-    \n};\n"
+    \ ? node : a;\n        }\n    };\n};\n"
   code: "#pragma once\n/**\n * @brief \u30E2\u30CE\u30A4\u30C9\n */\nstruct Monoid\
     \ {\n    // \u6700\u5C0F\u5024\n    struct Min {\n        static constexpr int\
     \ e = INT_MAX;\n        static int op(int x, int y) {\n            return min(x,\
@@ -99,7 +98,7 @@ data:
     \n    struct MinSet {\n        static constexpr int op(const int &node, const\
     \ int &a,\n                                const int &size) {\n            (void)size;\
     \ // unused\n            return a == Monoid::Set::e ? node : a;\n        }\n \
-    \   };\n    // TODO \u3082\u3063\u3068\u5897\u3084\u3059\n};\n"
+    \   };\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/struct/monoid.hpp
@@ -107,7 +106,7 @@ data:
   - library/segtree/segment_tree.hpp
   - library/segtree/lazy_segment_tree.hpp
   - library/segtree/dual_segment_tree.hpp
-  timestamp: '2026-01-05 21:30:29+09:00'
+  timestamp: '2026-01-05 21:42:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp

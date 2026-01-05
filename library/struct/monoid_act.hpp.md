@@ -109,7 +109,7 @@ data:
   isVerificationFile: false
   path: library/struct/monoid_act.hpp
   requiredBy: []
-  timestamp: '2026-01-05 21:30:29+09:00'
+  timestamp: '2026-01-05 21:42:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/struct/monoid_act.hpp
