@@ -251,7 +251,7 @@ data:
   isVerificationFile: false
   path: template/debug.hpp
   requiredBy: []
-  timestamp: '2026-01-05 20:19:31+09:00'
+  timestamp: '2026-01-05 20:25:56+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: template/debug.hpp
