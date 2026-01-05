@@ -112,7 +112,7 @@ data:
   isVerificationFile: false
   path: library/graph/graph.hpp
   requiredBy: []
-  timestamp: '2026-01-03 23:10:18+09:00'
+  timestamp: '2026-01-05 20:19:31+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/graph/graph.hpp
