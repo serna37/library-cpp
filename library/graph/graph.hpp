@@ -309,6 +309,5 @@ struct Graph {
         }
         return res;
     }
-    // TODO クラスカル
     // TODO ドキュメント
 };
