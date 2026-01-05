@@ -200,7 +200,48 @@ struct Graph {
         reverse(all(sorted));
         return sorted;
     }
-    // TODO cc
+    /**
+     * 連結成分分解
+     * @return 連結な頂点群の集合
+     */
+    vector<vector<int>> connected_components() {
+        vector<vector<int>> components;
+        vector<int> com;
+        vector<bool> seen(N, false);
+        auto dfs = [&](auto &f, int v) {
+            seen[v] = true;
+            com.push_back(v);
+            for (auto &&[from, to, cost] : G[v]) {
+                if (seen[to]) continue;
+                f(f, to);
+            }
+        };
+        for (int i = 0; i < N; ++i) {
+            if (seen[i]) continue;
+            com.clear();
+            dfs(dfs, i);
+            components.push_back(com);
+        }
+        return components;
+    }
+    /**
+     * 連結成分分解
+     * @return 連結なグラフ構造のリスト
+     */
+    vector<Graph> cc() {
+        vector<vector<int>> components = connected_components();
+        vector<Graph> res;
+        for (auto &&comp : components) {
+            Graph sub(N);
+            for (auto &&v : comp) {
+                for (auto &&[from, to, cost] : G[v]) {
+                    sub.add_both(from, to, cost); // 無向グラフ
+                }
+            }
+            res.push_back(sub);
+        }
+        return res;
+    }
     // TODO scc
     // TODO クラスカル
     // TODO ドキュメント
