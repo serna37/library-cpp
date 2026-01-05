@@ -1,2 +1,13 @@
 title: serna37's Library
-theme: jekyll-theme-hacker
+#theme: jekyll-theme-hacker
+
+# 1. ベースとなるテーマの指定（remote_themeを使うと便利です）
+remote_theme: pages-themes/hacker@v0.2.0 # 黒系テーマの例
+
+# 2. シンタックスハイライトの設定（ここがOne Darkの肝です）
+markdown: kramdown
+highlighter: rouge
+
+# 3. サイトの基本情報
+title: My One Dark Blog
+description: Jekyll theme with One Dark colors

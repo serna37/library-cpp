@@ -1,0 +1,10 @@
+/* assets/css/syntax.css */
+/* One Dark Palette Sample */
+.highlight .cm { color: #5c6370; font-style: italic } /* Comment */
+.highlight .k  { color: #c678dd } /* Keyword */
+.highlight .s  { color: #98c379 } /* String */
+.highlight .n  { color: #e06c75 } /* Name */
+.highlight .nt { color: #e06c75 } /* Tag */
+.highlight .vi { color: #d19a66 } /* Variable */
+.highlight .nb { color: #e5c07b } /* Built-in */
+/* 必要に応じて Rouge の One Dark 用 CSS スキームを探して貼り付けてください */
