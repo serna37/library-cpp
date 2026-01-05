@@ -185,7 +185,7 @@ struct Graph {
      * DAGのトポロジカルソート
      */
     vector<int> topological_sort() {
-        // TODO 閉路検知して空配列を返却とか
+        if (cycle_detect(1).size() != 0) return vector<int>();
         vector<int> seen(N, 0), sorted;
         auto dfs = [&](auto &f, int v) -> void {
             seen[v] = 1;
