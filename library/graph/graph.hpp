@@ -77,7 +77,6 @@ struct Graph {
         }
         return {weight, route};
     }
-    // TODO ワーシャルフロイド
     /**
      * BellmanFord 最小コスト経路 負重みOK
      * @return 最小コスト、経路
@@ -106,6 +105,36 @@ struct Graph {
             if (!upd) break;
         }
         return {dis, route};
+    }
+    /**
+     * WarshallFroyd 全頂点対 最小コスト経路
+     * @return 最小コスト、負サイクル有無
+     */
+    pair<vector<vector<long long>>, bool> warshall_froyd() {
+        vector<vector<long long>> dis(N, vector<long long>(N, INF));
+        for (int v = 0; v < N; ++v) {
+            dis[v][v] = 0;
+            for (auto &&[from, to, cost] : G[v]) {
+                dis[v][to] = min(dis[v][to], cost);
+            }
+        }
+        for (int k = 0; k < N; ++k) {
+            for (int i = 0; i < N; ++i) {
+                if (dis[i][k] == INF) continue;
+                for (int j = 0; j < N; ++j) {
+                    if (dis[k][j] == INF) continue;
+                    dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j]);
+                }
+            }
+        }
+        bool negativeCycle = false;
+        for (int i = 0; i < N; ++i) {
+            if (dis[i][i] < 0) {
+                negativeCycle = true;
+                break;
+            }
+        }
+        return {dis, negativeCycle};
     }
     // TODO サイクル検出
     /**
