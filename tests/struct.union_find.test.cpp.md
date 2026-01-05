@@ -96,7 +96,7 @@ data:
   isVerificationFile: true
   path: tests/struct.union_find.test.cpp
   requiredBy: []
-  timestamp: '2026-01-05 21:21:28+09:00'
+  timestamp: '2026-01-05 21:30:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/struct.union_find.test.cpp

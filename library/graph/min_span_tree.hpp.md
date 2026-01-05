@@ -31,18 +31,32 @@ data:
     \      parent[x] = y, size[y] += size[x];\n        return true;\n    }\n};\n#line\
     \ 4 \"library/graph/min_span_tree.hpp\"\n/**\n * @brief \u6700\u5C0F\u5168\u57DF\
     \u6728\n */\nstruct MinSpanTree {\n    long long cost;\n    vector<Edge> edges;\n\
-    };\n// TODO \u30AF\u30E9\u30B9\u30AB\u30EB\n"
+    };\n/**\n * \u30AF\u30E9\u30B9\u30AB\u30EB O(ElogV)\n * @return \u6700\u5C0F\u5168\
+    \u57DF\u6728\n */\nMinSpanTree kruskal(vector<Edge> edges, int v_cnt) {\n    sort(edges.begin(),\
+    \ edges.end(),\n         [](const Edge &a, const Edge &b) { return a.cost < b.cost;\
+    \ });\n    UnionFind uf(v_cnt);\n    long long total = 0ll;\n    vector<Edge>\
+    \ es;\n    for (auto &&e : edges) {\n        if (uf.unite(e.from, e.to)) {\n \
+    \           es.emplace_back(e);\n            total += e.cost;\n        }\n   \
+    \ }\n    // \u5168\u57DF\u306B\u9054\u3057\u306A\u3044\u5834\u5408\n    if (uf[0]\
+    \ < v_cnt) {\n        total = INF;\n    }\n    return {total, es};\n}\n"
   code: "#pragma once\n#include \"library/graph/edge.hpp\"\n#include \"library/struct/union_find.hpp\"\
     \n/**\n * @brief \u6700\u5C0F\u5168\u57DF\u6728\n */\nstruct MinSpanTree {\n \
-    \   long long cost;\n    vector<Edge> edges;\n};\n// TODO \u30AF\u30E9\u30B9\u30AB\
-    \u30EB\n"
+    \   long long cost;\n    vector<Edge> edges;\n};\n/**\n * \u30AF\u30E9\u30B9\u30AB\
+    \u30EB O(ElogV)\n * @return \u6700\u5C0F\u5168\u57DF\u6728\n */\nMinSpanTree kruskal(vector<Edge>\
+    \ edges, int v_cnt) {\n    sort(edges.begin(), edges.end(),\n         [](const\
+    \ Edge &a, const Edge &b) { return a.cost < b.cost; });\n    UnionFind uf(v_cnt);\n\
+    \    long long total = 0ll;\n    vector<Edge> es;\n    for (auto &&e : edges)\
+    \ {\n        if (uf.unite(e.from, e.to)) {\n            es.emplace_back(e);\n\
+    \            total += e.cost;\n        }\n    }\n    // \u5168\u57DF\u306B\u9054\
+    \u3057\u306A\u3044\u5834\u5408\n    if (uf[0] < v_cnt) {\n        total = INF;\n\
+    \    }\n    return {total, es};\n}\n"
   dependsOn:
   - library/graph/edge.hpp
   - library/struct/union_find.hpp
   isVerificationFile: false
   path: library/graph/min_span_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-05 21:21:28+09:00'
+  timestamp: '2026-01-05 21:30:29+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/graph/min_span_tree.hpp

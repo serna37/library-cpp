@@ -44,6 +44,14 @@ data:
     - icon: ':warning:'
       path: library/graph/min_span_tree.hpp
       title: "\u6700\u5C0F\u5168\u57DF\u6728"
+  - name: library/polynomial
+    pages:
+    - icon: ':warning:'
+      path: library/polynomial/convolution.hpp
+      title: "\u7573\u307F\u8FBC\u307F FFT"
+    - icon: ':warning:'
+      path: library/polynomial/fft.hpp
+      title: FFT
   - name: library/segtree
     pages:
     - icon: ':heavy_check_mark:'
@@ -59,11 +67,17 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/segtree/segment_tree.hpp
       title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+    - icon: ':warning:'
+      path: library/segtree/starry_sky_tree.hpp
+      title: "\u533A\u9593\u52A0\u7B97 \u533A\u9593max\u53D6\u5F97"
   - name: library/struct
     pages:
     - icon: ':heavy_check_mark:'
       path: library/struct/monoid.hpp
       title: "\u30E2\u30CE\u30A4\u30C9"
+    - icon: ':warning:'
+      path: library/struct/monoid_act.hpp
+      title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
     - icon: ':heavy_check_mark:'
       path: library/struct/union_find.hpp
       title: UnionFind
