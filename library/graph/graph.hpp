@@ -77,8 +77,36 @@ struct Graph {
         }
         return {weight, route};
     }
-    // TODO ベルマンフォード
     // TODO ワーシャルフロイド
+    /**
+     * BellmanFord 最小コスト経路 負重みOK
+     * @return 最小コスト、経路
+     */
+    pair<vector<long long>, vector<int>> bellman_ford(int s) {
+        int loop = 0;
+        vector<long long> dis(N, INF);
+        vector<int> route(N, -1);
+        dis[s] = 0;
+        while (1) {
+            ++loop;
+            bool upd = 0;
+            for (int v = 0; v < N; ++v) {
+                if (dis[v] == INF) continue;
+                for (auto &&[from, to, cost] : G[v]) {
+                    long long asis = dis[to], tobe = dis[v] + cost;
+                    if (dis[v] == -INF) tobe = -INF;
+                    tobe = max(tobe, -INF);
+                    if (asis <= tobe) continue;
+                    if (loop >= N) tobe = -INF;
+                    dis[to] = tobe;
+                    route[to] = v;
+                    upd = 1;
+                }
+            }
+            if (!upd) break;
+        }
+        return {dis, route};
+    }
     // TODO サイクル検出
     /**
      * DAGのトポロジカルソート
