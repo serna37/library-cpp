@@ -9,11 +9,7 @@ void solve() {
     int V, E;
     cin >> V >> E;
     Graph G(V);
-    for (int i = 0; i < E; ++i) {
-        int s, t, d;
-        cin >> s >> t >> d;
-        G.add(s, t, d);
-    }
+    G.read(E, 0, true, true);
     auto [dis, negativeCycle] = G.warshall_froyd();
     if (negativeCycle) {
         print("NEGATIVE CYCLE");

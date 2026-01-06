@@ -7,9 +7,10 @@ struct Graph {
   private:
     int N;
     vector<vector<Edge>> G;
+    int es;
 
   public:
-    Graph(int N) : N(N), G(N) {
+    Graph(int N) : N(N), G(N), es(0) {
     }
     const vector<Edge>& operator[](int v) const {
         return G[v];
@@ -19,12 +20,27 @@ struct Graph {
     }
     // (有向)辺を張る
     void add(int from, int to, long long cost = 1) {
-        G[from].push_back(Edge(from, to, cost));
+        G[from].push_back(Edge(from, to, cost, es++));
     }
     // (双方向)辺を張る
     void add_both(int from, int to, long long cost = 1) {
-        G[from].push_back(Edge(from, to, cost));
-        G[to].push_back(Edge(to, from, cost));
+        G[from].push_back(Edge(from, to, cost, es));
+        G[to].push_back(Edge(to, from, cost, es++));
+    }
+    // グラフを読み取る
+    void read(int M, int padding = -1, bool weighted = false, bool directed = false) {
+        for (int i = 0; i < M; i++) {
+            int u, v;
+            cin >> u >> v;
+            u += padding, v += padding;
+            long long cost = 1ll;
+            if (weighted) cin >> cost;
+            if (directed) {
+                add(u, v, cost);
+            } else {
+                add_both(u, v, cost);
+            }
+        }
     }
     // 経路復元
     vector<int> route_restore(const vector<int> &route, int goal) {
@@ -45,7 +61,7 @@ struct Graph {
         while (!q.empty()) {
             int v = q.front();
             q.pop();
-            for (auto &&[from, to, cost] : G[v]) {
+            for (auto &&[from, to, cost, idx] : G[v]) {
                 if (~dis[to]) continue;
                 dis[to] = dis[from] + 1;
                 q.push(to);
@@ -69,7 +85,7 @@ struct Graph {
             auto [w, v] = q.top();
             q.pop();
             if (weight[v] < w) continue;
-            for (auto &&[from, to, cost] : G[v]) {
+            for (auto &&[from, to, cost, idx] : G[v]) {
                 long long next_w = w + cost;
                 if (weight[to] <= next_w) continue;
                 weight[to] = next_w;
@@ -94,7 +110,7 @@ struct Graph {
             bool upd = 0;
             for (int v = 0; v < N; ++v) {
                 if (dis[v] == INF) continue;
-                for (auto &&[from, to, cost] : G[v]) {
+                for (auto &&[from, to, cost, idx] : G[v]) {
                     long long asis = dis[to], tobe = dis[v] + cost;
                     if (dis[v] == -INF) tobe = -INF;
                     tobe = max(tobe, -INF);
@@ -124,7 +140,7 @@ struct Graph {
         vector<vector<long long>> dis(N, vector<long long>(N, INF));
         for (int v = 0; v < N; ++v) {
             dis[v][v] = 0;
-            for (auto &&[from, to, cost] : G[v]) {
+            for (auto &&[from, to, cost, idx] : G[v]) {
                 dis[v][to] = min(dis[v][to], cost);
             }
         }
@@ -158,7 +174,7 @@ struct Graph {
             seen[v] = true;
             history.push_back(e);
             for (const auto &ne : G[v]) {
-                auto [from, to, cost] = ne;
+                auto [from, to, cost, idx] = ne;
                 if (!directed and to == e.from) continue;
                 if (finished[to]) continue;
                 if (seen[to] and !finished[to]) {
@@ -187,7 +203,7 @@ struct Graph {
         for (int v = 0; v < N and pos == -1; ++v) {
             if (seen[v]) continue;
             history.clear();
-            pos = dfs(dfs, v, Edge({-1, -1, -1}));
+            pos = dfs(dfs, v, Edge({-1, -1, -1, -1}));
             if (pos != -1) return restruct(pos);
         }
         return vector<Edge>();
@@ -202,7 +218,7 @@ struct Graph {
         vector<int> seen(N, 0), sorted;
         auto dfs = [&](auto &f, int v) -> void {
             seen[v] = 1;
-            for (auto &&[from, to, cost] : G[v]) {
+            for (auto &&[from, to, cost, idx] : G[v]) {
                 if (!seen[to]) f(f, to);
             }
             sorted.push_back(v);
@@ -227,7 +243,7 @@ struct Graph {
         auto dfs = [&](auto &f, int v) -> void {
             ids[v] = cnt;
             com.push_back(v);
-            for (auto &&[from, to, cost] : G[v]) {
+            for (auto &&[from, to, cost, idx] : G[v]) {
                 if (ids[to] != -1) continue;
                 f(f, to);
             }
@@ -254,7 +270,7 @@ struct Graph {
             low[v] = ord[v] = now++;
             pth.emplace_back(v);
             // lowlink
-            for (auto &&[from, to, cost] : G[v]) {
+            for (auto &&[from, to, cost, idx] : G[v]) {
                 if (ord[to] == -1) {
                     f(f, to);
                     low[v] = min(low[v], low[to]);

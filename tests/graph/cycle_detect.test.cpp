@@ -9,18 +9,14 @@ void solve() {
     int N, M;
     cin >> N >> M;
     Graph G(N);
-    for (int i = 0; i < M; ++i) {
-        int u, v;
-        cin >> u >> v;
-        G.add(u, v);
-    }
+    G.read(M, 0, false, true);
     vector<Edge> cyc = G.cycle_detect();
     if (cyc.empty()) {
         print(-1);
         return;
     }
     print(cyc.size());
-    for (auto &&[from, to, cost] : cyc) {
-        print(from);
+    for (auto &&e : cyc) {
+        print(e.idx);
     }
 }

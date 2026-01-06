@@ -9,11 +9,7 @@ void solve() {
     int V, E, r;
     cin >> V >> E >> r;
     Graph G(V);
-    for (int i = 0; i < E; ++i) {
-        int s, t, d;
-        cin >> s >> t >> d;
-        G.add(s, t, d);
-    }
+    G.read(E, 0, true, true);
     auto [dis, route] = G.dijkstra({r});
     for (auto &&v : dis) {
         if (v == INF) {
