@@ -38,10 +38,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#include "library/def/common.hpp"
-#include "library/def/io.hpp"
-#include "library/def/type.hpp"
-#include "library/def/const.hpp"
+#include "template/def/common.hpp"
+#include "template/def/io.hpp"
+#include "template/def/type.hpp"
+#include "template/def/const.hpp"
 
 /** ======================================= */
 /**              main                       */
@@ -51,12 +51,12 @@ signed main() {
     solve();
 }
 
-#include "library/util/number.hpp"
-#include "library/util/string.hpp"
-#include "library/util/sequence.hpp"
-#include "library/util/search.hpp"
-#include "library/util/grid.hpp"
-#include "library/util/geometry.hpp"
+#include "template/util/number.hpp"
+#include "template/util/string.hpp"
+#include "template/util/sequence.hpp"
+#include "template/util/search.hpp"
+#include "template/util/grid.hpp"
+#include "template/util/geometry.hpp"
 /**
  * @brief util系
  */

@@ -1,6 +1,6 @@
 ---
 title: 共通
-documentation_of: //library/def/common.hpp
+documentation_of: //template/def/common.hpp
 ---
 
 # 共通
