@@ -5,5 +5,5 @@ documentation_of: //template/template.hpp
 
 いろいろ入れるテンプレ。
 
-最終的にこれ1行のみのincludeですませ、バンドルして提出
-
+- `bits/stdc++.h`で良いはずだが、明示的にincludeしてないとエラー等もあったのでとりあえず必要なものinclude
+- util系はnamespaceを用意しているので`lib:xxx.`とすることで予測変換で見やすい。とりあえず全部いれる
