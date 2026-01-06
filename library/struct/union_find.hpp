@@ -19,7 +19,7 @@ struct UnionFind {
     int find(int p) {
         return !~parent[p] ? p : (parent[p] = find(parent[p]));
     }
-    // aとbを同じグループにする 操作したらtrue  O(α(N))
+    // aとbを同じグループにする 操作したらtrue O(α(N))
     bool unite(int a, int b) {
         int x = find(a), y = find(b);
         if (x == y) return false;
