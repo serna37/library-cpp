@@ -46,23 +46,6 @@ void solve();
 signed main() {
     solve();
 }
-#include "template/util/number.hpp"
-#include "template/util/string.hpp"
-#include "template/util/sequence.hpp"
-#include "template/util/search.hpp"
-#include "template/util/grid.hpp"
-#include "template/util/geometry.hpp"
-/**
- * @brief util系
- */
-namespace lib {
-Number num;
-String str;
-Sequence seq;
-Search search;
-Grid grid;
-Geometry geo;
-}; // namespace lib
 // -----------------------------------------
 // #include "template/template.hpp" is done.
 // -----------------------------------------
