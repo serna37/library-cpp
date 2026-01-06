@@ -45,7 +45,7 @@ struct Graph {
     // 経路復元
     vector<int> route_restore(const vector<int> &route, int goal) {
         vector<int> path = {goal};
-        while (!~route[path.back()]) path.push_back(route[path.back()]);
+        while (!!~route[path.back()]) path.push_back(route[path.back()]);
         reverse(all(path));
         return path;
     }
