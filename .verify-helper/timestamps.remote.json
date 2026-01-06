@@ -2,6 +2,7 @@
 "tests/graph/bellman_ford.test.cpp": "2026-01-06 14:52:53 +0900",
 "tests/graph/bfs.test.cpp": "2026-01-06 14:52:53 +0900",
 "tests/graph/dijkstra.test.cpp": "2026-01-06 14:52:53 +0900",
+"tests/graph/warshall_froyd.test.cpp": "2026-01-06 15:03:25 +0900",
 "tests/segtree/dual_segment_tree.test.cpp": "2026-01-06 14:52:53 +0900",
 "tests/segtree/fenwick_tree.test.cpp": "2026-01-06 14:52:53 +0900",
 "tests/segtree/lazy_segment_tree.test.cpp": "2026-01-06 14:52:53 +0900",
