@@ -236,7 +236,7 @@ struct Graph {
         return {groups, ids};
     }
     /**
-     * 強連結成分分解 O(V+E)
+     * 強連結成分分解 Tarjan O(V+E)
      * @return groups: 各成分に含まれる頂点リスト（トポロジカル順）
      * @return ids: 各頂点が属する成分のID（ids[v] = i）
      */
@@ -246,6 +246,7 @@ struct Graph {
         auto dfs = [&](auto &f, int v) {
             low[v] = ord[v] = now++;
             pth.emplace_back(v);
+            // lowlink
             for (auto &&[from, to, cost] : G[v]) {
                 if (ord[to] == -1) {
                     f(f, to);

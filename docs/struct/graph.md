@@ -9,11 +9,10 @@ documentation_of: //library/graph/graph.hpp
 - 経路復元
 - BFS
 - Dijkstra
-- DAGのトポロジカルソート
 - BellmanFord
 - WarshallFroyd
 - 閉路検出
-- DAGのトポロジカルソート
+- トポロジカルソート
 - 連結成分分解
 - 強連結成分分解
 
