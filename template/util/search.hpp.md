@@ -6,37 +6,68 @@ data:
     path: main.cpp
     title: "main\u30D5\u30A1\u30A4\u30EB"
   - icon: ':heavy_check_mark:'
-    path: template/lib.hpp
-    title: "library/util/*.hpp\u306Einclude\u7528"
-  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/segtree.dual_segment_tree.test.cpp
+    path: tests/graph/bellman_ford.test.cpp
+    title: "\u30B0\u30E9\u30D5 - BellmanFord\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/bfs.test.cpp
+    title: "\u30B0\u30E9\u30D5 - BFS\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/connected_components.test.cpp
+    title: "\u30B0\u30E9\u30D5 - \u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\u30B9\
+      \u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/cycle_detect.test.cpp
+    title: "\u30B0\u30E9\u30D5 - \u9589\u8DEF\u691C\u51FA\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/dijkstra.test.cpp
+    title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/mst_kruskal.test.cpp
+    title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\u30C6\
+      \u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/route_restore.test.cpp
+    title: "\u30B0\u30E9\u30D5 - \u7D4C\u8DEF\u5FA9\u5143\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/strongly_connected_components.test.cpp
+    title: "\u30B0\u30E9\u30D5 - \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\
+      \u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/topological_sort.test.cpp
+    title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\
+      \u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/warshall_froyd.test.cpp
+    title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/segtree/dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
   - icon: ':heavy_check_mark:'
-    path: tests/segtree.fenwick_tree.test.cpp
+    path: tests/segtree/fenwick_tree.test.cpp
     title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
   - icon: ':heavy_check_mark:'
-    path: tests/segtree.lazy_segment_tree.test.cpp
+    path: tests/segtree/lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
   - icon: ':heavy_check_mark:'
-    path: tests/segtree.segment_tree.test.cpp
+    path: tests/segtree/segment_tree.test.cpp
     title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
   - icon: ':heavy_check_mark:'
-    path: tests/struct.union_find.test.cpp
+    path: tests/struct/union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/template.test.cpp
-    title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
+    path: tests/util.test.cpp
+    title: "template/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u63A2\u7D22"
     links: []
-  bundledCode: "#line 2 \"library/util/search.hpp\"\n/**\n * @brief \u63A2\u7D22\n\
+  bundledCode: "#line 2 \"template/util/search.hpp\"\n/**\n * @brief \u63A2\u7D22\n\
     \ */\nclass Search {\n  public:\n    /**\n     * \u9806\u5217\u5168\u63A2\u7D22\
     \ O(N!) N\u306F10\u301C12\u7A0B\u5EA6\n     * \u9806\u5217\u306E\u5168\u30D1\u30BF\
     \u30FC\u30F3\u4E2D\u3067\u3084\u308A\u305F\u3044\u95A2\u6570\u3092\u5165\u308C\
@@ -52,25 +83,25 @@ data:
     \       for (int k = 0; k < N; ++k) {\n                if (bit & (1ll << k)) {\n\
     \                    tmp.push_back(A[k]);\n                }\n            }\n\
     \            res.push_back(tmp);\n        }\n        return res;\n    }\n    /**\n\
-    \     * \u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\n     *     L R\n   \
-    \  * x x x o o o o\n     *       \u2191\u3053\u3053\u3092\u6C42\u3081\u308B\n\
-    \     * \u6761\u4EF6\uFF1A5 <= x\u306A\u3089\u3001L=4, R=5\n     */\n    template\
-    \ <typename F> pair<long long, long long> bi(F f) {\n        long long L = 0,\
-    \ R = 1, MID = 0;\n        while (!f(R)) R <<= 1;\n        while (abs(R - L) >\
-    \ 1) {\n            MID = L + (R - L) / 2;\n            (f(MID) ? R : L) = MID;\n\
-    \        }\n        return make_pair(L, R);\n    }\n    /**\n     * \u5B9F\u6570\
-    \u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\n     *     L R\n     * x x x o o o o\n \
-    \    *       \u2191\u3053\u3053\u3092\u6C42\u3081\u308B\n     * \u6761\u4EF6\uFF1A\
-    3.5 <= x\u306A\u3089\u3001L=3.5, R=3.5 (LR\u306E\u8AA4\u5DEE\u304CEPS\u5185)\n\
-    \     */\n    template <typename F> pair<double, double> bi_real(F f) {\n    \
-    \    double L = 0, R = 1, MID = 0;\n        while (!f(R)) R *= 2;\n        auto\
-    \ ABS = [&]() { return abs(R - L) > EPS; };\n        auto REL = [&]() { return\
-    \ abs(R - L) / max(R, L) > EPS; };\n        while (ABS() and REL()) {\n      \
-    \      MID = L + (R - L) / 2;\n            (f(MID) ? R : L) = MID;\n        }\n\
-    \        return make_pair(L, R);\n    }\n    // \u4EE5\u4E0B\u306E\u8981\u7D20\
-    \u6570\n    template <typename T> int bi_le_cnt(vector<T> &v, const T &x) {\n\
-    \        sort(all(v));\n        return upper_bound(all(v), x) - v.begin();\n \
-    \   }\n    // \u4EE5\u4E0B\u306E\u5024 \u5B58\u5728\u3057\u306A\u3044\u5834\u5408\
+    \     * \u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22 O(log N)\n     *    \
+    \ L R\n     * x x x o o o o\n     *       \u2191\u3053\u3053\u3092\u6C42\u3081\
+    \u308B\n     * \u6761\u4EF6\uFF1A5 <= x\u306A\u3089\u3001L=4, R=5\n     */\n \
+    \   pair<long long, long long> bi(function<bool(long long)> f) {\n        long\
+    \ long L = 0, R = 1, MID = 0;\n        while (!f(R)) R <<= 1;\n        while (abs(R\
+    \ - L) > 1) {\n            MID = L + (R - L) / 2;\n            (f(MID) ? R : L)\
+    \ = MID;\n        }\n        return make_pair(L, R);\n    }\n    /**\n     * \u5B9F\
+    \u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22 O(log N)\n     *     L R\n     * x\
+    \ x x o o o o\n     *       \u2191\u3053\u3053\u3092\u6C42\u3081\u308B\n     *\
+    \ \u6761\u4EF6\uFF1A3.5 <= x\u306A\u3089\u3001L=3.5, R=3.5 (LR\u306E\u8AA4\u5DEE\
+    \u304CEPS\u5185)\n     */\n    pair<double, double> bi_real(function<bool(double)>\
+    \ f) {\n        double L = 0, R = 1, MID = 0;\n        while (!f(R)) R *= 2;\n\
+    \        auto ABS = [&]() { return abs(R - L) > EPS; };\n        auto REL = [&]()\
+    \ { return abs(R - L) / max(R, L) > EPS; };\n        while (ABS() and REL()) {\n\
+    \            MID = L + (R - L) / 2;\n            (f(MID) ? R : L) = MID;\n   \
+    \     }\n        return make_pair(L, R);\n    }\n    // \u4EE5\u4E0B\u306E\u8981\
+    \u7D20\u6570\n    template <typename T> int bi_le_cnt(vector<T> &v, const T &x)\
+    \ {\n        sort(all(v));\n        return upper_bound(all(v), x) - v.begin();\n\
+    \    }\n    // \u4EE5\u4E0B\u306E\u5024 \u5B58\u5728\u3057\u306A\u3044\u5834\u5408\
     -INF\n    template <typename T> T bi_le_val(vector<T> &v, const T &x) {\n    \
     \    sort(all(v));\n        auto it = upper_bound(all(v), x);\n        return\
     \ (it == v.begin() ? -INF : *--it);\n    }\n    // \u4EE5\u4E0B\u306E\u5024  \u5B58\
@@ -126,25 +157,25 @@ data:
     \       for (int k = 0; k < N; ++k) {\n                if (bit & (1ll << k)) {\n\
     \                    tmp.push_back(A[k]);\n                }\n            }\n\
     \            res.push_back(tmp);\n        }\n        return res;\n    }\n    /**\n\
-    \     * \u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\n     *     L R\n   \
-    \  * x x x o o o o\n     *       \u2191\u3053\u3053\u3092\u6C42\u3081\u308B\n\
-    \     * \u6761\u4EF6\uFF1A5 <= x\u306A\u3089\u3001L=4, R=5\n     */\n    template\
-    \ <typename F> pair<long long, long long> bi(F f) {\n        long long L = 0,\
-    \ R = 1, MID = 0;\n        while (!f(R)) R <<= 1;\n        while (abs(R - L) >\
-    \ 1) {\n            MID = L + (R - L) / 2;\n            (f(MID) ? R : L) = MID;\n\
-    \        }\n        return make_pair(L, R);\n    }\n    /**\n     * \u5B9F\u6570\
-    \u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\n     *     L R\n     * x x x o o o o\n \
-    \    *       \u2191\u3053\u3053\u3092\u6C42\u3081\u308B\n     * \u6761\u4EF6\uFF1A\
-    3.5 <= x\u306A\u3089\u3001L=3.5, R=3.5 (LR\u306E\u8AA4\u5DEE\u304CEPS\u5185)\n\
-    \     */\n    template <typename F> pair<double, double> bi_real(F f) {\n    \
-    \    double L = 0, R = 1, MID = 0;\n        while (!f(R)) R *= 2;\n        auto\
-    \ ABS = [&]() { return abs(R - L) > EPS; };\n        auto REL = [&]() { return\
-    \ abs(R - L) / max(R, L) > EPS; };\n        while (ABS() and REL()) {\n      \
-    \      MID = L + (R - L) / 2;\n            (f(MID) ? R : L) = MID;\n        }\n\
-    \        return make_pair(L, R);\n    }\n    // \u4EE5\u4E0B\u306E\u8981\u7D20\
-    \u6570\n    template <typename T> int bi_le_cnt(vector<T> &v, const T &x) {\n\
-    \        sort(all(v));\n        return upper_bound(all(v), x) - v.begin();\n \
-    \   }\n    // \u4EE5\u4E0B\u306E\u5024 \u5B58\u5728\u3057\u306A\u3044\u5834\u5408\
+    \     * \u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22 O(log N)\n     *    \
+    \ L R\n     * x x x o o o o\n     *       \u2191\u3053\u3053\u3092\u6C42\u3081\
+    \u308B\n     * \u6761\u4EF6\uFF1A5 <= x\u306A\u3089\u3001L=4, R=5\n     */\n \
+    \   pair<long long, long long> bi(function<bool(long long)> f) {\n        long\
+    \ long L = 0, R = 1, MID = 0;\n        while (!f(R)) R <<= 1;\n        while (abs(R\
+    \ - L) > 1) {\n            MID = L + (R - L) / 2;\n            (f(MID) ? R : L)\
+    \ = MID;\n        }\n        return make_pair(L, R);\n    }\n    /**\n     * \u5B9F\
+    \u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22 O(log N)\n     *     L R\n     * x\
+    \ x x o o o o\n     *       \u2191\u3053\u3053\u3092\u6C42\u3081\u308B\n     *\
+    \ \u6761\u4EF6\uFF1A3.5 <= x\u306A\u3089\u3001L=3.5, R=3.5 (LR\u306E\u8AA4\u5DEE\
+    \u304CEPS\u5185)\n     */\n    pair<double, double> bi_real(function<bool(double)>\
+    \ f) {\n        double L = 0, R = 1, MID = 0;\n        while (!f(R)) R *= 2;\n\
+    \        auto ABS = [&]() { return abs(R - L) > EPS; };\n        auto REL = [&]()\
+    \ { return abs(R - L) / max(R, L) > EPS; };\n        while (ABS() and REL()) {\n\
+    \            MID = L + (R - L) / 2;\n            (f(MID) ? R : L) = MID;\n   \
+    \     }\n        return make_pair(L, R);\n    }\n    // \u4EE5\u4E0B\u306E\u8981\
+    \u7D20\u6570\n    template <typename T> int bi_le_cnt(vector<T> &v, const T &x)\
+    \ {\n        sort(all(v));\n        return upper_bound(all(v), x) - v.begin();\n\
+    \    }\n    // \u4EE5\u4E0B\u306E\u5024 \u5B58\u5728\u3057\u306A\u3044\u5834\u5408\
     -INF\n    template <typename T> T bi_le_val(vector<T> &v, const T &x) {\n    \
     \    sort(all(v));\n        auto it = upper_bound(all(v), x);\n        return\
     \ (it == v.begin() ? -INF : *--it);\n    }\n    // \u4EE5\u4E0B\u306E\u5024  \u5B58\
@@ -187,24 +218,33 @@ data:
     \   // int ans = dfs(dfs, N);\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
-  path: library/util/search.hpp
+  path: template/util/search.hpp
   requiredBy:
-  - template/lib.hpp
   - template/template.hpp
   - main.cpp
-  timestamp: '2026-01-05 21:42:32+09:00'
+  timestamp: '2026-01-06 20:15:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/segtree.dual_segment_tree.test.cpp
-  - tests/segtree.segment_tree.test.cpp
-  - tests/template.test.cpp
-  - tests/segtree.lazy_segment_tree.test.cpp
-  - tests/segtree.fenwick_tree.test.cpp
-  - tests/struct.union_find.test.cpp
-documentation_of: library/util/search.hpp
+  - tests/segtree/lazy_segment_tree.test.cpp
+  - tests/segtree/fenwick_tree.test.cpp
+  - tests/segtree/segment_tree.test.cpp
+  - tests/segtree/dual_segment_tree.test.cpp
+  - tests/graph/bfs.test.cpp
+  - tests/graph/topological_sort.test.cpp
+  - tests/graph/bellman_ford.test.cpp
+  - tests/graph/dijkstra.test.cpp
+  - tests/graph/cycle_detect.test.cpp
+  - tests/graph/mst_kruskal.test.cpp
+  - tests/graph/route_restore.test.cpp
+  - tests/graph/strongly_connected_components.test.cpp
+  - tests/graph/warshall_froyd.test.cpp
+  - tests/graph/connected_components.test.cpp
+  - tests/struct/union_find.test.cpp
+  - tests/util.test.cpp
+documentation_of: template/util/search.hpp
 layout: document
 redirect_from:
-- /library/library/util/search.hpp
-- /library/library/util/search.hpp.html
+- /library/template/util/search.hpp
+- /library/template/util/search.hpp.html
 title: "\u63A2\u7D22"
 ---

@@ -5,44 +5,38 @@ data:
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - icon: ':heavy_check_mark:'
-    path: library/def/common.hpp
+    path: template/def/common.hpp
     title: "\u5171\u901A"
   - icon: ':heavy_check_mark:'
-    path: library/def/const.hpp
+    path: template/def/const.hpp
     title: "\u5B9A\u6570"
   - icon: ':heavy_check_mark:'
-    path: library/def/io.hpp
+    path: template/def/io.hpp
     title: "IO\u95A2\u9023"
   - icon: ':heavy_check_mark:'
-    path: library/def/type.hpp
+    path: template/def/type.hpp
     title: "\u578B"
-  - icon: ':heavy_check_mark:'
-    path: library/util/geometry.hpp
-    title: "\u5E7E\u4F55"
-  - icon: ':heavy_check_mark:'
-    path: library/util/grid.hpp
-    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
-  - icon: ':heavy_check_mark:'
-    path: library/util/number.hpp
-    title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':heavy_check_mark:'
-    path: library/util/search.hpp
-    title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: library/util/sequence.hpp
-    title: "\u914D\u5217\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
-    path: library/util/string.hpp
-    title: "\u6587\u5B57\u5217"
-  - icon: ':heavy_check_mark:'
-    path: template/includes.hpp
-    title: "\u57FA\u672Cinclude\u7528"
-  - icon: ':heavy_check_mark:'
-    path: template/lib.hpp
-    title: "library/util/*.hpp\u306Einclude\u7528"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: template/util/geometry.hpp
+    title: "\u5E7E\u4F55"
+  - icon: ':heavy_check_mark:'
+    path: template/util/grid.hpp
+    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
+  - icon: ':heavy_check_mark:'
+    path: template/util/number.hpp
+    title: "\u6570\u306E\u6027\u8CEA"
+  - icon: ':heavy_check_mark:'
+    path: template/util/search.hpp
+    title: "\u63A2\u7D22"
+  - icon: ':heavy_check_mark:'
+    path: template/util/sequence.hpp
+    title: "\u914D\u5217\u30FB\u6570\u5217"
+  - icon: ':heavy_check_mark:'
+    path: template/util/string.hpp
+    title: "\u6587\u5B57\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -51,7 +45,7 @@ data:
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
-    document_title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\
+    document_title: "template/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\
       \u30C8"
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
@@ -69,10 +63,10 @@ data:
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
-    \n#include \"template/template.hpp\"\n/**\n * @brief library/util/xxx.hpp\u306E\
+    \n#include \"template/template.hpp\"\n/**\n * @brief template/util/xxx.hpp\u306E\
     \u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8\n * \u51FA\u529B\u3059\u308B\u3068\u554F\
     \u984C\u306B\u6B63\u89E3\u3067\u304D\u306A\u3044\u306E\u3067assert\u306E\u307F\
-    \n */\n// ===== library/util/number.hpp =====\nvoid test_number() {\n    assert(lib::num.div_ceil(10,\
+    \n */\n// ===== template/util/number.hpp =====\nvoid test_number() {\n    assert(lib::num.div_ceil(10,\
     \ 2) == 5);\n    assert(lib::num.div_ceil(11, 2) == 6);\n    assert(lib::num.div_floor(10,\
     \ 2) == 5);\n    assert(lib::num.div_floor(11, 2) == 5);\n    assert(lib::num.factorial(0)\
     \ == 1);\n    assert(lib::num.factorial(1) == 1);\n    assert(lib::num.factorial(2)\
@@ -88,21 +82,19 @@ data:
     \ exp_prime_fact = {{2, 2}, {5, 2}};\n    assert(val_prime_fact == exp_prime_fact);\n\
     \    assert(lib::num.modpow(2, 10, MOD) == 1024);\n    assert(lib::num.modinv(2,\
     \ MOD) == 499122177);\n    assert(lib::num.modfact(10, MOD) == 3628800);\n   \
-    \ assert(lib::num.mod_combination(10, 5, MOD) == 252);\n}\n// ===== library/util/string.hpp\
+    \ assert(lib::num.mod_combination(10, 5, MOD) == 252);\n}\n// ===== template/util/string.hpp\
     \ =====\nvoid test_string() {\n    assert(lib::str.is_low('A') == false);\n  \
     \  assert(lib::str.is_low('a') == true);\n    assert(lib::str.is_upp('A') == true);\n\
     \    assert(lib::str.is_upp('a') == false);\n    assert(lib::str.transform_lower(\"\
     AbC\") == \"abc\");\n    assert(lib::str.transform_upper(\"AbC\") == \"ABC\");\n\
-    \    assert(lib::str.lpad(\"ABC\", 6) == \"000ABC\");\n    assert(lib::str.rpad(\"\
-    ABC\", 6) == \"ABC000\");\n    vector<int> exp_finds = {0, 3, 6, 9};\n    assert(lib::str.finds(\"\
+    \    vector<string> val_join = {\"aa\", \"bb\", \"cc\"};\n    assert(lib::str.join(val_join,\
+    \ \",\") == \"aa,bb,cc\");\n    vector<int> exp_finds = {0, 3, 6, 9};\n    assert(lib::str.finds(\"\
     abcaefahia\", \"a\") == exp_finds);\n    vector<string> exp_split = {\"aa\", \"\
     bb\", \"cc\"};\n    assert(lib::str.split(\"aa,bb,cc\", ',') == exp_split);\n\
     \    assert(lib::str.split_multi(\"aa,bb/cc\", \",/\") == exp_split);\n    assert(lib::str.str_range(\"\
     abc123abc\", 3, 6) == \"123a\");\n    vector<pair<char, int>> exp_runlen = {{'a',\
     \ 3}, {'b', 2}, {'c', 1}};\n    assert(lib::str.run_length(\"aaabbc\") == exp_runlen);\n\
-    \    vector<int> exp_z_algo = {13, 0, 0, 0, 3, 0, 0, 1, 0, 2, 0, 0, 1};\n    vector<int>\
-    \ val_z_algo = lib::str.z_algo(\"abc1abca3abZa\");\n    assert(val_z_algo == exp_z_algo);\n\
-    }\n// ===== library/util/sequence.hpp =====\nvoid test_sequence() {\n    vector<int>\
+    }\n// ===== template/util/sequence.hpp =====\nvoid test_sequence() {\n    vector<int>\
     \ A = {1, 3, 2, 5, 8, 13, 2, 9, 3, 5};\n    assert(lib::seq.min(A) == 1);\n  \
     \  assert(lib::seq.max(A) == 13);\n    assert(lib::seq.sum(A) == 51);\n    vector<int>\
     \ evens = {0, 2, 4, 6};\n    vector<int> odds = {1, 3, 5, 7};\n    auto is_even\
@@ -157,7 +149,7 @@ data:
     \ 24, 42}, {0, 24, 54, 90}},\n        {{0, 0, 0, 0}, {0, 3, 9, 18}, {0, 15, 36,\
     \ 63}, {0, 36, 81, 135}}};\n    assert(S3 == exp_zeta_3D);\n    vector<int> R\
     \ = lib::seq.moebius(A);\n    vector<int> exp_moebius = {1, 3, 3, -5, -1, 7};\n\
-    \    assert(R == exp_moebius);\n}\n// ===== library/util/search.hpp =====\nvoid\
+    \    assert(R == exp_moebius);\n}\n// ===== template/util/search.hpp =====\nvoid\
     \ test_search() {\n    vector<int> A = {1, 2, 3};\n    vector<vector<int>> val_perm;\n\
     \    vector<vector<int>> exp_perm = {{1, 2, 3}, {1, 3, 2}, {2, 1, 3},\n      \
     \                              {2, 3, 1}, {3, 1, 2}, {3, 2, 1}};\n    lib::search.perm(A,\
@@ -179,46 +171,44 @@ data:
     \ 0ll) == -INF);\n    assert(lib::search.bi_gt_cnt(A, 7ll) == 3);\n    assert(lib::search.bi_gt_val(A,\
     \ 7ll) == 8);\n    assert(lib::search.bi_gt_val(A, 11ll) == INF);\n    assert(lib::search.bi_gt_val(st,\
     \ 7ll) == 8);\n    assert(lib::search.bi_gt_val(st, 11ll) == INF);\n}\n// =====\
-    \ library/util/grid.hpp =====\nvoid test_grid() {\n    vector<vector<int>> G =\
-    \ {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    auto T = lib::grid.transpose(G);\n \
-    \   vector<vector<int>> exp_tx = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};\n    assert(T\
+    \ template/util/grid.hpp =====\nvoid test_grid() {\n    vector<vector<int>> G\
+    \ = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\n    auto T = lib::grid.transpose(G);\n\
+    \    vector<vector<int>> exp_tx = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};\n    assert(T\
     \ == exp_tx);\n    int cnt = 0;\n    auto f = [&](int y, int x) {\n        if\
     \ (G[y][x] == 5) ++cnt;\n    };\n    lib::grid.bfs(G, f);\n    assert(cnt == 4);\n\
-    \    cnt = 0;\n    lib::grid.bfs8(G, f);\n    assert(cnt == 8);\n}\n// ===== library/util/gepmetry.hpp\
+    \    cnt = 0;\n    lib::grid.bfs8(G, f);\n    assert(cnt == 8);\n}\n// ===== template/util/gepmetry.hpp\
     \ =====\nvoid test_geometry() {\n    assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(45))\
     \ == 45);\n    assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(361)) <\n      \
     \     361); // \u8AA4\u5DEE\u304C\u3042\u308B\u306E\u3067\u4E0D\u7B49\u5F0F\n\
     \    assert(lib::geo.arc_tan(24, 35) < 0.97);\n    assert(lib::geo.area_triangle(1,\
     \ 1, 2, 3, 5, 6) == 1.5);\n    assert(lib::geo.area_square(1, 1, 2, 2, 4, 4, 7,\
     \ 7) == 15);\n}\nvoid solve() {\n    // URL\u306E\u554F\u984C\u306E\u7B54\u3048\
-    \u306F\u3053\u308C\u3060\u3051\n    cout << \"Hello World\" << endl;\n    test_number();\n\
+    \u306F\u3053\u308C\u3060\u3051\n    print(\"Hello World\");\n    test_number();\n\
     \    test_string();\n    test_sequence();\n    test_search();\n    test_grid();\n\
     \    test_geometry();\n}\n"
   dependsOn:
   - template/template.hpp
-  - template/includes.hpp
   - bits/stdc++.h
-  - library/def/common.hpp
-  - library/def/io.hpp
-  - library/def/type.hpp
-  - library/def/const.hpp
-  - template/lib.hpp
-  - library/util/number.hpp
-  - library/util/string.hpp
-  - library/util/sequence.hpp
-  - library/util/search.hpp
-  - library/util/grid.hpp
-  - library/util/geometry.hpp
+  - template/def/common.hpp
+  - template/def/io.hpp
+  - template/def/type.hpp
+  - template/def/const.hpp
+  - template/util/number.hpp
+  - template/util/string.hpp
+  - template/util/sequence.hpp
+  - template/util/search.hpp
+  - template/util/grid.hpp
+  - template/util/geometry.hpp
   isVerificationFile: true
-  path: tests/template.test.cpp
+  path: tests/util.test.cpp
   requiredBy: []
-  timestamp: '2026-01-05 21:42:32+09:00'
+  timestamp: '2026-01-06 20:15:46+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/template.test.cpp
+documentation_of: tests/util.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/template.test.cpp
-- /verify/tests/template.test.cpp.html
-title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
+- /verify/tests/util.test.cpp
+- /verify/tests/util.test.cpp.html
+title: "template/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
 ---

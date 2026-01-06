@@ -5,47 +5,44 @@ data:
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - icon: ':heavy_check_mark:'
-    path: library/def/common.hpp
+    path: library/graph/edge.hpp
+    title: "\u8FBA"
+  - icon: ':heavy_check_mark:'
+    path: library/graph/graph.hpp
+    title: "\u30B0\u30E9\u30D5"
+  - icon: ':heavy_check_mark:'
+    path: template/def/common.hpp
     title: "\u5171\u901A"
   - icon: ':heavy_check_mark:'
-    path: library/def/const.hpp
+    path: template/def/const.hpp
     title: "\u5B9A\u6570"
   - icon: ':heavy_check_mark:'
-    path: library/def/io.hpp
+    path: template/def/io.hpp
     title: "IO\u95A2\u9023"
   - icon: ':heavy_check_mark:'
-    path: library/def/type.hpp
+    path: template/def/type.hpp
     title: "\u578B"
-  - icon: ':heavy_check_mark:'
-    path: library/segtree/fenwick_tree.hpp
-    title: "FenwicTree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97 \u548C\u306E\u307F"
-  - icon: ':heavy_check_mark:'
-    path: library/util/geometry.hpp
-    title: "\u5E7E\u4F55"
-  - icon: ':heavy_check_mark:'
-    path: library/util/grid.hpp
-    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
-  - icon: ':heavy_check_mark:'
-    path: library/util/number.hpp
-    title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':heavy_check_mark:'
-    path: library/util/search.hpp
-    title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: library/util/sequence.hpp
-    title: "\u914D\u5217\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
-    path: library/util/string.hpp
-    title: "\u6587\u5B57\u5217"
-  - icon: ':heavy_check_mark:'
-    path: template/includes.hpp
-    title: "\u57FA\u672Cinclude\u7528"
-  - icon: ':heavy_check_mark:'
-    path: template/lib.hpp
-    title: "library/util/*.hpp\u306Einclude\u7528"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: template/util/geometry.hpp
+    title: "\u5E7E\u4F55"
+  - icon: ':heavy_check_mark:'
+    path: template/util/grid.hpp
+    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
+  - icon: ':heavy_check_mark:'
+    path: template/util/number.hpp
+    title: "\u6570\u306E\u6027\u8CEA"
+  - icon: ':heavy_check_mark:'
+    path: template/util/search.hpp
+    title: "\u63A2\u7D22"
+  - icon: ':heavy_check_mark:'
+    path: template/util/sequence.hpp
+    title: "\u914D\u5217\u30FB\u6570\u5217"
+  - icon: ':heavy_check_mark:'
+    path: template/util/string.hpp
+    title: "\u6587\u5B57\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -53,10 +50,11 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B
-    document_title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C
+    document_title: "\u30B0\u30E9\u30D5 - \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\
+      \u306E\u30C6\u30B9\u30C8"
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -70,40 +68,39 @@ data:
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
-    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B\"\
-    \n#include \"template/template.hpp\"\n#include \"library/segtree/fenwick_tree.hpp\"\
-    \n/**\n * @brief Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ\n */\nvoid solve() {\n\
-    \    int N, Q;\n    cin >> N >> Q;\n    FenwickTree fwk(N);\n    while (Q--) {\n\
-    \        int com, x, y;\n        cin >> com >> x >> y;\n        if (com == 0)\
-    \ {\n            --x;\n            fwk.add(x, y);\n        }\n        if (com\
-    \ == 1) {\n            --x, --y;\n            print(fwk.sum(y) - fwk.sum(x - 1));\n\
-    \        }\n    }\n}\n"
+    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C\"\
+    \n#include \"template/template.hpp\"\n#include \"library/graph/graph.hpp\"\n/**\n\
+    \ * @brief \u30B0\u30E9\u30D5 - \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\
+    \u30C6\u30B9\u30C8\n */\nvoid solve() {\n    int V, E;\n    cin >> V >> E;\n \
+    \   Graph G(V);\n    G.read(E, 0, false, true);\n    auto [groups, ids] = G.scc();\n\
+    \    int Q;\n    cin >> Q;\n    while (Q--) {\n        int u, v;\n        cin\
+    \ >> u >> v;\n        print(ids[u] == ids[v] ? \"1\" : \"0\");\n    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - template/includes.hpp
   - bits/stdc++.h
-  - library/def/common.hpp
-  - library/def/io.hpp
-  - library/def/type.hpp
-  - library/def/const.hpp
-  - template/lib.hpp
-  - library/util/number.hpp
-  - library/util/string.hpp
-  - library/util/sequence.hpp
-  - library/util/search.hpp
-  - library/util/grid.hpp
-  - library/util/geometry.hpp
-  - library/segtree/fenwick_tree.hpp
+  - template/def/common.hpp
+  - template/def/io.hpp
+  - template/def/type.hpp
+  - template/def/const.hpp
+  - template/util/number.hpp
+  - template/util/string.hpp
+  - template/util/sequence.hpp
+  - template/util/search.hpp
+  - template/util/grid.hpp
+  - template/util/geometry.hpp
+  - library/graph/graph.hpp
+  - library/graph/edge.hpp
   isVerificationFile: true
-  path: tests/segtree.fenwick_tree.test.cpp
+  path: tests/graph/strongly_connected_components.test.cpp
   requiredBy: []
-  timestamp: '2026-01-05 21:42:32+09:00'
+  timestamp: '2026-01-06 20:15:46+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/segtree.fenwick_tree.test.cpp
+documentation_of: tests/graph/strongly_connected_components.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/segtree.fenwick_tree.test.cpp
-- /verify/tests/segtree.fenwick_tree.test.cpp.html
-title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
+- /verify/tests/graph/strongly_connected_components.test.cpp
+- /verify/tests/graph/strongly_connected_components.test.cpp.html
+title: "\u30B0\u30E9\u30D5 - \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\
+  \u30B9\u30C8"
 ---

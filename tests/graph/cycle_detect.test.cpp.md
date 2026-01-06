@@ -5,6 +5,12 @@ data:
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - icon: ':heavy_check_mark:'
+    path: library/graph/edge.hpp
+    title: "\u8FBA"
+  - icon: ':heavy_check_mark:'
+    path: library/graph/graph.hpp
+    title: "\u30B0\u30E9\u30D5"
+  - icon: ':heavy_check_mark:'
     path: template/def/common.hpp
     title: "\u5171\u901A"
   - icon: ':heavy_check_mark:'
@@ -41,11 +47,14 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    document_title: "\U0001F36A\U0001F9F8\U0001F43E"
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.yosupo.jp/problem/cycle_detection
+    document_title: "\u30B0\u30E9\u30D5 - \u9589\u8DEF\u691C\u51FA\u306E\u30C6\u30B9\
+      \u30C8"
     links:
-    - https://serna37.github.io/library-cpp/
+    - https://judge.yosupo.jp/problem/cycle_detection
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -58,8 +67,13 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#include \"template/template.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\
-    \n * @note https://serna37.github.io/library-cpp/\n */\nvoid solve() {\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/cycle_detection\"\n#include\
+    \ \"template/template.hpp\"\n#include \"library/graph/graph.hpp\"\n/**\n * @brief\
+    \ \u30B0\u30E9\u30D5 - \u9589\u8DEF\u691C\u51FA\u306E\u30C6\u30B9\u30C8\n */\n\
+    void solve() {\n    int N, M;\n    cin >> N >> M;\n    Graph G(N);\n    G.read(M,\
+    \ 0, false, true);\n    vector<Edge> cyc = G.cycle_detect();\n    if (cyc.empty())\
+    \ {\n        print(-1);\n        return;\n    }\n    print(cyc.size());\n    for\
+    \ (auto &&e : cyc) {\n        print(e.idx);\n    }\n}\n"
   dependsOn:
   - template/template.hpp
   - bits/stdc++.h
@@ -73,17 +87,18 @@ data:
   - template/util/search.hpp
   - template/util/grid.hpp
   - template/util/geometry.hpp
-  isVerificationFile: false
-  path: main.cpp
+  - library/graph/graph.hpp
+  - library/graph/edge.hpp
+  isVerificationFile: true
+  path: tests/graph/cycle_detect.test.cpp
   requiredBy: []
   timestamp: '2026-01-06 20:15:46+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: main.cpp
+documentation_of: tests/graph/cycle_detect.test.cpp
 layout: document
-title: "main\u30D5\u30A1\u30A4\u30EB"
+redirect_from:
+- /verify/tests/graph/cycle_detect.test.cpp
+- /verify/tests/graph/cycle_detect.test.cpp.html
+title: "\u30B0\u30E9\u30D5 - \u9589\u8DEF\u691C\u51FA\u306E\u30C6\u30B9\u30C8"
 ---
-
-プログラムを書くファイル。 解き終わったらバンドルする。
-
-

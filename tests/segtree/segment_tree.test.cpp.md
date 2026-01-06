@@ -5,50 +5,44 @@ data:
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - icon: ':heavy_check_mark:'
-    path: library/def/common.hpp
-    title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
-    path: library/def/const.hpp
-    title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
-    path: library/def/io.hpp
-    title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
-    path: library/def/type.hpp
-    title: "\u578B"
-  - icon: ':heavy_check_mark:'
-    path: library/segtree/dual_segment_tree.hpp
-    title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
+    path: library/segtree/segment_tree.hpp
+    title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
   - icon: ':heavy_check_mark:'
     path: library/struct/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
   - icon: ':heavy_check_mark:'
-    path: library/util/geometry.hpp
-    title: "\u5E7E\u4F55"
+    path: template/def/common.hpp
+    title: "\u5171\u901A"
   - icon: ':heavy_check_mark:'
-    path: library/util/grid.hpp
-    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
+    path: template/def/const.hpp
+    title: "\u5B9A\u6570"
   - icon: ':heavy_check_mark:'
-    path: library/util/number.hpp
-    title: "\u6570\u306E\u6027\u8CEA"
+    path: template/def/io.hpp
+    title: "IO\u95A2\u9023"
   - icon: ':heavy_check_mark:'
-    path: library/util/search.hpp
-    title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: library/util/sequence.hpp
-    title: "\u914D\u5217\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
-    path: library/util/string.hpp
-    title: "\u6587\u5B57\u5217"
-  - icon: ':heavy_check_mark:'
-    path: template/includes.hpp
-    title: "\u57FA\u672Cinclude\u7528"
-  - icon: ':heavy_check_mark:'
-    path: template/lib.hpp
-    title: "library/util/*.hpp\u306Einclude\u7528"
+    path: template/def/type.hpp
+    title: "\u578B"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: template/util/geometry.hpp
+    title: "\u5E7E\u4F55"
+  - icon: ':heavy_check_mark:'
+    path: template/util/grid.hpp
+    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
+  - icon: ':heavy_check_mark:'
+    path: template/util/number.hpp
+    title: "\u6570\u306E\u6027\u8CEA"
+  - icon: ':heavy_check_mark:'
+    path: template/util/search.hpp
+    title: "\u63A2\u7D22"
+  - icon: ':heavy_check_mark:'
+    path: template/util/sequence.hpp
+    title: "\u914D\u5217\u30FB\u6570\u5217"
+  - icon: ':heavy_check_mark:'
+    path: template/util/string.hpp
+    title: "\u6587\u5B57\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -56,10 +50,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
-    document_title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A
+    document_title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -73,42 +67,39 @@ data:
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
-    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D\"\
-    \n#include \"template/template.hpp\"\n#include \"library/segtree/dual_segment_tree.hpp\"\
-    \n/**\n * @brief \u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ\n\
-    \ */\nvoid solve() {\n    int N, Q;\n    cin >> N >> Q;\n    DualSegmentTree<int>\
-    \ seg(Monoid::Set::op, Monoid::Set::e, N);\n    while (Q--) {\n        int com;\n\
-    \        cin >> com;\n        if (com == 0) {\n            int l, r, x;\n    \
-    \        cin >> l >> r >> x;\n            seg.apply(l, r + 1, x);\n        }\n\
-    \        if (com == 1) {\n            int k;\n            cin >> k;\n        \
-    \    print(seg[k]);\n        }\n    }\n}\n"
+    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A\"\
+    \n#include \"template/template.hpp\"\n#include \"library/segtree/segment_tree.hpp\"\
+    \n/**\n * @brief \u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ\n */\nvoid solve()\
+    \ {\n    int N, Q;\n    cin >> N >> Q;\n    SegmentTree<int> seg(Monoid::Min::op,\
+    \ Monoid::Min::e, N);\n    while (Q--) {\n        int com, x, y;\n        cin\
+    \ >> com >> x >> y;\n        if (com == 0) {\n            seg.set(x, y);\n   \
+    \     }\n        if (com == 1) {\n            print(seg.prod(x, y + 1));\n   \
+    \     }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - template/includes.hpp
   - bits/stdc++.h
-  - library/def/common.hpp
-  - library/def/io.hpp
-  - library/def/type.hpp
-  - library/def/const.hpp
-  - template/lib.hpp
-  - library/util/number.hpp
-  - library/util/string.hpp
-  - library/util/sequence.hpp
-  - library/util/search.hpp
-  - library/util/grid.hpp
-  - library/util/geometry.hpp
-  - library/segtree/dual_segment_tree.hpp
+  - template/def/common.hpp
+  - template/def/io.hpp
+  - template/def/type.hpp
+  - template/def/const.hpp
+  - template/util/number.hpp
+  - template/util/string.hpp
+  - template/util/sequence.hpp
+  - template/util/search.hpp
+  - template/util/grid.hpp
+  - template/util/geometry.hpp
+  - library/segtree/segment_tree.hpp
   - library/struct/monoid.hpp
   isVerificationFile: true
-  path: tests/segtree.dual_segment_tree.test.cpp
+  path: tests/segtree/segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-05 21:42:32+09:00'
+  timestamp: '2026-01-06 20:15:46+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/segtree.dual_segment_tree.test.cpp
+documentation_of: tests/segtree/segment_tree.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/segtree.dual_segment_tree.test.cpp
-- /verify/tests/segtree.dual_segment_tree.test.cpp.html
-title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
+- /verify/tests/segtree/segment_tree.test.cpp
+- /verify/tests/segtree/segment_tree.test.cpp.html
+title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
 ---

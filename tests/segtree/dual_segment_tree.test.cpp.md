@@ -5,6 +5,12 @@ data:
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - icon: ':heavy_check_mark:'
+    path: library/segtree/dual_segment_tree.hpp
+    title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
+  - icon: ':heavy_check_mark:'
+    path: library/struct/monoid.hpp
+    title: "\u30E2\u30CE\u30A4\u30C9"
+  - icon: ':heavy_check_mark:'
     path: template/def/common.hpp
     title: "\u5171\u901A"
   - icon: ':heavy_check_mark:'
@@ -41,11 +47,13 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    document_title: "\U0001F36A\U0001F9F8\U0001F43E"
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
+    document_title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
     links:
-    - https://serna37.github.io/library-cpp/
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -58,8 +66,16 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#include \"template/template.hpp\"\n/**\n * @brief \U0001F36A\U0001F9F8\U0001F43E\
-    \n * @note https://serna37.github.io/library-cpp/\n */\nvoid solve() {\n}\n"
+  code: "#define PROBLEM                                                         \
+    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D\"\
+    \n#include \"template/template.hpp\"\n#include \"library/segtree/dual_segment_tree.hpp\"\
+    \n/**\n * @brief \u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ\n\
+    \ */\nvoid solve() {\n    int N, Q;\n    cin >> N >> Q;\n    DualSegmentTree<int>\
+    \ seg(Monoid::Set::op, Monoid::Set::e, N);\n    while (Q--) {\n        int com;\n\
+    \        cin >> com;\n        if (com == 0) {\n            int l, r, x;\n    \
+    \        cin >> l >> r >> x;\n            seg.apply(l, r + 1, x);\n        }\n\
+    \        if (com == 1) {\n            int k;\n            cin >> k;\n        \
+    \    print(seg[k]);\n        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
   - bits/stdc++.h
@@ -73,17 +89,18 @@ data:
   - template/util/search.hpp
   - template/util/grid.hpp
   - template/util/geometry.hpp
-  isVerificationFile: false
-  path: main.cpp
+  - library/segtree/dual_segment_tree.hpp
+  - library/struct/monoid.hpp
+  isVerificationFile: true
+  path: tests/segtree/dual_segment_tree.test.cpp
   requiredBy: []
   timestamp: '2026-01-06 20:15:46+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: main.cpp
+documentation_of: tests/segtree/dual_segment_tree.test.cpp
 layout: document
-title: "main\u30D5\u30A1\u30A4\u30EB"
+redirect_from:
+- /verify/tests/segtree/dual_segment_tree.test.cpp
+- /verify/tests/segtree/dual_segment_tree.test.cpp.html
+title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
 ---
-
-プログラムを書くファイル。 解き終わったらバンドルする。
-
-

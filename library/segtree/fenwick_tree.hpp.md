@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/segtree.fenwick_tree.test.cpp
+    path: tests/segtree/fenwick_tree.test.cpp
     title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -39,10 +39,10 @@ data:
   isVerificationFile: false
   path: library/segtree/fenwick_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-05 21:42:32+09:00'
+  timestamp: '2026-01-06 20:15:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/segtree.fenwick_tree.test.cpp
+  - tests/segtree/fenwick_tree.test.cpp
 documentation_of: library/segtree/fenwick_tree.hpp
 layout: document
 redirect_from:

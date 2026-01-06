@@ -3,5 +3,5 @@ description: "C++\u7AF6\u30D7\u30ED\u5411\u3051 \u30A2\u30EB\u30B4\u30EA\u30BA\u
 plugins:
 - jemoji
 - jekyll-redirect-from
-theme: jekyll-theme-midnight
+theme: jekyll-theme-cayman
 title: serna37's Library

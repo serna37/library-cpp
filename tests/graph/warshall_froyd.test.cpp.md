@@ -5,47 +5,44 @@ data:
     path: bits/stdc++.h
     title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
   - icon: ':heavy_check_mark:'
-    path: library/def/common.hpp
+    path: library/graph/edge.hpp
+    title: "\u8FBA"
+  - icon: ':heavy_check_mark:'
+    path: library/graph/graph.hpp
+    title: "\u30B0\u30E9\u30D5"
+  - icon: ':heavy_check_mark:'
+    path: template/def/common.hpp
     title: "\u5171\u901A"
   - icon: ':heavy_check_mark:'
-    path: library/def/const.hpp
+    path: template/def/const.hpp
     title: "\u5B9A\u6570"
   - icon: ':heavy_check_mark:'
-    path: library/def/io.hpp
+    path: template/def/io.hpp
     title: "IO\u95A2\u9023"
   - icon: ':heavy_check_mark:'
-    path: library/def/type.hpp
+    path: template/def/type.hpp
     title: "\u578B"
-  - icon: ':heavy_check_mark:'
-    path: library/struct/union_find.hpp
-    title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
-  - icon: ':heavy_check_mark:'
-    path: library/util/geometry.hpp
-    title: "\u5E7E\u4F55"
-  - icon: ':heavy_check_mark:'
-    path: library/util/grid.hpp
-    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
-  - icon: ':heavy_check_mark:'
-    path: library/util/number.hpp
-    title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':heavy_check_mark:'
-    path: library/util/search.hpp
-    title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: library/util/sequence.hpp
-    title: "\u914D\u5217\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
-    path: library/util/string.hpp
-    title: "\u6587\u5B57\u5217"
-  - icon: ':heavy_check_mark:'
-    path: template/includes.hpp
-    title: "\u57FA\u672Cinclude\u7528"
-  - icon: ':heavy_check_mark:'
-    path: template/lib.hpp
-    title: "library/util/*.hpp\u306Einclude\u7528"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: template/util/geometry.hpp
+    title: "\u5E7E\u4F55"
+  - icon: ':heavy_check_mark:'
+    path: template/util/grid.hpp
+    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
+  - icon: ':heavy_check_mark:'
+    path: template/util/number.hpp
+    title: "\u6570\u306E\u6027\u8CEA"
+  - icon: ':heavy_check_mark:'
+    path: template/util/search.hpp
+    title: "\u63A2\u7D22"
+  - icon: ':heavy_check_mark:'
+    path: template/util/sequence.hpp
+    title: "\u914D\u5217\u30FB\u6570\u5217"
+  - icon: ':heavy_check_mark:'
+    path: template/util/string.hpp
+    title: "\u6587\u5B57\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -53,10 +50,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A
-    document_title: "Union Find\u306E\u30C6\u30B9\u30C8"
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C
+    document_title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -70,39 +67,41 @@ data:
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
-    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A\"\
-    \n#include \"template/template.hpp\"\n#include \"library/struct/union_find.hpp\"\
-    \n/**\n * @brief Union Find\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n   \
-    \ int N, Q;\n    cin >> N >> Q;\n    UnionFind uf(N);\n    while (Q--) {\n   \
-    \     int com, x, y;\n        cin >> com >> x >> y;\n        if (com == 0) {\n\
-    \            uf.unite(x, y);\n        }\n        if (com == 1) {\n           \
-    \ print(uf.find(x) == uf.find(y) ? 1 : 0);\n        }\n    }\n}\n"
+    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C\"\
+    \n#include \"template/template.hpp\"\n#include \"library/graph/graph.hpp\"\n/**\n\
+    \ * @brief \u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8\n */\nvoid\
+    \ solve() {\n    int V, E;\n    cin >> V >> E;\n    Graph G(V);\n    G.read(E,\
+    \ 0, true, true);\n    auto [dis, negativeCycle] = G.warshall_froyd();\n    if\
+    \ (negativeCycle) {\n        print(\"NEGATIVE CYCLE\");\n        return;\n   \
+    \ }\n    vec2<string> ans = make_vec2<string>(V, V, \"\");\n    for (int i = 0;\
+    \ i < V; ++i) {\n        for (int j = 0; j < V; ++j) {\n            ans[i][j]\
+    \ = dis[i][j] == INF ? \"INF\" : int_to_string(dis[i][j]);\n        }\n    }\n\
+    \    print(ans);\n}\n"
   dependsOn:
   - template/template.hpp
-  - template/includes.hpp
   - bits/stdc++.h
-  - library/def/common.hpp
-  - library/def/io.hpp
-  - library/def/type.hpp
-  - library/def/const.hpp
-  - template/lib.hpp
-  - library/util/number.hpp
-  - library/util/string.hpp
-  - library/util/sequence.hpp
-  - library/util/search.hpp
-  - library/util/grid.hpp
-  - library/util/geometry.hpp
-  - library/struct/union_find.hpp
+  - template/def/common.hpp
+  - template/def/io.hpp
+  - template/def/type.hpp
+  - template/def/const.hpp
+  - template/util/number.hpp
+  - template/util/string.hpp
+  - template/util/sequence.hpp
+  - template/util/search.hpp
+  - template/util/grid.hpp
+  - template/util/geometry.hpp
+  - library/graph/graph.hpp
+  - library/graph/edge.hpp
   isVerificationFile: true
-  path: tests/struct.union_find.test.cpp
+  path: tests/graph/warshall_froyd.test.cpp
   requiredBy: []
-  timestamp: '2026-01-05 21:42:32+09:00'
+  timestamp: '2026-01-06 20:15:46+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/struct.union_find.test.cpp
+documentation_of: tests/graph/warshall_froyd.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/struct.union_find.test.cpp
-- /verify/tests/struct.union_find.test.cpp.html
-title: "Union Find\u306E\u30C6\u30B9\u30C8"
+- /verify/tests/graph/warshall_froyd.test.cpp
+- /verify/tests/graph/warshall_froyd.test.cpp.html
+title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
 ---

@@ -1,43 +1,13 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: bits/stdc++.h
-    title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
-  - icon: ':heavy_check_mark:'
-    path: template/def/common.hpp
-    title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
-    path: template/def/const.hpp
-    title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
-    path: template/def/io.hpp
-    title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
-    path: template/def/type.hpp
-    title: "\u578B"
-  - icon: ':heavy_check_mark:'
-    path: template/util/geometry.hpp
-    title: "\u5E7E\u4F55"
-  - icon: ':heavy_check_mark:'
-    path: template/util/grid.hpp
-    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
-  - icon: ':heavy_check_mark:'
-    path: template/util/number.hpp
-    title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':heavy_check_mark:'
-    path: template/util/search.hpp
-    title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: template/util/sequence.hpp
-    title: "\u914D\u5217\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
-    path: template/util/string.hpp
-    title: "\u6587\u5B57\u5217"
+  _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
     path: main.cpp
     title: "main\u30D5\u30A1\u30A4\u30EB"
+  - icon: ':heavy_check_mark:'
+    path: template/template.hpp
+    title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/graph/bellman_ford.test.cpp
@@ -95,53 +65,31 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    document_title: "\u0E05^>\u03C9<^\u0E05"
-    links:
-    - https://serna37.github.io/library-cpp/
+    links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
     , line 187, in bundle\n    bundler.update(path)\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 400, in update\n    raise BundleErrorAt(path, i + 1, \"unable to process\
-    \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
-    \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
-    \ #ifndef other than include guards\n"
-  code: "/**\n * @brief \u0E05^>\u03C9<^\u0E05\n * @author serna37\n * @note https://serna37.github.io/library-cpp/\n\
-    \ */\n#ifdef LOCAL\n#include \"template/debug.hpp\"\n#else\n#define debug(...)\n\
-    #endif\n#include <algorithm>\n#include <array>\n#include <bitset>\n#include <cassert>\n\
-    #include <complex>\n#include <chrono>\n#include <deque>\n#include <functional>\n\
-    #include <iomanip>\n#include <iostream>\n#include <limits.h>\n#include <map>\n\
-    #include <math.h>\n#include <numeric>\n#include <queue>\n#include <random>\n#include\
-    \ <set>\n#include <sstream>\n#include <stack>\n#include <string>\n#include <tuple>\n\
-    #include <unordered_map>\n#include <unordered_set>\n#include <utility>\n#include\
-    \ <vector>\n#include <bits/stdc++.h>\nusing namespace std;\n#include \"template/def/common.hpp\"\
-    \n#include \"template/def/io.hpp\"\n#include \"template/def/type.hpp\"\n#include\
-    \ \"template/def/const.hpp\"\n/** ======================================= */\n\
-    /**              main                       */\n/** =======================================\
-    \ */\nvoid solve();\nsigned main() {\n    solve();\n}\n#include \"template/util/number.hpp\"\
-    \n#include \"template/util/string.hpp\"\n#include \"template/util/sequence.hpp\"\
-    \n#include \"template/util/search.hpp\"\n#include \"template/util/grid.hpp\"\n\
-    #include \"template/util/geometry.hpp\"\n/**\n * @brief util\u7CFB\n */\nnamespace\
-    \ lib {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\n\
-    Geometry geo;\n}; // namespace lib\n// -----------------------------------------\n\
-    // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n"
-  dependsOn:
-  - bits/stdc++.h
-  - template/def/common.hpp
-  - template/def/io.hpp
-  - template/def/type.hpp
-  - template/def/const.hpp
-  - template/util/number.hpp
-  - template/util/string.hpp
-  - template/util/sequence.hpp
-  - template/util/search.hpp
-  - template/util/grid.hpp
-  - template/util/geometry.hpp
+    , line 312, in update\n    raise BundleErrorAt(path, i + 1, \"#pragma once found\
+    \ in a non-first line\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
+    \ template/def/type.hpp: line 5: #pragma once found in a non-first line\n"
+  code: "\n/** ======================================= */\n/**                 \u578B\
+    \                      */\n/** ======================================= */\n#pragma\
+    \ once\ntemplate <typename T>\nusing reverse_queue = priority_queue<T, vector<T>,\
+    \ greater<T>>;\ntemplate <typename T> using vec2 = vector<vector<T>>;\ntemplate\
+    \ <typename T> vec2<T> make_vec2(int H, int W, T init = 0) {\n    return vector<vector<T>>(H,\
+    \ vector<T>(W, init));\n}\nchar int_to_char(int x) {\n    return (char)(x + '0');\n\
+    }\nchar int_to_alph(int x) {\n    return (char)(x + 'a');\n}\nint char_to_int(char\
+    \ c) {\n    return (int)(c - '0');\n}\nstring int_to_string(long long x) {\n \
+    \   return to_string(x);\n}\nlong long string_to_int(string s) {\n    return stoll(s);\n\
+    }\n"
+  dependsOn: []
   isVerificationFile: false
-  path: template/template.hpp
+  path: template/def/type.hpp
   requiredBy:
+  - template/template.hpp
   - main.cpp
   timestamp: '2026-01-06 20:15:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
@@ -162,12 +110,9 @@ data:
   - tests/graph/connected_components.test.cpp
   - tests/struct/union_find.test.cpp
   - tests/util.test.cpp
-documentation_of: template/template.hpp
+documentation_of: template/def/type.hpp
 layout: document
-title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
+title: "\u578B"
 ---
 
-いろいろ入れるテンプレ。
-
-- `bits/stdc++.h`で良いはずだが、明示的にincludeしてないとエラー等もあったのでとりあえず必要なものinclude
-- util系はnamespaceを用意しているので`lib:xxx.`とすることで予測変換で見やすい。とりあえず全部いれる
+型のエイリアスや、型変換などをまとめる
