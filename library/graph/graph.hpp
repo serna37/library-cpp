@@ -82,9 +82,9 @@ struct Graph {
     /**
      * BellmanFord 最小コスト経路 負重みOK O(VE)
      * @param s 始点 デフォルト0
-     * @return 最小コスト、経路
+     * @return 最小コスト、負サイクル有無、経路
      */
-    pair<vector<long long>, vector<int>> bellman_ford(int s = 0) {
+    tuple<vector<long long>, bool, vector<int>> bellman_ford(int s = 0) {
         int loop = 0;
         vector<long long> dis(N, INF);
         vector<int> route(N, -1);
@@ -107,7 +107,14 @@ struct Graph {
             }
             if (!upd) break;
         }
-        return {dis, route};
+        bool negativeCycle = false;
+        for (auto &&v : dis) {
+            if (v == -INF) {
+                negativeCycle = true;
+                break;
+            }
+        }
+        return {dis, negativeCycle, route};
     }
     /**
      * WarshallFroyd 全頂点対 最小コスト経路 O(N^3)
@@ -151,7 +158,7 @@ struct Graph {
             seen[v] = true;
             history.push_back(e);
             for (const auto &ne : G[v]) {
-                auto [from, to, id, cost] = ne;
+                auto [from, to, cost] = ne;
                 if (!directed and to == e.from) continue;
                 if (finished[to]) continue;
                 if (seen[to] and !finished[to]) {
@@ -180,7 +187,7 @@ struct Graph {
         for (int v = 0; v < N and pos == -1; ++v) {
             if (seen[v]) continue;
             history.clear();
-            pos = dfs(dfs, v, Edge({-1, -1, -1, -1}));
+            pos = dfs(dfs, v, Edge({-1, -1, -1}));
             if (pos != -1) return restruct(pos);
         }
         return vector<Edge>();
@@ -243,7 +250,7 @@ struct Graph {
     pair<vector<vector<int>>, vector<int>> scc() {
         int cnt = 0, now = 0;
         vector<int> ids(N), low(N), ord(N, -1), pth;
-        auto dfs = [&](auto &f, int v) {
+        auto dfs = [&](auto &f, int v) -> void {
             low[v] = ord[v] = now++;
             pth.emplace_back(v);
             // lowlink

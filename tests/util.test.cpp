@@ -228,7 +228,7 @@ void test_geometry() {
 }
 void solve() {
     // URLの問題の答えはこれだけ
-    cout << "Hello World" << endl;
+    print("Hello World");
     test_number();
     test_string();
     test_sequence();
