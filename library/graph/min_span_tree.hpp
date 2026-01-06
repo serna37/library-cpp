@@ -10,7 +10,9 @@ struct MinSpanTree {
 };
 /**
  * クラスカル O(ElogV)
- * @return 最小全域木
+ * @param edges 辺の集合
+ * @param v_cnt 頂点数
+ * @return 最小全域木 `MinSpanTree`
  */
 MinSpanTree kruskal(vector<Edge> edges, int v_cnt) {
     sort(edges.begin(), edges.end(),
