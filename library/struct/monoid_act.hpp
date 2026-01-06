@@ -1,4 +1,5 @@
 #pragma once
+#include "library/struct/monoid.hpp"
 /**
  * @brief モノイド作用素
  */
