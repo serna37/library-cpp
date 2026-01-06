@@ -12,7 +12,7 @@ struct Graph {
   public:
     Graph(int N) : N(N), G(N), es(0) {
     }
-    const vector<Edge>& operator[](int v) const {
+    const vector<Edge> &operator[](int v) const {
         return G[v];
     }
     int size() {
@@ -28,7 +28,8 @@ struct Graph {
         G[to].push_back(Edge(to, from, cost, es++));
     }
     // グラフを読み取る
-    void read(int M, int padding = -1, bool weighted = false, bool directed = false) {
+    void read(int M, int padding = -1, bool weighted = false,
+              bool directed = false) {
         for (int i = 0; i < M; i++) {
             int u, v;
             cin >> u >> v;
@@ -239,7 +240,6 @@ struct Graph {
         vector<int> ids(N, -1);
         vector<int> com;
         int cnt = 0;
-
         auto dfs = [&](auto &f, int v) -> void {
             ids[v] = cnt;
             com.push_back(v);
@@ -248,7 +248,6 @@ struct Graph {
                 f(f, to);
             }
         };
-
         for (int i = 0; i < N; ++i) {
             if (ids[i] != -1) continue;
             com.clear();

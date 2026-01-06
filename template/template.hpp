@@ -8,7 +8,6 @@
 #else
 #define debug(...)
 #endif
-
 #include <algorithm>
 #include <array>
 #include <bitset>
@@ -34,15 +33,12 @@
 #include <unordered_set>
 #include <utility>
 #include <vector>
-
 #include <bits/stdc++.h>
 using namespace std;
-
 #include "template/def/common.hpp"
 #include "template/def/io.hpp"
 #include "template/def/type.hpp"
 #include "template/def/const.hpp"
-
 /** ======================================= */
 /**              main                       */
 /** ======================================= */
@@ -50,7 +46,6 @@ void solve();
 signed main() {
     solve();
 }
-
 #include "template/util/number.hpp"
 #include "template/util/string.hpp"
 #include "template/util/sequence.hpp"
@@ -68,7 +63,6 @@ Search search;
 Grid grid;
 Geometry geo;
 }; // namespace lib
-
 // -----------------------------------------
 // #include "template/template.hpp" is done.
 // -----------------------------------------
