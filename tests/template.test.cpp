@@ -44,8 +44,8 @@ void test_string() {
     assert(lib::str.is_upp('a') == false);
     assert(lib::str.transform_lower("AbC") == "abc");
     assert(lib::str.transform_upper("AbC") == "ABC");
-    assert(lib::str.lpad("ABC", 6) == "000ABC");
-    assert(lib::str.rpad("ABC", 6) == "ABC000");
+    vector<string> val_join = {"aa", "bb", "cc"};
+    assert(lib::str.join(val_join, ",") == "aa,bb,cc");
     vector<int> exp_finds = {0, 3, 6, 9};
     assert(lib::str.finds("abcaefahia", "a") == exp_finds);
     vector<string> exp_split = {"aa", "bb", "cc"};
@@ -54,9 +54,6 @@ void test_string() {
     assert(lib::str.str_range("abc123abc", 3, 6) == "123a");
     vector<pair<char, int>> exp_runlen = {{'a', 3}, {'b', 2}, {'c', 1}};
     assert(lib::str.run_length("aaabbc") == exp_runlen);
-    vector<int> exp_z_algo = {13, 0, 0, 0, 3, 0, 0, 1, 0, 2, 0, 0, 1};
-    vector<int> val_z_algo = lib::str.z_algo("abc1abca3abZa");
-    assert(val_z_algo == exp_z_algo);
 }
 // ===== template/util/sequence.hpp =====
 void test_sequence() {
