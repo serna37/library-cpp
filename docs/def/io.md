@@ -1,6 +1,6 @@
 ---
 title: IO関連
-documentation_of: //library/def/io.hpp
+documentation_of: //template/def/io.hpp
 ---
 
 `vector`を`cin >> A`や`cout << A`できるようにする。

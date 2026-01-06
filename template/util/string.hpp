@@ -20,17 +20,14 @@ class String {
         std::transform(all(s), s.begin(), ::toupper);
         return s;
     }
-    // 「0000ABCDE」左側を埋めたsize桁の文字
-    string lpad(const string &S, int size, char ch = '0') {
-        int N = S.size();
-        if (N >= size) return S;
-        return string(size - N, ch) + S;
-    }
-    // 「ABCDE0000」右を埋めたsize桁の文字
-    string rpad(const string &S, int size, char ch = '0') {
-        int N = S.size();
-        if (N >= size) return S;
-        return S + string(size - N, ch);
+    // 結合
+    string join(const vector<string> &v, const string &sep) {
+        string res;
+        for (int i = 0; i < (int)v.size(); ++i) {
+            if (0 < i) res += sep;
+            res += v[i];
+        }
+        return res;
     }
     /**
      * 文字列Tの中にあるSの一致場所を全て取得
@@ -74,7 +71,7 @@ class String {
         if (A > B or A >= (int)S.size()) return "";
         return S.substr(A, B - A + 1);
     }
-    // ランレングス圧縮
+    // ランレングス圧縮 O(N)
     vector<pair<char, int>> run_length(const string &S) {
         vector<pair<char, int>> res;
         for (auto &&x : S) {
@@ -82,19 +79,5 @@ class String {
             ++res.back().second;
         }
         return res;
-    }
-    // Z-Algorithm: SとS[i:|S|]の最大共通接頭辞の長さ
-    vector<int> z_algo(const string &S) {
-        int n = S.size();
-        if (n == 0) return {};
-        vector<int> z(n);
-        z[0] = n;
-        for (int i = 1, j = 0; i < n; ++i) {
-            int &k = z[i];
-            k = (j + z[j] <= i) ? 0 : min(j + z[j] - i, z[i - j]);
-            while (i + k < n and S[k] == S[i + k]) ++k;
-            if (j + z[j] < i + z[i]) j = i;
-        }
-        return z;
     }
 };

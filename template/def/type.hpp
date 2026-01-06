@@ -6,8 +6,8 @@
 template <typename T>
 using reverse_queue = priority_queue<T, vector<T>, greater<T>>;
 template <typename T> using vec2 = vector<vector<T>>;
-vec2<int> make_vec2(int H, int W, int init = 0) {
-    return vector<vector<int>>(H, vector<int>(W, init));
+template <typename T> vec2<T> make_vec2(int H, int W, T init = 0) {
+    return vector<vector<T>>(H, vector<T>(W, init));
 }
 char int_to_char(int x) {
     return (char)(x + '0');

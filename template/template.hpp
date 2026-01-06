@@ -8,13 +8,37 @@
 #else
 #define debug(...)
 #endif
-#include "template/includes.hpp"
+#include <algorithm>
+#include <array>
+#include <bitset>
+#include <cassert>
+#include <complex>
+#include <chrono>
+#include <deque>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <limits.h>
+#include <map>
+#include <math.h>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <tuple>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 #include <bits/stdc++.h>
 using namespace std;
-#include "library/def/common.hpp"
-#include "library/def/io.hpp"
-#include "library/def/type.hpp"
-#include "library/def/const.hpp"
+#include "template/def/common.hpp"
+#include "template/def/io.hpp"
+#include "template/def/type.hpp"
+#include "template/def/const.hpp"
 /** ======================================= */
 /**              main                       */
 /** ======================================= */
@@ -22,7 +46,23 @@ void solve();
 signed main() {
     solve();
 }
+#include "template/util/number.hpp"
+#include "template/util/string.hpp"
+#include "template/util/sequence.hpp"
+#include "template/util/search.hpp"
+#include "template/util/grid.hpp"
+#include "template/util/geometry.hpp"
+/**
+ * @brief util系
+ */
+namespace lib {
+Number num;
+String str;
+Sequence seq;
+Search search;
+Grid grid;
+Geometry geo;
+}; // namespace lib
 // -----------------------------------------
 // #include "template/template.hpp" is done.
 // -----------------------------------------
-#include "template/lib.hpp"

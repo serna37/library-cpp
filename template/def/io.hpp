@@ -3,6 +3,7 @@
 /**                IO                       */
 /** ======================================= */
 #pragma once
+#define endl "\n"
 struct IoSetup {
     IoSetup() {
         cin.tie(0)->sync_with_stdio(0);

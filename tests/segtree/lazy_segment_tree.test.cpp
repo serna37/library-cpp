@@ -8,7 +8,6 @@
 void solve() {
     int N, Q;
     cin >> N >> Q;
-    vector<int> A(N, INT_MAX);
     LazySegmentTree<int, int> seg(Monoid::Min::op, Monoid::Min::e,
                                   Monoid::Set::op, Monoid::Set::e,
                                   MonoidAct::MinSet::op, N);

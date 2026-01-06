@@ -1,4 +1,4 @@
 ---
 title: 定数
-documentation_of: //library/def/const.hpp
+documentation_of: //template/def/const.hpp
 ---

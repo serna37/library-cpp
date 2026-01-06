@@ -33,10 +33,6 @@
 #include <unordered_set>
 #include <utility>
 #include <vector>
-// -----------------------------------------
-// #include "template/includes.hpp" is done.
-// -----------------------------------------
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -64,6 +60,7 @@ auto random_mersenne_twister = [](int a = 1, int b = 1e5 + 1) {
 /**                IO                       */
 /** ======================================= */
 
+#define endl "\n"
 struct IoSetup {
     IoSetup() {
         cin.tie(0)->sync_with_stdio(0);
@@ -104,8 +101,8 @@ void YN(bool o) {
 template <typename T>
 using reverse_queue = priority_queue<T, vector<T>, greater<T>>;
 template <typename T> using vec2 = vector<vector<T>>;
-vec2<int> make_vec2(int H, int W, int init = 0) {
-    return vector<vector<int>>(H, vector<int>(W, init));
+template <typename T> vec2<T> make_vec2(int H, int W, T init = 0) {
+    return vector<vector<T>>(H, vector<T>(W, init));
 }
 char int_to_char(int x) {
     return (char)(x + '0');
@@ -133,7 +130,7 @@ const long long MAX = 2e6;
 const long long MOD = 998244353;
 const long long MOD7 = 1e9 + 7;
 const long double EPS = 1e-14;
-const double PI = acos(-1);
+const long double PI = acos(-1);
 // 下右上左 DRUL
 const vector<int> dx = {0, 1, 0, -1};
 const vector<int> dy = {1, 0, -1, 0};
@@ -148,9 +145,6 @@ void solve();
 signed main() {
     solve();
 }
-// -----------------------------------------
-// #include "template/template.hpp" is done.
-// -----------------------------------------
 
 /**
  * @brief 数の性質
@@ -162,20 +156,20 @@ class Number {
 
   public:
     // 割り下げ（負の場合0側へ丸めない）
-    template <typename T> T div_ceil(T a, T b) {
+    long long div_ceil(long long a, long long b) {
         return a / b + (((a ^ b) > 0 and a % b != 0) ? 1 : 0);
     }
     // 割り上げ（負の場合0側へ丸めない）
-    template <typename T> T div_floor(T a, T b) {
+    long long div_floor(long long a, long long b) {
         return a / b - (((a ^ b) < 0 and a % b != 0) ? 1 : 0);
     }
-    // 階乗 ナイーブ
+    // 階乗 ナイーブ O(N)
     long long factorial(int N) {
         long long res = 1;
         while (N > 0) res *= N--;
         return res;
     }
-    // nCk
+    // nCk O(k)
     long long combination(int n, int k) {
         if (k < 0 || n < k) return 0ll;
         long long res = 1;
@@ -185,7 +179,7 @@ class Number {
         }
         return res;
     }
-    // 桁和
+    // 桁和 O(log a)
     int digit_sum(int a, int N = 10) {
         int res = 0;
         while (a != 0) {
@@ -194,7 +188,7 @@ class Number {
         }
         return res;
     }
-    // 進数変換 fromとtoは10を超えないこと
+    // 進数変換 fromとtoは10を超えないこと O(|a|)
     string base_convert(string a, int from, int to) {
         long long cvt = 0ll; // 10進数に直す
         for (auto &&v : a) cvt = cvt * from + (int)(v - '0');
@@ -206,7 +200,7 @@ class Number {
         }
         return res;
     }
-    // 約数列挙
+    // 約数列挙 O(√N)
     vector<int> divisors(int a) {
         vector<int> res;
         for (int i = 1; i * i <= a; ++i) {
@@ -216,7 +210,7 @@ class Number {
         }
         return res;
     }
-    // 素数判定
+    // 素数判定 O(√N)
     bool prime_test(int N) {
         if (N == 2) return true;
         if (N == 1 or N % 2 == 0) return false;
@@ -225,7 +219,7 @@ class Number {
         }
         return true;
     }
-    // 素因数分解
+    // 素因数分解 O(√N)
     map<int, int> prime_fact(int N) {
         map<int, int> P;
         for (int i = 2; i * i <= N; ++i) {
@@ -237,7 +231,7 @@ class Number {
         if (N > 1) ++P[N];
         return P;
     }
-    // 二分累乗(mod)
+    // 二分累乗(mod) O(log N)
     long long modpow(long long a, long long n, long long m) {
         long long res = 1ll;
         while (n > 0) {
@@ -247,18 +241,18 @@ class Number {
         }
         return res;
     }
-    // Fermatの小定理 逆元を求める
+    // Fermatの小定理 逆元を求める O(log m)
     long long modinv(long long a, long long m) {
         return modpow(a, m - 2, m);
     }
-    // mod階乗
+    // mod階乗 O(N)
     long long modfact(int x, long long m) {
         if ((int)_mf.size() > x) return _mf[x];
         if (_mf.empty()) _mf.push_back(1);
         for (int i = _mf.size(); i <= x; ++i) _mf.push_back(_mf.back() * i % m);
         return _mf[x];
     }
-    // mod組み合わせnCk
+    // mod組み合わせnCk O(log m)
     long long mod_combination(int n, int k, long long m) {
         return modfact(n, m) * modinv(modfact(k, m), m) % m *
                modinv(modfact(n - k, m), m) % m;
@@ -287,17 +281,14 @@ class String {
         std::transform(all(s), s.begin(), ::toupper);
         return s;
     }
-    // 「0000ABCDE」左側を埋めたsize桁の文字
-    string lpad(const string &S, int size, char ch = '0') {
-        int N = S.size();
-        if (N >= size) return S;
-        return string(size - N, ch) + S;
-    }
-    // 「ABCDE0000」右を埋めたsize桁の文字
-    string rpad(const string &S, int size, char ch = '0') {
-        int N = S.size();
-        if (N >= size) return S;
-        return S + string(size - N, ch);
+    // 結合
+    string join(const vector<string> &v, const string &sep) {
+        string res;
+        for (int i = 0; i < (int)v.size(); ++i) {
+            if (0 < i) res += sep;
+            res += v[i];
+        }
+        return res;
     }
     /**
      * 文字列Tの中にあるSの一致場所を全て取得
@@ -341,7 +332,7 @@ class String {
         if (A > B or A >= (int)S.size()) return "";
         return S.substr(A, B - A + 1);
     }
-    // ランレングス圧縮
+    // ランレングス圧縮 O(N)
     vector<pair<char, int>> run_length(const string &S) {
         vector<pair<char, int>> res;
         for (auto &&x : S) {
@@ -349,20 +340,6 @@ class String {
             ++res.back().second;
         }
         return res;
-    }
-    // Z-Algorithm: SとS[i:|S|]の最大共通接頭辞の長さ
-    vector<int> z_algo(const string &S) {
-        int n = S.size();
-        if (n == 0) return {};
-        vector<int> z(n);
-        z[0] = n;
-        for (int i = 1, j = 0; i < n; ++i) {
-            int &k = z[i];
-            k = (j + z[j] <= i) ? 0 : min(j + z[j] - i, z[i - j]);
-            while (i + k < n and S[k] == S[i + k]) ++k;
-            if (j + z[j] < i + z[i]) j = i;
-        }
-        return z;
     }
 };
 
@@ -596,13 +573,13 @@ class Search {
         return res;
     }
     /**
-     * 整数上の二分探索
+     * 整数上の二分探索 O(log N)
      *     L R
      * x x x o o o o
      *       ↑ここを求める
      * 条件：5 <= xなら、L=4, R=5
      */
-    template <typename F> pair<long long, long long> bi(F f) {
+    pair<long long, long long> bi(function<bool(long long)> f) {
         long long L = 0, R = 1, MID = 0;
         while (!f(R)) R <<= 1;
         while (abs(R - L) > 1) {
@@ -612,13 +589,13 @@ class Search {
         return make_pair(L, R);
     }
     /**
-     * 実数上の二分探索
+     * 実数上の二分探索 O(log N)
      *     L R
      * x x x o o o o
      *       ↑ここを求める
      * 条件：3.5 <= xなら、L=3.5, R=3.5 (LRの誤差がEPS内)
      */
-    template <typename F> pair<double, double> bi_real(F f) {
+    pair<double, double> bi_real(function<bool(double)> f) {
         double L = 0, R = 1, MID = 0;
         while (!f(R)) R *= 2;
         auto ABS = [&]() { return abs(R - L) > EPS; };
@@ -802,9 +779,8 @@ Grid grid;
 Geometry geo;
 }; // namespace lib
 // -----------------------------------------
-// #include "template/lib.hpp" is done.
+// #include "template/template.hpp" is done.
 // -----------------------------------------
-
 
 /**
  * @brief 🍪🧸🐾

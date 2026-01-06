@@ -2,6 +2,7 @@
 #include "library/struct/monoid.hpp"
 /**
  * @brief Segment Tree 1点更新 区間取得
+ * @tparam T モノイドの型
  */
 template <typename T> struct SegmentTree {
     using F = function<T(T, T)>;

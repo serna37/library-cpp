@@ -1,7 +1,10 @@
 #pragma once
 #include "library/struct/monoid.hpp"
+#include "library/struct/monoid_act.hpp"
 /**
  * @brief Lazy Segment Tree 区間更新 区間取得
+ * @tparam T 演算モノイドの型
+ * @tparam U 更新モノイドの型
  * @note 演算op e 更新op e 作用op
  */
 template <typename T, typename U> struct LazySegmentTree {

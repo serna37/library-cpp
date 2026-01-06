@@ -60,38 +60,3 @@ struct Monoid {
         }
     };
 };
-/**
- * @brief モノイド作用
- */
-struct MonoidAct {
-    // 演算: 加算  更新: 加算
-    struct AddAdd {
-        static constexpr int op(const int &node, const int &a,
-                                const int &size) {
-            return node + a * size;
-        }
-    };
-    // 演算: 加算  更新: 代入
-    struct AddSet {
-        static constexpr int op(const int &node, const int &a,
-                                const int &size) {
-            return a == Monoid::Set::e ? node : a * size;
-        }
-    };
-    // 演算: 最小値  更新: 加算
-    struct MinAdd {
-        static constexpr int op(const int &node, const int &a,
-                                const int &size) {
-            (void)size; // unused
-            return node == Monoid::Min::e ? node : node + a;
-        }
-    };
-    // 演算: 最小値  更新: 代入
-    struct MinSet {
-        static constexpr int op(const int &node, const int &a,
-                                const int &size) {
-            (void)size; // unused
-            return a == Monoid::Set::e ? node : a;
-        }
-    };
-};

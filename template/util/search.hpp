@@ -35,13 +35,13 @@ class Search {
         return res;
     }
     /**
-     * 整数上の二分探索
+     * 整数上の二分探索 O(log N)
      *     L R
      * x x x o o o o
      *       ↑ここを求める
      * 条件：5 <= xなら、L=4, R=5
      */
-    template <typename F> pair<long long, long long> bi(F f) {
+    pair<long long, long long> bi(function<bool(long long)> f) {
         long long L = 0, R = 1, MID = 0;
         while (!f(R)) R <<= 1;
         while (abs(R - L) > 1) {
@@ -51,13 +51,13 @@ class Search {
         return make_pair(L, R);
     }
     /**
-     * 実数上の二分探索
+     * 実数上の二分探索 O(log N)
      *     L R
      * x x x o o o o
      *       ↑ここを求める
      * 条件：3.5 <= xなら、L=3.5, R=3.5 (LRの誤差がEPS内)
      */
-    template <typename F> pair<double, double> bi_real(F f) {
+    pair<double, double> bi_real(function<bool(double)> f) {
         double L = 0, R = 1, MID = 0;
         while (!f(R)) R *= 2;
         auto ABS = [&]() { return abs(R - L) > EPS; };
