@@ -3,5 +3,6 @@
 "tests/segtree.fenwick_tree.test.cpp": "2026-01-05 12:44:22 +0000",
 "tests/segtree.lazy_segment_tree.test.cpp": "2026-01-05 12:44:22 +0000",
 "tests/segtree.segment_tree.test.cpp": "2026-01-05 12:44:22 +0000",
+"tests/struct.union_find.test.cpp": "2026-01-05 12:44:22 +0000",
 "tests/template.test.cpp": "2026-01-05 12:44:22 +0000"
 }
