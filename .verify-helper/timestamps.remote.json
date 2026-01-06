@@ -1,10 +1,12 @@
 {
 "tests/graph/bellman_ford.test.cpp": "2026-01-06 19:47:46 +0900",
 "tests/graph/bfs.test.cpp": "2026-01-06 19:47:46 +0900",
+"tests/graph/connected_components.test.cpp": "2026-01-06 20:07:24 +0900",
 "tests/graph/cycle_detect.test.cpp": "2026-01-06 19:47:46 +0900",
 "tests/graph/dijkstra.test.cpp": "2026-01-06 19:47:46 +0900",
 "tests/graph/mst_kruskal.test.cpp": "2026-01-06 19:47:46 +0900",
 "tests/graph/route_restore.test.cpp": "2026-01-06 19:47:46 +0900",
+"tests/graph/strongly_connected_components.test.cpp": "2026-01-06 20:10:23 +0900",
 "tests/graph/topological_sort.test.cpp": "2026-01-06 19:47:46 +0900",
 "tests/graph/warshall_froyd.test.cpp": "2026-01-06 19:47:46 +0900",
 "tests/segtree/dual_segment_tree.test.cpp": "2026-01-06 19:47:46 +0900",
