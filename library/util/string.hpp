@@ -74,7 +74,7 @@ class String {
         if (A > B or A >= (int)S.size()) return "";
         return S.substr(A, B - A + 1);
     }
-    // ランレングス圧縮
+    // ランレングス圧縮 O(N)
     vector<pair<char, int>> run_length(const string &S) {
         vector<pair<char, int>> res;
         for (auto &&x : S) {
