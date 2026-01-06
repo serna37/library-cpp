@@ -72,7 +72,7 @@ data:
   isVerificationFile: false
   path: library/segtree/starry_sky_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-06 20:15:46+09:00'
+  timestamp: '2026-01-06 20:47:57+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/segtree/starry_sky_tree.hpp

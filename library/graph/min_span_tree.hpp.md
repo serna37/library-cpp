@@ -64,7 +64,7 @@ data:
   isVerificationFile: false
   path: library/graph/min_span_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-06 20:15:46+09:00'
+  timestamp: '2026-01-06 20:47:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst_kruskal.test.cpp

@@ -60,7 +60,7 @@ data:
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/util.test.cpp
-    title: "template/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
+    title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -89,7 +89,7 @@ data:
   requiredBy:
   - template/template.hpp
   - main.cpp
-  timestamp: '2026-01-06 20:15:46+09:00'
+  timestamp: '2026-01-06 20:47:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp

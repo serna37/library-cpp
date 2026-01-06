@@ -68,6 +68,26 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/struct/union_find.hpp
       title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
+  - name: library/util
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: library/util/geometry.hpp
+      title: "\u5E7E\u4F55"
+    - icon: ':heavy_check_mark:'
+      path: library/util/grid.hpp
+      title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
+    - icon: ':heavy_check_mark:'
+      path: library/util/number.hpp
+      title: "\u6570\u306E\u6027\u8CEA"
+    - icon: ':heavy_check_mark:'
+      path: library/util/search.hpp
+      title: "\u63A2\u7D22"
+    - icon: ':heavy_check_mark:'
+      path: library/util/sequence.hpp
+      title: "\u914D\u5217\u30FB\u6570\u5217"
+    - icon: ':heavy_check_mark:'
+      path: library/util/string.hpp
+      title: "\u6587\u5B57\u5217"
   - name: template
     pages:
     - icon: ':warning:'
@@ -90,26 +110,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: template/def/type.hpp
       title: "\u578B"
-  - name: template/util
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: template/util/geometry.hpp
-      title: "\u5E7E\u4F55"
-    - icon: ':heavy_check_mark:'
-      path: template/util/grid.hpp
-      title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
-    - icon: ':heavy_check_mark:'
-      path: template/util/number.hpp
-      title: "\u6570\u306E\u6027\u8CEA"
-    - icon: ':heavy_check_mark:'
-      path: template/util/search.hpp
-      title: "\u63A2\u7D22"
-    - icon: ':heavy_check_mark:'
-      path: template/util/sequence.hpp
-      title: "\u914D\u5217\u30FB\u6570\u5217"
-    - icon: ':heavy_check_mark:'
-      path: template/util/string.hpp
-      title: "\u6587\u5B57\u5217"
   verificationCategories:
   - name: tests/graph
     pages:
@@ -170,7 +170,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: tests/util.test.cpp
-      title: "template/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
+      title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
 layout: toppage
 ---
 <!-- AtCoder -->

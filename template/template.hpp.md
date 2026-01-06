@@ -16,24 +16,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: template/def/type.hpp
     title: "\u578B"
-  - icon: ':heavy_check_mark:'
-    path: template/util/geometry.hpp
-    title: "\u5E7E\u4F55"
-  - icon: ':heavy_check_mark:'
-    path: template/util/grid.hpp
-    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
-  - icon: ':heavy_check_mark:'
-    path: template/util/number.hpp
-    title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':heavy_check_mark:'
-    path: template/util/search.hpp
-    title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: template/util/sequence.hpp
-    title: "\u914D\u5217\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
-    path: template/util/string.hpp
-    title: "\u6587\u5B57\u5217"
   _extendedRequiredBy:
   - icon: ':warning:'
     path: main.cpp
@@ -90,7 +72,7 @@ data:
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/util.test.cpp
-    title: "template/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
+    title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -120,12 +102,7 @@ data:
     \n#include \"template/def/io.hpp\"\n#include \"template/def/type.hpp\"\n#include\
     \ \"template/def/const.hpp\"\n/** ======================================= */\n\
     /**              main                       */\n/** =======================================\
-    \ */\nvoid solve();\nsigned main() {\n    solve();\n}\n#include \"template/util/number.hpp\"\
-    \n#include \"template/util/string.hpp\"\n#include \"template/util/sequence.hpp\"\
-    \n#include \"template/util/search.hpp\"\n#include \"template/util/grid.hpp\"\n\
-    #include \"template/util/geometry.hpp\"\n/**\n * @brief util\u7CFB\n */\nnamespace\
-    \ lib {\nNumber num;\nString str;\nSequence seq;\nSearch search;\nGrid grid;\n\
-    Geometry geo;\n}; // namespace lib\n// -----------------------------------------\n\
+    \ */\nvoid solve();\nsigned main() {\n    solve();\n}\n// -----------------------------------------\n\
     // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n"
   dependsOn:
   - bits/stdc++.h
@@ -133,17 +110,11 @@ data:
   - template/def/io.hpp
   - template/def/type.hpp
   - template/def/const.hpp
-  - template/util/number.hpp
-  - template/util/string.hpp
-  - template/util/sequence.hpp
-  - template/util/search.hpp
-  - template/util/grid.hpp
-  - template/util/geometry.hpp
   isVerificationFile: false
   path: template/template.hpp
   requiredBy:
   - main.cpp
-  timestamp: '2026-01-06 20:15:46+09:00'
+  timestamp: '2026-01-06 20:47:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp
@@ -169,5 +140,4 @@ title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
 
 いろいろ入れるテンプレ。
 
-- `bits/stdc++.h`で良いはずだが、明示的にincludeしてないとエラー等もあったのでとりあえず必要なものinclude
-- util系はnamespaceを用意しているので`lib:xxx.`とすることで予測変換で見やすい。とりあえず全部いれる
+`bits/stdc++.h`で良いはずだが、明示的にincludeしてないとエラー等もあったのでとりあえず必要なものinclude

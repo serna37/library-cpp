@@ -25,24 +25,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
-  - icon: ':heavy_check_mark:'
-    path: template/util/geometry.hpp
-    title: "\u5E7E\u4F55"
-  - icon: ':heavy_check_mark:'
-    path: template/util/grid.hpp
-    title: "\u30AF\u3099\u30EA\u30C3\u30C8\u3099"
-  - icon: ':heavy_check_mark:'
-    path: template/util/number.hpp
-    title: "\u6570\u306E\u6027\u8CEA"
-  - icon: ':heavy_check_mark:'
-    path: template/util/search.hpp
-    title: "\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
-    path: template/util/sequence.hpp
-    title: "\u914D\u5217\u30FB\u6570\u5217"
-  - icon: ':heavy_check_mark:'
-    path: template/util/string.hpp
-    title: "\u6587\u5B57\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -83,18 +65,12 @@ data:
   - template/def/io.hpp
   - template/def/type.hpp
   - template/def/const.hpp
-  - template/util/number.hpp
-  - template/util/string.hpp
-  - template/util/sequence.hpp
-  - template/util/search.hpp
-  - template/util/grid.hpp
-  - template/util/geometry.hpp
   - library/graph/graph.hpp
   - library/graph/edge.hpp
   isVerificationFile: true
   path: tests/graph/route_restore.test.cpp
   requiredBy: []
-  timestamp: '2026-01-06 20:15:46+09:00'
+  timestamp: '2026-01-06 20:47:57+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/route_restore.test.cpp
