@@ -2,10 +2,10 @@
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include "template/template.hpp"
 /**
- * @brief library/util/xxx.hppのユニットテスト
+ * @brief template/util/xxx.hppのユニットテスト
  * 出力すると問題に正解できないのでassertのみ
  */
-// ===== library/util/number.hpp =====
+// ===== template/util/number.hpp =====
 void test_number() {
     assert(lib::num.div_ceil(10, 2) == 5);
     assert(lib::num.div_ceil(11, 2) == 6);
@@ -36,7 +36,7 @@ void test_number() {
     assert(lib::num.modfact(10, MOD) == 3628800);
     assert(lib::num.mod_combination(10, 5, MOD) == 252);
 }
-// ===== library/util/string.hpp =====
+// ===== template/util/string.hpp =====
 void test_string() {
     assert(lib::str.is_low('A') == false);
     assert(lib::str.is_low('a') == true);
@@ -58,7 +58,7 @@ void test_string() {
     vector<int> val_z_algo = lib::str.z_algo("abc1abca3abZa");
     assert(val_z_algo == exp_z_algo);
 }
-// ===== library/util/sequence.hpp =====
+// ===== template/util/sequence.hpp =====
 void test_sequence() {
     vector<int> A = {1, 3, 2, 5, 8, 13, 2, 9, 3, 5};
     assert(lib::seq.min(A) == 1);
@@ -164,7 +164,7 @@ void test_sequence() {
     vector<int> exp_moebius = {1, 3, 3, -5, -1, 7};
     assert(R == exp_moebius);
 }
-// ===== library/util/search.hpp =====
+// ===== template/util/search.hpp =====
 void test_search() {
     vector<int> A = {1, 2, 3};
     vector<vector<int>> val_perm;
@@ -204,7 +204,7 @@ void test_search() {
     assert(lib::search.bi_gt_val(st, 7ll) == 8);
     assert(lib::search.bi_gt_val(st, 11ll) == INF);
 }
-// ===== library/util/grid.hpp =====
+// ===== template/util/grid.hpp =====
 void test_grid() {
     vector<vector<int>> G = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     auto T = lib::grid.transpose(G);
@@ -220,7 +220,7 @@ void test_grid() {
     lib::grid.bfs8(G, f);
     assert(cnt == 8);
 }
-// ===== library/util/gepmetry.hpp =====
+// ===== template/util/gepmetry.hpp =====
 void test_geometry() {
     assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(45)) == 45);
     assert(lib::geo.rad_to_deg(lib::geo.deg_to_rad(361)) <
