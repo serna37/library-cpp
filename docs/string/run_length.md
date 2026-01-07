@@ -10,7 +10,7 @@ documentation_of: //library/string/run_length.hpp
 ```
 AAAABBBCDDDD
 ↓
-{{A, 4}, {B, 3}, {C, 1}, {D, 4}}
+{ [A, 4], [B, 3], [C, 1], [D, 4] }
 ```
 
 ## 計算量
