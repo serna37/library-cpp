@@ -99,11 +99,11 @@ data:
   - name: library/polynomial
     pages:
     - icon: ':warning:'
-      path: library/polynomial/convolution.hpp
+      path: library/polynomial/convolution_fft.hpp
       title: "\u7573\u307F\u8FBC\u307F FFT"
     - icon: ':warning:'
       path: library/polynomial/fft.hpp
-      title: FFT
+      title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
   - name: library/search
     pages:
     - icon: ':warning:'

@@ -63,7 +63,7 @@ data:
   isVerificationFile: false
   path: library/graph/warshall_froyd.hpp
   requiredBy: []
-  timestamp: '2026-01-07 21:05:45+09:00'
+  timestamp: '2026-01-07 21:37:53+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/warshall_froyd.test.cpp
