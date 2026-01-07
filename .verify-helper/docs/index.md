@@ -5,26 +5,14 @@
   </a>
 </div>
 
-# C++ ライブラリ
-C++での競技プログラミング向けに構築した、アルゴリズムとデータ構造のライブラリです
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/serna37/library-cpp?style=flat)
 
-# 関連
+## 関連
 - 私の[dotfiles](https://github.com/serna37/dotfiles/blob/master/cpp.zsh)中に、関連コマンドが作成されています
-- VerifyとPagesは[online-judge-tools/verification-helper](https://github.com/online-judge-tools/verification-helper/blob/master/README.ja.md)を使用
-
-# 開発ルール
-- 必要な場合のみ、関数に説明コメントをつける
-  - 1行で済む場合は`// xxx`のスタイルで記載
-  - 複数行の場合、`Doxygen`で記載
-  - [`coc.nvim`](https://github.com/neoclide/coc.nvim)での予測変換で表示されることを意識する
-- 用意する関数は、種別ごとにファイル分けする
-- 依存は最小限にする
-- できるだけテストする
+- VerifyとPagesは[online-judge-tools/verification-helper](https://github.com/online-judge-tools/verification-helper/blob/master/README.ja.md)を使用しています
 
 ## 型について
-`#define int long long`のマクロを使用しています。`template <typename T>`の使用有無について整理。
-- 型は`int` `long long` `double`または`char` `string`等のいずれか複数に対応できる場合に抽象化する
-- ライブラリ作成において`#define int long long`のマクロは考慮**しない**。あくまで安全のためのガードなので`long long`であるべきものはちゃんと使う
-- コストは`long long`、頂点数はどうせ`int`などのように考えてよい
-
-
+- テンプレートでは`#define int long long`のマクロを使用しています
+- 用意している関数の型は数値や文字列のいずれか複数に対応できる場合に抽象化しています
+- `#define int long long`のマクロはあくまで桁溢れ防止のためのガードなので**考慮せず**、`long long`であるべきものは`long long`を使用しています
+- コストは`long long`、頂点数はどうせ`int`などのように決めつけて考えている場合もあります

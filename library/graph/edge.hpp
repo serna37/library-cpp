@@ -1,7 +1,4 @@
 #pragma once
-/**
- * @brief 辺
- */
 struct Edge {
     int from, to;
     long long cost;

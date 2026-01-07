@@ -4,22 +4,6 @@
  */
 class String {
   public:
-    bool is_low(char c) {
-        return islower(c) != 0;
-    }
-    bool is_upp(char c) {
-        return isupper(c) != 0;
-    }
-    // 小文字に変換
-    string transform_lower(string s) {
-        std::transform(all(s), s.begin(), ::tolower);
-        return s;
-    }
-    // 大文字に変換
-    string transform_upper(string s) {
-        std::transform(all(s), s.begin(), ::toupper);
-        return s;
-    }
     // 結合
     string join(const vector<string> &v, const string &sep) {
         string res;

@@ -8,14 +8,6 @@ class Number {
     vector<long long> _mf;
 
   public:
-    // 割り下げ（負の場合0側へ丸めない）
-    long long div_ceil(long long a, long long b) {
-        return a / b + (((a ^ b) > 0 and a % b != 0) ? 1 : 0);
-    }
-    // 割り上げ（負の場合0側へ丸めない）
-    long long div_floor(long long a, long long b) {
-        return a / b - (((a ^ b) < 0 and a % b != 0) ? 1 : 0);
-    }
     // 階乗 ナイーブ O(N)
     long long factorial(int N) {
         long long res = 1;

@@ -4,18 +4,6 @@
  */
 class Geometry {
   public:
-    // 度数法 → 弧度法
-    double deg_to_rad(double d) {
-        return d * PI / 180;
-    }
-    // 弧度法 → 度数法
-    double rad_to_deg(double r) {
-        return r * 180 / PI;
-    }
-    // 偏角をラジアンで返す
-    double arc_tan(double x, double y) {
-        return atan2(y, x);
-    }
     /**
      * 三角形の面積
      * doubleは桁数表現11bitを除き、52bit程度の精度

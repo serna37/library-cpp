@@ -1,6 +1,6 @@
 #pragma once
 /**
- * @brief 星空木 区間加算 区間min/max取得
+ * @brief 星空木 区間加算 区間max取得
  * @note https://rsk0315.hatenablog.com/entry/2019/06/21/174953
  *
  * `rev = true` で区間minに変更

@@ -4,45 +4,6 @@
  */
 class Sequence {
   public:
-    template <typename T> T min(const vector<T> &v) {
-        return *min_element(all(v));
-    }
-    template <typename T> T max(const vector<T> &v) {
-        return *max_element(all(v));
-    }
-    template <typename T> long long sum(const vector<T> &v) {
-        return accumulate(all(v), 0ll);
-    }
-    template <typename T, typename F> bool all_match(const vector<T> &v, F f) {
-        return all_of(all(v), f);
-    }
-    template <typename T, typename F> bool none_match(const vector<T> &v, F f) {
-        return none_of(all(v), f);
-    }
-    template <typename T, typename F> bool any_match(const vector<T> &v, F f) {
-        return any_of(all(v), f);
-    }
-    template <typename T> void distinct(vector<T> &v) {
-        sort(all(v));
-        v.erase(unique(all(v)), v.end());
-    }
-    template <typename T> void sort_asc(vector<T> &v) {
-        sort(all(v));
-    }
-    template <typename T> void sort_desc(vector<T> &v) {
-        sort(rall(v));
-    }
-    template <typename T> void reverse(vector<T> &v) {
-        std::reverse(all(v));
-    }
-    // setから要素削除
-    template <typename T> void erase(set<T> &st, const T &v) {
-        st.erase(st.find(v));
-    }
-    // multisetから要素削除
-    template <typename T> void erase(multiset<T> &st, const T &v) {
-        st.erase(st.find(v));
-    }
     /**
      * 分割代入できるようにする Gは破壊。
      * auto [a,b] = unpack<2>(move(G));
@@ -51,10 +12,6 @@ class Sequence {
         array<T, N> res; // vector -> array変換するだけ
         for (int i = 0; i < N; ++i) res[i] = move(G[i]);
         return res;
-    }
-    // 連番生成
-    template <typename T> void renban(vector<T> &v, T start = 0) {
-        iota(all(v), start);
     }
     // AをBにマージテク vector
     template <typename T> void merge(vector<T> &A, vector<T> &B) {

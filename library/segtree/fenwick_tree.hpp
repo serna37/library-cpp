@@ -1,6 +1,6 @@
 #pragma once
 /**
- * @brief FenwicTree 1点更新 区間取得 和のみ
+ * @brief Fenwic Tree 1点更新 区間取得 和のみ
  */
 struct FenwickTree {
   private:
@@ -18,11 +18,9 @@ struct FenwickTree {
             if (i + (i & -i) <= N) fwk[i + (i & -i)] += fwk[i];
         }
     }
-    // 値を加える
     void add(int i, const int &x) {
         for (++i; i <= N; i += i & -i) fwk[i] += x;
     }
-    // Σ[0, i]
     int sum(int i) {
         int ans = 0;
         for (++i; i; i -= i & -i) ans += fwk[i];

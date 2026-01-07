@@ -47,7 +47,7 @@ struct Graph {
     vector<int> route_restore(const vector<int> &route, int goal) {
         vector<int> path = {goal};
         while (!!~route[path.back()]) path.push_back(route[path.back()]);
-        reverse(all(path));
+        reverse(path.begin(), path.end());
         return path;
     }
     /**
@@ -227,7 +227,7 @@ struct Graph {
         for (int i = 0; i < N; ++i) {
             if (!seen[i]) dfs(dfs, i);
         }
-        reverse(all(sorted));
+        reverse(sorted.begin(), sorted.end());
         return sorted;
     }
     /**
