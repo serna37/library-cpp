@@ -2,29 +2,17 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: bits/stdc++.h
-    title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
-  - icon: ':heavy_check_mark:'
     path: library/graph/edge.hpp
     title: "\u8FBA"
   - icon: ':heavy_check_mark:'
+    path: library/graph/kruskal.hpp
+    title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
+  - icon: ':heavy_check_mark:'
     path: library/graph/min_span_tree.hpp
-    title: "\u6700\u5C0F\u5168\u57DF\u6728 (kruskal)"
+    title: "\u6700\u5C0F\u5168\u57DF\u6728"
   - icon: ':heavy_check_mark:'
     path: library/struct/union_find.hpp
     title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
-  - icon: ':heavy_check_mark:'
-    path: template/def/common.hpp
-    title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
-    path: template/def/const.hpp
-    title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
-    path: template/def/io.hpp
-    title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
-    path: template/def/type.hpp
-    title: "\u578B"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -54,26 +42,22 @@ data:
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_2_A\"\
-    \n#include \"template/template.hpp\"\n#include \"library/graph/min_span_tree.hpp\"\
-    \n/**\n * @brief \u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\
+    \n#include \"template/template.hpp\"\n#include \"library/graph/kruskal.hpp\"\n\
+    /**\n * @brief \u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\
     \u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n    int V, E;\n    cin >> V >>\
     \ E;\n    vector<Edge> edges;\n    for (int i = 0; i < E; ++i) {\n        int\
     \ s, t, w;\n        cin >> s >> t >> w;\n        edges.push_back({s, t, w});\n\
     \    }\n    MinSpanTree mst = kruskal(edges, V);\n    print(mst.cost);\n}\n"
   dependsOn:
   - template/template.hpp
-  - bits/stdc++.h
-  - template/def/common.hpp
-  - template/def/io.hpp
-  - template/def/type.hpp
-  - template/def/const.hpp
+  - library/graph/kruskal.hpp
   - library/graph/min_span_tree.hpp
   - library/graph/edge.hpp
   - library/struct/union_find.hpp
   isVerificationFile: true
   path: tests/graph/mst_kruskal.test.cpp
   requiredBy: []
-  timestamp: '2026-01-06 20:47:57+09:00'
+  timestamp: '2026-01-07 15:59:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/mst_kruskal.test.cpp

@@ -4,13 +4,13 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: library/segtree/dual_segment_tree.hpp
-    title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
+    title: Dual Segment Tree
   - icon: ':heavy_check_mark:'
     path: library/segtree/lazy_segment_tree.hpp
-    title: "Lazy Segment Tree \u533A\u9593\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+    title: Lazy Segment Tree
   - icon: ':heavy_check_mark:'
     path: library/segtree/segment_tree.hpp
-    title: "Segment Tree 1\u70B9\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+    title: Segment Tree
   - icon: ':heavy_check_mark:'
     path: library/struct/monoid_act.hpp
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
@@ -78,7 +78,7 @@ data:
   - library/segtree/lazy_segment_tree.hpp
   - library/segtree/dual_segment_tree.hpp
   - library/struct/monoid_act.hpp
-  timestamp: '2026-01-06 20:47:57+09:00'
+  timestamp: '2026-01-07 15:59:55+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp
@@ -89,11 +89,15 @@ layout: document
 title: "\u30E2\u30CE\u30A4\u30C9"
 ---
 
+# モノイド
 
-有名なモノイドを作っておく。以下のように呼べる。
+## できること
+- 二項演算を定義してるだけ
 
+## 計算量
+$O(1)$
+
+## 使い方
 ```cpp
 SegmentTree<int> seg(Monoid::Min::op, Monoid::Min::e, N);
 ```
-
-

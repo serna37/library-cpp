@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: bits/stdc++.h
-    title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
+    path: library/graph/cycle_detect.hpp
+    title: "\u9589\u8DEF\u691C\u51FA"
   - icon: ':heavy_check_mark:'
     path: library/graph/edge.hpp
     title: "\u8FBA"
@@ -11,17 +11,8 @@ data:
     path: library/graph/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
-    path: template/def/common.hpp
-    title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
-    path: template/def/const.hpp
-    title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
-    path: template/def/io.hpp
-    title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
-    path: template/def/type.hpp
-    title: "\u578B"
+    path: library/graph/topological_sort.hpp
+    title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -51,25 +42,22 @@ data:
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_B\"\
-    \n#include \"template/template.hpp\"\n#include \"library/graph/graph.hpp\"\n/**\n\
-    \ * @brief \u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\
-    \u30C8\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n    int V, E;\n    cin >>\
-    \ V >> E;\n    Graph G(V);\n    G.read(E, 0, false, true);\n    vector<int> sorted\
-    \ = G.topological_sort();\n    for (auto &&v : sorted) {\n        print(v);\n\
+    \n#include \"template/template.hpp\"\n#include \"library/graph/topological_sort.hpp\"\
+    \n/**\n * @brief \u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\
+    \u30FC\u30C8\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n    int V, E;\n   \
+    \ cin >> V >> E;\n    Graph G(V);\n    G.read(E, 0, false, true);\n    vector<int>\
+    \ sorted = topological_sort(G);\n    for (auto &&v : sorted) {\n        print(v);\n\
     \    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - bits/stdc++.h
-  - template/def/common.hpp
-  - template/def/io.hpp
-  - template/def/type.hpp
-  - template/def/const.hpp
+  - library/graph/topological_sort.hpp
+  - library/graph/cycle_detect.hpp
   - library/graph/graph.hpp
   - library/graph/edge.hpp
   isVerificationFile: true
   path: tests/graph/topological_sort.test.cpp
   requiredBy: []
-  timestamp: '2026-01-06 20:47:57+09:00'
+  timestamp: '2026-01-07 15:59:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/topological_sort.test.cpp

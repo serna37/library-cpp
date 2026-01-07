@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: bits/stdc++.h
-    title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
+    path: library/graph/dijkstra.hpp
+    title: Dijkstra
   - icon: ':heavy_check_mark:'
     path: library/graph/edge.hpp
     title: "\u8FBA"
@@ -11,17 +11,8 @@ data:
     path: library/graph/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
-    path: template/def/common.hpp
-    title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
-    path: template/def/const.hpp
-    title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
-    path: template/def/io.hpp
-    title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
-    path: template/def/type.hpp
-    title: "\u578B"
+    path: library/graph/route_restore.hpp
+    title: "\u7D4C\u8DEF\u5FA9\u5143"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -50,27 +41,25 @@ data:
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/shortest_path\"\n#include\
-    \ \"template/template.hpp\"\n#include \"library/graph/graph.hpp\"\n/**\n * @brief\
-    \ \u30B0\u30E9\u30D5 - \u7D4C\u8DEF\u5FA9\u5143\u306E\u30C6\u30B9\u30C8\n */\n\
-    void solve() {\n    int N, M, s, t;\n    cin >> N >> M >> s >> t;\n    Graph G(N);\n\
-    \    G.read(M, 0, true, true);\n    auto [dis, route] = G.dijkstra({s});\n   \
-    \ if (dis[t] == INF) {\n        print(-1);\n        return;\n    }\n    vector<int>\
-    \ pth = G.route_restore(route, t);\n    cout << dis[t] << \" \" << pth.size()\
-    \ - 1 << endl;\n    for (int i = 0; i < (int)pth.size() - 1; ++i) {\n        cout\
-    \ << pth[i] << \" \" << pth[i + 1] << endl;\n    }\n}\n"
+    \ \"template/template.hpp\"\n#include \"library/graph/dijkstra.hpp\"\n#include\
+    \ \"library/graph/route_restore.hpp\"\n/**\n * @brief \u30B0\u30E9\u30D5 - \u7D4C\
+    \u8DEF\u5FA9\u5143\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n    int N, M,\
+    \ s, t;\n    cin >> N >> M >> s >> t;\n    Graph G(N);\n    G.read(M, 0, true,\
+    \ true);\n    auto [dis, route] = dijkstra(G, {s});\n    if (dis[t] == INF) {\n\
+    \        print(-1);\n        return;\n    }\n    vector<int> pth = route_restore(route,\
+    \ t);\n    cout << dis[t] << \" \" << pth.size() - 1 << endl;\n    for (int i\
+    \ = 0; i < (int)pth.size() - 1; ++i) {\n        cout << pth[i] << \" \" << pth[i\
+    \ + 1] << endl;\n    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - bits/stdc++.h
-  - template/def/common.hpp
-  - template/def/io.hpp
-  - template/def/type.hpp
-  - template/def/const.hpp
+  - library/graph/dijkstra.hpp
   - library/graph/graph.hpp
   - library/graph/edge.hpp
+  - library/graph/route_restore.hpp
   isVerificationFile: true
   path: tests/graph/route_restore.test.cpp
   requiredBy: []
-  timestamp: '2026-01-06 20:47:57+09:00'
+  timestamp: '2026-01-07 15:59:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/route_restore.test.cpp

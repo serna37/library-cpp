@@ -7,7 +7,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: library/segtree/lazy_segment_tree.hpp
-    title: "Lazy Segment Tree \u533A\u9593\u66F4\u65B0 \u533A\u9593\u53D6\u5F97"
+    title: Lazy Segment Tree
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/segtree/lazy_segment_tree.test.cpp
@@ -140,14 +140,24 @@ data:
   path: library/struct/monoid_act.hpp
   requiredBy:
   - library/segtree/lazy_segment_tree.hpp
-  timestamp: '2026-01-06 20:47:57+09:00'
+  timestamp: '2026-01-07 15:59:55+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp
 documentation_of: library/struct/monoid_act.hpp
 layout: document
-redirect_from:
-- /library/library/struct/monoid_act.hpp
-- /library/library/struct/monoid_act.hpp.html
 title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
 ---
+
+# モノイド作用素
+
+## できること
+- 二項演算を定義してるだけ
+
+## 計算量
+$O(1)$
+
+## 使い方
+```cpp
+LazySegmentTree<int, int> seg(Monoid::Min::op, Monoid::Min::e, Monoid::Add::op, Monoid::Add::e, MonoidAct::MinAdd::op N);
+```

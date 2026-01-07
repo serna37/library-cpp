@@ -3,11 +3,38 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
+    path: library/graph/bellman_ford.hpp
+    title: Bellman Ford
+  - icon: ':heavy_check_mark:'
+    path: library/graph/bfs.hpp
+    title: BFS
+  - icon: ':heavy_check_mark:'
+    path: library/graph/connected_components.hpp
+    title: library/graph/connected_components.hpp
+  - icon: ':heavy_check_mark:'
+    path: library/graph/cycle_detect.hpp
+    title: "\u9589\u8DEF\u691C\u51FA"
+  - icon: ':heavy_check_mark:'
+    path: library/graph/dijkstra.hpp
+    title: Dijkstra
+  - icon: ':heavy_check_mark:'
     path: library/graph/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
+    path: library/graph/kruskal.hpp
+    title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
+  - icon: ':heavy_check_mark:'
     path: library/graph/min_span_tree.hpp
-    title: "\u6700\u5C0F\u5168\u57DF\u6728 (kruskal)"
+    title: "\u6700\u5C0F\u5168\u57DF\u6728"
+  - icon: ':heavy_check_mark:'
+    path: library/graph/strongly_connected_components.hpp
+    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Tarjan)"
+  - icon: ':heavy_check_mark:'
+    path: library/graph/topological_sort.hpp
+    title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: library/graph/warshall_froyd.hpp
+    title: Warshall Froyd
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/graph/bellman_ford.test.cpp
@@ -47,23 +74,30 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    document_title: "\u8FBA"
     links: []
-  bundledCode: "#line 2 \"library/graph/edge.hpp\"\n/**\n * @brief \u8FBA\n */\nstruct\
-    \ Edge {\n    int from, to;\n    long long cost;\n    int idx;\n    Edge(int from,\
-    \ int to, long long cost = 1, int idx = -1)\n        : from(from), to(to), cost(cost),\
-    \ idx(idx) {\n    }\n};\n"
-  code: "#pragma once\n/**\n * @brief \u8FBA\n */\nstruct Edge {\n    int from, to;\n\
+  bundledCode: "#line 2 \"library/graph/edge.hpp\"\nstruct Edge {\n    int from, to;\n\
     \    long long cost;\n    int idx;\n    Edge(int from, int to, long long cost\
     \ = 1, int idx = -1)\n        : from(from), to(to), cost(cost), idx(idx) {\n \
     \   }\n};\n"
+  code: "#pragma once\nstruct Edge {\n    int from, to;\n    long long cost;\n   \
+    \ int idx;\n    Edge(int from, int to, long long cost = 1, int idx = -1)\n   \
+    \     : from(from), to(to), cost(cost), idx(idx) {\n    }\n};"
   dependsOn: []
   isVerificationFile: false
   path: library/graph/edge.hpp
   requiredBy:
+  - library/graph/warshall_froyd.hpp
+  - library/graph/bellman_ford.hpp
+  - library/graph/kruskal.hpp
   - library/graph/min_span_tree.hpp
+  - library/graph/topological_sort.hpp
+  - library/graph/connected_components.hpp
+  - library/graph/bfs.hpp
   - library/graph/graph.hpp
-  timestamp: '2026-01-06 20:47:57+09:00'
+  - library/graph/cycle_detect.hpp
+  - library/graph/strongly_connected_components.hpp
+  - library/graph/dijkstra.hpp
+  timestamp: '2026-01-07 15:59:55+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/bfs.test.cpp
@@ -78,8 +112,22 @@ data:
   - tests/graph/connected_components.test.cpp
 documentation_of: library/graph/edge.hpp
 layout: document
-redirect_from:
-- /library/library/graph/edge.hpp
-- /library/library/graph/edge.hpp.html
 title: "\u8FBA"
 ---
+
+# 辺
+
+## できること
+- 辺の構造体
+  - `from`: 辺の元の頂点
+  - `to`: 辺の先の頂点
+  - `cost`: 重み
+  - `idx`: 辺のid
+
+## 計算量
+なし
+
+## 使い方
+```cpp
+vector<Edge> edges;
+```

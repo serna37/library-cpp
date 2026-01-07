@@ -2,23 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: bits/stdc++.h
-    title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
-  - icon: ':heavy_check_mark:'
     path: library/struct/union_find.hpp
     title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
-  - icon: ':heavy_check_mark:'
-    path: template/def/common.hpp
-    title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
-    path: template/def/const.hpp
-    title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
-    path: template/def/io.hpp
-    title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
-    path: template/def/type.hpp
-    title: "\u578B"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -55,16 +40,11 @@ data:
     \ print(uf.find(x) == uf.find(y) ? 1 : 0);\n        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - bits/stdc++.h
-  - template/def/common.hpp
-  - template/def/io.hpp
-  - template/def/type.hpp
-  - template/def/const.hpp
   - library/struct/union_find.hpp
   isVerificationFile: true
   path: tests/struct/union_find.test.cpp
   requiredBy: []
-  timestamp: '2026-01-06 20:47:57+09:00'
+  timestamp: '2026-01-07 15:59:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/struct/union_find.test.cpp

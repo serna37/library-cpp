@@ -1,25 +1,7 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: bits/stdc++.h
-    title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
-  - icon: ':heavy_check_mark:'
-    path: template/def/common.hpp
-    title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
-    path: template/def/const.hpp
-    title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
-    path: template/def/io.hpp
-    title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
-    path: template/def/type.hpp
-    title: "\u578B"
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: main.cpp
-    title: "main\u30D5\u30A1\u30A4\u30EB"
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/graph/bellman_ford.test.cpp
@@ -70,9 +52,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/struct/union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
-    path: tests/util.test.cpp
-    title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -92,29 +71,79 @@ data:
     \ #ifndef other than include guards\n"
   code: "/**\n * @brief \u0E05^>\u03C9<^\u0E05\n * @author serna37\n * @note https://serna37.github.io/library-cpp/\n\
     \ */\n#ifdef LOCAL\n#include \"template/debug.hpp\"\n#else\n#define debug(...)\n\
-    #endif\n#include <algorithm>\n#include <array>\n#include <bitset>\n#include <cassert>\n\
+    #endif\n// ---------------------------------------- include\u3057\u307E\u304F\u308B\
+    \n#include <algorithm>\n#include <array>\n#include <bitset>\n#include <cassert>\n\
     #include <complex>\n#include <chrono>\n#include <deque>\n#include <functional>\n\
     #include <iomanip>\n#include <iostream>\n#include <limits.h>\n#include <map>\n\
     #include <math.h>\n#include <numeric>\n#include <queue>\n#include <random>\n#include\
     \ <set>\n#include <sstream>\n#include <stack>\n#include <string>\n#include <tuple>\n\
     #include <unordered_map>\n#include <unordered_set>\n#include <utility>\n#include\
-    \ <vector>\n#include <bits/stdc++.h>\nusing namespace std;\n#include \"template/def/common.hpp\"\
-    \n#include \"template/def/io.hpp\"\n#include \"template/def/type.hpp\"\n#include\
-    \ \"template/def/const.hpp\"\n/** ======================================= */\n\
-    /**              main                       */\n/** =======================================\
-    \ */\nvoid solve();\nsigned main() {\n    solve();\n}\n// -----------------------------------------\n\
-    // #include \"template/template.hpp\" is done.\n// -----------------------------------------\n"
-  dependsOn:
-  - bits/stdc++.h
-  - template/def/common.hpp
-  - template/def/io.hpp
-  - template/def/type.hpp
-  - template/def/const.hpp
+    \ <vector>\n// ---------------------------------------- \u3044\u3064\u3082\u306E\
+    \u3084\u3064\n#include <bits/stdc++.h>\nusing namespace std;\n// ----------------------------------------\
+    \ \u304A\u5B88\u308A\n#define int long long\n#define all(x) begin(x), end(x)\n\
+    #define rall(x) rbegin(x), rend(x)\n#define endl \"\\n\"\n// ----------------------------------------\
+    \ main\u95A2\u6570\nvoid solve();\nsigned main() {\n    solve();\n}\n// ----------------------------------------\
+    \ IO\nstruct IoSetup {\n    IoSetup() {\n        cin.tie(0)->sync_with_stdio(0);\n\
+    \        cout << fixed << setprecision(20);\n        cerr << fixed << setprecision(10);\n\
+    \    }\n} iosetup;\ntemplate <typename T> istream &operator>>(istream &s, vector<T>\
+    \ &v) {\n    for (auto &&e : v) s >> e;\n    return s;\n}\ntemplate <typename\
+    \ T> ostream &operator<<(ostream &s, const vector<T> &v) {\n    int i = 0;\n \
+    \   for (auto &&e : v) s << (i++ ? \" \" : \"\") << e;\n    return s;\n}\ntemplate\
+    \ <typename T> void print(const T &v) {\n    cout << v << endl;\n}\ntemplate <typename\
+    \ T> void print(const vector<vector<T>> &G) {\n    for (auto &&v : G) cout <<\
+    \ v << endl;\n}\n// ---------------------------------------- \u5B9A\u6570\nconst\
+    \ long long INF = 1e18;\nconst long long MOD = 998244353;\nconst long long MOD7\
+    \ = 1e9 + 7;\nconst long double PI = acosl(-1);\n// ----------------------------------------\
+    \ \u7701\u7565\u3059\u308B\u7CFB\u306E\u3084\u3064\ntemplate <typename T> using\
+    \ reverse_queue = priority_queue<T, vector<T>, greater<T>>;\ntemplate <typename\
+    \ T> using vec2 = vector<vector<T>>;\ntemplate <typename T> vec2<T> make_vec2(int\
+    \ H, int W, T init = 0) {\n    return vector<vector<T>>(H, vector<T>(W, init));\n\
+    }\ntemplate <typename T> void chmin(T &i, const T &j) {\n    return i > j && (i\
+    \ = j, true);\n}\ntemplate <typename T> void chmax(T &i, const T &j) {\n    return\
+    \ i < j && (i = j, true);\n}\n// ---------------------------------------- C++\u7279\
+    \u6709\u306E\u6319\u52D5\u3092\u4F7F\u3044\u3084\u3059\u304F\u3059\u308B\u3084\
+    \u3064\u3089\nchar int_to_char(int x) {\n    return (char)(x + '0');\n}\nchar\
+    \ int_to_alph(int x) {\n    return (char)(x + 'a');\n}\nint char_to_int(char c)\
+    \ {\n    return (int)(c - '0');\n}\nstring int_to_string(long long x) {\n    return\
+    \ to_string(x);\n}\nlong long string_to_int(const string &s) {\n    return stoll(s);\n\
+    }\nstring string_to_lower(string s) {\n    std::transform(all(s), s.begin(), ::tolower);\n\
+    \    return s;\n}\nstring string_to_upper(string s) {\n    std::transform(all(s),\
+    \ s.begin(), ::toupper);\n    return s;\n}\nbool char_is_lower(char c) { // bool\u3067\
+    \u8FD4\u3059\n    return islower(c) != 0;\n}\nbool char_is_upper(char c) { //\
+    \ bool\u3067\u8FD4\u3059\n    return isupper(c) != 0;\n}\nlong long div_ceil(long\
+    \ long a, long long b) { // \u8CA0\u306E\u5834\u54080\u5074\u3078\u4E38\u3081\u306A\
+    \u3044\n    return a / b + (((a ^ b) > 0 and a % b != 0) ? 1 : 0);\n}\nlong long\
+    \ div_floor(long long a, long long b) { // \u8CA0\u306E\u5834\u54080\u5074\u3078\
+    \u4E38\u3081\u306A\u3044\n    return a / b - (((a ^ b) < 0 and a % b != 0) ? 1\
+    \ : 0);\n}\ndouble deg_to_rad(double d) { // \u5EA6\u6570\u6CD5 \u2192 \u5F27\u5EA6\
+    \u6CD5\n    return d * PI / 180;\n}\ndouble rad_to_deg(double r) { // \u5F27\u5EA6\
+    \u6CD5 \u2192 \u5EA6\u6570\u6CD5\n    return r * 180 / PI;\n}\ndouble arc_tan(double\
+    \ x, double y) { // \u504F\u89D2\u3092\u30E9\u30B8\u30A2\u30F3\u3067\u8FD4\u3059\
+    \n    return atan2(y, x);\n}\nclass Collection {\n  public:\n    template <typename\
+    \ T> T min(const vector<T> &v) {\n        return *min_element(all(v));\n    }\n\
+    \    template <typename T> T max(const vector<T> &v) {\n        return *max_element(all(v));\n\
+    \    }\n    template <typename T> long long sum(const vector<T> &v) {\n      \
+    \  return accumulate(all(v), 0ll);\n    }\n    template <typename T, typename\
+    \ F> bool all_match(const vector<T> &v, F f) {\n        return all_of(all(v),\
+    \ f);\n    }\n    template <typename T, typename F> bool none_match(const vector<T>\
+    \ &v, F f) {\n        return none_of(all(v), f);\n    }\n    template <typename\
+    \ T, typename F> bool any_match(const vector<T> &v, F f) {\n        return any_of(all(v),\
+    \ f);\n    }\n    template <typename T> void distinct(vector<T> &v) {\n      \
+    \  sort(all(v));\n        v.erase(unique(all(v)), v.end());\n    }\n    template\
+    \ <typename T> void asc(vector<T> &v) {\n        sort(all(v));\n    }\n    template\
+    \ <typename T> void desc(vector<T> &v) {\n        sort(rall(v));\n    }\n    template\
+    \ <typename T> void reverse(vector<T> &v) {\n        std::reverse(all(v));\n \
+    \   }\n    template <typename T> void erase(set<T> &st, const T &v) {\n      \
+    \  st.erase(st.find(v));\n    }\n    template <typename T> void erase(multiset<T>\
+    \ &st, const T &v) {\n        st.erase(st.find(v));\n    }\n    template <typename\
+    \ T> void sequence(vector<T> &v, T start = 0) {\n        iota(all(v), start);\n\
+    \    }\n} collection;\n// ----------------------------------------\n// #include\
+    \ \"template/template.hpp\" is done.\n// ----------------------------------------\n"
+  dependsOn: []
   isVerificationFile: false
   path: template/template.hpp
-  requiredBy:
-  - main.cpp
-  timestamp: '2026-01-06 20:47:57+09:00'
+  requiredBy: []
+  timestamp: '2026-01-07 15:59:55+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp
@@ -132,12 +161,11 @@ data:
   - tests/graph/warshall_froyd.test.cpp
   - tests/graph/connected_components.test.cpp
   - tests/struct/union_find.test.cpp
-  - tests/util.test.cpp
 documentation_of: template/template.hpp
 layout: document
 title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
 ---
 
-いろいろ入れるテンプレ。
+桁溢れ防止のため`#define int long long`を使用しています
 
-`bits/stdc++.h`で良いはずだが、明示的にincludeしてないとエラー等もあったのでとりあえず必要なものinclude
+各ライブラリは、このテンプレートにほぼ**依存しない**ように作られています

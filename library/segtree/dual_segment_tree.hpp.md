@@ -13,7 +13,6 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    document_title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
     links: []
   bundledCode: "#line 2 \"library/struct/monoid.hpp\"\n/**\n * @brief \u30E2\u30CE\
     \u30A4\u30C9\n */\nstruct Monoid {\n    // \u6700\u5C0F\u5024\n    struct Min\
@@ -35,10 +34,28 @@ data:
     \  }\n    };\n    // \u6392\u4ED6\u7684\u8AD6\u7406\u548C\n    struct Xor {\n\
     \        static constexpr int e = 0;\n        static int op(int x, int y) {\n\
     \            return x ^ y;\n        }\n    };\n};\n#line 3 \"library/segtree/dual_segment_tree.hpp\"\
-    \n/**\n * @brief Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97\
-    \n * @tparam T \u30E2\u30CE\u30A4\u30C9\u306E\u578B\n */\ntemplate <typename T>\
-    \ struct DualSegmentTree {\n    using F = function<T(T, T)>;\n\n  private:\n \
-    \   F op;\n    T e;\n    int N, size, log = 1;\n    vector<T> node;\n    void\
+    \ntemplate <typename T> struct DualSegmentTree {\n    using F = function<T(T,\
+    \ T)>;\n\n  private:\n    F op;\n    T e;\n    int N, size, log = 1;\n    vector<T>\
+    \ node;\n    void init() {\n        while ((1ll << log) < N) ++log;\n        node.assign((size\
+    \ = 1ll << log) << 1, e);\n    }\n    void apply_at(int k, T a) {\n        node[k]\
+    \ = op(node[k], a);\n    }\n    void propagate(int k) {\n        if (node[k] ==\
+    \ e) return;\n        apply_at((k << 1 | 0), node[k]);\n        apply_at((k <<\
+    \ 1 | 1), node[k]);\n        node[k] = e;\n    }\n\n  public:\n    DualSegmentTree(F\
+    \ op, T e, int n) : op(op), e(e), N(n) {\n        init();\n    }\n    DualSegmentTree(F\
+    \ op, T e, const vector<T> &a) : op(op), e(e), N(a.size()) {\n        init();\n\
+    \        for (int i = 0; i < N; ++i) node[i + size] = a[i];\n    }\n    T operator[](int\
+    \ p) {\n        p += size;\n        for (int i = log; i >= 1; --i) propagate(p\
+    \ >> i);\n        return node[p];\n    }\n    void set(int p, const T &x) {\n\
+    \        p += size;\n        apply_at(p, x);\n        node[p] = x;\n    }\n  \
+    \  void apply(int l, int r, const T &a) {\n        if (l == r) return;\n     \
+    \   l += size, r += size;\n        for (int i = log; i >= 1; --i) {\n        \
+    \    if (((l >> i) << i) != l) propagate(l >> i);\n            if (((r >> i) <<\
+    \ i) != r) propagate((r - 1) >> i);\n        }\n        while (l < r) {\n    \
+    \        if (l & 1) apply_at(l++, a);\n            if (r & 1) apply_at(--r, a);\n\
+    \            l >>= 1, r >>= 1;\n        }\n    }\n};\n"
+  code: "#pragma once\n#include \"library/struct/monoid.hpp\"\ntemplate <typename\
+    \ T> struct DualSegmentTree {\n    using F = function<T(T, T)>;\n\n  private:\n\
+    \    F op;\n    T e;\n    int N, size, log = 1;\n    vector<T> node;\n    void\
     \ init() {\n        while ((1ll << log) < N) ++log;\n        node.assign((size\
     \ = 1ll << log) << 1, e);\n    }\n    void apply_at(int k, T a) {\n        node[k]\
     \ = op(node[k], a);\n    }\n    void propagate(int k) {\n        if (node[k] ==\
@@ -56,41 +73,34 @@ data:
     \ i) != r) propagate((r - 1) >> i);\n        }\n        while (l < r) {\n    \
     \        if (l & 1) apply_at(l++, a);\n            if (r & 1) apply_at(--r, a);\n\
     \            l >>= 1, r >>= 1;\n        }\n    }\n};\n"
-  code: "#pragma once\n#include \"library/struct/monoid.hpp\"\n/**\n * @brief Dual\
-    \ Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97\n * @tparam T \u30E2\
-    \u30CE\u30A4\u30C9\u306E\u578B\n */\ntemplate <typename T> struct DualSegmentTree\
-    \ {\n    using F = function<T(T, T)>;\n\n  private:\n    F op;\n    T e;\n   \
-    \ int N, size, log = 1;\n    vector<T> node;\n    void init() {\n        while\
-    \ ((1ll << log) < N) ++log;\n        node.assign((size = 1ll << log) << 1, e);\n\
-    \    }\n    void apply_at(int k, T a) {\n        node[k] = op(node[k], a);\n \
-    \   }\n    void propagate(int k) {\n        if (node[k] == e) return;\n      \
-    \  apply_at((k << 1 | 0), node[k]);\n        apply_at((k << 1 | 1), node[k]);\n\
-    \        node[k] = e;\n    }\n\n  public:\n    DualSegmentTree(F op, T e, int\
-    \ n) : op(op), e(e), N(n) {\n        init();\n    }\n    DualSegmentTree(F op,\
-    \ T e, const vector<T> &a) : op(op), e(e), N(a.size()) {\n        init();\n  \
-    \      for (int i = 0; i < N; ++i) node[i + size] = a[i];\n    }\n    T operator[](int\
-    \ p) {\n        p += size;\n        for (int i = log; i >= 1; --i) propagate(p\
-    \ >> i);\n        return node[p];\n    }\n    void set(int p, const T &x) {\n\
-    \        p += size;\n        apply_at(p, x);\n        node[p] = x;\n    }\n  \
-    \  void apply(int l, int r, const T &a) {\n        if (l == r) return;\n     \
-    \   l += size, r += size;\n        for (int i = log; i >= 1; --i) {\n        \
-    \    if (((l >> i) << i) != l) propagate(l >> i);\n            if (((r >> i) <<\
-    \ i) != r) propagate((r - 1) >> i);\n        }\n        while (l < r) {\n    \
-    \        if (l & 1) apply_at(l++, a);\n            if (r & 1) apply_at(--r, a);\n\
-    \            l >>= 1, r >>= 1;\n        }\n    }\n};\n"
   dependsOn:
   - library/struct/monoid.hpp
   isVerificationFile: false
   path: library/segtree/dual_segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-06 20:47:57+09:00'
+  timestamp: '2026-01-07 15:59:55+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/dual_segment_tree.test.cpp
 documentation_of: library/segtree/dual_segment_tree.hpp
 layout: document
-redirect_from:
-- /library/library/segtree/dual_segment_tree.hpp
-- /library/library/segtree/dual_segment_tree.hpp.html
-title: "Dual Segment Tree \u533A\u9593\u66F4\u65B0 1\u70B9\u53D6\u5F97"
+title: Dual Segment Tree
 ---
+
+# Dual Segment Tree
+
+## できること
+- モノイドについて処理
+- 区間[l, r)の値を更新
+- 1点の演算結果を取得
+
+## 計算量
+- 構築: $O(N)$
+- 1点取得`seg[i]`: $O(logN)$
+- 1点更新`set`: $O(logN)$
+- 区間更新`apply`: $O(logN)$
+
+## 使い方
+```cpp
+DualSegmentTree<int> seg(Monoid::Min::op, Monoid::Min::e, N);
+```

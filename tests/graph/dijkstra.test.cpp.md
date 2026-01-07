@@ -2,26 +2,14 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: bits/stdc++.h
-    title: "\u30AB\u30B9\u30BF\u30E0stdc++.h"
+    path: library/graph/dijkstra.hpp
+    title: Dijkstra
   - icon: ':heavy_check_mark:'
     path: library/graph/edge.hpp
     title: "\u8FBA"
   - icon: ':heavy_check_mark:'
     path: library/graph/graph.hpp
     title: "\u30B0\u30E9\u30D5"
-  - icon: ':heavy_check_mark:'
-    path: template/def/common.hpp
-    title: "\u5171\u901A"
-  - icon: ':heavy_check_mark:'
-    path: template/def/const.hpp
-    title: "\u5B9A\u6570"
-  - icon: ':heavy_check_mark:'
-    path: template/def/io.hpp
-    title: "IO\u95A2\u9023"
-  - icon: ':heavy_check_mark:'
-    path: template/def/type.hpp
-    title: "\u578B"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -50,25 +38,21 @@ data:
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A\"\
-    \n#include \"template/template.hpp\"\n#include \"library/graph/graph.hpp\"\n/**\n\
-    \ * @brief \u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8\n */\nvoid solve()\
-    \ {\n    int V, E, r;\n    cin >> V >> E >> r;\n    Graph G(V);\n    G.read(E,\
-    \ 0, true, true);\n    auto [dis, route] = G.dijkstra({r});\n    for (auto &&v\
+    \n#include \"template/template.hpp\"\n#include \"library/graph/dijkstra.hpp\"\n\
+    /**\n * @brief \u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8\n */\nvoid\
+    \ solve() {\n    int V, E, r;\n    cin >> V >> E >> r;\n    Graph G(V);\n    G.read(E,\
+    \ 0, true, true);\n    auto [dis, route] = dijkstra(G, {r});\n    for (auto &&v\
     \ : dis) {\n        if (v == INF) {\n            print(\"INF\");\n        } else\
     \ {\n            print(v);\n        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - bits/stdc++.h
-  - template/def/common.hpp
-  - template/def/io.hpp
-  - template/def/type.hpp
-  - template/def/const.hpp
+  - library/graph/dijkstra.hpp
   - library/graph/graph.hpp
   - library/graph/edge.hpp
   isVerificationFile: true
   path: tests/graph/dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2026-01-06 20:47:57+09:00'
+  timestamp: '2026-01-07 15:59:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/dijkstra.test.cpp
