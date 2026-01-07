@@ -1,7 +1,4 @@
 #pragma once
-/**
- * @brief FFT
- */
 namespace FFT {
 using real = double;
 struct C {
