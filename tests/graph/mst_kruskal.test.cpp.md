@@ -6,7 +6,7 @@ data:
     title: "\u8FBA"
   - icon: ':heavy_check_mark:'
     path: library/graph/kruskal.hpp
-    title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    title: Kruskal
   - icon: ':heavy_check_mark:'
     path: library/graph/min_span_tree.hpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728"
@@ -57,7 +57,7 @@ data:
   isVerificationFile: true
   path: tests/graph/mst_kruskal.test.cpp
   requiredBy: []
-  timestamp: '2026-01-07 16:12:16+09:00'
+  timestamp: '2026-01-07 16:29:30+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/mst_kruskal.test.cpp

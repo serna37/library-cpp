@@ -68,7 +68,7 @@ data:
   isVerificationFile: false
   path: library/segtree/starry_sky_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-07 16:12:16+09:00'
+  timestamp: '2026-01-07 16:29:30+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/segtree/starry_sky_tree.hpp
@@ -80,7 +80,7 @@ title: Starry Sky Tree
 
 ## できること
 - 累積和の要領で実現してる
-  参考: https://rsk0315.hatenablog.com/entry/2019/06/21/174953
+  - 参考: https://rsk0315.hatenablog.com/entry/2019/06/21/174953
 - 区間[l, r)にの値を加算
 - 区間[l, r)のmaxを取得
 

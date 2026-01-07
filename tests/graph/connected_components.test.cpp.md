@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: library/graph/connected_components.hpp
-    title: library/graph/connected_components.hpp
+    title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
   - icon: ':heavy_check_mark:'
     path: library/graph/edge.hpp
     title: "\u8FBA"
@@ -53,7 +53,7 @@ data:
   isVerificationFile: true
   path: tests/graph/connected_components.test.cpp
   requiredBy: []
-  timestamp: '2026-01-07 16:12:16+09:00'
+  timestamp: '2026-01-07 16:29:30+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/connected_components.test.cpp

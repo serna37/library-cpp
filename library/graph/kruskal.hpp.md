@@ -56,28 +56,28 @@ data:
   isVerificationFile: false
   path: library/graph/kruskal.hpp
   requiredBy: []
-  timestamp: '2026-01-07 16:12:16+09:00'
+  timestamp: '2026-01-07 16:29:30+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst_kruskal.test.cpp
 documentation_of: library/graph/kruskal.hpp
 layout: document
-title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
+title: Kruskal
 ---
 
-# 連結成分分解
+# Kruskal
 
 ## できること
-- 連結な頂点群に分解する
-  - `groups`: 連結な頂点群の集合
-  - `ids` : ids[v] := 頂点vが属するgroupsのインデックス
+- 最小全域木を求める
+- edgesは中でソートしてる
 
 ## 計算量
-$O(V+E)$
+$O(ElogV)$
 - V: 頂点数
 - E: 辺の数
 
 ## 使い方
 ```cpp
-auto [groups, ids] = connected_components(G);
+vector<Edge> edges;
+MinSpanTree mst = kruskal(edges, V);
 ```

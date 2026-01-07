@@ -19,7 +19,7 @@ data:
       title: BFS
     - icon: ':heavy_check_mark:'
       path: library/graph/connected_components.hpp
-      title: library/graph/connected_components.hpp
+      title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
       path: library/graph/cycle_detect.hpp
       title: "\u9589\u8DEF\u691C\u51FA"
@@ -34,7 +34,7 @@ data:
       title: "\u30B0\u30E9\u30D5"
     - icon: ':heavy_check_mark:'
       path: library/graph/kruskal.hpp
-      title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
+      title: Kruskal
     - icon: ':heavy_check_mark:'
       path: library/graph/min_span_tree.hpp
       title: "\u6700\u5C0F\u5168\u57DF\u6728"

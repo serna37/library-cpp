@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: library/graph/kruskal.hpp
-    title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    title: Kruskal
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/graph/mst_kruskal.test.cpp
@@ -38,7 +38,7 @@ data:
   path: library/struct/union_find.hpp
   requiredBy:
   - library/graph/kruskal.hpp
-  timestamp: '2026-01-07 16:12:16+09:00'
+  timestamp: '2026-01-07 16:29:30+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst_kruskal.test.cpp

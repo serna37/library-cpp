@@ -55,7 +55,7 @@ data:
   isVerificationFile: true
   path: tests/graph/warshall_froyd.test.cpp
   requiredBy: []
-  timestamp: '2026-01-07 16:12:16+09:00'
+  timestamp: '2026-01-07 16:29:30+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/warshall_froyd.test.cpp
