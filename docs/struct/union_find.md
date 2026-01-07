@@ -9,7 +9,7 @@ documentation_of: //library/struct/union_find.hpp
 - 集合をつなげたり。切れはしない
 
 ## 計算量
-- 構築: $O(1)$
+- 構築: $O(N)$
 - 自分のグループサイズ`uf[p]`: $O(α(N))$
 - 自分の親を見つける`find`: $O(α(N))$
 - 同じグループにする`unite`: $O(α(N))$
