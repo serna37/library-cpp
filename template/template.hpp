@@ -76,7 +76,8 @@ const long long MOD = 998244353;
 const long long MOD7 = 1e9 + 7;
 const long double PI = acosl(-1);
 // ---------------------------------------- 省略する系のやつ
-template <typename T> using reverse_queue = priority_queue<T, vector<T>, greater<T>>;
+template <typename T>
+using reverse_queue = priority_queue<T, vector<T>, greater<T>>;
 template <typename T> using vec2 = vector<vector<T>>;
 template <typename T> vec2<T> make_vec2(int H, int W, T init = 0) {
     return vector<vector<T>>(H, vector<T>(W, init));

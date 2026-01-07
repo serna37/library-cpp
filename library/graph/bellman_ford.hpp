@@ -1,6 +1,7 @@
 #pragma once
 #include "library/graph/graph.hpp"
-tuple<vector<long long>, bool, vector<int>> bellman_ford(const Graph &G, int s = 0) {
+tuple<vector<long long>, bool, vector<int>> bellman_ford(const Graph &G,
+                                                         int s = 0) {
     int N = G.size(), loop = 0;
     vector<long long> dis(N, INF);
     vector<int> route(N, -1);

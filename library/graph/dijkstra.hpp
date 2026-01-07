@@ -1,7 +1,7 @@
 #pragma once
 #include "library/graph/graph.hpp"
-pair<vector<long long>, vector<int>> dijkstra(const Graph &G, const vector<int> &starts = {
-                                                    0}) {
+pair<vector<long long>, vector<int>> dijkstra(const Graph &G,
+                                              const vector<int> &starts = {0}) {
     int N = G.size();
     reverse_queue<pair<long long, int>> q; // コスト(小さい順), 頂点
     vector<long long> weight(N, INF);

@@ -1,6 +1,7 @@
 #pragma once
 #include "library/graph/graph.hpp"
-pair<vector<int>, vector<int>> bfs(const Graph &G, const vector<int> &starts = {0}) {
+pair<vector<int>, vector<int>> bfs(const Graph &G,
+                                   const vector<int> &starts = {0}) {
     int N = G.size();
     queue<int> q;
     vector<int> dis(N, -1), route(N, -1);
