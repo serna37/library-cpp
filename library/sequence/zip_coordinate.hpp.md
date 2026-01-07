@@ -12,20 +12,20 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/zip_coordinate.hpp\"\ntemplate <typename\
-    \ T> int zip_coordinate(vector<T> &A) {\n    vector<T> cvt = A;\n    sort(A.begin(),\
-    \ A.end());\n    v.erase(unique(A.begin(), A.end()), v.end());\n    for (auto\
-    \ &v : A) v = lower_bound(cvt.begin(), cvt.end(), v) - cvt.begin();\n    return\
-    \ (int)cvt.size();\n}\n"
+    \ T> int zip_coordinate(vector<T> &A) {\n    vector<T> cvt = A;\n    sort(cvt.begin(),\
+    \ cvt.end());\n    cvt.erase(unique(cvt.begin(), cvt.end()), cvt.end());\n   \
+    \ for (auto &v : A) v = lower_bound(cvt.begin(), cvt.end(), v) - cvt.begin();\n\
+    \    return (int)cvt.size();\n}\n"
   code: "#pragma once\ntemplate <typename T> int zip_coordinate(vector<T> &A) {\n\
-    \    vector<T> cvt = A;\n    sort(A.begin(), A.end());\n    v.erase(unique(A.begin(),\
-    \ A.end()), v.end());\n    for (auto &v : A) v = lower_bound(cvt.begin(), cvt.end(),\
-    \ v) - cvt.begin();\n    return (int)cvt.size();\n}"
+    \    vector<T> cvt = A;\n    sort(cvt.begin(), cvt.end());\n    cvt.erase(unique(cvt.begin(),\
+    \ cvt.end()), cvt.end());\n    for (auto &v : A) v = lower_bound(cvt.begin(),\
+    \ cvt.end(), v) - cvt.begin();\n    return (int)cvt.size();\n}"
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/zip_coordinate.hpp
   requiredBy:
   - library/sequence/inversion_number.hpp
-  timestamp: '2026-01-07 16:29:30+09:00'
+  timestamp: '2026-01-07 17:15:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/sequence/zip_coordinate.hpp

@@ -12,15 +12,16 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/zip_coordinate.hpp\"\ntemplate <typename\
-    \ T> int zip_coordinate(vector<T> &A) {\n    vector<T> cvt = A;\n    sort(A.begin(),\
-    \ A.end());\n    v.erase(unique(A.begin(), A.end()), v.end());\n    for (auto\
-    \ &v : A) v = lower_bound(cvt.begin(), cvt.end(), v) - cvt.begin();\n    return\
-    \ (int)cvt.size();\n}\n#line 3 \"library/sequence/inversion_number.hpp\"\ntemplate\
-    \ <typename T> long long inversion_number(vector<T> &A) {\n    int sz = zip_coordinate(A);\n\
-    \    vector<int> fwk(sz + 1);\n    long long inv = 0, N = A.size();\n    for (int\
-    \ i = 0; i < N; ++i) {\n        for (int f = sz; f; f -= f & -f) inv += fwk[f];\n\
-    \        for (int f = A[i] + 1; f; f -= f & -f) inv -= fwk[f];\n        for (int\
-    \ f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];\n    }\n    return inv;\n}\n"
+    \ T> int zip_coordinate(vector<T> &A) {\n    vector<T> cvt = A;\n    sort(cvt.begin(),\
+    \ cvt.end());\n    cvt.erase(unique(cvt.begin(), cvt.end()), cvt.end());\n   \
+    \ for (auto &v : A) v = lower_bound(cvt.begin(), cvt.end(), v) - cvt.begin();\n\
+    \    return (int)cvt.size();\n}\n#line 3 \"library/sequence/inversion_number.hpp\"\
+    \ntemplate <typename T> long long inversion_number(vector<T> &A) {\n    int sz\
+    \ = zip_coordinate(A);\n    vector<int> fwk(sz + 1);\n    long long inv = 0, N\
+    \ = A.size();\n    for (int i = 0; i < N; ++i) {\n        for (int f = sz; f;\
+    \ f -= f & -f) inv += fwk[f];\n        for (int f = A[i] + 1; f; f -= f & -f)\
+    \ inv -= fwk[f];\n        for (int f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];\n\
+    \    }\n    return inv;\n}\n"
   code: "#pragma once\n#include \"library/sequence/zip_coordinate.hpp\"\ntemplate\
     \ <typename T> long long inversion_number(vector<T> &A) {\n    int sz = zip_coordinate(A);\n\
     \    vector<int> fwk(sz + 1);\n    long long inv = 0, N = A.size();\n    for (int\
@@ -32,7 +33,7 @@ data:
   isVerificationFile: false
   path: library/sequence/inversion_number.hpp
   requiredBy: []
-  timestamp: '2026-01-07 16:29:30+09:00'
+  timestamp: '2026-01-07 17:15:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/sequence/inversion_number.hpp

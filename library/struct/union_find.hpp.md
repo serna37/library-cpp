@@ -38,7 +38,7 @@ data:
   path: library/struct/union_find.hpp
   requiredBy:
   - library/graph/kruskal.hpp
-  timestamp: '2026-01-07 16:29:30+09:00'
+  timestamp: '2026-01-07 17:15:18+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst_kruskal.test.cpp
@@ -54,7 +54,7 @@ title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
 - 集合をつなげたり。切れはしない
 
 ## 計算量
-- 構築: $O(1)$
+- 構築: $O(N)$
 - 自分のグループサイズ`uf[p]`: $O(α(N))$
 - 自分の親を見つける`find`: $O(α(N))$
 - 同じグループにする`unite`: $O(α(N))$

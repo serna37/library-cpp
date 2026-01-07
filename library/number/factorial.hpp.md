@@ -17,7 +17,7 @@ data:
   isVerificationFile: false
   path: library/number/factorial.hpp
   requiredBy: []
-  timestamp: '2026-01-07 16:29:30+09:00'
+  timestamp: '2026-01-07 17:15:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/number/factorial.hpp
