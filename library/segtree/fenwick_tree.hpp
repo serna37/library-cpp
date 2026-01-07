@@ -1,7 +1,4 @@
 #pragma once
-/**
- * @brief Fenwic Tree 1点更新 区間取得 和のみ
- */
 struct FenwickTree {
   private:
     int N;

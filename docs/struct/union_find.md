@@ -1,6 +1,6 @@
 ---
 title: UnionFind 素集合データ構造
-documentation_of: //library/segtree/segment_tree.hpp
+documentation_of: //library/struct/union_find.hpp
 ---
 
 # UnionFind 素集合データ構造

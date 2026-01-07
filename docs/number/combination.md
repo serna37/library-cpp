@@ -6,7 +6,7 @@ documentation_of: //library/number/combination.hpp
 # 組み合わせ nCk
 
 ## できること
-- $nCk$を求める
+- $nCk$ を求める
 
 ## 計算量
 $O(k)$

@@ -11,7 +11,7 @@ documentation_of: //library/search/bi_lt_val.hpp
 
 ## 計算量
 - $O(NlogN)$
-- setの場合は二分探索のみなので$O(logN)$
+- setの場合は二分探索のみなので $O(logN)$
 
 ## 使い方
 ```cpp

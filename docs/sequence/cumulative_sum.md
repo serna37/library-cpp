@@ -6,7 +6,7 @@ documentation_of: //library/sequence/cumulative_sum.hpp
 # 累積和
 
 ## できること
-- 累積和の数列を返す。$S_i = \sum A[0, i)$
+- 累積和の数列を返す。 $S_i = \sum A[0, i)$
 ```
 A:    1   4   2   8   2   9
 S: 0  1   5   7  15  17  26

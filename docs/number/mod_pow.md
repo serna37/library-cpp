@@ -6,7 +6,7 @@ documentation_of: //library/number/mod_pow.hpp
 # MOD 二分累乗
 
 ## できること
-- MOD下で、$a^n$を求める
+- MOD下で、 $a^n$ を求める
 
 ## 計算量
 $O(\sqrt N)$

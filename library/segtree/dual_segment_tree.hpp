@@ -1,9 +1,5 @@
 #pragma once
 #include "library/struct/monoid.hpp"
-/**
- * @brief Dual Segment Tree 区間更新 1点取得
- * @tparam T モノイドの型
- */
 template <typename T> struct DualSegmentTree {
     using F = function<T(T, T)>;
 

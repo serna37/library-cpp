@@ -1,7 +1,4 @@
 #pragma once
-/**
- * @brief UnionFind 素集合データ構造
- */
 struct UnionFind {
   private:
     vector<int> parent, size;

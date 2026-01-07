@@ -6,7 +6,7 @@ documentation_of: //library/number/mod_combination.hpp
 # MOD 組み合わせ nCk
 
 ## できること
-- MOD下で、$nCk$を求める
+- MOD下で、 $nCk$ を求める
 
 ## 計算量
 $O(logM)$
