@@ -12,7 +12,7 @@ struct Graph {
     const vector<Edge> &operator[](int v) const {
         return G[v];
     }
-    int size() {
+    int size() const {
         return N;
     }
     void add(int from, int to, long long cost = 1) {
