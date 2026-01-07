@@ -1,9 +1,5 @@
 #pragma once
 #include "library/struct/monoid.hpp"
-/**
- * @brief Segment Tree 1点更新 区間取得
- * @tparam T モノイドの型
- */
 template <typename T> struct SegmentTree {
     using F = function<T(T, T)>;
 
@@ -27,12 +23,10 @@ template <typename T> struct SegmentTree {
         for (int i = size - 1; i >= 1; --i)
             node[i] = op(node[i << 1 | 0], node[i << 1 | 1]);
     }
-    // 要素iの値をxにする
     void set(int i, const T &x) {
         node[i += size] = x;
         while (i >>= 1) node[i] = op(node[i << 1 | 0], node[i << 1 | 1]);
     }
-    // 演算[l,r)
     T prod(int l, int r) {
         T L = e, R = e;
         for (l += size, r += size; l < r; l >>= 1, r >>= 1) {

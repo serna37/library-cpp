@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C"
 #include "template/template.hpp"
-#include "library/graph/graph.hpp"
+#include "library/graph/warshall_froyd.hpp"
 /**
  * @brief グラフ - WarshallFroydのテスト
  */
@@ -10,7 +10,7 @@ void solve() {
     cin >> V >> E;
     Graph G(V);
     G.read(E, 0, true, true);
-    auto [dis, negativeCycle] = G.warshall_froyd();
+    auto [dis, negativeCycle] = warshall_froyd(G);
     if (negativeCycle) {
         print("NEGATIVE CYCLE");
         return;

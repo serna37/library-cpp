@@ -1,7 +1,4 @@
 #pragma once
-/**
- * @brief めっちゃ見やすいdebug出力
- */
 #include <cxxabi.h>
 #include <iostream>
 #include <map>

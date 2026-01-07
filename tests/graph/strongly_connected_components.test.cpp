@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C"
 #include "template/template.hpp"
-#include "library/graph/graph.hpp"
+#include "library/graph/strongly_connected_components.hpp"
 /**
  * @brief グラフ - 強連結成分分解のテスト
  */
@@ -10,7 +10,7 @@ void solve() {
     cin >> V >> E;
     Graph G(V);
     G.read(E, 0, false, true);
-    auto [groups, ids] = G.scc();
+    auto [groups, ids] = scc(G);
     int Q;
     cin >> Q;
     while (Q--) {

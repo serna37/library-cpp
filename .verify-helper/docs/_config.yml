@@ -1,3 +1,4 @@
 theme: jekyll-theme-cayman
 title: serna37's Library
-description: C++競プロ向け アルゴリズムとデータ構造のライブラリ
+description: C++ アルゴリズムとデータ構造のライブラリ
+exclude: ['bits', 'bundler']
