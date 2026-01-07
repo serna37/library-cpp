@@ -53,7 +53,7 @@ data:
   isVerificationFile: true
   path: tests/graph/bellman_ford.test.cpp
   requiredBy: []
-  timestamp: '2026-01-07 15:59:55+09:00'
+  timestamp: '2026-01-07 16:12:16+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/bellman_ford.test.cpp

@@ -19,7 +19,7 @@ data:
   isVerificationFile: false
   path: library/number/combination.hpp
   requiredBy: []
-  timestamp: '2026-01-07 15:59:55+09:00'
+  timestamp: '2026-01-07 16:12:16+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/number/combination.hpp

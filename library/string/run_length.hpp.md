@@ -20,7 +20,7 @@ data:
   isVerificationFile: false
   path: library/string/run_length.hpp
   requiredBy: []
-  timestamp: '2026-01-07 15:59:55+09:00'
+  timestamp: '2026-01-07 16:12:16+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/string/run_length.hpp
@@ -35,7 +35,7 @@ title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E"
 ```
 AAAABBBCDDDD
 ↓
-{{A, 4}, {B, 3}, {C, 1}, {D, 4}}
+{ [A, 4], [B, 3], [C, 1], [D, 4] }
 ```
 
 ## 計算量
