@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_2_A"
 #include "template/template.hpp"
-#include "library/graph/min_span_tree.hpp"
+#include "library/graph/kruskal.hpp"
 /**
  * @brief 最小全域木 - クラスカルのテスト
  */

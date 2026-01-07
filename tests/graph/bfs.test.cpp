@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_C"
 #include "template/template.hpp"
-#include "library/graph/graph.hpp"
+#include "library/graph/bfs.hpp"
 /**
  * @brief グラフ - BFSのテスト
  */
@@ -20,7 +20,7 @@ void solve() {
             G.add(U, v);
         }
     }
-    auto [dis, route] = G.bfs();
+    auto [dis, route] = bfs(G);
     for (int i = 0; i < N; ++i) {
         cout << i + 1 << " ";
         print(dis[i]);

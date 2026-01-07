@@ -1,9 +1,9 @@
 ---
-title: Fenwic Tree
+title: Fenwick Tree
 documentation_of: //library/segtree/fenwick_tree.hpp
 ---
 
-# Fenwic Tree
+# Fenwick Tree
 
 ## できること
 - 1点に加算する
