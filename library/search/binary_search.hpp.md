@@ -16,12 +16,12 @@ data:
   code: "#pragma once\npair<long long, long long> binary_search(function<bool(long\
     \ long)> f) {\n    long long L = 0, R = 1, MID = 0;\n    while (!f(R)) R <<= 1;\n\
     \    while (abs(R - L) > 1) {\n        MID = L + (R - L) / 2;\n        (f(MID)\
-    \ ? R : L) = MID;\n    }\n    return {L, R};\n}"
+    \ ? R : L) = MID;\n    }\n    return {L, R};\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/search/binary_search.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/search/binary_search.hpp

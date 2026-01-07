@@ -21,12 +21,12 @@ data:
     \    if (A.size() > B.size()) swap(A, B);\n    for (auto &&v : A) B.insert(v);\n\
     \    A.clear();\n}\ntemplate <typename T, typename F> void merge(T &A, T &B, F\
     \ f) {\n    if (A.size() > B.size()) swap(A, B);\n    for (auto &&v : A) {\n \
-    \       f(B, v);\n    }\n    A.clear();\n}"
+    \       f(B, v);\n    }\n    A.clear();\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/merge.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/sequence/merge.hpp

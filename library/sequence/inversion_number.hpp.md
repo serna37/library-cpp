@@ -27,13 +27,13 @@ data:
     \    vector<int> fwk(sz + 1);\n    long long inv = 0, N = A.size();\n    for (int\
     \ i = 0; i < N; ++i) {\n        for (int f = sz; f; f -= f & -f) inv += fwk[f];\n\
     \        for (int f = A[i] + 1; f; f -= f & -f) inv -= fwk[f];\n        for (int\
-    \ f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];\n    }\n    return inv;\n}"
+    \ f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];\n    }\n    return inv;\n}\n"
   dependsOn:
   - library/sequence/zip_coordinate.hpp
   isVerificationFile: false
   path: library/sequence/inversion_number.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/sequence/inversion_number.hpp

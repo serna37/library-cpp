@@ -13,12 +13,12 @@ data:
     \ - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1)) / 2.0;\n}\n"
   code: "#pragma once\ntemplate <typename T> double area_triangle(T x1, T y1, T x2,\
     \ T y2, T x3, T y3) {\n    return abs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2\
-    \ - y1)) / 2.0;\n}"
+    \ - y1)) / 2.0;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/geometry/area_triangle.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/geometry/area_triangle.hpp

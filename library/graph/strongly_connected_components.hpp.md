@@ -66,14 +66,14 @@ data:
     \ v < N; ++v) {\n        ids[v] = cnt - 1 - ids[v];\n    }\n    vector<int> c(cnt);\n\
     \    vector<vector<int>> groups(cnt);\n    for (auto &&v : ids) ++c[v];\n    for\
     \ (int i = 0; i < cnt; ++i) groups[i].reserve(c[i]);\n    for (int i = 0; i <\
-    \ N; ++i) groups[ids[i]].push_back(i);\n    return {groups, ids};\n}"
+    \ N; ++i) groups[ids[i]].push_back(i);\n    return {groups, ids};\n}\n"
   dependsOn:
   - library/graph/graph.hpp
   - library/graph/edge.hpp
   isVerificationFile: false
   path: library/graph/strongly_connected_components.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/strongly_connected_components.test.cpp

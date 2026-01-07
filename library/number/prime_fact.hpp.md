@@ -15,12 +15,12 @@ data:
   code: "#pragma once\nmap<int, int> prime_fact(int N) {\n    map<int, int> P;\n \
     \   for (int i = 2; i * i <= N; ++i) {\n        while (N % i == 0) {\n       \
     \     ++P[i];\n            N /= i;\n        }\n    }\n    if (N > 1) ++P[N];\n\
-    \    return P;\n}"
+    \    return P;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/prime_fact.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/number/prime_fact.hpp

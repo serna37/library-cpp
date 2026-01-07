@@ -9,20 +9,20 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/cumulative_sum_rev_diff.hpp\"\ntemplate\
-    \ <typename T> vector<long long> cumulative_sum_rev_diff(const vector<T> &A) {\n\
-    \    int N = A.size();\n    vector<long long> R(N + 1);\n    for (int i = N -\
-    \ 1; i >= 0; --i) {\n        R[i] = R[i + 1];\n        if (i & 1) R[i] += abs((i\
-    \ + 1 < N ? A[i + 1] : 0) - A[i]);\n    }\n    return R;\n}\n"
-  code: "#pragma once\ntemplate <typename T> vector<long long> cumulative_sum_rev_diff(const\
+    \ <typename T>\nvector<long long> cumulative_sum_rev_diff(const vector<T> &A)\
+    \ {\n    int N = A.size();\n    vector<long long> R(N + 1);\n    for (int i =\
+    \ N - 1; i >= 0; --i) {\n        R[i] = R[i + 1];\n        if (i & 1) R[i] +=\
+    \ abs((i + 1 < N ? A[i + 1] : 0) - A[i]);\n    }\n    return R;\n}\n"
+  code: "#pragma once\ntemplate <typename T>\nvector<long long> cumulative_sum_rev_diff(const\
     \ vector<T> &A) {\n    int N = A.size();\n    vector<long long> R(N + 1);\n  \
     \  for (int i = N - 1; i >= 0; --i) {\n        R[i] = R[i + 1];\n        if (i\
     \ & 1) R[i] += abs((i + 1 < N ? A[i + 1] : 0) - A[i]);\n    }\n    return R;\n\
-    }"
+    }\n"
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/cumulative_sum_rev_diff.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/sequence/cumulative_sum_rev_diff.hpp

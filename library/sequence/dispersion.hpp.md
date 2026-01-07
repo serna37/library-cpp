@@ -12,12 +12,12 @@ data:
     \ vector<int> &A) {\n    vector<int> res(2e6);\n    for (auto &&v : A) ++res[v];\n\
     \    return res;\n}\n"
   code: "#pragma once\nvector<int> dispersion(const vector<int> &A) {\n    vector<int>\
-    \ res(2e6);\n    for (auto &&v : A) ++res[v];\n    return res;\n}"
+    \ res(2e6);\n    for (auto &&v : A) ++res[v];\n    return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/dispersion.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/sequence/dispersion.hpp

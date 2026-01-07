@@ -23,12 +23,12 @@ data:
     \ S[i + 1][j + 1] = S[i + 1][j] + G[i][j];\n        }\n    }\n    for (int i =\
     \ 0; i < H; ++i) { // \u7E26\u5411\u304D\n        for (int j = 0; j < W; ++j)\
     \ {\n            S[i + 1][j + 1] += S[i][j + 1];\n        }\n    }\n    return\
-    \ S;\n}"
+    \ S;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/cumulative_sum_2D.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/sequence/cumulative_sum_2D.hpp

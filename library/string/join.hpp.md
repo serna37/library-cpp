@@ -14,12 +14,12 @@ data:
     \ res;\n}\n"
   code: "#pragma once\nstring join(const vector<string> &v, const string &sep) {\n\
     \    string res;\n    for (int i = 0; i < (int)v.size(); ++i) {\n        if (0\
-    \ < i) res += sep;\n        res += v[i];\n    }\n    return res;\n}"
+    \ < i) res += sep;\n        res += v[i];\n    }\n    return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/string/join.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/string/join.hpp

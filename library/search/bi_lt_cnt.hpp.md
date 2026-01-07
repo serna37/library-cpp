@@ -13,12 +13,12 @@ data:
     \ lower_bound(v.begin(), v.end(), x) - v.begin();\n}\n"
   code: "#pragma once\ntemplate <typename T> int bi_lt_cnt(vector<T> &v, const T &x)\
     \ {\n    sort(v.begin(), v.end());\n    return lower_bound(v.begin(), v.end(),\
-    \ x) - v.begin();\n}"
+    \ x) - v.begin();\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/search/bi_lt_cnt.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/search/bi_lt_cnt.hpp

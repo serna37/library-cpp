@@ -21,14 +21,14 @@ data:
   code: "#pragma once\nlong long mod_pow(long long a, long long n, long long m) {\n\
     \    long long res = 1ll;\n    while (n > 0) {\n        if (n & 1) res = res *\
     \ a % m;\n        a = a * a % m;\n        n >>= 1ll;\n    }\n    return res;\n\
-    }"
+    }\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/mod_pow.hpp
   requiredBy:
   - library/number/mod_inverse.hpp
   - library/number/mod_combination.hpp
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/number/mod_pow.hpp

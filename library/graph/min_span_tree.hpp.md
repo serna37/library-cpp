@@ -24,14 +24,14 @@ data:
     \   }\n};\n#line 3 \"library/graph/min_span_tree.hpp\"\nstruct MinSpanTree {\n\
     \    long long cost;\n    vector<Edge> edges;\n};\n"
   code: "#pragma once\n#include \"library/graph/edge.hpp\"\nstruct MinSpanTree {\n\
-    \    long long cost;\n    vector<Edge> edges;\n};"
+    \    long long cost;\n    vector<Edge> edges;\n};\n"
   dependsOn:
   - library/graph/edge.hpp
   isVerificationFile: false
   path: library/graph/min_span_tree.hpp
   requiredBy:
   - library/graph/kruskal.hpp
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst_kruskal.test.cpp

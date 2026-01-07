@@ -23,12 +23,12 @@ data:
     \ (int j = 0; j < W; ++j) {\n            for (int k = 0; k < 4; ++k) {\n     \
     \           int y = i + dy[k], x = j + dx[k];\n                if (y < 0 or x\
     \ < 0 or H <= y or W <= x) continue;\n                f(y, x);\n            }\n\
-    \        }\n    }\n}"
+    \        }\n    }\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/grid/bfs.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/grid/bfs.hpp

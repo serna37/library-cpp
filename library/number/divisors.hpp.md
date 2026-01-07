@@ -14,12 +14,12 @@ data:
     \ res.push_back(N / i);\n    }\n    return res;\n}\n"
   code: "#pragma once\nvector<int> divisors(int N) {\n    vector<int> res;\n    for\
     \ (int i = 1; i * i <= N; ++i) {\n        if (N % i != 0) continue;\n        res.push_back(i);\n\
-    \        if (N / i != i) res.push_back(N / i);\n    }\n    return res;\n}"
+    \        if (N / i != i) res.push_back(N / i);\n    }\n    return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/divisors.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/number/divisors.hpp

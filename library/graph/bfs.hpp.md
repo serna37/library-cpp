@@ -34,28 +34,28 @@ data:
     \ if (weighted) cin >> cost;\n            if (directed) {\n                add(u,\
     \ v, cost);\n            } else {\n                add_both(u, v, cost);\n   \
     \         }\n        }\n    }\n};\n#line 3 \"library/graph/bfs.hpp\"\npair<vector<int>,\
-    \ vector<int>> bfs(const Graph &G, const vector<int> &starts = {0}) {\n    int\
-    \ N = G.size();\n    queue<int> q;\n    vector<int> dis(N, -1), route(N, -1);\n\
-    \    for (auto &&v : starts) q.push(v), dis[v] = 0;\n    while (!q.empty()) {\n\
-    \        int v = q.front();\n        q.pop();\n        for (auto &&[from, to,\
-    \ cost, idx] : G[v]) {\n            if (~dis[to]) continue;\n            dis[to]\
-    \ = dis[from] + 1;\n            q.push(to);\n            route[to] = v;\n    \
-    \    }\n    }\n    return {dis, route};\n}\n"
+    \ vector<int>> bfs(const Graph &G,\n                                   const vector<int>\
+    \ &starts = {0}) {\n    int N = G.size();\n    queue<int> q;\n    vector<int>\
+    \ dis(N, -1), route(N, -1);\n    for (auto &&v : starts) q.push(v), dis[v] = 0;\n\
+    \    while (!q.empty()) {\n        int v = q.front();\n        q.pop();\n    \
+    \    for (auto &&[from, to, cost, idx] : G[v]) {\n            if (~dis[to]) continue;\n\
+    \            dis[to] = dis[from] + 1;\n            q.push(to);\n            route[to]\
+    \ = v;\n        }\n    }\n    return {dis, route};\n}\n"
   code: "#pragma once\n#include \"library/graph/graph.hpp\"\npair<vector<int>, vector<int>>\
-    \ bfs(const Graph &G, const vector<int> &starts = {0}) {\n    int N = G.size();\n\
-    \    queue<int> q;\n    vector<int> dis(N, -1), route(N, -1);\n    for (auto &&v\
-    \ : starts) q.push(v), dis[v] = 0;\n    while (!q.empty()) {\n        int v =\
-    \ q.front();\n        q.pop();\n        for (auto &&[from, to, cost, idx] : G[v])\
-    \ {\n            if (~dis[to]) continue;\n            dis[to] = dis[from] + 1;\n\
-    \            q.push(to);\n            route[to] = v;\n        }\n    }\n    return\
-    \ {dis, route};\n}"
+    \ bfs(const Graph &G,\n                                   const vector<int> &starts\
+    \ = {0}) {\n    int N = G.size();\n    queue<int> q;\n    vector<int> dis(N, -1),\
+    \ route(N, -1);\n    for (auto &&v : starts) q.push(v), dis[v] = 0;\n    while\
+    \ (!q.empty()) {\n        int v = q.front();\n        q.pop();\n        for (auto\
+    \ &&[from, to, cost, idx] : G[v]) {\n            if (~dis[to]) continue;\n   \
+    \         dis[to] = dis[from] + 1;\n            q.push(to);\n            route[to]\
+    \ = v;\n        }\n    }\n    return {dis, route};\n}\n"
   dependsOn:
   - library/graph/graph.hpp
   - library/graph/edge.hpp
   isVerificationFile: false
   path: library/graph/bfs.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/bfs.test.cpp

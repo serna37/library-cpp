@@ -52,14 +52,14 @@ data:
     \ {\n            if (ids[to] != -1) continue;\n            f(f, to);\n       \
     \ }\n    };\n    for (int i = 0; i < N; ++i) {\n        if (ids[i] != -1) continue;\n\
     \        com.clear();\n        dfs(dfs, i);\n        groups.push_back(com);\n\
-    \        ++cnt;\n    }\n    return {groups, ids};\n}"
+    \        ++cnt;\n    }\n    return {groups, ids};\n}\n"
   dependsOn:
   - library/graph/graph.hpp
   - library/graph/edge.hpp
   isVerificationFile: false
   path: library/graph/connected_components.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/connected_components.test.cpp

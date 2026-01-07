@@ -16,12 +16,12 @@ data:
   code: "#pragma once\nvector<string> split_multi(const string &S, const string &seps)\
     \ {\n    vector<string> res = {\"\"};\n    for (auto &&v : S) {\n        if (count(all(seps),\
     \ v)) {\n            res.emplace_back(\"\");\n        } else {\n            res.back()\
-    \ += v;\n        }\n    }\n    return res;\n}"
+    \ += v;\n        }\n    }\n    return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/string/split_multi.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/string/split_multi.hpp

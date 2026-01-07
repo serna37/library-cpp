@@ -18,12 +18,12 @@ data:
     \ {\n    sort(v.begin(), v.end());\n    auto it = upper_bound(v.begin(), v.end(),\
     \ x);\n    return (it == v.begin() ? -INF : *--it);\n}\ntemplate <typename T>\
     \ T bi_le_val(const set<T> &st, const T &x) {\n    auto it = st.upper_bound(x);\n\
-    \    return (it == st.begin() ? -INF : *--it);\n}"
+    \    return (it == st.begin() ? -INF : *--it);\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/search/bi_le_val.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/search/bi_le_val.hpp

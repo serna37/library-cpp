@@ -14,12 +14,12 @@ data:
     \    }\n    return true;\n}\n"
   code: "#pragma once\nbool prime_test(int N) {\n    if (N == 2) return true;\n  \
     \  if (N == 1 or N % 2 == 0) return false;\n    for (int i = 3; i * i <= N; i\
-    \ += 2) {\n        if (N % i == 0) return false;\n    }\n    return true;\n}"
+    \ += 2) {\n        if (N % i == 0) return false;\n    }\n    return true;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/prime_test.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/number/prime_test.hpp

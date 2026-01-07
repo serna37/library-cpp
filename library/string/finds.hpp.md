@@ -15,12 +15,12 @@ data:
   code: "#pragma once\nvector<int> finds(const string &T, const string &S) {\n   \
     \ vector<int> pos;\n    auto p = T.find(S);\n    while (p != string::npos) {\n\
     \        pos.emplace_back(p);\n        p = T.find(S, p + 1);\n    }\n    return\
-    \ pos;\n}"
+    \ pos;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/string/finds.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/string/finds.hpp

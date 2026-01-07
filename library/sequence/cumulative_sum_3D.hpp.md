@@ -11,31 +11,30 @@ data:
   bundledCode: "#line 2 \"library/sequence/cumulative_sum_3D.hpp\"\ntemplate <typename\
     \ T>\nvector<vector<vector<long long>>>\ncumulative_sum_3D(const vector<vector<vector<T>>>\
     \ &A) {\n    vector<vector<vector<long long>>> S;\n    int szx = A.size(), szy\
-    \ = A[0].size(), szz = A[0][0].size();\n    S.resize(szx + 1, vector<vector<long\
-    \ long>>(\n                            szy + 1, vector<long long>(szz + 1, 0)));\n\
-    \    for (int x = 1; x <= szx; ++x) {\n        for (int y = 1; y <= szy; ++y)\
-    \ {\n            for (int z = 1; z <= szz; ++z) {\n                S[x][y][z]\
-    \ = A[x - 1][y - 1][z - 1] + S[x - 1][y][z] +\n                              \
-    \  S[x][y - 1][z] + S[x][y][z - 1] -\n                                S[x - 1][y\
-    \ - 1][z] - S[x - 1][y][z - 1] -\n                                S[x][y - 1][z\
-    \ - 1] + S[x - 1][y - 1][z - 1];\n            }\n        }\n    }\n    return\
-    \ S;\n}\n"
+    \ = A[0].size(), szz = A[0][0].size();\n    S.resize(szx + 1,\n             vector<vector<long\
+    \ long>>(szy + 1, vector<long long>(szz + 1, 0)));\n    for (int x = 1; x <= szx;\
+    \ ++x) {\n        for (int y = 1; y <= szy; ++y) {\n            for (int z = 1;\
+    \ z <= szz; ++z) {\n                S[x][y][z] = A[x - 1][y - 1][z - 1] + S[x\
+    \ - 1][y][z] +\n                             S[x][y - 1][z] + S[x][y][z - 1] -\n\
+    \                             S[x - 1][y - 1][z] - S[x - 1][y][z - 1] -\n    \
+    \                         S[x][y - 1][z - 1] + S[x - 1][y - 1][z - 1];\n     \
+    \       }\n        }\n    }\n    return S;\n}\n"
   code: "#pragma once\ntemplate <typename T>\nvector<vector<vector<long long>>>\n\
     cumulative_sum_3D(const vector<vector<vector<T>>> &A) {\n    vector<vector<vector<long\
     \ long>>> S;\n    int szx = A.size(), szy = A[0].size(), szz = A[0][0].size();\n\
-    \    S.resize(szx + 1, vector<vector<long long>>(\n                          \
-    \  szy + 1, vector<long long>(szz + 1, 0)));\n    for (int x = 1; x <= szx; ++x)\
-    \ {\n        for (int y = 1; y <= szy; ++y) {\n            for (int z = 1; z <=\
-    \ szz; ++z) {\n                S[x][y][z] = A[x - 1][y - 1][z - 1] + S[x - 1][y][z]\
-    \ +\n                                S[x][y - 1][z] + S[x][y][z - 1] -\n     \
-    \                           S[x - 1][y - 1][z] - S[x - 1][y][z - 1] -\n      \
-    \                          S[x][y - 1][z - 1] + S[x - 1][y - 1][z - 1];\n    \
-    \        }\n        }\n    }\n    return S;\n}"
+    \    S.resize(szx + 1,\n             vector<vector<long long>>(szy + 1, vector<long\
+    \ long>(szz + 1, 0)));\n    for (int x = 1; x <= szx; ++x) {\n        for (int\
+    \ y = 1; y <= szy; ++y) {\n            for (int z = 1; z <= szz; ++z) {\n    \
+    \            S[x][y][z] = A[x - 1][y - 1][z - 1] + S[x - 1][y][z] +\n        \
+    \                     S[x][y - 1][z] + S[x][y][z - 1] -\n                    \
+    \         S[x - 1][y - 1][z] - S[x - 1][y][z - 1] -\n                        \
+    \     S[x][y - 1][z - 1] + S[x - 1][y - 1][z - 1];\n            }\n        }\n\
+    \    }\n    return S;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/cumulative_sum_3D.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/sequence/cumulative_sum_3D.hpp

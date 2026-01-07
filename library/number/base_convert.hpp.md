@@ -19,12 +19,12 @@ data:
     \ base_10_number * from + (int)(v - '0');\n    if (base_10_number == 0) return\
     \ \"0\";\n    string res = \"\";\n    while (base_10_number) {\n        res =\
     \ (char)(base_10_number % to + '0') + res;\n        base_10_number /= to;\n  \
-    \  }\n    return res;\n}"
+    \  }\n    return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/base_convert.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/number/base_convert.hpp

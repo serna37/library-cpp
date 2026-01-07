@@ -76,7 +76,8 @@ data:
     \ cycle.end());\n        return cycle;\n    };\n    int pos = -1;\n    for (int\
     \ v = 0; v < N and pos == -1; ++v) {\n        if (seen[v]) continue;\n       \
     \ history.clear();\n        pos = dfs(dfs, v, Edge({-1, -1, -1, -1}));\n     \
-    \   if (pos != -1) return restruct(pos);\n    }\n    return vector<Edge>();\n}"
+    \   if (pos != -1) return restruct(pos);\n    }\n    return vector<Edge>();\n\
+    }\n"
   dependsOn:
   - library/graph/graph.hpp
   - library/graph/edge.hpp
@@ -84,7 +85,7 @@ data:
   path: library/graph/cycle_detect.hpp
   requiredBy:
   - library/graph/topological_sort.hpp
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/topological_sort.test.cpp

@@ -37,8 +37,8 @@ data:
     \ if (weighted) cin >> cost;\n            if (directed) {\n                add(u,\
     \ v, cost);\n            } else {\n                add_both(u, v, cost);\n   \
     \         }\n        }\n    }\n};\n#line 3 \"library/graph/dijkstra.hpp\"\npair<vector<long\
-    \ long>, vector<int>> dijkstra(const Graph &G, const vector<int> &starts = {\n\
-    \                                                    0}) {\n    int N = G.size();\n\
+    \ long>, vector<int>> dijkstra(const Graph &G,\n                             \
+    \                 const vector<int> &starts = {0}) {\n    int N = G.size();\n\
     \    reverse_queue<pair<long long, int>> q; // \u30B3\u30B9\u30C8(\u5C0F\u3055\
     \u3044\u9806), \u9802\u70B9\n    vector<long long> weight(N, INF);\n    vector<int>\
     \ route(N, -1);\n    for (auto &&v : starts) q.emplace(0, v), weight[v] = 0;\n\
@@ -49,24 +49,23 @@ data:
     \ to);\n            route[to] = v;\n        }\n    }\n    return {weight, route};\n\
     }\n"
   code: "#pragma once\n#include \"library/graph/graph.hpp\"\npair<vector<long long>,\
-    \ vector<int>> dijkstra(const Graph &G, const vector<int> &starts = {\n      \
-    \                                              0}) {\n    int N = G.size();\n\
-    \    reverse_queue<pair<long long, int>> q; // \u30B3\u30B9\u30C8(\u5C0F\u3055\
-    \u3044\u9806), \u9802\u70B9\n    vector<long long> weight(N, INF);\n    vector<int>\
-    \ route(N, -1);\n    for (auto &&v : starts) q.emplace(0, v), weight[v] = 0;\n\
-    \    while (!q.empty()) {\n        auto [w, v] = q.top();\n        q.pop();\n\
-    \        if (weight[v] < w) continue;\n        for (auto &&[from, to, cost, idx]\
-    \ : G[v]) {\n            long long next_w = w + cost;\n            if (weight[to]\
-    \ <= next_w) continue;\n            weight[to] = next_w;\n            q.emplace(weight[to],\
-    \ to);\n            route[to] = v;\n        }\n    }\n    return {weight, route};\n\
-    }"
+    \ vector<int>> dijkstra(const Graph &G,\n                                    \
+    \          const vector<int> &starts = {0}) {\n    int N = G.size();\n    reverse_queue<pair<long\
+    \ long, int>> q; // \u30B3\u30B9\u30C8(\u5C0F\u3055\u3044\u9806), \u9802\u70B9\
+    \n    vector<long long> weight(N, INF);\n    vector<int> route(N, -1);\n    for\
+    \ (auto &&v : starts) q.emplace(0, v), weight[v] = 0;\n    while (!q.empty())\
+    \ {\n        auto [w, v] = q.top();\n        q.pop();\n        if (weight[v] <\
+    \ w) continue;\n        for (auto &&[from, to, cost, idx] : G[v]) {\n        \
+    \    long long next_w = w + cost;\n            if (weight[to] <= next_w) continue;\n\
+    \            weight[to] = next_w;\n            q.emplace(weight[to], to);\n  \
+    \          route[to] = v;\n        }\n    }\n    return {weight, route};\n}\n"
   dependsOn:
   - library/graph/graph.hpp
   - library/graph/edge.hpp
   isVerificationFile: false
   path: library/graph/dijkstra.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/dijkstra.test.cpp

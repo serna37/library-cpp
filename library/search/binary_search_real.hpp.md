@@ -18,12 +18,12 @@ data:
     \ f) {\n    double L = 0, R = 1, MID = 0;\n    while (!f(R)) R *= 2;\n    auto\
     \ ABS = [&]() { return abs(R - L) > EPS; };\n    auto REL = [&]() { return abs(R\
     \ - L) / max(R, L) > EPS; };\n    while (ABS() and REL()) {\n        MID = L +\
-    \ (R - L) / 2;\n        (f(MID) ? R : L) = MID;\n    }\n    return {L, R};\n}"
+    \ (R - L) / 2;\n        (f(MID) ? R : L) = MID;\n    }\n    return {L, R};\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/search/binary_search_real.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/search/binary_search_real.hpp

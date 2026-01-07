@@ -56,14 +56,14 @@ data:
     \ dis[i][k] + dis[k][j]);\n            }\n        }\n    }\n    bool negativeCycle\
     \ = false;\n    for (int i = 0; i < N; ++i) {\n        if (dis[i][i] < 0) {\n\
     \            negativeCycle = true;\n            break;\n        }\n    }\n   \
-    \ return {dis, negativeCycle};\n}"
+    \ return {dis, negativeCycle};\n}\n"
   dependsOn:
   - library/graph/graph.hpp
   - library/graph/edge.hpp
   isVerificationFile: false
   path: library/graph/warshall_froyd.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/warshall_froyd.test.cpp

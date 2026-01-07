@@ -94,7 +94,7 @@ data:
     \ v << endl;\n}\n// ---------------------------------------- \u5B9A\u6570\nconst\
     \ long long INF = 1e18;\nconst long long MOD = 998244353;\nconst long long MOD7\
     \ = 1e9 + 7;\nconst long double PI = acosl(-1);\n// ----------------------------------------\
-    \ \u7701\u7565\u3059\u308B\u7CFB\u306E\u3084\u3064\ntemplate <typename T> using\
+    \ \u7701\u7565\u3059\u308B\u7CFB\u306E\u3084\u3064\ntemplate <typename T>\nusing\
     \ reverse_queue = priority_queue<T, vector<T>, greater<T>>;\ntemplate <typename\
     \ T> using vec2 = vector<vector<T>>;\ntemplate <typename T> vec2<T> make_vec2(int\
     \ H, int W, T init = 0) {\n    return vector<vector<T>>(H, vector<T>(W, init));\n\
@@ -143,7 +143,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp

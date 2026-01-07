@@ -12,12 +12,12 @@ data:
     \ N) {\n    long long res = 1;\n    while (N > 0) res *= N--;\n    return res;\n\
     }\n"
   code: "#pragma once\nlong long factorial(int N) {\n    long long res = 1;\n    while\
-    \ (N > 0) res *= N--;\n    return res;\n}"
+    \ (N > 0) res *= N--;\n    return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/factorial.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/number/factorial.hpp

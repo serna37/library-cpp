@@ -48,7 +48,7 @@ data:
     \ es;\n    for (auto &&e : edges) {\n        if (uf.unite(e.from, e.to)) {\n \
     \           es.emplace_back(e);\n            total += e.cost;\n        }\n   \
     \ }\n    // \u5168\u57DF\u306B\u9054\u3057\u306A\u3044\u5834\u5408\n    if (uf[0]\
-    \ < v_cnt) {\n        total = INF;\n    }\n    return {total, es};\n}"
+    \ < v_cnt) {\n        total = INF;\n    }\n    return {total, es};\n}\n"
   dependsOn:
   - library/graph/min_span_tree.hpp
   - library/graph/edge.hpp
@@ -56,7 +56,7 @@ data:
   isVerificationFile: false
   path: library/graph/kruskal.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst_kruskal.test.cpp

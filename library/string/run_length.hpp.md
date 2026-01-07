@@ -15,12 +15,12 @@ data:
   code: "#pragma once\nvector<pair<char, int>> run_length(const string &S) {\n   \
     \ vector<pair<char, int>> res;\n    for (auto &&x : S) {\n        if (res.empty()\
     \ or res.back().first != x) res.emplace_back(x, 0);\n        ++res.back().second;\n\
-    \    }\n    return res;\n}"
+    \    }\n    return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/string/run_length.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/string/run_length.hpp

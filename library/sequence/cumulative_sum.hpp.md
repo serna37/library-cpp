@@ -14,12 +14,12 @@ data:
     \   return S;\n}\n"
   code: "#pragma once\nvector<long long> cumulative_sum(const vector<long long> &A)\
     \ {\n    int N = A.size();\n    vector<long long> S(N + 1);\n    for (int i =\
-    \ 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n    return S;\n}"
+    \ 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n    return S;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/cumulative_sum.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/sequence/cumulative_sum.hpp

@@ -69,7 +69,7 @@ data:
     \ &f, int v) -> void {\n        seen[v] = 1;\n        for (auto &&[from, to, cost,\
     \ idx] : G[v]) {\n            if (!seen[to]) f(f, to);\n        }\n        sorted.push_back(v);\n\
     \    };\n    for (int i = 0; i < N; ++i) {\n        if (!seen[i]) dfs(dfs, i);\n\
-    \    }\n    reverse(sorted.begin(), sorted.end());\n    return sorted;\n}"
+    \    }\n    reverse(sorted.begin(), sorted.end());\n    return sorted;\n}\n"
   dependsOn:
   - library/graph/cycle_detect.hpp
   - library/graph/graph.hpp
@@ -77,7 +77,7 @@ data:
   isVerificationFile: false
   path: library/graph/topological_sort.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/topological_sort.test.cpp

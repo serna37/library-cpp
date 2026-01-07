@@ -17,12 +17,12 @@ data:
     \    return path;\n}\n"
   code: "#pragma once\nvector<int> route_restore(const vector<int> &route, int goal)\
     \ {\n    vector<int> path = {goal};\n    while (!!~route[path.back()]) path.push_back(route[path.back()]);\n\
-    \    reverse(path.begin(), path.end());\n    return path;\n}"
+    \    reverse(path.begin(), path.end());\n    return path;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/graph/route_restore.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/route_restore.test.cpp

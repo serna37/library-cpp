@@ -12,12 +12,13 @@ data:
     \ int A, int B) {\n    if (A > B or A >= (int)S.size()) return \"\";\n    return\
     \ S.substr(A, B - A + 1);\n}\n"
   code: "#pragma once\nstring range(const string &S, int A, int B) {\n    if (A >\
-    \ B or A >= (int)S.size()) return \"\";\n    return S.substr(A, B - A + 1);\n}"
+    \ B or A >= (int)S.size()) return \"\";\n    return S.substr(A, B - A + 1);\n\
+    }\n"
   dependsOn: []
   isVerificationFile: false
   path: library/string/range.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/string/range.hpp

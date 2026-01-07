@@ -21,14 +21,14 @@ data:
     \nlong long mod_inverse(long long a, long long m) {\n    return mod_pow(a, m -\
     \ 2, m);\n}\n"
   code: "#pragma once\n#include \"library/number/mod_pow.hpp\"\nlong long mod_inverse(long\
-    \ long a, long long m) {\n    return mod_pow(a, m - 2, m);\n}"
+    \ long a, long long m) {\n    return mod_pow(a, m - 2, m);\n}\n"
   dependsOn:
   - library/number/mod_pow.hpp
   isVerificationFile: false
   path: library/number/mod_inverse.hpp
   requiredBy:
   - library/number/mod_combination.hpp
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/number/mod_inverse.hpp

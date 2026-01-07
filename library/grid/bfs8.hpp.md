@@ -22,12 +22,12 @@ data:
     \    for (int i = 0; i < H; ++i) {\n        for (int j = 0; j < W; ++j) {\n  \
     \          for (int k = 0; k < 8; ++k) {\n                int y = i + dy8[k],\
     \ x = j + dx8[k];\n                if (y < 0 or x < 0 or H <= y or W <= x) continue;\n\
-    \                f(y, x);\n            }\n        }\n    }\n}"
+    \                f(y, x);\n            }\n        }\n    }\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/grid/bfs8.hpp
   requiredBy: []
-  timestamp: '2026-01-07 17:15:18+09:00'
+  timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/grid/bfs8.hpp
