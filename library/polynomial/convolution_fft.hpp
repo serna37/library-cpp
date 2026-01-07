@@ -1,9 +1,5 @@
 #pragma once
 #include "library/polynomial/fft.hpp"
-/**
- * @brief 畳み込み FFT
- * 結果はllroundで四捨五入している、誤差なしは数論変換NTTが必要
- */
 template <typename R>
 vector<long long> convolution_fft(const vector<R> &a, const vector<R> &b) {
     using C = FFT::C;
