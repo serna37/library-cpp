@@ -1,6 +1,6 @@
 ---
 title: 連結成分分解
-documentation_of: //library/graph/kruskal.hpp
+documentation_of: //library/graph/connected_components.hpp
 ---
 
 # 連結成分分解
