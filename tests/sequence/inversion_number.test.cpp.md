@@ -2,14 +2,11 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/graph/bfs.hpp
-    title: BFS
+    path: library/sequence/inversion_number.hpp
+    title: "\u8EE2\u5012\u6570"
   - icon: ':heavy_check_mark:'
-    path: library/graph/edge.hpp
-    title: "\u8FBA"
-  - icon: ':heavy_check_mark:'
-    path: library/graph/graph.hpp
-    title: "\u30B0\u30E9\u30D5"
+    path: library/sequence/zip_coordinate.hpp
+    title: "\u5EA7\u6A19\u5727\u7E2E"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -20,10 +17,11 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_C
-    document_title: "\u30B0\u30E9\u30D5 - BFS\u306E\u30C6\u30B9\u30C8"
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_D
+    document_title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\
+      \u30C8"
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_C
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_D
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -37,30 +35,25 @@ data:
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
-    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_C\"\
-    \n#include \"template/template.hpp\"\n#include \"library/graph/bfs.hpp\"\n/**\n\
-    \ * @brief \u30B0\u30E9\u30D5 - BFS\u306E\u30C6\u30B9\u30C8\n */\nvoid solve()\
-    \ {\n    int N;\n    cin >> N;\n    Graph G(N);\n    for (int i = 0; i < N; ++i)\
-    \ {\n        int U, K;\n        cin >> U >> K;\n        --U;\n        for (int\
-    \ j = 0; j < K; ++j) {\n            int v;\n            cin >> v;\n          \
-    \  --v;\n            G.add(U, v);\n        }\n    }\n    auto [dis, route] = bfs(G);\n\
-    \    for (int i = 0; i < N; ++i) {\n        cout << i + 1 << \" \";\n        print(dis[i]);\n\
-    \    }\n}\n"
+    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_D\"\
+    \n#include \"template/template.hpp\"\n#include \"library/sequence/inversion_number.hpp\"\
+    \n/**\n * @brief \u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\
+    \u30C8\n */\nvoid solve() {\n    int N;\n    cin >> N;\n    vector<int> A(N);\n\
+    \    cin >> A;\n    long long inv = inversion_number(A);\n    print(inv);\n}\n"
   dependsOn:
   - template/template.hpp
-  - library/graph/bfs.hpp
-  - library/graph/graph.hpp
-  - library/graph/edge.hpp
+  - library/sequence/inversion_number.hpp
+  - library/sequence/zip_coordinate.hpp
   isVerificationFile: true
-  path: tests/graph/bfs.test.cpp
+  path: tests/sequence/inversion_number.test.cpp
   requiredBy: []
   timestamp: '2026-01-08 20:14:42+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/graph/bfs.test.cpp
+documentation_of: tests/sequence/inversion_number.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/graph/bfs.test.cpp
-- /verify/tests/graph/bfs.test.cpp.html
-title: "\u30B0\u30E9\u30D5 - BFS\u306E\u30C6\u30B9\u30C8"
+- /verify/tests/sequence/inversion_number.test.cpp
+- /verify/tests/sequence/inversion_number.test.cpp.html
+title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
 ---

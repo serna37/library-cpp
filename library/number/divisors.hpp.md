@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/number/divisors.test.cpp
+    title: "\u7D04\u6570\u5217\u6319\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/divisors.hpp\"\nvector<int> divisors(int\
@@ -19,9 +22,10 @@ data:
   isVerificationFile: false
   path: library/number/divisors.hpp
   requiredBy: []
-  timestamp: '2026-01-07 21:37:53+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-08 20:14:42+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/number/divisors.test.cpp
 documentation_of: library/number/divisors.hpp
 layout: document
 title: "\u7D04\u6570\u5217\u6319"

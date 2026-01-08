@@ -2,25 +2,28 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/search/bi_search_cnt.test.cpp
+    title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/search/bi_ge_cnt.hpp\"\ntemplate <typename T> int\
-    \ bi_ge_cnt(vector<T> &v, const T &x) {\n    sort(v.begin(), v.end());\n    return\
-    \ v.end() - lower_bound(v.begin(), v.end(), x);\n}\n"
-  code: "#pragma once\ntemplate <typename T> int bi_ge_cnt(vector<T> &v, const T &x)\
-    \ {\n    sort(v.begin(), v.end());\n    return v.end() - lower_bound(v.begin(),\
+    \ bi_ge_cnt(vector<T> &v, const T &x) {\n    return v.end() - lower_bound(v.begin(),\
     \ v.end(), x);\n}\n"
+  code: "#pragma once\ntemplate <typename T> int bi_ge_cnt(vector<T> &v, const T &x)\
+    \ {\n    return v.end() - lower_bound(v.begin(), v.end(), x);\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/search/bi_ge_cnt.hpp
   requiredBy: []
-  timestamp: '2026-01-07 21:37:53+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-08 20:14:42+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/search/bi_search_cnt.test.cpp
 documentation_of: library/search/bi_ge_cnt.hpp
 layout: document
 title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u8981\u7D20\
@@ -31,12 +34,12 @@ title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u8981\u7D
 
 ## できること
 - 配列中の「x以上の要素数」を返す
-- 中でソートする
 
 ## 計算量
-$O(NlogN)$
+$O(logN)$
 
 ## 使い方
 ```cpp
+sort(A.begin(), A.end());
 int cnt = bi_ge_cnt(A, x);
 ```

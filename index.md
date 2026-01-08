@@ -63,7 +63,7 @@ data:
       title: "\u8EE2\u7F6E"
   - name: library/number
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/number/base_convert.hpp
       title: "\u9032\u6570\u5909\u63DB"
     - icon: ':warning:'
@@ -72,28 +72,28 @@ data:
     - icon: ':warning:'
       path: library/number/digit_sum.hpp
       title: "\u6841\u548C"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/number/divisors.hpp
       title: "\u7D04\u6570\u5217\u6319"
     - icon: ':warning:'
       path: library/number/factorial.hpp
       title: "\u968E\u4E57"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/number/mod_combination.hpp
       title: "MOD \u7D44\u307F\u5408\u308F\u305B nCk"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/number/mod_factorial.hpp
       title: "MOD \u968E\u4E57"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/number/mod_inverse.hpp
       title: "MOD Fermat\u306E\u5C0F\u5B9A\u7406"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/number/mod_pow.hpp
       title: "MOD \u4E8C\u5206\u7D2F\u4E57"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/number/prime_fact.hpp
       title: "\u7D20\u56E0\u6570\u5206\u89E3"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/number/prime_test.hpp
       title: "\u7D20\u6570\u5224\u5B9A"
   - name: library/polynomial
@@ -106,7 +106,7 @@ data:
       title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
   - name: library/search
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/bi_ge_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u8981\
         \u7D20\u6570"
@@ -114,7 +114,7 @@ data:
       path: library/search/bi_ge_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\
         \u5C0F\u5024"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/bi_gt_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
         \u8981\u7D20\u6570"
@@ -122,7 +122,7 @@ data:
       path: library/search/bi_gt_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
         \u6700\u5C0F\u5024"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/bi_le_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u8981\
         \u7D20\u6570"
@@ -130,7 +130,7 @@ data:
       path: library/search/bi_le_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\
         \u5927\u5024"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/bi_lt_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u8981\
         \u7D20\u6570"
@@ -172,7 +172,7 @@ data:
       title: Starry Sky Tree
   - name: library/sequence
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/cumulative_sum.hpp
       title: "\u7D2F\u7A4D\u548C"
     - icon: ':warning:'
@@ -196,13 +196,13 @@ data:
     - icon: ':warning:'
       path: library/sequence/dispersion.hpp
       title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/inversion_number.hpp
       title: "\u8EE2\u5012\u6570"
     - icon: ':warning:'
       path: library/sequence/merge.hpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/zip_coordinate.hpp
       title: "\u5EA7\u6A19\u5727\u7E2E"
   - name: library/string
@@ -286,6 +286,28 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/graph/warshall_froyd.test.cpp
       title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
+  - name: tests/number
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/number/base_convert.test.cpp
+      title: "\u9032\u6570\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number/divisors.test.cpp
+      title: "\u7D04\u6570\u5217\u6319\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number/mod_combination.test.cpp
+      title: "MOD \u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number/prime_fact.test.cpp
+      title: "\u7D20\u56E0\u6570\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number/prime_test.test.cpp
+      title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
+  - name: tests/search
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/search/bi_search_cnt.test.cpp
+      title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
   - name: tests/segtree
     pages:
     - icon: ':heavy_check_mark:'
@@ -300,6 +322,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/segtree/segment_tree.test.cpp
       title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
+  - name: tests/sequence
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence/cumulative_sum.test.cpp
+      title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence/inversion_number.test.cpp
+      title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
   - name: tests/struct
     pages:
     - icon: ':heavy_check_mark:'

@@ -38,6 +38,24 @@ data:
     path: tests/graph/warshall_froyd.test.cpp
     title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/number/base_convert.test.cpp
+    title: "\u9032\u6570\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/number/divisors.test.cpp
+    title: "\u7D04\u6570\u5217\u6319\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/number/mod_combination.test.cpp
+    title: "MOD \u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/number/prime_fact.test.cpp
+    title: "\u7D20\u56E0\u6570\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/number/prime_test.test.cpp
+    title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/search/bi_search_cnt.test.cpp
+    title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/segtree/dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
   - icon: ':heavy_check_mark:'
@@ -49,6 +67,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/segtree/segment_tree.test.cpp
     title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence/cumulative_sum.test.cpp
+    title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence/inversion_number.test.cpp
+    title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/struct/union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
@@ -143,7 +167,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-07 21:37:53+09:00'
+  timestamp: '2026-01-08 20:14:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp
@@ -161,6 +185,14 @@ data:
   - tests/graph/warshall_froyd.test.cpp
   - tests/graph/connected_components.test.cpp
   - tests/struct/union_find.test.cpp
+  - tests/sequence/cumulative_sum.test.cpp
+  - tests/sequence/inversion_number.test.cpp
+  - tests/search/bi_search_cnt.test.cpp
+  - tests/number/prime_fact.test.cpp
+  - tests/number/mod_combination.test.cpp
+  - tests/number/prime_test.test.cpp
+  - tests/number/divisors.test.cpp
+  - tests/number/base_convert.test.cpp
 documentation_of: template/template.hpp
 layout: document
 title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"

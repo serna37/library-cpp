@@ -2,13 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: library/sequence/inversion_number.hpp
     title: "\u8EE2\u5012\u6570"
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence/inversion_number.test.cpp
+    title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/zip_coordinate.hpp\"\ntemplate <typename\
@@ -25,9 +28,10 @@ data:
   path: library/sequence/zip_coordinate.hpp
   requiredBy:
   - library/sequence/inversion_number.hpp
-  timestamp: '2026-01-07 21:37:53+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-08 20:14:42+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/sequence/inversion_number.test.cpp
 documentation_of: library/sequence/zip_coordinate.hpp
 layout: document
 title: "\u5EA7\u6A19\u5727\u7E2E"

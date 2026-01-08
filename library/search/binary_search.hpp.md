@@ -21,7 +21,7 @@ data:
   isVerificationFile: false
   path: library/search/binary_search.hpp
   requiredBy: []
-  timestamp: '2026-01-07 21:37:53+09:00'
+  timestamp: '2026-01-08 20:14:42+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/search/binary_search.hpp

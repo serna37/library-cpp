@@ -1,20 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: library/number/mod_factorial.hpp
     title: "MOD \u968E\u4E57"
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: library/number/mod_inverse.hpp
     title: "MOD Fermat\u306E\u5C0F\u5B9A\u7406"
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: library/number/mod_pow.hpp
     title: "MOD \u4E8C\u5206\u7D2F\u4E57"
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/number/mod_combination.test.cpp
+    title: "MOD \u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/mod_pow.hpp\"\nlong long mod_pow(long long\
@@ -27,13 +30,13 @@ data:
     \ x) return _mf_memo[x];\n    if (_mf_memo.empty()) _mf_memo.push_back(1);\n \
     \   for (int i = _mf_memo.size(); i <= x; ++i)\n        _mf_memo.push_back(_mf_memo.back()\
     \ * i % m);\n    return _mf_memo[x];\n}\n#line 4 \"library/number/mod_combination.hpp\"\
-    \nlong long mod_combination(int n, int k, long long m) {\n    return mod_factorial(n,\
-    \ m) * mod_inverse(mod_factorial(k, m), m) % m *\n           mod_inverse(mod_factorial(n\
-    \ - k, m), m) % m;\n}\n"
+    \nlong long mod_combination(int n, int k, long long m) {\n    if (k < 0 or n <\
+    \ k) return 0ll;\n    return mod_factorial(n, m) * mod_inverse(mod_factorial(k,\
+    \ m), m) % m *\n           mod_inverse(mod_factorial(n - k, m), m) % m;\n}\n"
   code: "#pragma once\n#include \"library/number/mod_inverse.hpp\"\n#include \"library/number/mod_factorial.hpp\"\
-    \nlong long mod_combination(int n, int k, long long m) {\n    return mod_factorial(n,\
-    \ m) * mod_inverse(mod_factorial(k, m), m) % m *\n           mod_inverse(mod_factorial(n\
-    \ - k, m), m) % m;\n}\n"
+    \nlong long mod_combination(int n, int k, long long m) {\n    if (k < 0 or n <\
+    \ k) return 0ll;\n    return mod_factorial(n, m) * mod_inverse(mod_factorial(k,\
+    \ m), m) % m *\n           mod_inverse(mod_factorial(n - k, m), m) % m;\n}\n"
   dependsOn:
   - library/number/mod_inverse.hpp
   - library/number/mod_pow.hpp
@@ -41,9 +44,10 @@ data:
   isVerificationFile: false
   path: library/number/mod_combination.hpp
   requiredBy: []
-  timestamp: '2026-01-07 21:37:53+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-08 20:14:42+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/number/mod_combination.test.cpp
 documentation_of: library/number/mod_combination.hpp
 layout: document
 title: "MOD \u7D44\u307F\u5408\u308F\u305B nCk"
