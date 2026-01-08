@@ -18,7 +18,7 @@ data:
   isVerificationFile: false
   path: library/search/permutation.hpp
   requiredBy: []
-  timestamp: '2026-01-08 22:22:25+09:00'
+  timestamp: '2026-01-08 22:37:21+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/search/permutation.hpp

@@ -44,7 +44,7 @@ data:
   isVerificationFile: false
   path: library/number/mod_combination.hpp
   requiredBy: []
-  timestamp: '2026-01-08 22:22:25+09:00'
+  timestamp: '2026-01-08 22:37:21+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number/mod_combination.test.cpp

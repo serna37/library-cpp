@@ -73,7 +73,7 @@ data:
   isVerificationFile: false
   path: library/graph/strongly_connected_components.hpp
   requiredBy: []
-  timestamp: '2026-01-08 22:22:25+09:00'
+  timestamp: '2026-01-08 22:37:21+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/strongly_connected_components.test.cpp
