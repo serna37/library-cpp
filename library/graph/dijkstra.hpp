@@ -1,9 +1,10 @@
 #pragma once
 #include "library/graph/graph.hpp"
+template <typename T> using rev_pq = priority_queue<T, vector<T>, greater<T>>;
 pair<vector<long long>, vector<int>> dijkstra(const Graph &G,
                                               const vector<int> &starts = {0}) {
     int N = G.size();
-    reverse_queue<pair<long long, int>> q; // コスト(小さい順), 頂点
+    rev_pq<pair<long long, int>> q; // コスト(小さい順), 頂点
     vector<long long> weight(N, INF);
     vector<int> route(N, -1);
     for (auto &&v : starts) q.emplace(0, v), weight[v] = 0;
