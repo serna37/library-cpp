@@ -54,7 +54,7 @@ data:
   isVerificationFile: true
   path: tests/number/mod_combination.test.cpp
   requiredBy: []
-  timestamp: '2026-01-08 20:49:47+09:00'
+  timestamp: '2026-01-08 21:27:27+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/number/mod_combination.test.cpp
