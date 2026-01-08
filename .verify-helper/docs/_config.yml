@@ -1,4 +1,4 @@
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
 title: serna37's Library
 description: C++ アルゴリズムとデータ構造のライブラリ
 exclude: ['bits', 'bundler']
