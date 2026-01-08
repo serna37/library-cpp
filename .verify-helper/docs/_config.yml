@@ -6,8 +6,8 @@
 
 baseurl: "/library-cpp"
 theme: jekyll-theme-minimal
-logo: /docs/assets/images/serna37.jpg
-favicon_ico: /docs/assets/images/favicon.ico
+logo: /_assets/images/serna37.jpg
+favicon_ico: /_assets/images/favicon.ico
 title: serna37's Library
 description: C++ アルゴリズムとデータ構造のライブラリ
 exclude: ['bits', 'bundler']
