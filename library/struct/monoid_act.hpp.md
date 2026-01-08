@@ -140,7 +140,7 @@ data:
   path: library/struct/monoid_act.hpp
   requiredBy:
   - library/segtree/lazy_segment_tree.hpp
-  timestamp: '2026-01-08 22:37:21+09:00'
+  timestamp: '2026-01-08 22:50:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp

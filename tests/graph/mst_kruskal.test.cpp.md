@@ -1,26 +1,26 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/edge.hpp
     title: "\u8FBA"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/graph/kruskal.hpp
     title: Kruskal
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/graph/min_span_tree.hpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/struct/union_find.hpp
     title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_2_A
@@ -57,8 +57,8 @@ data:
   isVerificationFile: true
   path: tests/graph/mst_kruskal.test.cpp
   requiredBy: []
-  timestamp: '2026-01-08 22:37:21+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-01-08 22:50:28+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/graph/mst_kruskal.test.cpp
 layout: document

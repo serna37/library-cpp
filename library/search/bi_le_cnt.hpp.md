@@ -20,7 +20,7 @@ data:
   isVerificationFile: false
   path: library/search/bi_le_cnt.hpp
   requiredBy: []
-  timestamp: '2026-01-08 22:37:21+09:00'
+  timestamp: '2026-01-08 22:50:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/search/bi_search_cnt.test.cpp

@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/cycle_detect.hpp
     title: "\u9589\u8DEF\u691C\u51FA"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/edge.hpp
     title: "\u8FBA"
   - icon: ':heavy_check_mark:'
@@ -77,7 +77,7 @@ data:
   isVerificationFile: false
   path: library/graph/topological_sort.hpp
   requiredBy: []
-  timestamp: '2026-01-08 22:37:21+09:00'
+  timestamp: '2026-01-08 22:50:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/topological_sort.test.cpp

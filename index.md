@@ -26,16 +26,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/graph/dijkstra.hpp
       title: Dijkstra
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/graph/edge.hpp
       title: "\u8FBA"
     - icon: ':heavy_check_mark:'
       path: library/graph/graph.hpp
       title: "\u30B0\u30E9\u30D5"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/graph/kruskal.hpp
       title: Kruskal
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/graph/min_span_tree.hpp
       title: "\u6700\u5C0F\u5168\u57DF\u6728"
     - icon: ':heavy_check_mark:'
@@ -233,7 +233,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/struct/monoid_act.hpp
       title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/struct/union_find.hpp
       title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   - name: template
@@ -241,7 +241,7 @@ data:
     - icon: ':warning:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   - name: tests
@@ -268,7 +268,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/graph/dijkstra.test.cpp
       title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/graph/mst_kruskal.test.cpp
       title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\
         \u30C6\u30B9\u30C8"
