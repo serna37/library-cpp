@@ -1,5 +1,4 @@
-#define PROBLEM                                                                \
-    "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0233"
+#define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0233"
 #include "template/template.hpp"
 #include "library/number/base_convert.hpp"
 /**

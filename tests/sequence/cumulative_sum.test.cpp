@@ -1,5 +1,4 @@
-#define PROBLEM                                                                \
-    "https://judge.yosupo.jp/problem/static_range_sum"
+#define PROBLEM "https://judge.yosupo.jp/problem/static_range_sum"
 #include "template/template.hpp"
 #include "library/sequence/cumulative_sum.hpp"
 /**

@@ -1,5 +1,4 @@
-#define PROBLEM                                                                \
-    "https://judge.yosupo.jp/problem/binomial_coefficient_prime_mod"
+#define PROBLEM "https://judge.yosupo.jp/problem/binomial_coefficient_prime_mod"
 #include "template/template.hpp"
 #include "library/number/mod_combination.hpp"
 /**
