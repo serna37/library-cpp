@@ -1,10 +1,11 @@
+baseurl: /library-cpp
 description: "C++ \u30A2\u30EB\u30B4\u30EA\u30BA\u30E0\u3068\u30C7\u30FC\u30BF\u69CB\
   \u9020\u306E\u30E9\u30A4\u30D6\u30E9\u30EA"
 exclude:
 - bits
 - bundler
-favicon_ico: assets/images/favicon.ico
-logo: assets/images/serna37.jpg
+favicon_ico: /assets/images/favicon.ico
+logo: /assets/images/serna37.jpg
 plugins:
 - jemoji
 - jekyll-redirect-from

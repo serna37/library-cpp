@@ -28,7 +28,7 @@ data:
   isVerificationFile: false
   path: library/sequence/cumulative_sum_2D.hpp
   requiredBy: []
-  timestamp: '2026-01-08 21:27:27+09:00'
+  timestamp: '2026-01-08 22:08:03+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/sequence/cumulative_sum_2D.hpp
