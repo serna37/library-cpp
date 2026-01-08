@@ -57,7 +57,7 @@ data:
   isVerificationFile: true
   path: tests/graph/mst_kruskal.test.cpp
   requiredBy: []
-  timestamp: '2026-01-08 20:14:42+09:00'
+  timestamp: '2026-01-08 20:28:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/mst_kruskal.test.cpp
