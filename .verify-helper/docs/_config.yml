@@ -1,4 +1,6 @@
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
+# テーマは以下から選べる
+# https://qiita.com/aKuad/items/c81019003ce669c17df0
 title: serna37's Library
 description: C++ アルゴリズムとデータ構造のライブラリ
 exclude: ['bits', 'bundler']

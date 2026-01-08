@@ -7,14 +7,13 @@ documentation_of: //library/search/bi_le_val.hpp
 
 ## できること
 - 配列中の「x以下の最大値」を返す
-- 中でソートする
 
 ## 計算量
-- $O(NlogN)$
-- setの場合は二分探索のみなので $O(logN)$
+- $O(logN)$
 
 ## 使い方
 ```cpp
+sort(A.begin(), A.end());
 int v = bi_le_val(A, x);
 int v = bi_le_val(st, x);
 if (v == -INF) {

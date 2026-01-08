@@ -7,12 +7,12 @@ documentation_of: //library/search/bi_lt_cnt.hpp
 
 ## できること
 - 配列中の「x未満の要素数」を返す
-- 中でソートする
 
 ## 計算量
-$O(NlogN)$
+$O(logN)$
 
 ## 使い方
 ```cpp
+sort(A.begin(), A.end());
 int cnt = bi_lt_cnt(A, x);
 ```

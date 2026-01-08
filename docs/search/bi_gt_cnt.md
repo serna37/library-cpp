@@ -7,12 +7,12 @@ documentation_of: //library/search/bi_gt_cnt.hpp
 
 ## できること
 - 配列中の「xより上の要素数」を返す
-- 中でソートする
 
 ## 計算量
-$O(NlogN)$
+$O(logN)$
 
 ## 使い方
 ```cpp
+sort(A.begin(), A.end());
 int cnt = bi_gt_cnt(A, x);
 ```
