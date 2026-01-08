@@ -22,7 +22,7 @@ data:
   isVerificationFile: false
   path: library/graph/route_restore.hpp
   requiredBy: []
-  timestamp: '2026-01-08 20:39:50+09:00'
+  timestamp: '2026-01-08 20:49:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/route_restore.test.cpp

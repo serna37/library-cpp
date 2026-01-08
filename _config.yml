@@ -3,7 +3,8 @@ description: "C++ \u30A2\u30EB\u30B4\u30EA\u30BA\u30E0\u3068\u30C7\u30FC\u30BF\u
 exclude:
 - bits
 - bundler
-logo: https://serna37.github.io/library-cpp/assets/img/logo.png
+favicon_ico: assets/img/logo.png
+logo: assets/img/logo.png
 plugins:
 - jemoji
 - jekyll-redirect-from
