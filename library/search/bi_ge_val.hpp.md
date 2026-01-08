@@ -22,7 +22,7 @@ data:
   isVerificationFile: false
   path: library/search/bi_ge_val.hpp
   requiredBy: []
-  timestamp: '2026-01-08 20:28:22+09:00'
+  timestamp: '2026-01-08 20:39:50+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/search/bi_ge_val.hpp
