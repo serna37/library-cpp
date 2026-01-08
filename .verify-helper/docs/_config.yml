@@ -4,8 +4,8 @@
 # テーマは以下から選べる
 # https://qiita.com/aKuad/items/c81019003ce669c17df0
 theme: jekyll-theme-minimal
-logo: assets/img/logo.png
-favicon_ico: assets/img/logo.png
+logo: assets/images/serna37.jpg
+favicon_ico: assets/images/favicon.ico
 title: serna37's Library
 description: C++ アルゴリズムとデータ構造のライブラリ
 exclude: ['bits', 'bundler']
