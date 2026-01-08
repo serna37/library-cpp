@@ -10,6 +10,7 @@
 "tests/graph/topological_sort.test.cpp": "2026-01-07 12:43:05 +0000",
 "tests/graph/warshall_froyd.test.cpp": "2026-01-07 12:43:05 +0000",
 "tests/number/base_convert.test.cpp": "2026-01-08 10:19:27 +0900",
+"tests/search/bi_search_cnt.test.cpp": "2026-01-08 11:27:18 +0900",
 "tests/segtree/dual_segment_tree.test.cpp": "2026-01-07 12:43:05 +0000",
 "tests/segtree/fenwick_tree.test.cpp": "2026-01-07 12:43:05 +0000",
 "tests/segtree/lazy_segment_tree.test.cpp": "2026-01-07 12:43:05 +0000",
