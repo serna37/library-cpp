@@ -6,14 +6,13 @@ documentation_of: //library/number/base_convert.hpp
 # 進数変換
 
 ## できること
-- 進数を変換する
-- fromとtoは10を超えないこと
+- to進数に変換する
+- 結果が`42`の場合、`4, 2`と配列で返す
 
 ## 計算量
-$O(|S|)$
+$O(log_{|to|} x)$
 
 ## 使い方
 ```cpp
-// 10進数から2進数に変換
-string T = base_convert(S, 10, 2);
+vector<int> cvt = base_convert(x, 10);
 ```
