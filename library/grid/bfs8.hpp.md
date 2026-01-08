@@ -27,7 +27,7 @@ data:
   isVerificationFile: false
   path: library/grid/bfs8.hpp
   requiredBy: []
-  timestamp: '2026-01-08 22:50:28+09:00'
+  timestamp: '2026-01-08 23:00:06+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/grid/bfs8.hpp

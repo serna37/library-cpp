@@ -17,7 +17,7 @@ data:
     path: library/search/bi_lt_cnt.hpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u8981\u7D20\
       \u6570"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -68,7 +68,7 @@ data:
   isVerificationFile: true
   path: tests/search/bi_search_cnt.test.cpp
   requiredBy: []
-  timestamp: '2026-01-08 22:50:28+09:00'
+  timestamp: '2026-01-08 23:00:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/search/bi_search_cnt.test.cpp

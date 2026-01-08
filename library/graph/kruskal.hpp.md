@@ -1,24 +1,24 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/edge.hpp
     title: "\u8FBA"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/min_span_tree.hpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/struct/union_find.hpp
     title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/graph/mst_kruskal.test.cpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\u30C6\
       \u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/graph/edge.hpp\"\nstruct Edge {\n    int from, to;\n\
@@ -56,8 +56,8 @@ data:
   isVerificationFile: false
   path: library/graph/kruskal.hpp
   requiredBy: []
-  timestamp: '2026-01-08 22:50:28+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2026-01-08 23:00:06+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst_kruskal.test.cpp
 documentation_of: library/graph/kruskal.hpp

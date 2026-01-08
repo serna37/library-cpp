@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/edge.hpp
     title: "\u8FBA"
   _extendedRequiredBy:
@@ -109,7 +109,7 @@ data:
   - library/graph/cycle_detect.hpp
   - library/graph/strongly_connected_components.hpp
   - library/graph/dijkstra.hpp
-  timestamp: '2026-01-08 22:50:28+09:00'
+  timestamp: '2026-01-08 23:00:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/bfs.test.cpp

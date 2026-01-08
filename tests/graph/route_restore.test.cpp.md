@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/dijkstra.hpp
     title: Dijkstra
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/edge.hpp
     title: "\u8FBA"
   - icon: ':heavy_check_mark:'
@@ -13,7 +13,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/route_restore.hpp
     title: "\u7D4C\u8DEF\u5FA9\u5143"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -59,7 +59,7 @@ data:
   isVerificationFile: true
   path: tests/graph/route_restore.test.cpp
   requiredBy: []
-  timestamp: '2026-01-08 22:50:28+09:00'
+  timestamp: '2026-01-08 23:00:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/route_restore.test.cpp

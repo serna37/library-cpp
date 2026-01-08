@@ -2,20 +2,20 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/kruskal.hpp
     title: Kruskal
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/graph/mst_kruskal.test.cpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\u30C6\
       \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/struct/union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/struct/union_find.hpp\"\nstruct UnionFind {\n  private:\n\
@@ -38,8 +38,8 @@ data:
   path: library/struct/union_find.hpp
   requiredBy:
   - library/graph/kruskal.hpp
-  timestamp: '2026-01-08 22:50:28+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2026-01-08 23:00:06+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst_kruskal.test.cpp
   - tests/struct/union_find.test.cpp
