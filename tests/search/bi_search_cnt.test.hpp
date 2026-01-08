@@ -16,19 +16,20 @@ void solve() {
     sort(A.begin(), A.end());
     int Q;
     cin >> Q;
-    int ans = 0, tmp = 0;
+    int ans = 0;
     while (Q--) {
         int x;
         cin >> x;
         // 以上の数 - より大きい数
         int cnt_ge = bi_ge_cnt(A, x);
         int cnt_gt = bi_gt_cnt(A, x);
-        ans += cnt_ge - cnt_gt;
+        int match_cnt = cnt_ge - cnt_gt;
+        if (0 < match_cnt) ++ans;
         // 以下の数 - より小さい数
         int cnt_le = bi_le_cnt(A, x);
         int cnt_lt = bi_lt_cnt(A, x);
-        tmp += cnt_le - cnt_lt;
+        int match_cnt2 = cnt_le - cnt_lt;
+        assert(match_cnt == match_cnt2);
     }
-    assert(ans == tmp);
     print(ans);
 }
