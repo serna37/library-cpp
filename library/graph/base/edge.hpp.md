@@ -4,10 +4,10 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: library/graph/base/graph.hpp
-    title: library/graph/base/graph.hpp
+    title: "\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
     path: library/graph/base/min_span_tree.hpp
-    title: library/graph/base/min_span_tree.hpp
+    title: "\u6700\u5C0F\u5168\u57DF\u6728"
   - icon: ':heavy_check_mark:'
     path: library/graph/connected_components.hpp
     title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
@@ -19,16 +19,16 @@ data:
     title: Kruskal
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/bellman_ford.hpp
-    title: library/graph/shortest_path/bellman_ford.hpp
+    title: Bellman Ford
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/bfs.hpp
-    title: library/graph/shortest_path/bfs.hpp
+    title: BFS
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/dijkstra.hpp
-    title: library/graph/shortest_path/dijkstra.hpp
+    title: Dijkstra
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/warshall_froyd.hpp
-    title: library/graph/shortest_path/warshall_froyd.hpp
+    title: Warshall Froyd
   - icon: ':heavy_check_mark:'
     path: library/graph/strongly_connected_components.hpp
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Tarjan)"
@@ -97,7 +97,7 @@ data:
   - library/graph/connected_components.hpp
   - library/graph/cycle_detect.hpp
   - library/graph/strongly_connected_components.hpp
-  timestamp: '2026-01-11 17:31:12+09:00'
+  timestamp: '2026-01-11 18:34:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/topological_sort.test.cpp
@@ -112,8 +112,22 @@ data:
   - tests/graph/connected_components.test.cpp
 documentation_of: library/graph/base/edge.hpp
 layout: document
-redirect_from:
-- /library/library/graph/base/edge.hpp
-- /library/library/graph/base/edge.hpp.html
-title: library/graph/base/edge.hpp
+title: "\u8FBA"
 ---
+
+# 辺
+
+## できること
+- 辺の構造体
+  - `from`: 辺の元の頂点
+  - `to`: 辺の先の頂点
+  - `cost`: 重み
+  - `idx`: 辺のid
+
+## 計算量
+なし
+
+## 使い方
+```cpp
+vector<Edge> edges;
+```

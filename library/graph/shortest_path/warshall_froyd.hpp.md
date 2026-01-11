@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
-    title: library/graph/base/edge.hpp
+    title: "\u8FBA"
   - icon: ':heavy_check_mark:'
     path: library/graph/base/graph.hpp
-    title: library/graph/base/graph.hpp
+    title: "\u30B0\u30E9\u30D5"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -63,14 +63,27 @@ data:
   isVerificationFile: false
   path: library/graph/shortest_path/warshall_froyd.hpp
   requiredBy: []
-  timestamp: '2026-01-11 17:31:12+09:00'
+  timestamp: '2026-01-11 18:34:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/shortest_path/warshall_froyd.test.cpp
 documentation_of: library/graph/shortest_path/warshall_froyd.hpp
 layout: document
-redirect_from:
-- /library/library/graph/shortest_path/warshall_froyd.hpp
-- /library/library/graph/shortest_path/warshall_froyd.hpp.html
-title: library/graph/shortest_path/warshall_froyd.hpp
+title: Warshall Froyd
 ---
+
+# Warshall Froyd
+
+## できること
+- 全頂点対の最小コストを求める
+- 複数始点
+  - `dis`: dis[i][j] := 頂点までの最小コスト
+  - `negativeCycle`: 負の閉路がある場合true
+
+## 計算量
+$O(N^3)$
+
+## 使い方
+```cpp
+auto [dis, negativeCycle] = warshall_froyd(G);
+```

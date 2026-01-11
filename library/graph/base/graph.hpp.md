@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
-    title: library/graph/base/edge.hpp
+    title: "\u8FBA"
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: library/graph/connected_components.hpp
@@ -13,16 +13,16 @@ data:
     title: "\u9589\u8DEF\u691C\u51FA"
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/bellman_ford.hpp
-    title: library/graph/shortest_path/bellman_ford.hpp
+    title: Bellman Ford
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/bfs.hpp
-    title: library/graph/shortest_path/bfs.hpp
+    title: BFS
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/dijkstra.hpp
-    title: library/graph/shortest_path/dijkstra.hpp
+    title: Dijkstra
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/warshall_froyd.hpp
-    title: library/graph/shortest_path/warshall_froyd.hpp
+    title: Warshall Froyd
   - icon: ':heavy_check_mark:'
     path: library/graph/strongly_connected_components.hpp
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Tarjan)"
@@ -109,7 +109,7 @@ data:
   - library/graph/connected_components.hpp
   - library/graph/cycle_detect.hpp
   - library/graph/strongly_connected_components.hpp
-  timestamp: '2026-01-11 17:31:12+09:00'
+  timestamp: '2026-01-11 18:34:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/topological_sort.test.cpp
@@ -123,8 +123,35 @@ data:
   - tests/graph/connected_components.test.cpp
 documentation_of: library/graph/base/graph.hpp
 layout: document
-redirect_from:
-- /library/library/graph/base/graph.hpp
-- /library/library/graph/base/graph.hpp.html
-title: library/graph/base/graph.hpp
+title: "\u30B0\u30E9\u30D5"
 ---
+
+# グラフ
+
+## できること
+- グラフの構造体
+  - `N`: 頂点数
+  - `G`: グラフ本体
+  - `es`: カウンタ
+
+辺を貼るたび、`Edge#idx`を自動で採番。
+
+## 計算量
+なし
+
+## 使い方
+```cpp
+Graph G(N);
+// 有向グラフ 一方向にのみ辺を張る
+G.add(from, to, cost);
+// 無向グラフ 双方向に辺を張る
+G.add_both(from, to, cost);
+```
+
+標準入力にも対応
+```cpp
+Graph G(N);
+// 辺の数、1-indexなら-1する
+//             重みtrue  有向true
+G.read(M, -1, true, true);
+```

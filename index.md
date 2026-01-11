@@ -13,13 +13,13 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: library/graph/base/edge.hpp
-      title: library/graph/base/edge.hpp
+      title: "\u8FBA"
     - icon: ':heavy_check_mark:'
       path: library/graph/base/graph.hpp
-      title: library/graph/base/graph.hpp
+      title: "\u30B0\u30E9\u30D5"
     - icon: ':heavy_check_mark:'
       path: library/graph/base/min_span_tree.hpp
-      title: library/graph/base/min_span_tree.hpp
+      title: "\u6700\u5C0F\u5168\u57DF\u6728"
   - name: library/graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -44,16 +44,16 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: library/graph/shortest_path/bellman_ford.hpp
-      title: library/graph/shortest_path/bellman_ford.hpp
+      title: Bellman Ford
     - icon: ':heavy_check_mark:'
       path: library/graph/shortest_path/bfs.hpp
-      title: library/graph/shortest_path/bfs.hpp
+      title: BFS
     - icon: ':heavy_check_mark:'
       path: library/graph/shortest_path/dijkstra.hpp
-      title: library/graph/shortest_path/dijkstra.hpp
+      title: Dijkstra
     - icon: ':heavy_check_mark:'
       path: library/graph/shortest_path/warshall_froyd.hpp
-      title: library/graph/shortest_path/warshall_froyd.hpp
+      title: Warshall Froyd
   - name: library/grid
     pages:
     - icon: ':warning:'

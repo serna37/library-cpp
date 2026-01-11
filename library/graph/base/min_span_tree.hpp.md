@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
-    title: library/graph/base/edge.hpp
+    title: "\u8FBA"
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: library/graph/kruskal.hpp
@@ -31,14 +31,29 @@ data:
   path: library/graph/base/min_span_tree.hpp
   requiredBy:
   - library/graph/kruskal.hpp
-  timestamp: '2026-01-11 17:31:12+09:00'
+  timestamp: '2026-01-11 18:34:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst_kruskal.test.cpp
 documentation_of: library/graph/base/min_span_tree.hpp
 layout: document
-redirect_from:
-- /library/library/graph/base/min_span_tree.hpp
-- /library/library/graph/base/min_span_tree.hpp.html
-title: library/graph/base/min_span_tree.hpp
+title: "\u6700\u5C0F\u5168\u57DF\u6728"
 ---
+
+# 最小全域木
+
+## できること
+- 最小全域木の構造体
+  - `cost`: 全域の総コスト。全域に達しない場合、INF
+  - `edges`: 全域に達するための`vector<Edge>`
+
+## 計算量
+なし
+
+## 使い方
+```cpp
+vector<Edge> edges;
+MinSpanTree mst = kruskal(edges, V);
+mst.cost;
+mst.edges;
+```

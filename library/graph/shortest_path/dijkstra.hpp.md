@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
-    title: library/graph/base/edge.hpp
+    title: "\u8FBA"
   - icon: ':heavy_check_mark:'
     path: library/graph/base/graph.hpp
-    title: library/graph/base/graph.hpp
+    title: "\u30B0\u30E9\u30D5"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -68,15 +68,31 @@ data:
   isVerificationFile: false
   path: library/graph/shortest_path/dijkstra.hpp
   requiredBy: []
-  timestamp: '2026-01-11 17:31:12+09:00'
+  timestamp: '2026-01-11 18:34:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/shortest_path/dijkstra.test.cpp
   - tests/graph/route_restore.test.cpp
 documentation_of: library/graph/shortest_path/dijkstra.hpp
 layout: document
-redirect_from:
-- /library/library/graph/shortest_path/dijkstra.hpp
-- /library/library/graph/shortest_path/dijkstra.hpp.html
-title: library/graph/shortest_path/dijkstra.hpp
+title: Dijkstra
 ---
+
+# Dijkstra
+
+## できること
+- 最小コストを求める
+- 複数始点
+  - `starts`: 始点の配列（デフォルト0）
+  - `weight`: dis[v] := 頂点vまでの最小コスト
+  - `route`: 経路復元用の配列
+
+## 計算量
+$O(ElogV)$
+- V: 頂点数
+- E: 辺の数
+
+## 使い方
+```cpp
+auto [weight, route] = dijkstra(G, {r});
+```

@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
-    title: library/graph/base/edge.hpp
+    title: "\u8FBA"
   - icon: ':heavy_check_mark:'
     path: library/graph/base/graph.hpp
-    title: library/graph/base/graph.hpp
+    title: "\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
     path: library/graph/cycle_detect.hpp
     title: "\u9589\u8DEF\u691C\u51FA"
@@ -57,7 +57,7 @@ data:
   isVerificationFile: true
   path: tests/graph/topological_sort.test.cpp
   requiredBy: []
-  timestamp: '2026-01-11 17:31:12+09:00'
+  timestamp: '2026-01-11 18:34:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/topological_sort.test.cpp

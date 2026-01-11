@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
-    title: library/graph/base/edge.hpp
+    title: "\u8FBA"
   - icon: ':heavy_check_mark:'
     path: library/graph/base/min_span_tree.hpp
-    title: library/graph/base/min_span_tree.hpp
+    title: "\u6700\u5C0F\u5168\u57DF\u6728"
   - icon: ':heavy_check_mark:'
     path: library/struct/union_find.hpp
     title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
@@ -57,7 +57,7 @@ data:
   isVerificationFile: false
   path: library/graph/kruskal.hpp
   requiredBy: []
-  timestamp: '2026-01-11 17:31:12+09:00'
+  timestamp: '2026-01-11 18:34:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst_kruskal.test.cpp
