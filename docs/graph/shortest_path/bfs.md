@@ -1,6 +1,6 @@
 ---
 title: BFS
-documentation_of: //library/graph/bfs.hpp
+documentation_of: //library/graph/shortest_path/bfs.hpp
 ---
 
 # BFS

@@ -1,6 +1,6 @@
 ---
 title: 最小全域木
-documentation_of: //library/graph/min_span_tree.hpp
+documentation_of: //library/graph/base/min_span_tree.hpp
 ---
 
 # 最小全域木

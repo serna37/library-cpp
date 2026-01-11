@@ -1,6 +1,6 @@
 ---
 title: Bellman Ford
-documentation_of: //library/graph/bellman_ford.hpp
+documentation_of: //library/graph/shortest_path/bellman_ford.hpp
 ---
 
 # Bellman Ford

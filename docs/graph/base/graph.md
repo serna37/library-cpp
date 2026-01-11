@@ -1,6 +1,6 @@
 ---
 title: グラフ
-documentation_of: //library/graph/graph.hpp
+documentation_of: //library/graph/base/graph.hpp
 ---
 
 # グラフ

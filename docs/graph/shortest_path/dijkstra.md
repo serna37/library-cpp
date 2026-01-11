@@ -1,6 +1,6 @@
 ---
 title: Dijkstra
-documentation_of: //library/graph/dijkstra.hpp
+documentation_of: //library/graph/shortest_path/dijkstra.hpp
 ---
 
 # Dijkstra

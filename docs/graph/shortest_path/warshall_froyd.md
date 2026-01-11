@@ -1,6 +1,6 @@
 ---
 title: Warshall Froyd
-documentation_of: //library/graph/warshall_froyd.hpp
+documentation_of: //library/graph/shortest_path/warshall_froyd.hpp
 ---
 
 # Warshall Froyd

@@ -1,6 +1,6 @@
 ---
 title: 辺
-documentation_of: //library/graph/edge.hpp
+documentation_of: //library/graph/base/edge.hpp
 ---
 
 # 辺
