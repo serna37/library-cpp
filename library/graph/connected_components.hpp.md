@@ -2,11 +2,11 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/graph/edge.hpp
-    title: "\u8FBA"
+    path: library/graph/base/edge.hpp
+    title: library/graph/base/edge.hpp
   - icon: ':heavy_check_mark:'
-    path: library/graph/graph.hpp
-    title: "\u30B0\u30E9\u30D5"
+    path: library/graph/base/graph.hpp
+    title: library/graph/base/graph.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -18,11 +18,11 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/graph/edge.hpp\"\nstruct Edge {\n    int from, to;\n\
-    \    long long cost;\n    int idx;\n    Edge(int from, int to, long long cost\
-    \ = 1, int idx = -1)\n        : from(from), to(to), cost(cost), idx(idx) {\n \
-    \   }\n};\n#line 3 \"library/graph/graph.hpp\"\nstruct Graph {\n  private:\n \
-    \   int N;\n    vector<vector<Edge>> G;\n    int es;\n\n  public:\n    Graph(int\
+  bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n    int from,\
+    \ to;\n    long long cost;\n    int idx;\n    Edge(int from, int to, long long\
+    \ cost = 1, int idx = -1)\n        : from(from), to(to), cost(cost), idx(idx)\
+    \ {\n    }\n};\n#line 3 \"library/graph/base/graph.hpp\"\nstruct Graph {\n  private:\n\
+    \    int N;\n    vector<vector<Edge>> G;\n    int es;\n\n  public:\n    Graph(int\
     \ N) : N(N), G(N), es(0) {\n    }\n    const vector<Edge> &operator[](int v) const\
     \ {\n        return G[v];\n    }\n    int size() const {\n        return N;\n\
     \    }\n    void add(int from, int to, long long cost = 1) {\n        G[from].push_back(Edge(from,\
@@ -44,7 +44,7 @@ data:
     \  if (ids[i] != -1) continue;\n        com.clear();\n        dfs(dfs, i);\n \
     \       groups.push_back(com);\n        ++cnt;\n    }\n    return {groups, ids};\n\
     }\n"
-  code: "#pragma once\n#include \"library/graph/graph.hpp\"\npair<vector<vector<int>>,\
+  code: "#pragma once\n#include \"library/graph/base/graph.hpp\"\npair<vector<vector<int>>,\
     \ vector<int>> connected_components(const Graph &G) {\n    int N = G.size(), cnt\
     \ = 0;\n    vector<vector<int>> groups;\n    vector<int> ids(N, -1);\n    vector<int>\
     \ com;\n    auto dfs = [&](auto &f, int v) -> void {\n        ids[v] = cnt;\n\
@@ -54,12 +54,12 @@ data:
     \        com.clear();\n        dfs(dfs, i);\n        groups.push_back(com);\n\
     \        ++cnt;\n    }\n    return {groups, ids};\n}\n"
   dependsOn:
-  - library/graph/graph.hpp
-  - library/graph/edge.hpp
+  - library/graph/base/graph.hpp
+  - library/graph/base/edge.hpp
   isVerificationFile: false
   path: library/graph/connected_components.hpp
   requiredBy: []
-  timestamp: '2026-01-08 23:00:06+09:00'
+  timestamp: '2026-01-11 17:31:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/connected_components.test.cpp

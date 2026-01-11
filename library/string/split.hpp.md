@@ -21,7 +21,7 @@ data:
   isVerificationFile: false
   path: library/string/split.hpp
   requiredBy: []
-  timestamp: '2026-01-08 23:00:06+09:00'
+  timestamp: '2026-01-11 17:31:12+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/string/split.hpp

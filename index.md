@@ -9,14 +9,19 @@ data:
     - icon: ':warning:'
       path: library/geometry/area_triangle.hpp
       title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D"
-  - name: library/graph
+  - name: library/graph/base
     pages:
     - icon: ':heavy_check_mark:'
-      path: library/graph/bellman_ford.hpp
-      title: Bellman Ford
+      path: library/graph/base/edge.hpp
+      title: library/graph/base/edge.hpp
     - icon: ':heavy_check_mark:'
-      path: library/graph/bfs.hpp
-      title: BFS
+      path: library/graph/base/graph.hpp
+      title: library/graph/base/graph.hpp
+    - icon: ':heavy_check_mark:'
+      path: library/graph/base/min_span_tree.hpp
+      title: library/graph/base/min_span_tree.hpp
+  - name: library/graph
+    pages:
     - icon: ':heavy_check_mark:'
       path: library/graph/connected_components.hpp
       title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
@@ -24,20 +29,8 @@ data:
       path: library/graph/cycle_detect.hpp
       title: "\u9589\u8DEF\u691C\u51FA"
     - icon: ':heavy_check_mark:'
-      path: library/graph/dijkstra.hpp
-      title: Dijkstra
-    - icon: ':heavy_check_mark:'
-      path: library/graph/edge.hpp
-      title: "\u8FBA"
-    - icon: ':heavy_check_mark:'
-      path: library/graph/graph.hpp
-      title: "\u30B0\u30E9\u30D5"
-    - icon: ':heavy_check_mark:'
       path: library/graph/kruskal.hpp
       title: Kruskal
-    - icon: ':heavy_check_mark:'
-      path: library/graph/min_span_tree.hpp
-      title: "\u6700\u5C0F\u5168\u57DF\u6728"
     - icon: ':heavy_check_mark:'
       path: library/graph/route_restore.hpp
       title: "\u7D4C\u8DEF\u5FA9\u5143"
@@ -47,9 +40,20 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/graph/topological_sort.hpp
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
+  - name: library/graph/shortest_path
+    pages:
     - icon: ':heavy_check_mark:'
-      path: library/graph/warshall_froyd.hpp
-      title: Warshall Froyd
+      path: library/graph/shortest_path/bellman_ford.hpp
+      title: library/graph/shortest_path/bellman_ford.hpp
+    - icon: ':heavy_check_mark:'
+      path: library/graph/shortest_path/bfs.hpp
+      title: library/graph/shortest_path/bfs.hpp
+    - icon: ':heavy_check_mark:'
+      path: library/graph/shortest_path/dijkstra.hpp
+      title: library/graph/shortest_path/dijkstra.hpp
+    - icon: ':heavy_check_mark:'
+      path: library/graph/shortest_path/warshall_froyd.hpp
+      title: library/graph/shortest_path/warshall_froyd.hpp
   - name: library/grid
     pages:
     - icon: ':warning:'
@@ -253,21 +257,12 @@ data:
   - name: tests/graph
     pages:
     - icon: ':heavy_check_mark:'
-      path: tests/graph/bellman_ford.test.cpp
-      title: "\u30B0\u30E9\u30D5 - BellmanFord\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/bfs.test.cpp
-      title: "\u30B0\u30E9\u30D5 - BFS\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
       path: tests/graph/connected_components.test.cpp
       title: "\u30B0\u30E9\u30D5 - \u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\
         \u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/graph/cycle_detect.test.cpp
       title: "\u30B0\u30E9\u30D5 - \u9589\u8DEF\u691C\u51FA\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/dijkstra.test.cpp
-      title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/graph/mst_kruskal.test.cpp
       title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\
@@ -283,8 +278,19 @@ data:
       path: tests/graph/topological_sort.test.cpp
       title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\
         \u30C8\u306E\u30C6\u30B9\u30C8"
+  - name: tests/graph/shortest_path
+    pages:
     - icon: ':heavy_check_mark:'
-      path: tests/graph/warshall_froyd.test.cpp
+      path: tests/graph/shortest_path/bellman_ford.test.cpp
+      title: "\u30B0\u30E9\u30D5 - BellmanFord\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/shortest_path/bfs.test.cpp
+      title: "\u30B0\u30E9\u30D5 - BFS\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/shortest_path/dijkstra.test.cpp
+      title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/shortest_path/warshall_froyd.test.cpp
       title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
   - name: tests/number
     pages:

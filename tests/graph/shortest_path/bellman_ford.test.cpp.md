@@ -2,14 +2,14 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/graph/edge.hpp
-    title: "\u8FBA"
+    path: library/graph/base/edge.hpp
+    title: library/graph/base/edge.hpp
   - icon: ':heavy_check_mark:'
-    path: library/graph/graph.hpp
-    title: "\u30B0\u30E9\u30D5"
+    path: library/graph/base/graph.hpp
+    title: library/graph/base/graph.hpp
   - icon: ':heavy_check_mark:'
-    path: library/graph/warshall_froyd.hpp
-    title: Warshall Froyd
+    path: library/graph/shortest_path/bellman_ford.hpp
+    title: library/graph/shortest_path/bellman_ford.hpp
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -20,10 +20,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C
-    document_title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B
+    document_title: "\u30B0\u30E9\u30D5 - BellmanFord\u306E\u30C6\u30B9\u30C8"
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -37,31 +37,29 @@ data:
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
-    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C\"\
-    \n#include \"template/template.hpp\"\n#include \"library/graph/warshall_froyd.hpp\"\
-    \n/**\n * @brief \u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8\n\
-    \ */\nvoid solve() {\n    int V, E;\n    cin >> V >> E;\n    Graph G(V);\n   \
-    \ G.read(E, 0, true, true);\n    auto [dis, negativeCycle] = warshall_froyd(G);\n\
-    \    if (negativeCycle) {\n        print(\"NEGATIVE CYCLE\");\n        return;\n\
-    \    }\n    vec2<string> ans = make_vec2<string>(V, V, \"\");\n    for (int i\
-    \ = 0; i < V; ++i) {\n        for (int j = 0; j < V; ++j) {\n            ans[i][j]\
-    \ = dis[i][j] == INF ? \"INF\" : int_to_string(dis[i][j]);\n        }\n    }\n\
-    \    print(ans);\n}\n"
+    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B\"\
+    \n#include \"template/template.hpp\"\n#include \"library/graph/shortest_path/bellman_ford.hpp\"\
+    \n/**\n * @brief \u30B0\u30E9\u30D5 - BellmanFord\u306E\u30C6\u30B9\u30C8\n */\n\
+    void solve() {\n    int V, E, r;\n    cin >> V >> E >> r;\n    Graph G(V);\n \
+    \   G.read(E, 0, true, true);\n    auto [dis, negativeCycle, route] = bellman_ford(G,\
+    \ r);\n    if (negativeCycle) {\n        print(\"NEGATIVE CYCLE\");\n        return;\n\
+    \    }\n    for (auto &&v : dis) {\n        if (v == INF) {\n            print(\"\
+    INF\");\n        } else {\n            print(v);\n        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - library/graph/warshall_froyd.hpp
-  - library/graph/graph.hpp
-  - library/graph/edge.hpp
+  - library/graph/shortest_path/bellman_ford.hpp
+  - library/graph/base/graph.hpp
+  - library/graph/base/edge.hpp
   isVerificationFile: true
-  path: tests/graph/warshall_froyd.test.cpp
+  path: tests/graph/shortest_path/bellman_ford.test.cpp
   requiredBy: []
-  timestamp: '2026-01-08 23:00:06+09:00'
+  timestamp: '2026-01-11 17:31:12+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/graph/warshall_froyd.test.cpp
+documentation_of: tests/graph/shortest_path/bellman_ford.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/graph/warshall_froyd.test.cpp
-- /verify/tests/graph/warshall_froyd.test.cpp.html
-title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
+- /verify/tests/graph/shortest_path/bellman_ford.test.cpp
+- /verify/tests/graph/shortest_path/bellman_ford.test.cpp.html
+title: "\u30B0\u30E9\u30D5 - BellmanFord\u306E\u30C6\u30B9\u30C8"
 ---

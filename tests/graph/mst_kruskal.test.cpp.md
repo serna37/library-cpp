@@ -2,14 +2,14 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/graph/edge.hpp
-    title: "\u8FBA"
+    path: library/graph/base/edge.hpp
+    title: library/graph/base/edge.hpp
+  - icon: ':heavy_check_mark:'
+    path: library/graph/base/min_span_tree.hpp
+    title: library/graph/base/min_span_tree.hpp
   - icon: ':heavy_check_mark:'
     path: library/graph/kruskal.hpp
     title: Kruskal
-  - icon: ':heavy_check_mark:'
-    path: library/graph/min_span_tree.hpp
-    title: "\u6700\u5C0F\u5168\u57DF\u6728"
   - icon: ':heavy_check_mark:'
     path: library/struct/union_find.hpp
     title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
@@ -51,13 +51,13 @@ data:
   dependsOn:
   - template/template.hpp
   - library/graph/kruskal.hpp
-  - library/graph/min_span_tree.hpp
-  - library/graph/edge.hpp
+  - library/graph/base/min_span_tree.hpp
+  - library/graph/base/edge.hpp
   - library/struct/union_find.hpp
   isVerificationFile: true
   path: tests/graph/mst_kruskal.test.cpp
   requiredBy: []
-  timestamp: '2026-01-08 23:00:06+09:00'
+  timestamp: '2026-01-11 17:31:12+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/mst_kruskal.test.cpp

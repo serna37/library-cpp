@@ -2,17 +2,17 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/graph/dijkstra.hpp
-    title: Dijkstra
+    path: library/graph/base/edge.hpp
+    title: library/graph/base/edge.hpp
   - icon: ':heavy_check_mark:'
-    path: library/graph/edge.hpp
-    title: "\u8FBA"
-  - icon: ':heavy_check_mark:'
-    path: library/graph/graph.hpp
-    title: "\u30B0\u30E9\u30D5"
+    path: library/graph/base/graph.hpp
+    title: library/graph/base/graph.hpp
   - icon: ':heavy_check_mark:'
     path: library/graph/route_restore.hpp
     title: "\u7D4C\u8DEF\u5FA9\u5143"
+  - icon: ':heavy_check_mark:'
+    path: library/graph/shortest_path/dijkstra.hpp
+    title: library/graph/shortest_path/dijkstra.hpp
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -41,25 +41,25 @@ data:
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/shortest_path\"\n#include\
-    \ \"template/template.hpp\"\n#include \"library/graph/dijkstra.hpp\"\n#include\
-    \ \"library/graph/route_restore.hpp\"\n/**\n * @brief \u30B0\u30E9\u30D5 - \u7D4C\
-    \u8DEF\u5FA9\u5143\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n    int N, M,\
-    \ s, t;\n    cin >> N >> M >> s >> t;\n    Graph G(N);\n    G.read(M, 0, true,\
-    \ true);\n    auto [dis, route] = dijkstra(G, {s});\n    if (dis[t] == INF) {\n\
-    \        print(-1);\n        return;\n    }\n    vector<int> pth = route_restore(route,\
+    \ \"template/template.hpp\"\n#include \"library/graph/shortest_path/dijkstra.hpp\"\
+    \n#include \"library/graph/route_restore.hpp\"\n/**\n * @brief \u30B0\u30E9\u30D5\
+    \ - \u7D4C\u8DEF\u5FA9\u5143\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n  \
+    \  int N, M, s, t;\n    cin >> N >> M >> s >> t;\n    Graph G(N);\n    G.read(M,\
+    \ 0, true, true);\n    auto [dis, route] = dijkstra(G, {s});\n    if (dis[t] ==\
+    \ INF) {\n        print(-1);\n        return;\n    }\n    vector<int> pth = route_restore(route,\
     \ t);\n    cout << dis[t] << \" \" << pth.size() - 1 << endl;\n    for (int i\
     \ = 0; i < (int)pth.size() - 1; ++i) {\n        cout << pth[i] << \" \" << pth[i\
     \ + 1] << endl;\n    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - library/graph/dijkstra.hpp
-  - library/graph/graph.hpp
-  - library/graph/edge.hpp
+  - library/graph/shortest_path/dijkstra.hpp
+  - library/graph/base/graph.hpp
+  - library/graph/base/edge.hpp
   - library/graph/route_restore.hpp
   isVerificationFile: true
   path: tests/graph/route_restore.test.cpp
   requiredBy: []
-  timestamp: '2026-01-08 23:00:06+09:00'
+  timestamp: '2026-01-11 17:31:12+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/route_restore.test.cpp
