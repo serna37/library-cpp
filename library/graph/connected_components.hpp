@@ -1,5 +1,5 @@
 #pragma once
-#include "library/graph/graph.hpp"
+#include "library/graph/base/graph.hpp"
 pair<vector<vector<int>>, vector<int>> connected_components(const Graph &G) {
     int N = G.size(), cnt = 0;
     vector<vector<int>> groups;

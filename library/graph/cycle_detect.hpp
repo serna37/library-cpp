@@ -1,5 +1,5 @@
 #pragma once
-#include "library/graph/graph.hpp"
+#include "library/graph/base/graph.hpp"
 vector<Edge> cycle_detect(const Graph &G, bool directed = true) {
     int N = G.size();
     vector<bool> seen(N), finished(N);

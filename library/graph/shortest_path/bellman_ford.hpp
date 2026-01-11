@@ -1,5 +1,5 @@
 #pragma once
-#include "library/graph/graph.hpp"
+#include "library/graph/base/graph.hpp"
 tuple<vector<long long>, bool, vector<int>> bellman_ford(const Graph &G,
                                                          int s = 0) {
     int N = G.size(), loop = 0;

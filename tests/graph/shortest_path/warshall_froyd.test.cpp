@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C"
 #include "template/template.hpp"
-#include "library/graph/warshall_froyd.hpp"
+#include "library/graph/shortest_path/warshall_froyd.hpp"
 /**
  * @brief グラフ - WarshallFroydのテスト
  */

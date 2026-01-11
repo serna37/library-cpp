@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/shortest_path"
 #include "template/template.hpp"
-#include "library/graph/dijkstra.hpp"
+#include "library/graph/shortest_path/dijkstra.hpp"
 #include "library/graph/route_restore.hpp"
 /**
  * @brief グラフ - 経路復元のテスト

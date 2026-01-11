@@ -1,5 +1,5 @@
 #pragma once
-#include "library/graph/graph.hpp"
+#include "library/graph/base/graph.hpp"
 template <typename T> using rev_pq = priority_queue<T, vector<T>, greater<T>>;
 pair<vector<long long>, vector<int>> dijkstra(const Graph &G,
                                               const vector<int> &starts = {0}) {

@@ -1,5 +1,5 @@
 #pragma once
-#include "library/graph/min_span_tree.hpp"
+#include "library/graph/base/min_span_tree.hpp"
 #include "library/struct/union_find.hpp"
 MinSpanTree kruskal(vector<Edge> edges, int v_cnt) {
     sort(edges.begin(), edges.end(),

@@ -1,5 +1,5 @@
 #pragma once
-#include "library/graph/graph.hpp"
+#include "library/graph/base/graph.hpp"
 pair<vector<int>, vector<int>> bfs(const Graph &G,
                                    const vector<int> &starts = {0}) {
     int N = G.size();

@@ -1,5 +1,5 @@
 #pragma once
-#include "library/graph/graph.hpp"
+#include "library/graph/base/graph.hpp"
 pair<vector<vector<long long>>, bool> warshall_froyd(const Graph &G) {
     int N = G.size();
     vector<vector<long long>> dis(N, vector<long long>(N, INF));

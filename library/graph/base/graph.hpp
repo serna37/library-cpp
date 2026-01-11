@@ -1,5 +1,5 @@
 #pragma once
-#include "library/graph/edge.hpp"
+#include "library/graph/base/edge.hpp"
 struct Graph {
   private:
     int N;

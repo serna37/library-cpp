@@ -1,20 +1,16 @@
 #define PROBLEM                                                                \
-    "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B"
+    "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A"
 #include "template/template.hpp"
-#include "library/graph/bellman_ford.hpp"
+#include "library/graph/shortest_path/dijkstra.hpp"
 /**
- * @brief グラフ - BellmanFordのテスト
+ * @brief グラフ - Dijkstraのテスト
  */
 void solve() {
     int V, E, r;
     cin >> V >> E >> r;
     Graph G(V);
     G.read(E, 0, true, true);
-    auto [dis, negativeCycle, route] = bellman_ford(G, r);
-    if (negativeCycle) {
-        print("NEGATIVE CYCLE");
-        return;
-    }
+    auto [dis, route] = dijkstra(G, {r});
     for (auto &&v : dis) {
         if (v == INF) {
             print("INF");

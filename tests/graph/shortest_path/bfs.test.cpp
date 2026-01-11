@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_C"
 #include "template/template.hpp"
-#include "library/graph/bfs.hpp"
+#include "library/graph/shortest_path/bfs.hpp"
 /**
  * @brief グラフ - BFSのテスト
  */
