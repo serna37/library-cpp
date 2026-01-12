@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: tests/search/permutation.test.cpp
+    title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/search/permutation.hpp\"\ntemplate <typename T,\
@@ -19,9 +22,10 @@ data:
   isVerificationFile: false
   path: library/search/permutation.hpp
   requiredBy: []
-  timestamp: '2026-01-12 16:39:21+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-12 19:33:03+09:00'
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - tests/search/permutation.test.cpp
 documentation_of: library/search/permutation.hpp
 layout: document
 title: "\u9806\u5217\u5168\u63A2\u7D22"

@@ -20,7 +20,7 @@ data:
   isVerificationFile: false
   path: library/string/finds.hpp
   requiredBy: []
-  timestamp: '2026-01-12 16:39:21+09:00'
+  timestamp: '2026-01-12 19:33:03+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/string/finds.hpp

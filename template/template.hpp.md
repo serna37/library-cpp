@@ -55,6 +55,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/search/bi_search_cnt.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
+  - icon: ':x:'
+    path: tests/search/permutation.test.cpp
+    title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/segtree/dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
@@ -76,9 +79,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/struct/union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  - icon: ':heavy_check_mark:'
+    path: tests/template.test.cpp
+    title: "template\u306E\u30C6\u30B9\u30C8"
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "\u0E05^>\u03C9<^\u0E05"
     links:
@@ -169,13 +175,14 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-12 16:39:21+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-12 19:33:03+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp
   - tests/segtree/fenwick_tree.test.cpp
   - tests/segtree/segment_tree.test.cpp
   - tests/segtree/dual_segment_tree.test.cpp
+  - tests/template.test.cpp
   - tests/graph/topological_sort.test.cpp
   - tests/graph/shortest_path/bfs.test.cpp
   - tests/graph/shortest_path/bellman_ford.test.cpp
@@ -190,6 +197,7 @@ data:
   - tests/sequence/cumulative_sum.test.cpp
   - tests/sequence/inversion_number.test.cpp
   - tests/search/bi_search_cnt.test.cpp
+  - tests/search/permutation.test.cpp
   - tests/number/prime_fact.test.cpp
   - tests/number/mod_combination.test.cpp
   - tests/number/prime_test.test.cpp

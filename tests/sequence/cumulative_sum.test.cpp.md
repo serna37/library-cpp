@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/sequence/cumulative_sum.hpp
     title: "\u7D2F\u7A4D\u548C"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -42,7 +42,7 @@ data:
   isVerificationFile: true
   path: tests/sequence/cumulative_sum.test.cpp
   requiredBy: []
-  timestamp: '2026-01-12 16:39:21+09:00'
+  timestamp: '2026-01-12 19:33:03+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/sequence/cumulative_sum.test.cpp

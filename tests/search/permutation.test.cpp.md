@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: library/number/prime_test.hpp
-    title: "\u7D20\u6570\u5224\u5B9A"
+  - icon: ':x:'
+    path: library/search/permutation.hpp
+    title: "\u9806\u5217\u5168\u63A2\u7D22"
   - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C
-    document_title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
+    PROBLEM: https://atcoder.jp/contests/abc425/tasks/abc425_b
+    document_title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C
+    - https://atcoder.jp/contests/abc425/tasks/abc425_b
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -30,26 +30,28 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#define PROBLEM                                                         \
-    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C\"\
-    \n#include \"template/template.hpp\"\n#include \"library/number/prime_test.hpp\"\
-    \n/**\n * @brief \u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8\n */\nvoid solve()\
-    \ {\n    int N;\n    cin >> N;\n    int ans = 0;\n    for (int i = 0; i < N; ++i)\
-    \ {\n        int n;\n        cin >> n;\n        bool is_prime = prime_test(n);\n\
-    \        if (is_prime) ++ans;\n    }\n    print(ans);\n}\n"
+  code: "#define PROBLEM \"https://atcoder.jp/contests/abc425/tasks/abc425_b\"\n#include\
+    \ \"template/template.hpp\"\n#include \"library/search/permutation.hpp\"\n/**\n\
+    \ * @brief \u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8\n */\nvoid solve()\
+    \ {\n    int N;\n    cin >> N;\n    vector<int> A(N);\n    cin >> A;\n    vector<int>\
+    \ P(N);\n    collection.sequence(P, 1ll);\n    bool is_loop_break = permutation(P,\
+    \ [&]() {\n        bool alma = collection.all_match(\n            P, [&](int v,\
+    \ int i) { return !~A[i] or A[i] == v; });\n        if (alma) {\n            print(\"\
+    Yes\");\n            print(P);\n        }\n        return alma;\n    });\n   \
+    \ if (!is_loop_break) {\n        print(\"No\");\n    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - library/number/prime_test.hpp
+  - library/search/permutation.hpp
   isVerificationFile: true
-  path: tests/number/prime_test.test.cpp
+  path: tests/search/permutation.test.cpp
   requiredBy: []
   timestamp: '2026-01-12 19:33:03+09:00'
-  verificationStatus: TEST_ACCEPTED
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: tests/number/prime_test.test.cpp
+documentation_of: tests/search/permutation.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/number/prime_test.test.cpp
-- /verify/tests/number/prime_test.test.cpp.html
-title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
+- /verify/tests/search/permutation.test.cpp
+- /verify/tests/search/permutation.test.cpp.html
+title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
 ---
