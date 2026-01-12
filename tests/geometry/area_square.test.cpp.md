@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/geometry/area_square.hpp
     title: "\u56DB\u89D2\u5F62\u306E\u9762\u7A4D"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -57,7 +57,7 @@ data:
   isVerificationFile: true
   path: tests/geometry/area_square.test.cpp
   requiredBy: []
-  timestamp: '2026-01-12 22:40:02+09:00'
+  timestamp: '2026-01-12 22:51:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/geometry/area_square.test.cpp

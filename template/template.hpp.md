@@ -132,7 +132,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/string/range.test.cpp
     title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string/run_length.test.cpp
     title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -148,9 +148,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
     title: "template\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u0E05^>\u03C9<^\u0E05"
     links:
@@ -241,8 +241,8 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-12 22:40:02+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2026-01-12 22:51:51+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
   - tests/string/join.test.cpp

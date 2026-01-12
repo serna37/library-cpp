@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/number/combination.hpp
     title: "\u7D44\u307F\u5408\u308F\u305B nCk"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -54,7 +54,7 @@ data:
   isVerificationFile: true
   path: tests/number/combination.test.cpp
   requiredBy: []
-  timestamp: '2026-01-12 22:40:02+09:00'
+  timestamp: '2026-01-12 22:51:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/number/combination.test.cpp

@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/struct/union_find.hpp
     title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -44,7 +44,7 @@ data:
   isVerificationFile: true
   path: tests/struct/union_find.test.cpp
   requiredBy: []
-  timestamp: '2026-01-12 22:40:02+09:00'
+  timestamp: '2026-01-12 22:51:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/struct/union_find.test.cpp
