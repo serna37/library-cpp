@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/number/digit_sum.hpp
-    title: "\u6841\u548C"
+    path: library/string/range.hpp
+    title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97"
   - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -15,7 +15,8 @@ data:
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
-    document_title: "\u6841\u548C\u306E\u30C6\u30B9\u30C8"
+    document_title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\
+      \u30C8"
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -32,38 +33,38 @@ data:
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
-    \n#include \"template/template.hpp\"\n#include \"library/number/digit_sum.hpp\"\
-    \nvoid test_digit_sum() {\n    // \u30B1\u30FC\u30B91: 10\u9032\u6570\u3067\u306E\
-    \u57FA\u672C\u7684\u306A\u8A08\u7B97\n    // 123 -> 1 + 2 + 3 = 6\n    assert(digit_sum(123)\
-    \ == 6);\n    // \u30B1\u30FC\u30B92: 10\u9032\u6570\u30670\u304C\u542B\u307E\u308C\
-    \u308B\u5834\u5408\n    // 1005 -> 1 + 0 + 0 + 5 = 6\n    assert(digit_sum(1005)\
-    \ == 6);\n    // \u30B1\u30FC\u30B93: 1\u6841\u306E\u6570\u5B57\n    assert(digit_sum(9)\
-    \ == 9);\n    assert(digit_sum(0) == 0);\n    // \u30B1\u30FC\u30B94: 2\u9032\u6570\
-    \u3067\u306E\u8A08\u7B97 (base_number = 2)\n    // 7 \u306F 2\u9032\u6570\u3067\
-    \ \"111\" -> 1 + 1 + 1 = 3\n    assert(digit_sum(7, 2) == 3);\n    // 8 \u306F\
-    \ 2\u9032\u6570\u3067 \"1000\" -> 1 + 0 + 0 + 0 = 1\n    assert(digit_sum(8, 2)\
-    \ == 1);\n    // \u30B1\u30FC\u30B95: 16\u9032\u6570\u3067\u306E\u8A08\u7B97 (base_number\
-    \ = 16)\n    // 255 (0xFF) -> 15 + 15 = 30\n    assert(digit_sum(255, 16) == 30);\n\
-    \    // \u30B1\u30FC\u30B96: \u8CA0\u306E\u6570\u306B\u5BFE\u3059\u308B\u6319\u52D5\
-    \n    // \u73FE\u5728\u306E\u5B9F\u88C5\u3067\u306F N % base_number \u304C\u8CA0\
-    \u306B\u306A\u308B\u53EF\u80FD\u6027\u304C\u3042\u308B\u305F\u3081\u78BA\u8A8D\
-    \n    // -123 -> (-3) + (-2) + (-1) = -6 (C++\u306E\u4ED5\u69D8\u306B\u4F9D\u5B58\
-    )\n    assert(digit_sum(-123) == -6);\n}\n/**\n * @brief \u6841\u548C\u306E\u30C6\
-    \u30B9\u30C8\n */\nvoid solve() {\n    print(\"Hello World\");\n    test_digit_sum();\n\
-    }\n"
+    \n#include \"template/template.hpp\"\n#include \"library/string/range.hpp\"\n\
+    void test_range() {\n    string s = \"programming\"; // \u9577\u3055 11\n    //\
+    \ \u30B1\u30FC\u30B91: \u6587\u5B57\u5217\u306E\u4E2D\u9593\u3092\u62BD\u51FA\n\
+    \    // index: 3(g) \u304B\u3089 6(a)\n    assert(range(s, 3, 6) == \"gram\");\n\
+    \    // \u30B1\u30FC\u30B92: 1\u6587\u5B57\u3060\u3051\u62BD\u51FA\n    assert(range(s,\
+    \ 0, 0) == \"p\");\n    // \u30B1\u30FC\u30B93: \u6700\u5F8C\u307E\u3067\u62BD\
+    \u51FA\n    assert(range(s, 7, 10) == \"ming\");\n    // \u30B1\u30FC\u30B94:\
+    \ A > B \u306E\u5834\u5408 (\u7A7A\u6587\u5B57\u3092\u671F\u5F85)\n    assert(range(s,\
+    \ 5, 2) == \"\");\n    // \u30B1\u30FC\u30B95: A \u304C\u6587\u5B57\u5217\u306E\
+    \u30B5\u30A4\u30BA\u4EE5\u4E0A\u306E\u5834\u5408 (\u7A7A\u6587\u5B57\u3092\u671F\
+    \u5F85)\n    assert(range(s, 15, 20) == \"\");\n    // \u30B1\u30FC\u30B96: B\
+    \ \u304C\u6587\u5B57\u5217\u306E\u30B5\u30A4\u30BA\u3092\u8D85\u3048\u308B\u5834\
+    \u5408\n    // std::string::substr \u306F\u9577\u3055\u304C\u7BC4\u56F2\u3092\u8D85\
+    \u3048\u308B\u3068\u672B\u5C3E\u307E\u3067\u3092\u8FD4\u3057\u307E\u3059\n   \
+    \ assert(range(s, 8, 20) == \"ing\");\n    // \u30B1\u30FC\u30B97: \u7A7A\u6587\
+    \u5B57\u5217\u306B\u5BFE\u3059\u308B\u64CD\u4F5C\n    assert(range(\"\", 0, 0)\
+    \ == \"\");\n}\n/**\n * @brief \u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\
+    \u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n    print(\"Hello World\");\n \
+    \   test_range();\n}\n"
   dependsOn:
   - template/template.hpp
-  - library/number/digit_sum.hpp
+  - library/string/range.hpp
   isVerificationFile: true
-  path: tests/number/digit_sum.test.cpp
+  path: tests/string/range.test.cpp
   requiredBy: []
   timestamp: '2026-01-12 22:25:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/number/digit_sum.test.cpp
+documentation_of: tests/string/range.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/number/digit_sum.test.cpp
-- /verify/tests/number/digit_sum.test.cpp.html
-title: "\u6841\u548C\u306E\u30C6\u30B9\u30C8"
+- /verify/tests/string/range.test.cpp
+- /verify/tests/string/range.test.cpp.html
+title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
 ---

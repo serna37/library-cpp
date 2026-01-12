@@ -92,14 +92,33 @@ data:
     path: tests/sequence/inversion_number.test.cpp
     title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/string/finds.test.cpp
+    title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/string/join.test.cpp
+    title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/string/range.test.cpp
+    title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
+  - icon: ':x:'
+    path: tests/string/run_length.test.cpp
+    title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/string/split.test.cpp
+    title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/string/split_multi.test.cpp
+    title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
+      \u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/struct/union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
     title: "template\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "\u0E05^>\u03C9<^\u0E05"
     links:
@@ -190,9 +209,15 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-12 21:43:03+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-12 22:25:29+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - tests/string/split_multi.test.cpp
+  - tests/string/join.test.cpp
+  - tests/string/split.test.cpp
+  - tests/string/range.test.cpp
+  - tests/string/run_length.test.cpp
+  - tests/string/finds.test.cpp
   - tests/segtree/lazy_segment_tree.test.cpp
   - tests/segtree/fenwick_tree.test.cpp
   - tests/segtree/segment_tree.test.cpp

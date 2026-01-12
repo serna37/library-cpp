@@ -10,7 +10,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/struct/monoid_act.hpp
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -56,7 +56,7 @@ data:
   isVerificationFile: true
   path: tests/segtree/lazy_segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-12 21:43:03+09:00'
+  timestamp: '2026-01-12 22:25:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree/lazy_segment_tree.test.cpp

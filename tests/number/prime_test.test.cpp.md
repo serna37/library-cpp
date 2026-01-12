@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/number/prime_test.hpp
     title: "\u7D20\u6570\u5224\u5B9A"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -43,7 +43,7 @@ data:
   isVerificationFile: true
   path: tests/number/prime_test.test.cpp
   requiredBy: []
-  timestamp: '2026-01-12 21:43:03+09:00'
+  timestamp: '2026-01-12 22:25:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/number/prime_test.test.cpp

@@ -211,22 +211,22 @@ data:
       title: "\u5EA7\u6A19\u5727\u7E2E"
   - name: library/string
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/string/finds.hpp
       title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/string/join.hpp
       title: "\u6587\u5B57\u5217\u7D50\u5408"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/string/range.hpp
       title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97"
-    - icon: ':warning:'
+    - icon: ':x:'
       path: library/string/run_length.hpp
       title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/string/split.hpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/string/split_multi.hpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570"
   - name: library/struct
@@ -245,7 +245,7 @@ data:
     - icon: ':warning:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   verificationCategories:
@@ -353,6 +353,27 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/sequence/inversion_number.test.cpp
       title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
+  - name: tests/string
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/string/finds.test.cpp
+      title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string/join.test.cpp
+      title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string/range.test.cpp
+      title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
+    - icon: ':x:'
+      path: tests/string/run_length.test.cpp
+      title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string/split.test.cpp
+      title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string/split_multi.test.cpp
+      title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
+        \u30C8"
   - name: tests/struct
     pages:
     - icon: ':heavy_check_mark:'
