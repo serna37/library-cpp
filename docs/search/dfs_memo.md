@@ -1,5 +1,5 @@
 ---
-title: メモ化再帰
+title: メモ化再帰(コピペ用)
 documentation_of: //library/search/dfs_memo.hpp
 ---
 
