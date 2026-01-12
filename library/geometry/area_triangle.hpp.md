@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/geometry/area_triangle.test.cpp
+    title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/geometry/area_triangle.hpp\"\ntemplate <typename\
@@ -18,9 +21,10 @@ data:
   isVerificationFile: false
   path: library/geometry/area_triangle.hpp
   requiredBy: []
-  timestamp: '2026-01-12 21:09:20+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-12 21:43:03+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/geometry/area_triangle.test.cpp
 documentation_of: library/geometry/area_triangle.hpp
 layout: document
 title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D"

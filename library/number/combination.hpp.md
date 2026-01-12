@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/number/combination.test.cpp
+    title: "\u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/combination.hpp\"\nlong long combination(int\
@@ -19,9 +22,10 @@ data:
   isVerificationFile: false
   path: library/number/combination.hpp
   requiredBy: []
-  timestamp: '2026-01-12 21:09:20+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-12 21:43:03+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/number/combination.test.cpp
 documentation_of: library/number/combination.hpp
 layout: document
 title: "\u7D44\u307F\u5408\u308F\u305B nCk"

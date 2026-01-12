@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/grid/transpose.test.cpp
+    title: "\u8EE2\u7F6E\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/grid/transpose.hpp\"\ntemplate <typename T> vector<vector<T>>\
@@ -21,9 +24,10 @@ data:
   isVerificationFile: false
   path: library/grid/transpose.hpp
   requiredBy: []
-  timestamp: '2026-01-12 21:09:20+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-12 21:43:03+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/grid/transpose.test.cpp
 documentation_of: library/grid/transpose.hpp
 layout: document
 title: "\u8EE2\u7F6E"

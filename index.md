@@ -3,10 +3,10 @@ data:
   libraryCategories:
   - name: library/geometry
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/geometry/area_square.hpp
       title: "\u56DB\u89D2\u5F62\u306E\u9762\u7A4D"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/geometry/area_triangle.hpp
       title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D"
   - name: library/graph/base
@@ -62,7 +62,7 @@ data:
     - icon: ':warning:'
       path: library/grid/bfs8.hpp
       title: "\u30B0\u30EA\u30C3\u30C98\u65B9\u5411\u3078\u306EBFS"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/grid/transpose.hpp
       title: "\u8EE2\u7F6E"
   - name: library/number
@@ -70,16 +70,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/number/base_convert.hpp
       title: "\u9032\u6570\u5909\u63DB"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/number/combination.hpp
       title: "\u7D44\u307F\u5408\u308F\u305B nCk"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/number/digit_sum.hpp
       title: "\u6841\u548C"
     - icon: ':heavy_check_mark:'
       path: library/number/divisors.hpp
       title: "\u7D04\u6570\u5217\u6319"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/number/factorial.hpp
       title: "\u968E\u4E57"
     - icon: ':heavy_check_mark:'
@@ -248,12 +248,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
-  - name: tests
-    pages:
-    - icon: ':warning:'
-      path: tests/util.testXXXX.cpp
-      title: "library/util/xxx.hpp\u306E\u30E6\u30CB\u30C3\u30C8\u30C6\u30B9\u30C8"
   verificationCategories:
+  - name: tests/geometry
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/geometry/area_square.test.cpp
+      title: "\u56DB\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/geometry/area_triangle.test.cpp
+      title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
   - name: tests/graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -292,14 +295,28 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/graph/shortest_path/warshall_froyd.test.cpp
       title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
+  - name: tests/grid
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/grid/transpose.test.cpp
+      title: "\u8EE2\u7F6E\u306E\u30C6\u30B9\u30C8"
   - name: tests/number
     pages:
     - icon: ':heavy_check_mark:'
       path: tests/number/base_convert.test.cpp
       title: "\u9032\u6570\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
+      path: tests/number/combination.test.cpp
+      title: "\u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number/digit_sum.test.cpp
+      title: "\u6841\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
       path: tests/number/divisors.test.cpp
       title: "\u7D04\u6570\u5217\u6319\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number/factorial.test.cpp
+      title: "\u968E\u4E57\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/number/mod_combination.test.cpp
       title: "MOD \u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"

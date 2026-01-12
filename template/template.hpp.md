@@ -4,6 +4,12 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: tests/geometry/area_square.test.cpp
+    title: "\u56DB\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/geometry/area_triangle.test.cpp
+    title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/graph/connected_components.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\u30B9\
       \u30C8"
@@ -38,11 +44,23 @@ data:
     title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\
       \u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/grid/transpose.test.cpp
+    title: "\u8EE2\u7F6E\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/number/base_convert.test.cpp
     title: "\u9032\u6570\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/number/combination.test.cpp
+    title: "\u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/number/digit_sum.test.cpp
+    title: "\u6841\u548C\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/number/divisors.test.cpp
     title: "\u7D04\u6570\u5217\u6319\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/number/factorial.test.cpp
+    title: "\u968E\u4E57\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/number/mod_combination.test.cpp
     title: "MOD \u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
@@ -172,7 +190,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-12 21:09:20+09:00'
+  timestamp: '2026-01-12 21:43:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp
@@ -180,6 +198,7 @@ data:
   - tests/segtree/segment_tree.test.cpp
   - tests/segtree/dual_segment_tree.test.cpp
   - tests/template.test.cpp
+  - tests/grid/transpose.test.cpp
   - tests/graph/topological_sort.test.cpp
   - tests/graph/shortest_path/bfs.test.cpp
   - tests/graph/shortest_path/bellman_ford.test.cpp
@@ -194,11 +213,16 @@ data:
   - tests/sequence/cumulative_sum.test.cpp
   - tests/sequence/inversion_number.test.cpp
   - tests/search/bi_search_cnt.test.cpp
+  - tests/number/digit_sum.test.cpp
   - tests/number/prime_fact.test.cpp
   - tests/number/mod_combination.test.cpp
+  - tests/number/factorial.test.cpp
   - tests/number/prime_test.test.cpp
+  - tests/number/combination.test.cpp
   - tests/number/divisors.test.cpp
   - tests/number/base_convert.test.cpp
+  - tests/geometry/area_triangle.test.cpp
+  - tests/geometry/area_square.test.cpp
 documentation_of: template/template.hpp
 layout: document
 title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
