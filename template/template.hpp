@@ -145,13 +145,17 @@ class Collection {
         return accumulate(all(v), 0ll);
     }
     template <typename T, typename F> bool all_match(const vector<T> &v, F f) {
-        return all_of(all(v), f);
+        bool b = true;
+        for (int i = 0; i < (int)v.size(); ++i) b &= f(v[i], i);
+        return b;
     }
     template <typename T, typename F> bool none_match(const vector<T> &v, F f) {
-        return none_of(all(v), f);
+        return !any_match(v, f);
     }
     template <typename T, typename F> bool any_match(const vector<T> &v, F f) {
-        return any_of(all(v), f);
+        bool b = false;
+        for (int i = 0; i < (int)v.size(); ++i) b |= f(v[i], i);
+        return b;
     }
     template <typename T> void distinct(vector<T> &v) {
         sort(all(v));
