@@ -175,7 +175,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-12 19:33:03+09:00'
+  timestamp: '2026-01-12 19:45:30+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp

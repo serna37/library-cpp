@@ -54,7 +54,7 @@ data:
   isVerificationFile: true
   path: tests/graph/strongly_connected_components.test.cpp
   requiredBy: []
-  timestamp: '2026-01-12 19:33:03+09:00'
+  timestamp: '2026-01-12 19:45:30+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/strongly_connected_components.test.cpp

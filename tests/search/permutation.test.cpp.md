@@ -45,7 +45,7 @@ data:
   isVerificationFile: true
   path: tests/search/permutation.test.cpp
   requiredBy: []
-  timestamp: '2026-01-12 19:33:03+09:00'
+  timestamp: '2026-01-12 19:45:30+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/search/permutation.test.cpp

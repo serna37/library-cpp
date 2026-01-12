@@ -21,7 +21,7 @@ data:
   isVerificationFile: false
   path: library/grid/transpose.hpp
   requiredBy: []
-  timestamp: '2026-01-12 19:33:03+09:00'
+  timestamp: '2026-01-12 19:45:30+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/grid/transpose.hpp
