@@ -18,7 +18,7 @@ data:
   isVerificationFile: false
   path: library/string/range.hpp
   requiredBy: []
-  timestamp: '2026-01-12 16:20:35+09:00'
+  timestamp: '2026-01-12 16:39:21+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/string/range.hpp
