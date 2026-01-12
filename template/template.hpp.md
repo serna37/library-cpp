@@ -71,8 +71,36 @@ data:
     path: tests/number/prime_test.test.cpp
     title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/search/bi_ge_val.test.cpp
+    title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\u5C0F\
+      \u5024\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/search/bi_gt_val.test.cpp
+    title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\u6700\
+      \u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/search/bi_le_val.test.cpp
+    title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\u5927\
+      \u5024\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/search/bi_lt_val.test.cpp
+    title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\u5927\
+      \u5024\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/search/bi_search_cnt.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/search/binary_search.test.cpp
+    title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/search/binary_search_real.test.cpp
+    title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/search/bit_search.test.cpp
+    title: "bit\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/search/permutation.test.cpp
+    title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/segtree/dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
@@ -88,6 +116,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/sequence/cumulative_sum.test.cpp
     title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence/dispersion.test.cpp
+    title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\u30C6\
+      \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/sequence/inversion_number.test.cpp
     title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
@@ -209,7 +241,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-12 22:25:29+09:00'
+  timestamp: '2026-01-12 22:40:02+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -235,9 +267,18 @@ data:
   - tests/graph/strongly_connected_components.test.cpp
   - tests/graph/connected_components.test.cpp
   - tests/struct/union_find.test.cpp
+  - tests/sequence/dispersion.test.cpp
   - tests/sequence/cumulative_sum.test.cpp
   - tests/sequence/inversion_number.test.cpp
+  - tests/search/bi_gt_val.test.cpp
+  - tests/search/bi_le_val.test.cpp
+  - tests/search/binary_search.test.cpp
+  - tests/search/bi_lt_val.test.cpp
+  - tests/search/binary_search_real.test.cpp
+  - tests/search/bi_ge_val.test.cpp
+  - tests/search/bit_search.test.cpp
   - tests/search/bi_search_cnt.test.cpp
+  - tests/search/permutation.test.cpp
   - tests/number/digit_sum.test.cpp
   - tests/number/prime_fact.test.cpp
   - tests/number/mod_combination.test.cpp

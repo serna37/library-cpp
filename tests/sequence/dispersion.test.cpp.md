@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/grid/transpose.hpp
-    title: "\u8EE2\u7F6E"
+    path: library/sequence/dispersion.hpp
+    title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03"
   - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -15,7 +15,8 @@ data:
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
-    document_title: "\u8EE2\u7F6E\u306E\u30C6\u30B9\u30C8"
+    document_title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\
+      \u30C6\u30B9\u30C8"
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -32,34 +33,39 @@ data:
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
-    \n#include \"template/template.hpp\"\n#include \"library/grid/transpose.hpp\"\n\
-    void test_transpose() {\n    // \u30B1\u30FC\u30B91: \u6B63\u65B9\u5F62\u306E\u884C\
-    \u5217 (2x2)\n    vector<vector<int>> mat1 = {{1, 2}, {3, 4}};\n    vector<vector<int>>\
-    \ expected1 = {{1, 3}, {2, 4}};\n    assert(transpose(mat1) == expected1);\n \
-    \   // \u30B1\u30FC\u30B92: \u9577\u65B9\u5F62\u306E\u884C\u5217 (2x3)\n    vector<vector<int>>\
-    \ mat2 = {{1, 2, 3}, {4, 5, 6}};\n    vector<vector<int>> expected2 = {{1, 4},\
-    \ {2, 5}, {3, 6}};\n    assert(transpose(mat2) == expected2);\n    // \u30B1\u30FC\
-    \u30B93: 1\u884C\u306E\u884C\u5217 (1x3)\n    vector<vector<int>> mat3 = {{1,\
-    \ 2, 3}};\n    vector<vector<int>> expected3 = {{1}, {2}, {3}};\n    assert(transpose(mat3)\
-    \ == expected3);\n    // \u30B1\u30FC\u30B94: \u6587\u5B57\u5217\u578B\u306E\u884C\
-    \u5217\n    vector<vector<string>> mat4 = {{\"a\", \"b\"}, {\"c\", \"d\"}};\n\
-    \    vector<vector<string>> expected4 = {{\"a\", \"c\"}, {\"b\", \"d\"}};\n  \
-    \  assert(transpose(mat4) == expected4);\n}\n/**\n * @brief \u8EE2\u7F6E\u306E\
-    \u30C6\u30B9\u30C8\n */\nvoid solve() {\n    print(\"Hello World\");\n    test_transpose();\n\
-    }\n"
+    \n#include \"template/template.hpp\"\n#include \"library/sequence/dispersion.hpp\"\
+    \nvoid test_dispersion() {\n    // \u30B1\u30FC\u30B91: \u57FA\u672C\u7684\u306A\
+    \u30AB\u30A6\u30F3\u30C8\n    vector<int> v1 = {1, 2, 2, 3, 3, 3};\n    vector<int>\
+    \ res1 = dispersion(v1);\n    assert(res1[1] == 1);\n    assert(res1[2] == 2);\n\
+    \    assert(res1[3] == 3);\n    assert(res1[0] == 0); // \u73FE\u308C\u3066\u3044\
+    \u306A\u3044\u6570\u306F0\n    assert(res1[4] == 0);\n    // \u30B1\u30FC\u30B9\
+    2: \u5883\u754C\u5024\u4ED8\u8FD1\u306E\u30AB\u30A6\u30F3\u30C8\n    // 2e6 -\
+    \ 1 = 1,999,999\n    int limit = 1999999;\n    vector<int> v2 = {limit, limit,\
+    \ 0};\n    vector<int> res2 = dispersion(v2);\n    assert(res2[limit] == 2);\n\
+    \    assert(res2[0] == 1);\n    // \u30B1\u30FC\u30B93: \u7A7A\u306E\u914D\u5217\
+    \n    vector<int> v3 = {};\n    vector<int> res3 = dispersion(v3);\n    // \u5168\
+    \u3066\u306E\u8981\u7D20\u304C0\u3067\u3042\u308B\u3053\u3068\u3092\u78BA\u8A8D\
+    \ (\u4E00\u90E8\u30B5\u30F3\u30D7\u30EA\u30F3\u30B0)\n    assert(res3[0] == 0);\n\
+    \    assert(res3[100] == 0);\n    // \u30B1\u30FC\u30B94: \u540C\u3058\u5024\u304C\
+    \u305F\u304F\u3055\u3093\u3042\u308B\u5834\u5408\n    vector<int> v4(100, 500);\
+    \ // 500\u304C100\u500B\n    vector<int> res4 = dispersion(v4);\n    assert(res4[500]\
+    \ == 100);\n}\n/**\n * @brief \u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\
+    \u5206\u5E03\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n    print(\"Hello World\"\
+    );\n    test_dispersion();\n}\n"
   dependsOn:
   - template/template.hpp
-  - library/grid/transpose.hpp
+  - library/sequence/dispersion.hpp
   isVerificationFile: true
-  path: tests/grid/transpose.test.cpp
+  path: tests/sequence/dispersion.test.cpp
   requiredBy: []
   timestamp: '2026-01-12 22:40:02+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/grid/transpose.test.cpp
+documentation_of: tests/sequence/dispersion.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/grid/transpose.test.cpp
-- /verify/tests/grid/transpose.test.cpp.html
-title: "\u8EE2\u7F6E\u306E\u30C6\u30B9\u30C8"
+- /verify/tests/sequence/dispersion.test.cpp
+- /verify/tests/sequence/dispersion.test.cpp.html
+title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\u30C6\u30B9\
+  \u30C8"
 ---

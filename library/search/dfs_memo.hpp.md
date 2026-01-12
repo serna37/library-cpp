@@ -31,12 +31,12 @@ data:
   isVerificationFile: false
   path: library/search/dfs_memo.hpp
   requiredBy: []
-  timestamp: '2026-01-12 22:25:29+09:00'
+  timestamp: '2026-01-12 22:40:02+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/search/dfs_memo.hpp
 layout: document
-title: "\u30E1\u30E2\u5316\u518D\u5E30"
+title: "\u30E1\u30E2\u5316\u518D\u5E30(\u30B3\u30D4\u30DA\u7528)"
 ---
 
 # メモ化再帰

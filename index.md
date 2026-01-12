@@ -114,7 +114,7 @@ data:
       path: library/search/bi_ge_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u8981\
         \u7D20\u6570"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/bi_ge_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\
         \u5C0F\u5024"
@@ -122,7 +122,7 @@ data:
       path: library/search/bi_gt_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
         \u8981\u7D20\u6570"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/bi_gt_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
         \u6700\u5C0F\u5024"
@@ -130,7 +130,7 @@ data:
       path: library/search/bi_le_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u8981\
         \u7D20\u6570"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/bi_le_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\
         \u5927\u5024"
@@ -138,23 +138,23 @@ data:
       path: library/search/bi_lt_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u8981\
         \u7D20\u6570"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/bi_lt_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\
         \u5927\u5024"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search.hpp
       title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search_real.hpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/bit_search.hpp
       title: "bit\u5168\u63A2\u7D22"
     - icon: ':warning:'
       path: library/search/dfs_memo.hpp
-      title: "\u30E1\u30E2\u5316\u518D\u5E30"
-    - icon: ':warning:'
+      title: "\u30E1\u30E2\u5316\u518D\u5E30(\u30B3\u30D4\u30DA\u7528)"
+    - icon: ':heavy_check_mark:'
       path: library/search/permutation.hpp
       title: "\u9806\u5217\u5168\u63A2\u7D22"
   - name: library/segtree
@@ -197,7 +197,7 @@ data:
     - icon: ':warning:'
       path: library/sequence/difference_sequence.hpp
       title: "\u968E\u5DEE\u6570\u5217"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/dispersion.hpp
       title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03"
     - icon: ':heavy_check_mark:'
@@ -329,8 +329,36 @@ data:
   - name: tests/search
     pages:
     - icon: ':heavy_check_mark:'
+      path: tests/search/bi_ge_val.test.cpp
+      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\
+        \u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search/bi_gt_val.test.cpp
+      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
+        \u6700\u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search/bi_le_val.test.cpp
+      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\
+        \u5927\u5024\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search/bi_lt_val.test.cpp
+      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\
+        \u5927\u5024\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
       path: tests/search/bi_search_cnt.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search/binary_search.test.cpp
+      title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search/binary_search_real.test.cpp
+      title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search/bit_search.test.cpp
+      title: "bit\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search/permutation.test.cpp
+      title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
   - name: tests/segtree
     pages:
     - icon: ':heavy_check_mark:'
@@ -350,6 +378,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/sequence/cumulative_sum.test.cpp
       title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence/dispersion.test.cpp
+      title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\u30C6\
+        \u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/sequence/inversion_number.test.cpp
       title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"

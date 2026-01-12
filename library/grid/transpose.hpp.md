@@ -24,7 +24,7 @@ data:
   isVerificationFile: false
   path: library/grid/transpose.hpp
   requiredBy: []
-  timestamp: '2026-01-12 22:25:29+09:00'
+  timestamp: '2026-01-12 22:40:02+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/grid/transpose.test.cpp
