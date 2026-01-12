@@ -69,7 +69,7 @@ data:
   isVerificationFile: false
   path: library/graph/shortest_path/bellman_ford.hpp
   requiredBy: []
-  timestamp: '2026-01-12 19:45:30+09:00'
+  timestamp: '2026-01-12 21:09:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/shortest_path/bellman_ford.test.cpp

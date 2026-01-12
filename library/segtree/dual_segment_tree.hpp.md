@@ -78,7 +78,7 @@ data:
   isVerificationFile: false
   path: library/segtree/dual_segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-12 19:45:30+09:00'
+  timestamp: '2026-01-12 21:09:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/dual_segment_tree.test.cpp

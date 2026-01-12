@@ -154,7 +154,7 @@ data:
     - icon: ':warning:'
       path: library/search/dfs_memo.hpp
       title: "\u30E1\u30E2\u5316\u518D\u5E30"
-    - icon: ':x:'
+    - icon: ':warning:'
       path: library/search/permutation.hpp
       title: "\u9806\u5217\u5168\u63A2\u7D22"
   - name: library/segtree
@@ -245,7 +245,7 @@ data:
     - icon: ':warning:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   - name: tests
@@ -314,9 +314,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/search/bi_search_cnt.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
-      path: tests/search/permutation.test.cpp
-      title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
   - name: tests/segtree
     pages:
     - icon: ':heavy_check_mark:'
