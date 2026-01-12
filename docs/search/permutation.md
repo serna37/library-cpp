@@ -13,7 +13,9 @@ $O(N!)$ Nは10〜12程度まで
 
 ## 使い方
 ```cpp
-permutation(A, [&](){
+// 関数でbreakしてたらtrue
+bool is_loop_break = permutation(A, [&](){
     print(A);
+    return true; // trueで探索をbreak
 });
 ```
