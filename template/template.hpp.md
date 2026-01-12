@@ -148,12 +148,14 @@ data:
     \    template <typename T> T max(const vector<T> &v) {\n        return *max_element(all(v));\n\
     \    }\n    template <typename T> long long sum(const vector<T> &v) {\n      \
     \  return accumulate(all(v), 0ll);\n    }\n    template <typename T, typename\
-    \ F> bool all_match(const vector<T> &v, F f) {\n        return all_of(all(v),\
-    \ f);\n    }\n    template <typename T, typename F> bool none_match(const vector<T>\
-    \ &v, F f) {\n        return none_of(all(v), f);\n    }\n    template <typename\
-    \ T, typename F> bool any_match(const vector<T> &v, F f) {\n        return any_of(all(v),\
-    \ f);\n    }\n    template <typename T> void distinct(vector<T> &v) {\n      \
-    \  sort(all(v));\n        v.erase(unique(all(v)), v.end());\n    }\n    template\
+    \ F> bool all_match(const vector<T> &v, F f) {\n        bool b = true;\n     \
+    \   for (int i = 0; i < (int)v.size(); ++i) b &= f(v[i], i);\n        return b;\n\
+    \    }\n    template <typename T, typename F> bool none_match(const vector<T>\
+    \ &v, F f) {\n        return !any_match(v, f);\n    }\n    template <typename\
+    \ T, typename F> bool any_match(const vector<T> &v, F f) {\n        bool b = false;\n\
+    \        for (int i = 0; i < (int)v.size(); ++i) b |= f(v[i], i);\n        return\
+    \ b;\n    }\n    template <typename T> void distinct(vector<T> &v) {\n       \
+    \ sort(all(v));\n        v.erase(unique(all(v)), v.end());\n    }\n    template\
     \ <typename T> void asc(vector<T> &v) {\n        sort(all(v));\n    }\n    template\
     \ <typename T> void desc(vector<T> &v) {\n        sort(rall(v));\n    }\n    template\
     \ <typename T> void reverse(vector<T> &v) {\n        std::reverse(all(v));\n \
@@ -167,7 +169,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-11 18:34:25+09:00'
+  timestamp: '2026-01-12 16:20:35+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp

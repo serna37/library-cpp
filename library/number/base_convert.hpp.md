@@ -26,7 +26,7 @@ data:
   isVerificationFile: false
   path: library/number/base_convert.hpp
   requiredBy: []
-  timestamp: '2026-01-11 18:34:25+09:00'
+  timestamp: '2026-01-12 16:20:35+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number/base_convert.test.cpp
