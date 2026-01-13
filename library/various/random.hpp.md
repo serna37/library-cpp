@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: tests/various/random.cpp
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/various/random.test.cpp
     title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
-  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/various/random.hpp\"\ninline int random(int a, int\
@@ -20,11 +20,11 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/various/random.hpp
-  requiredBy:
-  - tests/various/random.cpp
-  timestamp: '2026-01-13 20:17:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  requiredBy: []
+  timestamp: '2026-01-13 20:35:15+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/various/random.test.cpp
 documentation_of: library/various/random.hpp
 layout: document
 title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"

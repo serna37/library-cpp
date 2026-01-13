@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: tests/various/random.cpp
-    title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/geometry/area_square.test.cpp
@@ -185,6 +182,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
     title: "template\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/various/random.test.cpp
+    title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -277,9 +277,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: template/template.hpp
-  requiredBy:
-  - tests/various/random.cpp
-  timestamp: '2026-01-13 20:17:30+09:00'
+  requiredBy: []
+  timestamp: '2026-01-13 20:35:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -327,6 +326,7 @@ data:
   - tests/search/bit_search.test.cpp
   - tests/search/bi_search_cnt.test.cpp
   - tests/search/permutation.test.cpp
+  - tests/various/random.test.cpp
   - tests/number/digit_sum.test.cpp
   - tests/number/prime_fact.test.cpp
   - tests/number/mod_combination.test.cpp

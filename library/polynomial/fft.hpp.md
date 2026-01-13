@@ -66,7 +66,7 @@ data:
   path: library/polynomial/fft.hpp
   requiredBy:
   - library/polynomial/convolution_fft.hpp
-  timestamp: '2026-01-13 20:17:30+09:00'
+  timestamp: '2026-01-13 20:35:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial/convolution_fft.test.cpp

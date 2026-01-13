@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: library/various/random.hpp
     title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
   - icon: ':heavy_check_mark:'
@@ -11,8 +11,10 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
     document_title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
@@ -37,16 +39,16 @@ data:
   dependsOn:
   - template/template.hpp
   - library/various/random.hpp
-  isVerificationFile: false
-  path: tests/various/random.cpp
+  isVerificationFile: true
+  path: tests/various/random.test.cpp
   requiredBy: []
-  timestamp: '2026-01-13 20:17:30+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2026-01-13 20:35:15+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/various/random.cpp
+documentation_of: tests/various/random.test.cpp
 layout: document
 redirect_from:
-- /library/tests/various/random.cpp
-- /library/tests/various/random.cpp.html
+- /verify/tests/various/random.test.cpp
+- /verify/tests/various/random.test.cpp.html
 title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
 ---

@@ -20,7 +20,7 @@ data:
   isVerificationFile: false
   path: library/search/bi_gt_cnt.hpp
   requiredBy: []
-  timestamp: '2026-01-13 20:17:30+09:00'
+  timestamp: '2026-01-13 20:35:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/search/bi_search_cnt.test.cpp
