@@ -11,15 +11,12 @@ void run_difference_sequence_tests() {
         // D[1] = A[2] - A[1] = 3
         // D[2] = A[3] - A[2] = 4
         vector<long long> expected = {2, 3, 4};
-        
         auto D = difference_sequence(A);
-
         assert(D.size() == 3);
         for (int i = 0; i < (int)D.size(); i++) {
             assert(D[i] == expected[i]);
         }
     }
-
     // ケース2: 値が減少する場合
     {
         vector<int> A = {10, 7, 5, 5};
@@ -29,7 +26,6 @@ void run_difference_sequence_tests() {
             assert(D[i] == expected[i]);
         }
     }
-
     // ケース3: 要素が2つの場合 (最小サイズ)
     {
         vector<int> A = {1, 100};
