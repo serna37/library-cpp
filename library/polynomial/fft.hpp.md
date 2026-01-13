@@ -2,13 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/convolution_fft.hpp
     title: "\u7573\u307F\u8FBC\u307F FFT"
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/polynomial/convolution_fft.test.cpp
+    title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/polynomial/fft.hpp\"\nnamespace FFT {\nusing real\
@@ -63,9 +66,10 @@ data:
   path: library/polynomial/fft.hpp
   requiredBy:
   - library/polynomial/convolution_fft.hpp
-  timestamp: '2026-01-12 22:51:51+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-13 09:23:31+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/polynomial/convolution_fft.test.cpp
 documentation_of: library/polynomial/fft.hpp
 layout: document
 title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"

@@ -36,7 +36,7 @@ data:
   isVerificationFile: false
   path: library/sequence/inversion_number.hpp
   requiredBy: []
-  timestamp: '2026-01-12 22:51:51+09:00'
+  timestamp: '2026-01-13 09:23:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence/inversion_number.test.cpp

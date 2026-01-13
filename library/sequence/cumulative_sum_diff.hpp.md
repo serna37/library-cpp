@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence/cumulative_sum_diff.test.cpp
+    title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/cumulative_sum_diff.hpp\"\ntemplate <typename\
@@ -21,9 +24,10 @@ data:
   isVerificationFile: false
   path: library/sequence/cumulative_sum_diff.hpp
   requiredBy: []
-  timestamp: '2026-01-12 22:51:51+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-13 09:23:31+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/sequence/cumulative_sum_diff.test.cpp
 documentation_of: library/sequence/cumulative_sum_diff.hpp
 layout: document
 title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C"

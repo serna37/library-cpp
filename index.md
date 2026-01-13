@@ -102,10 +102,10 @@ data:
       title: "\u7D20\u6570\u5224\u5B9A"
   - name: library/polynomial
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/polynomial/convolution_fft.hpp
       title: "\u7573\u307F\u8FBC\u307F FFT"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/polynomial/fft.hpp
       title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
   - name: library/search
@@ -179,22 +179,22 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/sequence/cumulative_sum.hpp
       title: "\u7D2F\u7A4D\u548C"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/cumulative_sum_2D.hpp
       title: "2\u6B21\u5143\u7D2F\u7A4D\u548C"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/cumulative_sum_3D.hpp
       title: "3\u6B21\u5143\u7D2F\u7A4D\u548C"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/cumulative_sum_diff.hpp
       title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/cumulative_sum_rev.hpp
       title: "\u7D2F\u7A4D\u548C \u53CD\u8EE2"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/cumulative_sum_rev_diff.hpp
       title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C \u53CD\u8EE2"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/difference_sequence.hpp
       title: "\u968E\u5DEE\u6570\u5217"
     - icon: ':heavy_check_mark:'
@@ -203,7 +203,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/sequence/inversion_number.hpp
       title: "\u8EE2\u5012\u6570"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/merge.hpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF"
     - icon: ':heavy_check_mark:'
@@ -326,6 +326,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/number/prime_test.test.cpp
       title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
+  - name: tests/polynomial
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/polynomial/convolution_fft.test.cpp
+      title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
   - name: tests/search
     pages:
     - icon: ':heavy_check_mark:'
@@ -379,12 +384,34 @@ data:
       path: tests/sequence/cumulative_sum.test.cpp
       title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
+      path: tests/sequence/cumulative_sum_2D.test.cpp
+      title: "2\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence/cumulative_sum_3D.test.cpp
+      title: "3\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence/cumulative_sum_diff.test.cpp
+      title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence/cumulative_sum_rev.test.cpp
+      title: "\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence/cumulative_sum_rev_diff.test.cpp
+      title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\
+        \u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence/difference_sequence.test.cpp
+      title: "\u968E\u5DEE\u6570\u5217\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
       path: tests/sequence/dispersion.test.cpp
       title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\u30C6\
         \u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/sequence/inversion_number.test.cpp
       title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence/merge.test.cpp
+      title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
   - name: tests/string
     pages:
     - icon: ':heavy_check_mark:'

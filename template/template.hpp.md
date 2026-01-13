@@ -71,6 +71,9 @@ data:
     path: tests/number/prime_test.test.cpp
     title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/polynomial/convolution_fft.test.cpp
+    title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/search/bi_ge_val.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\u5C0F\
       \u5024\u306E\u30C6\u30B9\u30C8"
@@ -117,12 +120,34 @@ data:
     path: tests/sequence/cumulative_sum.test.cpp
     title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/sequence/cumulative_sum_2D.test.cpp
+    title: "2\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence/cumulative_sum_3D.test.cpp
+    title: "3\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence/cumulative_sum_diff.test.cpp
+    title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence/cumulative_sum_rev.test.cpp
+    title: "\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence/cumulative_sum_rev_diff.test.cpp
+    title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\
+      \u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence/difference_sequence.test.cpp
+    title: "\u968E\u5DEE\u6570\u5217\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/sequence/dispersion.test.cpp
     title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\u30C6\
       \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/sequence/inversion_number.test.cpp
     title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence/merge.test.cpp
+    title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/string/finds.test.cpp
     title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
@@ -241,7 +266,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-12 22:51:51+09:00'
+  timestamp: '2026-01-13 09:23:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -269,6 +294,13 @@ data:
   - tests/struct/union_find.test.cpp
   - tests/sequence/dispersion.test.cpp
   - tests/sequence/cumulative_sum.test.cpp
+  - tests/sequence/cumulative_sum_rev.test.cpp
+  - tests/sequence/cumulative_sum_diff.test.cpp
+  - tests/sequence/difference_sequence.test.cpp
+  - tests/sequence/cumulative_sum_rev_diff.test.cpp
+  - tests/sequence/cumulative_sum_2D.test.cpp
+  - tests/sequence/merge.test.cpp
+  - tests/sequence/cumulative_sum_3D.test.cpp
   - tests/sequence/inversion_number.test.cpp
   - tests/search/bi_gt_val.test.cpp
   - tests/search/bi_le_val.test.cpp
@@ -287,6 +319,7 @@ data:
   - tests/number/combination.test.cpp
   - tests/number/divisors.test.cpp
   - tests/number/base_convert.test.cpp
+  - tests/polynomial/convolution_fft.test.cpp
   - tests/geometry/area_triangle.test.cpp
   - tests/geometry/area_square.test.cpp
 documentation_of: template/template.hpp
