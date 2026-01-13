@@ -85,7 +85,7 @@ data:
   path: library/graph/cycle_detect.hpp
   requiredBy:
   - library/graph/topological_sort.hpp
-  timestamp: '2026-01-13 14:30:48+09:00'
+  timestamp: '2026-01-13 15:12:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/topological_sort.test.cpp

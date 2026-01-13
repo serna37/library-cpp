@@ -21,7 +21,7 @@ data:
   isVerificationFile: false
   path: library/geometry/area_triangle.hpp
   requiredBy: []
-  timestamp: '2026-01-13 14:30:48+09:00'
+  timestamp: '2026-01-13 15:12:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/geometry/area_triangle.test.cpp
