@@ -68,7 +68,7 @@ data:
   isVerificationFile: true
   path: tests/search/bi_search_cnt.test.cpp
   requiredBy: []
-  timestamp: '2026-01-13 19:33:42+09:00'
+  timestamp: '2026-01-13 20:17:30+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/search/bi_search_cnt.test.cpp

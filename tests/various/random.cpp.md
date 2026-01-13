@@ -1,9 +1,9 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: library/number/base_convert.hpp
-    title: "\u9032\u6570\u5909\u63DB"
+  - icon: ':warning:'
+    path: library/various/random.hpp
+    title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -11,13 +11,11 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0233
-    document_title: "\u9032\u6570\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
+    document_title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0233
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -30,25 +28,25 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0233\"\
-    \n#include \"template/template.hpp\"\n#include \"library/number/base_convert.hpp\"\
-    \n/**\n * @brief \u9032\u6570\u5909\u63DB\u306E\u30C6\u30B9\u30C8\n */\nvoid solve()\
-    \ {\n    while (1) {\n        int x;\n        cin >> x;\n        if (x == 0) break;\n\
-    \        vector<int> cvt = base_convert(x, -10);\n        for (auto &&v : cvt)\
-    \ {\n            cout << v;\n        }\n        cout << endl;\n    }\n}\n"
+  code: "#define PROBLEM                                                         \
+    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
+    \n#include \"template/template.hpp\"\n#include \"library/various/random.hpp\"\n\
+    void test_random() {\n    int a = random(0ll, 10ll);\n    assert(0 <= a and a\
+    \ < 10);\n}\n/**\n * @brief \u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8\n\
+    \ */\nvoid solve() {\n    print(\"Hello World\");\n    test_random();\n}\n"
   dependsOn:
   - template/template.hpp
-  - library/number/base_convert.hpp
-  isVerificationFile: true
-  path: tests/number/base_convert.test.cpp
+  - library/various/random.hpp
+  isVerificationFile: false
+  path: tests/various/random.cpp
   requiredBy: []
   timestamp: '2026-01-13 20:17:30+09:00'
-  verificationStatus: TEST_ACCEPTED
+  verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: tests/number/base_convert.test.cpp
+documentation_of: tests/various/random.cpp
 layout: document
 redirect_from:
-- /verify/tests/number/base_convert.test.cpp
-- /verify/tests/number/base_convert.test.cpp.html
-title: "\u9032\u6570\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
+- /library/tests/various/random.cpp
+- /library/tests/various/random.cpp.html
+title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
 ---

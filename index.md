@@ -237,6 +237,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/struct/union_find.hpp
       title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
+  - name: library/various
+    pages:
+    - icon: ':warning:'
+      path: library/various/random.hpp
+      title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
   - name: template
     pages:
     - icon: ':warning:'
@@ -245,6 +250,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
+  - name: tests/various
+    pages:
+    - icon: ':warning:'
+      path: tests/various/random.cpp
+      title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
   verificationCategories:
   - name: tests/geometry
     pages:

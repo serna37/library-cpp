@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: tests/various/random.cpp
+    title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/geometry/area_square.test.cpp
@@ -274,8 +277,9 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: template/template.hpp
-  requiredBy: []
-  timestamp: '2026-01-13 19:33:42+09:00'
+  requiredBy:
+  - tests/various/random.cpp
+  timestamp: '2026-01-13 20:17:30+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
