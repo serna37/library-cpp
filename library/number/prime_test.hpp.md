@@ -22,7 +22,7 @@ data:
   isVerificationFile: false
   path: library/number/prime_test.hpp
   requiredBy: []
-  timestamp: '2026-01-13 15:12:48+09:00'
+  timestamp: '2026-01-13 15:30:36+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number/prime_test.test.cpp
