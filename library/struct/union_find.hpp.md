@@ -38,7 +38,7 @@ data:
   path: library/struct/union_find.hpp
   requiredBy:
   - library/graph/kruskal.hpp
-  timestamp: '2026-01-13 15:30:36+09:00'
+  timestamp: '2026-01-13 16:22:10+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst_kruskal.test.cpp
