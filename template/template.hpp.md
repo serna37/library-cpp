@@ -120,6 +120,12 @@ data:
     path: tests/segtree/segment_tree.test.cpp
     title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
   - icon: ':heavy_check_mark:'
+    path: tests/segtree/starry_sky_tree.test.cpp
+    title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
+  - icon: ':heavy_check_mark:'
+    path: tests/segtree/starry_sky_tree_2.test.cpp
+    title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/sequence/cumulative_sum.test.cpp
     title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -269,7 +275,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-13 10:09:15+09:00'
+  timestamp: '2026-01-13 11:27:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -278,8 +284,10 @@ data:
   - tests/string/range.test.cpp
   - tests/string/run_length.test.cpp
   - tests/string/finds.test.cpp
+  - tests/segtree/starry_sky_tree_2.test.cpp
   - tests/segtree/lazy_segment_tree.test.cpp
   - tests/segtree/fenwick_tree.test.cpp
+  - tests/segtree/starry_sky_tree.test.cpp
   - tests/segtree/segment_tree.test.cpp
   - tests/segtree/dual_segment_tree.test.cpp
   - tests/template.test.cpp

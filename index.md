@@ -168,7 +168,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/segtree/segment_tree.hpp
       title: Segment Tree
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/segtree/starry_sky_tree.hpp
       title: Starry Sky Tree
   - name: library/sequence
@@ -378,6 +378,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/segtree/segment_tree.test.cpp
       title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
+    - icon: ':heavy_check_mark:'
+      path: tests/segtree/starry_sky_tree.test.cpp
+      title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
+    - icon: ':heavy_check_mark:'
+      path: tests/segtree/starry_sky_tree_2.test.cpp
+      title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
   - name: tests/sequence
     pages:
     - icon: ':heavy_check_mark:'
