@@ -1,21 +1,28 @@
 #pragma once
-/**
- * `rev = true` で区間minに変更 -> できない、バグってる
- */
-template <bool rev = false> struct StarrySkyTree {
+template <bool is_min_mode = true> struct StarrySkyTree {
   private:
-    int N, sz, rv, log = 1;
+    int N, sz, log = 1;
+    const int INF = 1e9;
     vector<int> node;
+    int compare(int a, int b) {
+        if constexpr (is_min_mode) {
+            return min(a, b);
+        } else {
+            return max(a, b);
+        }
+    }
+    int unit_element() {
+        return is_min_mode ? INF : -INF;
+    }
     void init() {
         while ((1ll << log) < N) ++log;
-        node.assign((sz = 1ll << log) << 1, -INF);
-        rv = (rev ? -1 : 1);
+        node.assign((sz = 1ll << log) << 1, 0);
     }
     int _star(int i) {
-        int mx = max(node[i << 1 | 0], node[i << 1 | 1]);
-        node[i << 1 | 0] -= mx;
-        node[i << 1 | 1] -= mx;
-        return mx;
+        int val = compare(node[i << 1 | 0], node[i << 1 | 1]);
+        node[i << 1 | 0] -= val;
+        node[i << 1 | 1] -= val;
+        return val;
     }
     void star(int i) {
         node[i] += _star(i);
@@ -32,43 +39,32 @@ template <bool rev = false> struct StarrySkyTree {
     }
     StarrySkyTree(const vector<int> &a) : N(a.size()) {
         init();
-        for (int i = 0; i < N; ++i) node[i + sz] = a[i] * rv;
+        for (int i = 0; i < N; ++i) node[i + sz] = a[i];
         for (int i = sz - 1; i >= 1; --i) node[i] = _star(i);
     }
     int operator[](int i) {
-        return sum(i + sz) * rv;
+        return sum(i + sz);
     }
-    vector<int> getall() {
-        vector<int> res(N);
-        for (int i = 0; i < N; ++i) res[i] = sum(i + sz) * rv;
-        return res;
+    void apply(int l, int r, const int &v) {
+        if (l >= r) return;
+        int l_bak = l + sz, r_bak = r + sz - 1;
+        for (l += sz, r += sz; l < r; l >>= 1, r >>= 1) {
+            if (l & 1) node[l++] += v;
+            if (r & 1) node[--r] += v;
+        }
+        for (int i = l_bak >> 1; i >= 1; i >>= 1) star(i);
+        for (int i = r_bak >> 1; i >= 1; i >>= 1) star(i);
     }
     void set(int p, const int &x) {
-        apply(p, p + 1, x - sum(p + sz) * rv);
+        apply(p, p + 1, x - sum(p + sz));
     }
-    void act(int p, const int &x) {
-        apply(p, p + 1, x);
-    }
-    int get(int l, int r) {
-        int ans = -INF;
+    int prod(int l, int r) {
+        if (l >= r) return unit_element();
+        int ans = unit_element();
         for (l += sz, r += sz; l < r; l >>= 1, r >>= 1) {
-            if (l & 1) ans = max(ans, sum(l++));
-            if (r & 1) ans = max(ans, sum(--r));
+            if (l & 1) ans = compare(ans, sum(l++));
+            if (r & 1) ans = compare(ans, sum(--r));
         }
-        return ans * rv;
-    }
-    int top() {
-        return node[1] * rv;
-    }
-    void apply(int l, int r, const int &x) {
-        int v = x * rv;
-        for (int ll = (l += sz), rr = (r += sz); ll < rr; ll >>= 1, rr >>= 1) {
-            if (ll & 1) node[ll++] += v;
-            if (rr & 1) node[--rr] += v;
-        }
-        l >>= __builtin_ctz(l);
-        r >>= __builtin_ctz(r);
-        while (l >>= 1) star(l);
-        while (r >>= 1) star(r);
+        return ans;
     }
 };
