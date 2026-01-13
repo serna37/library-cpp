@@ -56,12 +56,9 @@ data:
       title: Warshall Froyd
   - name: library/grid
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/grid/bfs.hpp
-      title: "\u30B0\u30EA\u30C3\u30C94\u65B9\u5411\u3078\u306EBFS"
-    - icon: ':warning:'
-      path: library/grid/bfs8.hpp
-      title: "\u30B0\u30EA\u30C3\u30C98\u65B9\u5411\u3078\u306EBFS"
+      title: "\u30B0\u30EA\u30C3\u30C9BFS"
     - icon: ':heavy_check_mark:'
       path: library/grid/transpose.hpp
       title: "\u8EE2\u7F6E"
@@ -297,6 +294,9 @@ data:
       title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
   - name: tests/grid
     pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/grid/bfs.test.cpp
+      title: "\u30B0\u30EA\u30C3\u30C9BFS\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/grid/transpose.test.cpp
       title: "\u8EE2\u7F6E\u306E\u30C6\u30B9\u30C8"

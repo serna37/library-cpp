@@ -44,6 +44,9 @@ data:
     title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\
       \u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/grid/bfs.test.cpp
+    title: "\u30B0\u30EA\u30C3\u30C9BFS\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/grid/transpose.test.cpp
     title: "\u8EE2\u7F6E\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -266,7 +269,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-13 09:23:31+09:00'
+  timestamp: '2026-01-13 10:09:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -280,6 +283,7 @@ data:
   - tests/segtree/segment_tree.test.cpp
   - tests/segtree/dual_segment_tree.test.cpp
   - tests/template.test.cpp
+  - tests/grid/bfs.test.cpp
   - tests/grid/transpose.test.cpp
   - tests/graph/topological_sort.test.cpp
   - tests/graph/shortest_path/bfs.test.cpp

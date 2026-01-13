@@ -23,7 +23,7 @@ data:
   isVerificationFile: false
   path: library/string/finds.hpp
   requiredBy: []
-  timestamp: '2026-01-13 09:23:31+09:00'
+  timestamp: '2026-01-13 10:09:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/join.test.cpp

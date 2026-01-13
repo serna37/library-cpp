@@ -2,49 +2,70 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/grid/bfs.test.cpp
+    title: "\u30B0\u30EA\u30C3\u30C9BFS\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/grid/bfs.hpp\"\nconst vector<int> dx = {0, 1, 0,\
-    \ -1};\nconst vector<int> dy = {1, 0, -1, 0};\ntemplate <typename T, typename\
-    \ F> void bfs(vector<vector<T>> &G, F f) {\n    int H = G.size(), W = G[0].size();\n\
-    \    // TODO queue\u306E\u51E6\u7406\u306A\u304F\u306D\uFF1F\n    for (int i =\
-    \ 0; i < H; ++i) {\n        for (int j = 0; j < W; ++j) {\n            for (int\
-    \ k = 0; k < 4; ++k) {\n                int y = i + dy[k], x = j + dx[k];\n  \
-    \              if (y < 0 or x < 0 or H <= y or W <= x) continue;\n           \
-    \     f(y, x);\n            }\n        }\n    }\n}\n"
+    \ -1};\nconst vector<int> dy = {1, 0, -1, 0};\nconst vector<int> dx8 = {0, 1,\
+    \ 0, -1, 1, -1, 1, -1};\nconst vector<int> dy8 = {1, 0, -1, 0, 1, 1, -1, -1};\n\
+    template <typename T> vector<vector<int>> bfs(vector<vector<T>> &G, T start, int\
+    \ d = 4, const string &wall = \"#\") {\n    int H = G.size(), W = G[0].size();\n\
+    \    vector<vector<int>> min_cost(H, vector<int>(W, -1));\n    queue<pair<int,\
+    \ int>> q;\n    for (int i = 0; i < H; ++i) {\n        for (int j = 0; j < W;\
+    \ ++j) {\n            if (G[i][j] == start) {\n                q.emplace(i, j);\n\
+    \                min_cost[i][j] = 0;\n            }\n        }\n    }\n    while\
+    \ (!q.empty()) {\n        auto [Y, X] = q.front();\n        q.pop();\n       \
+    \ for (int i = 0; i < d; ++i) {\n            int y = Y + (d == 4 ? dy[i] : dy8[i]),\
+    \ x = X + (d == 4 ? dx[i] : dx8[i]);\n            if (y < 0 or x < 0 or H <= y\
+    \ or W <= x) continue;\n            if (~min_cost[y][x]) continue;\n         \
+    \   if (wall.find(G[y][x]) != string::npos) continue;\n            min_cost[y][x]\
+    \ = min_cost[Y][X] + 1;\n            q.emplace(y, x);\n        }\n    }\n    return\
+    \ min_cost;\n}\n"
   code: "#pragma once\nconst vector<int> dx = {0, 1, 0, -1};\nconst vector<int> dy\
-    \ = {1, 0, -1, 0};\ntemplate <typename T, typename F> void bfs(vector<vector<T>>\
-    \ &G, F f) {\n    int H = G.size(), W = G[0].size();\n    // TODO queue\u306E\u51E6\
-    \u7406\u306A\u304F\u306D\uFF1F\n    for (int i = 0; i < H; ++i) {\n        for\
-    \ (int j = 0; j < W; ++j) {\n            for (int k = 0; k < 4; ++k) {\n     \
-    \           int y = i + dy[k], x = j + dx[k];\n                if (y < 0 or x\
-    \ < 0 or H <= y or W <= x) continue;\n                f(y, x);\n            }\n\
-    \        }\n    }\n}\n"
+    \ = {1, 0, -1, 0};\nconst vector<int> dx8 = {0, 1, 0, -1, 1, -1, 1, -1};\nconst\
+    \ vector<int> dy8 = {1, 0, -1, 0, 1, 1, -1, -1};\ntemplate <typename T> vector<vector<int>>\
+    \ bfs(vector<vector<T>> &G, T start, int d = 4, const string &wall = \"#\") {\n\
+    \    int H = G.size(), W = G[0].size();\n    vector<vector<int>> min_cost(H, vector<int>(W,\
+    \ -1));\n    queue<pair<int, int>> q;\n    for (int i = 0; i < H; ++i) {\n   \
+    \     for (int j = 0; j < W; ++j) {\n            if (G[i][j] == start) {\n   \
+    \             q.emplace(i, j);\n                min_cost[i][j] = 0;\n        \
+    \    }\n        }\n    }\n    while (!q.empty()) {\n        auto [Y, X] = q.front();\n\
+    \        q.pop();\n        for (int i = 0; i < d; ++i) {\n            int y =\
+    \ Y + (d == 4 ? dy[i] : dy8[i]), x = X + (d == 4 ? dx[i] : dx8[i]);\n        \
+    \    if (y < 0 or x < 0 or H <= y or W <= x) continue;\n            if (~min_cost[y][x])\
+    \ continue;\n            if (wall.find(G[y][x]) != string::npos) continue;\n \
+    \           min_cost[y][x] = min_cost[Y][X] + 1;\n            q.emplace(y, x);\n\
+    \        }\n    }\n    return min_cost;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/grid/bfs.hpp
   requiredBy: []
-  timestamp: '2026-01-13 09:23:31+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-13 10:09:15+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/grid/bfs.test.cpp
 documentation_of: library/grid/bfs.hpp
 layout: document
-title: "\u30B0\u30EA\u30C3\u30C94\u65B9\u5411\u3078\u306EBFS"
+title: "\u30B0\u30EA\u30C3\u30C9BFS"
 ---
 
-# グリッド4方向へのBFS
+# グリッドBFS
 
 ## できること
-- xxx
+- グリッド上で始点を決め、各点への最短距離を求める
 
 ## 計算量
 $O(HW)$
 
 ## 使い方
 ```cpp
-// TODO
+string wall = "#";
+vector<vector<int>> dis = bfs(G, 'S', 4ll, wall);
+int ans = dis[gy][gx];
 ```
