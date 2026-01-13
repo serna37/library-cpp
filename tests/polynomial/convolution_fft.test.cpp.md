@@ -40,27 +40,27 @@ data:
     \u7573\u307F\u8FBC\u307F (1 + 2x + 3x^2) * (4 + 5x + 6x^2)\n    {\n        vector<int>\
     \ a = {1, 2, 3};\n        vector<int> b = {4, 5, 6};\n        vector<long long>\
     \ expected = {4, 13, 28, 27, 18};\n        vector<long long> res = convolution_fft(a,\
-    \ b);\n        \n        assert(res.size() == expected.size());\n        for (int\
-    \ i = 0; i < (int)res.size(); i++) {\n            assert(res[i] == expected[i]);\n\
-    \        }\n    }\n\n    // \u30B1\u30FC\u30B92: \u9577\u3055\u304C\u7570\u306A\
-    \u308B\u6570\u5217\u306E\u7573\u307F\u8FBC\u307F\n    {\n        vector<int> a\
-    \ = {1, 1, 1, 1};\n        vector<int> b = {1, 2};\n        // (1+x+x^2+x^3)*(1+2x)\
+    \ b);\n        assert(res.size() == expected.size());\n        for (int i = 0;\
+    \ i < (int)res.size(); i++) {\n            assert(res[i] == expected[i]);\n  \
+    \      }\n    }\n    // \u30B1\u30FC\u30B92: \u9577\u3055\u304C\u7570\u306A\u308B\
+    \u6570\u5217\u306E\u7573\u307F\u8FBC\u307F\n    {\n        vector<int> a = {1,\
+    \ 1, 1, 1};\n        vector<int> b = {1, 2};\n        // (1+x+x^2+x^3)*(1+2x)\
     \ = 1 + 3x + 3x^2 + 3x^3 + 2x^4\n        vector<long long> expected = {1, 3, 3,\
-    \ 3, 2};\n        vector<long long> res = convolution_fft(a, b);\n        \n \
-    \       assert(res.size() == expected.size());\n        for (int i = 0; i < (int)res.size();\
-    \ i++) {\n            assert(res[i] == expected[i]);\n        }\n    }\n\n   \
-    \ // \u30B1\u30FC\u30B93: 0\u3092\u542B\u3080\u30B1\u30FC\u30B9\n    {\n     \
-    \   vector<int> a = {0, 5, 0};\n        vector<int> b = {0, 2};\n        // (5x)\
-    \ * (2x) = 10x^2\n        vector<long long> expected = {0, 0, 10, 0};\n      \
-    \  vector<long long> res = convolution_fft(a, b);\n        \n        assert(res.size()\
+    \ 3, 2};\n        vector<long long> res = convolution_fft(a, b);\n        assert(res.size()\
     \ == expected.size());\n        for (int i = 0; i < (int)res.size(); i++) {\n\
-    \            assert(res[i] == expected[i]);\n        }\n    }\n\n    // \u30B1\
-    \u30FC\u30B94: \u5927\u304D\u306A\u5024\u306E\u7CBE\u5EA6\u78BA\u8A8D (10^6 *\
-    \ 10^6 = 10^12)\n    {\n        vector<long long> a = {1000000};\n        vector<long\
-    \ long> b = {1000000};\n        vector<long long> res = convolution_fft(a, b);\n\
-    \        assert(res[0] == 1000000000000LL);\n    }\n}\n/**\n * @brief \u7573\u307F\
-    \u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n    print(\"Hello\
-    \ World\");\n    run_unit_tests();\n}\n"
+    \            assert(res[i] == expected[i]);\n        }\n    }\n    // \u30B1\u30FC\
+    \u30B93: 0\u3092\u542B\u3080\u30B1\u30FC\u30B9\n    {\n        vector<int> a =\
+    \ {0, 5, 0};\n        vector<int> b = {0, 2};\n        // (5x) * (2x) = 10x^2\n\
+    \        vector<long long> expected = {0, 0, 10, 0};\n        vector<long long>\
+    \ res = convolution_fft(a, b);\n        assert(res.size() == expected.size());\n\
+    \        for (int i = 0; i < (int)res.size(); i++) {\n            assert(res[i]\
+    \ == expected[i]);\n        }\n    }\n    // \u30B1\u30FC\u30B94: \u5927\u304D\
+    \u306A\u5024\u306E\u7CBE\u5EA6\u78BA\u8A8D (10^6 * 10^6 = 10^12)\n    {\n    \
+    \    vector<long long> a = {1000000};\n        vector<long long> b = {1000000};\n\
+    \        vector<long long> res = convolution_fft(a, b);\n        assert(res[0]\
+    \ == 1000000000000LL);\n    }\n}\n/**\n * @brief \u7573\u307F\u8FBC\u307FFFT\u306E\
+    \u30C6\u30B9\u30C8\n */\nvoid solve() {\n    print(\"Hello World\");\n    run_unit_tests();\n\
+    }\n"
   dependsOn:
   - template/template.hpp
   - library/polynomial/convolution_fft.hpp
@@ -68,7 +68,7 @@ data:
   isVerificationFile: true
   path: tests/polynomial/convolution_fft.test.cpp
   requiredBy: []
-  timestamp: '2026-01-13 16:22:10+09:00'
+  timestamp: '2026-01-13 19:33:42+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/polynomial/convolution_fft.test.cpp

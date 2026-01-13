@@ -45,7 +45,7 @@ data:
   isVerificationFile: true
   path: tests/segtree/fenwick_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-13 16:22:10+09:00'
+  timestamp: '2026-01-13 19:33:42+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree/fenwick_tree.test.cpp

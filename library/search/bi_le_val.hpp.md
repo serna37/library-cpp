@@ -26,7 +26,7 @@ data:
   isVerificationFile: false
   path: library/search/bi_le_val.hpp
   requiredBy: []
-  timestamp: '2026-01-13 16:22:10+09:00'
+  timestamp: '2026-01-13 19:33:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/search/bi_le_val.test.cpp

@@ -37,26 +37,26 @@ data:
     \u7684\u306A\u6570\u5217\n    {\n        vector<int> A = {1, 3, 6, 10};\n    \
     \    // \u671F\u5F85\u3055\u308C\u308B\u7D50\u679C:\n        // D[0] = A[1] -\
     \ A[0] = 2\n        // D[1] = A[2] - A[1] = 3\n        // D[2] = A[3] - A[2] =\
-    \ 4\n        vector<long long> expected = {2, 3, 4};\n        \n        auto D\
-    \ = difference_sequence(A);\n\n        assert(D.size() == 3);\n        for (int\
-    \ i = 0; i < (int)D.size(); i++) {\n            assert(D[i] == expected[i]);\n\
-    \        }\n    }\n\n    // \u30B1\u30FC\u30B92: \u5024\u304C\u6E1B\u5C11\u3059\
-    \u308B\u5834\u5408\n    {\n        vector<int> A = {10, 7, 5, 5};\n        vector<long\
-    \ long> expected = {-3, -2, 0};\n        auto D = difference_sequence(A);\n  \
-    \      for (int i = 0; i < 3; i++) {\n            assert(D[i] == expected[i]);\n\
-    \        }\n    }\n\n    // \u30B1\u30FC\u30B93: \u8981\u7D20\u304C2\u3064\u306E\
-    \u5834\u5408 (\u6700\u5C0F\u30B5\u30A4\u30BA)\n    {\n        vector<int> A =\
-    \ {1, 100};\n        auto D = difference_sequence(A);\n        assert(D.size()\
-    \ == 1);\n        assert(D[0] == 99);\n    }\n}\n/**\n * @brief \u968E\u5DEE\u6570\
-    \u5217\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n    print(\"Hello World\"\
-    );\n    run_difference_sequence_tests();\n}\n"
+    \ 4\n        vector<long long> expected = {2, 3, 4};\n        auto D = difference_sequence(A);\n\
+    \        assert(D.size() == 3);\n        for (int i = 0; i < (int)D.size(); i++)\
+    \ {\n            assert(D[i] == expected[i]);\n        }\n    }\n    // \u30B1\
+    \u30FC\u30B92: \u5024\u304C\u6E1B\u5C11\u3059\u308B\u5834\u5408\n    {\n     \
+    \   vector<int> A = {10, 7, 5, 5};\n        vector<long long> expected = {-3,\
+    \ -2, 0};\n        auto D = difference_sequence(A);\n        for (int i = 0; i\
+    \ < 3; i++) {\n            assert(D[i] == expected[i]);\n        }\n    }\n  \
+    \  // \u30B1\u30FC\u30B93: \u8981\u7D20\u304C2\u3064\u306E\u5834\u5408 (\u6700\
+    \u5C0F\u30B5\u30A4\u30BA)\n    {\n        vector<int> A = {1, 100};\n        auto\
+    \ D = difference_sequence(A);\n        assert(D.size() == 1);\n        assert(D[0]\
+    \ == 99);\n    }\n}\n/**\n * @brief \u968E\u5DEE\u6570\u5217\u306E\u30C6\u30B9\
+    \u30C8\n */\nvoid solve() {\n    print(\"Hello World\");\n    run_difference_sequence_tests();\n\
+    }\n"
   dependsOn:
   - template/template.hpp
   - library/sequence/difference_sequence.hpp
   isVerificationFile: true
   path: tests/sequence/difference_sequence.test.cpp
   requiredBy: []
-  timestamp: '2026-01-13 16:22:10+09:00'
+  timestamp: '2026-01-13 19:33:42+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/sequence/difference_sequence.test.cpp
