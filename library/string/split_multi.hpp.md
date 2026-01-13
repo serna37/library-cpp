@@ -25,7 +25,7 @@ data:
   isVerificationFile: false
   path: library/string/split_multi.hpp
   requiredBy: []
-  timestamp: '2026-01-13 11:27:37+09:00'
+  timestamp: '2026-01-13 14:30:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp

@@ -43,7 +43,7 @@ data:
   isVerificationFile: true
   path: tests/number/prime_test.test.cpp
   requiredBy: []
-  timestamp: '2026-01-13 11:27:37+09:00'
+  timestamp: '2026-01-13 14:30:48+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/number/prime_test.test.cpp

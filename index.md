@@ -463,6 +463,9 @@ layout: toppage
 ## 関連
 - 私の[dotfiles](https://github.com/serna37/dotfiles/blob/master/cpp.zsh)中に、関連コマンドが作成されています
 - VerifyとPagesは[online-judge-tools/verification-helper](https://github.com/online-judge-tools/verification-helper/blob/master/README.ja.md)を使用しています
+- [色別ランダム演習](https://gist.github.com/serna37/9eb27f4603f1e085bca4cded24d594fe)
+
+https://gist.github.com/serna37/9eb27f4603f1e085bca4cded24d594fe
 
 ## 型について
 - テンプレートでは`#define int long long`のマクロを使用しています
