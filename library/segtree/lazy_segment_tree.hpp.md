@@ -213,7 +213,7 @@ data:
   isVerificationFile: false
   path: library/segtree/lazy_segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-13 20:35:15+09:00'
+  timestamp: '2026-01-14 09:03:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp

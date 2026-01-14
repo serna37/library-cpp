@@ -33,16 +33,17 @@ data:
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
     \n#include \"template/template.hpp\"\n#include \"library/various/random.hpp\"\n\
-    void test_random() {\n    int a = random(0ll, 10ll);\n    assert(0 <= a and a\
-    \ < 10);\n}\n/**\n * @brief \u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8\n\
-    \ */\nvoid solve() {\n    print(\"Hello World\");\n    test_random();\n}\n"
+    void test_random() {\n    long long a = random(0ll, 10ll);\n    assert(0ll <=\
+    \ a and a < 10ll);\n}\n/**\n * @brief \u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\
+    \u30C8\n */\nvoid solve() {\n    print(\"Hello World\");\n    test_random();\n\
+    }\n"
   dependsOn:
   - template/template.hpp
   - library/various/random.hpp
   isVerificationFile: true
   path: tests/various/random.test.cpp
   requiredBy: []
-  timestamp: '2026-01-13 20:35:15+09:00'
+  timestamp: '2026-01-14 09:03:43+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/various/random.test.cpp
