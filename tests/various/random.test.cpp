@@ -3,8 +3,8 @@
 #include "template/template.hpp"
 #include "library/various/random.hpp"
 void test_random() {
-    int a = random(0ll, 10ll);
-    assert(0 <= a and a < 10);
+    long long a = random(0ll, 10ll);
+    assert(0ll <= a and a < 10ll);
 }
 /**
  * @brief 乱数生成のテスト

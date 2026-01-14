@@ -14,6 +14,6 @@ $O(1)$
 
 ## 使い方
 ```cpp
-int randome_number = random(1, 1e3 + 1);
+long long randome_number = random(1ll, 1e3ll + 1ll);
 ```
 
