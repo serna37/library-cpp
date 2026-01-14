@@ -5,6 +5,8 @@ struct Node {
     static const int e = -1;
     int to = e;
     long long dist = 0;
+    Node() = default;
+    Node(int to, long long dist) : to(to), dist(dist) {}
     Node operator+(const Node &A) const {
         if (to == e) return *this;
         return {A.to, dist + A.dist};

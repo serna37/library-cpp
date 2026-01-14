@@ -2,7 +2,6 @@
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C"
 #include "template/template.hpp"
 #include "library/graph/tree/lca.hpp"
-//
 /**
  * @brief 木 - LCAのテスト
  */
