@@ -7,11 +7,17 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: library/graph/tree/lca.hpp
+    title: LCA
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/graph/shortest_path/bfs.test.cpp
     title: "\u30B0\u30E9\u30D5 - BFS\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/tree/lca.test.cpp
+    title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -54,11 +60,13 @@ data:
   - library/graph/base/edge.hpp
   isVerificationFile: false
   path: library/graph/shortest_path/bfs.hpp
-  requiredBy: []
-  timestamp: '2026-01-14 12:39:26+09:00'
+  requiredBy:
+  - library/graph/tree/lca.hpp
+  timestamp: '2026-01-14 13:57:00+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/shortest_path/bfs.test.cpp
+  - tests/graph/tree/lca.test.cpp
 documentation_of: library/graph/shortest_path/bfs.hpp
 layout: document
 title: BFS

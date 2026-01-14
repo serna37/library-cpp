@@ -22,7 +22,7 @@ data:
   isVerificationFile: false
   path: library/sequence/difference_sequence.hpp
   requiredBy: []
-  timestamp: '2026-01-14 12:39:26+09:00'
+  timestamp: '2026-01-14 13:57:00+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence/difference_sequence.test.cpp

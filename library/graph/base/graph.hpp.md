@@ -29,6 +29,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/topological_sort.hpp
     title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: library/graph/tree/lca.hpp
+    title: LCA
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/graph/connected_components.test.cpp
@@ -60,6 +63,9 @@ data:
     path: tests/graph/topological_sort.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\
       \u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/tree/lca.test.cpp
+    title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -108,8 +114,9 @@ data:
   - library/graph/topological_sort.hpp
   - library/graph/connected_components.hpp
   - library/graph/cycle_detect.hpp
+  - library/graph/tree/lca.hpp
   - library/graph/strongly_connected_components.hpp
-  timestamp: '2026-01-14 12:39:26+09:00'
+  timestamp: '2026-01-14 13:57:00+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/topological_sort.test.cpp
@@ -120,6 +127,7 @@ data:
   - tests/graph/cycle_detect.test.cpp
   - tests/graph/route_restore.test.cpp
   - tests/graph/strongly_connected_components.test.cpp
+  - tests/graph/tree/lca.test.cpp
   - tests/graph/connected_components.test.cpp
 documentation_of: library/graph/base/graph.hpp
 layout: document

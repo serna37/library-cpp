@@ -58,7 +58,7 @@ data:
   isVerificationFile: true
   path: tests/sequence/dispersion.test.cpp
   requiredBy: []
-  timestamp: '2026-01-14 12:39:26+09:00'
+  timestamp: '2026-01-14 13:57:00+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/sequence/dispersion.test.cpp

@@ -44,6 +44,9 @@ data:
     title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\
       \u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/graph/tree/lca.test.cpp
+    title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/grid/bfs.test.cpp
     title: "\u30B0\u30EA\u30C3\u30C9BFS\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -281,7 +284,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-14 12:39:26+09:00'
+  timestamp: '2026-01-14 13:57:00+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -309,6 +312,7 @@ data:
   - tests/graph/mst_kruskal.test.cpp
   - tests/graph/route_restore.test.cpp
   - tests/graph/strongly_connected_components.test.cpp
+  - tests/graph/tree/lca.test.cpp
   - tests/graph/connected_components.test.cpp
   - tests/struct/union_find.test.cpp
   - tests/sequence/dispersion.test.cpp

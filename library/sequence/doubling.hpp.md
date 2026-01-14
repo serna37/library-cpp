@@ -1,29 +1,34 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: library/graph/tree/lca.hpp
+    title: LCA
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/tree/lca.test.cpp
+    title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/doubling.hpp\"\ntemplate <typename T> struct\
-    \ Doubling {\n  private:\n    int N, log = 0;\n    vector<vector<T>> table;\n\n\
-    \  public:\n    Doubling(const vector<T> &next, long long max_steps) {\n     \
-    \   N = next.size();\n        while ((1ll << log) <= max_steps) ++log;\n     \
-    \   table.assign(log, vector<T>(N, T()));\n        table[0] = next;\n        for\
-    \ (int k = 0; k < log - 1; ++k) {\n            for (int v = 0; v < N; ++v) {\n\
-    \                if (table[k][v].to == T::e) {\n                    table[k +\
-    \ 1][v] = table[k][v];\n                } else {\n                    table[k\
-    \ + 1][v] = table[k][v] + table[k][table[k][v].to];\n                }\n     \
-    \       }\n        }\n    }\n    T query(int v, long long steps) const {\n   \
-    \     T res;\n        res.to = v;\n        for (int k = 0; k < log; ++k) {\n \
-    \           if ((steps >> k) & 1) {\n                if (res.to == T::e) break;\n\
-    \                res = res + table[k][res.to];\n            }\n        }\n   \
-    \     return res;\n    }\n};\n"
-  code: "#pragma once\ntemplate <typename T> struct Doubling {\n  private:\n    int\
-    \ N, log = 0;\n    vector<vector<T>> table;\n\n  public:\n    Doubling(const vector<T>\
+    \ Doubling {\n    int N, log = 0;\n    vector<vector<T>> table;\n    Doubling()\
+    \ {}\n    Doubling(const vector<T> &next, long long max_steps) {\n        N =\
+    \ next.size();\n        while ((1ll << log) <= max_steps) ++log;\n        table.assign(log,\
+    \ vector<T>(N, T()));\n        table[0] = next;\n        for (int k = 0; k < log\
+    \ - 1; ++k) {\n            for (int v = 0; v < N; ++v) {\n                if (table[k][v].to\
+    \ == T::e) {\n                    table[k + 1][v] = table[k][v];\n           \
+    \     } else {\n                    table[k + 1][v] = table[k][v] + table[k][table[k][v].to];\n\
+    \                }\n            }\n        }\n    }\n    T query(int v, long long\
+    \ steps) const {\n        T res;\n        res.to = v;\n        for (int k = 0;\
+    \ k < log; ++k) {\n            if ((steps >> k) & 1) {\n                if (res.to\
+    \ == T::e) break;\n                res = res + table[k][res.to];\n           \
+    \ }\n        }\n        return res;\n    }\n};\n"
+  code: "#pragma once\ntemplate <typename T> struct Doubling {\n    int N, log = 0;\n\
+    \    vector<vector<T>> table;\n    Doubling() {}\n    Doubling(const vector<T>\
     \ &next, long long max_steps) {\n        N = next.size();\n        while ((1ll\
     \ << log) <= max_steps) ++log;\n        table.assign(log, vector<T>(N, T()));\n\
     \        table[0] = next;\n        for (int k = 0; k < log - 1; ++k) {\n     \
@@ -38,10 +43,12 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/doubling.hpp
-  requiredBy: []
-  timestamp: '2026-01-14 12:39:26+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  requiredBy:
+  - library/graph/tree/lca.hpp
+  timestamp: '2026-01-14 13:57:00+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/graph/tree/lca.test.cpp
 documentation_of: library/sequence/doubling.hpp
 layout: document
 title: "\u30C0\u30D6\u30EA\u30F3\u30B0"

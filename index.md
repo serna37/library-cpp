@@ -54,6 +54,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/graph/shortest_path/warshall_froyd.hpp
       title: Warshall Froyd
+  - name: library/graph/tree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: library/graph/tree/lca.hpp
+      title: LCA
   - name: library/grid
     pages:
     - icon: ':heavy_check_mark:'
@@ -197,7 +202,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/sequence/dispersion.hpp
       title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/doubling.hpp
       title: "\u30C0\u30D6\u30EA\u30F3\u30B0"
     - icon: ':heavy_check_mark:'
@@ -303,6 +308,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/graph/shortest_path/warshall_froyd.test.cpp
       title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
+  - name: tests/graph/tree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/graph/tree/lca.test.cpp
+      title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
   - name: tests/grid
     pages:
     - icon: ':heavy_check_mark:'
