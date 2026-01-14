@@ -1,4 +1,5 @@
 #pragma once
+#include <functional>
 const long double EPS = 1e-14;
 pair<double, double> binary_search_real(function<bool(double)> f) {
     double L = 0, R = 1, MID = 0;

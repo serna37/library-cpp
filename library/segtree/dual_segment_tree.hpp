@@ -1,4 +1,5 @@
 #pragma once
+#include <functional>
 #include "library/struct/monoid.hpp"
 template <typename T> struct DualSegmentTree {
     using F = function<T(T, T)>;

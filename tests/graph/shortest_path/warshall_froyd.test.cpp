@@ -2,6 +2,7 @@
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C"
 #include "template/template.hpp"
 #include "library/graph/shortest_path/warshall_froyd.hpp"
+#include "library/various/convert.hpp"
 /**
  * @brief グラフ - WarshallFroydのテスト
  */

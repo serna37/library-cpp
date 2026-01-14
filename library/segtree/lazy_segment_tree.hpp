@@ -1,4 +1,5 @@
 #pragma once
+#include <functional>
 #include "library/struct/monoid.hpp"
 #include "library/struct/monoid_act.hpp"
 template <typename T, typename U> struct LazySegmentTree {
