@@ -57,7 +57,7 @@ data:
   isVerificationFile: false
   path: library/sequence/collection_util.hpp
   requiredBy: []
-  timestamp: '2026-01-14 20:51:42+09:00'
+  timestamp: '2026-01-14 22:20:34+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence/collection_util.test.cpp

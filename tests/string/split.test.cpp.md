@@ -61,7 +61,7 @@ data:
   isVerificationFile: true
   path: tests/string/split.test.cpp
   requiredBy: []
-  timestamp: '2026-01-14 20:51:42+09:00'
+  timestamp: '2026-01-14 22:20:34+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/string/split.test.cpp

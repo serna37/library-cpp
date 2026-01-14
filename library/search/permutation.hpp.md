@@ -22,7 +22,7 @@ data:
   isVerificationFile: false
   path: library/search/permutation.hpp
   requiredBy: []
-  timestamp: '2026-01-14 20:51:42+09:00'
+  timestamp: '2026-01-14 22:20:34+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/search/permutation.test.cpp
