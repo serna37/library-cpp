@@ -14,5 +14,5 @@
 ## 関連
 - [Gistのコードブロックにコピーボタンを付与](https://gist.github.com/serna37/0ffbef0e65fe2a62cafdd998d8877f19)
 - [色別ランダム演習](https://gist.github.com/serna37/9eb27f4603f1e085bca4cded24d594fe)
-- [JSで競プロ](https://gist.github.com/serna37/95448aefc36a098a436e1e38c02fa790)
+- [JSスニペット](https://gist.github.com/serna37/95448aefc36a098a436e1e38c02fa790)
 - [ライブラリ未満のスニペット集Gist](https://gist.github.com/serna37/b006de8b04d440c535d4f1e9a6a70a74)

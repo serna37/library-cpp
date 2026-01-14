@@ -21,7 +21,7 @@
  *  This is an implementation file for a precompiled header.
  */
 /**
- * @brief カスタムstdc++.h
+ * @brief ローカル用にstdc++.h
  */
 #include <algorithm>
 #include <bitset>
