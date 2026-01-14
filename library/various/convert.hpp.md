@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: tests/graph/shortest_path/warshall_froyd.test.cpp
+    title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/various/convert.test.cpp
     title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
@@ -25,9 +28,10 @@ data:
   isVerificationFile: false
   path: library/various/convert.hpp
   requiredBy: []
-  timestamp: '2026-01-14 14:43:43+09:00'
+  timestamp: '2026-01-14 15:04:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/graph/shortest_path/warshall_froyd.test.cpp
   - tests/various/convert.test.cpp
 documentation_of: library/various/convert.hpp
 layout: document

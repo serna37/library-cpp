@@ -45,7 +45,7 @@ data:
   path: library/sequence/doubling.hpp
   requiredBy:
   - library/graph/tree/lca.hpp
-  timestamp: '2026-01-14 14:43:43+09:00'
+  timestamp: '2026-01-14 15:04:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/tree/lca.test.cpp

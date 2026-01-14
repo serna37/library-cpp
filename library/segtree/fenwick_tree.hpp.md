@@ -33,7 +33,7 @@ data:
   isVerificationFile: false
   path: library/segtree/fenwick_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-14 14:43:43+09:00'
+  timestamp: '2026-01-14 15:04:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/fenwick_tree.test.cpp

@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/sequence/cumulative_sum_diff.hpp
     title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -66,7 +66,7 @@ data:
   isVerificationFile: true
   path: tests/sequence/cumulative_sum_diff.test.cpp
   requiredBy: []
-  timestamp: '2026-01-14 14:43:43+09:00'
+  timestamp: '2026-01-14 15:04:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/sequence/cumulative_sum_diff.test.cpp

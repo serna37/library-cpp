@@ -14,10 +14,10 @@ data:
       title: "\u5E7E\u4F55Util"
   - name: library/graph/base
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/graph/base/edge.hpp
       title: "\u8FBA"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/graph/base/graph.hpp
       title: "\u30B0\u30E9\u30D5"
     - icon: ':heavy_check_mark:'
@@ -54,7 +54,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/graph/shortest_path/dijkstra.hpp
       title: Dijkstra
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/graph/shortest_path/warshall_froyd.hpp
       title: Warshall Froyd
   - name: library/graph/tree
@@ -150,10 +150,10 @@ data:
       path: library/search/bi_lt_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\
         \u5927\u5024"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search.hpp
       title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search_real.hpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
     - icon: ':heavy_check_mark:'
@@ -167,16 +167,16 @@ data:
       title: "\u9806\u5217\u5168\u63A2\u7D22"
   - name: library/segtree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/segtree/dual_segment_tree.hpp
       title: Dual Segment Tree
     - icon: ':heavy_check_mark:'
       path: library/segtree/fenwick_tree.hpp
       title: Fenwick Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/segtree/lazy_segment_tree.hpp
       title: Lazy Segment Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/segtree/segment_tree.hpp
       title: Segment Tree
     - icon: ':heavy_check_mark:'
@@ -251,10 +251,10 @@ data:
       title: "\u6587\u5B57\u5217Util"
   - name: library/struct
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/struct/monoid.hpp
       title: "\u30E2\u30CE\u30A4\u30C9"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/struct/monoid_act.hpp
       title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
     - icon: ':heavy_check_mark:'
@@ -273,7 +273,7 @@ data:
     - icon: ':warning:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   verificationCategories:
@@ -323,7 +323,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/graph/shortest_path/dijkstra.test.cpp
       title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/graph/shortest_path/warshall_froyd.test.cpp
       title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
   - name: tests/graph/tree
@@ -394,10 +394,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/search/bi_search_cnt.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search/binary_search.test.cpp
       title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search/binary_search_real.test.cpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
@@ -408,16 +408,16 @@ data:
       title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
   - name: tests/segtree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/segtree/dual_segment_tree.test.cpp
       title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
     - icon: ':heavy_check_mark:'
       path: tests/segtree/fenwick_tree.test.cpp
       title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/segtree/lazy_segment_tree.test.cpp
       title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/segtree/segment_tree.test.cpp
       title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
     - icon: ':heavy_check_mark:'

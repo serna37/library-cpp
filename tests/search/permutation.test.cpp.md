@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/search/permutation.hpp
     title: "\u9806\u5217\u5168\u63A2\u7D22"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -64,7 +64,7 @@ data:
   isVerificationFile: true
   path: tests/search/permutation.test.cpp
   requiredBy: []
-  timestamp: '2026-01-14 14:43:43+09:00'
+  timestamp: '2026-01-14 15:04:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/search/permutation.test.cpp

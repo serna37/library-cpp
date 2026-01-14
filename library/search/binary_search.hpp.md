@@ -3,20 +3,20 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search/binary_search.test.cpp
     title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/search/binary_search.hpp\"\npair<long long, long\
-    \ long> binary_search(function<bool(long long)> f) {\n    long long L = 0, R =\
-    \ 1, MID = 0;\n    while (!f(R)) R <<= 1;\n    while (abs(R - L) > 1) {\n    \
-    \    MID = L + (R - L) / 2;\n        (f(MID) ? R : L) = MID;\n    }\n    return\
-    \ {L, R};\n}\n"
-  code: "#pragma once\npair<long long, long long> binary_search(function<bool(long\
+  bundledCode: "#line 2 \"library/search/binary_search.hpp\"\n#include <functional>\n\
+    pair<long long, long long> binary_search(function<bool(long long)> f) {\n    long\
+    \ long L = 0, R = 1, MID = 0;\n    while (!f(R)) R <<= 1;\n    while (abs(R -\
+    \ L) > 1) {\n        MID = L + (R - L) / 2;\n        (f(MID) ? R : L) = MID;\n\
+    \    }\n    return {L, R};\n}\n"
+  code: "#pragma once\n#include <functional>\npair<long long, long long> binary_search(function<bool(long\
     \ long)> f) {\n    long long L = 0, R = 1, MID = 0;\n    while (!f(R)) R <<= 1;\n\
     \    while (abs(R - L) > 1) {\n        MID = L + (R - L) / 2;\n        (f(MID)\
     \ ? R : L) = MID;\n    }\n    return {L, R};\n}\n"
@@ -24,8 +24,8 @@ data:
   isVerificationFile: false
   path: library/search/binary_search.hpp
   requiredBy: []
-  timestamp: '2026-01-14 14:43:43+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2026-01-14 15:04:06+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/search/binary_search.test.cpp
 documentation_of: library/search/binary_search.hpp
