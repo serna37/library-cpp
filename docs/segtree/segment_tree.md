@@ -4,6 +4,7 @@ documentation_of: //library/segtree/segment_tree.hpp
 ---
 
 # Segment Tree
+[詳しい説明](https://note.alhinc.jp/n/n20b6c51a4760)
 
 ## できること
 - モノイドについて処理

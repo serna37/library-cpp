@@ -9,6 +9,12 @@ documentation_of: //library/sequence/doubling.hpp
 - k個先を求める
 - $2^0$ 先、$2^1$ 先、$2^2$ 先 ... をDPで作っておくことで高速で見つかる
 
+<details><summary>詳しい説明</summary>
+
+<iframe src="https://www.slideshare.net/slideshow/embed_code/key/ADxKU9volOXApp" width="510" height="420"frameborder="0" marginwidth="0" marginheight="0" scrolling="no"style="border: var(--border-1) solid #CCC; border-width:1px; margin-bottom:5px; max-width:100%;"allowfullscreen></iframe><div style="margin-bottom:5px"><strong><a href="https://www.slideshare.net/slideshow/ss-72500089/72500089" title="ss-72500089" target="_blank">ss-72500089</a></strong>from <strong><a href="https://www.slideshare.net/satanic2" target="_blank">satanic </a></strong></div>
+
+</details>
+
 ## 計算量
 - 構築: $O(NlogM)$ (Mは最大の次数)
 - `query`: $O(logK)$
