@@ -197,6 +197,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/sequence/dispersion.hpp
       title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03"
+    - icon: ':warning:'
+      path: library/sequence/doubling.hpp
+      title: "\u30C0\u30D6\u30EA\u30F3\u30B0"
     - icon: ':heavy_check_mark:'
       path: library/sequence/inversion_number.hpp
       title: "\u8EE2\u5012\u6570"
@@ -483,5 +486,5 @@ layout: toppage
 ## 関連
 - [Gistのコードブロックにコピーボタンを付与](https://gist.github.com/serna37/0ffbef0e65fe2a62cafdd998d8877f19)
 - [色別ランダム演習](https://gist.github.com/serna37/9eb27f4603f1e085bca4cded24d594fe)
-- [JSで競プロ](https://gist.github.com/serna37/95448aefc36a098a436e1e38c02fa790)
+- [JSスニペット](https://gist.github.com/serna37/95448aefc36a098a436e1e38c02fa790)
 - [ライブラリ未満のスニペット集Gist](https://gist.github.com/serna37/b006de8b04d440c535d4f1e9a6a70a74)
