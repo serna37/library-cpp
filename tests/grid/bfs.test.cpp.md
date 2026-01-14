@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/grid/bfs.hpp
     title: "\u30B0\u30EA\u30C3\u30C9BFS"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -80,7 +80,7 @@ data:
   isVerificationFile: true
   path: tests/grid/bfs.test.cpp
   requiredBy: []
-  timestamp: '2026-01-14 13:57:00+09:00'
+  timestamp: '2026-01-14 14:43:43+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/grid/bfs.test.cpp

@@ -27,7 +27,7 @@ data:
   isVerificationFile: false
   path: library/search/bit_search.hpp
   requiredBy: []
-  timestamp: '2026-01-14 13:57:00+09:00'
+  timestamp: '2026-01-14 14:43:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/search/bit_search.test.cpp

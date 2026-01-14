@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
@@ -26,7 +26,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/dijkstra.hpp
     title: Dijkstra
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/graph/shortest_path/warshall_froyd.hpp
     title: Warshall Froyd
   - icon: ':heavy_check_mark:'
@@ -62,7 +62,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph/shortest_path/dijkstra.test.cpp
     title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/graph/shortest_path/warshall_froyd.test.cpp
     title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -76,9 +76,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph/tree/lca.test.cpp
     title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n    int from,\
@@ -104,8 +104,8 @@ data:
   - library/graph/cycle_detect.hpp
   - library/graph/tree/lca.hpp
   - library/graph/strongly_connected_components.hpp
-  timestamp: '2026-01-14 13:57:00+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-14 14:43:43+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/graph/topological_sort.test.cpp
   - tests/graph/shortest_path/bfs.test.cpp

@@ -14,8 +14,9 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/various/random.hpp\"\ninline long long random(long\
-    \ long a, long long b) {\n    if (a >= b) return a;\n    static mt19937 mt(chrono::steady_clock::now().time_since_epoch().count());\n\
+  bundledCode: "#line 2 \"library/various/random.hpp\"\n#include <chrono>\n#include\
+    \ <random>\ninline long long random(long long a, long long b) {\n    if (a >=\
+    \ b) return a;\n    static mt19937 mt(chrono::steady_clock::now().time_since_epoch().count());\n\
     \    uniform_int_distribution<long long> dist(a, b - 1);\n    return dist(mt);\n\
     }\n#line 3 \"library/string/rolling_hash.hpp\"\nstruct RollingHash {\n    static\
     \ const long long MOD = (1LL << 61) - 1;\n    static inline long long base = 0;\n\
@@ -75,7 +76,7 @@ data:
   isVerificationFile: false
   path: library/string/rolling_hash.hpp
   requiredBy: []
-  timestamp: '2026-01-14 13:57:00+09:00'
+  timestamp: '2026-01-14 14:43:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/rolling_hash.test.cpp

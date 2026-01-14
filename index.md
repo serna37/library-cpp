@@ -9,12 +9,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/geometry/area_triangle.hpp
       title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D"
+    - icon: ':heavy_check_mark:'
+      path: library/geometry/util.hpp
+      title: "\u5E7E\u4F55Util"
   - name: library/graph/base
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/graph/base/edge.hpp
       title: "\u8FBA"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/graph/base/graph.hpp
       title: "\u30B0\u30E9\u30D5"
     - icon: ':heavy_check_mark:'
@@ -51,7 +54,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/graph/shortest_path/dijkstra.hpp
       title: Dijkstra
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/graph/shortest_path/warshall_froyd.hpp
       title: Warshall Froyd
   - name: library/graph/tree
@@ -78,6 +81,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/number/digit_sum.hpp
       title: "\u6841\u548C"
+    - icon: ':heavy_check_mark:'
+      path: library/number/div.hpp
+      title: "\u5272\u308A\u7B97"
     - icon: ':heavy_check_mark:'
       path: library/number/divisors.hpp
       title: "\u7D04\u6570\u5217\u6319"
@@ -144,10 +150,10 @@ data:
       path: library/search/bi_lt_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\
         \u5927\u5024"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search.hpp
       title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search_real.hpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
     - icon: ':heavy_check_mark:'
@@ -161,16 +167,16 @@ data:
       title: "\u9806\u5217\u5168\u63A2\u7D22"
   - name: library/segtree
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/segtree/dual_segment_tree.hpp
       title: Dual Segment Tree
     - icon: ':heavy_check_mark:'
       path: library/segtree/fenwick_tree.hpp
       title: Fenwick Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/segtree/lazy_segment_tree.hpp
       title: Lazy Segment Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/segtree/segment_tree.hpp
       title: Segment Tree
     - icon: ':heavy_check_mark:'
@@ -178,6 +184,9 @@ data:
       title: Starry Sky Tree
   - name: library/sequence
     pages:
+    - icon: ':heavy_check_mark:'
+      path: library/sequence/collection_util.hpp
+      title: "\u914D\u5217\u7CFBUtil"
     - icon: ':heavy_check_mark:'
       path: library/sequence/cumulative_sum.hpp
       title: "\u7D2F\u7A4D\u548C"
@@ -237,12 +246,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/string/split_multi.hpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570"
+    - icon: ':heavy_check_mark:'
+      path: library/string/util.hpp
+      title: "\u6587\u5B57\u5217Util"
   - name: library/struct
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/struct/monoid.hpp
       title: "\u30E2\u30CE\u30A4\u30C9"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/struct/monoid_act.hpp
       title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
     - icon: ':heavy_check_mark:'
@@ -251,6 +263,9 @@ data:
   - name: library/various
     pages:
     - icon: ':heavy_check_mark:'
+      path: library/various/convert.hpp
+      title: "\u578B\u5909\u63DB"
+    - icon: ':heavy_check_mark:'
       path: library/various/random.hpp
       title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
   - name: template
@@ -258,7 +273,7 @@ data:
     - icon: ':warning:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   verificationCategories:
@@ -270,6 +285,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/geometry/area_triangle.test.cpp
       title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/geometry/util.test.cpp
+      title: "\u5E7E\u4F55Util\u306E\u30C6\u30B9\u30C8"
   - name: tests/graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -305,7 +323,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/graph/shortest_path/dijkstra.test.cpp
       title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/graph/shortest_path/warshall_froyd.test.cpp
       title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
   - name: tests/graph/tree
@@ -332,6 +350,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/number/digit_sum.test.cpp
       title: "\u6841\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number/div.test.cpp
+      title: "\u5272\u308A\u7B97\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/number/divisors.test.cpp
       title: "\u7D04\u6570\u5217\u6319\u306E\u30C6\u30B9\u30C8"
@@ -373,10 +394,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/search/bi_search_cnt.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search/binary_search.test.cpp
       title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search/binary_search_real.test.cpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
@@ -387,16 +408,16 @@ data:
       title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
   - name: tests/segtree
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/segtree/dual_segment_tree.test.cpp
       title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
     - icon: ':heavy_check_mark:'
       path: tests/segtree/fenwick_tree.test.cpp
       title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/segtree/lazy_segment_tree.test.cpp
       title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/segtree/segment_tree.test.cpp
       title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
     - icon: ':heavy_check_mark:'
@@ -407,6 +428,9 @@ data:
       title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
   - name: tests/sequence
     pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence/collection_util.test.cpp
+      title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/sequence/cumulative_sum.test.cpp
       title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
@@ -463,6 +487,9 @@ data:
       path: tests/string/split_multi.test.cpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
         \u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string/util.test.cpp
+      title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
   - name: tests/struct
     pages:
     - icon: ':heavy_check_mark:'
@@ -475,6 +502,9 @@ data:
       title: "template\u306E\u30C6\u30B9\u30C8"
   - name: tests/various
     pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/various/convert.test.cpp
+      title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/various/random.test.cpp
       title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"

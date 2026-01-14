@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/struct/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/struct/monoid_act.hpp
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree/lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/struct/monoid.hpp\"\n/**\n * @brief \u30E2\u30CE\
@@ -213,8 +213,8 @@ data:
   isVerificationFile: false
   path: library/segtree/lazy_segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-14 13:57:00+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-14 14:43:43+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp
 documentation_of: library/segtree/lazy_segment_tree.hpp
