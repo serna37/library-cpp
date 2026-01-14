@@ -1,10 +1,8 @@
 #pragma once
 template <typename T> struct Doubling {
-  private:
     int N, log = 0;
     vector<vector<T>> table;
-
-  public:
+    Doubling() {}
     Doubling(const vector<T> &next, long long max_steps) {
         N = next.size();
         while ((1ll << log) <= max_steps) ++log;
