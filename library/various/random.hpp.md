@@ -1,8 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: library/string/rolling_hash.hpp
+    title: Rolling Hash
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/string/rolling_hash.test.cpp
+    title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/various/random.test.cpp
     title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
@@ -22,10 +28,12 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/various/random.hpp
-  requiredBy: []
-  timestamp: '2026-01-14 09:03:43+09:00'
+  requiredBy:
+  - library/string/rolling_hash.hpp
+  timestamp: '2026-01-14 09:15:33+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/string/rolling_hash.test.cpp
   - tests/various/random.test.cpp
 documentation_of: library/various/random.hpp
 layout: document

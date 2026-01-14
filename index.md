@@ -218,6 +218,9 @@ data:
       path: library/string/range.hpp
       title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97"
     - icon: ':heavy_check_mark:'
+      path: library/string/rolling_hash.hpp
+      title: Rolling Hash
+    - icon: ':heavy_check_mark:'
       path: library/string/run_length.hpp
       title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E"
     - icon: ':heavy_check_mark:'
@@ -434,6 +437,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/string/range.test.cpp
       title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string/rolling_hash.test.cpp
+      title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/string/run_length.test.cpp
       title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"

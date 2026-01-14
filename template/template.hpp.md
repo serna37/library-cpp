@@ -167,6 +167,9 @@ data:
     path: tests/string/range.test.cpp
     title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/string/rolling_hash.test.cpp
+    title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/string/run_length.test.cpp
     title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -278,7 +281,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-14 09:03:43+09:00'
+  timestamp: '2026-01-14 09:15:33+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -286,6 +289,7 @@ data:
   - tests/string/split.test.cpp
   - tests/string/range.test.cpp
   - tests/string/run_length.test.cpp
+  - tests/string/rolling_hash.test.cpp
   - tests/string/finds.test.cpp
   - tests/segtree/starry_sky_tree_2.test.cpp
   - tests/segtree/lazy_segment_tree.test.cpp
