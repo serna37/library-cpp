@@ -69,7 +69,7 @@ data:
   isVerificationFile: false
   path: library/segtree/segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-14 15:04:06+09:00'
+  timestamp: '2026-01-14 18:38:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/segment_tree.test.cpp
@@ -79,6 +79,7 @@ title: Segment Tree
 ---
 
 # Segment Tree
+[詳しい説明](https://note.alhinc.jp/n/n20b6c51a4760)
 
 ## できること
 - モノイドについて処理

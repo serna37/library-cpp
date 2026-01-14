@@ -28,7 +28,7 @@ data:
   isVerificationFile: false
   path: library/various/convert.hpp
   requiredBy: []
-  timestamp: '2026-01-14 15:04:06+09:00'
+  timestamp: '2026-01-14 18:38:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/shortest_path/warshall_froyd.test.cpp

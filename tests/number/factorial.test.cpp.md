@@ -56,7 +56,7 @@ data:
   isVerificationFile: true
   path: tests/number/factorial.test.cpp
   requiredBy: []
-  timestamp: '2026-01-14 15:04:06+09:00'
+  timestamp: '2026-01-14 18:38:13+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/number/factorial.test.cpp
