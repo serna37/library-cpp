@@ -22,7 +22,7 @@ data:
   isVerificationFile: false
   path: library/number/divisors.hpp
   requiredBy: []
-  timestamp: '2026-01-14 18:38:13+09:00'
+  timestamp: '2026-01-14 20:12:54+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number/divisors.test.cpp

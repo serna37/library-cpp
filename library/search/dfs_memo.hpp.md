@@ -31,7 +31,7 @@ data:
   isVerificationFile: false
   path: library/search/dfs_memo.hpp
   requiredBy: []
-  timestamp: '2026-01-14 18:38:13+09:00'
+  timestamp: '2026-01-14 20:12:54+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/search/dfs_memo.hpp

@@ -31,7 +31,7 @@ data:
   requiredBy:
   - library/number/mod_inverse.hpp
   - library/number/mod_combination.hpp
-  timestamp: '2026-01-14 18:38:13+09:00'
+  timestamp: '2026-01-14 20:12:54+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number/mod_combination.test.cpp
