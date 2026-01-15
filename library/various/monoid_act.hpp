@@ -1,5 +1,5 @@
 #pragma once
-#include "library/struct/monoid.hpp"
+#include "library/various/monoid.hpp"
 /**
  * @brief モノイド作用素
  */

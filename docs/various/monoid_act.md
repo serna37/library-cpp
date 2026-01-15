@@ -1,6 +1,6 @@
 ---
 title: モノイド作用素
-documentation_of: //library/struct/monoid_act.hpp
+documentation_of: //library/various/monoid_act.hpp
 ---
 
 # モノイド作用素
