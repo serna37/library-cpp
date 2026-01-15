@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C"
 #include "template/template.hpp"
-#include "library/graph/strongly_connected_components.hpp"
+#include "library/graph/connected_components/strongly_connected_components.hpp"
 /**
  * @brief グラフ - 強連結成分分解のテスト
  */

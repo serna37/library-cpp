@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_D"
 #include "template/template.hpp"
-#include "library/graph/connected_components.hpp"
+#include "library/graph/connected_components/connected_components.hpp"
 /**
  * @brief グラフ - 連結成分分解のテスト
  */
