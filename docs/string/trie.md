@@ -10,11 +10,9 @@ documentation_of: //library/string/trie.hpp
 - 単語の登録・検索
 - 接頭辞（Prefix）検索（指定文字列で始まる単語がいくつ登録されているか）
 
-<details><summary>詳しい説明</summary>
+<img width="350" height="327" alt="Image" src="https://github.com/user-attachments/assets/331fe951-3b96-4088-849f-50feb83f6f2f" />
 
-<img width="350" height="327" alt="Image" src="https://github.com/user-attachments/assets/331fe951-3b96-4088-849f-50feb83f6f2f" /> [^trie-tree-img]
-[^trie-tree-img]: https://www.geeksforgeeks.org/dsa/trie-insert-and-search/
-
+画像の引用: https://www.geeksforgeeks.org/dsa/trie-insert-and-search/  
 実装の参考: https://ei1333.github.io/library/structure/trie/trie.hpp  
 - `accept`: そのノードで「ちょうど終わる単語のID」を保存
   - "apple"を追加したとき、最後の"e"のノードのacceptにそのIDが入る
@@ -29,9 +27,6 @@ Root (nodes[0])
                 └── 'l' (nodes[4])
                      └── 'e' (nodes[5]) <-- accept: [1], exist: 1
 ```
-
-</details>
-<br>
 
 ## 計算量
 - `add`: $O(|S| * \sum)$ Sは追加する文字列、 $\sum$ はchar_size
