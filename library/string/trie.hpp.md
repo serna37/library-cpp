@@ -65,7 +65,7 @@ data:
   path: library/string/trie.hpp
   requiredBy:
   - library/string/aho_corasick.hpp
-  timestamp: '2026-01-15 11:46:47+09:00'
+  timestamp: '2026-01-15 14:36:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/aho_corasick.test.cpp

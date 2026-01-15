@@ -170,6 +170,10 @@ data:
     path: tests/sequence/merge.test.cpp
     title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/sequence/wavelet_matrix.test.cpp
+    title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
+      \u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/string/aho_corasick.test.cpp
     title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -251,7 +255,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:46:47+09:00'
+  timestamp: '2026-01-15 14:36:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -284,6 +288,7 @@ data:
   - tests/graph/mst/kruskal.test.cpp
   - tests/graph/tree/lca.test.cpp
   - tests/sequence/dispersion.test.cpp
+  - tests/sequence/wavelet_matrix.test.cpp
   - tests/sequence/collection_util.test.cpp
   - tests/sequence/difference_sequence.test.cpp
   - tests/sequence/merge.test.cpp

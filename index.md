@@ -217,6 +217,9 @@ data:
   - name: library/sequence
     pages:
     - icon: ':heavy_check_mark:'
+      path: library/sequence/bit_dict.hpp
+      title: "\u5B8C\u5099\u8F9E\u66F8"
+    - icon: ':heavy_check_mark:'
       path: library/sequence/collection_util.hpp
       title: "\u914D\u5217\u7CFBUtil"
     - icon: ':heavy_check_mark:'
@@ -231,6 +234,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/sequence/merge.hpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF"
+    - icon: ':heavy_check_mark:'
+      path: library/sequence/wavelet_matrix.hpp
+      title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
     - icon: ':heavy_check_mark:'
       path: library/sequence/zip_coordinate.hpp
       title: "\u5EA7\u6A19\u5727\u7E2E"
@@ -490,6 +496,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/sequence/merge.test.cpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence/wavelet_matrix.test.cpp
+      title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
+        \u30C8"
   - name: tests/string
     pages:
     - icon: ':heavy_check_mark:'
