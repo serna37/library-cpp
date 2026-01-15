@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/number/div.test.cpp
+    path: tests/number.div.test.cpp
     title: "\u5272\u308A\u7B97\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -25,10 +25,10 @@ data:
   isVerificationFile: false
   path: library/number/div.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/number/div.test.cpp
+  - tests/number.div.test.cpp
 documentation_of: library/number/div.hpp
 layout: document
 title: "\u5272\u308A\u7B97"

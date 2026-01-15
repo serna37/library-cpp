@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/number/digit_sum.test.cpp
+    path: tests/number.digit_sum.test.cpp
     title: "\u6841\u548C\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -21,10 +21,10 @@ data:
   isVerificationFile: false
   path: library/number/digit_sum.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/number/digit_sum.test.cpp
+  - tests/number.digit_sum.test.cpp
 documentation_of: library/number/digit_sum.hpp
 layout: document
 title: "\u6841\u548C"

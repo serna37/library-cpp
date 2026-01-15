@@ -13,10 +13,10 @@ data:
     title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/graph/cycle_detect.test.cpp
+    path: tests/graph.cycle_detect.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u9589\u8DEF\u691C\u51FA\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/graph/topological_sort.test.cpp
+    path: tests/graph.topological_sort.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\
       \u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
@@ -85,11 +85,11 @@ data:
   path: library/graph/cycle_detect.hpp
   requiredBy:
   - library/graph/topological_sort.hpp
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph/topological_sort.test.cpp
-  - tests/graph/cycle_detect.test.cpp
+  - tests/graph.cycle_detect.test.cpp
+  - tests/graph.topological_sort.test.cpp
 documentation_of: library/graph/cycle_detect.hpp
 layout: document
 title: "\u9589\u8DEF\u691C\u51FA"

@@ -10,10 +10,10 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/graph/route_restore.test.cpp
+    path: tests/graph.route_restore.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u7D4C\u8DEF\u5FA9\u5143\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/graph/shortest_path/dijkstra.test.cpp
+    path: tests/graph.shortest_path.dijkstra.test.cpp
     title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -68,11 +68,11 @@ data:
   isVerificationFile: false
   path: library/graph/shortest_path/dijkstra.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph/shortest_path/dijkstra.test.cpp
-  - tests/graph/route_restore.test.cpp
+  - tests/graph.shortest_path.dijkstra.test.cpp
+  - tests/graph.route_restore.test.cpp
 documentation_of: library/graph/shortest_path/dijkstra.hpp
 layout: document
 title: Dijkstra

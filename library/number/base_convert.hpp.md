@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/number/base_convert.test.cpp
+    path: tests/number.base_convert.test.cpp
     title: "\u9032\u6570\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -26,10 +26,10 @@ data:
   isVerificationFile: false
   path: library/number/base_convert.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/number/base_convert.test.cpp
+  - tests/number.base_convert.test.cpp
 documentation_of: library/number/base_convert.hpp
 layout: document
 title: "\u9032\u6570\u5909\u63DB"

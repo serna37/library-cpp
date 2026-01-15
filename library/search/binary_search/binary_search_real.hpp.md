@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/search/binary_search/binary_search_real.test.cpp
+    path: tests/search.binary_search.binary_search_real.test.cpp
     title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -27,10 +27,10 @@ data:
   isVerificationFile: false
   path: library/search/binary_search/binary_search_real.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/search/binary_search/binary_search_real.test.cpp
+  - tests/search.binary_search.binary_search_real.test.cpp
 documentation_of: library/search/binary_search/binary_search_real.hpp
 layout: document
 title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"

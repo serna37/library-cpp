@@ -13,10 +13,10 @@ data:
     title: LCA
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/graph/shortest_path/bfs.test.cpp
+    path: tests/graph.shortest_path.bfs.test.cpp
     title: "\u30B0\u30E9\u30D5 - BFS\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/graph/tree/lca.test.cpp
+    path: tests/graph.tree.lca.test.cpp
     title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -62,11 +62,11 @@ data:
   path: library/graph/shortest_path/bfs.hpp
   requiredBy:
   - library/graph/tree/lca.hpp
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph/shortest_path/bfs.test.cpp
-  - tests/graph/tree/lca.test.cpp
+  - tests/graph.tree.lca.test.cpp
+  - tests/graph.shortest_path.bfs.test.cpp
 documentation_of: library/graph/shortest_path/bfs.hpp
 layout: document
 title: BFS

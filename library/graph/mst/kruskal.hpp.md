@@ -10,7 +10,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/graph/mst/kruskal.test.cpp
+    path: tests/graph.mst.kruskal.test.cpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\u30C6\
       \u30B9\u30C8"
   _isVerificationFailed: false
@@ -53,10 +53,10 @@ data:
   isVerificationFile: false
   path: library/graph/mst/kruskal.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph/mst/kruskal.test.cpp
+  - tests/graph.mst.kruskal.test.cpp
 documentation_of: library/graph/mst/kruskal.hpp
 layout: document
 title: Kruskal

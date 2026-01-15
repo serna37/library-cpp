@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/geometry/area_triangle.test.cpp
+    path: tests/geometry.area_triangle.test.cpp
     title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -21,10 +21,10 @@ data:
   isVerificationFile: false
   path: library/geometry/area_triangle.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/geometry/area_triangle.test.cpp
+  - tests/geometry.area_triangle.test.cpp
 documentation_of: library/geometry/area_triangle.hpp
 layout: document
 title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D"

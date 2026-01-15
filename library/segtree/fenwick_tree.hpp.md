@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: tests/segtree/fenwick_tree.test.cpp
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: tests/segtree.fenwick_tree.cpp
     title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/segtree/fenwick_tree.hpp\"\nstruct FenwickTree {\n\
@@ -32,11 +32,11 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/segtree/fenwick_tree.hpp
-  requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - tests/segtree/fenwick_tree.test.cpp
+  requiredBy:
+  - tests/segtree.fenwick_tree.cpp
+  timestamp: '2026-01-15 17:22:03+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: library/segtree/fenwick_tree.hpp
 layout: document
 title: Fenwick Tree

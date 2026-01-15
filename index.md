@@ -202,7 +202,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/segtree/dual_segment_tree.hpp
       title: Dual Segment Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: library/segtree/fenwick_tree.hpp
       title: Fenwick Tree
     - icon: ':heavy_check_mark:'
@@ -297,254 +297,220 @@ data:
     - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
-  verificationCategories:
-  - name: tests/dp/cumulative_sum
+  - name: tests
     pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/dp/cumulative_sum/cumulative_sum.test.cpp
-      title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/dp/cumulative_sum/cumulative_sum_2D.test.cpp
-      title: "2\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/dp/cumulative_sum/cumulative_sum_3D.test.cpp
-      title: "3\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/dp/cumulative_sum/cumulative_sum_diff.test.cpp
-      title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/dp/cumulative_sum/cumulative_sum_rev.test.cpp
-      title: "\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/dp/cumulative_sum/cumulative_sum_rev_diff.test.cpp
-      title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\
-        \u30B9\u30C8"
-  - name: tests/geometry
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/geometry/area_square.test.cpp
-      title: "\u56DB\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/geometry/area_triangle.test.cpp
-      title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/geometry/util.test.cpp
-      title: "\u5E7E\u4F55Util\u306E\u30C6\u30B9\u30C8"
-  - name: tests/graph/connected_components
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/connected_components/connected_components.test.cpp
-      title: "\u30B0\u30E9\u30D5 - \u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\
-        \u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/connected_components/strongly_connected_components.test.cpp
-      title: "\u30B0\u30E9\u30D5 - \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\
-        \u30C6\u30B9\u30C8"
-  - name: tests/graph
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/cycle_detect.test.cpp
-      title: "\u30B0\u30E9\u30D5 - \u9589\u8DEF\u691C\u51FA\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/route_restore.test.cpp
-      title: "\u30B0\u30E9\u30D5 - \u7D4C\u8DEF\u5FA9\u5143\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/topological_sort.test.cpp
-      title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\
-        \u30C8\u306E\u30C6\u30B9\u30C8"
-  - name: tests/graph/mst
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/mst/kruskal.test.cpp
-      title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\
-        \u30C6\u30B9\u30C8"
-  - name: tests/graph/shortest_path
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/shortest_path/bellman_ford.test.cpp
-      title: "\u30B0\u30E9\u30D5 - BellmanFord\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/shortest_path/bfs.test.cpp
-      title: "\u30B0\u30E9\u30D5 - BFS\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/shortest_path/dijkstra.test.cpp
-      title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/shortest_path/warshall_froyd.test.cpp
-      title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
-  - name: tests/graph/tree
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/graph/tree/lca.test.cpp
-      title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
-  - name: tests/grid
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/grid/bfs.test.cpp
-      title: "\u30B0\u30EA\u30C3\u30C9BFS\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/grid/transpose.test.cpp
-      title: "\u8EE2\u7F6E\u306E\u30C6\u30B9\u30C8"
-  - name: tests/number
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/number/base_convert.test.cpp
-      title: "\u9032\u6570\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/number/combination.test.cpp
-      title: "\u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/number/digit_sum.test.cpp
-      title: "\u6841\u548C\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/number/div.test.cpp
-      title: "\u5272\u308A\u7B97\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/number/divisors.test.cpp
-      title: "\u7D04\u6570\u5217\u6319\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/number/factorial.test.cpp
-      title: "\u968E\u4E57\u306E\u30C6\u30B9\u30C8"
-  - name: tests/number/mod
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/number/mod/mod_combination.test.cpp
-      title: "MOD \u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
-  - name: tests/number/prime
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/number/prime/prime_fact.test.cpp
-      title: "\u7D20\u56E0\u6570\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/number/prime/prime_test.test.cpp
-      title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
-  - name: tests/polynomial
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/polynomial/convolution_fft.test.cpp
-      title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
-  - name: tests/search/binary_search
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/search/binary_search/bi_ge_val.test.cpp
-      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\
-        \u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/search/binary_search/bi_gt_val.test.cpp
-      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
-        \u6700\u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/search/binary_search/bi_le_val.test.cpp
-      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\
-        \u5927\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/search/binary_search/bi_lt_val.test.cpp
-      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\
-        \u5927\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/search/binary_search/bi_search_cnt.test.cpp
-      title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/search/binary_search/binary_search.test.cpp
-      title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/search/binary_search/binary_search_real.test.cpp
-      title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-  - name: tests/search
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/search/bit_search.test.cpp
-      title: "bit\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/search/permutation.test.cpp
-      title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-  - name: tests/segtree
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/segtree/dual_segment_tree.test.cpp
-      title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
-    - icon: ':heavy_check_mark:'
-      path: tests/segtree/fenwick_tree.test.cpp
+    - icon: ':warning:'
+      path: tests/segtree.fenwick_tree.cpp
       title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
-    - icon: ':heavy_check_mark:'
-      path: tests/segtree/lazy_segment_tree.test.cpp
-      title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-    - icon: ':heavy_check_mark:'
-      path: tests/segtree/segment_tree.test.cpp
-      title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
-    - icon: ':heavy_check_mark:'
-      path: tests/segtree/starry_sky_tree.test.cpp
-      title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-    - icon: ':heavy_check_mark:'
-      path: tests/segtree/starry_sky_tree_2.test.cpp
-      title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
-  - name: tests/sequence
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/sequence/collection_util.test.cpp
-      title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/sequence/difference_sequence.test.cpp
-      title: "\u968E\u5DEE\u6570\u5217\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/sequence/dispersion.test.cpp
-      title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\u30C6\
-        \u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/sequence/inversion_number.test.cpp
-      title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/sequence/merge.test.cpp
-      title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/sequence/wavelet_matrix.test.cpp
-      title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
-        \u30C8"
-  - name: tests/string
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/string/aho_corasick.test.cpp
-      title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/string/finds.test.cpp
-      title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/string/join.test.cpp
-      title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/string/range.test.cpp
-      title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/string/rolling_hash.test.cpp
-      title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/string/run_length.test.cpp
-      title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/string/split.test.cpp
-      title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/string/split_multi.test.cpp
-      title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
-        \u30C8"
-    - icon: ':heavy_check_mark:'
-      path: tests/string/util.test.cpp
-      title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
+  verificationCategories:
   - name: tests
     pages:
     - icon: ':heavy_check_mark:'
+      path: tests/dp.cumulative_sum.cumulative_sum.test.cpp
+      title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/dp.cumulative_sum.cumulative_sum_2D.test.cpp
+      title: "2\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/dp.cumulative_sum.cumulative_sum_3D.test.cpp
+      title: "3\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/dp.cumulative_sum.cumulative_sum_diff.test.cpp
+      title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/dp.cumulative_sum.cumulative_sum_rev.test.cpp
+      title: "\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/dp.cumulative_sum.cumulative_sum_rev_diff.test.cpp
+      title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\
+        \u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/geometry.area_square.test.cpp
+      title: "\u56DB\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/geometry.area_triangle.test.cpp
+      title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/geometry.util.test.cpp
+      title: "\u5E7E\u4F55Util\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.connected_components.connected_components.test.cpp
+      title: "\u30B0\u30E9\u30D5 - \u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\
+        \u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.connected_components.strongly_connected_components.test.cpp
+      title: "\u30B0\u30E9\u30D5 - \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\
+        \u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.cycle_detect.test.cpp
+      title: "\u30B0\u30E9\u30D5 - \u9589\u8DEF\u691C\u51FA\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.mst.kruskal.test.cpp
+      title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\
+        \u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.route_restore.test.cpp
+      title: "\u30B0\u30E9\u30D5 - \u7D4C\u8DEF\u5FA9\u5143\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.shortest_path.bellman_ford.test.cpp
+      title: "\u30B0\u30E9\u30D5 - BellmanFord\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.shortest_path.bfs.test.cpp
+      title: "\u30B0\u30E9\u30D5 - BFS\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.shortest_path.dijkstra.test.cpp
+      title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.shortest_path.warshall_froyd.test.cpp
+      title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.topological_sort.test.cpp
+      title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\
+        \u30C8\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.tree.lca.test.cpp
+      title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/grid.bfs.test.cpp
+      title: "\u30B0\u30EA\u30C3\u30C9BFS\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/grid.transpose.test.cpp
+      title: "\u8EE2\u7F6E\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number.base_convert.test.cpp
+      title: "\u9032\u6570\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number.combination.test.cpp
+      title: "\u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number.digit_sum.test.cpp
+      title: "\u6841\u548C\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number.div.test.cpp
+      title: "\u5272\u308A\u7B97\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number.divisors.test.cpp
+      title: "\u7D04\u6570\u5217\u6319\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number.factorial.test.cpp
+      title: "\u968E\u4E57\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number.mod.mod_combination.test.cpp
+      title: "MOD \u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number.prime.prime_fact.test.cpp
+      title: "\u7D20\u56E0\u6570\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number.prime.prime_test.test.cpp
+      title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/polynomial.convolution_fft.test.cpp
+      title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search.binary_search.bi_ge_val.test.cpp
+      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\
+        \u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search.binary_search.bi_gt_val.test.cpp
+      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
+        \u6700\u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search.binary_search.bi_le_val.test.cpp
+      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\
+        \u5927\u5024\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search.binary_search.bi_lt_val.test.cpp
+      title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\
+        \u5927\u5024\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search.binary_search.bi_search_cnt.test.cpp
+      title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search.binary_search.binary_search.test.cpp
+      title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search.binary_search.binary_search_real.test.cpp
+      title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search.bit_search.test.cpp
+      title: "bit\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/search.permutation.test.cpp
+      title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/segtree.dual_segment_tree.test.cpp
+      title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
+    - icon: ':heavy_check_mark:'
+      path: tests/segtree.lazy_segment_tree.test.cpp
+      title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
+    - icon: ':heavy_check_mark:'
+      path: tests/segtree.segment_tree.test.cpp
+      title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
+    - icon: ':heavy_check_mark:'
+      path: tests/segtree.starry_sky_tree.test.cpp
+      title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
+    - icon: ':heavy_check_mark:'
+      path: tests/segtree.starry_sky_tree_2.test.cpp
+      title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence.collection_util.test.cpp
+      title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence.difference_sequence.test.cpp
+      title: "\u968E\u5DEE\u6570\u5217\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence.dispersion.test.cpp
+      title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\u30C6\
+        \u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence.inversion_number.test.cpp
+      title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence.merge.test.cpp
+      title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence.wavelet_matrix.test.cpp
+      title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
+        \u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string.aho_corasick.test.cpp
+      title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string.finds.test.cpp
+      title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string.join.test.cpp
+      title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string.range.test.cpp
+      title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string.rolling_hash.test.cpp
+      title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string.run_length.test.cpp
+      title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string.split.test.cpp
+      title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string.split_multi.test.cpp
+      title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
+        \u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string.util.test.cpp
+      title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
       path: tests/template.test.cpp
       title: "template\u306E\u30C6\u30B9\u30C8"
-  - name: tests/various
-    pages:
     - icon: ':heavy_check_mark:'
-      path: tests/various/convert.test.cpp
+      path: tests/various.convert.test.cpp
       title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
-      path: tests/various/random.test.cpp
+      path: tests/various.random.test.cpp
       title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
-      path: tests/various/union_find.test.cpp
+      path: tests/various.union_find.test.cpp
       title: "Union Find\u306E\u30C6\u30B9\u30C8"
 layout: toppage
 ---

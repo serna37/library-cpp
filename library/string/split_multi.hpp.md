@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/string/split_multi.test.cpp
+    path: tests/string.split_multi.test.cpp
     title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
       \u30C8"
   _isVerificationFailed: false
@@ -25,10 +25,10 @@ data:
   isVerificationFile: false
   path: library/string/split_multi.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/string/split_multi.test.cpp
+  - tests/string.split_multi.test.cpp
 documentation_of: library/string/split_multi.hpp
 layout: document
 title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570"

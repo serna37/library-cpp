@@ -7,7 +7,7 @@ data:
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/sequence/wavelet_matrix.test.cpp
+    path: tests/sequence.wavelet_matrix.test.cpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
       \u30C8"
   _isVerificationFailed: false
@@ -78,10 +78,10 @@ data:
   path: library/sequence/bit_dict.hpp
   requiredBy:
   - library/sequence/wavelet_matrix.hpp
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/sequence/wavelet_matrix.test.cpp
+  - tests/sequence.wavelet_matrix.test.cpp
 documentation_of: library/sequence/bit_dict.hpp
 layout: document
 title: "\u5B8C\u5099\u8F9E\u66F8"

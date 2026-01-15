@@ -7,7 +7,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/segtree/dual_segment_tree.test.cpp
+    path: tests/segtree.dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -79,10 +79,10 @@ data:
   isVerificationFile: false
   path: library/segtree/dual_segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/segtree/dual_segment_tree.test.cpp
+  - tests/segtree.dual_segment_tree.test.cpp
 documentation_of: library/segtree/dual_segment_tree.hpp
 layout: document
 title: Dual Segment Tree

@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/sequence/collection_util.test.cpp
+    path: tests/sequence.collection_util.test.cpp
     title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -57,10 +57,10 @@ data:
   isVerificationFile: false
   path: library/sequence/collection_util.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/sequence/collection_util.test.cpp
+  - tests/sequence.collection_util.test.cpp
 documentation_of: library/sequence/collection_util.hpp
 layout: document
 title: "\u914D\u5217\u7CFBUtil"

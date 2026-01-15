@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/number/prime/prime_fact.test.cpp
+    path: tests/number.prime.prime_fact.test.cpp
     title: "\u7D20\u56E0\u6570\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -23,10 +23,10 @@ data:
   isVerificationFile: false
   path: library/number/prime/prime_fact.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/number/prime/prime_fact.test.cpp
+  - tests/number.prime.prime_fact.test.cpp
 documentation_of: library/number/prime/prime_fact.hpp
 layout: document
 title: "\u7D20\u56E0\u6570\u5206\u89E3"

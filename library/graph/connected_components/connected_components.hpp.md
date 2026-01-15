@@ -10,7 +10,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/graph/connected_components/connected_components.test.cpp
+    path: tests/graph.connected_components.connected_components.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\u30B9\
       \u30C8"
   _isVerificationFailed: false
@@ -59,10 +59,10 @@ data:
   isVerificationFile: false
   path: library/graph/connected_components/connected_components.hpp
   requiredBy: []
-  timestamp: '2026-01-15 14:36:25+09:00'
+  timestamp: '2026-01-15 17:22:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph/connected_components/connected_components.test.cpp
+  - tests/graph.connected_components.connected_components.test.cpp
 documentation_of: library/graph/connected_components/connected_components.hpp
 layout: document
 title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
