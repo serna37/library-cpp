@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/struct/monoid.hpp
+    path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
@@ -15,7 +15,7 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/segtree/dual_segment_tree.hpp\"\n#include <functional>\n\
-    #line 2 \"library/struct/monoid.hpp\"\n/**\n * @brief \u30E2\u30CE\u30A4\u30C9\
+    #line 2 \"library/various/monoid.hpp\"\n/**\n * @brief \u30E2\u30CE\u30A4\u30C9\
     \n */\nstruct Monoid {\n    // \u6700\u5C0F\u5024\n    struct Min {\n        static\
     \ constexpr int e = INT_MAX;\n        static int op(int x, int y) {\n        \
     \    return min(x, y);\n        }\n    };\n    // \u6700\u5927\u5024\n    struct\
@@ -54,7 +54,7 @@ data:
     \ i) != r) propagate((r - 1) >> i);\n        }\n        while (l < r) {\n    \
     \        if (l & 1) apply_at(l++, a);\n            if (r & 1) apply_at(--r, a);\n\
     \            l >>= 1, r >>= 1;\n        }\n    }\n};\n"
-  code: "#pragma once\n#include <functional>\n#include \"library/struct/monoid.hpp\"\
+  code: "#pragma once\n#include <functional>\n#include \"library/various/monoid.hpp\"\
     \ntemplate <typename T> struct DualSegmentTree {\n    using F = function<T(T,\
     \ T)>;\n\n  private:\n    F op;\n    T e;\n    int N, size, log = 1;\n    vector<T>\
     \ node;\n    void init() {\n        while ((1ll << log) < N) ++log;\n        node.assign((size\
@@ -75,11 +75,11 @@ data:
     \        if (l & 1) apply_at(l++, a);\n            if (r & 1) apply_at(--r, a);\n\
     \            l >>= 1, r >>= 1;\n        }\n    }\n};\n"
   dependsOn:
-  - library/struct/monoid.hpp
+  - library/various/monoid.hpp
   isVerificationFile: false
   path: library/segtree/dual_segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-01-15 10:36:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/dual_segment_tree.test.cpp

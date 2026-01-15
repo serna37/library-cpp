@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/struct/union_find.hpp
+    path: library/various/union_find.hpp
     title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
@@ -32,7 +32,7 @@ data:
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A\"\
-    \n#include \"template/template.hpp\"\n#include \"library/struct/union_find.hpp\"\
+    \n#include \"template/template.hpp\"\n#include \"library/various/union_find.hpp\"\
     \n/**\n * @brief Union Find\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n   \
     \ int N, Q;\n    cin >> N >> Q;\n    UnionFind uf(N);\n    while (Q--) {\n   \
     \     int com, x, y;\n        cin >> com >> x >> y;\n        if (com == 0) {\n\
@@ -40,11 +40,11 @@ data:
     \ print(uf.find(x) == uf.find(y) ? 1 : 0);\n        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - library/struct/union_find.hpp
+  - library/various/union_find.hpp
   isVerificationFile: true
   path: tests/struct/union_find.test.cpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-01-15 10:36:58+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/struct/union_find.test.cpp

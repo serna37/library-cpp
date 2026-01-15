@@ -5,7 +5,7 @@ data:
     path: library/segtree/dual_segment_tree.hpp
     title: Dual Segment Tree
   - icon: ':heavy_check_mark:'
-    path: library/struct/monoid.hpp
+    path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
@@ -46,11 +46,11 @@ data:
   dependsOn:
   - template/template.hpp
   - library/segtree/dual_segment_tree.hpp
-  - library/struct/monoid.hpp
+  - library/various/monoid.hpp
   isVerificationFile: true
   path: tests/segtree/dual_segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-01-15 10:36:58+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree/dual_segment_tree.test.cpp

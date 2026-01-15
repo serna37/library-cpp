@@ -12,7 +12,7 @@ data:
     path: library/segtree/segment_tree.hpp
     title: Segment Tree
   - icon: ':heavy_check_mark:'
-    path: library/struct/monoid_act.hpp
+    path: library/various/monoid_act.hpp
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -30,7 +30,7 @@ data:
   attributes:
     document_title: "\u30E2\u30CE\u30A4\u30C9"
     links: []
-  bundledCode: "#line 2 \"library/struct/monoid.hpp\"\n/**\n * @brief \u30E2\u30CE\
+  bundledCode: "#line 2 \"library/various/monoid.hpp\"\n/**\n * @brief \u30E2\u30CE\
     \u30A4\u30C9\n */\nstruct Monoid {\n    // \u6700\u5C0F\u5024\n    struct Min\
     \ {\n        static constexpr int e = INT_MAX;\n        static int op(int x, int\
     \ y) {\n            return min(x, y);\n        }\n    };\n    // \u6700\u5927\u5024\
@@ -72,19 +72,19 @@ data:
     \   };\n};\n"
   dependsOn: []
   isVerificationFile: false
-  path: library/struct/monoid.hpp
+  path: library/various/monoid.hpp
   requiredBy:
   - library/segtree/segment_tree.hpp
   - library/segtree/lazy_segment_tree.hpp
   - library/segtree/dual_segment_tree.hpp
-  - library/struct/monoid_act.hpp
-  timestamp: '2026-01-15 10:11:56+09:00'
+  - library/various/monoid_act.hpp
+  timestamp: '2026-01-15 10:36:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp
   - tests/segtree/segment_tree.test.cpp
   - tests/segtree/dual_segment_tree.test.cpp
-documentation_of: library/struct/monoid.hpp
+documentation_of: library/various/monoid.hpp
 layout: document
 title: "\u30E2\u30CE\u30A4\u30C9"
 ---

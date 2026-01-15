@@ -8,7 +8,7 @@ data:
     path: library/graph/mst/kruskal.hpp
     title: Kruskal
   - icon: ':heavy_check_mark:'
-    path: library/struct/union_find.hpp
+    path: library/various/union_find.hpp
     title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
@@ -49,11 +49,11 @@ data:
   - template/template.hpp
   - library/graph/mst/kruskal.hpp
   - library/graph/base/edge.hpp
-  - library/struct/union_find.hpp
+  - library/various/union_find.hpp
   isVerificationFile: true
   path: tests/graph/mst/kruskal.test.cpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-01-15 10:36:58+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/mst/kruskal.test.cpp

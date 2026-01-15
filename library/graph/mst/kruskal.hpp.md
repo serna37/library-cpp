@@ -5,7 +5,7 @@ data:
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
   - icon: ':heavy_check_mark:'
-    path: library/struct/union_find.hpp
+    path: library/various/union_find.hpp
     title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
@@ -21,7 +21,7 @@ data:
   bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n    int from,\
     \ to;\n    long long cost;\n    int idx;\n    Edge(int from, int to, long long\
     \ cost = 1, int idx = -1)\n        : from(from), to(to), cost(cost), idx(idx)\
-    \ {\n    }\n};\n#line 2 \"library/struct/union_find.hpp\"\nstruct UnionFind {\n\
+    \ {\n    }\n};\n#line 2 \"library/various/union_find.hpp\"\nstruct UnionFind {\n\
     \  private:\n    vector<int> parent, size;\n\n  public:\n    UnionFind(int N)\
     \ {\n        parent.assign(N, -1);\n        size.assign(N, 1);\n    }\n    int\
     \ operator[](int p) {\n        return size[find(p)];\n    }\n    int find(int\
@@ -38,7 +38,7 @@ data:
     \      }\n    }\n    // \u5168\u57DF\u306B\u9054\u3057\u306A\u3044\u5834\u5408\
     \n    if (uf[0] < v_cnt) {\n        total = INF;\n    }\n    return {total, es};\n\
     }\n"
-  code: "#pragma once\n#include \"library/graph/base/edge.hpp\"\n#include \"library/struct/union_find.hpp\"\
+  code: "#pragma once\n#include \"library/graph/base/edge.hpp\"\n#include \"library/various/union_find.hpp\"\
     \nstruct MinSpanTree {\n    long long cost;\n    vector<Edge> edges;\n};\nMinSpanTree\
     \ kruskal(vector<Edge> edges, int v_cnt) {\n    sort(edges.begin(), edges.end(),\n\
     \         [](const Edge &a, const Edge &b) { return a.cost < b.cost; });\n   \
@@ -49,11 +49,11 @@ data:
     \ {\n        total = INF;\n    }\n    return {total, es};\n}\n"
   dependsOn:
   - library/graph/base/edge.hpp
-  - library/struct/union_find.hpp
+  - library/various/union_find.hpp
   isVerificationFile: false
   path: library/graph/mst/kruskal.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-01-15 10:36:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst/kruskal.test.cpp

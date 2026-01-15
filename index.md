@@ -260,25 +260,23 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/string/util.hpp
       title: "\u6587\u5B57\u5217Util"
-  - name: library/struct
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: library/struct/monoid.hpp
-      title: "\u30E2\u30CE\u30A4\u30C9"
-    - icon: ':heavy_check_mark:'
-      path: library/struct/monoid_act.hpp
-      title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
-    - icon: ':heavy_check_mark:'
-      path: library/struct/union_find.hpp
-      title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   - name: library/various
     pages:
     - icon: ':heavy_check_mark:'
       path: library/various/convert.hpp
       title: "\u578B\u5909\u63DB"
     - icon: ':heavy_check_mark:'
+      path: library/various/monoid.hpp
+      title: "\u30E2\u30CE\u30A4\u30C9"
+    - icon: ':heavy_check_mark:'
+      path: library/various/monoid_act.hpp
+      title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
+    - icon: ':heavy_check_mark:'
       path: library/various/random.hpp
       title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
+    - icon: ':heavy_check_mark:'
+      path: library/various/union_find.hpp
+      title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   - name: template
     pages:
     - icon: ':warning:'

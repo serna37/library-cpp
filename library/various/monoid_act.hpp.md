@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/struct/monoid.hpp
+    path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
@@ -18,7 +18,7 @@ data:
   attributes:
     document_title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
     links: []
-  bundledCode: "#line 2 \"library/struct/monoid.hpp\"\n/**\n * @brief \u30E2\u30CE\
+  bundledCode: "#line 2 \"library/various/monoid.hpp\"\n/**\n * @brief \u30E2\u30CE\
     \u30A4\u30C9\n */\nstruct Monoid {\n    // \u6700\u5C0F\u5024\n    struct Min\
     \ {\n        static constexpr int e = INT_MAX;\n        static int op(int x, int\
     \ y) {\n            return min(x, y);\n        }\n    };\n    // \u6700\u5927\u5024\
@@ -37,7 +37,7 @@ data:
     \        static int op(int x, int y) {\n            return lcm(x, y);\n      \
     \  }\n    };\n    // \u6392\u4ED6\u7684\u8AD6\u7406\u548C\n    struct Xor {\n\
     \        static constexpr int e = 0;\n        static int op(int x, int y) {\n\
-    \            return x ^ y;\n        }\n    };\n};\n#line 3 \"library/struct/monoid_act.hpp\"\
+    \            return x ^ y;\n        }\n    };\n};\n#line 3 \"library/various/monoid_act.hpp\"\
     \n/**\n * @brief \u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20\n */\nstruct MonoidAct\
     \ {\n    // \u6F14\u7B97: \u52A0\u7B97  \u66F4\u65B0: \u52A0\u7B97\n    struct\
     \ AddAdd {\n        static constexpr int op(const int &node, const int &a,\n \
@@ -86,7 +86,7 @@ data:
     \ const int &a,\n                                const int &size) {\n        \
     \    (void)size; // unused\n            return max(node, a);\n        }\n    };\n\
     };\n"
-  code: "#pragma once\n#include \"library/struct/monoid.hpp\"\n/**\n * @brief \u30E2\
+  code: "#pragma once\n#include \"library/various/monoid.hpp\"\n/**\n * @brief \u30E2\
     \u30CE\u30A4\u30C9\u4F5C\u7528\u7D20\n */\nstruct MonoidAct {\n    // \u6F14\u7B97\
     : \u52A0\u7B97  \u66F4\u65B0: \u52A0\u7B97\n    struct AddAdd {\n        static\
     \ constexpr int op(const int &node, const int &a,\n                          \
@@ -135,16 +135,16 @@ data:
     \      const int &size) {\n            (void)size; // unused\n            return\
     \ max(node, a);\n        }\n    };\n};\n"
   dependsOn:
-  - library/struct/monoid.hpp
+  - library/various/monoid.hpp
   isVerificationFile: false
-  path: library/struct/monoid_act.hpp
+  path: library/various/monoid_act.hpp
   requiredBy:
   - library/segtree/lazy_segment_tree.hpp
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-01-15 10:36:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree/lazy_segment_tree.test.cpp
-documentation_of: library/struct/monoid_act.hpp
+documentation_of: library/various/monoid_act.hpp
 layout: document
 title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
 ---

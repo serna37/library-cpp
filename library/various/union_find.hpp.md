@@ -18,14 +18,14 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/struct/union_find.hpp\"\nstruct UnionFind {\n  private:\n\
-    \    vector<int> parent, size;\n\n  public:\n    UnionFind(int N) {\n        parent.assign(N,\
-    \ -1);\n        size.assign(N, 1);\n    }\n    int operator[](int p) {\n     \
-    \   return size[find(p)];\n    }\n    int find(int p) {\n        return !~parent[p]\
-    \ ? p : (parent[p] = find(parent[p]));\n    }\n    bool unite(int a, int b) {\n\
-    \        int x = find(a), y = find(b);\n        if (x == y) return false;\n  \
-    \      if (size[x] > size[y]) swap(x, y);\n        parent[x] = y, size[y] += size[x];\n\
-    \        return true;\n    }\n};\n"
+  bundledCode: "#line 2 \"library/various/union_find.hpp\"\nstruct UnionFind {\n \
+    \ private:\n    vector<int> parent, size;\n\n  public:\n    UnionFind(int N) {\n\
+    \        parent.assign(N, -1);\n        size.assign(N, 1);\n    }\n    int operator[](int\
+    \ p) {\n        return size[find(p)];\n    }\n    int find(int p) {\n        return\
+    \ !~parent[p] ? p : (parent[p] = find(parent[p]));\n    }\n    bool unite(int\
+    \ a, int b) {\n        int x = find(a), y = find(b);\n        if (x == y) return\
+    \ false;\n        if (size[x] > size[y]) swap(x, y);\n        parent[x] = y, size[y]\
+    \ += size[x];\n        return true;\n    }\n};\n"
   code: "#pragma once\nstruct UnionFind {\n  private:\n    vector<int> parent, size;\n\
     \n  public:\n    UnionFind(int N) {\n        parent.assign(N, -1);\n        size.assign(N,\
     \ 1);\n    }\n    int operator[](int p) {\n        return size[find(p)];\n   \
@@ -35,15 +35,15 @@ data:
     \        parent[x] = y, size[y] += size[x];\n        return true;\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
-  path: library/struct/union_find.hpp
+  path: library/various/union_find.hpp
   requiredBy:
   - library/graph/mst/kruskal.hpp
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-01-15 10:36:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/mst/kruskal.test.cpp
   - tests/struct/union_find.test.cpp
-documentation_of: library/struct/union_find.hpp
+documentation_of: library/various/union_find.hpp
 layout: document
 title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
 ---

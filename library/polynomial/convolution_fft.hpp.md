@@ -74,7 +74,7 @@ data:
   isVerificationFile: false
   path: library/polynomial/convolution_fft.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-01-15 10:36:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial/convolution_fft.test.cpp
