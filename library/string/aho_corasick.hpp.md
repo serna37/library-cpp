@@ -95,7 +95,7 @@ data:
   isVerificationFile: false
   path: library/string/aho_corasick.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:05:55+09:00'
+  timestamp: '2026-01-15 11:20:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/aho_corasick.test.cpp
@@ -110,9 +110,7 @@ title: Aho Corasick
 - Trie木を使って、複数文字列に対するパターンマッチングオートマトンを構築する
 - 単語が含まれる回数や、一文字ずつ読み進めてヒット数を累積したりできる
 
-<details><summary>オートマトンの説明</summary>
-
-## オートマトンとは
+### オートマトンとは
 5つの組からなる。
 $M = (Q, \sum, \delta, q_0, F)$
 - $Q$ : 状態の集合
@@ -128,9 +126,6 @@ $M = (Q, \sum, \delta, q_0, F)$
 | $\delta$ | { `(閉でタッチ) => 開にする`, `(閉で通り抜け) => 閉のまま`, etc... } |
 | $q_0$ | `閉鎖` |
 | $F$ | { `閉鎖` } |
-
-</details>
-<br>
 
 ## 計算量
 追加した文字列の長さの総和を $L$ 、文字種数を $\sum$ とする

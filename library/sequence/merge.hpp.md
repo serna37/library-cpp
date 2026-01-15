@@ -29,7 +29,7 @@ data:
   isVerificationFile: false
   path: library/sequence/merge.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:05:55+09:00'
+  timestamp: '2026-01-15 11:20:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence/merge.test.cpp

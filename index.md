@@ -520,11 +520,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/string/util.test.cpp
       title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
-  - name: tests/struct
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tests/struct/union_find.test.cpp
-      title: "Union Find\u306E\u30C6\u30B9\u30C8"
   - name: tests
     pages:
     - icon: ':heavy_check_mark:'
@@ -538,6 +533,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/various/random.test.cpp
       title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/various/union_find.test.cpp
+      title: "Union Find\u306E\u30C6\u30B9\u30C8"
 layout: toppage
 ---
 <!-- AtCoder -->

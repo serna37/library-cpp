@@ -198,9 +198,6 @@ data:
     path: tests/string/util.test.cpp
     title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/struct/union_find.test.cpp
-    title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
     path: tests/template.test.cpp
     title: "template\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -209,6 +206,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/various/random.test.cpp
     title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/various/union_find.test.cpp
+    title: "Union Find\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -251,7 +251,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:05:55+09:00'
+  timestamp: '2026-01-15 11:20:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -283,7 +283,6 @@ data:
   - tests/graph/route_restore.test.cpp
   - tests/graph/mst/kruskal.test.cpp
   - tests/graph/tree/lca.test.cpp
-  - tests/struct/union_find.test.cpp
   - tests/sequence/dispersion.test.cpp
   - tests/sequence/collection_util.test.cpp
   - tests/sequence/difference_sequence.test.cpp
@@ -298,6 +297,7 @@ data:
   - tests/search/binary_search/bi_search_cnt.test.cpp
   - tests/search/bit_search.test.cpp
   - tests/search/permutation.test.cpp
+  - tests/various/union_find.test.cpp
   - tests/various/random.test.cpp
   - tests/various/convert.test.cpp
   - tests/dp/cumulative_sum/cumulative_sum.test.cpp

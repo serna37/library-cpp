@@ -42,15 +42,15 @@ data:
   - template/template.hpp
   - library/various/union_find.hpp
   isVerificationFile: true
-  path: tests/struct/union_find.test.cpp
+  path: tests/various/union_find.test.cpp
   requiredBy: []
-  timestamp: '2026-01-15 11:05:55+09:00'
+  timestamp: '2026-01-15 11:20:07+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/struct/union_find.test.cpp
+documentation_of: tests/various/union_find.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/struct/union_find.test.cpp
-- /verify/tests/struct/union_find.test.cpp.html
+- /verify/tests/various/union_find.test.cpp
+- /verify/tests/various/union_find.test.cpp.html
 title: "Union Find\u306E\u30C6\u30B9\u30C8"
 ---

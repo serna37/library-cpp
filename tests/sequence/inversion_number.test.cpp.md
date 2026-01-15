@@ -47,7 +47,7 @@ data:
   isVerificationFile: true
   path: tests/sequence/inversion_number.test.cpp
   requiredBy: []
-  timestamp: '2026-01-15 11:05:55+09:00'
+  timestamp: '2026-01-15 11:20:07+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/sequence/inversion_number.test.cpp
