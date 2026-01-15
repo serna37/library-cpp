@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: tests/segtree.fenwick_tree.cpp
-    title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/dp.cumulative_sum.cumulative_sum.test.cpp
@@ -142,6 +139,9 @@ data:
     path: tests/segtree.dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
   - icon: ':heavy_check_mark:'
+    path: tests/segtree.fenwick_tree.test.cpp
+    title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
   - icon: ':heavy_check_mark:'
@@ -254,9 +254,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: template/template.hpp
-  requiredBy:
-  - tests/segtree.fenwick_tree.cpp
-  timestamp: '2026-01-15 17:22:03+09:00'
+  requiredBy: []
+  timestamp: '2026-01-15 17:34:35+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp
@@ -286,6 +285,7 @@ data:
   - tests/search.binary_search.bi_ge_val.test.cpp
   - tests/number.divisors.test.cpp
   - tests/segtree.lazy_segment_tree.test.cpp
+  - tests/segtree.fenwick_tree.test.cpp
   - tests/sequence.inversion_number.test.cpp
   - tests/sequence.dispersion.test.cpp
   - tests/number.mod.mod_combination.test.cpp

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/fenwick_tree.hpp
     title: Fenwick Tree
   - icon: ':heavy_check_mark:'
@@ -11,8 +11,10 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B
     document_title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B
@@ -40,16 +42,16 @@ data:
   dependsOn:
   - template/template.hpp
   - library/segtree/fenwick_tree.hpp
-  isVerificationFile: false
-  path: tests/segtree.fenwick_tree.cpp
+  isVerificationFile: true
+  path: tests/segtree.fenwick_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-15 17:22:03+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2026-01-15 17:34:35+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/segtree.fenwick_tree.cpp
+documentation_of: tests/segtree.fenwick_tree.test.cpp
 layout: document
 redirect_from:
-- /library/tests/segtree.fenwick_tree.cpp
-- /library/tests/segtree.fenwick_tree.cpp.html
+- /verify/tests/segtree.fenwick_tree.test.cpp
+- /verify/tests/segtree.fenwick_tree.test.cpp.html
 title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
 ---

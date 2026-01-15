@@ -59,7 +59,7 @@ data:
   isVerificationFile: true
   path: tests/graph.shortest_path.warshall_froyd.test.cpp
   requiredBy: []
-  timestamp: '2026-01-15 17:22:03+09:00'
+  timestamp: '2026-01-15 17:34:35+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.shortest_path.warshall_froyd.test.cpp

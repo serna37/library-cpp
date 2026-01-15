@@ -24,7 +24,7 @@ data:
   isVerificationFile: false
   path: library/dp/cumulative_sum/cumulative_sum_diff.hpp
   requiredBy: []
-  timestamp: '2026-01-15 17:22:03+09:00'
+  timestamp: '2026-01-15 17:34:35+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/dp.cumulative_sum.cumulative_sum_diff.test.cpp

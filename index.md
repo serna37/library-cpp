@@ -202,7 +202,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/segtree/dual_segment_tree.hpp
       title: Dual Segment Tree
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/segtree/fenwick_tree.hpp
       title: Fenwick Tree
     - icon: ':heavy_check_mark:'
@@ -297,11 +297,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
-  - name: tests
-    pages:
-    - icon: ':warning:'
-      path: tests/segtree.fenwick_tree.cpp
-      title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
   verificationCategories:
   - name: tests
     pages:
@@ -440,6 +435,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/segtree.dual_segment_tree.test.cpp
       title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
+    - icon: ':heavy_check_mark:'
+      path: tests/segtree.fenwick_tree.test.cpp
+      title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
     - icon: ':heavy_check_mark:'
       path: tests/segtree.lazy_segment_tree.test.cpp
       title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
