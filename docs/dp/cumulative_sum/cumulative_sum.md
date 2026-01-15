@@ -1,6 +1,6 @@
 ---
 title: 累積和
-documentation_of: //library/sequence/cumulative_sum.hpp
+documentation_of: //library/dp/cumulative_sum/cumulative_sum.hpp
 ---
 
 # 累積和

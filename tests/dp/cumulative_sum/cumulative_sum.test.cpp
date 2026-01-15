@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/static_range_sum"
 #include "template/template.hpp"
-#include "library/sequence/cumulative_sum.hpp"
+#include "library/dp/cumulative_sum/cumulative_sum.hpp"
 /**
  * @brief 累積和のテスト
  */

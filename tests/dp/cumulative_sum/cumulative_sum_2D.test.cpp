@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include "template/template.hpp"
-#include "library/sequence/cumulative_sum_2D.hpp"
+#include "library/dp/cumulative_sum/cumulative_sum_2D.hpp"
 void run_cumulative_sum_tests() {
     // ケース1: 基本的な 2x3 行列
     {

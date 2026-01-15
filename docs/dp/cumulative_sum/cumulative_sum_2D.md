@@ -1,6 +1,6 @@
 ---
 title: 2次元累積和
-documentation_of: //library/sequence/cumulative_sum_2D.hpp
+documentation_of: //library/dp/cumulative_sum/cumulative_sum_2D.hpp
 ---
 
 # 2次元累積和

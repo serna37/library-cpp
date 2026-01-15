@@ -1,6 +1,6 @@
 #pragma once
 #include "library/graph/shortest_path/bfs.hpp"
-#include "library/sequence/doubling.hpp"
+#include "library/dp/doubling.hpp"
 struct Node {
     static const int e = -1;
     int to = e;

@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include "template/template.hpp"
-#include "library/sequence/cumulative_sum_3D.hpp"
+#include "library/dp/cumulative_sum/cumulative_sum_3D.hpp"
 void run_cumulative_sum_3D_tests() {
     // ケース1: 2x2x2 の立方体
     // すべての要素が 1 の場合

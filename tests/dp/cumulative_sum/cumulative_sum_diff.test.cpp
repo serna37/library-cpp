@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include "template/template.hpp"
-#include "library/sequence/cumulative_sum_diff.hpp"
+#include "library/dp/cumulative_sum/cumulative_sum_diff.hpp"
 void run_cumulative_sum_diff_tests() {
     // ケース1: 基本的な動作（要素数が偶数）
     {

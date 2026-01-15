@@ -1,6 +1,6 @@
 ---
 title: 累積和 反転
-documentation_of: //library/sequence/cumulative_sum_rev.hpp
+documentation_of: //library/dp/cumulative_sum/cumulative_sum_rev.hpp
 ---
 
 # 累積和 反転

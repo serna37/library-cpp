@@ -1,6 +1,6 @@
 ---
 title: 3次元累積和
-documentation_of: //library/sequence/cumulative_sum_3D.hpp
+documentation_of: //library/dp/cumulative_sum/cumulative_sum_3D.hpp
 ---
 
 # 3次元累積和

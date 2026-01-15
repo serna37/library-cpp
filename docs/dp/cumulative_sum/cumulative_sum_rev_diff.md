@@ -1,6 +1,6 @@
 ---
 title: 二項差での累積和 反転
-documentation_of: //library/sequence/cumulative_sum_rev_diff.hpp
+documentation_of: //library/dp/cumulative_sum/cumulative_sum_rev_diff.hpp
 ---
 
 # 二項差での累積和 反転
