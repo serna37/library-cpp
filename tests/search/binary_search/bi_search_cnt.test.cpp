@@ -1,10 +1,10 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B"
 #include "template/template.hpp"
-#include "library/search/bi_ge_cnt.hpp"
-#include "library/search/bi_gt_cnt.hpp"
-#include "library/search/bi_le_cnt.hpp"
-#include "library/search/bi_lt_cnt.hpp"
+#include "library/search/binary_search/bi_ge_cnt.hpp"
+#include "library/search/binary_search/bi_gt_cnt.hpp"
+#include "library/search/binary_search/bi_le_cnt.hpp"
+#include "library/search/binary_search/bi_lt_cnt.hpp"
 /**
  * @brief 二分探索 要素数のテスト
  */

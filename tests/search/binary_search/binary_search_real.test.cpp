@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include "template/template.hpp"
-#include "library/search/binary_search_real.hpp"
+#include "library/search/binary_search/binary_search_real.hpp"
 // 判定用のヘルパー：期待値との誤差が十分小さいか確認
 bool is_near(double val, double expected) {
     return abs(val - expected) < 1e-10;

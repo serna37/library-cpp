@@ -1,6 +1,6 @@
 ---
 title: 二分探索 配列中 以上の最小値
-documentation_of: //library/search/bi_ge_val.hpp
+documentation_of: //library/search/binary_search/bi_ge_val.hpp
 ---
 
 # 二分探索 配列中 以上の最小値

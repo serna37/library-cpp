@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include "template/template.hpp"
-#include "library/search/bi_gt_val.hpp"
+#include "library/search/binary_search/bi_gt_val.hpp"
 void test_bi_gt_val() {
     // --- Vector版のテスト ---
     vector<int> v = {10, 20, 30, 40, 50};

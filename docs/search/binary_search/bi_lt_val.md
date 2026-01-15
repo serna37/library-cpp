@@ -1,6 +1,6 @@
 ---
 title: 二分探索 配列中 未満の最大値
-documentation_of: //library/search/bi_lt_val.hpp
+documentation_of: //library/search/binary_search/bi_lt_val.hpp
 ---
 
 # 二分探索 配列中 未満の最大値

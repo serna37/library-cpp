@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include "template/template.hpp"
-#include "library/search/bi_ge_val.hpp"
+#include "library/search/binary_search/bi_ge_val.hpp"
 void test_bi_ge_val() {
     // --- Vector版のテスト ---
     // lower_boundを使うため、事前にソートされている必要がある

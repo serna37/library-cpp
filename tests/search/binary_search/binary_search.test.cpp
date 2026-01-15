@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include "template/template.hpp"
-#include "library/search/binary_search.hpp"
+#include "library/search/binary_search/binary_search.hpp"
 void test_binary_search() {
     // ケース1: 単純な閾値 (x >= 100 で true)
     auto f1 = [](long long x) { return x >= 100; };

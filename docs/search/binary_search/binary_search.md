@@ -1,6 +1,6 @@
 ---
 title: 整数上の二分探索
-documentation_of: //library/search/binary_search.hpp
+documentation_of: //library/search/binary_search/binary_search.hpp
 ---
 
 # 整数上の二分探索

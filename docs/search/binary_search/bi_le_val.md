@@ -1,6 +1,6 @@
 ---
 title: 二分探索 配列中 以下の最大値
-documentation_of: //library/search/bi_le_val.hpp
+documentation_of: //library/search/binary_search/bi_le_val.hpp
 ---
 
 # 二分探索 配列中 以下の最大値

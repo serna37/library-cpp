@@ -1,6 +1,6 @@
 ---
 title: 実数上の二分探索
-documentation_of: //library/search/binary_search_real.hpp
+documentation_of: //library/search/binary_search/binary_search_real.hpp
 ---
 
 # 実数上の二分探索
