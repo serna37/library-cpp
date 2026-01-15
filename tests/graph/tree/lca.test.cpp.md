@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
+    path: library/dp/doubling.hpp
+    title: "\u30C0\u30D6\u30EA\u30F3\u30B0"
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
   - icon: ':heavy_check_mark:'
@@ -13,9 +16,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/tree/lca.hpp
     title: LCA
-  - icon: ':heavy_check_mark:'
-    path: library/sequence/doubling.hpp
-    title: "\u30C0\u30D6\u30EA\u30F3\u30B0"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -58,11 +58,11 @@ data:
   - library/graph/shortest_path/bfs.hpp
   - library/graph/base/graph.hpp
   - library/graph/base/edge.hpp
-  - library/sequence/doubling.hpp
+  - library/dp/doubling.hpp
   isVerificationFile: true
   path: tests/graph/tree/lca.test.cpp
   requiredBy: []
-  timestamp: '2026-01-14 22:20:34+09:00'
+  timestamp: '2026-01-15 10:11:56+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph/tree/lca.test.cpp

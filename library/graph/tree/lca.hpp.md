@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
+    path: library/dp/doubling.hpp
+    title: "\u30C0\u30D6\u30EA\u30F3\u30B0"
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
   - icon: ':heavy_check_mark:'
@@ -10,9 +13,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/bfs.hpp
     title: BFS
-  - icon: ':heavy_check_mark:'
-    path: library/sequence/doubling.hpp
-    title: "\u30C0\u30D6\u30EA\u30F3\u30B0"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -47,8 +47,8 @@ data:
     \        for (auto &&[from, to, cost, idx] : G[v]) {\n            if (~dis[to])\
     \ continue;\n            dis[to] = dis[from] + 1;\n            q.push(to);\n \
     \           route[to] = v;\n        }\n    }\n    return {dis, route};\n}\n#line\
-    \ 2 \"library/sequence/doubling.hpp\"\ntemplate <typename T> struct Doubling {\n\
-    \    int N, log = 0;\n    vector<vector<T>> table;\n    Doubling() {}\n    Doubling(const\
+    \ 2 \"library/dp/doubling.hpp\"\ntemplate <typename T> struct Doubling {\n   \
+    \ int N, log = 0;\n    vector<vector<T>> table;\n    Doubling() {}\n    Doubling(const\
     \ vector<T> &next, long long max_steps) {\n        N = next.size();\n        while\
     \ ((1ll << log) <= max_steps) ++log;\n        table.assign(log, vector<T>(N, T()));\n\
     \        table[0] = next;\n        for (int k = 0; k < log - 1; ++k) {\n     \
@@ -89,8 +89,8 @@ data:
     \    return db.query(u, depth[u] - depth[lca]).dist + \n               db.query(v,\
     \ depth[v] - depth[lca]).dist;\n    }\n};\n"
   code: "#pragma once\n#include \"library/graph/shortest_path/bfs.hpp\"\n#include\
-    \ \"library/sequence/doubling.hpp\"\nstruct Node {\n    static const int e = -1;\n\
-    \    int to = e;\n    long long dist = 0;\n    Node() = default;\n    Node(int\
+    \ \"library/dp/doubling.hpp\"\nstruct Node {\n    static const int e = -1;\n \
+    \   int to = e;\n    long long dist = 0;\n    Node() = default;\n    Node(int\
     \ to, long long dist) : to(to), dist(dist) {}\n    Node operator+(const Node &A)\
     \ const {\n        if (to == e) return *this;\n        return {A.to, dist + A.dist};\n\
     \    }\n};\nstruct LCA {\n    vector<int> depth;\n    Doubling<Node> db;\n   \
@@ -121,11 +121,11 @@ data:
   - library/graph/shortest_path/bfs.hpp
   - library/graph/base/graph.hpp
   - library/graph/base/edge.hpp
-  - library/sequence/doubling.hpp
+  - library/dp/doubling.hpp
   isVerificationFile: false
   path: library/graph/tree/lca.hpp
   requiredBy: []
-  timestamp: '2026-01-14 22:20:34+09:00'
+  timestamp: '2026-01-15 10:11:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/tree/lca.test.cpp

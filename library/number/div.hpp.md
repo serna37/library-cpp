@@ -25,7 +25,7 @@ data:
   isVerificationFile: false
   path: library/number/div.hpp
   requiredBy: []
-  timestamp: '2026-01-14 22:20:34+09:00'
+  timestamp: '2026-01-15 10:11:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number/div.test.cpp

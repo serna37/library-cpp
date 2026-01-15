@@ -3,11 +3,11 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
-    path: library/graph/kruskal.hpp
+    path: library/graph/mst/kruskal.hpp
     title: Kruskal
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/graph/mst_kruskal.test.cpp
+    path: tests/graph/mst/kruskal.test.cpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\u30C6\
       \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -37,11 +37,11 @@ data:
   isVerificationFile: false
   path: library/struct/union_find.hpp
   requiredBy:
-  - library/graph/kruskal.hpp
-  timestamp: '2026-01-14 22:20:34+09:00'
+  - library/graph/mst/kruskal.hpp
+  timestamp: '2026-01-15 10:11:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph/mst_kruskal.test.cpp
+  - tests/graph/mst/kruskal.test.cpp
   - tests/struct/union_find.test.cpp
 documentation_of: library/struct/union_find.hpp
 layout: document

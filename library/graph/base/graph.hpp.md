@@ -6,8 +6,11 @@ data:
     title: "\u8FBA"
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
-    path: library/graph/connected_components.hpp
+    path: library/graph/connected_components/connected_components.hpp
     title: "\u9023\u7D50\u6210\u5206\u5206\u89E3"
+  - icon: ':heavy_check_mark:'
+    path: library/graph/connected_components/strongly_connected_components.hpp
+    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Tarjan)"
   - icon: ':heavy_check_mark:'
     path: library/graph/cycle_detect.hpp
     title: "\u9589\u8DEF\u691C\u51FA"
@@ -24,9 +27,6 @@ data:
     path: library/graph/shortest_path/warshall_froyd.hpp
     title: Warshall Froyd
   - icon: ':heavy_check_mark:'
-    path: library/graph/strongly_connected_components.hpp
-    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Tarjan)"
-  - icon: ':heavy_check_mark:'
     path: library/graph/topological_sort.hpp
     title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - icon: ':heavy_check_mark:'
@@ -34,9 +34,13 @@ data:
     title: LCA
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/graph/connected_components.test.cpp
+    path: tests/graph/connected_components/connected_components.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\u30B9\
       \u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/connected_components/strongly_connected_components.test.cpp
+    title: "\u30B0\u30E9\u30D5 - \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\
+      \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/graph/cycle_detect.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u9589\u8DEF\u691C\u51FA\u306E\u30C6\u30B9\u30C8"
@@ -55,10 +59,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph/shortest_path/warshall_froyd.test.cpp
     title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
-    path: tests/graph/strongly_connected_components.test.cpp
-    title: "\u30B0\u30E9\u30D5 - \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\
-      \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/graph/topological_sort.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\
@@ -107,28 +107,28 @@ data:
   isVerificationFile: false
   path: library/graph/base/graph.hpp
   requiredBy:
+  - library/graph/connected_components/connected_components.hpp
+  - library/graph/connected_components/strongly_connected_components.hpp
   - library/graph/shortest_path/warshall_froyd.hpp
   - library/graph/shortest_path/bellman_ford.hpp
   - library/graph/shortest_path/bfs.hpp
   - library/graph/shortest_path/dijkstra.hpp
   - library/graph/topological_sort.hpp
-  - library/graph/connected_components.hpp
   - library/graph/cycle_detect.hpp
   - library/graph/tree/lca.hpp
-  - library/graph/strongly_connected_components.hpp
-  timestamp: '2026-01-14 22:20:34+09:00'
+  timestamp: '2026-01-15 10:11:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph/topological_sort.test.cpp
+  - tests/graph/connected_components/strongly_connected_components.test.cpp
+  - tests/graph/connected_components/connected_components.test.cpp
   - tests/graph/shortest_path/bfs.test.cpp
   - tests/graph/shortest_path/bellman_ford.test.cpp
   - tests/graph/shortest_path/dijkstra.test.cpp
   - tests/graph/shortest_path/warshall_froyd.test.cpp
   - tests/graph/cycle_detect.test.cpp
   - tests/graph/route_restore.test.cpp
-  - tests/graph/strongly_connected_components.test.cpp
   - tests/graph/tree/lca.test.cpp
-  - tests/graph/connected_components.test.cpp
 documentation_of: library/graph/base/graph.hpp
 layout: document
 title: "\u30B0\u30E9\u30D5"

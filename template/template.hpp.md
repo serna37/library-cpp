@@ -4,6 +4,25 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: tests/dp/cumulative_sum/cumulative_sum.test.cpp
+    title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/dp/cumulative_sum/cumulative_sum_2D.test.cpp
+    title: "2\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/dp/cumulative_sum/cumulative_sum_3D.test.cpp
+    title: "3\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/dp/cumulative_sum/cumulative_sum_diff.test.cpp
+    title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/dp/cumulative_sum/cumulative_sum_rev.test.cpp
+    title: "\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/dp/cumulative_sum/cumulative_sum_rev_diff.test.cpp
+    title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\
+      \u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/geometry/area_square.test.cpp
     title: "\u56DB\u89D2\u5F62\u306E\u9762\u7A4D\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -13,14 +32,18 @@ data:
     path: tests/geometry/util.test.cpp
     title: "\u5E7E\u4F55Util\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/graph/connected_components.test.cpp
+    path: tests/graph/connected_components/connected_components.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\u30B9\
       \u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/graph/connected_components/strongly_connected_components.test.cpp
+    title: "\u30B0\u30E9\u30D5 - \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\
+      \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/graph/cycle_detect.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u9589\u8DEF\u691C\u51FA\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/graph/mst_kruskal.test.cpp
+    path: tests/graph/mst/kruskal.test.cpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\u30C6\
       \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -38,10 +61,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph/shortest_path/warshall_froyd.test.cpp
     title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
-    path: tests/graph/strongly_connected_components.test.cpp
-    title: "\u30B0\u30E9\u30D5 - \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3\u306E\u30C6\
-      \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/graph/topological_sort.test.cpp
     title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\
@@ -74,41 +93,41 @@ data:
     path: tests/number/factorial.test.cpp
     title: "\u968E\u4E57\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/number/mod_combination.test.cpp
+    path: tests/number/mod/mod_combination.test.cpp
     title: "MOD \u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/number/prime_fact.test.cpp
+    path: tests/number/prime/prime_fact.test.cpp
     title: "\u7D20\u56E0\u6570\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/number/prime_test.test.cpp
+    path: tests/number/prime/prime_test.test.cpp
     title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/polynomial/convolution_fft.test.cpp
     title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/search/bi_ge_val.test.cpp
+    path: tests/search/binary_search/bi_ge_val.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\u5C0F\
       \u5024\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/search/bi_gt_val.test.cpp
+    path: tests/search/binary_search/bi_gt_val.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\u6700\
       \u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/search/bi_le_val.test.cpp
+    path: tests/search/binary_search/bi_le_val.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\u5927\
       \u5024\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/search/bi_lt_val.test.cpp
+    path: tests/search/binary_search/bi_lt_val.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\u5927\
       \u5024\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/search/bi_search_cnt.test.cpp
+    path: tests/search/binary_search/bi_search_cnt.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/search/binary_search.test.cpp
+    path: tests/search/binary_search/binary_search.test.cpp
     title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/search/binary_search_real.test.cpp
+    path: tests/search/binary_search/binary_search_real.test.cpp
     title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/search/bit_search.test.cpp
@@ -137,25 +156,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/sequence/collection_util.test.cpp
     title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
-    path: tests/sequence/cumulative_sum.test.cpp
-    title: "\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
-    path: tests/sequence/cumulative_sum_2D.test.cpp
-    title: "2\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
-    path: tests/sequence/cumulative_sum_3D.test.cpp
-    title: "3\u6B21\u5143\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
-    path: tests/sequence/cumulative_sum_diff.test.cpp
-    title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
-    path: tests/sequence/cumulative_sum_rev.test.cpp
-    title: "\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
-    path: tests/sequence/cumulative_sum_rev_diff.test.cpp
-    title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C \u53CD\u8EE2\u306E\u30C6\
-      \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/sequence/difference_sequence.test.cpp
     title: "\u968E\u5DEE\u6570\u5217\u306E\u30C6\u30B9\u30C8"
@@ -248,7 +248,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-14 22:20:34+09:00'
+  timestamp: '2026-01-15 10:11:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -269,45 +269,45 @@ data:
   - tests/grid/bfs.test.cpp
   - tests/grid/transpose.test.cpp
   - tests/graph/topological_sort.test.cpp
+  - tests/graph/connected_components/strongly_connected_components.test.cpp
+  - tests/graph/connected_components/connected_components.test.cpp
   - tests/graph/shortest_path/bfs.test.cpp
   - tests/graph/shortest_path/bellman_ford.test.cpp
   - tests/graph/shortest_path/dijkstra.test.cpp
   - tests/graph/shortest_path/warshall_froyd.test.cpp
   - tests/graph/cycle_detect.test.cpp
-  - tests/graph/mst_kruskal.test.cpp
   - tests/graph/route_restore.test.cpp
-  - tests/graph/strongly_connected_components.test.cpp
+  - tests/graph/mst/kruskal.test.cpp
   - tests/graph/tree/lca.test.cpp
-  - tests/graph/connected_components.test.cpp
   - tests/struct/union_find.test.cpp
   - tests/sequence/dispersion.test.cpp
-  - tests/sequence/cumulative_sum.test.cpp
-  - tests/sequence/cumulative_sum_rev.test.cpp
   - tests/sequence/collection_util.test.cpp
-  - tests/sequence/cumulative_sum_diff.test.cpp
   - tests/sequence/difference_sequence.test.cpp
-  - tests/sequence/cumulative_sum_rev_diff.test.cpp
-  - tests/sequence/cumulative_sum_2D.test.cpp
   - tests/sequence/merge.test.cpp
-  - tests/sequence/cumulative_sum_3D.test.cpp
   - tests/sequence/inversion_number.test.cpp
-  - tests/search/bi_gt_val.test.cpp
-  - tests/search/bi_le_val.test.cpp
-  - tests/search/binary_search.test.cpp
-  - tests/search/bi_lt_val.test.cpp
-  - tests/search/binary_search_real.test.cpp
-  - tests/search/bi_ge_val.test.cpp
+  - tests/search/binary_search/bi_gt_val.test.cpp
+  - tests/search/binary_search/bi_le_val.test.cpp
+  - tests/search/binary_search/binary_search.test.cpp
+  - tests/search/binary_search/bi_lt_val.test.cpp
+  - tests/search/binary_search/binary_search_real.test.cpp
+  - tests/search/binary_search/bi_ge_val.test.cpp
+  - tests/search/binary_search/bi_search_cnt.test.cpp
   - tests/search/bit_search.test.cpp
-  - tests/search/bi_search_cnt.test.cpp
   - tests/search/permutation.test.cpp
   - tests/various/random.test.cpp
   - tests/various/convert.test.cpp
+  - tests/dp/cumulative_sum/cumulative_sum.test.cpp
+  - tests/dp/cumulative_sum/cumulative_sum_rev.test.cpp
+  - tests/dp/cumulative_sum/cumulative_sum_diff.test.cpp
+  - tests/dp/cumulative_sum/cumulative_sum_rev_diff.test.cpp
+  - tests/dp/cumulative_sum/cumulative_sum_2D.test.cpp
+  - tests/dp/cumulative_sum/cumulative_sum_3D.test.cpp
   - tests/number/digit_sum.test.cpp
-  - tests/number/prime_fact.test.cpp
-  - tests/number/mod_combination.test.cpp
   - tests/number/factorial.test.cpp
   - tests/number/div.test.cpp
-  - tests/number/prime_test.test.cpp
+  - tests/number/mod/mod_combination.test.cpp
+  - tests/number/prime/prime_fact.test.cpp
+  - tests/number/prime/prime_test.test.cpp
   - tests/number/combination.test.cpp
   - tests/number/divisors.test.cpp
   - tests/number/base_convert.test.cpp
