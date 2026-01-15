@@ -1,6 +1,6 @@
 ---
 title: モノイド
-documentation_of: //library/struct/monoid.hpp
+documentation_of: //library/various/monoid.hpp
 ---
 
 # モノイド

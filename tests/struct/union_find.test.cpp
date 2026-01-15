@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A"
 #include "template/template.hpp"
-#include "library/struct/union_find.hpp"
+#include "library/various/union_find.hpp"
 /**
  * @brief Union Findのテスト
  */

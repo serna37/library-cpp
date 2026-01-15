@@ -1,6 +1,6 @@
 #pragma once
 #include "library/graph/base/edge.hpp"
-#include "library/struct/union_find.hpp"
+#include "library/various/union_find.hpp"
 struct MinSpanTree {
     long long cost;
     vector<Edge> edges;

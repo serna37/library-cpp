@@ -1,7 +1,7 @@
 #pragma once
 #include <functional>
-#include "library/struct/monoid.hpp"
-#include "library/struct/monoid_act.hpp"
+#include "library/various/monoid.hpp"
+#include "library/various/monoid_act.hpp"
 template <typename T, typename U> struct LazySegmentTree {
     using ProdOp = function<T(T, T)>;
     using UpdOp = function<U(U, U)>;
