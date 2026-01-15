@@ -237,6 +237,9 @@ data:
   - name: library/string
     pages:
     - icon: ':heavy_check_mark:'
+      path: library/string/aho_corasick.hpp
+      title: Aho Corasick
+    - icon: ':heavy_check_mark:'
       path: library/string/finds.hpp
       title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570"
     - icon: ':heavy_check_mark:'
@@ -257,6 +260,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/string/split_multi.hpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570"
+    - icon: ':heavy_check_mark:'
+      path: library/string/trie.hpp
+      title: "Trie\u6728"
     - icon: ':heavy_check_mark:'
       path: library/string/util.hpp
       title: "\u6587\u5B57\u5217Util"
@@ -486,6 +492,9 @@ data:
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
   - name: tests/string
     pages:
+    - icon: ':heavy_check_mark:'
+      path: tests/string/aho_corasick.test.cpp
+      title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/string/finds.test.cpp
       title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"

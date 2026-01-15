@@ -2,11 +2,11 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/sequence/inversion_number.hpp
-    title: "\u8EE2\u5012\u6570"
+    path: library/string/aho_corasick.hpp
+    title: Aho Corasick
   - icon: ':heavy_check_mark:'
-    path: library/sequence/zip_coordinate.hpp
-    title: "\u5EA7\u6A19\u5727\u7E2E"
+    path: library/string/trie.hpp
+    title: "Trie\u6728"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
@@ -17,11 +17,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_D
-    document_title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\
-      \u30C8"
+    PROBLEM: https://yukicoder.me/problems/no/430
+    document_title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_D
+    - https://yukicoder.me/problems/no/430
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -34,26 +33,26 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#define PROBLEM                                                         \
-    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_D\"\
-    \n#include \"template/template.hpp\"\n#include \"library/sequence/inversion_number.hpp\"\
-    \n/**\n * @brief \u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\
-    \u30C8\n */\nvoid solve() {\n    int N;\n    cin >> N;\n    vector<int> A(N);\n\
-    \    cin >> A;\n    long long inv = inversion_number(A);\n    print(inv);\n}\n"
+  code: "#define PROBLEM \"https://yukicoder.me/problems/no/430\"\n#include \"template/template.hpp\"\
+    \n#include \"library/string/aho_corasick.hpp\"\n/**\n * @brief Aho Corasick\u306E\
+    \u30C6\u30B9\u30C8\n */\nvoid solve() {\n    string S;\n    cin >> S;\n    int\
+    \ M;\n    cin >> M;\n    AhoCorasick<26, 'A'> ac;\n    for (int i = 0; i < M;\
+    \ ++i) {\n        string C;\n        cin >> C;\n        ac.add(C, i);\n    }\n\
+    \    ac.build();\n    long long ans = ac.count_all(S);\n    print(ans);\n}\n"
   dependsOn:
   - template/template.hpp
-  - library/sequence/inversion_number.hpp
-  - library/sequence/zip_coordinate.hpp
+  - library/string/aho_corasick.hpp
+  - library/string/trie.hpp
   isVerificationFile: true
-  path: tests/sequence/inversion_number.test.cpp
+  path: tests/string/aho_corasick.test.cpp
   requiredBy: []
   timestamp: '2026-01-15 11:05:55+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/sequence/inversion_number.test.cpp
+documentation_of: tests/string/aho_corasick.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/sequence/inversion_number.test.cpp
-- /verify/tests/sequence/inversion_number.test.cpp.html
-title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
+- /verify/tests/string/aho_corasick.test.cpp
+- /verify/tests/string/aho_corasick.test.cpp.html
+title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
 ---

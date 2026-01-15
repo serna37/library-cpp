@@ -170,6 +170,9 @@ data:
     path: tests/sequence/merge.test.cpp
     title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/string/aho_corasick.test.cpp
+    title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/string/finds.test.cpp
     title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -248,7 +251,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:36:58+09:00'
+  timestamp: '2026-01-15 11:05:55+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -258,6 +261,7 @@ data:
   - tests/string/run_length.test.cpp
   - tests/string/rolling_hash.test.cpp
   - tests/string/finds.test.cpp
+  - tests/string/aho_corasick.test.cpp
   - tests/string/util.test.cpp
   - tests/segtree/starry_sky_tree_2.test.cpp
   - tests/segtree/lazy_segment_tree.test.cpp
