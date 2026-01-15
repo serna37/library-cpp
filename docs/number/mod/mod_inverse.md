@@ -1,6 +1,6 @@
 ---
 title: MOD Fermatの小定理
-documentation_of: //library/number/mod_inverse.hpp
+documentation_of: //library/number/mod/mod_inverse.hpp
 ---
 
 # MOD Fermatの小定理

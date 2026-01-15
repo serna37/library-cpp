@@ -1,6 +1,6 @@
 ---
 title: MOD 組み合わせ nCk
-documentation_of: //library/number/mod_combination.hpp
+documentation_of: //library/number/mod/mod_combination.hpp
 ---
 
 # MOD 組み合わせ nCk

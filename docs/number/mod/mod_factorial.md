@@ -1,6 +1,6 @@
 ---
 title: MOD 階乗
-documentation_of: //library/number/mod_factorial.hpp
+documentation_of: //library/number/mod/mod_factorial.hpp
 ---
 
 # MOD 階乗

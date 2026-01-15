@@ -1,6 +1,6 @@
 ---
 title: MOD 二分累乗
-documentation_of: //library/number/mod_pow.hpp
+documentation_of: //library/number/mod/mod_pow.hpp
 ---
 
 # MOD 二分累乗

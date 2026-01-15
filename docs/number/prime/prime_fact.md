@@ -1,6 +1,6 @@
 ---
 title: 素因数分解
-documentation_of: //library/number/prime_fact.hpp
+documentation_of: //library/number/prime/prime_fact.hpp
 ---
 
 # 素因数分解

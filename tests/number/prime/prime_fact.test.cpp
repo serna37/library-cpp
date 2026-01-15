@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A"
 #include "template/template.hpp"
-#include "library/number/prime_fact.hpp"
+#include "library/number/prime/prime_fact.hpp"
 /**
  * @brief 素因数分解のテスト
  */

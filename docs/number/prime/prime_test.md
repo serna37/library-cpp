@@ -1,6 +1,6 @@
 ---
 title: 素数判定
-documentation_of: //library/number/prime_test.hpp
+documentation_of: //library/number/prime/prime_test.hpp
 ---
 
 # 素数判定

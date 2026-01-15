@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C"
 #include "template/template.hpp"
-#include "library/number/prime_test.hpp"
+#include "library/number/prime/prime_test.hpp"
 /**
  * @brief 素数判定のテスト
  */

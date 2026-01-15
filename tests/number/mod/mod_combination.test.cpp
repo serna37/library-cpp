@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/binomial_coefficient_prime_mod"
 #include "template/template.hpp"
-#include "library/number/mod_combination.hpp"
+#include "library/number/mod/mod_combination.hpp"
 /**
  * @brief MOD 組み合わせ nCkのテスト
  */
