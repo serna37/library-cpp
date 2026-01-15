@@ -10,10 +10,3 @@ logo: https://raw.githubusercontent.com/serna37/library-cpp/refs/heads/main/.ver
 title: serna37's Library
 description: C++ アルゴリズムとデータ構造のライブラリ
 exclude: ['bits', 'bundler']
-
-kramdown:
-  input: GFM
-  parse_block_html: true
-  # HTMLの出力を許可する設定
-  html_to_native: true
-
