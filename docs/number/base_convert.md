@@ -10,7 +10,7 @@ documentation_of: //library/number/base_convert.hpp
 - 結果が`42`の場合、`4, 2`と配列で返す
 
 ## 計算量
-$O(log_{|to|} x)$
+$O(log_{\vert to \vert} x)$
 
 ## 使い方
 ```cpp

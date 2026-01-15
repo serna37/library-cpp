@@ -10,7 +10,7 @@ documentation_of: //library/string/finds.hpp
 - マッチした頭のインデックスを返す
 
 ## 計算量
-$O(|T| * |S|)$
+$O(\vert T \vert \cdot \vert S \vert)$
 
 ## 使い方
 ```cpp

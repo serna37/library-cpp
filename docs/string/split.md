@@ -9,7 +9,7 @@ documentation_of: //library/string/split.hpp
 - 区切り文字(1文字)で区切る
 
 ## 計算量
-$O(|S|)$
+$O(\vert S \vert)$
 
 ## 使い方
 ```cpp

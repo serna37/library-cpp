@@ -12,7 +12,7 @@ documentation_of: //library/string/rolling_hash.hpp
 - ハッシュが同じであれば、文字列が同じである
 
 ## 計算量
-$O(|S|)$
+$O(\vert S \vert)$
 
 ## 使い方
 ```cpp

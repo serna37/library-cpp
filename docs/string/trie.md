@@ -29,9 +29,9 @@ Root (nodes[0])
 ```
 
 ## 計算量
-- `add`: $O(|S| * \sum)$ Sは追加する文字列、 $\sum$ はchar_size
-- `search`: $O(|S|)$
-- `count_prefix`: $O(|S|)$
+- `add`: $O(\vert S \vert \cdot \sum)$ Sは追加する文字列、 $\sum$ はchar_size
+- `search`: $O(\vert S \vert)$
+- `count_prefix`: $O(\vert S \vert)$
 
 ## 使い方
 ```cpp

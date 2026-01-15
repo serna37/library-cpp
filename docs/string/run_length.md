@@ -14,7 +14,7 @@ AAAABBBCDDDD
 ```
 
 ## 計算量
-$O(|S|)$
+$O(\vert S \vert)$
 
 ## 使い方
 ```cpp

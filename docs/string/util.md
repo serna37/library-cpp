@@ -10,7 +10,7 @@ documentation_of: //library/string/util.hpp
 - charが大文字かどうかを判別（C++のstlはboolで返さないのでラップ）
 
 ## 計算量
-だいたい $O(|S|)$
+だいたい $O(\vert S \vert)$
 
 ## 使い方
 そのままなので省略

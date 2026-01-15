@@ -9,7 +9,7 @@ documentation_of: //library/string/join.hpp
 - 文字列を結合する
 
 ## 計算量
-$O(|S|)$ (合計長)
+$O(\vert S \vert)$ (合計長)
 
 ## 使い方
 ```cpp

@@ -30,7 +30,7 @@ $M = (Q, \sum, \delta, q_0, F)$
 追加した文字列の長さの総和を $L$ 、文字種数を $\sum$ とする
 - `build`: $O(L \cdot \sum)$ Trie木にパターンをaddしたあとで、Failure Linkを構築する
 - `next`: $O(1)$ オートマトン上を1文字進み、次の状態を返す
-- `count_all`: $O(|S|)$ テキストに含まれるパターンの総出現回数をカウント
+- `count_all`: $O(\vert S \vert)$ テキストに含まれるパターンの総出現回数をカウント
 
 ## 使い方
 ```cpp

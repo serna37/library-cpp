@@ -10,7 +10,7 @@ documentation_of: //library/string/split_multi.hpp
 - 区切り文字がない場合空文字
 
 ## 計算量
-$O(|S| * |sep|)$
+$O(\vert S \vert \cdot \vert sep \vert)$
 
 ## 使い方
 ```cpp
