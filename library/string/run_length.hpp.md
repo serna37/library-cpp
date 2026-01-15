@@ -23,7 +23,7 @@ data:
   isVerificationFile: false
   path: library/string/run_length.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:20:07+09:00'
+  timestamp: '2026-01-15 11:46:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/run_length.test.cpp
@@ -43,7 +43,7 @@ AAAABBBCDDDD
 ```
 
 ## 計算量
-$O(|S|)$
+$O(\vert S \vert)$
 
 ## 使い方
 ```cpp

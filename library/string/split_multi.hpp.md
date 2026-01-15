@@ -25,7 +25,7 @@ data:
   isVerificationFile: false
   path: library/string/split_multi.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:20:07+09:00'
+  timestamp: '2026-01-15 11:46:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split_multi.test.cpp
@@ -41,7 +41,7 @@ title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570"
 - 区切り文字がない場合空文字
 
 ## 計算量
-$O(|S| * |sep|)$
+$O(\vert S \vert \cdot \vert sep \vert)$
 
 ## 使い方
 ```cpp

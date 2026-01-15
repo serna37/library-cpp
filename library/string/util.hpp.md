@@ -26,7 +26,7 @@ data:
   isVerificationFile: false
   path: library/string/util.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:20:07+09:00'
+  timestamp: '2026-01-15 11:46:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/util.test.cpp
@@ -42,7 +42,7 @@ title: "\u6587\u5B57\u5217Util"
 - charが大文字かどうかを判別（C++のstlはboolで返さないのでラップ）
 
 ## 計算量
-だいたい $O(|S|)$
+だいたい $O(\vert S \vert)$
 
 ## 使い方
 そのままなので省略

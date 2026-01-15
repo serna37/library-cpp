@@ -21,7 +21,7 @@ data:
   isVerificationFile: false
   path: library/string/range.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:20:07+09:00'
+  timestamp: '2026-01-15 11:46:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/range.test.cpp
@@ -36,7 +36,7 @@ title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97"
 - 文字列の区間[A, B]を取得
 
 ## 計算量
-$O(|T|)$ (区間長)
+$O(\vert T \vert)$ (区間長)
 
 ## 使い方
 ```cpp

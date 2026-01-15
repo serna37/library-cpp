@@ -66,7 +66,7 @@ data:
   isVerificationFile: true
   path: tests/dp/cumulative_sum/cumulative_sum_diff.test.cpp
   requiredBy: []
-  timestamp: '2026-01-15 11:20:07+09:00'
+  timestamp: '2026-01-15 11:46:47+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/dp/cumulative_sum/cumulative_sum_diff.test.cpp

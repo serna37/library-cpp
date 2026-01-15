@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/string/join.test.cpp
+    path: tests/string/finds.test.cpp
     title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -23,10 +23,10 @@ data:
   isVerificationFile: false
   path: library/string/finds.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:20:07+09:00'
+  timestamp: '2026-01-15 11:46:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/string/join.test.cpp
+  - tests/string/finds.test.cpp
 documentation_of: library/string/finds.hpp
 layout: document
 title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570"
@@ -39,7 +39,7 @@ title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570"
 - マッチした頭のインデックスを返す
 
 ## 計算量
-$O(|T| * |S|)$
+$O(\vert T \vert \cdot \vert S \vert)$
 
 ## 使い方
 ```cpp

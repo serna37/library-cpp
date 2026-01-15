@@ -65,7 +65,7 @@ data:
   path: library/string/trie.hpp
   requiredBy:
   - library/string/aho_corasick.hpp
-  timestamp: '2026-01-15 11:20:07+09:00'
+  timestamp: '2026-01-15 11:46:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/aho_corasick.test.cpp
@@ -100,9 +100,9 @@ Root (nodes[0])
 ```
 
 ## 計算量
-- `add`: $O(|S| * \sum)$ Sは追加する文字列、 $\sum$ はchar_size
-- `search`: $O(|S|)$
-- `count_prefix`: $O(|S|)$
+- `add`: $O(\vert S \vert \cdot \sum)$ Sは追加する文字列、 $\sum$ はchar_size
+- `search`: $O(\vert S \vert)$
+- `count_prefix`: $O(\vert S \vert)$
 
 ## 使い方
 ```cpp

@@ -24,7 +24,7 @@ data:
   isVerificationFile: false
   path: library/string/split.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:20:07+09:00'
+  timestamp: '2026-01-15 11:46:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string/split.test.cpp
@@ -39,7 +39,7 @@ title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B"
 - 区切り文字(1文字)で区切る
 
 ## 計算量
-$O(|S|)$
+$O(\vert S \vert)$
 
 ## 使い方
 ```cpp

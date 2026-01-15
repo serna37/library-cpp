@@ -26,7 +26,7 @@ data:
   isVerificationFile: false
   path: library/number/base_convert.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:20:07+09:00'
+  timestamp: '2026-01-15 11:46:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number/base_convert.test.cpp
@@ -42,7 +42,7 @@ title: "\u9032\u6570\u5909\u63DB"
 - 結果が`42`の場合、`4, 2`と配列で返す
 
 ## 計算量
-$O(log_{|to|} x)$
+$O(log_{\vert to \vert} x)$
 
 ## 使い方
 ```cpp

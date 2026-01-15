@@ -21,7 +21,7 @@ data:
   isVerificationFile: false
   path: library/geometry/area_square.hpp
   requiredBy: []
-  timestamp: '2026-01-15 11:20:07+09:00'
+  timestamp: '2026-01-15 11:46:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/geometry/area_square.test.cpp
