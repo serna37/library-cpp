@@ -1,14 +1,16 @@
 #pragma once
+#include "library/segtree/fenwick_tree.hpp"
 #include "library/sequence/compressor.hpp"
-template <typename T> long long inversion_number(vector<T> &A) {
-    Compressor<long long> zip(A);
-    int sz = zip.size();
-    vector<int> fwk(sz + 1);
-    long long inv = 0, N = A.size();
+template <typename T> long long inversion_number(const vector<T> &A) {
+    if (A.empty()) return 0ll;
+    Compressor<T> zip(A);
+    vector<int> compressed_a = zip.get_all();
+    int N = A.size(), sz = zip.size();
+    FenwickTree fwk(sz);
+    long long inv = 0;
     for (int i = 0; i < N; ++i) {
-        for (int f = sz; f; f -= f & -f) inv += fwk[f];
-        for (int f = A[i] + 1; f; f -= f & -f) inv -= fwk[f];
-        for (int f = A[i] + 1; f <= sz; f += f & -f) ++fwk[f];
+        inv += i - fwk.sum(compressed_a[i]);
+        fwk.add(compressed_a[i], 1);
     }
     return inv;
 }

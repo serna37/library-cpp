@@ -3,7 +3,7 @@
 #include "template/template.hpp"
 #include "library/sequence/inversion_number.hpp"
 /**
- * @brief 転倒数・座標圧縮のテスト
+ * @brief 転倒数・座標圧縮・FenwickTreeのテスト
  */
 void solve() {
     int N;
