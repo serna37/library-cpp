@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include "template/template.hpp"
-#include "library/sequence/wavelet_search_engine.hpp"
+#include "library/search/binary_search/wavelet_search_engine.hpp"
 
 void test_wavelet_search_engine() {
     // テストデータ: 負数、重複、大きな値を含む
