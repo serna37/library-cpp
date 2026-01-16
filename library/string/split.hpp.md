@@ -24,7 +24,7 @@ data:
   isVerificationFile: false
   path: library/string/split.hpp
   requiredBy: []
-  timestamp: '2026-01-16 11:55:00+09:00'
+  timestamp: '2026-01-16 12:40:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string.split.test.cpp

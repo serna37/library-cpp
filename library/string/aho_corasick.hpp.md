@@ -4,11 +4,19 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/string/trie.hpp
     title: "Trie\u6728"
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: library/string/finds.hpp
+    title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
+      \u30F3"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/string.aho_corasick.test.cpp
     title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/string.finds.test.cpp
+    title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
+      \u30F3\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -94,10 +102,12 @@ data:
   - library/string/trie.hpp
   isVerificationFile: false
   path: library/string/aho_corasick.hpp
-  requiredBy: []
-  timestamp: '2026-01-16 11:55:00+09:00'
+  requiredBy:
+  - library/string/finds.hpp
+  timestamp: '2026-01-16 12:40:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/string.finds.test.cpp
   - tests/string.aho_corasick.test.cpp
 documentation_of: library/string/aho_corasick.hpp
 layout: document

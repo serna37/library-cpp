@@ -247,7 +247,8 @@ data:
       title: Aho Corasick
     - icon: ':heavy_check_mark:'
       path: library/string/finds.hpp
-      title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570"
+      title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
+        \u30F3"
     - icon: ':heavy_check_mark:'
       path: library/string/join.hpp
       title: "\u6587\u5B57\u5217\u7D50\u5408"
@@ -475,7 +476,8 @@ data:
       title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/string.finds.test.cpp
-      title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570\u306E\u30C6\u30B9\u30C8"
+      title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
+        \u30F3\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/string.join.test.cpp
       title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
