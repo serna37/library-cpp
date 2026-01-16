@@ -7,8 +7,7 @@ documentation_of: //library/sequence/inversion_number.hpp
 
 ## できること
 - 右に倒れる$A_i > A_j (i < j)$の回数を求める
-- 中で座標圧縮してるので配列は破壊
-- Fenwick Treeで求めている
+- 座標圧縮したFenwick Treeで求めている
 
 ## 計算量
 $O(NlogN)$
