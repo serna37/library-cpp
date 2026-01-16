@@ -38,8 +38,8 @@ template <typename T> ostream &operator<<(ostream &s, const vector<T> &v) {
 template <typename T> void print(const T &v) { cout << v << endl; }
 template <typename T> void print(const vector<vector<T>> &G) { for (auto &&v : G) cout << v << endl; }
 template <typename T> vec2<T> make_vec2(int H, int W, T init = 0) { return vector<vector<T>>(H, vector<T>(W, init)); }
-template <typename T> void chmin(T &i, const T &j) { return i > j && (i = j, true); }
-template <typename T> void chmax(T &i, const T &j) { return i < j && (i = j, true); }
+template <typename T> bool chmin(T &i, const T &j) { return i > j && (i = j, true); }
+template <typename T> bool chmax(T &i, const T &j) { return i < j && (i = j, true); }
 void solve();
 signed main() { solve(); }
 // ----------------------------------------
