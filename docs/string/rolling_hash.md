@@ -12,7 +12,8 @@ documentation_of: //library/string/rolling_hash.hpp
 - ハッシュが同じであれば、文字列が同じである
 
 ## 計算量
-$O(\vert S \vert)$
+- 構築: $O(\vert S \vert)$
+- `get`: $O(1)$
 
 ## 使い方
 ```cpp
