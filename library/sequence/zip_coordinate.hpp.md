@@ -28,7 +28,7 @@ data:
   path: library/sequence/zip_coordinate.hpp
   requiredBy:
   - library/sequence/inversion_number.hpp
-  timestamp: '2026-01-16 12:40:22+09:00'
+  timestamp: '2026-01-16 13:01:50+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence.inversion_number.test.cpp

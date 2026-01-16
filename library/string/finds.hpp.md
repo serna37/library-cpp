@@ -170,7 +170,7 @@ data:
   isVerificationFile: false
   path: library/string/finds.hpp
   requiredBy: []
-  timestamp: '2026-01-16 12:40:22+09:00'
+  timestamp: '2026-01-16 13:01:50+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string.finds.test.cpp
@@ -183,7 +183,6 @@ title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B
 
 ## できること
 - 文字列Tの中にあるSの一致場所を全て取得、マッチした頭のインデックスを返す
-- 
 
 ## 計算量
 以下3種類を自動で使い分けます

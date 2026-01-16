@@ -69,7 +69,7 @@ data:
   isVerificationFile: false
   path: library/segtree/segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-01-16 12:40:22+09:00'
+  timestamp: '2026-01-16 13:01:50+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.segment_tree.test.cpp
