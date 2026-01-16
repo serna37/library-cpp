@@ -10,9 +10,12 @@ documentation_of: //library/string/finds.hpp
 - マッチした頭のインデックスを返す
 
 ## 計算量
-$O(\vert T \vert \cdot \vert S \vert)$
+- ナイーブ: $O(\vert T \vert \cdot \vert S \vert)$
+- ロリハ版: $O(\vert T \vert + \vert S \vert)$ ※ハッシュ衝突の危険性を留意
 
 ## 使い方
 ```cpp
 vector<int> pos = finds(T, S);
+
+vector<int> pos = finds_rolling_hash(T, S);
 ```
