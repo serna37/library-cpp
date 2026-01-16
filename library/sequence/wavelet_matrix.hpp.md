@@ -5,10 +5,13 @@ data:
     path: library/sequence/bit_dict.hpp
     title: "\u5B8C\u5099\u8F9E\u66F8"
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: library/search/binary_search/wavelet_search_engine.hpp
     title: Wavelet Search Engine
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/search.binary_search.wavelet_search_engine.test.cpp
+    title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/sequence.wavelet_matrix.test.cpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
@@ -170,9 +173,10 @@ data:
   path: library/sequence/wavelet_matrix.hpp
   requiredBy:
   - library/search/binary_search/wavelet_search_engine.hpp
-  timestamp: '2026-01-16 15:08:22+09:00'
+  timestamp: '2026-01-16 15:19:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/search.binary_search.wavelet_search_engine.test.cpp
   - tests/sequence.wavelet_matrix.test.cpp
 documentation_of: library/sequence/wavelet_matrix.hpp
 layout: document

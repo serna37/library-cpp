@@ -130,6 +130,9 @@ data:
     path: tests/search.binary_search.binary_search_real.test.cpp
     title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/search.binary_search.wavelet_search_engine.test.cpp
+    title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/search.bit_search.test.cpp
     title: "bit\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -260,7 +263,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-16 15:08:22+09:00'
+  timestamp: '2026-01-16 15:19:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp
@@ -294,6 +297,7 @@ data:
   - tests/sequence.inversion_number.test.cpp
   - tests/sequence.dispersion.test.cpp
   - tests/number.mod.mod_combination.test.cpp
+  - tests/search.binary_search.wavelet_search_engine.test.cpp
   - tests/graph.route_restore.test.cpp
   - tests/string.finds.test.cpp
   - tests/search.binary_search.bi_lt_val.test.cpp

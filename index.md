@@ -186,7 +186,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/search/binary_search/binary_search_real.hpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search/wavelet_search_engine.hpp
       title: Wavelet Search Engine
   - name: library/search
@@ -433,9 +433,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/search.binary_search.binary_search_real.test.cpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search.binary_search.wavelet_search_engine.test.cpp
-      title: tests/search.binary_search.wavelet_search_engine.test.cpp
+      title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/search.bit_search.test.cpp
       title: "bit\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"

@@ -11,10 +11,13 @@ data:
     path: library/sequence/wavelet_matrix.hpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/search.binary_search.wavelet_search_engine.test.cpp
+    title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/compressor.hpp\"\ntemplate <typename T>\
@@ -225,9 +228,10 @@ data:
   isVerificationFile: false
   path: library/search/binary_search/wavelet_search_engine.hpp
   requiredBy: []
-  timestamp: '2026-01-16 15:08:22+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-16 15:19:42+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/search.binary_search.wavelet_search_engine.test.cpp
 documentation_of: library/search/binary_search/wavelet_search_engine.hpp
 layout: document
 title: Wavelet Search Engine

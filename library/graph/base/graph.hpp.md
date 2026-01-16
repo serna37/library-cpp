@@ -116,7 +116,7 @@ data:
   - library/graph/topological_sort.hpp
   - library/graph/cycle_detect.hpp
   - library/graph/tree/lca.hpp
-  timestamp: '2026-01-16 15:08:22+09:00'
+  timestamp: '2026-01-16 15:19:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.cycle_detect.test.cpp

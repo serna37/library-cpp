@@ -48,7 +48,7 @@ data:
   requiredBy:
   - library/segtree/unified_segment_tree.hpp
   - library/sequence/inversion_number.hpp
-  timestamp: '2026-01-16 15:08:22+09:00'
+  timestamp: '2026-01-16 15:19:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.fenwick_tree.test.cpp

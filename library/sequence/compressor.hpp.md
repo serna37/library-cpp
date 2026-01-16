@@ -2,13 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: library/search/binary_search/wavelet_search_engine.hpp
     title: Wavelet Search Engine
   - icon: ':heavy_check_mark:'
     path: library/sequence/inversion_number.hpp
     title: "\u8EE2\u5012\u6570"
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/search.binary_search.wavelet_search_engine.test.cpp
+    title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/sequence.inversion_number.test.cpp
     title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u30FBFenwickTree\u306E\
@@ -48,10 +51,11 @@ data:
   requiredBy:
   - library/sequence/inversion_number.hpp
   - library/search/binary_search/wavelet_search_engine.hpp
-  timestamp: '2026-01-16 15:08:22+09:00'
+  timestamp: '2026-01-16 15:19:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence.inversion_number.test.cpp
+  - tests/search.binary_search.wavelet_search_engine.test.cpp
 documentation_of: library/sequence/compressor.hpp
 layout: document
 title: "\u5EA7\u6A19\u5727\u7E2E"
