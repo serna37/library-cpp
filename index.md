@@ -188,7 +188,7 @@ data:
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
     - icon: ':warning:'
       path: library/search/binary_search/wavelet_search_engine.hpp
-      title: library/search/binary_search/wavelet_search_engine.hpp
+      title: Wavelet Search Engine
   - name: library/search
     pages:
     - icon: ':heavy_check_mark:'
@@ -217,6 +217,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/segtree/starry_sky_tree.hpp
       title: Starry Sky Tree
+    - icon: ':heavy_check_mark:'
+      path: library/segtree/unified_segment_tree.hpp
+      title: "\u7D71\u5408\u30BB\u30B0\u6728"
   - name: library/sequence
     pages:
     - icon: ':heavy_check_mark:'
@@ -301,11 +304,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
-  - name: tests
-    pages:
-    - icon: ':warning:'
-      path: tests/search.binary_search.wavelet_search_engine.cpp
-      title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
   verificationCategories:
   - name: tests
     pages:
@@ -435,6 +433,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/search.binary_search.binary_search_real.test.cpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
+    - icon: ':x:'
+      path: tests/search.binary_search.wavelet_search_engine.test.cpp
+      title: tests/search.binary_search.wavelet_search_engine.test.cpp
     - icon: ':heavy_check_mark:'
       path: tests/search.bit_search.test.cpp
       title: "bit\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
@@ -459,6 +460,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/segtree.starry_sky_tree_2.test.cpp
       title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/segtree.unified_segment_tree.test.cpp
+      title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
     - icon: ':heavy_check_mark:'
       path: tests/sequence.collection_util.test.cpp
       title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"

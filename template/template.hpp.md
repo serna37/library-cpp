@@ -154,6 +154,9 @@ data:
     path: tests/segtree.starry_sky_tree_2.test.cpp
     title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/segtree.unified_segment_tree.test.cpp
+    title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
+  - icon: ':heavy_check_mark:'
     path: tests/sequence.collection_util.test.cpp
     title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -257,7 +260,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-16 14:13:31+09:00'
+  timestamp: '2026-01-16 15:08:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp
@@ -297,6 +300,7 @@ data:
   - tests/string.range.test.cpp
   - tests/search.bit_search.test.cpp
   - tests/various.random.test.cpp
+  - tests/segtree.unified_segment_tree.test.cpp
   - tests/sequence.merge.test.cpp
   - tests/geometry.area_triangle.test.cpp
   - tests/dp.cumulative_sum.cumulative_sum.test.cpp

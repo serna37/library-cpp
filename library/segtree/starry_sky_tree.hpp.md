@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: library/segtree/unified_segment_tree.hpp
+    title: "\u7D71\u5408\u30BB\u30B0\u6728"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/segtree.starry_sky_tree.test.cpp
@@ -9,6 +12,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/segtree.starry_sky_tree_2.test.cpp
     title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/segtree.unified_segment_tree.test.cpp
+    title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -71,11 +77,13 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/segtree/starry_sky_tree.hpp
-  requiredBy: []
-  timestamp: '2026-01-16 14:13:31+09:00'
+  requiredBy:
+  - library/segtree/unified_segment_tree.hpp
+  timestamp: '2026-01-16 15:08:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.starry_sky_tree.test.cpp
+  - tests/segtree.unified_segment_tree.test.cpp
   - tests/segtree.starry_sky_tree_2.test.cpp
 documentation_of: library/segtree/starry_sky_tree.hpp
 layout: document

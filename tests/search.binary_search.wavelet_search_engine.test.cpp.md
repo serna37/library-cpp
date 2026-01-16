@@ -3,13 +3,10 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
-  attributes:
-    document_title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
-    links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
+  _verificationStatusIcon: ':x:'
+  attributes: {}
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -53,16 +50,16 @@ data:
     \u30B9\u30C8\n */\nvoid solve() {\n    print(\"Hello World\");\n    test_wavelet_search_engine();\n\
     \    test_with_single_element();\n}\n"
   dependsOn: []
-  isVerificationFile: false
-  path: tests/search.binary_search.wavelet_search_engine.cpp
+  isVerificationFile: true
+  path: tests/search.binary_search.wavelet_search_engine.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: tests/search.binary_search.wavelet_search_engine.cpp
+documentation_of: tests/search.binary_search.wavelet_search_engine.test.cpp
 layout: document
 redirect_from:
-- /library/tests/search.binary_search.wavelet_search_engine.cpp
-- /library/tests/search.binary_search.wavelet_search_engine.cpp.html
-title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
+- /verify/tests/search.binary_search.wavelet_search_engine.test.cpp
+- /verify/tests/search.binary_search.wavelet_search_engine.test.cpp.html
+title: tests/search.binary_search.wavelet_search_engine.test.cpp
 ---

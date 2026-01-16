@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: library/search/binary_search/wavelet_search_engine.hpp
-    title: library/search/binary_search/wavelet_search_engine.hpp
+    title: Wavelet Search Engine
   - icon: ':heavy_check_mark:'
     path: library/sequence/inversion_number.hpp
     title: "\u8EE2\u5012\u6570"
@@ -48,7 +48,7 @@ data:
   requiredBy:
   - library/sequence/inversion_number.hpp
   - library/search/binary_search/wavelet_search_engine.hpp
-  timestamp: '2026-01-16 14:13:31+09:00'
+  timestamp: '2026-01-16 15:08:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence.inversion_number.test.cpp

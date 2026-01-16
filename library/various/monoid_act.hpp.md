@@ -8,10 +8,16 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/segtree/lazy_segment_tree.hpp
     title: Lazy Segment Tree
+  - icon: ':heavy_check_mark:'
+    path: library/segtree/unified_segment_tree.hpp
+    title: "\u7D71\u5408\u30BB\u30B0\u6728"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/segtree.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
+  - icon: ':heavy_check_mark:'
+    path: tests/segtree.unified_segment_tree.test.cpp
+    title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -139,11 +145,13 @@ data:
   isVerificationFile: false
   path: library/various/monoid_act.hpp
   requiredBy:
+  - library/segtree/unified_segment_tree.hpp
   - library/segtree/lazy_segment_tree.hpp
-  timestamp: '2026-01-16 14:13:31+09:00'
+  timestamp: '2026-01-16 15:08:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.lazy_segment_tree.test.cpp
+  - tests/segtree.unified_segment_tree.test.cpp
 documentation_of: library/various/monoid_act.hpp
 layout: document
 title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"

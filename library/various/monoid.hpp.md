@@ -12,6 +12,9 @@ data:
     path: library/segtree/segment_tree.hpp
     title: Segment Tree
   - icon: ':heavy_check_mark:'
+    path: library/segtree/unified_segment_tree.hpp
+    title: "\u7D71\u5408\u30BB\u30B0\u6728"
+  - icon: ':heavy_check_mark:'
     path: library/various/monoid_act.hpp
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
   _extendedVerifiedWith:
@@ -24,6 +27,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/segtree.segment_tree.test.cpp
     title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
+  - icon: ':heavy_check_mark:'
+    path: tests/segtree.unified_segment_tree.test.cpp
+    title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -75,15 +81,17 @@ data:
   path: library/various/monoid.hpp
   requiredBy:
   - library/segtree/segment_tree.hpp
+  - library/segtree/unified_segment_tree.hpp
   - library/segtree/lazy_segment_tree.hpp
   - library/segtree/dual_segment_tree.hpp
   - library/various/monoid_act.hpp
-  timestamp: '2026-01-16 14:13:31+09:00'
+  timestamp: '2026-01-16 15:08:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp
   - tests/segtree.segment_tree.test.cpp
   - tests/segtree.lazy_segment_tree.test.cpp
+  - tests/segtree.unified_segment_tree.test.cpp
 documentation_of: library/various/monoid.hpp
 layout: document
 title: "\u30E2\u30CE\u30A4\u30C9"

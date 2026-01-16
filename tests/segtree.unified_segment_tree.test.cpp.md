@@ -2,8 +2,23 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
+    path: library/segtree/dual_segment_tree.hpp
+    title: Dual Segment Tree
+  - icon: ':heavy_check_mark:'
+    path: library/segtree/fenwick_tree.hpp
+    title: Fenwick Tree
+  - icon: ':heavy_check_mark:'
     path: library/segtree/lazy_segment_tree.hpp
     title: Lazy Segment Tree
+  - icon: ':heavy_check_mark:'
+    path: library/segtree/segment_tree.hpp
+    title: Segment Tree
+  - icon: ':heavy_check_mark:'
+    path: library/segtree/starry_sky_tree.hpp
+    title: Starry Sky Tree
+  - icon: ':heavy_check_mark:'
+    path: library/segtree/unified_segment_tree.hpp
+    title: "\u7D71\u5408\u30BB\u30B0\u6728"
   - icon: ':heavy_check_mark:'
     path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
@@ -20,10 +35,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F
-    document_title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H
+    document_title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H
   bundledCode: "Traceback (most recent call last):\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
@@ -37,32 +52,36 @@ data:
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
-    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F\"\
-    \n#include \"template/template.hpp\"\n#include \"library/segtree/lazy_segment_tree.hpp\"\
-    \n/**\n * @brief \u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ\n\
-    \ */\nvoid solve() {\n    int N, Q;\n    cin >> N >> Q;\n    LazySegmentTree<int,\
-    \ int> seg(Monoid::Min::op, Monoid::Min::e,\n                                \
-    \  Monoid::Set::op, Monoid::Set::e,\n                                  MonoidAct::MinSet::op,\
-    \ N);\n    while (Q--) {\n        int com;\n        cin >> com;\n        if (com\
-    \ == 0) {\n            int s, t, x;\n            cin >> s >> t >> x;\n       \
-    \     seg.apply(s, t + 1, x);\n        }\n        if (com == 1) {\n          \
-    \  int s, t;\n            cin >> s >> t;\n            print(seg.prod(s, t + 1));\n\
-    \        }\n    }\n}\n"
+    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H\"\
+    \n#include \"template/template.hpp\"\n#include \"library/segtree/unified_segment_tree.hpp\"\
+    \n/**\n * @brief \u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ\n\
+    \ */\nvoid solve() {\n    int N, Q;\n    cin >> N >> Q;\n    vector<int> A(N,\
+    \ 0);\n    UnifiedSegmentTree<Monoid::Min, Monoid::Add, MonoidAct::MinAdd> seg(A,\
+    \ RangeType::Range, RangeType::Range);\n    while (Q--) {\n        int com, s,\
+    \ t;\n        cin >> com >> s >> t;\n        ++t;\n        if (com == 0) {\n \
+    \           int x;\n            cin >> x;\n            seg.update(s, t, x);\n\
+    \        }\n        if (com == 1) {\n            print(seg.query(s, t));\n   \
+    \     }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
-  - library/segtree/lazy_segment_tree.hpp
+  - library/segtree/unified_segment_tree.hpp
+  - library/segtree/dual_segment_tree.hpp
   - library/various/monoid.hpp
+  - library/segtree/fenwick_tree.hpp
+  - library/segtree/lazy_segment_tree.hpp
   - library/various/monoid_act.hpp
+  - library/segtree/segment_tree.hpp
+  - library/segtree/starry_sky_tree.hpp
   isVerificationFile: true
-  path: tests/segtree.lazy_segment_tree.test.cpp
+  path: tests/segtree.unified_segment_tree.test.cpp
   requiredBy: []
   timestamp: '2026-01-16 15:08:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/segtree.lazy_segment_tree.test.cpp
+documentation_of: tests/segtree.unified_segment_tree.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/segtree.lazy_segment_tree.test.cpp
-- /verify/tests/segtree.lazy_segment_tree.test.cpp.html
-title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
+- /verify/tests/segtree.unified_segment_tree.test.cpp
+- /verify/tests/segtree.unified_segment_tree.test.cpp.html
+title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
 ---
