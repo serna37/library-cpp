@@ -1,7 +1,8 @@
 #pragma once
-#include "library/sequence/zip_coordinate.hpp"
+#include "library/sequence/compressor.hpp"
 template <typename T> long long inversion_number(vector<T> &A) {
-    int sz = zip_coordinate(A);
+    Compressor<long long> zip(A);
+    int sz = zip.size();
     vector<int> fwk(sz + 1);
     long long inv = 0, N = A.size();
     for (int i = 0; i < N; ++i) {
