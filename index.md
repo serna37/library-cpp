@@ -186,6 +186,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/search/binary_search/binary_search_real.hpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
+    - icon: ':warning:'
+      path: library/search/binary_search/wavelet_search_engine.hpp
+      title: library/search/binary_search/wavelet_search_engine.hpp
   - name: library/search
     pages:
     - icon: ':heavy_check_mark:'
@@ -223,6 +226,9 @@ data:
       path: library/sequence/collection_util.hpp
       title: "\u914D\u5217\u7CFBUtil"
     - icon: ':heavy_check_mark:'
+      path: library/sequence/compressor.hpp
+      title: "\u5EA7\u6A19\u5727\u7E2E"
+    - icon: ':heavy_check_mark:'
       path: library/sequence/difference_sequence.hpp
       title: "\u968E\u5DEE\u6570\u5217"
     - icon: ':heavy_check_mark:'
@@ -237,9 +243,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/sequence/wavelet_matrix.hpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
-    - icon: ':heavy_check_mark:'
-      path: library/sequence/zip_coordinate.hpp
-      title: "\u5EA7\u6A19\u5727\u7E2E"
   - name: library/string
     pages:
     - icon: ':heavy_check_mark:'
@@ -298,6 +301,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
+  - name: tests
+    pages:
+    - icon: ':warning:'
+      path: tests/search.binary_search.wavelet_search_engine.cpp
+      title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
   verificationCategories:
   - name: tests
     pages:
@@ -463,7 +471,8 @@ data:
         \u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/sequence.inversion_number.test.cpp
-      title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
+      title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u30FBFenwickTree\u306E\
+        \u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/sequence.merge.test.cpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"

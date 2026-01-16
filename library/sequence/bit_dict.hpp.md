@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':warning:'
+    path: library/search/binary_search/wavelet_search_engine.hpp
+    title: library/search/binary_search/wavelet_search_engine.hpp
   - icon: ':heavy_check_mark:'
     path: library/sequence/wavelet_matrix.hpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
@@ -78,7 +81,8 @@ data:
   path: library/sequence/bit_dict.hpp
   requiredBy:
   - library/sequence/wavelet_matrix.hpp
-  timestamp: '2026-01-16 13:01:50+09:00'
+  - library/search/binary_search/wavelet_search_engine.hpp
+  timestamp: '2026-01-16 14:13:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence.wavelet_matrix.test.cpp

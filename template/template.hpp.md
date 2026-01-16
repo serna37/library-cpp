@@ -165,7 +165,8 @@ data:
       \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/sequence.inversion_number.test.cpp
-    title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
+    title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u30FBFenwickTree\u306E\
+      \u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/sequence.merge.test.cpp
     title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
@@ -256,7 +257,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-16 13:01:50+09:00'
+  timestamp: '2026-01-16 14:13:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp

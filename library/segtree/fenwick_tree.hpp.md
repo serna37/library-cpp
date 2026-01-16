@@ -1,11 +1,18 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: library/sequence/inversion_number.hpp
+    title: "\u8EE2\u5012\u6570"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/segtree.fenwick_tree.test.cpp
     title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence.inversion_number.test.cpp
+    title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u30FBFenwickTree\u306E\
+      \u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -32,11 +39,13 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/segtree/fenwick_tree.hpp
-  requiredBy: []
-  timestamp: '2026-01-16 13:01:50+09:00'
+  requiredBy:
+  - library/sequence/inversion_number.hpp
+  timestamp: '2026-01-16 14:13:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.fenwick_tree.test.cpp
+  - tests/sequence.inversion_number.test.cpp
 documentation_of: library/segtree/fenwick_tree.hpp
 layout: document
 title: Fenwick Tree

@@ -52,7 +52,7 @@ data:
   isVerificationFile: true
   path: tests/graph.cycle_detect.test.cpp
   requiredBy: []
-  timestamp: '2026-01-16 13:01:50+09:00'
+  timestamp: '2026-01-16 14:13:31+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.cycle_detect.test.cpp
