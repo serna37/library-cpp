@@ -1,6 +1,6 @@
 ---
 title: Wavelet Search Engine
-documentation_of: //library/sequence/wavelet_search_engine.hpp
+documentation_of: //library/search/binary_search/wavelet_search_engine.hpp
 ---
 
 # Wavelet Search Engine
