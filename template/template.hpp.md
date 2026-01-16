@@ -210,7 +210,7 @@ data:
     path: tests/string.util.test.cpp
     title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/template.test.cpp
+    path: tests/template.template.test.cpp
     title: "template\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/various.convert.test.cpp
@@ -255,15 +255,15 @@ data:
     \ T &v) { cout << v << endl; }\ntemplate <typename T> void print(const vector<vector<T>>\
     \ &G) { for (auto &&v : G) cout << v << endl; }\ntemplate <typename T> vec2<T>\
     \ make_vec2(int H, int W, T init = 0) { return vector<vector<T>>(H, vector<T>(W,\
-    \ init)); }\ntemplate <typename T> void chmin(T &i, const T &j) { return i > j\
-    \ && (i = j, true); }\ntemplate <typename T> void chmax(T &i, const T &j) { return\
+    \ init)); }\ntemplate <typename T> bool chmin(T &i, const T &j) { return i > j\
+    \ && (i = j, true); }\ntemplate <typename T> bool chmax(T &i, const T &j) { return\
     \ i < j && (i = j, true); }\nvoid solve();\nsigned main() { solve(); }\n// ----------------------------------------\n\
     // #include \"template/template.hpp\" is done.\n// ----------------------------------------\n"
   dependsOn: []
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-16 15:19:42+09:00'
+  timestamp: '2026-01-16 16:23:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp
@@ -280,7 +280,6 @@ data:
   - tests/graph.shortest_path.dijkstra.test.cpp
   - tests/dp.cumulative_sum.cumulative_sum_rev_diff.test.cpp
   - tests/various.convert.test.cpp
-  - tests/template.test.cpp
   - tests/number.prime.prime_test.test.cpp
   - tests/search.binary_search.binary_search.test.cpp
   - tests/various.union_find.test.cpp
@@ -293,6 +292,7 @@ data:
   - tests/search.binary_search.bi_ge_val.test.cpp
   - tests/number.divisors.test.cpp
   - tests/segtree.lazy_segment_tree.test.cpp
+  - tests/template.template.test.cpp
   - tests/segtree.fenwick_tree.test.cpp
   - tests/sequence.inversion_number.test.cpp
   - tests/sequence.dispersion.test.cpp

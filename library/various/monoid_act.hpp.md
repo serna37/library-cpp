@@ -147,7 +147,7 @@ data:
   requiredBy:
   - library/segtree/unified_segment_tree.hpp
   - library/segtree/lazy_segment_tree.hpp
-  timestamp: '2026-01-16 15:19:42+09:00'
+  timestamp: '2026-01-16 16:23:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.lazy_segment_tree.test.cpp

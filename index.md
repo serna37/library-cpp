@@ -298,7 +298,7 @@ data:
       title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   - name: template
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
     - icon: ':heavy_check_mark:'
@@ -514,7 +514,10 @@ data:
       path: tests/string.util.test.cpp
       title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
-      path: tests/template.test.cpp
+      path: tests/template.debug.test.cpp
+      title: "debug\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/template.template.test.cpp
       title: "template\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/various.convert.test.cpp
