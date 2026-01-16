@@ -3,9 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
+    path: library/string/finds.hpp
+    title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570"
+  - icon: ':heavy_check_mark:'
     path: library/string/rolling_hash.hpp
     title: Rolling Hash
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/string.finds.test.cpp
+    title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/string.rolling_hash.test.cpp
     title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
@@ -30,11 +36,13 @@ data:
   isVerificationFile: false
   path: library/various/random.hpp
   requiredBy:
+  - library/string/finds.hpp
   - library/string/rolling_hash.hpp
-  timestamp: '2026-01-15 17:34:35+09:00'
+  timestamp: '2026-01-16 11:55:00+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string.rolling_hash.test.cpp
+  - tests/string.finds.test.cpp
   - tests/various.random.test.cpp
 documentation_of: library/various/random.hpp
 layout: document

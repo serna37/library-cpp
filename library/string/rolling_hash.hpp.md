@@ -4,8 +4,14 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/various/random.hpp
     title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: library/string/finds.hpp
+    title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570"
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/string.finds.test.cpp
+    title: "\u6587\u5B57\u5217\u691C\u7D22 \u8907\u6570\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/string.rolling_hash.test.cpp
     title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
@@ -75,11 +81,13 @@ data:
   - library/various/random.hpp
   isVerificationFile: false
   path: library/string/rolling_hash.hpp
-  requiredBy: []
-  timestamp: '2026-01-15 17:34:35+09:00'
+  requiredBy:
+  - library/string/finds.hpp
+  timestamp: '2026-01-16 11:55:00+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string.rolling_hash.test.cpp
+  - tests/string.finds.test.cpp
 documentation_of: library/string/rolling_hash.hpp
 layout: document
 title: Rolling Hash
@@ -92,9 +100,14 @@ title: Rolling Hash
 - 文字列Sをハッシュに変換する
 - `get(0, 5)`: 0~5文字目の部分文字列のハッシュを取得
 - ハッシュが同じであれば、文字列が同じである
+- ハッシュ衝突の危険性について
+  - 法にメルセンヌ素数 $2^{61}-1$ を、基数に実行時疑似乱数を使用していますが、比較するハッシュ値の数が増えると衝突確率が急上昇します
+    - 原因: 「誕生日パラドックス」
+    - 衝突の目安: およそ $\sqrt M$ 個(約 $1.5 \cdot 10^{9}$ )個の異なるハッシュを生成して比較すると50%の確率で衝突する
 
 ## 計算量
-$O(\vert S \vert)$
+- 構築: $O(\vert S \vert)$
+- `get`: $O(1)$
 
 ## 使い方
 ```cpp

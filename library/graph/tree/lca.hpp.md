@@ -125,7 +125,7 @@ data:
   isVerificationFile: false
   path: library/graph/tree/lca.hpp
   requiredBy: []
-  timestamp: '2026-01-15 17:34:35+09:00'
+  timestamp: '2026-01-16 11:55:00+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.tree.lca.test.cpp
