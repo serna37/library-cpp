@@ -1,36 +1,37 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/number/mod/montgomery_mod_int.hpp
     title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fft/convolution_arbitrary_mod.hpp
     title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fft/fast_fourier_transform.hpp
     title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fps/formal_power_series.hpp
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fps.stirling_second_number.test.cpp
     title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
       \u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/number/mod/montgomery_mod_int.hpp\"\ntemplate <uint32_t\
-    \ mod_, bool fast = false>\nstruct MontgomeryModInt {\n  private:\n    using mint\
-    \ = MontgomeryModInt;\n    using i32 = int32_t;\n    using i64 = int64_t;\n  \
-    \  using u32 = uint32_t;\n    using u64 = uint64_t;\n    static constexpr u32\
-    \ get_r() {\n        u32 ret = mod_;\n        for (i32 i = 0; i < 4; i++) ret\
-    \ *= 2 - mod_ * ret;\n        return ret;\n    }\n    static constexpr u32 r =\
-    \ get_r();\n    static constexpr u32 n2 = -u64(mod_) % mod_;\n    static_assert(r\
+  bundledCode: "#line 2 \"library/polynomial/fps/formal_power_series.hpp\"\n#include\
+    \ <functional>\n#line 2 \"library/number/mod/montgomery_mod_int.hpp\"\ntemplate\
+    \ <uint32_t mod_, bool fast = false>\nstruct MontgomeryModInt {\n  private:\n\
+    \    using mint = MontgomeryModInt;\n    using i32 = int32_t;\n    using i64 =\
+    \ int64_t;\n    using u32 = uint32_t;\n    using u64 = uint64_t;\n    static constexpr\
+    \ u32 get_r() {\n        u32 ret = mod_;\n        for (i32 i = 0; i < 4; i++)\
+    \ ret *= 2 - mod_ * ret;\n        return ret;\n    }\n    static constexpr u32\
+    \ r = get_r();\n    static constexpr u32 n2 = -u64(mod_) % mod_;\n    static_assert(r\
     \ * mod_ == 1, \"invalid, r * mod != 1\");\n    static_assert(mod_ < (1 << 30),\
     \ \"invalid, mod >= 2 ^ 30\");\n    static_assert((mod_ & 1) == 1, \"invalid,\
     \ mod % 2 == 0\");\n    u32 x;\n  public:\n    MontgomeryModInt() : x{} {}\n \
@@ -111,7 +112,7 @@ data:
     \ bb = llround(fb[i].x);\n            int64_t cc = llround(fa[i].y);\n       \
     \     aa = T(aa).val(), bb = T(bb).val(), cc = T(cc).val();\n            ret[i]\
     \ = aa + (bb << 15) + (cc << 30);\n        }\n        return ret;\n    }\n};\n\
-    #line 3 \"library/polynomial/fps/formal_power_series.hpp\"\ntemplate <typename\
+    #line 4 \"library/polynomial/fps/formal_power_series.hpp\"\ntemplate <typename\
     \ T>\nstruct FormalPowerSeries : vector<T> {\n    using vector<T>::vector;\n \
     \   using P = FormalPowerSeries;\n    using Conv = ConvolutionArbitraryMod<T>;\n\
     \    P pre(int deg) const {\n        return P(begin(*this), begin(*this) + min((int)this->size(),\
@@ -237,8 +238,8 @@ data:
   isVerificationFile: false
   path: library/polynomial/fps/stirling_second_number.hpp
   requiredBy: []
-  timestamp: '2026-01-19 14:50:54+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2026-01-19 15:05:51+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fps.stirling_second_number.test.cpp
 documentation_of: library/polynomial/fps/stirling_second_number.hpp

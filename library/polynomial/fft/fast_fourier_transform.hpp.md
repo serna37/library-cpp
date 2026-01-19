@@ -2,42 +2,42 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fft/convolution_arbitrary_mod.hpp
     title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
   - icon: ':heavy_check_mark:'
     path: library/polynomial/fft/convolution_fft.hpp
     title: "\u7573\u307F\u8FBC\u307F FFT"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fps/bernoulli_number.hpp
     title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fps/formal_power_series.hpp
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fps/stirling_first_number.hpp
     title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fps/stirling_second_number.hpp
     title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/polynomial.fft.convolution_fft.test.cpp
     title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fps.bernoulli_number.test.cpp
     title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fps.stirling_first_number.test.cpp
     title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
       \u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fps.stirling_second_number.test.cpp
     title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
       \u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/polynomial/fft/fast_fourier_transform.hpp\"\nnamespace\
@@ -97,8 +97,8 @@ data:
   - library/polynomial/fps/formal_power_series.hpp
   - library/polynomial/fft/convolution_fft.hpp
   - library/polynomial/fft/convolution_arbitrary_mod.hpp
-  timestamp: '2026-01-19 14:50:54+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2026-01-19 15:05:51+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fps.bernoulli_number.test.cpp
   - tests/polynomial.fps.stirling_second_number.test.cpp

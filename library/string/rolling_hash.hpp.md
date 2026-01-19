@@ -85,7 +85,7 @@ data:
   path: library/string/rolling_hash.hpp
   requiredBy:
   - library/string/finds.hpp
-  timestamp: '2026-01-19 14:50:54+09:00'
+  timestamp: '2026-01-19 15:05:51+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string.rolling_hash.test.cpp

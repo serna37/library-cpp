@@ -85,7 +85,7 @@ data:
   requiredBy:
   - library/sequence/wavelet_matrix.hpp
   - library/search/binary_search/wavelet_search_engine.hpp
-  timestamp: '2026-01-19 14:50:54+09:00'
+  timestamp: '2026-01-19 15:05:51+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/search.binary_search.wavelet_search_engine.test.cpp

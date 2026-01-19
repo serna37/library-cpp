@@ -136,7 +136,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/number/mod/mod_tetration.hpp
       title: "\u30C6\u30C8\u30EC\u30FC\u30B7\u30E7\u30F3"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/number/mod/montgomery_mod_int.hpp
       title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
   - name: library/number/prime
@@ -149,7 +149,7 @@ data:
       title: "\u7D20\u6570\u5224\u5B9A"
   - name: library/polynomial/fft
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/polynomial/fft/convolution_arbitrary_mod.hpp
       title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
     - icon: ':heavy_check_mark:'
@@ -164,7 +164,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/polynomial/fft/convolution_fft.hpp
       title: "\u7573\u307F\u8FBC\u307F FFT"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/polynomial/fft/fast_fourier_transform.hpp
       title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
     - icon: ':heavy_check_mark:'
@@ -180,16 +180,16 @@ data:
         \u30B9\u5909\u63DB"
   - name: library/polynomial/fps
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/polynomial/fps/bernoulli_number.hpp
       title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/polynomial/fps/formal_power_series.hpp
       title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/polynomial/fps/stirling_first_number.hpp
       title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/polynomial/fps/stirling_second_number.hpp
       title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
   - name: library/search/binary_search
@@ -310,24 +310,24 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/string/rolling_hash.hpp
       title: Rolling Hash
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/string/run_length.hpp
       title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/string/split.hpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/string/split_multi.hpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570"
     - icon: ':heavy_check_mark:'
       path: library/string/trie.hpp
       title: "Trie\u6728"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/string/util.hpp
       title: "\u6587\u5B57\u5217Util"
   - name: library/various
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/various/convert.hpp
       title: "\u578B\u5909\u63DB"
     - icon: ':heavy_check_mark:'
@@ -344,7 +344,7 @@ data:
       title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   - name: template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
     - icon: ':question:'
@@ -466,14 +466,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/polynomial.fft.convolution_fft.test.cpp
       title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/polynomial.fps.bernoulli_number.test.cpp
       title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/polynomial.fps.stirling_first_number.test.cpp
       title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
         \u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/polynomial.fps.stirling_second_number.test.cpp
       title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
         \u30B9\u30C8"
@@ -569,26 +569,26 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/string.rolling_hash.test.cpp
       title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string.run_length.test.cpp
       title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string.split.test.cpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string.split_multi.test.cpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
         \u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string.util.test.cpp
       title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/template.debug.test.cpp
       title: "debug\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/template.template.test.cpp
       title: "template\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/various.convert.test.cpp
       title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
     - icon: ':x:'
