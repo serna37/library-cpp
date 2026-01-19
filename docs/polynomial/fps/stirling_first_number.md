@@ -1,6 +1,6 @@
 ---
 title: 第一種スターリング数
-documentation_of: //library/polunomial/fps/stirling_first_number.hpp
+documentation_of: //library/polynomial/fps/stirling_first_number.hpp
 ---
 
 # 第一種スターリング数

@@ -1,6 +1,6 @@
 ---
 title: ベルヌーイ数
-documentation_of: //library/polunomial/fps/bernoulli_number.hpp
+documentation_of: //library/polynomial/fps/bernoulli_number.hpp
 ---
 
 # ベルヌーイ数

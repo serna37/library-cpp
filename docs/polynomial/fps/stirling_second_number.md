@@ -1,6 +1,6 @@
 ---
 title: 第二種スターリング数
-documentation_of: //library/polunomial/fps/stirling_second_number.hpp
+documentation_of: //library/polynomial/fps/stirling_second_number.hpp
 ---
 
 # 第二種スターリング数

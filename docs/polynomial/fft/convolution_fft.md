@@ -1,6 +1,6 @@
 ---
 title: 畳み込み FFT
-documentation_of: //library/polynomial/convolution_fft.hpp
+documentation_of: //library/polynomial/fft/convolution_fft.hpp
 ---
 
 # 畳み込み FFT
