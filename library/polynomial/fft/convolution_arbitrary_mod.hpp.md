@@ -103,12 +103,12 @@ data:
     \ (need == -1) need = a.size() + b.size() - 1;\n        int nbase = 0;\n     \
     \   while ((1 << nbase) < need) nbase++;\n        FFT::ensure_base(nbase);\n \
     \       int sz = 1 << nbase;\n        vector<C> fa(sz);\n        for (int i =\
-    \ 0; i < a.size(); i++) {\n            fa[i] = C(a[i].val() & ((1 << 15) - 1),\
-    \ a[i].val() >> 15);\n        }\n        fft(fa, sz);\n        vector<C> fb(sz);\n\
-    \        if (a == b) {\n            fb = fa;\n        } else {\n            for\
-    \ (int i = 0; i < b.size(); i++) {\n                fb[i] = C(b[i].val() & ((1\
-    \ << 15) - 1), b[i].val() >> 15);\n            }\n            fft(fb, sz);\n \
-    \       }\n        real ratio = 0.25 / sz;\n        C r2(0, -1), r3(ratio, 0),\
+    \ 0; i < (int)a.size(); i++) {\n            fa[i] = C(a[i].val() & ((1 << 15)\
+    \ - 1), a[i].val() >> 15);\n        }\n        fft(fa, sz);\n        vector<C>\
+    \ fb(sz);\n        if (a == b) {\n            fb = fa;\n        } else {\n   \
+    \         for (int i = 0; i < (int)b.size(); i++) {\n                fb[i] = C(b[i].val()\
+    \ & ((1 << 15) - 1), b[i].val() >> 15);\n            }\n            fft(fb, sz);\n\
+    \        }\n        real ratio = 0.25 / sz;\n        C r2(0, -1), r3(ratio, 0),\
     \ r4(0, -ratio), r5(0, 1);\n        for (int i = 0; i <= (sz >> 1); i++) {\n \
     \           int j = (sz - i) & (sz - 1);\n            C a1 = (fa[i] + fa[j].conj());\n\
     \            C a2 = (fa[i] - fa[j].conj()) * r2;\n            C b1 = (fb[i] +\
@@ -131,13 +131,13 @@ data:
     \ vector<T>& a, const vector<T>& b, int need = -1) {\n        if (need == -1)\
     \ need = a.size() + b.size() - 1;\n        int nbase = 0;\n        while ((1 <<\
     \ nbase) < need) nbase++;\n        FFT::ensure_base(nbase);\n        int sz =\
-    \ 1 << nbase;\n        vector<C> fa(sz);\n        for (int i = 0; i < a.size();\
+    \ 1 << nbase;\n        vector<C> fa(sz);\n        for (int i = 0; i < (int)a.size();\
     \ i++) {\n            fa[i] = C(a[i].val() & ((1 << 15) - 1), a[i].val() >> 15);\n\
     \        }\n        fft(fa, sz);\n        vector<C> fb(sz);\n        if (a ==\
     \ b) {\n            fb = fa;\n        } else {\n            for (int i = 0; i\
-    \ < b.size(); i++) {\n                fb[i] = C(b[i].val() & ((1 << 15) - 1),\
-    \ b[i].val() >> 15);\n            }\n            fft(fb, sz);\n        }\n   \
-    \     real ratio = 0.25 / sz;\n        C r2(0, -1), r3(ratio, 0), r4(0, -ratio),\
+    \ < (int)b.size(); i++) {\n                fb[i] = C(b[i].val() & ((1 << 15) -\
+    \ 1), b[i].val() >> 15);\n            }\n            fft(fb, sz);\n        }\n\
+    \        real ratio = 0.25 / sz;\n        C r2(0, -1), r3(ratio, 0), r4(0, -ratio),\
     \ r5(0, 1);\n        for (int i = 0; i <= (sz >> 1); i++) {\n            int j\
     \ = (sz - i) & (sz - 1);\n            C a1 = (fa[i] + fa[j].conj());\n       \
     \     C a2 = (fa[i] - fa[j].conj()) * r2;\n            C b1 = (fb[i] + fb[j].conj())\
@@ -163,7 +163,7 @@ data:
   - library/polynomial/fps/stirling_first_number.hpp
   - library/polynomial/fps/bernoulli_number.hpp
   - library/polynomial/fps/formal_power_series.hpp
-  timestamp: '2026-01-19 15:05:51+09:00'
+  timestamp: '2026-01-19 15:21:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fps.bernoulli_number.test.cpp

@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/string/aho_corasick.hpp
     title: Aho Corasick
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/string/finds.hpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/string/rolling_hash.hpp
     title: Rolling Hash
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/string/trie.hpp
     title: "Trie\u6728"
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/various/random.hpp
     title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
   - icon: ':question:'
@@ -22,9 +22,9 @@ data:
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
@@ -75,8 +75,8 @@ data:
   isVerificationFile: true
   path: tests/string.finds.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:05:51+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-01-19 15:21:04+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/string.finds.test.cpp
 layout: document

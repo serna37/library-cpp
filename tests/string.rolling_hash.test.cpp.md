@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/string/rolling_hash.hpp
     title: Rolling Hash
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/various/random.hpp
     title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
   - icon: ':question:'
@@ -12,9 +12,9 @@ data:
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_14_B
@@ -49,8 +49,8 @@ data:
   isVerificationFile: true
   path: tests/string.rolling_hash.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:05:51+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-01-19 15:21:04+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/string.rolling_hash.test.cpp
 layout: document

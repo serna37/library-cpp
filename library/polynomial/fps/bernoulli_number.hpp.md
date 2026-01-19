@@ -90,12 +90,12 @@ data:
     \ (need == -1) need = a.size() + b.size() - 1;\n        int nbase = 0;\n     \
     \   while ((1 << nbase) < need) nbase++;\n        FFT::ensure_base(nbase);\n \
     \       int sz = 1 << nbase;\n        vector<C> fa(sz);\n        for (int i =\
-    \ 0; i < a.size(); i++) {\n            fa[i] = C(a[i].val() & ((1 << 15) - 1),\
-    \ a[i].val() >> 15);\n        }\n        fft(fa, sz);\n        vector<C> fb(sz);\n\
-    \        if (a == b) {\n            fb = fa;\n        } else {\n            for\
-    \ (int i = 0; i < b.size(); i++) {\n                fb[i] = C(b[i].val() & ((1\
-    \ << 15) - 1), b[i].val() >> 15);\n            }\n            fft(fb, sz);\n \
-    \       }\n        real ratio = 0.25 / sz;\n        C r2(0, -1), r3(ratio, 0),\
+    \ 0; i < (int)a.size(); i++) {\n            fa[i] = C(a[i].val() & ((1 << 15)\
+    \ - 1), a[i].val() >> 15);\n        }\n        fft(fa, sz);\n        vector<C>\
+    \ fb(sz);\n        if (a == b) {\n            fb = fa;\n        } else {\n   \
+    \         for (int i = 0; i < (int)b.size(); i++) {\n                fb[i] = C(b[i].val()\
+    \ & ((1 << 15) - 1), b[i].val() >> 15);\n            }\n            fft(fb, sz);\n\
+    \        }\n        real ratio = 0.25 / sz;\n        C r2(0, -1), r3(ratio, 0),\
     \ r4(0, -ratio), r5(0, 1);\n        for (int i = 0; i <= (sz >> 1); i++) {\n \
     \           int j = (sz - i) & (sz - 1);\n            C a1 = (fa[i] + fa[j].conj());\n\
     \            C a2 = (fa[i] - fa[j].conj()) * r2;\n            C b1 = (fb[i] +\
@@ -126,9 +126,9 @@ data:
     \ P(*this) *= v; }\n    P operator/(const P &r) const { return P(*this) /= r;\
     \ }\n    P operator%(const P &r) const { return P(*this) %= r; }\n    P &operator+=(const\
     \ P &r) {\n        if (r.size() > this->size()) this->resize(r.size());\n    \
-    \    for (int i = 0; i < r.size(); i++) (*this)[i] += r[i];\n        return *this;\n\
-    \    }\n    P &operator-=(const P &r) {\n        if (r.size() > this->size())\
-    \ this->resize(r.size());\n        for (int i = 0; i < r.size(); i++) (*this)[i]\
+    \    for (int i = 0; i < (int)r.size(); i++) (*this)[i] += r[i];\n        return\
+    \ *this;\n    }\n    P &operator-=(const P &r) {\n        if (r.size() > this->size())\
+    \ this->resize(r.size());\n        for (int i = 0; i < (int)r.size(); i++) (*this)[i]\
     \ -= r[i];\n        return *this;\n    }\n    // https://judge.yosupo.jp/problem/convolution_mod\n\
     \    P &operator*=(const P &r) {\n        if (this->empty() || r.empty()) {\n\
     \            this->clear();\n            return *this;\n        }\n        auto\
@@ -140,14 +140,14 @@ data:
     \ *this -= *this / r * r; }\n    // https://judge.yosupo.jp/problem/division_of_polynomials\n\
     \    pair<P, P> div_mod(const P &r) {\n        P q = *this / r;\n        return\
     \ make_pair(q, *this - q * r);\n    }\n    P operator-() const {\n        P ret(this->size());\n\
-    \        for (int i = 0; i < this->size(); i++) ret[i] = -(*this)[i];\n      \
-    \  return ret;\n    }\n    P &operator+=(const T &r) {\n        if (this->empty())\
+    \        for (int i = 0; i < (int)this->size(); i++) ret[i] = -(*this)[i];\n \
+    \       return ret;\n    }\n    P &operator+=(const T &r) {\n        if (this->empty())\
     \ this->resize(1);\n        (*this)[0] += r;\n        return *this;\n    }\n \
     \   P &operator-=(const T &r) {\n        if (this->empty()) this->resize(1);\n\
     \        (*this)[0] -= r;\n        return *this;\n    }\n    P &operator*=(const\
-    \ T &v) {\n        for (int i = 0; i < this->size(); i++) (*this)[i] *= v;\n \
-    \       return *this;\n    }\n    P dot(P r) const {\n        P ret(min(this->size(),\
-    \ r.size()));\n        for (int i = 0; i < ret.size(); i++) ret[i] = (*this)[i]\
+    \ T &v) {\n        for (int i = 0; i < (int)this->size(); i++) (*this)[i] *= v;\n\
+    \        return *this;\n    }\n    P dot(P r) const {\n        P ret(min(this->size(),\
+    \ r.size()));\n        for (int i = 0; i < (int)ret.size(); i++) ret[i] = (*this)[i]\
     \ * r[i];\n        return ret;\n    }\n    P operator>>(int sz) const {\n    \
     \    if (this->size() <= sz) return {};\n        P ret(*this);\n        ret.erase(ret.begin(),\
     \ ret.begin() + sz);\n        return ret;\n    }\n    P operator<<(int sz) const\
@@ -237,7 +237,7 @@ data:
   isVerificationFile: false
   path: library/polynomial/fps/bernoulli_number.hpp
   requiredBy: []
-  timestamp: '2026-01-19 15:05:51+09:00'
+  timestamp: '2026-01-19 15:21:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fps.bernoulli_number.test.cpp

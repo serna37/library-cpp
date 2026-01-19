@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/various/random.hpp
     title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
   - icon: ':question:'
@@ -43,7 +43,7 @@ data:
   isVerificationFile: true
   path: tests/various.random.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:05:51+09:00'
+  timestamp: '2026-01-19 15:21:04+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/various.random.test.cpp

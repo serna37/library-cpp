@@ -2,19 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/string/finds.hpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/string/rolling_hash.hpp
     title: Rolling Hash
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.finds.test.cpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.rolling_hash.test.cpp
     title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
   - icon: ':x:'
@@ -22,7 +22,7 @@ data:
     title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/various/random.hpp\"\n#include <chrono>\n#include\
@@ -40,8 +40,8 @@ data:
   requiredBy:
   - library/string/finds.hpp
   - library/string/rolling_hash.hpp
-  timestamp: '2026-01-19 15:05:51+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2026-01-19 15:21:04+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/string.rolling_hash.test.cpp
   - tests/string.finds.test.cpp

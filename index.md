@@ -268,7 +268,7 @@ data:
       title: "\u7D71\u5408\u30BB\u30B0\u6728"
   - name: library/sequence
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/sequence/bit_dict.hpp
       title: "\u5B8C\u5099\u8F9E\u66F8"
     - icon: ':heavy_check_mark:'
@@ -289,25 +289,25 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/sequence/merge.hpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/sequence/wavelet_matrix.hpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - name: library/string
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/string/aho_corasick.hpp
       title: Aho Corasick
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/string/finds.hpp
       title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
         \u30F3"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/string/join.hpp
       title: "\u6587\u5B57\u5217\u7D50\u5408"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/string/range.hpp
       title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/string/rolling_hash.hpp
       title: Rolling Hash
     - icon: ':x:'
@@ -319,7 +319,7 @@ data:
     - icon: ':x:'
       path: library/string/split_multi.hpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/string/trie.hpp
       title: "Trie\u6728"
     - icon: ':x:'
@@ -336,7 +336,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/various/monoid_act.hpp
       title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
-    - icon: ':question:'
+    - icon: ':x:'
       path: library/various/random.hpp
       title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
     - icon: ':question:'
@@ -549,24 +549,24 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/sequence.merge.test.cpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/sequence.wavelet_matrix.test.cpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
         \u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string.aho_corasick.test.cpp
       title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string.finds.test.cpp
       title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
         \u30F3\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string.join.test.cpp
       title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string.range.test.cpp
       title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/string.rolling_hash.test.cpp
       title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
     - icon: ':x:'
