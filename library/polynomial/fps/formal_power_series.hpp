@@ -1,4 +1,5 @@
 #pragma once
+#include <functional>
 #include "library/polynomial/fft/convolution_arbitrary_mod.hpp"
 template <typename T>
 struct FormalPowerSeries : vector<T> {
