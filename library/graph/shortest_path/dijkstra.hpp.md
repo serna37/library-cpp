@@ -68,7 +68,7 @@ data:
   isVerificationFile: false
   path: library/graph/shortest_path/dijkstra.hpp
   requiredBy: []
-  timestamp: '2026-01-16 16:23:43+09:00'
+  timestamp: '2026-01-19 13:31:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.shortest_path.dijkstra.test.cpp

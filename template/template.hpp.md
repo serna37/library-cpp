@@ -102,7 +102,7 @@ data:
     path: tests/number.prime.prime_test.test.cpp
     title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
-    path: tests/polynomial.convolution_fft.test.cpp
+    path: tests/polynomial.fft.convolution_fft.test.cpp
     title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.bi_ge_val.test.cpp
@@ -243,15 +243,15 @@ data:
     #endif\n#include <bits/stdc++.h>\nusing namespace std;\n#define int long long\n\
     #define all(x) begin(x), end(x)\n#define rall(x) rbegin(x), rend(x)\n#define endl\
     \ \"\\n\"\ntemplate <typename T> using vec2 = vector<vector<T>>;\ntemplate <typename\
-    \ T> using reverse_queue = priority_queue<T, vector<T>, greater<T>>;\nconst long\
-    \ long INF = 1e18;\nconst long long MOD = 998244353;\nconst long long MOD7 = 1e9\
-    \ + 7;\nconst long double PI = acosl(-1);\nstruct IoSetup {\n    IoSetup() {\n\
-    \        cin.tie(0)->sync_with_stdio(0);\n        cout << fixed << setprecision(20);\n\
-    \        cerr << fixed << setprecision(10);\n    }\n} iosetup;\ntemplate <typename\
-    \ T> istream &operator>>(istream &s, vector<T> &v) {\n    for (auto &&e : v) s\
-    \ >> e;\n    return s;\n}\ntemplate <typename T> ostream &operator<<(ostream &s,\
-    \ const vector<T> &v) {\n    for (int i = 0; i < (int)v.size(); ++i) s << (i ?\
-    \ \" \" : \"\") << v[i];\n    return s;\n}\ntemplate <typename T> void print(const\
+    \ T> using reverse_queue = priority_queue<T, vector<T>, greater<T>>;\nconstexpr\
+    \ long long INF = 1e18;\nconstexpr long long MOD = 998244353;\nconstexpr long\
+    \ long MOD7 = 1e9 + 7;\nconst long double PI = acosl(-1);\nstruct IoSetup {\n\
+    \    IoSetup() {\n        cin.tie(0)->sync_with_stdio(0);\n        cout << fixed\
+    \ << setprecision(20);\n        cerr << fixed << setprecision(10);\n    }\n} iosetup;\n\
+    template <typename T> istream &operator>>(istream &s, vector<T> &v) {\n    for\
+    \ (auto &&e : v) s >> e;\n    return s;\n}\ntemplate <typename T> ostream &operator<<(ostream\
+    \ &s, const vector<T> &v) {\n    for (int i = 0; i < (int)v.size(); ++i) s <<\
+    \ (i ? \" \" : \"\") << v[i];\n    return s;\n}\ntemplate <typename T> void print(const\
     \ T &v) { cout << v << endl; }\ntemplate <typename T> void print(const vector<vector<T>>\
     \ &G) { for (auto &&v : G) cout << v << endl; }\ntemplate <typename T> vec2<T>\
     \ make_vec2(int H, int W, T init = 0) { return vector<vector<T>>(H, vector<T>(W,\
@@ -263,7 +263,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-16 16:23:43+09:00'
+  timestamp: '2026-01-19 13:31:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp
@@ -281,6 +281,7 @@ data:
   - tests/dp.cumulative_sum.cumulative_sum_rev_diff.test.cpp
   - tests/various.convert.test.cpp
   - tests/number.prime.prime_test.test.cpp
+  - tests/polynomial.fft.convolution_fft.test.cpp
   - tests/search.binary_search.binary_search.test.cpp
   - tests/various.union_find.test.cpp
   - tests/geometry.area_square.test.cpp
@@ -315,7 +316,6 @@ data:
   - tests/sequence.collection_util.test.cpp
   - tests/grid.bfs.test.cpp
   - tests/string.aho_corasick.test.cpp
-  - tests/polynomial.convolution_fft.test.cpp
   - tests/dp.cumulative_sum.cumulative_sum_diff.test.cpp
   - tests/string.split.test.cpp
   - tests/number.prime.prime_fact.test.cpp

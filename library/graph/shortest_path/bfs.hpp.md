@@ -62,7 +62,7 @@ data:
   path: library/graph/shortest_path/bfs.hpp
   requiredBy:
   - library/graph/tree/lca.hpp
-  timestamp: '2026-01-16 16:23:43+09:00'
+  timestamp: '2026-01-19 13:31:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.tree.lca.test.cpp

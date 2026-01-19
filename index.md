@@ -113,6 +113,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/number/divisors.hpp
       title: "\u7D04\u6570\u5217\u6319"
+    - icon: ':warning:'
+      path: library/number/euler_phi.hpp
+      title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570"
     - icon: ':heavy_check_mark:'
       path: library/number/factorial.hpp
       title: "\u968E\u4E57"
@@ -130,6 +133,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/number/mod/mod_pow.hpp
       title: "MOD \u4E8C\u5206\u7D2F\u4E57"
+    - icon: ':warning:'
+      path: library/number/mod/mod_tetration.hpp
+      title: "\u30C6\u30C8\u30EC\u30FC\u30B7\u30E7\u30F3"
+    - icon: ':warning:'
+      path: library/number/mod/montgomery_mod_int.hpp
+      title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
   - name: library/number/prime
     pages:
     - icon: ':heavy_check_mark:'
@@ -138,14 +147,51 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/number/prime/prime_test.hpp
       title: "\u7D20\u6570\u5224\u5B9A"
-  - name: library/polynomial
+  - name: library/polynomial/fft
     pages:
+    - icon: ':warning:'
+      path: library/polynomial/fft/convolution_arbitrary_mod.hpp
+      title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
+    - icon: ':warning:'
+      path: library/polynomial/fft/convolution_bitwise_and.hpp
+      title: "Bitwise\u7573\u307F\u8FBC\u307FAND"
+    - icon: ':warning:'
+      path: library/polynomial/fft/convolution_bitwise_or.hpp
+      title: "Bitwise\u7573\u307F\u8FBC\u307FOR"
+    - icon: ':warning:'
+      path: library/polynomial/fft/convolution_bitwise_xor.hpp
+      title: "Bitwise\u7573\u307F\u8FBC\u307FXOR"
     - icon: ':heavy_check_mark:'
-      path: library/polynomial/convolution_fft.hpp
-      title: "\u7573\u307F\u8FBC\u307F FFT"
+      path: library/polynomial/fft/convolution_fft.hpp
+      title: library/polynomial/fft/convolution_fft.hpp
     - icon: ':heavy_check_mark:'
-      path: library/polynomial/fft.hpp
+      path: library/polynomial/fft/fast_fourier_transform.hpp
       title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
+    - icon: ':warning:'
+      path: library/polynomial/fft/fast_walsh_hadamard_transform.hpp
+      title: "\u9AD8\u901FWalshHadamard\u5909\u63DB"
+    - icon: ':warning:'
+      path: library/polynomial/fft/subset_zeta_moebius_transform.hpp
+      title: "\u4E0B\u4F4D\u96C6\u5408\u306E\u30BC\u30FC\u30BF\u30FB\u30E1\u30D3\u30A6\
+        \u30B9\u5909\u63DB"
+    - icon: ':warning:'
+      path: library/polynomial/fft/superset_zeta_moebius_transform.hpp
+      title: "\u4E0A\u4F4D\u96C6\u5408\u306E\u30BC\u30FC\u30BF\u30FB\u30E1\u30D3\u30A6\
+        \u30B9\u5909\u63DB"
+  - name: library/polynomial/fps
+    pages:
+    - icon: ':warning:'
+      path: library/polynomial/fps/bernoulli_number.hpp
+      title: library/polynomial/fps/bernoulli_number.hpp
+    - icon: ':warning:'
+      path: library/polynomial/fps/formal_power_series.hpp
+      title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
+    - icon: ':warning:'
+      path: library/polynomial/fps/stirling_first_number.hpp
+      title: library/polynomial/fps/stirling_first_number.hpp
+    - icon: ':warning:'
+      path: library/polynomial/fps/stirling_second_number.hpp
+      title: library/polynomial/fps/stirling_second_number.hpp
   - name: library/search/binary_search
     pages:
     - icon: ':heavy_check_mark:'
@@ -406,7 +452,7 @@ data:
       path: tests/number.prime.prime_test.test.cpp
       title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
-      path: tests/polynomial.convolution_fft.test.cpp
+      path: tests/polynomial.fft.convolution_fft.test.cpp
       title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/search.binary_search.bi_ge_val.test.cpp

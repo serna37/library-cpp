@@ -2,10 +2,10 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: library/polynomial/convolution_fft.hpp
-    title: "\u7573\u307F\u8FBC\u307F FFT"
+    path: library/polynomial/fft/convolution_fft.hpp
+    title: library/polynomial/fft/convolution_fft.hpp
   - icon: ':heavy_check_mark:'
-    path: library/polynomial/fft.hpp
+    path: library/polynomial/fft/fast_fourier_transform.hpp
     title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
   - icon: ':heavy_check_mark:'
     path: template/template.hpp
@@ -35,7 +35,7 @@ data:
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
-    \n#include \"template/template.hpp\"\n#include \"library/polynomial/convolution_fft.hpp\"\
+    \n#include \"template/template.hpp\"\n#include \"library/polynomial/fft/convolution_fft.hpp\"\
     \nvoid run_unit_tests() {\n    // \u30B1\u30FC\u30B91: \u57FA\u672C\u7684\u306A\
     \u7573\u307F\u8FBC\u307F (1 + 2x + 3x^2) * (4 + 5x + 6x^2)\n    {\n        vector<int>\
     \ a = {1, 2, 3};\n        vector<int> b = {4, 5, 6};\n        vector<long long>\
@@ -63,18 +63,18 @@ data:
     }\n"
   dependsOn:
   - template/template.hpp
-  - library/polynomial/convolution_fft.hpp
-  - library/polynomial/fft.hpp
+  - library/polynomial/fft/convolution_fft.hpp
+  - library/polynomial/fft/fast_fourier_transform.hpp
   isVerificationFile: true
-  path: tests/polynomial.convolution_fft.test.cpp
+  path: tests/polynomial.fft.convolution_fft.test.cpp
   requiredBy: []
-  timestamp: '2026-01-16 16:23:43+09:00'
+  timestamp: '2026-01-19 13:31:13+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: tests/polynomial.convolution_fft.test.cpp
+documentation_of: tests/polynomial.fft.convolution_fft.test.cpp
 layout: document
 redirect_from:
-- /verify/tests/polynomial.convolution_fft.test.cpp
-- /verify/tests/polynomial.convolution_fft.test.cpp.html
+- /verify/tests/polynomial.fft.convolution_fft.test.cpp
+- /verify/tests/polynomial.fft.convolution_fft.test.cpp.html
 title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
 ---

@@ -2,23 +2,38 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':warning:'
+    path: library/polynomial/fft/convolution_arbitrary_mod.hpp
+    title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
   - icon: ':heavy_check_mark:'
-    path: library/polynomial/convolution_fft.hpp
-    title: "\u7573\u307F\u8FBC\u307F FFT"
+    path: library/polynomial/fft/convolution_fft.hpp
+    title: library/polynomial/fft/convolution_fft.hpp
+  - icon: ':warning:'
+    path: library/polynomial/fps/bernoulli_number.hpp
+    title: library/polynomial/fps/bernoulli_number.hpp
+  - icon: ':warning:'
+    path: library/polynomial/fps/formal_power_series.hpp
+    title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
+  - icon: ':warning:'
+    path: library/polynomial/fps/stirling_first_number.hpp
+    title: library/polynomial/fps/stirling_first_number.hpp
+  - icon: ':warning:'
+    path: library/polynomial/fps/stirling_second_number.hpp
+    title: library/polynomial/fps/stirling_second_number.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: tests/polynomial.convolution_fft.test.cpp
+    path: tests/polynomial.fft.convolution_fft.test.cpp
     title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/polynomial/fft.hpp\"\nnamespace FFT {\nusing real\
-    \ = double;\nstruct C {\n    real x, y;\n    C() : x(0), y(0) {};\n    C(real\
-    \ x, real y) : x(x), y(y) {};\n    inline C operator+(const C &c) const {\n  \
-    \      return C(x + c.x, y + c.y);\n    }\n    inline C operator-(const C &c)\
-    \ const {\n        return C(x - c.x, y - c.y);\n    }\n    inline C operator*(const\
+  bundledCode: "#line 2 \"library/polynomial/fft/fast_fourier_transform.hpp\"\nnamespace\
+    \ FFT {\nusing real = double;\nstruct C {\n    real x, y;\n    C() : x(0), y(0)\
+    \ {};\n    C(real x, real y) : x(x), y(y) {};\n    inline C operator+(const C\
+    \ &c) const {\n        return C(x + c.x, y + c.y);\n    }\n    inline C operator-(const\
+    \ C &c) const {\n        return C(x - c.x, y - c.y);\n    }\n    inline C operator*(const\
     \ C &c) const {\n        return C(x * c.x - y * c.y, x * c.y + y * c.x);\n   \
     \ }\n    inline C conj() const {\n        return C(x, -y);\n    }\n};\nconst real\
     \ PI = acosl(-1);\nint base = 1;\nvector<C> rts = {{0, 0}, {1, 0}};\nvector<int>\
@@ -63,14 +78,19 @@ data:
     \            }\n        }\n    }\n}\n} // namespace FFT\n"
   dependsOn: []
   isVerificationFile: false
-  path: library/polynomial/fft.hpp
+  path: library/polynomial/fft/fast_fourier_transform.hpp
   requiredBy:
-  - library/polynomial/convolution_fft.hpp
-  timestamp: '2026-01-16 16:23:43+09:00'
+  - library/polynomial/fps/stirling_second_number.hpp
+  - library/polynomial/fps/stirling_first_number.hpp
+  - library/polynomial/fps/bernoulli_number.hpp
+  - library/polynomial/fps/formal_power_series.hpp
+  - library/polynomial/fft/convolution_fft.hpp
+  - library/polynomial/fft/convolution_arbitrary_mod.hpp
+  timestamp: '2026-01-19 13:31:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/polynomial.convolution_fft.test.cpp
-documentation_of: library/polynomial/fft.hpp
+  - tests/polynomial.fft.convolution_fft.test.cpp
+documentation_of: library/polynomial/fft/fast_fourier_transform.hpp
 layout: document
 title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
 ---
@@ -79,7 +99,7 @@ title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
 [詳しい説明](https://www.slideshare.net/slideshow/fft-49066791/49066791)
 
 ## できること
-$F(k) = \sum_{n=0}^{N-1} f(n) \exp(\frac{-2 \pi i}{N} n k)$
+$F(k) = \displaystyle\sum_{n=0}^{N-1} f(n) \exp(\frac{-2 \pi i}{N} n k)$
 - 離散フーリエ変換をバタフライ演算とかで高速に行う
 - 多項式の乗算を高速に行うことができる
 

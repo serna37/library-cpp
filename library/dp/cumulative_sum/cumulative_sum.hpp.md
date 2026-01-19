@@ -22,7 +22,7 @@ data:
   isVerificationFile: false
   path: library/dp/cumulative_sum/cumulative_sum.hpp
   requiredBy: []
-  timestamp: '2026-01-16 16:23:43+09:00'
+  timestamp: '2026-01-19 13:31:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/dp.cumulative_sum.cumulative_sum.test.cpp
@@ -42,7 +42,7 @@ S: 0  1   5   7  15  17  26
 
 半開区間 $[l, r)$ の和は、次のように求められる。
 
-$\sum_{j=l}^{r-1} A_j = S_r - S_l$
+$\displaystyle\sum_{j=l}^{r-1} A_j = S_r - S_l$
 
 ## 計算量
 $O(N)$

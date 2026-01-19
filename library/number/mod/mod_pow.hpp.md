@@ -8,6 +8,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/number/mod/mod_inverse.hpp
     title: "MOD Fermat\u306E\u5C0F\u5B9A\u7406"
+  - icon: ':warning:'
+    path: library/number/mod/mod_tetration.hpp
+    title: "\u30C6\u30C8\u30EC\u30FC\u30B7\u30E7\u30F3"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/number.mod.mod_combination.test.cpp
@@ -30,8 +33,9 @@ data:
   path: library/number/mod/mod_pow.hpp
   requiredBy:
   - library/number/mod/mod_inverse.hpp
+  - library/number/mod/mod_tetration.hpp
   - library/number/mod/mod_combination.hpp
-  timestamp: '2026-01-16 16:23:43+09:00'
+  timestamp: '2026-01-19 13:31:13+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.mod.mod_combination.test.cpp
