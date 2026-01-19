@@ -1,7 +1,7 @@
 #define PROBLEM                                                                \
     "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A"
 #include "template/template.hpp"
-#include "library/polynomial/convolution_fft.hpp"
+#include "library/polynomial/fft/convolution_fft.hpp"
 void run_unit_tests() {
     // ケース1: 基本的な畳み込み (1 + 2x + 3x^2) * (4 + 5x + 6x^2)
     {
