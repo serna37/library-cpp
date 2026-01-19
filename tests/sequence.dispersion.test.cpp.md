@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/sequence/dispersion.hpp
     title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -58,7 +58,7 @@ data:
   isVerificationFile: true
   path: tests/sequence.dispersion.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
+  timestamp: '2026-01-19 14:50:54+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/sequence.dispersion.test.cpp

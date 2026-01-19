@@ -1,23 +1,26 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':question:'
     path: library/number/mod/montgomery_mod_int.hpp
     title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
-  - icon: ':warning:'
+  - icon: ':x:'
     path: library/polynomial/fft/convolution_arbitrary_mod.hpp
     title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/polynomial/fft/fast_fourier_transform.hpp
     title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
-  - icon: ':warning:'
+  - icon: ':x:'
     path: library/polynomial/fps/formal_power_series.hpp
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: tests/polynomial.fps.bernoulli_number.test.cpp
+    title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570\u306E\u30C6\u30B9\u30C8"
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/mod/montgomery_mod_int.hpp\"\ntemplate <uint32_t\
@@ -151,8 +154,8 @@ data:
     \   return ret;\n    }\n    T operator()(T x) const {\n        T r = 0, w = 1;\n\
     \        for (auto &v : *this) {\n            r += w * v;\n            w *= x;\n\
     \        }\n        return r;\n    }\n    P diff() const {\n        const int\
-    \ n = (int)this->size();\n        P ret(max(0, n - 1));\n        for (int i =\
-    \ 1; i < n; i++) ret[i - 1] = (*this)[i] * T(i);\n        return ret;\n    }\n\
+    \ n = (int)this->size();\n        P ret(max(0ll, n - 1));\n        for (int i\
+    \ = 1; i < n; i++) ret[i - 1] = (*this)[i] * T(i);\n        return ret;\n    }\n\
     \    P integral() const {\n        const int n = (int)this->size();\n        P\
     \ ret(n + 1);\n        ret[0] = T(0);\n        for (int i = 0; i < n; i++) ret[i\
     \ + 1] = (*this)[i] / T(i + 1);\n        return ret;\n    }\n    // https://judge.yosupo.jp/problem/inv_of_formal_power_series\n\
@@ -233,9 +236,10 @@ data:
   isVerificationFile: false
   path: library/polynomial/fps/bernoulli_number.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-19 14:50:54+09:00'
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - tests/polynomial.fps.bernoulli_number.test.cpp
 documentation_of: library/polynomial/fps/bernoulli_number.hpp
 layout: document
 title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570"

@@ -96,14 +96,37 @@ data:
     path: tests/number.mod.mod_combination.test.cpp
     title: "MOD \u7D44\u307F\u5408\u308F\u305B nCk\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/number.mod.mod_tetration.test.cpp
+    title: "MOD \u30C6\u30C8\u30EC\u30FC\u30B7\u30E7\u30F3\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/number.prime.prime_fact.test.cpp
     title: "\u7D20\u56E0\u6570\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/number.prime.prime_test.test.cpp
     title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/polynomial.fft.convolution_bitwise_and.test.cpp
+    title: "Bitwise\u7573\u307F\u8FBC\u307FAND\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/polynomial.fft.convolution_bitwise_or.test.cpp
+    title: "Bitwise\u7573\u307F\u8FBC\u307FOR\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/polynomial.fft.convolution_bitwise_xor.test.cpp
+    title: "Bitwise\u7573\u307F\u8FBC\u307FXOR\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fft.convolution_fft.test.cpp
     title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
+  - icon: ':x:'
+    path: tests/polynomial.fps.bernoulli_number.test.cpp
+    title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570\u306E\u30C6\u30B9\u30C8"
+  - icon: ':x:'
+    path: tests/polynomial.fps.stirling_first_number.test.cpp
+    title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
+      \u30B9\u30C8"
+  - icon: ':x:'
+    path: tests/polynomial.fps.stirling_second_number.test.cpp
+    title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
+      \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.bi_ge_val.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\u5C0F\
@@ -215,15 +238,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/various.convert.test.cpp
     title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.random.test.cpp
     title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "\u0E05^>\u03C9<^\u0E05"
     links:
@@ -263,9 +286,11 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-19 14:50:54+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - tests/polynomial.fps.bernoulli_number.test.cpp
+  - tests/polynomial.fft.convolution_bitwise_or.test.cpp
   - tests/segtree.dual_segment_tree.test.cpp
   - tests/number.factorial.test.cpp
   - tests/dp.cumulative_sum.cumulative_sum_rev.test.cpp
@@ -273,9 +298,12 @@ data:
   - tests/graph.cycle_detect.test.cpp
   - tests/string.split_multi.test.cpp
   - tests/search.binary_search.bi_le_val.test.cpp
+  - tests/polynomial.fft.convolution_bitwise_and.test.cpp
   - tests/number.combination.test.cpp
   - tests/segtree.segment_tree.test.cpp
   - tests/segtree.starry_sky_tree.test.cpp
+  - tests/polynomial.fps.stirling_second_number.test.cpp
+  - tests/polynomial.fps.stirling_first_number.test.cpp
   - tests/string.rolling_hash.test.cpp
   - tests/graph.shortest_path.dijkstra.test.cpp
   - tests/dp.cumulative_sum.cumulative_sum_rev_diff.test.cpp
@@ -283,6 +311,7 @@ data:
   - tests/number.prime.prime_test.test.cpp
   - tests/polynomial.fft.convolution_fft.test.cpp
   - tests/search.binary_search.binary_search.test.cpp
+  - tests/number.mod.mod_tetration.test.cpp
   - tests/various.union_find.test.cpp
   - tests/geometry.area_square.test.cpp
   - tests/string.run_length.test.cpp
@@ -292,6 +321,7 @@ data:
   - tests/search.binary_search.bi_gt_val.test.cpp
   - tests/search.binary_search.bi_ge_val.test.cpp
   - tests/number.divisors.test.cpp
+  - tests/polynomial.fft.convolution_bitwise_xor.test.cpp
   - tests/segtree.lazy_segment_tree.test.cpp
   - tests/template.template.test.cpp
   - tests/segtree.fenwick_tree.test.cpp

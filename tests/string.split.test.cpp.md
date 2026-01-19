@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/string/split.hpp
     title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -61,7 +61,7 @@ data:
   isVerificationFile: true
   path: tests/string.split.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
+  timestamp: '2026-01-19 14:50:54+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/string.split.test.cpp

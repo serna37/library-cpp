@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/sequence/wavelet_matrix.hpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -48,7 +48,7 @@ data:
   isVerificationFile: true
   path: tests/sequence.wavelet_matrix.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
+  timestamp: '2026-01-19 14:50:54+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/sequence.wavelet_matrix.test.cpp

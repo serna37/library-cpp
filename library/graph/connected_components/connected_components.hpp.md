@@ -59,7 +59,7 @@ data:
   isVerificationFile: false
   path: library/graph/connected_components/connected_components.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
+  timestamp: '2026-01-19 14:50:54+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.connected_components.connected_components.test.cpp

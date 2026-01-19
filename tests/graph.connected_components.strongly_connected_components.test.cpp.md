@@ -10,7 +10,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/connected_components/strongly_connected_components.hpp
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Tarjan)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -54,7 +54,7 @@ data:
   isVerificationFile: true
   path: tests/graph.connected_components.strongly_connected_components.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
+  timestamp: '2026-01-19 14:50:54+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.connected_components.strongly_connected_components.test.cpp

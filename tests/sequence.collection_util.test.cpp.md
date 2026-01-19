@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/sequence/collection_util.hpp
     title: "\u914D\u5217\u7CFBUtil"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -56,7 +56,7 @@ data:
   isVerificationFile: true
   path: tests/sequence.collection_util.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
+  timestamp: '2026-01-19 14:50:54+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/sequence.collection_util.test.cpp

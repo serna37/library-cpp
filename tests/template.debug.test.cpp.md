@@ -154,7 +154,7 @@ data:
   isVerificationFile: true
   path: tests/template.debug.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
+  timestamp: '2026-01-19 14:50:54+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/template.debug.test.cpp

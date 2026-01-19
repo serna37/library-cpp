@@ -17,12 +17,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/string.rolling_hash.test.cpp
     title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.random.test.cpp
     title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/various/random.hpp\"\n#include <chrono>\n#include\
@@ -40,8 +40,8 @@ data:
   requiredBy:
   - library/string/finds.hpp
   - library/string/rolling_hash.hpp
-  timestamp: '2026-01-19 13:52:26+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-19 14:50:54+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/string.rolling_hash.test.cpp
   - tests/string.finds.test.cpp

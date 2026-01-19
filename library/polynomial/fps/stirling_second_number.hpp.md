@@ -1,23 +1,27 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':question:'
     path: library/number/mod/montgomery_mod_int.hpp
     title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
-  - icon: ':warning:'
+  - icon: ':x:'
     path: library/polynomial/fft/convolution_arbitrary_mod.hpp
     title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/polynomial/fft/fast_fourier_transform.hpp
     title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
-  - icon: ':warning:'
+  - icon: ':x:'
     path: library/polynomial/fps/formal_power_series.hpp
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: tests/polynomial.fps.stirling_second_number.test.cpp
+    title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
+      \u30B9\u30C8"
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/mod/montgomery_mod_int.hpp\"\ntemplate <uint32_t\
@@ -151,8 +155,8 @@ data:
     \   return ret;\n    }\n    T operator()(T x) const {\n        T r = 0, w = 1;\n\
     \        for (auto &v : *this) {\n            r += w * v;\n            w *= x;\n\
     \        }\n        return r;\n    }\n    P diff() const {\n        const int\
-    \ n = (int)this->size();\n        P ret(max(0, n - 1));\n        for (int i =\
-    \ 1; i < n; i++) ret[i - 1] = (*this)[i] * T(i);\n        return ret;\n    }\n\
+    \ n = (int)this->size();\n        P ret(max(0ll, n - 1));\n        for (int i\
+    \ = 1; i < n; i++) ret[i - 1] = (*this)[i] * T(i);\n        return ret;\n    }\n\
     \    P integral() const {\n        const int n = (int)this->size();\n        P\
     \ ret(n + 1);\n        ret[0] = T(0);\n        for (int i = 0; i < n; i++) ret[i\
     \ + 1] = (*this)[i] / T(i + 1);\n        return ret;\n    }\n    // https://judge.yosupo.jp/problem/inv_of_formal_power_series\n\
@@ -214,17 +218,17 @@ data:
     \      p = (p * bs).pre(n);\n        p = p.rev();\n        for (int i = 0; i <\
     \ n; i++) p[i] *= rfact[i];\n        return p;\n    }\n};\ntemplate <typename\
     \ Mint>\nusing FPS = FormalPowerSeries<Mint>;\n#line 3 \"library/polynomial/fps/stirling_second_number.hpp\"\
-    \nFPS<Mint> stirling_second_number(int N) {\n    FPS<Mint> A(N + 1), B(N + 1);\n\
-    \    Mint tmp = 1;\n    for (int i = 0; i <= N; i++) {\n        Mint rev = Mint(1)\
-    \ / tmp;\n        A[i] = Mint(i).pow(N) * rev;\n        B[i] = Mint(1) * rev;\n\
-    \        if (i & 1) B[i] *= -1;\n        tmp *= i + 1;\n    }\n    return (A *\
-    \ B).pre(N + 1);\n}\n"
+    \ntemplate <template <typename> class FPS, typename Mint>\nFPS<Mint> stirling_second_number(int\
+    \ N) {\n    FPS<Mint> A(N + 1), B(N + 1);\n    Mint tmp = 1;\n    for (int i =\
+    \ 0; i <= N; i++) {\n        Mint rev = Mint(1) / tmp;\n        A[i] = Mint(i).pow(N)\
+    \ * rev;\n        B[i] = Mint(1) * rev;\n        if (i & 1) B[i] *= -1;\n    \
+    \    tmp *= i + 1;\n    }\n    return (A * B).pre(N + 1);\n}\n"
   code: "#pragma once\n#include \"library/polynomial/fps/formal_power_series.hpp\"\
-    \nFPS<Mint> stirling_second_number(int N) {\n    FPS<Mint> A(N + 1), B(N + 1);\n\
-    \    Mint tmp = 1;\n    for (int i = 0; i <= N; i++) {\n        Mint rev = Mint(1)\
-    \ / tmp;\n        A[i] = Mint(i).pow(N) * rev;\n        B[i] = Mint(1) * rev;\n\
-    \        if (i & 1) B[i] *= -1;\n        tmp *= i + 1;\n    }\n    return (A *\
-    \ B).pre(N + 1);\n}\n"
+    \ntemplate <template <typename> class FPS, typename Mint>\nFPS<Mint> stirling_second_number(int\
+    \ N) {\n    FPS<Mint> A(N + 1), B(N + 1);\n    Mint tmp = 1;\n    for (int i =\
+    \ 0; i <= N; i++) {\n        Mint rev = Mint(1) / tmp;\n        A[i] = Mint(i).pow(N)\
+    \ * rev;\n        B[i] = Mint(1) * rev;\n        if (i & 1) B[i] *= -1;\n    \
+    \    tmp *= i + 1;\n    }\n    return (A * B).pre(N + 1);\n}\n"
   dependsOn:
   - library/polynomial/fps/formal_power_series.hpp
   - library/polynomial/fft/convolution_arbitrary_mod.hpp
@@ -233,9 +237,10 @@ data:
   isVerificationFile: false
   path: library/polynomial/fps/stirling_second_number.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-19 14:50:54+09:00'
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - tests/polynomial.fps.stirling_second_number.test.cpp
 documentation_of: library/polynomial/fps/stirling_second_number.hpp
 layout: document
 title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"

@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: tests/polynomial.fft.convolution_bitwise_or.test.cpp
+    title: "Bitwise\u7573\u307F\u8FBC\u307FOR\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/sequence.collection_util.test.cpp
     title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
@@ -57,9 +60,10 @@ data:
   isVerificationFile: false
   path: library/sequence/collection_util.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
+  timestamp: '2026-01-19 14:50:54+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/polynomial.fft.convolution_bitwise_or.test.cpp
   - tests/sequence.collection_util.test.cpp
 documentation_of: library/sequence/collection_util.hpp
 layout: document

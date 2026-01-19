@@ -1,14 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fft/fast_walsh_hadamard_transform.hpp
     title: "\u9AD8\u901FWalshHadamard\u5909\u63DB"
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/polynomial.fft.convolution_bitwise_xor.test.cpp
+    title: "Bitwise\u7573\u307F\u8FBC\u307FXOR\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/polynomial/fft/fast_walsh_hadamard_transform.hpp\"\
@@ -36,9 +39,10 @@ data:
   isVerificationFile: false
   path: library/polynomial/fft/convolution_bitwise_xor.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-19 14:50:54+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/polynomial.fft.convolution_bitwise_xor.test.cpp
 documentation_of: library/polynomial/fft/convolution_bitwise_xor.hpp
 layout: document
 title: "Bitwise\u7573\u307F\u8FBC\u307FXOR"

@@ -1,17 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: library/number/euler_phi.hpp
     title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570"
   - icon: ':heavy_check_mark:'
     path: library/number/mod/mod_pow.hpp
     title: "MOD \u4E8C\u5206\u7D2F\u4E57"
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: tests/number.mod.mod_tetration.test.cpp
+    title: "MOD \u30C6\u30C8\u30EC\u30FC\u30B7\u30E7\u30F3\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/euler_phi.hpp\"\ntemplate <typename T> T\
@@ -39,9 +42,10 @@ data:
   isVerificationFile: false
   path: library/number/mod/mod_tetration.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:52:26+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2026-01-19 14:50:54+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - tests/number.mod.mod_tetration.test.cpp
 documentation_of: library/number/mod/mod_tetration.hpp
 layout: document
 title: "\u30C6\u30C8\u30EC\u30FC\u30B7\u30E7\u30F3"
