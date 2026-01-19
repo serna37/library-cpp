@@ -1,6 +1,6 @@
 ---
 title: 高速フーリエ変換
-documentation_of: //library/polynomial/fft.hpp
+documentation_of: //library/polynomial/fft/fast_fourier_transform.hpp
 ---
 
 # 高速フーリエ変換
