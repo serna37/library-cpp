@@ -36,7 +36,7 @@ data:
   path: library/polynomial/fft/subset_zeta_moebius_transform.hpp
   requiredBy:
   - library/polynomial/fft/convolution_bitwise_or.hpp
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-01-19 13:52:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/polynomial/fft/subset_zeta_moebius_transform.hpp

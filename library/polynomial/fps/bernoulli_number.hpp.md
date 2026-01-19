@@ -233,13 +233,27 @@ data:
   isVerificationFile: false
   path: library/polynomial/fps/bernoulli_number.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-01-19 13:52:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/polynomial/fps/bernoulli_number.hpp
 layout: document
-redirect_from:
-- /library/library/polynomial/fps/bernoulli_number.hpp
-- /library/library/polynomial/fps/bernoulli_number.hpp.html
-title: library/polynomial/fps/bernoulli_number.hpp
+title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570"
 ---
+
+# ベルヌーイ数
+
+## できること
+- ベルヌーイ数を求める
+- 指数型母関数: $\frac{x}{e^x - 1} = \displaystyle\sum_{n=0}^{\infty} B_n \frac{x^n}{n!}$
+- 等差数列の累乗和（ファウルハーバーの公式）などに現れる数
+
+## 計算量
+$O(NlogN)$
+
+## 使い方
+```cpp
+using mint = modint998244353;
+cout << bernoulli_number<FPS, mint>(N);
+```
+

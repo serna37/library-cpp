@@ -75,14 +75,27 @@ data:
   isVerificationFile: false
   path: library/polynomial/fft/convolution_fft.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-01-19 13:52:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fft.convolution_fft.test.cpp
 documentation_of: library/polynomial/fft/convolution_fft.hpp
 layout: document
-redirect_from:
-- /library/library/polynomial/fft/convolution_fft.hpp
-- /library/library/polynomial/fft/convolution_fft.hpp.html
-title: library/polynomial/fft/convolution_fft.hpp
+title: "\u7573\u307F\u8FBC\u307F FFT"
 ---
+
+# 畳み込み FFT
+
+## できること
+- 畳み込みは、  $(1 + 2x + 3x^2) \times (4 + 5x + 6x^2)$の係数を求める
+- 畳み込みをFFTで高速に行う
+- 演算結果はllroundで四捨五入している
+- 誤差なしのためには数論変換NTTが必要
+
+## 計算量
+$O(NlogN)$
+
+## 使い方
+```cpp
+vector<long long> res = convolution_fft(a, b);
+```

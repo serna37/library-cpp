@@ -38,7 +38,7 @@ data:
   isVerificationFile: false
   path: library/polynomial/fft/convolution_bitwise_and.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-01-19 13:52:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/polynomial/fft/convolution_bitwise_and.hpp

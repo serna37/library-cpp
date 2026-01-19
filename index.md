@@ -163,7 +163,7 @@ data:
       title: "Bitwise\u7573\u307F\u8FBC\u307FXOR"
     - icon: ':heavy_check_mark:'
       path: library/polynomial/fft/convolution_fft.hpp
-      title: library/polynomial/fft/convolution_fft.hpp
+      title: "\u7573\u307F\u8FBC\u307F FFT"
     - icon: ':heavy_check_mark:'
       path: library/polynomial/fft/fast_fourier_transform.hpp
       title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
@@ -182,16 +182,16 @@ data:
     pages:
     - icon: ':warning:'
       path: library/polynomial/fps/bernoulli_number.hpp
-      title: library/polynomial/fps/bernoulli_number.hpp
+      title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570"
     - icon: ':warning:'
       path: library/polynomial/fps/formal_power_series.hpp
       title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
     - icon: ':warning:'
       path: library/polynomial/fps/stirling_first_number.hpp
-      title: library/polynomial/fps/stirling_first_number.hpp
+      title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
     - icon: ':warning:'
       path: library/polynomial/fps/stirling_second_number.hpp
-      title: library/polynomial/fps/stirling_second_number.hpp
+      title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
   - name: library/search/binary_search
     pages:
     - icon: ':heavy_check_mark:'

@@ -74,7 +74,7 @@ data:
   isVerificationFile: true
   path: tests/segtree.starry_sky_tree_2.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-01-19 13:52:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree.starry_sky_tree_2.test.cpp

@@ -13,13 +13,13 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: library/polynomial/fps/bernoulli_number.hpp
-    title: library/polynomial/fps/bernoulli_number.hpp
+    title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570"
   - icon: ':warning:'
     path: library/polynomial/fps/stirling_first_number.hpp
-    title: library/polynomial/fps/stirling_first_number.hpp
+    title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
   - icon: ':warning:'
     path: library/polynomial/fps/stirling_second_number.hpp
-    title: library/polynomial/fps/stirling_second_number.hpp
+    title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -346,7 +346,7 @@ data:
   - library/polynomial/fps/stirling_second_number.hpp
   - library/polynomial/fps/stirling_first_number.hpp
   - library/polynomial/fps/bernoulli_number.hpp
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-01-19 13:52:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: library/polynomial/fps/formal_power_series.hpp
