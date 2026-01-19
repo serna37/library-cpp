@@ -19,7 +19,7 @@ template <typename T> using reverse_queue = priority_queue<T, vector<T>, greater
 constexpr long long INF = 1e18;
 constexpr long long MOD = 998244353;
 constexpr long long MOD7 = 1e9 + 7;
-constexpr long double PI = acosl(-1);
+const long double PI = acosl(-1);
 struct IoSetup {
     IoSetup() {
         cin.tie(0)->sync_with_stdio(0);
