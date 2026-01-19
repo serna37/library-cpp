@@ -46,7 +46,7 @@ data:
   isVerificationFile: false
   path: library/grid/bfs.hpp
   requiredBy: []
-  timestamp: '2026-01-19 15:38:57+09:00'
+  timestamp: '2026-01-19 15:56:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/grid.bfs.test.cpp

@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/dual_segment_tree.hpp
     title: Dual Segment Tree
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
   - icon: ':question:'
@@ -50,7 +50,7 @@ data:
   isVerificationFile: true
   path: tests/segtree.dual_segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:38:57+09:00'
+  timestamp: '2026-01-19 15:56:28+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree.dual_segment_tree.test.cpp

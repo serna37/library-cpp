@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/lazy_segment_tree.hpp
     title: Lazy Segment Tree
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/various/monoid_act.hpp
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
   - icon: ':question:'
@@ -56,7 +56,7 @@ data:
   isVerificationFile: true
   path: tests/segtree.lazy_segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:38:57+09:00'
+  timestamp: '2026-01-19 15:56:28+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree.lazy_segment_tree.test.cpp

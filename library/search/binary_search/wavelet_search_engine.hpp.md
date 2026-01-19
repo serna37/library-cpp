@@ -4,7 +4,7 @@ data:
   - icon: ':question:'
     path: library/sequence/bit_dict.hpp
     title: "\u5B8C\u5099\u8F9E\u66F8"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/sequence/compressor.hpp
     title: "\u5EA7\u6A19\u5727\u7E2E"
   - icon: ':question:'
@@ -228,7 +228,7 @@ data:
   isVerificationFile: false
   path: library/search/binary_search/wavelet_search_engine.hpp
   requiredBy: []
-  timestamp: '2026-01-19 15:38:57+09:00'
+  timestamp: '2026-01-19 15:56:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/search.binary_search.wavelet_search_engine.test.cpp

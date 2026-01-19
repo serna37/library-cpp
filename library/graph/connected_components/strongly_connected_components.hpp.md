@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   _extendedRequiredBy: []
@@ -73,7 +73,7 @@ data:
   isVerificationFile: false
   path: library/graph/connected_components/strongly_connected_components.hpp
   requiredBy: []
-  timestamp: '2026-01-19 15:38:57+09:00'
+  timestamp: '2026-01-19 15:56:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.connected_components.strongly_connected_components.test.cpp

@@ -238,7 +238,7 @@ data:
   isVerificationFile: false
   path: library/polynomial/fps/stirling_second_number.hpp
   requiredBy: []
-  timestamp: '2026-01-19 15:38:57+09:00'
+  timestamp: '2026-01-19 15:56:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fps.stirling_second_number.test.cpp

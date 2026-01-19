@@ -1,28 +1,28 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/dual_segment_tree.hpp
     title: Dual Segment Tree
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/fenwick_tree.hpp
     title: Fenwick Tree
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/lazy_segment_tree.hpp
     title: Lazy Segment Tree
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/segment_tree.hpp
     title: Segment Tree
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/starry_sky_tree.hpp
     title: Starry Sky Tree
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/unified_segment_tree.hpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/various/monoid_act.hpp
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
   - icon: ':question:'
@@ -30,9 +30,9 @@ data:
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_H
@@ -75,8 +75,8 @@ data:
   isVerificationFile: true
   path: tests/segtree.unified_segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:38:57+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2026-01-19 15:56:28+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree.unified_segment_tree.test.cpp
 layout: document
