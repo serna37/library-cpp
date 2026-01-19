@@ -1,5 +1,6 @@
 #pragma once
 #include "library/polynomial/fps/formal_power_series.hpp"
+template <template <typename> class FPS, typename Mint>
 FPS<Mint> stirling_second_number(int N) {
     FPS<Mint> A(N + 1), B(N + 1);
     Mint tmp = 1;
