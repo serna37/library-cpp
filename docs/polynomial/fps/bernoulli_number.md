@@ -16,6 +16,6 @@ $O(NlogN)$
 ## 使い方
 ```cpp
 using mint = modint998244353;
-cout << bernoulli<FPS, mint>(N);
+cout << bernoulli_number<FPS, mint>(N);
 ```
 
