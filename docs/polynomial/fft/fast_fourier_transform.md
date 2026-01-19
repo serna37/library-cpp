@@ -7,7 +7,7 @@ documentation_of: //library/polynomial/fft/fast_fourier_transform.hpp
 [詳しい説明](https://www.slideshare.net/slideshow/fft-49066791/49066791)
 
 ## できること
-$F(k) = \sum_{n=0}^{N-1} f(n) \exp(\frac{-2 \pi i}{N} n k)$
+$F(k) = \displaystyle\sum_{n=0}^{N-1} f(n) \exp(\frac{-2 \pi i}{N} n k)$
 - 離散フーリエ変換をバタフライ演算とかで高速に行う
 - 多項式の乗算を高速に行うことができる
 

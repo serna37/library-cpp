@@ -18,8 +18,8 @@ documentation_of: //library/polynomial/fps/formal_power_series.hpp
   - 累乗 `pow` $(A(x))^k$ : $exp(k \ln A(x))$ として計算
   - 平方根 `sqrt` $\sqrt{A(x)} $
   - テイラーシフト `taylor_shift(c)` : 畳み込みを利用
-    - $f(x) = \sum_{i=0}^{\infty}a_{i}x^{i}$ に対し
-    - $f(x+c) = \sum_{n=0}^{\infty}\frac{f^{(n)}(c)}{n!}x^n$
+    - $f(x) = \displaystyle\sum_{i=0}^{\infty}a_{i}x^{i}$ に対し
+    - $f(x+c) = \displaystyle\sum_{n=0}^{\infty}\frac{f^{(n)}(c)}{n!}x^n$
   - 多項式 $g$ を法とした二分累乗 $x^k$ `mod_pow(k, g)`
   - 多項式に値 $x$ を代入 `operator()(T x)`
 

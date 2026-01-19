@@ -7,7 +7,7 @@ documentation_of: //library/polunomial/fps/bernoulli_number.hpp
 
 ## できること
 - ベルヌーイ数を求める
-- 指数型母関数: $\frac{x}{e^x - 1} = \sum_{n=0}^{\infty} B_n \frac{x^n}{n!}$
+- 指数型母関数: $\frac{x}{e^x - 1} = \displaystyle\sum_{n=0}^{\infty} B_n \frac{x^n}{n!}$
 - 等差数列の累乗和（ファウルハーバーの公式）などに現れる数
 
 ## 計算量
