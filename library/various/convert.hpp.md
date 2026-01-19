@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph.shortest_path.warshall_froyd.test.cpp
     title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/various.convert.test.cpp
     title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/various/convert.hpp\"\nchar int_to_char(int x) {\n\
@@ -28,8 +28,8 @@ data:
   isVerificationFile: false
   path: library/various/convert.hpp
   requiredBy: []
-  timestamp: '2026-01-19 15:56:28+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2026-01-14 14:43:43+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/various.convert.test.cpp
   - tests/graph.shortest_path.warshall_froyd.test.cpp

@@ -10,10 +10,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/warshall_froyd.hpp
     title: Warshall Froyd
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/various/convert.hpp
     title: "\u578B\u5909\u63DB"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -59,7 +59,7 @@ data:
   isVerificationFile: true
   path: tests/graph.shortest_path.warshall_froyd.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:56:28+09:00'
+  timestamp: '2026-01-19 13:31:13+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.shortest_path.warshall_froyd.test.cpp

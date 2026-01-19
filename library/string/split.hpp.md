@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string.split.test.cpp
     title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/string/split.hpp\"\nvector<string> split(const string\
@@ -24,8 +24,8 @@ data:
   isVerificationFile: false
   path: library/string/split.hpp
   requiredBy: []
-  timestamp: '2026-01-19 15:56:28+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2026-01-07 21:05:45+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string.split.test.cpp
 documentation_of: library/string/split.hpp

@@ -268,7 +268,7 @@ data:
       title: "\u7D71\u5408\u30BB\u30B0\u6728"
   - name: library/sequence
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/bit_dict.hpp
       title: "\u5B8C\u5099\u8F9E\u66F8"
     - icon: ':heavy_check_mark:'
@@ -289,45 +289,45 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/sequence/merge.hpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/wavelet_matrix.hpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - name: library/string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/aho_corasick.hpp
       title: Aho Corasick
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/finds.hpp
       title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
         \u30F3"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/join.hpp
       title: "\u6587\u5B57\u5217\u7D50\u5408"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/range.hpp
       title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/rolling_hash.hpp
       title: Rolling Hash
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/run_length.hpp
       title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/split.hpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/split_multi.hpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/trie.hpp
       title: "Trie\u6728"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/util.hpp
       title: "\u6587\u5B57\u5217Util"
   - name: library/various
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/various/convert.hpp
       title: "\u578B\u5909\u63DB"
     - icon: ':heavy_check_mark:'
@@ -336,18 +336,18 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/various/monoid_act.hpp
       title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/various/random.hpp
       title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/various/union_find.hpp
       title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   - name: template
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   verificationCategories:
@@ -549,52 +549,52 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/sequence.merge.test.cpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/sequence.wavelet_matrix.test.cpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
         \u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.aho_corasick.test.cpp
       title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.finds.test.cpp
       title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
         \u30F3\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.join.test.cpp
       title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.range.test.cpp
       title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.rolling_hash.test.cpp
       title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.run_length.test.cpp
       title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.split.test.cpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.split_multi.test.cpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
         \u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.util.test.cpp
       title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/template.debug.test.cpp
       title: "debug\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/template.template.test.cpp
       title: "template\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/various.convert.test.cpp
       title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/various.random.test.cpp
       title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/various.union_find.test.cpp
       title: "Union Find\u306E\u30C6\u30B9\u30C8"
 layout: toppage
@@ -617,3 +617,4 @@ layout: toppage
 - [色別ランダム演習](https://gist.github.com/serna37/9eb27f4603f1e085bca4cded24d594fe)
 - [JSスニペット](https://gist.github.com/serna37/95448aefc36a098a436e1e38c02fa790)
 - [ライブラリ未満のスニペット集Gist](https://gist.github.com/serna37/b006de8b04d440c535d4f1e9a6a70a74)
+

@@ -1,27 +1,27 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/string/aho_corasick.hpp
     title: Aho Corasick
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/string/rolling_hash.hpp
     title: Rolling Hash
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/string/trie.hpp
     title: "Trie\u6728"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/various/random.hpp
     title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string.finds.test.cpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/various/random.hpp\"\n#include <chrono>\n#include\
@@ -170,8 +170,8 @@ data:
   isVerificationFile: false
   path: library/string/finds.hpp
   requiredBy: []
-  timestamp: '2026-01-19 15:56:28+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2026-01-16 12:40:22+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string.finds.test.cpp
 documentation_of: library/string/finds.hpp

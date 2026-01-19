@@ -76,7 +76,7 @@ data:
   path: library/segtree/segment_tree.hpp
   requiredBy:
   - library/segtree/unified_segment_tree.hpp
-  timestamp: '2026-01-19 15:56:28+09:00'
+  timestamp: '2026-01-15 10:36:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.segment_tree.test.cpp

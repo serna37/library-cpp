@@ -10,12 +10,12 @@ data:
     path: tests/graph.mst.kruskal.test.cpp
     title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\u30C6\
       \u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/various.union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/various/union_find.hpp\"\nstruct UnionFind {\n \
@@ -38,8 +38,8 @@ data:
   path: library/various/union_find.hpp
   requiredBy:
   - library/graph/mst/kruskal.hpp
-  timestamp: '2026-01-19 15:56:28+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2026-01-15 10:36:58+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/various.union_find.test.cpp
   - tests/graph.mst.kruskal.test.cpp

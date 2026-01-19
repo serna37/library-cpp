@@ -16,7 +16,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/polynomial/fps/formal_power_series.hpp
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -57,7 +57,7 @@ data:
   isVerificationFile: true
   path: tests/polynomial.fps.bernoulli_number.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:56:28+09:00'
+  timestamp: '2026-01-19 15:21:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/polynomial.fps.bernoulli_number.test.cpp
