@@ -13,7 +13,7 @@ struct ConvolutionArbitraryMod {
         FFT::ensure_base(nbase);
         int sz = 1 << nbase;
         vector<C> fa(sz);
-        for (int i = 0; i < a.size(); i++) {
+        for (int i = 0; i < (int)a.size(); i++) {
             fa[i] = C(a[i].val() & ((1 << 15) - 1), a[i].val() >> 15);
         }
         fft(fa, sz);
@@ -21,7 +21,7 @@ struct ConvolutionArbitraryMod {
         if (a == b) {
             fb = fa;
         } else {
-            for (int i = 0; i < b.size(); i++) {
+            for (int i = 0; i < (int)b.size(); i++) {
                 fb[i] = C(b[i].val() & ((1 << 15) - 1), b[i].val() >> 15);
             }
             fft(fb, sz);
