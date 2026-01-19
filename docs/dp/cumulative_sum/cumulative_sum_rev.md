@@ -14,7 +14,7 @@ R: 26  25  21  19  11   9  0
 
 累積和 $S$ と合わせて、全区間の和は次のように求められる。
 
-$\sum_{j=0}^{i-1} + \sum_{j=i}^{last} = S_i + R_i$
+$\displaystyle\sum_{j=0}^{i-1} + \displaystyle\sum_{j=i}^{last} = S_i + R_i$
 
 ## 計算量
 $O(N)$

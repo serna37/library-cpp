@@ -1,5 +1,5 @@
 #pragma once
-#include "library/polynomial/fft.hpp"
+#include "library/polynomial/fft/fast_fourier_transform.hpp"
 template <typename R>
 vector<long long> convolution_fft(const vector<R> &a, const vector<R> &b) {
     using C = FFT::C;

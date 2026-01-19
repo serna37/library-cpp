@@ -16,10 +16,10 @@ using namespace std;
 #define endl "\n"
 template <typename T> using vec2 = vector<vector<T>>;
 template <typename T> using reverse_queue = priority_queue<T, vector<T>, greater<T>>;
-const long long INF = 1e18;
-const long long MOD = 998244353;
-const long long MOD7 = 1e9 + 7;
-const long double PI = acosl(-1);
+constexpr long long INF = 1e18;
+constexpr long long MOD = 998244353;
+constexpr long long MOD7 = 1e9 + 7;
+constexpr long double PI = acosl(-1);
 struct IoSetup {
     IoSetup() {
         cin.tie(0)->sync_with_stdio(0);
