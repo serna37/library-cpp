@@ -7,7 +7,7 @@ documentation_of: //library/number/mod/mod_tetration.hpp
 
 ## できること
 - ${a \uparrow \uparrow b} \bmod m$ を求める
-  - $\uparrow \uparrow$ はテトレーション演算で、$a^{a^{a^{a^{\ldots}}}}$ ( $a$ が $b$ 個続く) を指す
+  - $\uparrow \uparrow$ はテトレーション演算で、 $a^{a^{a^{a^{\ldots}}}}$ ( $a$ が $b$ 個続く) を指す
 
 ## 計算量
 $O(\sqrt{m})$
