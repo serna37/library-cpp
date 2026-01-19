@@ -1,26 +1,26 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/segtree/lazy_segment_tree.hpp
     title: Lazy Segment Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/segtree/unified_segment_tree.hpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/segtree.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.unified_segment_tree.test.cpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
     links: []
@@ -147,8 +147,8 @@ data:
   requiredBy:
   - library/segtree/unified_segment_tree.hpp
   - library/segtree/lazy_segment_tree.hpp
-  timestamp: '2026-01-19 15:21:04+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-19 15:38:57+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/segtree.lazy_segment_tree.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp

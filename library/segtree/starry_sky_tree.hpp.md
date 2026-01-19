@@ -2,22 +2,22 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/segtree/unified_segment_tree.hpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.starry_sky_tree.test.cpp
     title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.starry_sky_tree_2.test.cpp
     title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.unified_segment_tree.test.cpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/segtree/starry_sky_tree.hpp\"\ntemplate <bool is_min_mode\
@@ -79,8 +79,8 @@ data:
   path: library/segtree/starry_sky_tree.hpp
   requiredBy:
   - library/segtree/unified_segment_tree.hpp
-  timestamp: '2026-01-19 15:21:04+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-19 15:38:57+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/segtree.starry_sky_tree.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp

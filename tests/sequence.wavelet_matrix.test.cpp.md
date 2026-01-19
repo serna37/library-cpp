@@ -48,7 +48,7 @@ data:
   isVerificationFile: true
   path: tests/sequence.wavelet_matrix.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:21:04+09:00'
+  timestamp: '2026-01-19 15:38:57+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/sequence.wavelet_matrix.test.cpp

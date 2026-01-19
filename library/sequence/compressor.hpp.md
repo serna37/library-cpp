@@ -5,20 +5,20 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/search/binary_search/wavelet_search_engine.hpp
     title: Wavelet Search Engine
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/sequence/inversion_number.hpp
     title: "\u8EE2\u5012\u6570"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.wavelet_search_engine.test.cpp
     title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.inversion_number.test.cpp
     title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u30FBFenwickTree\u306E\
       \u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/compressor.hpp\"\ntemplate <typename T>\
@@ -51,8 +51,8 @@ data:
   requiredBy:
   - library/sequence/inversion_number.hpp
   - library/search/binary_search/wavelet_search_engine.hpp
-  timestamp: '2026-01-19 15:21:04+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-19 15:38:57+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/sequence.inversion_number.test.cpp
   - tests/search.binary_search.wavelet_search_engine.test.cpp

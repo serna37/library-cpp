@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   _extendedRequiredBy:
@@ -62,7 +62,7 @@ data:
   path: library/graph/shortest_path/bfs.hpp
   requiredBy:
   - library/graph/tree/lca.hpp
-  timestamp: '2026-01-19 15:21:04+09:00'
+  timestamp: '2026-01-19 15:38:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.tree.lca.test.cpp

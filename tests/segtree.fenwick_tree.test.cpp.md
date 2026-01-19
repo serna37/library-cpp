@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/segtree/fenwick_tree.hpp
     title: Fenwick Tree
   - icon: ':question:'
@@ -45,7 +45,7 @@ data:
   isVerificationFile: true
   path: tests/segtree.fenwick_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:21:04+09:00'
+  timestamp: '2026-01-19 15:38:57+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree.fenwick_tree.test.cpp

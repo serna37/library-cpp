@@ -75,7 +75,7 @@ data:
   isVerificationFile: true
   path: tests/string.finds.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:21:04+09:00'
+  timestamp: '2026-01-19 15:38:57+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/string.finds.test.cpp

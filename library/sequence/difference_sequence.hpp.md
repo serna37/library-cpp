@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.difference_sequence.test.cpp
     title: "\u968E\u5DEE\u6570\u5217\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/difference_sequence.hpp\"\ntemplate <typename\
@@ -22,8 +22,8 @@ data:
   isVerificationFile: false
   path: library/sequence/difference_sequence.hpp
   requiredBy: []
-  timestamp: '2026-01-19 15:21:04+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-19 15:38:57+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/sequence.difference_sequence.test.cpp
 documentation_of: library/sequence/difference_sequence.hpp

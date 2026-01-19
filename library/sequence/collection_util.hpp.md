@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/polynomial.fft.convolution_bitwise_or.test.cpp
     title: "Bitwise\u7573\u307F\u8FBC\u307FOR\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.collection_util.test.cpp
     title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/collection_util.hpp\"\nclass CollectionUtil\
@@ -60,8 +60,8 @@ data:
   isVerificationFile: false
   path: library/sequence/collection_util.hpp
   requiredBy: []
-  timestamp: '2026-01-19 15:21:04+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-01-19 15:38:57+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/polynomial.fft.convolution_bitwise_or.test.cpp
   - tests/sequence.collection_util.test.cpp

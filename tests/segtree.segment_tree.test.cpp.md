@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/segtree/segment_tree.hpp
     title: Segment Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
   - icon: ':question:'
@@ -49,7 +49,7 @@ data:
   isVerificationFile: true
   path: tests/segtree.segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:21:04+09:00'
+  timestamp: '2026-01-19 15:38:57+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree.segment_tree.test.cpp

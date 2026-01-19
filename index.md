@@ -39,10 +39,10 @@ data:
       title: "\u5E7E\u4F55Util"
   - name: library/graph/base
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/graph/base/edge.hpp
       title: "\u8FBA"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/graph/base/graph.hpp
       title: "\u30B0\u30E9\u30D5"
   - name: library/graph/connected_components
@@ -80,7 +80,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/graph/shortest_path/dijkstra.hpp
       title: Dijkstra
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/graph/shortest_path/warshall_froyd.hpp
       title: Warshall Froyd
   - name: library/graph/tree
@@ -248,22 +248,22 @@ data:
       title: "\u9806\u5217\u5168\u63A2\u7D22"
   - name: library/segtree
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/segtree/dual_segment_tree.hpp
       title: Dual Segment Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/segtree/fenwick_tree.hpp
       title: Fenwick Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/segtree/lazy_segment_tree.hpp
       title: Lazy Segment Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/segtree/segment_tree.hpp
       title: Segment Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/segtree/starry_sky_tree.hpp
       title: Starry Sky Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/segtree/unified_segment_tree.hpp
       title: "\u7D71\u5408\u30BB\u30B0\u6728"
   - name: library/sequence
@@ -271,22 +271,22 @@ data:
     - icon: ':question:'
       path: library/sequence/bit_dict.hpp
       title: "\u5B8C\u5099\u8F9E\u66F8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/sequence/collection_util.hpp
       title: "\u914D\u5217\u7CFBUtil"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/sequence/compressor.hpp
       title: "\u5EA7\u6A19\u5727\u7E2E"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/sequence/difference_sequence.hpp
       title: "\u968E\u5DEE\u6570\u5217"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/sequence/dispersion.hpp
       title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/sequence/inversion_number.hpp
       title: "\u8EE2\u5012\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/sequence/merge.hpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF"
     - icon: ':question:'
@@ -327,13 +327,13 @@ data:
       title: "\u6587\u5B57\u5217Util"
   - name: library/various
     pages:
-    - icon: ':question:'
+    - icon: ':x:'
       path: library/various/convert.hpp
       title: "\u578B\u5909\u63DB"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/various/monoid.hpp
       title: "\u30E2\u30CE\u30A4\u30C9"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/various/monoid_act.hpp
       title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
     - icon: ':x:'
@@ -408,7 +408,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/graph.shortest_path.dijkstra.test.cpp
       title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/graph.shortest_path.warshall_froyd.test.cpp
       title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
@@ -523,30 +523,30 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/segtree.segment_tree.test.cpp
       title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/segtree.starry_sky_tree.test.cpp
       title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/segtree.starry_sky_tree_2.test.cpp
       title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/segtree.unified_segment_tree.test.cpp
       title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/sequence.collection_util.test.cpp
       title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/sequence.difference_sequence.test.cpp
       title: "\u968E\u5DEE\u6570\u5217\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/sequence.dispersion.test.cpp
       title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\u30C6\
         \u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/sequence.inversion_number.test.cpp
       title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u30FBFenwickTree\u306E\
         \u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/sequence.merge.test.cpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
     - icon: ':x:'

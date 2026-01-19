@@ -97,7 +97,7 @@ data:
   - library/polynomial/fps/formal_power_series.hpp
   - library/polynomial/fft/convolution_fft.hpp
   - library/polynomial/fft/convolution_arbitrary_mod.hpp
-  timestamp: '2026-01-19 15:21:04+09:00'
+  timestamp: '2026-01-19 15:38:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fps.bernoulli_number.test.cpp

@@ -173,7 +173,7 @@ data:
   path: library/sequence/wavelet_matrix.hpp
   requiredBy:
   - library/search/binary_search/wavelet_search_engine.hpp
-  timestamp: '2026-01-19 15:21:04+09:00'
+  timestamp: '2026-01-19 15:38:57+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/search.binary_search.wavelet_search_engine.test.cpp

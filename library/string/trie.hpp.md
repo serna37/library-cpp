@@ -74,7 +74,7 @@ data:
   requiredBy:
   - library/string/aho_corasick.hpp
   - library/string/finds.hpp
-  timestamp: '2026-01-19 15:21:04+09:00'
+  timestamp: '2026-01-19 15:38:57+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/string.finds.test.cpp

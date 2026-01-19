@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/graph/shortest_path/warshall_froyd.hpp
     title: Warshall Froyd
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/various/convert.hpp
     title: "\u578B\u5909\u63DB"
   - icon: ':question:'
@@ -18,9 +18,9 @@ data:
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C
@@ -59,8 +59,8 @@ data:
   isVerificationFile: true
   path: tests/graph.shortest_path.warshall_froyd.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:21:04+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-01-19 15:38:57+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/graph.shortest_path.warshall_froyd.test.cpp
 layout: document

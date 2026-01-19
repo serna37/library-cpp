@@ -40,7 +40,7 @@ data:
   requiredBy:
   - library/string/finds.hpp
   - library/string/rolling_hash.hpp
-  timestamp: '2026-01-19 15:21:04+09:00'
+  timestamp: '2026-01-19 15:38:57+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/string.rolling_hash.test.cpp
