@@ -5,6 +5,9 @@ data:
     path: library/segtree/fenwick_tree.hpp
     title: Fenwick Tree
   - icon: ':heavy_check_mark:'
+    path: library/sequence/compressor.hpp
+    title: "\u5EA7\u6A19\u5727\u7E2E"
+  - icon: ':heavy_check_mark:'
     path: library/sequence/static_range_count_distinct.hpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570"
   - icon: ':heavy_check_mark:'
@@ -46,10 +49,11 @@ data:
   - template/template.hpp
   - library/sequence/static_range_count_distinct.hpp
   - library/segtree/fenwick_tree.hpp
+  - library/sequence/compressor.hpp
   isVerificationFile: true
   path: tests/sequence.static_range_count_distinct.test.cpp
   requiredBy: []
-  timestamp: '2026-01-20 09:55:20+09:00'
+  timestamp: '2026-01-20 10:00:41+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/sequence.static_range_count_distinct.test.cpp
