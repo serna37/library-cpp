@@ -1,5 +1,6 @@
 #pragma once
 #include "library/segtree/fenwick_tree.hpp"
+#include "library/sequence/compressor.hpp"
 template <typename T>
 struct StaticRangeCountDistinct {
   private:
@@ -10,14 +11,9 @@ struct StaticRangeCountDistinct {
 
   public:
     explicit StaticRangeCountDistinct(const vector<T> &vs) : xs(vs.size()) {
-        vector<T> ys = vs;
-        sort(ys.begin(), ys.end());
-        ys.erase(unique(ys.begin(), ys.end()), ys.end());
-        m = ys.size();
-        for (int i = 0; i < (int)vs.size(); ++i) {
-            int p = lower_bound(ys.begin(), ys.end(), vs[i]) - ys.begin();
-            xs[i] = p;
-        }
+        Compressor<T> comp(vs);
+        m = comp.size();
+        xs = comp.get_all();
     }
     void add_query(int l, int r) {
         assert(0ll <= l and l <= r and r <= (int)xs.size());
