@@ -57,3 +57,11 @@ TARGET=./main.cpp
 sed -i '' '/^#line/d' ./bundle.cpp
 ```
 のようにできます。(Macで確認)
+
+## その他
+GitHub Codespace用
+```sh
+TARGET=some_test.cpp
+cd /workspaces/library-cpp/tests
+g++ -D=LOCAL -std=c++23 -I /workspaces/library-cpp -Wall -Wextra -mtune=native -march=native -fconstexpr-depth=2147483647 -o compiled_file $TARGET && ./compiled_file
+```

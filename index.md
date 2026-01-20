@@ -331,6 +331,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/string/util.hpp
       title: "\u6587\u5B57\u5217Util"
+    - icon: ':heavy_check_mark:'
+      path: library/string/z_algorithm.hpp
+      title: Z Algorithm
   - name: library/various
     pages:
     - icon: ':heavy_check_mark:'
@@ -595,6 +598,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/string.util.test.cpp
       title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/string.z_algorithm.test.cpp
+      title: "Z Algorithm\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/template.debug.test.cpp
       title: "debug\u306E\u30C6\u30B9\u30C8"

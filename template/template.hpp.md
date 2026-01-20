@@ -240,6 +240,9 @@ data:
     path: tests/string.util.test.cpp
     title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/string.z_algorithm.test.cpp
+    title: "Z Algorithm\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/template.template.test.cpp
     title: "template\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -317,6 +320,7 @@ data:
   - tests/various.convert.test.cpp
   - tests/number.prime.prime_test.test.cpp
   - tests/polynomial.fft.convolution_fft.test.cpp
+  - tests/string.z_algorithm.test.cpp
   - tests/search.binary_search.binary_search.test.cpp
   - tests/number.mod.mod_tetration.test.cpp
   - tests/various.union_find.test.cpp
