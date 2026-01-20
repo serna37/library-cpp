@@ -117,6 +117,9 @@ data:
       path: library/number/euler_phi.hpp
       title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570"
     - icon: ':heavy_check_mark:'
+      path: library/number/ext_gcd.hpp
+      title: "\u62E1\u5F35Euclid\u306E\u4E92\u9664\u6CD5"
+    - icon: ':heavy_check_mark:'
       path: library/number/factorial.hpp
       title: "\u968E\u4E57"
   - name: library/number/mod
@@ -451,6 +454,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/number.divisors.test.cpp
       title: "\u7D04\u6570\u5217\u6319\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number.ext_gcd.test.cpp
+      title: "\u62E1\u5F35Euclid\u306E\u4E92\u9664\u6CD5\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/number.factorial.test.cpp
       title: "\u968E\u4E57\u306E\u30C6\u30B9\u30C8"

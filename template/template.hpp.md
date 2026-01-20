@@ -90,6 +90,9 @@ data:
     path: tests/number.divisors.test.cpp
     title: "\u7D04\u6570\u5217\u6319\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/number.ext_gcd.test.cpp
+    title: "\u62E1\u5F35Euclid\u306E\u4E92\u9664\u6CD5\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/number.factorial.test.cpp
     title: "\u968E\u4E57\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -317,6 +320,7 @@ data:
   - tests/segtree.starry_sky_tree.test.cpp
   - tests/polynomial.fps.stirling_second_number.test.cpp
   - tests/polynomial.fps.stirling_first_number.test.cpp
+  - tests/number.ext_gcd.test.cpp
   - tests/string.rolling_hash.test.cpp
   - tests/graph.shortest_path.dijkstra.test.cpp
   - tests/dp.cumulative_sum.cumulative_sum_rev_diff.test.cpp
