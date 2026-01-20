@@ -200,6 +200,9 @@ data:
     path: tests/sequence.merge.test.cpp
     title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/sequence.static_range_count_distinct.test.cpp
+    title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/sequence.wavelet_matrix.test.cpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
       \u30C8"
@@ -313,6 +316,7 @@ data:
   - tests/search.binary_search.binary_search.test.cpp
   - tests/number.mod.mod_tetration.test.cpp
   - tests/various.union_find.test.cpp
+  - tests/sequence.static_range_count_distinct.test.cpp
   - tests/geometry.area_square.test.cpp
   - tests/string.run_length.test.cpp
   - tests/graph.shortest_path.warshall_froyd.test.cpp

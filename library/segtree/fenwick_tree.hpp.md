@@ -8,6 +8,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/sequence/inversion_number.hpp
     title: "\u8EE2\u5012\u6570"
+  - icon: ':heavy_check_mark:'
+    path: library/sequence/static_range_count_distinct.hpp
+    title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/segtree.fenwick_tree.test.cpp
@@ -19,6 +22,9 @@ data:
     path: tests/sequence.inversion_number.test.cpp
     title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u30FBFenwickTree\u306E\
       \u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence.static_range_count_distinct.test.cpp
+    title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -47,10 +53,12 @@ data:
   path: library/segtree/fenwick_tree.hpp
   requiredBy:
   - library/segtree/unified_segment_tree.hpp
+  - library/sequence/static_range_count_distinct.hpp
   - library/sequence/inversion_number.hpp
   timestamp: '2026-01-07 14:42:24+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/sequence.static_range_count_distinct.test.cpp
   - tests/segtree.fenwick_tree.test.cpp
   - tests/sequence.inversion_number.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp
