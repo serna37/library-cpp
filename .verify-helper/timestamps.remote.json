@@ -26,6 +26,7 @@
 "tests/number.digit_sum.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/number.div.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/number.divisors.test.cpp": "2026-01-19 13:31:13 +0900",
+"tests/number.ext_gcd.test.cpp": "2026-01-20 19:53:58 +0900",
 "tests/number.factorial.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/number.mod.mod_combination.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/number.mod.mod_tetration.test.cpp": "2026-01-20 09:12:56 +0900",
