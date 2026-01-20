@@ -60,6 +60,7 @@
 "tests/sequence.dispersion.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/sequence.inversion_number.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/sequence.merge.test.cpp": "2026-01-19 13:31:13 +0900",
+"tests/sequence.static_range_count_distinct.test.cpp": "2026-01-20 09:55:20 +0900",
 "tests/sequence.wavelet_matrix.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/string.aho_corasick.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/string.finds.test.cpp": "2026-01-19 13:31:13 +0900",
