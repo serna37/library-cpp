@@ -72,6 +72,7 @@
 "tests/string.split.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/string.split_multi.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/string.util.test.cpp": "2026-01-19 13:31:13 +0900",
+"tests/string.z_algorithm.test.cpp": "2026-01-20 04:38:29 +0000",
 "tests/template.debug.test.cpp": "2026-01-16 16:23:43 +0900",
 "tests/template.template.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/various.convert.test.cpp": "2026-01-19 13:31:13 +0900",
