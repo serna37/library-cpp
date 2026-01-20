@@ -16,15 +16,15 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/polynomial/fft/superset_zeta_moebius_transform.hpp\"\
-    \ntemplate <typename T>\nvoid superset_zeta_transform(vector<T>& f) {\n    const\
-    \ int n = (int)f.size();\n    assert((n & (n - 1)) == 0);\n    for (int i = 1;\
-    \ i < n; i <<= 1) {\n        for (int j = 0; j < n; j += i << 1) {\n         \
-    \   for (int k = 0; k < i; k++) {\n                f[j + k] += f[j + k + i];\n\
-    \            }\n        }\n    }\n}\ntemplate <typename T>\nvoid superset_moebius_transform(vector<T>&\
-    \ f) {\n    const int n = (int)f.size();\n    assert((n & (n - 1)) == 0);\n  \
-    \  for (int i = 1; i < n; i <<= 1) {\n        for (int j = 0; j < n; j += i <<\
-    \ 1) {\n            for (int k = 0; k < i; k++) {\n                f[j + k] -=\
-    \ f[j + k + i];\n            }\n        }\n    }\n}\n#line 3 \"library/polynomial/fft/convolution_bitwise_and.hpp\"\
+    \ntemplate <typename T> void superset_zeta_transform(vector<T> &f) {\n    const\
+    \ int n = (int)f.size();\n    assert((n & (n - 1)) == 0ll);\n    for (int i =\
+    \ 1; i < n; i <<= 1) {\n        for (int j = 0; j < n; j += i << 1) {\n      \
+    \      for (int k = 0; k < i; k++) {\n                f[j + k] += f[j + k + i];\n\
+    \            }\n        }\n    }\n}\ntemplate <typename T> void superset_moebius_transform(vector<T>\
+    \ &f) {\n    const int n = (int)f.size();\n    assert((n & (n - 1)) == 0ll);\n\
+    \    for (int i = 1; i < n; i <<= 1) {\n        for (int j = 0; j < n; j += i\
+    \ << 1) {\n            for (int k = 0; k < i; k++) {\n                f[j + k]\
+    \ -= f[j + k + i];\n            }\n        }\n    }\n}\n#line 3 \"library/polynomial/fft/convolution_bitwise_and.hpp\"\
     \ntemplate <typename T>\nvector<T> convolution_bitwise_and(vector<T> f, vector<T>\
     \ g) {\n    const int n = (int)f.size();\n    assert(f.size() == g.size());\n\
     \    assert((n & (n - 1)) == 0);\n    superset_zeta_transform(f);\n    superset_zeta_transform(g);\n\
@@ -41,7 +41,7 @@ data:
   isVerificationFile: false
   path: library/polynomial/fft/convolution_bitwise_and.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:29:11+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fft.convolution_bitwise_and.test.cpp

@@ -43,11 +43,33 @@ data:
   bundledCode: "#line 2 \"library/polynomial/fft/fast_fourier_transform.hpp\"\nnamespace\
     \ FFT {\nusing real = double;\nstruct C {\n    real x, y;\n    C() : x(0), y(0)\
     \ {};\n    C(real x, real y) : x(x), y(y) {};\n    inline C operator+(const C\
-    \ &c) const {\n        return C(x + c.x, y + c.y);\n    }\n    inline C operator-(const\
-    \ C &c) const {\n        return C(x - c.x, y - c.y);\n    }\n    inline C operator*(const\
-    \ C &c) const {\n        return C(x * c.x - y * c.y, x * c.y + y * c.x);\n   \
-    \ }\n    inline C conj() const {\n        return C(x, -y);\n    }\n};\nconst real\
-    \ PI = acosl(-1);\nint base = 1;\nvector<C> rts = {{0, 0}, {1, 0}};\nvector<int>\
+    \ &c) const { return C(x + c.x, y + c.y); }\n    inline C operator-(const C &c)\
+    \ const { return C(x - c.x, y - c.y); }\n    inline C operator*(const C &c) const\
+    \ {\n        return C(x * c.x - y * c.y, x * c.y + y * c.x);\n    }\n    inline\
+    \ C conj() const { return C(x, -y); }\n};\nconst real PI = acosl(-1);\nint base\
+    \ = 1;\nvector<C> rts = {{0, 0}, {1, 0}};\nvector<int> rev = {0, 1};\nvoid ensure_base(int\
+    \ nbase) {\n    if (nbase <= base) return;\n    rev.resize(1 << nbase);\n    rts.resize(1\
+    \ << nbase);\n    for (int i = 0; i < (1 << nbase); i++) {\n        rev[i] = (rev[i\
+    \ >> 1] >> 1) + ((i & 1) << (nbase - 1));\n    }\n    while (base < nbase) {\n\
+    \        real angle = PI * 2.0 / (1 << (base + 1));\n        for (int i = 1 <<\
+    \ (base - 1); i < (1 << base); i++) {\n            rts[i << 1] = rts[i];\n   \
+    \         real angle_i = angle * (2 * i + 1 - (1 << base));\n            rts[(i\
+    \ << 1) + 1] = C(cos(angle_i), sin(angle_i));\n        }\n        ++base;\n  \
+    \  }\n}\nvoid fft(vector<C> &a, int n) {\n    assert((n & (n - 1)) == 0);\n  \
+    \  int zeros = __builtin_ctz(n);\n    ensure_base(zeros);\n    int shift = base\
+    \ - zeros;\n    for (int i = 0; i < n; i++) {\n        if (i < (rev[i] >> shift))\
+    \ swap(a[i], a[rev[i] >> shift]);\n    }\n    for (int k = 1; k < n; k <<= 1)\
+    \ {\n        for (int i = 0; i < n; i += 2 * k) {\n            for (int j = 0;\
+    \ j < k; j++) {\n                C z = a[i + j + k] * rts[j + k];\n          \
+    \      a[i + j + k] = a[i + j] - z;\n                a[i + j] = a[i + j] + z;\n\
+    \            }\n        }\n    }\n}\n} // namespace FFT\n"
+  code: "#pragma once\nnamespace FFT {\nusing real = double;\nstruct C {\n    real\
+    \ x, y;\n    C() : x(0), y(0) {};\n    C(real x, real y) : x(x), y(y) {};\n  \
+    \  inline C operator+(const C &c) const { return C(x + c.x, y + c.y); }\n    inline\
+    \ C operator-(const C &c) const { return C(x - c.x, y - c.y); }\n    inline C\
+    \ operator*(const C &c) const {\n        return C(x * c.x - y * c.y, x * c.y +\
+    \ y * c.x);\n    }\n    inline C conj() const { return C(x, -y); }\n};\nconst\
+    \ real PI = acosl(-1);\nint base = 1;\nvector<C> rts = {{0, 0}, {1, 0}};\nvector<int>\
     \ rev = {0, 1};\nvoid ensure_base(int nbase) {\n    if (nbase <= base) return;\n\
     \    rev.resize(1 << nbase);\n    rts.resize(1 << nbase);\n    for (int i = 0;\
     \ i < (1 << nbase); i++) {\n        rev[i] = (rev[i >> 1] >> 1) + ((i & 1) <<\
@@ -64,29 +86,6 @@ data:
     \ z = a[i + j + k] * rts[j + k];\n                a[i + j + k] = a[i + j] - z;\n\
     \                a[i + j] = a[i + j] + z;\n            }\n        }\n    }\n}\n\
     } // namespace FFT\n"
-  code: "#pragma once\nnamespace FFT {\nusing real = double;\nstruct C {\n    real\
-    \ x, y;\n    C() : x(0), y(0) {};\n    C(real x, real y) : x(x), y(y) {};\n  \
-    \  inline C operator+(const C &c) const {\n        return C(x + c.x, y + c.y);\n\
-    \    }\n    inline C operator-(const C &c) const {\n        return C(x - c.x,\
-    \ y - c.y);\n    }\n    inline C operator*(const C &c) const {\n        return\
-    \ C(x * c.x - y * c.y, x * c.y + y * c.x);\n    }\n    inline C conj() const {\n\
-    \        return C(x, -y);\n    }\n};\nconst real PI = acosl(-1);\nint base = 1;\n\
-    vector<C> rts = {{0, 0}, {1, 0}};\nvector<int> rev = {0, 1};\nvoid ensure_base(int\
-    \ nbase) {\n    if (nbase <= base) return;\n    rev.resize(1 << nbase);\n    rts.resize(1\
-    \ << nbase);\n    for (int i = 0; i < (1 << nbase); i++) {\n        rev[i] = (rev[i\
-    \ >> 1] >> 1) + ((i & 1) << (nbase - 1));\n    }\n    while (base < nbase) {\n\
-    \        real angle = PI * 2.0 / (1 << (base + 1));\n        for (int i = 1 <<\
-    \ (base - 1); i < (1 << base); i++) {\n            rts[i << 1] = rts[i];\n   \
-    \         real angle_i = angle * (2 * i + 1 - (1 << base));\n            rts[(i\
-    \ << 1) + 1] = C(cos(angle_i), sin(angle_i));\n        }\n        ++base;\n  \
-    \  }\n}\nvoid fft(vector<C> &a, int n) {\n    assert((n & (n - 1)) == 0);\n  \
-    \  int zeros = __builtin_ctz(n);\n    ensure_base(zeros);\n    int shift = base\
-    \ - zeros;\n    for (int i = 0; i < n; i++) {\n        if (i < (rev[i] >> shift))\
-    \ swap(a[i], a[rev[i] >> shift]);\n    }\n    for (int k = 1; k < n; k <<= 1)\
-    \ {\n        for (int i = 0; i < n; i += 2 * k) {\n            for (int j = 0;\
-    \ j < k; j++) {\n                C z = a[i + j + k] * rts[j + k];\n          \
-    \      a[i + j + k] = a[i + j] - z;\n                a[i + j] = a[i + j] + z;\n\
-    \            }\n        }\n    }\n}\n} // namespace FFT\n"
   dependsOn: []
   isVerificationFile: false
   path: library/polynomial/fft/fast_fourier_transform.hpp
@@ -97,7 +96,7 @@ data:
   - library/polynomial/fps/formal_power_series.hpp
   - library/polynomial/fft/convolution_fft.hpp
   - library/polynomial/fft/convolution_arbitrary_mod.hpp
-  timestamp: '2026-01-19 13:29:11+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fps.bernoulli_number.test.cpp

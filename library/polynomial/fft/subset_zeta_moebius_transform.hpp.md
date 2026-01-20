@@ -15,31 +15,31 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/polynomial/fft/subset_zeta_moebius_transform.hpp\"\
-    \ntemplate <typename T>\nvoid subset_zeta_transform(vector<T>& f) {\n    const\
-    \ int n = (int)f.size();\n    assert((n & (n - 1)) == 0);\n    for (int i = 1;\
-    \ i < n; i <<= 1) {\n        for (int j = 0; j < n; j += i << 1) {\n         \
-    \   for (int k = 0; k < i; k++) {\n                f[j + k + i] += f[j + k];\n\
-    \            }\n        }\n    }\n}\ntemplate <typename T>\nvoid subset_moebius_transform(vector<T>&\
-    \ f) {\n    const int n = (int)f.size();\n    assert((n & (n - 1)) == 0);\n  \
-    \  for (int i = 1; i < n; i <<= 1) {\n        for (int j = 0; j < n; j += i <<\
-    \ 1) {\n            for (int k = 0; k < i; k++) {\n                f[j + k + i]\
-    \ -= f[j + k];\n            }\n        }\n    }\n}\n"
-  code: "#pragma once\ntemplate <typename T>\nvoid subset_zeta_transform(vector<T>&\
-    \ f) {\n    const int n = (int)f.size();\n    assert((n & (n - 1)) == 0);\n  \
-    \  for (int i = 1; i < n; i <<= 1) {\n        for (int j = 0; j < n; j += i <<\
-    \ 1) {\n            for (int k = 0; k < i; k++) {\n                f[j + k + i]\
-    \ += f[j + k];\n            }\n        }\n    }\n}\ntemplate <typename T>\nvoid\
-    \ subset_moebius_transform(vector<T>& f) {\n    const int n = (int)f.size();\n\
-    \    assert((n & (n - 1)) == 0);\n    for (int i = 1; i < n; i <<= 1) {\n    \
-    \    for (int j = 0; j < n; j += i << 1) {\n            for (int k = 0; k < i;\
-    \ k++) {\n                f[j + k + i] -= f[j + k];\n            }\n        }\n\
-    \    }\n}\n"
+    \ntemplate <typename T> void subset_zeta_transform(vector<T> &f) {\n    const\
+    \ int n = (int)f.size();\n    assert((n & (n - 1)) == 0ll);\n    for (int i =\
+    \ 1; i < n; i <<= 1) {\n        for (int j = 0; j < n; j += i << 1) {\n      \
+    \      for (int k = 0; k < i; k++) {\n                f[j + k + i] += f[j + k];\n\
+    \            }\n        }\n    }\n}\ntemplate <typename T> void subset_moebius_transform(vector<T>\
+    \ &f) {\n    const int n = (int)f.size();\n    assert((n & (n - 1)) == 0ll);\n\
+    \    for (int i = 1; i < n; i <<= 1) {\n        for (int j = 0; j < n; j += i\
+    \ << 1) {\n            for (int k = 0; k < i; k++) {\n                f[j + k\
+    \ + i] -= f[j + k];\n            }\n        }\n    }\n}\n"
+  code: "#pragma once\ntemplate <typename T> void subset_zeta_transform(vector<T>\
+    \ &f) {\n    const int n = (int)f.size();\n    assert((n & (n - 1)) == 0ll);\n\
+    \    for (int i = 1; i < n; i <<= 1) {\n        for (int j = 0; j < n; j += i\
+    \ << 1) {\n            for (int k = 0; k < i; k++) {\n                f[j + k\
+    \ + i] += f[j + k];\n            }\n        }\n    }\n}\ntemplate <typename T>\
+    \ void subset_moebius_transform(vector<T> &f) {\n    const int n = (int)f.size();\n\
+    \    assert((n & (n - 1)) == 0ll);\n    for (int i = 1; i < n; i <<= 1) {\n  \
+    \      for (int j = 0; j < n; j += i << 1) {\n            for (int k = 0; k <\
+    \ i; k++) {\n                f[j + k + i] -= f[j + k];\n            }\n      \
+    \  }\n    }\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/polynomial/fft/subset_zeta_moebius_transform.hpp
   requiredBy:
   - library/polynomial/fft/convolution_bitwise_or.hpp
-  timestamp: '2026-01-19 13:29:11+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fft.convolution_bitwise_or.test.cpp

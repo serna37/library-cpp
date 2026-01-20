@@ -12,11 +12,11 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/string/z_algorithm.hpp\"\ntemplate <typename T =\
-    \ char>\nstruct ZAlgorithm {\n  private:\n    vector<T> s;\n    vector<int> deleted;\n\
-    \    vector<vector<int> > delete_hist;\n    vector<int> z;\n    queue<int> cur;\n\
-    \n  public:\n    ZAlgorithm() : delete_hist{{}} {}\n\n    template <typename S>\n\
-    \    ZAlgorithm(const S &s) : ZAlgorithm() {\n        for (auto &c : s) add(c);\n\
-    \    }\n\n    void add(const T &c) {\n        s.emplace_back(c);\n        delete_hist.emplace_back();\n\
+    \ char> struct ZAlgorithm {\n  private:\n    vector<T> s;\n    vector<int> deleted;\n\
+    \    vector<vector<int>> delete_hist;\n    vector<int> z;\n    queue<int> cur;\n\
+    \n  public:\n    ZAlgorithm() : delete_hist{{}} {}\n    template <typename S>\
+    \ ZAlgorithm(const S &s) : ZAlgorithm() {\n        for (auto &c : s) add(c);\n\
+    \    }\n    void add(const T &c) {\n        s.emplace_back(c);\n        delete_hist.emplace_back();\n\
     \        deleted.emplace_back(0ll);\n        z.emplace_back(0ll);\n        z[0ll]++;\n\
     \        int len = (int)s.size();\n        if (len == 1ll) return;\n        if\
     \ (s[0ll] == c) {\n            cur.emplace(len - 1ll);\n        } else {\n   \
@@ -34,13 +34,13 @@ data:
     \        vector<int> ret(s.size());\n        for (int i = 0; i < (int)s.size();\
     \ i++) {\n            ret[i] = get(i);\n        }\n        return ret;\n    }\n\
     };\n"
-  code: "#pragma once\ntemplate <typename T = char>\nstruct ZAlgorithm {\n  private:\n\
-    \    vector<T> s;\n    vector<int> deleted;\n    vector<vector<int> > delete_hist;\n\
+  code: "#pragma once\ntemplate <typename T = char> struct ZAlgorithm {\n  private:\n\
+    \    vector<T> s;\n    vector<int> deleted;\n    vector<vector<int>> delete_hist;\n\
     \    vector<int> z;\n    queue<int> cur;\n\n  public:\n    ZAlgorithm() : delete_hist{{}}\
-    \ {}\n\n    template <typename S>\n    ZAlgorithm(const S &s) : ZAlgorithm() {\n\
-    \        for (auto &c : s) add(c);\n    }\n\n    void add(const T &c) {\n    \
-    \    s.emplace_back(c);\n        delete_hist.emplace_back();\n        deleted.emplace_back(0ll);\n\
-    \        z.emplace_back(0ll);\n        z[0ll]++;\n        int len = (int)s.size();\n\
+    \ {}\n    template <typename S> ZAlgorithm(const S &s) : ZAlgorithm() {\n    \
+    \    for (auto &c : s) add(c);\n    }\n    void add(const T &c) {\n        s.emplace_back(c);\n\
+    \        delete_hist.emplace_back();\n        deleted.emplace_back(0ll);\n   \
+    \     z.emplace_back(0ll);\n        z[0ll]++;\n        int len = (int)s.size();\n\
     \        if (len == 1ll) return;\n        if (s[0ll] == c) {\n            cur.emplace(len\
     \ - 1ll);\n        } else {\n            deleted[len - 1ll] = 1ll;\n        }\n\
     \        auto set = [&](int t, int len) {\n            deleted[t] = 1ll;\n   \
@@ -60,7 +60,7 @@ data:
   isVerificationFile: false
   path: library/string/z_algorithm.hpp
   requiredBy: []
-  timestamp: '2026-01-20 04:38:29+00:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string.z_algorithm.test.cpp

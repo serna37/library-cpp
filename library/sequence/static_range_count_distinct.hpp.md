@@ -19,43 +19,42 @@ data:
     links: []
   bundledCode: "#line 2 \"library/segtree/fenwick_tree.hpp\"\nstruct FenwickTree {\n\
     \  private:\n    int N;\n    vector<int> fwk;\n\n  public:\n    FenwickTree(int\
-    \ N) : N(N) {\n        fwk.assign(N + 1, 0);\n    }\n    FenwickTree(const vector<int>\
-    \ &A) : N(A.size()) {\n        fwk.assign(N + 1, 0);\n        for (int i = 1;\
-    \ i <= N; ++i) {\n            fwk[i] += A[i - 1];\n            if (i + (i & -i)\
-    \ <= N) fwk[i + (i & -i)] += fwk[i];\n        }\n    }\n    void add(int i, const\
-    \ int &x) {\n        for (++i; i <= N; i += i & -i) fwk[i] += x;\n    }\n    int\
-    \ sum(int i) {\n        int ans = 0;\n        for (++i; i; i -= i & -i) ans +=\
-    \ fwk[i];\n        return ans;\n    }\n};\n#line 2 \"library/sequence/compressor.hpp\"\
-    \ntemplate <typename T> struct Compressor {\n    vector<T> origin, dict;\n   \
-    \ Compressor(const vector<T> &v) : origin(v), dict(v) {\n        sort(dict.begin(),\
-    \ dict.end());\n        dict.erase(unique(dict.begin(), dict.end()), dict.end());\n\
-    \    }\n    int size() const { return dict.size(); }\n    // \u5024 -> ID (\u5727\
-    \u7E2E)\n    int get_id(T x) const {\n        return lower_bound(dict.begin(),\
-    \ dict.end(), x) - dict.begin();\n    }\n    // \u5024 -> ID (upper_bound\u7248\
-    )\n    int get_upper_id(T x) const {\n        return upper_bound(dict.begin(),\
-    \ dict.end(), x) - dict.begin();\n    }\n    // ID -> \u5024 (\u5FA9\u5143)\n\
-    \    T get_val(int id) const {\n        return dict[id];\n    }\n    // \u3059\
-    \u3079\u3066\u5727\u7E2E\n    vector<int> get_all() {\n        vector<int> res;\n\
-    \        for (auto &&x : origin) res.emplace_back(get_id(x));\n        return\
-    \ res;\n    }\n};\n#line 4 \"library/sequence/static_range_count_distinct.hpp\"\
-    \ntemplate <typename T>\nstruct StaticRangeCountDistinct {\n  private:\n    size_t\
+    \ N) : N(N) { fwk.assign(N + 1, 0); }\n    FenwickTree(const vector<int> &A) :\
+    \ N(A.size()) {\n        fwk.assign(N + 1, 0);\n        for (int i = 1; i <= N;\
+    \ ++i) {\n            fwk[i] += A[i - 1];\n            if (i + (i & -i) <= N)\
+    \ fwk[i + (i & -i)] += fwk[i];\n        }\n    }\n    void add(int i, const int\
+    \ &x) {\n        for (++i; i <= N; i += i & -i) fwk[i] += x;\n    }\n    int sum(int\
+    \ i) {\n        int ans = 0;\n        for (++i; i; i -= i & -i) ans += fwk[i];\n\
+    \        return ans;\n    }\n};\n#line 2 \"library/sequence/compressor.hpp\"\n\
+    template <typename T> struct Compressor {\n    vector<T> origin, dict;\n    Compressor(const\
+    \ vector<T> &v) : origin(v), dict(v) {\n        sort(dict.begin(), dict.end());\n\
+    \        dict.erase(unique(dict.begin(), dict.end()), dict.end());\n    }\n  \
+    \  int size() const { return dict.size(); }\n    // \u5024 -> ID (\u5727\u7E2E\
+    )\n    int get_id(T x) const {\n        return lower_bound(dict.begin(), dict.end(),\
+    \ x) - dict.begin();\n    }\n    // \u5024 -> ID (upper_bound\u7248)\n    int\
+    \ get_upper_id(T x) const {\n        return upper_bound(dict.begin(), dict.end(),\
+    \ x) - dict.begin();\n    }\n    // ID -> \u5024 (\u5FA9\u5143)\n    T get_val(int\
+    \ id) const { return dict[id]; }\n    // \u3059\u3079\u3066\u5727\u7E2E\n    vector<int>\
+    \ get_all() {\n        vector<int> res;\n        for (auto &&x : origin) res.emplace_back(get_id(x));\n\
+    \        return res;\n    }\n};\n#line 4 \"library/sequence/static_range_count_distinct.hpp\"\
+    \ntemplate <typename T> struct StaticRangeCountDistinct {\n  private:\n    size_t\
     \ m;\n    vector<int> xs;\n    vector<vector<int>> mp;\n    vector<pair<int, int>>\
     \ qs;\n\n  public:\n    explicit StaticRangeCountDistinct(const vector<T> &vs)\
     \ : xs(vs.size()) {\n        Compressor<T> comp(vs);\n        m = comp.size();\n\
     \        xs = comp.get_all();\n    }\n    void add_query(int l, int r) {\n   \
     \     assert(0ll <= l and l <= r and r <= (int)xs.size());\n        qs.emplace_back(l,\
     \ r - 1);\n    }\n    vector<size_t> calclate_queries() const {\n        int n\
-    \ = (int)xs.size();\n        int q = (int)qs.size();\n        vector<vector<int>\
-    \ > ev(n);\n        for (int i = 0; i < q; ++i) {\n            if (qs[i].first\
-    \ <= qs[i].second) {\n                ev[qs[i].second].emplace_back(i);\n    \
-    \        }\n        }\n        vector<int> pre(m, -1);\n        FenwickTree fwk(n);\n\
+    \ = (int)xs.size();\n        int q = (int)qs.size();\n        vector<vector<int>>\
+    \ ev(n);\n        for (int i = 0; i < q; ++i) {\n            if (qs[i].first <=\
+    \ qs[i].second) {\n                ev[qs[i].second].emplace_back(i);\n       \
+    \     }\n        }\n        vector<int> pre(m, -1);\n        FenwickTree fwk(n);\n\
     \        vector<size_t> ans(q);\n        for (int i = 0; i < n; ++i) {\n     \
     \       int v = xs[i];\n            if (~pre[v]) fwk.add(n - pre[v] - 1, -1);\n\
     \            pre[v] = i;\n            fwk.add(n - i - 1, 1);\n            for\
     \ (auto &&j : ev[i]) {\n                ans[j] = fwk.sum(n - qs[j].first - 1);\n\
     \            }\n        }\n        return ans;\n    }\n};\n"
   code: "#pragma once\n#include \"library/segtree/fenwick_tree.hpp\"\n#include \"\
-    library/sequence/compressor.hpp\"\ntemplate <typename T>\nstruct StaticRangeCountDistinct\
+    library/sequence/compressor.hpp\"\ntemplate <typename T> struct StaticRangeCountDistinct\
     \ {\n  private:\n    size_t m;\n    vector<int> xs;\n    vector<vector<int>> mp;\n\
     \    vector<pair<int, int>> qs;\n\n  public:\n    explicit StaticRangeCountDistinct(const\
     \ vector<T> &vs) : xs(vs.size()) {\n        Compressor<T> comp(vs);\n        m\
@@ -63,8 +62,8 @@ data:
     \ l, int r) {\n        assert(0ll <= l and l <= r and r <= (int)xs.size());\n\
     \        qs.emplace_back(l, r - 1);\n    }\n    vector<size_t> calclate_queries()\
     \ const {\n        int n = (int)xs.size();\n        int q = (int)qs.size();\n\
-    \        vector<vector<int> > ev(n);\n        for (int i = 0; i < q; ++i) {\n\
-    \            if (qs[i].first <= qs[i].second) {\n                ev[qs[i].second].emplace_back(i);\n\
+    \        vector<vector<int>> ev(n);\n        for (int i = 0; i < q; ++i) {\n \
+    \           if (qs[i].first <= qs[i].second) {\n                ev[qs[i].second].emplace_back(i);\n\
     \            }\n        }\n        vector<int> pre(m, -1);\n        FenwickTree\
     \ fwk(n);\n        vector<size_t> ans(q);\n        for (int i = 0; i < n; ++i)\
     \ {\n            int v = xs[i];\n            if (~pre[v]) fwk.add(n - pre[v] -\
@@ -77,7 +76,7 @@ data:
   isVerificationFile: false
   path: library/sequence/static_range_count_distinct.hpp
   requiredBy: []
-  timestamp: '2026-01-20 10:00:41+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence.static_range_count_distinct.test.cpp

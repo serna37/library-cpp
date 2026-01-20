@@ -50,16 +50,16 @@ data:
     void test_finds() {\n    // \u30B1\u30FC\u30B91: \u5358\u4E00\u30D1\u30BF\u30FC\
     \u30F3\u30FB\u77ED\u3044\n    {\n        string T = \"banana\";\n        vector<string>\
     \ P = {\"ana\"};\n        auto res = finds(T, P);\n        assert(res[\"ana\"\
-    ] == vector<int>({1ll, 3ll}));\n    }\n\n    // \u30B1\u30FC\u30B92: \u5358\u4E00\
+    ] == vector<int>({1ll, 3ll}));\n    }\n    // \u30B1\u30FC\u30B92: \u5358\u4E00\
     \u30D1\u30BF\u30FC\u30F3\u30FB\u9577\u3044\n    {\n        string T = \"abracadabra_abracadabra\"\
     ;\n        string pattern = \"abracadabra\";\n        vector<string> P = {pattern};\n\
     \        auto res = finds(T, P);\n        assert(res[pattern] == vector<int>({0ll,\
-    \ 12ll}));\n    }\n\n    // \u30B1\u30FC\u30B93: \u8907\u6570\u30D1\u30BF\u30FC\
-    \u30F3\n    {\n        string T = \"abracadabra\";\n        vector<string> P =\
-    \ {\"abr\", \"ra\", \"a\"};\n        auto res = finds(T, P);\n        assert(res[\"\
-    abr\"] == vector<int>({0ll, 7ll}));\n        assert(res[\"ra\"] == vector<int>({2ll,\
+    \ 12ll}));\n    }\n    // \u30B1\u30FC\u30B93: \u8907\u6570\u30D1\u30BF\u30FC\u30F3\
+    \n    {\n        string T = \"abracadabra\";\n        vector<string> P = {\"abr\"\
+    , \"ra\", \"a\"};\n        auto res = finds(T, P);\n        assert(res[\"abr\"\
+    ] == vector<int>({0ll, 7ll}));\n        assert(res[\"ra\"] == vector<int>({2ll,\
     \ 9ll}));\n        assert(res[\"a\"] == vector<int>({0ll, 3ll, 5ll, 7ll, 10ll}));\n\
-    \    }\n\n    // \u30B1\u30FC\u30B94: \u30D2\u30C3\u30C8\u3057\u306A\u3044\u5834\
+    \    }\n    // \u30B1\u30FC\u30B94: \u30D2\u30C3\u30C8\u3057\u306A\u3044\u5834\
     \u5408\n    {\n        string T = \"hello\";\n        vector<string> P = {\"world\"\
     };\n        auto res = finds(T, P);\n        assert(res[\"world\"].empty());\n\
     \    }\n}\n/**\n * @brief \u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\
@@ -75,7 +75,7 @@ data:
   isVerificationFile: true
   path: tests/string.finds.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/string.finds.test.cpp

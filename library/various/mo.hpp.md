@@ -12,16 +12,40 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/various/mo.hpp\"\nstruct Mo {\n  private:\n    int\
-    \ n, w;\n    vector<int> ord;\n    vector<pair<int, int> > lr;\n\n  public:\n\
-    \    Mo(int n, int q) : n(n), ord(q) {\n        w = max<int>(1ll, n / max(1.0,\
+    \ n, w;\n    vector<int> ord;\n    vector<pair<int, int>> lr;\n\n  public:\n \
+    \   Mo(int n, int q) : n(n), ord(q) {\n        w = max<int>(1ll, n / max(1.0,\
     \ sqrt(q * 2.0 / 3.0)));\n        iota(ord.begin(), ord.end(), 0ll);\n       \
     \ lr.reserve(q);\n    }\n    void add_query(int l, int r) {\n        assert(0ll\
     \ <= l and l < r and r <= n);\n        lr.emplace_back(l, r);\n    }\n    template\
     \ <typename AL, typename AR, typename EL, typename ER, typename Q>\n    void calclate_queries(const\
-    \ AL &add_left, const AR &add_right,\n        const EL &erase_left, const ER &erase_right,\n\
-    \        const Q &query) {\n        assert(lr.size() == ord.size());\n       \
-    \ vector<int> bs(n);\n        for (int i = 0, cnt = 0, b = 0; i < n; i++) {\n\
-    \            bs[i] = b;\n            if (++cnt == w) {\n                ++b;\n\
+    \ AL &add_left, const AR &add_right,\n                          const EL &erase_left,\
+    \ const ER &erase_right,\n                          const Q &query) {\n      \
+    \  assert(lr.size() == ord.size());\n        vector<int> bs(n);\n        for (int\
+    \ i = 0, cnt = 0, b = 0; i < n; i++) {\n            bs[i] = b;\n            if\
+    \ (++cnt == w) {\n                ++b;\n                cnt = 0;\n           \
+    \ }\n        }\n        sort(ord.begin(), ord.end(), [&](int a, int b) {\n   \
+    \         int a_block = bs[lr[a].first];\n            int b_block = bs[lr[b].first];\n\
+    \            if (a_block != b_block) return a_block < b_block;\n            if\
+    \ (a_block & 1) {\n                return lr[a].second < lr[b].second;\n     \
+    \       } else {\n                return lr[a].second > lr[b].second;\n      \
+    \      }\n        });\n        int l = 0, r = 0;\n        for (auto idx : ord)\
+    \ {\n            while (l > lr[idx].first) add_left(--l);\n            while (r\
+    \ < lr[idx].second) add_right(r++);\n            while (l < lr[idx].first) erase_left(l++);\n\
+    \            while (r > lr[idx].second) erase_right(--r);\n            query(idx);\n\
+    \        }\n    }\n    template <typename A, typename E, typename Q>\n    void\
+    \ calclate_queries(const A &add, const E &erase, const Q &query) {\n        calclate_queries(add,\
+    \ add, erase, erase, query);\n    }\n};\n"
+  code: "#pragma once\nstruct Mo {\n  private:\n    int n, w;\n    vector<int> ord;\n\
+    \    vector<pair<int, int>> lr;\n\n  public:\n    Mo(int n, int q) : n(n), ord(q)\
+    \ {\n        w = max<int>(1ll, n / max(1.0, sqrt(q * 2.0 / 3.0)));\n        iota(ord.begin(),\
+    \ ord.end(), 0ll);\n        lr.reserve(q);\n    }\n    void add_query(int l, int\
+    \ r) {\n        assert(0ll <= l and l < r and r <= n);\n        lr.emplace_back(l,\
+    \ r);\n    }\n    template <typename AL, typename AR, typename EL, typename ER,\
+    \ typename Q>\n    void calclate_queries(const AL &add_left, const AR &add_right,\n\
+    \                          const EL &erase_left, const ER &erase_right,\n    \
+    \                      const Q &query) {\n        assert(lr.size() == ord.size());\n\
+    \        vector<int> bs(n);\n        for (int i = 0, cnt = 0, b = 0; i < n; i++)\
+    \ {\n            bs[i] = b;\n            if (++cnt == w) {\n                ++b;\n\
     \                cnt = 0;\n            }\n        }\n        sort(ord.begin(),\
     \ ord.end(), [&](int a, int b) {\n            int a_block = bs[lr[a].first];\n\
     \            int b_block = bs[lr[b].first];\n            if (a_block != b_block)\
@@ -35,35 +59,11 @@ data:
     \ E, typename Q>\n    void calclate_queries(const A &add, const E &erase, const\
     \ Q &query) {\n        calclate_queries(add, add, erase, erase, query);\n    }\n\
     };\n"
-  code: "#pragma once\nstruct Mo {\n  private:\n    int n, w;\n    vector<int> ord;\n\
-    \    vector<pair<int, int> > lr;\n\n  public:\n    Mo(int n, int q) : n(n), ord(q)\
-    \ {\n        w = max<int>(1ll, n / max(1.0, sqrt(q * 2.0 / 3.0)));\n        iota(ord.begin(),\
-    \ ord.end(), 0ll);\n        lr.reserve(q);\n    }\n    void add_query(int l, int\
-    \ r) {\n        assert(0ll <= l and l < r and r <= n);\n        lr.emplace_back(l,\
-    \ r);\n    }\n    template <typename AL, typename AR, typename EL, typename ER,\
-    \ typename Q>\n    void calclate_queries(const AL &add_left, const AR &add_right,\n\
-    \        const EL &erase_left, const ER &erase_right,\n        const Q &query)\
-    \ {\n        assert(lr.size() == ord.size());\n        vector<int> bs(n);\n  \
-    \      for (int i = 0, cnt = 0, b = 0; i < n; i++) {\n            bs[i] = b;\n\
-    \            if (++cnt == w) {\n                ++b;\n                cnt = 0;\n\
-    \            }\n        }\n        sort(ord.begin(), ord.end(), [&](int a, int\
-    \ b) {\n            int a_block = bs[lr[a].first];\n            int b_block =\
-    \ bs[lr[b].first];\n            if (a_block != b_block) return a_block < b_block;\n\
-    \            if (a_block & 1) {\n                return lr[a].second < lr[b].second;\n\
-    \            } else {\n                return lr[a].second > lr[b].second;\n \
-    \           }\n        });\n        int l = 0, r = 0;\n        for (auto idx :\
-    \ ord) {\n            while (l > lr[idx].first) add_left(--l);\n            while\
-    \ (r < lr[idx].second) add_right(r++);\n            while (l < lr[idx].first)\
-    \ erase_left(l++);\n            while (r > lr[idx].second) erase_right(--r);\n\
-    \            query(idx);\n        }\n    }\n    template <typename A, typename\
-    \ E, typename Q>\n    void calclate_queries(const A &add, const E &erase, const\
-    \ Q &query) {\n        calclate_queries(add, add, erase, erase, query);\n    }\n\
-    };\n"
   dependsOn: []
   isVerificationFile: false
   path: library/various/mo.hpp
   requiredBy: []
-  timestamp: '2026-01-20 16:51:07+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/various.mo.test.cpp

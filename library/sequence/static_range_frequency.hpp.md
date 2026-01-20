@@ -23,35 +23,35 @@ data:
     \ x) const {\n        return lower_bound(dict.begin(), dict.end(), x) - dict.begin();\n\
     \    }\n    // \u5024 -> ID (upper_bound\u7248)\n    int get_upper_id(T x) const\
     \ {\n        return upper_bound(dict.begin(), dict.end(), x) - dict.begin();\n\
-    \    }\n    // ID -> \u5024 (\u5FA9\u5143)\n    T get_val(int id) const {\n  \
-    \      return dict[id];\n    }\n    // \u3059\u3079\u3066\u5727\u7E2E\n    vector<int>\
-    \ get_all() {\n        vector<int> res;\n        for (auto &&x : origin) res.emplace_back(get_id(x));\n\
+    \    }\n    // ID -> \u5024 (\u5FA9\u5143)\n    T get_val(int id) const { return\
+    \ dict[id]; }\n    // \u3059\u3079\u3066\u5727\u7E2E\n    vector<int> get_all()\
+    \ {\n        vector<int> res;\n        for (auto &&x : origin) res.emplace_back(get_id(x));\n\
     \        return res;\n    }\n};\n#line 3 \"library/sequence/static_range_frequency.hpp\"\
-    \ntemplate <typename T>\nstruct StaticRangeFrequency {\n  private:\n    Compressor<T>\
+    \ntemplate <typename T> struct StaticRangeFrequency {\n  private:\n    Compressor<T>\
     \ comp;\n    vector<vector<int>> mp;\n\n  public:\n    explicit StaticRangeFrequency(const\
     \ vector<T> &xs) : comp(xs) {\n        mp.resize(comp.size());\n        for (int\
     \ i = 0; i < (int)xs.size(); ++i) {\n            int id = comp.get_id(xs[i]);\n\
     \            mp[id].emplace_back(i);\n        }\n    }\n    int query(int l, int\
     \ r, T x) const {\n        int id = comp.get_id(x);\n        if (id >= (int)comp.size()\
     \ or comp.get_val(id) != x) return 0ll;\n        const auto &pos = mp[id];\n \
-    \       return lower_bound(pos.begin(), pos.end(), r) - lower_bound(pos.begin(),\
+    \       return lower_bound(pos.begin(), pos.end(), r) -\n               lower_bound(pos.begin(),\
     \ pos.end(), l);\n    }\n};\n"
   code: "#pragma once\n#include \"library/sequence/compressor.hpp\"\ntemplate <typename\
-    \ T>\nstruct StaticRangeFrequency {\n  private:\n    Compressor<T> comp;\n   \
-    \ vector<vector<int>> mp;\n\n  public:\n    explicit StaticRangeFrequency(const\
-    \ vector<T> &xs) : comp(xs) {\n        mp.resize(comp.size());\n        for (int\
-    \ i = 0; i < (int)xs.size(); ++i) {\n            int id = comp.get_id(xs[i]);\n\
-    \            mp[id].emplace_back(i);\n        }\n    }\n    int query(int l, int\
-    \ r, T x) const {\n        int id = comp.get_id(x);\n        if (id >= (int)comp.size()\
-    \ or comp.get_val(id) != x) return 0ll;\n        const auto &pos = mp[id];\n \
-    \       return lower_bound(pos.begin(), pos.end(), r) - lower_bound(pos.begin(),\
-    \ pos.end(), l);\n    }\n};\n"
+    \ T> struct StaticRangeFrequency {\n  private:\n    Compressor<T> comp;\n    vector<vector<int>>\
+    \ mp;\n\n  public:\n    explicit StaticRangeFrequency(const vector<T> &xs) : comp(xs)\
+    \ {\n        mp.resize(comp.size());\n        for (int i = 0; i < (int)xs.size();\
+    \ ++i) {\n            int id = comp.get_id(xs[i]);\n            mp[id].emplace_back(i);\n\
+    \        }\n    }\n    int query(int l, int r, T x) const {\n        int id =\
+    \ comp.get_id(x);\n        if (id >= (int)comp.size() or comp.get_val(id) != x)\
+    \ return 0ll;\n        const auto &pos = mp[id];\n        return lower_bound(pos.begin(),\
+    \ pos.end(), r) -\n               lower_bound(pos.begin(), pos.end(), l);\n  \
+    \  }\n};\n"
   dependsOn:
   - library/sequence/compressor.hpp
   isVerificationFile: false
   path: library/sequence/static_range_frequency.hpp
   requiredBy: []
-  timestamp: '2026-01-20 10:27:04+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence.static_range_frequency.test.cpp

@@ -39,43 +39,38 @@ data:
   bundledCode: "#line 2 \"library/various/monoid.hpp\"\n/**\n * @brief \u30E2\u30CE\
     \u30A4\u30C9\n */\nstruct Monoid {\n    // \u6700\u5C0F\u5024\n    struct Min\
     \ {\n        static constexpr int e = INT_MAX;\n        static int op(int x, int\
-    \ y) {\n            return min(x, y);\n        }\n    };\n    // \u6700\u5927\u5024\
-    \n    struct Max {\n        static constexpr int e = -INT_MAX;\n        static\
-    \ int op(int x, int y) {\n            return max(x, y);\n        }\n    };\n \
-    \   // \u52A0\u7B97\n    struct Add {\n        static constexpr int e = 0;\n \
-    \       static int op(int x, int y) {\n            return x + y;\n        }\n\
-    \    };\n    // \u4E57\u7B97\n    struct Mul {\n        static constexpr int e\
-    \ = 1;\n        static int op(int x, int y) {\n            return x * y;\n   \
-    \     }\n    };\n    // \u4EE3\u5165\n    struct Set {\n        static constexpr\
-    \ int e = INT_MAX;\n        static int op(int x, int y) {\n            return\
-    \ y == INT_MAX ? x : y;\n        }\n    };\n    // \u6700\u5927\u516C\u7D04\u6570\
-    \n    struct Gcd {\n        static constexpr int e = 0;\n        static int op(int\
-    \ x, int y) {\n            return gcd(x, y);\n        }\n    };\n    // \u6700\
-    \u5C0F\u516C\u500D\u6570\n    struct Lcm {\n        static constexpr int e = 1;\n\
-    \        static int op(int x, int y) {\n            return lcm(x, y);\n      \
-    \  }\n    };\n    // \u6392\u4ED6\u7684\u8AD6\u7406\u548C\n    struct Xor {\n\
-    \        static constexpr int e = 0;\n        static int op(int x, int y) {\n\
-    \            return x ^ y;\n        }\n    };\n};\n"
+    \ y) { return min(x, y); }\n    };\n    // \u6700\u5927\u5024\n    struct Max\
+    \ {\n        static constexpr int e = -INT_MAX;\n        static int op(int x,\
+    \ int y) { return max(x, y); }\n    };\n    // \u52A0\u7B97\n    struct Add {\n\
+    \        static constexpr int e = 0;\n        static int op(int x, int y) { return\
+    \ x + y; }\n    };\n    // \u4E57\u7B97\n    struct Mul {\n        static constexpr\
+    \ int e = 1;\n        static int op(int x, int y) { return x * y; }\n    };\n\
+    \    // \u4EE3\u5165\n    struct Set {\n        static constexpr int e = INT_MAX;\n\
+    \        static int op(int x, int y) { return y == INT_MAX ? x : y; }\n    };\n\
+    \    // \u6700\u5927\u516C\u7D04\u6570\n    struct Gcd {\n        static constexpr\
+    \ int e = 0;\n        static int op(int x, int y) { return gcd(x, y); }\n    };\n\
+    \    // \u6700\u5C0F\u516C\u500D\u6570\n    struct Lcm {\n        static constexpr\
+    \ int e = 1;\n        static int op(int x, int y) { return lcm(x, y); }\n    };\n\
+    \    // \u6392\u4ED6\u7684\u8AD6\u7406\u548C\n    struct Xor {\n        static\
+    \ constexpr int e = 0;\n        static int op(int x, int y) { return x ^ y; }\n\
+    \    };\n};\n"
   code: "#pragma once\n/**\n * @brief \u30E2\u30CE\u30A4\u30C9\n */\nstruct Monoid\
     \ {\n    // \u6700\u5C0F\u5024\n    struct Min {\n        static constexpr int\
-    \ e = INT_MAX;\n        static int op(int x, int y) {\n            return min(x,\
-    \ y);\n        }\n    };\n    // \u6700\u5927\u5024\n    struct Max {\n      \
-    \  static constexpr int e = -INT_MAX;\n        static int op(int x, int y) {\n\
-    \            return max(x, y);\n        }\n    };\n    // \u52A0\u7B97\n    struct\
-    \ Add {\n        static constexpr int e = 0;\n        static int op(int x, int\
-    \ y) {\n            return x + y;\n        }\n    };\n    // \u4E57\u7B97\n  \
-    \  struct Mul {\n        static constexpr int e = 1;\n        static int op(int\
-    \ x, int y) {\n            return x * y;\n        }\n    };\n    // \u4EE3\u5165\
-    \n    struct Set {\n        static constexpr int e = INT_MAX;\n        static\
-    \ int op(int x, int y) {\n            return y == INT_MAX ? x : y;\n        }\n\
-    \    };\n    // \u6700\u5927\u516C\u7D04\u6570\n    struct Gcd {\n        static\
-    \ constexpr int e = 0;\n        static int op(int x, int y) {\n            return\
-    \ gcd(x, y);\n        }\n    };\n    // \u6700\u5C0F\u516C\u500D\u6570\n    struct\
-    \ Lcm {\n        static constexpr int e = 1;\n        static int op(int x, int\
-    \ y) {\n            return lcm(x, y);\n        }\n    };\n    // \u6392\u4ED6\u7684\
-    \u8AD6\u7406\u548C\n    struct Xor {\n        static constexpr int e = 0;\n  \
-    \      static int op(int x, int y) {\n            return x ^ y;\n        }\n \
-    \   };\n};\n"
+    \ e = INT_MAX;\n        static int op(int x, int y) { return min(x, y); }\n  \
+    \  };\n    // \u6700\u5927\u5024\n    struct Max {\n        static constexpr int\
+    \ e = -INT_MAX;\n        static int op(int x, int y) { return max(x, y); }\n \
+    \   };\n    // \u52A0\u7B97\n    struct Add {\n        static constexpr int e\
+    \ = 0;\n        static int op(int x, int y) { return x + y; }\n    };\n    //\
+    \ \u4E57\u7B97\n    struct Mul {\n        static constexpr int e = 1;\n      \
+    \  static int op(int x, int y) { return x * y; }\n    };\n    // \u4EE3\u5165\n\
+    \    struct Set {\n        static constexpr int e = INT_MAX;\n        static int\
+    \ op(int x, int y) { return y == INT_MAX ? x : y; }\n    };\n    // \u6700\u5927\
+    \u516C\u7D04\u6570\n    struct Gcd {\n        static constexpr int e = 0;\n  \
+    \      static int op(int x, int y) { return gcd(x, y); }\n    };\n    // \u6700\
+    \u5C0F\u516C\u500D\u6570\n    struct Lcm {\n        static constexpr int e = 1;\n\
+    \        static int op(int x, int y) { return lcm(x, y); }\n    };\n    // \u6392\
+    \u4ED6\u7684\u8AD6\u7406\u548C\n    struct Xor {\n        static constexpr int\
+    \ e = 0;\n        static int op(int x, int y) { return x ^ y; }\n    };\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/various/monoid.hpp
@@ -85,7 +80,7 @@ data:
   - library/segtree/lazy_segment_tree.hpp
   - library/segtree/dual_segment_tree.hpp
   - library/various/monoid_act.hpp
-  timestamp: '2026-01-15 10:36:58+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp

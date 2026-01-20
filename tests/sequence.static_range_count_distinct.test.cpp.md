@@ -53,7 +53,7 @@ data:
   isVerificationFile: true
   path: tests/sequence.static_range_count_distinct.test.cpp
   requiredBy: []
-  timestamp: '2026-01-20 10:00:41+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/sequence.static_range_count_distinct.test.cpp

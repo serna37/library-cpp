@@ -27,14 +27,14 @@ data:
     \ &v, F f) {\n        bool b = false;\n        for (int i = 0; i < (int)v.size();\
     \ ++i) b |= f(v[i], i);\n        return b;\n    }\n    template <typename T> void\
     \ distinct(vector<T> &v) {\n        sort(all(v));\n        v.erase(unique(all(v)),\
-    \ v.end());\n    }\n    template <typename T> void asc(vector<T> &v) {\n     \
-    \   sort(all(v));\n    }\n    template <typename T> void desc(vector<T> &v) {\n\
-    \        sort(rall(v));\n    }\n    template <typename T> void reverse(vector<T>\
-    \ &v) {\n        std::reverse(all(v));\n    }\n    template <typename T> void\
-    \ sequence(vector<T> &v, T start = 0) {\n        iota(all(v), start);\n    }\n\
-    \    template <typename T> void erase(set<T> &st, const T &v) {\n        st.erase(st.find(v));\n\
-    \    }\n    template <typename T> void erase(multiset<T> &st, const T &v) {\n\
-    \        st.erase(st.find(v));\n    }\n} collection;\n"
+    \ v.end());\n    }\n    template <typename T> void asc(vector<T> &v) { sort(all(v));\
+    \ }\n    template <typename T> void desc(vector<T> &v) { sort(rall(v)); }\n  \
+    \  template <typename T> void reverse(vector<T> &v) { std::reverse(all(v)); }\n\
+    \    template <typename T> void sequence(vector<T> &v, T start = 0) {\n      \
+    \  iota(all(v), start);\n    }\n    template <typename T> void erase(set<T> &st,\
+    \ const T &v) {\n        st.erase(st.find(v));\n    }\n    template <typename\
+    \ T> void erase(multiset<T> &st, const T &v) {\n        st.erase(st.find(v));\n\
+    \    }\n} collection;\n"
   code: "#pragma once\nclass CollectionUtil {\n  public:\n    template <typename T>\
     \ T min(const vector<T> &v) {\n        return *min_element(all(v));\n    }\n \
     \   template <typename T> T max(const vector<T> &v) {\n        return *max_element(all(v));\n\
@@ -48,19 +48,18 @@ data:
     \        for (int i = 0; i < (int)v.size(); ++i) b |= f(v[i], i);\n        return\
     \ b;\n    }\n    template <typename T> void distinct(vector<T> &v) {\n       \
     \ sort(all(v));\n        v.erase(unique(all(v)), v.end());\n    }\n    template\
-    \ <typename T> void asc(vector<T> &v) {\n        sort(all(v));\n    }\n    template\
-    \ <typename T> void desc(vector<T> &v) {\n        sort(rall(v));\n    }\n    template\
-    \ <typename T> void reverse(vector<T> &v) {\n        std::reverse(all(v));\n \
-    \   }\n    template <typename T> void sequence(vector<T> &v, T start = 0) {\n\
-    \        iota(all(v), start);\n    }\n    template <typename T> void erase(set<T>\
-    \ &st, const T &v) {\n        st.erase(st.find(v));\n    }\n    template <typename\
-    \ T> void erase(multiset<T> &st, const T &v) {\n        st.erase(st.find(v));\n\
-    \    }\n} collection;\n"
+    \ <typename T> void asc(vector<T> &v) { sort(all(v)); }\n    template <typename\
+    \ T> void desc(vector<T> &v) { sort(rall(v)); }\n    template <typename T> void\
+    \ reverse(vector<T> &v) { std::reverse(all(v)); }\n    template <typename T> void\
+    \ sequence(vector<T> &v, T start = 0) {\n        iota(all(v), start);\n    }\n\
+    \    template <typename T> void erase(set<T> &st, const T &v) {\n        st.erase(st.find(v));\n\
+    \    }\n    template <typename T> void erase(multiset<T> &st, const T &v) {\n\
+    \        st.erase(st.find(v));\n    }\n} collection;\n"
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/collection_util.hpp
   requiredBy: []
-  timestamp: '2026-01-14 14:43:43+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fft.convolution_bitwise_or.test.cpp

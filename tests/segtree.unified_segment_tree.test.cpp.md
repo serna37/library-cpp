@@ -56,12 +56,12 @@ data:
     \n#include \"template/template.hpp\"\n#include \"library/segtree/unified_segment_tree.hpp\"\
     \n/**\n * @brief \u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ\n\
     \ */\nvoid solve() {\n    int N, Q;\n    cin >> N >> Q;\n    vector<int> A(N,\
-    \ 0);\n    UnifiedSegmentTree<Monoid::Min, Monoid::Add, MonoidAct::MinAdd> seg(A,\
-    \ RangeType::Range, RangeType::Range);\n    while (Q--) {\n        int com, s,\
-    \ t;\n        cin >> com >> s >> t;\n        ++t;\n        if (com == 0) {\n \
-    \           int x;\n            cin >> x;\n            seg.update(s, t, x);\n\
-    \        }\n        if (com == 1) {\n            print(seg.query(s, t));\n   \
-    \     }\n    }\n}\n"
+    \ 0);\n    UnifiedSegmentTree<Monoid::Min, Monoid::Add, MonoidAct::MinAdd> seg(\n\
+    \        A, RangeType::Range, RangeType::Range);\n    while (Q--) {\n        int\
+    \ com, s, t;\n        cin >> com >> s >> t;\n        ++t;\n        if (com ==\
+    \ 0) {\n            int x;\n            cin >> x;\n            seg.update(s, t,\
+    \ x);\n        }\n        if (com == 1) {\n            print(seg.query(s, t));\n\
+    \        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
   - library/segtree/unified_segment_tree.hpp
@@ -75,7 +75,7 @@ data:
   isVerificationFile: true
   path: tests/segtree.unified_segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree.unified_segment_tree.test.cpp

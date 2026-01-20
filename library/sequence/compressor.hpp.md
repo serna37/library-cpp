@@ -45,9 +45,9 @@ data:
     \ x) const {\n        return lower_bound(dict.begin(), dict.end(), x) - dict.begin();\n\
     \    }\n    // \u5024 -> ID (upper_bound\u7248)\n    int get_upper_id(T x) const\
     \ {\n        return upper_bound(dict.begin(), dict.end(), x) - dict.begin();\n\
-    \    }\n    // ID -> \u5024 (\u5FA9\u5143)\n    T get_val(int id) const {\n  \
-    \      return dict[id];\n    }\n    // \u3059\u3079\u3066\u5727\u7E2E\n    vector<int>\
-    \ get_all() {\n        vector<int> res;\n        for (auto &&x : origin) res.emplace_back(get_id(x));\n\
+    \    }\n    // ID -> \u5024 (\u5FA9\u5143)\n    T get_val(int id) const { return\
+    \ dict[id]; }\n    // \u3059\u3079\u3066\u5727\u7E2E\n    vector<int> get_all()\
+    \ {\n        vector<int> res;\n        for (auto &&x : origin) res.emplace_back(get_id(x));\n\
     \        return res;\n    }\n};\n"
   code: "#pragma once\ntemplate <typename T> struct Compressor {\n    vector<T> origin,\
     \ dict;\n    Compressor(const vector<T> &v) : origin(v), dict(v) {\n        sort(dict.begin(),\
@@ -57,10 +57,9 @@ data:
     \ dict.end(), x) - dict.begin();\n    }\n    // \u5024 -> ID (upper_bound\u7248\
     )\n    int get_upper_id(T x) const {\n        return upper_bound(dict.begin(),\
     \ dict.end(), x) - dict.begin();\n    }\n    // ID -> \u5024 (\u5FA9\u5143)\n\
-    \    T get_val(int id) const {\n        return dict[id];\n    }\n    // \u3059\
-    \u3079\u3066\u5727\u7E2E\n    vector<int> get_all() {\n        vector<int> res;\n\
-    \        for (auto &&x : origin) res.emplace_back(get_id(x));\n        return\
-    \ res;\n    }\n};\n"
+    \    T get_val(int id) const { return dict[id]; }\n    // \u3059\u3079\u3066\u5727\
+    \u7E2E\n    vector<int> get_all() {\n        vector<int> res;\n        for (auto\
+    \ &&x : origin) res.emplace_back(get_id(x));\n        return res;\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/compressor.hpp
@@ -69,7 +68,7 @@ data:
   - library/sequence/inversion_number.hpp
   - library/sequence/static_range_frequency.hpp
   - library/search/binary_search/wavelet_search_engine.hpp
-  timestamp: '2026-01-16 14:13:31+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/various.mo.test.cpp

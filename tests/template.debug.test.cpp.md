@@ -35,8 +35,8 @@ data:
     \ \"(\"\n         << \"\\033[m\";\n}\ninline void _print_p_end() {\n    cerr <<\
     \ \"\\033[32m\"\n         << \")\"\n         << \"\\033[m\";\n}\n// \u30AB\u30F3\
     \u30DE\u3001\u6539\u884C\ninline void _print_sep() {\n    cerr << \"\\033[32m\"\
-    \n         << \",\"\n         << \"\\033[m\";\n}\ninline void _print_LF() {\n\
-    \    cerr << \"\\n\";\n}\nconst int DEBUG_LIMIT_LOOP = 20;\n// =====================================\n\
+    \n         << \",\"\n         << \"\\033[m\";\n}\ninline void _print_LF() { cerr\
+    \ << \"\\n\"; }\nconst int DEBUG_LIMIT_LOOP = 20;\n// =====================================\n\
     // \u578B\u304C\u5165\u308C\u5B50\u306B\u306A\u3063\u3066\u3044\u308B\u304B\u5224\
     \u5B9A\n// =====================================\ntemplate <typename T> bool _is_nested(const\
     \ T &v, int f = 3) {\n    // \u578B\u540D\u3092\u30C7\u30DE\u30F3\u30B0\u30EB\u3059\
@@ -65,25 +65,25 @@ data:
     \ priority_queue<T> &v);\ntemplate <typename T> void _print(const deque<T> &v);\n\
     // =====================================\n// \u30D7\u30EA\u30DF\u30C6\u30A3\u30D6\
     \u578B\u7528\n// =====================================\ninline void _print(const\
-    \ int &v) {\n    cerr << v;\n}\ninline void _print(const long long &v) {\n   \
-    \ cerr << v;\n}\ninline void _print(const double &v) {\n    cerr << v;\n}\ninline\
-    \ void _print(const char &v) {\n    cerr << \"\\033[32m'\\033[m\" << v << \"\\\
-    033[32m'\\033[m\";\n}\ninline void _print(const string &v) {\n    cerr << \"\\\
-    033[32m\" << '\"' << \"\\033[m\" << v << \"\\033[32m\" << '\"' << \"\\033[m\"\
-    ;\n}\n// \u76F4\u63A5\u5F15\u6570\u306B\u5165\u308C\u305F\u308A\u3068\u304B\u3057\
-    \u305F\u5834\u5408\ntemplate <typename T> void _print(const T &v) {\n    cerr\
-    \ << v;\n}\n// =====================================\n// pair tuple3 tuple4\n\
-    // =====================================\ntemplate <typename T, typename U> void\
-    \ _print(const pair<T, U> &v) {\n    _print_p_start();\n    _print(v.first);\n\
-    \    _print_sep();\n    _print(v.second);\n    _print_p_end();\n}\ntemplate <typename\
-    \ T, typename U, typename R>\nvoid _print(const tuple<T, U, R> &v) {\n    _print_p_start();\n\
-    \    _print(get<0>(v));\n    _print_sep();\n    _print(get<1>(v));\n    _print_sep();\n\
-    \    _print(get<2>(v));\n    _print_p_end();\n}\ntemplate <typename T, typename\
-    \ U, typename R, typename S>\nvoid _print(const tuple<T, U, R, S> &v) {\n    _print_p_start();\n\
-    \    _print(get<0>(v));\n    _print_sep();\n    _print(get<1>(v));\n    _print_sep();\n\
-    \    _print(get<2>(v));\n    _print_sep();\n    _print(get<3>(v));\n    _print_p_end();\n\
-    }\n// =====================================\n// vector set multiset map\n// =====================================\n\
-    template <typename T> void _print(const vector<T> &v) {\n    bool isnested = _is_nested(v);\n\
+    \ int &v) { cerr << v; }\ninline void _print(const long long &v) { cerr << v;\
+    \ }\ninline void _print(const double &v) { cerr << v; }\ninline void _print(const\
+    \ char &v) {\n    cerr << \"\\033[32m'\\033[m\" << v << \"\\033[32m'\\033[m\"\
+    ;\n}\ninline void _print(const string &v) {\n    cerr << \"\\033[32m\" << '\"\
+    ' << \"\\033[m\" << v << \"\\033[32m\" << '\"' << \"\\033[m\";\n}\n// \u76F4\u63A5\
+    \u5F15\u6570\u306B\u5165\u308C\u305F\u308A\u3068\u304B\u3057\u305F\u5834\u5408\
+    \ntemplate <typename T> void _print(const T &v) { cerr << v; }\n// =====================================\n\
+    // pair tuple3 tuple4\n// =====================================\ntemplate <typename\
+    \ T, typename U> void _print(const pair<T, U> &v) {\n    _print_p_start();\n \
+    \   _print(v.first);\n    _print_sep();\n    _print(v.second);\n    _print_p_end();\n\
+    }\ntemplate <typename T, typename U, typename R>\nvoid _print(const tuple<T, U,\
+    \ R> &v) {\n    _print_p_start();\n    _print(get<0>(v));\n    _print_sep();\n\
+    \    _print(get<1>(v));\n    _print_sep();\n    _print(get<2>(v));\n    _print_p_end();\n\
+    }\ntemplate <typename T, typename U, typename R, typename S>\nvoid _print(const\
+    \ tuple<T, U, R, S> &v) {\n    _print_p_start();\n    _print(get<0>(v));\n   \
+    \ _print_sep();\n    _print(get<1>(v));\n    _print_sep();\n    _print(get<2>(v));\n\
+    \    _print_sep();\n    _print(get<3>(v));\n    _print_p_end();\n}\n// =====================================\n\
+    // vector set multiset map\n// =====================================\ntemplate\
+    \ <typename T> void _print(const vector<T> &v) {\n    bool isnested = _is_nested(v);\n\
     \    _print_a_start();\n    if (isnested) _print_LF();\n    for (int i = 0; i\
     \ < static_cast<int>(v.size()); ++i) {\n        if (i == DEBUG_LIMIT_LOOP) {\n\
     \            cerr << \"...and more \" << v.size() - DEBUG_LIMIT_LOOP;\n      \
@@ -138,23 +138,23 @@ data:
     \n */\nint main() {\n    cout << \"Hello World\" << endl;\n    int a = 1ll;\n\
     \    char c = 'c';\n    string S = \"sss\";\n    pair<int, string> p = {a, S};\n\
     \    tuple<int, char, string> t = {a, c, S};\n    vector<int> A = {a};\n    vector<vector<string>>\
-    \ G = {\n        {S, S},\n        {S, S}\n    };\n    debug(a);\n    debug(c);\n\
-    \    debug(S);\n    debug(p);\n    debug(t);\n    debug(A);\n    debug(G);\n}\n"
+    \ G = {{S, S}, {S, S}};\n    debug(a);\n    debug(c);\n    debug(S);\n    debug(p);\n\
+    \    debug(t);\n    debug(A);\n    debug(G);\n}\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n#include \"template/debug.hpp\"\
     \n/**\n * @brief debug\u306E\u30C6\u30B9\u30C8\n */\nint main() {\n    cout <<\
     \ \"Hello World\" << endl;\n    int a = 1ll;\n    char c = 'c';\n    string S\
     \ = \"sss\";\n    pair<int, string> p = {a, S};\n    tuple<int, char, string>\
-    \ t = {a, c, S};\n    vector<int> A = {a};\n    vector<vector<string>> G = {\n\
-    \        {S, S},\n        {S, S}\n    };\n    debug(a);\n    debug(c);\n    debug(S);\n\
-    \    debug(p);\n    debug(t);\n    debug(A);\n    debug(G);\n}\n"
+    \ t = {a, c, S};\n    vector<int> A = {a};\n    vector<vector<string>> G = {{S,\
+    \ S}, {S, S}};\n    debug(a);\n    debug(c);\n    debug(S);\n    debug(p);\n \
+    \   debug(t);\n    debug(A);\n    debug(G);\n}\n"
   dependsOn:
   - template/debug.hpp
   isVerificationFile: true
   path: tests/template.debug.test.cpp
   requiredBy: []
-  timestamp: '2026-01-16 16:23:43+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/template.debug.test.cpp

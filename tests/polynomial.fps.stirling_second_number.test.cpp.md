@@ -43,7 +43,8 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/stirling_number_of_the_second_kind\"\
+  code: "#define PROBLEM                                                         \
+    \       \\\n    \"https://judge.yosupo.jp/problem/stirling_number_of_the_second_kind\"\
     \n#include \"template/template.hpp\"\n#include \"library/polynomial/fps/stirling_second_number.hpp\"\
     \n/**\n * @brief \u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\
     \u30C6\u30B9\u30C8\n */\nvoid solve() {\n    int N;\n    cin >> N;\n    print(stirling_second_number<FPS,\
@@ -58,7 +59,7 @@ data:
   isVerificationFile: true
   path: tests/polynomial.fps.stirling_second_number.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 15:21:04+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/polynomial.fps.stirling_second_number.test.cpp

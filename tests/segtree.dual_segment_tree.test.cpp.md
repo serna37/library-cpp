@@ -50,7 +50,7 @@ data:
   isVerificationFile: true
   path: tests/segtree.dual_segment_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree.dual_segment_tree.test.cpp

@@ -21,24 +21,24 @@ data:
   bundledCode: "#line 2 \"library/various/union_find.hpp\"\nstruct UnionFind {\n \
     \ private:\n    vector<int> parent, size;\n\n  public:\n    UnionFind(int N) {\n\
     \        parent.assign(N, -1);\n        size.assign(N, 1);\n    }\n    int operator[](int\
-    \ p) {\n        return size[find(p)];\n    }\n    int find(int p) {\n        return\
-    \ !~parent[p] ? p : (parent[p] = find(parent[p]));\n    }\n    bool unite(int\
+    \ p) { return size[find(p)]; }\n    int find(int p) { return !~parent[p] ? p :\
+    \ (parent[p] = find(parent[p])); }\n    bool unite(int a, int b) {\n        int\
+    \ x = find(a), y = find(b);\n        if (x == y) return false;\n        if (size[x]\
+    \ > size[y]) swap(x, y);\n        parent[x] = y, size[y] += size[x];\n       \
+    \ return true;\n    }\n};\n"
+  code: "#pragma once\nstruct UnionFind {\n  private:\n    vector<int> parent, size;\n\
+    \n  public:\n    UnionFind(int N) {\n        parent.assign(N, -1);\n        size.assign(N,\
+    \ 1);\n    }\n    int operator[](int p) { return size[find(p)]; }\n    int find(int\
+    \ p) { return !~parent[p] ? p : (parent[p] = find(parent[p])); }\n    bool unite(int\
     \ a, int b) {\n        int x = find(a), y = find(b);\n        if (x == y) return\
     \ false;\n        if (size[x] > size[y]) swap(x, y);\n        parent[x] = y, size[y]\
     \ += size[x];\n        return true;\n    }\n};\n"
-  code: "#pragma once\nstruct UnionFind {\n  private:\n    vector<int> parent, size;\n\
-    \n  public:\n    UnionFind(int N) {\n        parent.assign(N, -1);\n        size.assign(N,\
-    \ 1);\n    }\n    int operator[](int p) {\n        return size[find(p)];\n   \
-    \ }\n    int find(int p) {\n        return !~parent[p] ? p : (parent[p] = find(parent[p]));\n\
-    \    }\n    bool unite(int a, int b) {\n        int x = find(a), y = find(b);\n\
-    \        if (x == y) return false;\n        if (size[x] > size[y]) swap(x, y);\n\
-    \        parent[x] = y, size[y] += size[x];\n        return true;\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/various/union_find.hpp
   requiredBy:
   - library/graph/mst/kruskal.hpp
-  timestamp: '2026-01-15 10:36:58+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/various.union_find.test.cpp

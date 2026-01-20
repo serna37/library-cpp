@@ -44,14 +44,14 @@ data:
     \ Mo mo(N, Q);\n    for (int i = 0; i < Q; ++i) {\n        int l, r;\n       \
     \ cin >> l >> r;\n        mo.add_query(l, r);\n    }\n    Compressor zip(A);\n\
     \    A = zip.get_all();\n    FenwickTree fwk(zip.size());\n    int64_t inv = 0,\
-    \ all = 0;\n    vector< int64_t > ans(Q);\n    auto add_left = [&](int idx) {\n\
+    \ all = 0;\n    vector<int64_t> ans(Q);\n    auto add_left = [&](int idx) {\n\
     \        inv += fwk.sum(A[idx] - 1);\n        fwk.add(A[idx], 1);\n        all++;\n\
     \    };\n    auto add_right = [&](int idx) {\n        inv += all - fwk.sum(A[idx]);\n\
     \        fwk.add(A[idx], 1);\n        ++all;\n    };\n    auto erase_left = [&](int\
     \ idx) {\n        fwk.add(A[idx], -1);\n        --all;\n        inv -= fwk.sum(A[idx]\
     \ - 1);\n    };\n    auto erase_right = [&](int idx) {\n        fwk.add(A[idx],\
     \ -1);\n        --all;\n        inv -= all - fwk.sum(A[idx]);\n    };\n    auto\
-    \ query = [&](int idx) {\n        ans[idx] = inv;\n    };\n    mo.calclate_queries(add_left,\
+    \ query = [&](int idx) { ans[idx] = inv; };\n    mo.calclate_queries(add_left,\
     \ add_right, erase_left, erase_right, query);\n    for (auto &p : ans) print(p);\n\
     }\n"
   dependsOn:
@@ -62,7 +62,7 @@ data:
   isVerificationFile: true
   path: tests/various.mo.test.cpp
   requiredBy: []
-  timestamp: '2026-01-20 16:51:07+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/various.mo.test.cpp

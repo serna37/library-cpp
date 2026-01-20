@@ -14,21 +14,37 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/various/convert.hpp\"\nchar int_to_char(int x) {\n\
-    \    return (char)(x + '0');\n}\nchar int_to_alph(int x) {\n    return (char)(x\
-    \ + 'a');\n}\nint char_to_int(char c) {\n    return (int)(c - '0');\n}\nstring\
-    \ int_to_string(long long x) {\n    return to_string(x);\n}\nlong long string_to_int(const\
-    \ string &s) {\n    return stoll(s);\n}\n"
-  code: "#pragma once\nchar int_to_char(int x) {\n    return (char)(x + '0');\n}\n\
-    char int_to_alph(int x) {\n    return (char)(x + 'a');\n}\nint char_to_int(char\
-    \ c) {\n    return (int)(c - '0');\n}\nstring int_to_string(long long x) {\n \
-    \   return to_string(x);\n}\nlong long string_to_int(const string &s) {\n    return\
-    \ stoll(s);\n}\n"
+  bundledCode: '#line 2 "library/various/convert.hpp"
+
+    char int_to_char(int x) { return (char)(x + ''0''); }
+
+    char int_to_alph(int x) { return (char)(x + ''a''); }
+
+    int char_to_int(char c) { return (int)(c - ''0''); }
+
+    string int_to_string(long long x) { return to_string(x); }
+
+    long long string_to_int(const string &s) { return stoll(s); }
+
+    '
+  code: '#pragma once
+
+    char int_to_char(int x) { return (char)(x + ''0''); }
+
+    char int_to_alph(int x) { return (char)(x + ''a''); }
+
+    int char_to_int(char c) { return (int)(c - ''0''); }
+
+    string int_to_string(long long x) { return to_string(x); }
+
+    long long string_to_int(const string &s) { return stoll(s); }
+
+    '
   dependsOn: []
   isVerificationFile: false
   path: library/various/convert.hpp
   requiredBy: []
-  timestamp: '2026-01-14 14:43:43+09:00'
+  timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/various.convert.test.cpp
