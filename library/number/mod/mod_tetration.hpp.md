@@ -26,23 +26,25 @@ data:
     \ > 0) {\n        if (n & 1) res = res * a % m;\n        a = a * a % m;\n    \
     \    n >>= 1ll;\n    }\n    return res;\n}\n#line 4 \"library/number/mod/mod_tetration.hpp\"\
     \ntemplate <typename T>\nT mod_tetration(const T &a, const T &b, const T &m) {\n\
-    \    if (m == 1) return 0;\n    if (a == 0) return !(b & 1);\n    if (b == 0)\
-    \ return 1;\n    if (b == 1) return a % m;\n    if (b == 2) return mod_pow(a,\
-    \ a, m);\n    auto phi = euler_phi(m);\n    auto tmp = mod_tetration(a, b - 1,\
-    \ phi);\n    if (tmp == 0) tmp += phi;\n    return mod_pow(a, tmp, m);\n}\n"
+    \    if (m == 1ll) return 0ll;\n    if (a == 0ll) return !(b & 1ll);\n    if (b\
+    \ == 0ll) return 1ll;\n    if (b == 1ll) return a % m;\n    if (b == 2ll) return\
+    \ mod_pow(a, a, m);\n    auto phi = euler_phi(m);\n    auto tmp = mod_tetration(a,\
+    \ b - 1, phi);\n    if (tmp == 0ll) tmp += phi;\n    return mod_pow(a, tmp, m);\n\
+    }\n"
   code: "#pragma once\n#include \"library/number/euler_phi.hpp\"\n#include \"library/number/mod/mod_pow.hpp\"\
     \ntemplate <typename T>\nT mod_tetration(const T &a, const T &b, const T &m) {\n\
-    \    if (m == 1) return 0;\n    if (a == 0) return !(b & 1);\n    if (b == 0)\
-    \ return 1;\n    if (b == 1) return a % m;\n    if (b == 2) return mod_pow(a,\
-    \ a, m);\n    auto phi = euler_phi(m);\n    auto tmp = mod_tetration(a, b - 1,\
-    \ phi);\n    if (tmp == 0) tmp += phi;\n    return mod_pow(a, tmp, m);\n}\n"
+    \    if (m == 1ll) return 0ll;\n    if (a == 0ll) return !(b & 1ll);\n    if (b\
+    \ == 0ll) return 1ll;\n    if (b == 1ll) return a % m;\n    if (b == 2ll) return\
+    \ mod_pow(a, a, m);\n    auto phi = euler_phi(m);\n    auto tmp = mod_tetration(a,\
+    \ b - 1, phi);\n    if (tmp == 0ll) tmp += phi;\n    return mod_pow(a, tmp, m);\n\
+    }\n"
   dependsOn:
   - library/number/euler_phi.hpp
   - library/number/mod/mod_pow.hpp
   isVerificationFile: false
   path: library/number/mod/mod_tetration.hpp
   requiredBy: []
-  timestamp: '2026-01-19 13:29:11+09:00'
+  timestamp: '2026-01-20 09:12:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.mod.mod_tetration.test.cpp
