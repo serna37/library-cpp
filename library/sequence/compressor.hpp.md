@@ -11,6 +11,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/sequence/static_range_count_distinct.hpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570"
+  - icon: ':heavy_check_mark:'
+    path: library/sequence/static_range_frequency.hpp
+    title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.wavelet_search_engine.test.cpp
@@ -22,6 +25,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/sequence.static_range_count_distinct.test.cpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/sequence.static_range_frequency.test.cpp
+    title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570\u306E\u30C6\u30B9\
+      \u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -57,6 +64,7 @@ data:
   requiredBy:
   - library/sequence/static_range_count_distinct.hpp
   - library/sequence/inversion_number.hpp
+  - library/sequence/static_range_frequency.hpp
   - library/search/binary_search/wavelet_search_engine.hpp
   timestamp: '2026-01-16 14:13:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
@@ -64,6 +72,7 @@ data:
   - tests/sequence.static_range_count_distinct.test.cpp
   - tests/sequence.inversion_number.test.cpp
   - tests/search.binary_search.wavelet_search_engine.test.cpp
+  - tests/sequence.static_range_frequency.test.cpp
 documentation_of: library/sequence/compressor.hpp
 layout: document
 title: "\u5EA7\u6A19\u5727\u7E2E"

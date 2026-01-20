@@ -293,6 +293,9 @@ data:
       path: library/sequence/static_range_count_distinct.hpp
       title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570"
     - icon: ':heavy_check_mark:'
+      path: library/sequence/static_range_frequency.hpp
+      title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570"
+    - icon: ':heavy_check_mark:'
       path: library/sequence/wavelet_matrix.hpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - name: library/string
@@ -555,6 +558,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/sequence.static_range_count_distinct.test.cpp
       title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/sequence.static_range_frequency.test.cpp
+      title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570\u306E\u30C6\u30B9\
+        \u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/sequence.wavelet_matrix.test.cpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\

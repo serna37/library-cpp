@@ -203,6 +203,10 @@ data:
     path: tests/sequence.static_range_count_distinct.test.cpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/sequence.static_range_frequency.test.cpp
+    title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570\u306E\u30C6\u30B9\
+      \u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/sequence.wavelet_matrix.test.cpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
       \u30C8"
@@ -337,6 +341,7 @@ data:
   - tests/string.finds.test.cpp
   - tests/search.binary_search.bi_lt_val.test.cpp
   - tests/string.range.test.cpp
+  - tests/sequence.static_range_frequency.test.cpp
   - tests/search.bit_search.test.cpp
   - tests/various.random.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp
