@@ -33,6 +33,3 @@ auto all = za.get();
 print(all);
 ```
 
-```cpp
-```
-
