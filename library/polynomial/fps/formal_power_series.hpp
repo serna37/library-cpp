@@ -1,8 +1,7 @@
 #pragma once
 #include <functional>
 #include "library/polynomial/fft/convolution_arbitrary_mod.hpp"
-template <typename T>
-struct FormalPowerSeries : vector<T> {
+template <typename T> struct FormalPowerSeries : vector<T> {
     using vector<T>::vector;
     using P = FormalPowerSeries;
     using Conv = ConvolutionArbitraryMod<T>;
@@ -143,15 +142,15 @@ struct FormalPowerSeries : vector<T> {
         if (deg == -1) deg = n;
         if ((*this)[0] == T(0)) {
             for (int i = 1; i < n; i++) {
-            if ((*this)[i] != T(0)) {
-                if (i & 1) return {};
-                if (deg - i / 2 <= 0) break;
-                auto ret = (*this >> i).sqrt(deg - i / 2, get_sqrt);
-                if (ret.empty()) return {};
-                ret = ret << (i / 2);
-                if (ret.size() < deg) ret.resize(deg, T(0));
-                return ret;
-            }
+                if ((*this)[i] != T(0)) {
+                    if (i & 1) return {};
+                    if (deg - i / 2 <= 0) break;
+                    auto ret = (*this >> i).sqrt(deg - i / 2, get_sqrt);
+                    if (ret.empty()) return {};
+                    ret = ret << (i / 2);
+                    if (ret.size() < deg) ret.resize(deg, T(0));
+                    return ret;
+                }
             }
             return P(deg, 0);
         }
@@ -192,11 +191,12 @@ struct FormalPowerSeries : vector<T> {
         for (int i = 0; i < n; i++) {
             if (i * k > deg) return P(deg, T(0));
             if ((*this)[i] != T(0)) {
-            T rev = T(1) / (*this)[i];
-            P ret = (((*this * rev) >> i).log() * k).exp() * ((*this)[i].pow(k));
-            ret = (ret << (i * k)).pre(deg);
-            if (ret.size() < deg) ret.resize(deg, T(0));
-            return ret;
+                T rev = T(1) / (*this)[i];
+                P ret = (((*this * rev) >> i).log() * k).exp() *
+                        ((*this)[i].pow(k));
+                ret = (ret << (i * k)).pre(deg);
+                if (ret.size() < deg) ret.resize(deg, T(0));
+                return ret;
             }
         }
         return *this;
@@ -206,8 +206,8 @@ struct FormalPowerSeries : vector<T> {
         P modinv = g.rev().inv();
         auto get_div = [&](P base) {
             if (base.size() < g.size()) {
-            base.clear();
-            return base;
+                base.clear();
+                return base;
             }
             int n = base.size() - g.size() + 1;
             return (base.rev().pre(n) * modinv.pre(n)).pre(n).rev(n);
@@ -215,9 +215,9 @@ struct FormalPowerSeries : vector<T> {
         P x(*this), ret{1};
         while (k > 0) {
             if (k & 1) {
-            ret *= x;
-            ret -= get_div(ret) * g;
-            ret.shrink();
+                ret *= x;
+                ret -= get_div(ret) * g;
+                ret.shrink();
             }
             x *= x;
             x -= get_div(x) * g;
@@ -238,12 +238,12 @@ struct FormalPowerSeries : vector<T> {
         for (int i = 0; i < n; i++) p[i] *= fact[i];
         p = p.rev();
         P bs(n, T(1));
-        for (int i = 1; i < n; i++) bs[i] = bs[i - 1] * c * rfact[i] * fact[i - 1];
+        for (int i = 1; i < n; i++)
+            bs[i] = bs[i - 1] * c * rfact[i] * fact[i - 1];
         p = (p * bs).pre(n);
         p = p.rev();
         for (int i = 0; i < n; i++) p[i] *= rfact[i];
         return p;
     }
 };
-template <typename Mint>
-using FPS = FormalPowerSeries<Mint>;
+template <typename Mint> using FPS = FormalPowerSeries<Mint>;

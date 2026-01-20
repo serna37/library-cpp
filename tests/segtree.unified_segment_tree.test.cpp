@@ -9,7 +9,8 @@ void solve() {
     int N, Q;
     cin >> N >> Q;
     vector<int> A(N, 0);
-    UnifiedSegmentTree<Monoid::Min, Monoid::Add, MonoidAct::MinAdd> seg(A, RangeType::Range, RangeType::Range);
+    UnifiedSegmentTree<Monoid::Min, Monoid::Add, MonoidAct::MinAdd> seg(
+        A, RangeType::Range, RangeType::Range);
     while (Q--) {
         int com, s, t;
         cin >> com >> s >> t;

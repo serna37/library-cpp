@@ -27,15 +27,9 @@ class CollectionUtil {
         sort(all(v));
         v.erase(unique(all(v)), v.end());
     }
-    template <typename T> void asc(vector<T> &v) {
-        sort(all(v));
-    }
-    template <typename T> void desc(vector<T> &v) {
-        sort(rall(v));
-    }
-    template <typename T> void reverse(vector<T> &v) {
-        std::reverse(all(v));
-    }
+    template <typename T> void asc(vector<T> &v) { sort(all(v)); }
+    template <typename T> void desc(vector<T> &v) { sort(rall(v)); }
+    template <typename T> void reverse(vector<T> &v) { std::reverse(all(v)); }
     template <typename T> void sequence(vector<T> &v, T start = 0) {
         iota(all(v), start);
     }

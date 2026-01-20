@@ -21,7 +21,7 @@ void solve() {
     A = zip.get_all();
     FenwickTree fwk(zip.size());
     int64_t inv = 0, all = 0;
-    vector< int64_t > ans(Q);
+    vector<int64_t> ans(Q);
     auto add_left = [&](int idx) {
         inv += fwk.sum(A[idx] - 1);
         fwk.add(A[idx], 1);
@@ -42,9 +42,7 @@ void solve() {
         --all;
         inv -= all - fwk.sum(A[idx]);
     };
-    auto query = [&](int idx) {
-        ans[idx] = inv;
-    };
+    auto query = [&](int idx) { ans[idx] = inv; };
     mo.calclate_queries(add_left, add_right, erase_left, erase_right, query);
     for (auto &p : ans) print(p);
 }

@@ -1,21 +1,17 @@
 #pragma once
-template <typename T = char>
-struct ZAlgorithm {
+template <typename T = char> struct ZAlgorithm {
   private:
     vector<T> s;
     vector<int> deleted;
-    vector<vector<int> > delete_hist;
+    vector<vector<int>> delete_hist;
     vector<int> z;
     queue<int> cur;
 
   public:
     ZAlgorithm() : delete_hist{{}} {}
-
-    template <typename S>
-    ZAlgorithm(const S &s) : ZAlgorithm() {
+    template <typename S> ZAlgorithm(const S &s) : ZAlgorithm() {
         for (auto &c : s) add(c);
     }
-
     void add(const T &c) {
         s.emplace_back(c);
         delete_hist.emplace_back();

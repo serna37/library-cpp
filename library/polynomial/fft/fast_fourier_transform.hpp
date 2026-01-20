@@ -5,18 +5,12 @@ struct C {
     real x, y;
     C() : x(0), y(0) {};
     C(real x, real y) : x(x), y(y) {};
-    inline C operator+(const C &c) const {
-        return C(x + c.x, y + c.y);
-    }
-    inline C operator-(const C &c) const {
-        return C(x - c.x, y - c.y);
-    }
+    inline C operator+(const C &c) const { return C(x + c.x, y + c.y); }
+    inline C operator-(const C &c) const { return C(x - c.x, y - c.y); }
     inline C operator*(const C &c) const {
         return C(x * c.x - y * c.y, x * c.y + y * c.x);
     }
-    inline C conj() const {
-        return C(x, -y);
-    }
+    inline C conj() const { return C(x, -y); }
 };
 const real PI = acosl(-1);
 int base = 1;

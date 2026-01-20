@@ -3,7 +3,7 @@ struct Mo {
   private:
     int n, w;
     vector<int> ord;
-    vector<pair<int, int> > lr;
+    vector<pair<int, int>> lr;
 
   public:
     Mo(int n, int q) : n(n), ord(q) {
@@ -17,8 +17,8 @@ struct Mo {
     }
     template <typename AL, typename AR, typename EL, typename ER, typename Q>
     void calclate_queries(const AL &add_left, const AR &add_right,
-        const EL &erase_left, const ER &erase_right,
-        const Q &query) {
+                          const EL &erase_left, const ER &erase_right,
+                          const Q &query) {
         assert(lr.size() == ord.size());
         vector<int> bs(n);
         for (int i = 0, cnt = 0, b = 0; i < n; i++) {

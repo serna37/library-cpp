@@ -1,6 +1,5 @@
 #pragma once
-template <uint32_t mod_, bool fast = false>
-struct MontgomeryModInt {
+template <uint32_t mod_, bool fast = false> struct MontgomeryModInt {
   private:
     using mint = MontgomeryModInt;
     using i32 = int32_t;
@@ -18,9 +17,11 @@ struct MontgomeryModInt {
     static_assert(mod_ < (1 << 30), "invalid, mod >= 2 ^ 30");
     static_assert((mod_ & 1) == 1, "invalid, mod % 2 == 0");
     u32 x;
+
   public:
     MontgomeryModInt() : x{} {}
-    MontgomeryModInt(const i64 &a) : x(reduce(u64(fast ? a : (a % mod() + mod())) * n2)) {}
+    MontgomeryModInt(const i64 &a)
+        : x(reduce(u64(fast ? a : (a % mod() + mod())) * n2)) {}
     static constexpr u32 reduce(const u64 &b) {
         return u32(b >> 32) + mod() - u32((u64(u32(b) * r) * mod()) >> 32);
     }
@@ -46,10 +47,12 @@ struct MontgomeryModInt {
     mint operator*(const mint &p) const { return mint(*this) *= p; }
     mint operator/(const mint &p) const { return mint(*this) /= p; }
     bool operator==(const mint &p) const {
-        return (x >= mod() ? x - mod() : x) == (p.x >= mod() ? p.x - mod() : p.x);
+        return (x >= mod() ? x - mod() : x) ==
+               (p.x >= mod() ? p.x - mod() : p.x);
     }
     bool operator!=(const mint &p) const {
-        return (x >= mod() ? x - mod() : x) != (p.x >= mod() ? p.x - mod() : p.x);
+        return (x >= mod() ? x - mod() : x) !=
+               (p.x >= mod() ? p.x - mod() : p.x);
     }
     u32 val() const {
         u32 ret = reduce(x);
@@ -76,7 +79,6 @@ struct MontgomeryModInt {
     }
     static constexpr u32 mod() { return mod_; }
 };
-template <uint32_t mod>
-using modint = MontgomeryModInt<mod>;
+template <uint32_t mod> using modint = MontgomeryModInt<mod>;
 using modint998244353 = modint<998244353>;
 using modint1000000007 = modint<1000000007>;

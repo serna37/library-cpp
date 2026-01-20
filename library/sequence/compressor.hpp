@@ -15,9 +15,7 @@ template <typename T> struct Compressor {
         return upper_bound(dict.begin(), dict.end(), x) - dict.begin();
     }
     // ID -> 値 (復元)
-    T get_val(int id) const {
-        return dict[id];
-    }
+    T get_val(int id) const { return dict[id]; }
     // すべて圧縮
     vector<int> get_all() {
         vector<int> res;

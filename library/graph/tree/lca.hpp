@@ -52,7 +52,7 @@ struct LCA {
     }
     long long get_dist(int u, int v) const {
         int lca = get_lca(u, v);
-        return db.query(u, depth[u] - depth[lca]).dist + 
+        return db.query(u, depth[u] - depth[lca]).dist +
                db.query(v, depth[v] - depth[lca]).dist;
     }
 };

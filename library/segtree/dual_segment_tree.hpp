@@ -13,9 +13,7 @@ template <typename T> struct DualSegmentTree {
         while ((1ll << log) < N) ++log;
         node.assign((size = 1ll << log) << 1, e);
     }
-    void apply_at(int k, T a) {
-        node[k] = op(node[k], a);
-    }
+    void apply_at(int k, T a) { node[k] = op(node[k], a); }
     void propagate(int k) {
         if (node[k] == e) return;
         apply_at((k << 1 | 0), node[k]);
@@ -24,9 +22,7 @@ template <typename T> struct DualSegmentTree {
     }
 
   public:
-    DualSegmentTree(F op, T e, int n) : op(op), e(e), N(n) {
-        init();
-    }
+    DualSegmentTree(F op, T e, int n) : op(op), e(e), N(n) { init(); }
     DualSegmentTree(F op, T e, const vector<T> &a) : op(op), e(e), N(a.size()) {
         init();
         for (int i = 0; i < N; ++i) node[i + size] = a[i];

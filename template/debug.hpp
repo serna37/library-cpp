@@ -59,9 +59,7 @@ inline void _print_sep() {
          << ","
          << "\033[m";
 }
-inline void _print_LF() {
-    cerr << "\n";
-}
+inline void _print_LF() { cerr << "\n"; }
 const int DEBUG_LIMIT_LOOP = 20;
 // =====================================
 // 型が入れ子になっているか判定
@@ -119,15 +117,9 @@ template <typename T> void _print(const deque<T> &v);
 // =====================================
 // プリミティブ型用
 // =====================================
-inline void _print(const int &v) {
-    cerr << v;
-}
-inline void _print(const long long &v) {
-    cerr << v;
-}
-inline void _print(const double &v) {
-    cerr << v;
-}
+inline void _print(const int &v) { cerr << v; }
+inline void _print(const long long &v) { cerr << v; }
+inline void _print(const double &v) { cerr << v; }
 inline void _print(const char &v) {
     cerr << "\033[32m'\033[m" << v << "\033[32m'\033[m";
 }
@@ -135,9 +127,7 @@ inline void _print(const string &v) {
     cerr << "\033[32m" << '"' << "\033[m" << v << "\033[32m" << '"' << "\033[m";
 }
 // 直接引数に入れたりとかした場合
-template <typename T> void _print(const T &v) {
-    cerr << v;
-}
+template <typename T> void _print(const T &v) { cerr << v; }
 // =====================================
 // pair tuple3 tuple4
 // =====================================

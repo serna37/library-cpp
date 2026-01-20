@@ -2,7 +2,8 @@
 #include "library/string/rolling_hash.hpp"
 #include "library/string/aho_corasick.hpp"
 // 統合検索エンジン：戻り値を map<検索単語, 出現インデックスのリスト> で返却
-map<string, vector<int>> finds(const string &T, const vector<string> &patterns) {
+map<string, vector<int>> finds(const string &T,
+                               const vector<string> &patterns) {
     map<string, vector<int>> res_map;
     if (patterns.empty() || T.empty()) return res_map;
     // 1. パターンが1つだけで、かつ短い場合（ナイーブ）
@@ -36,7 +37,9 @@ map<string, vector<int>> finds(const string &T, const vector<string> &patterns) 
     for (int i = 0; i < (int)patterns.size(); ++i) {
         if (patterns[i].empty()) continue;
         ac.add(patterns[i], i);
-        res_map[patterns[i]]; // ヒットしなかった単語もキーとして存在させる場合はここで初期化
+        res_map
+            [patterns
+                 [i]]; // ヒットしなかった単語もキーとして存在させる場合はここで初期化
     }
     ac.build();
     int now = 0;
@@ -45,7 +48,8 @@ map<string, vector<int>> finds(const string &T, const vector<string> &patterns) 
         int temp = now;
         while (temp > 0 && ac.count[temp] > 0) {
             for (int id : ac.nodes[temp].accept) {
-                res_map[patterns[id]].push_back(i - (int)patterns[id].size() + 1);
+                res_map[patterns[id]].push_back(i - (int)patterns[id].size() +
+                                                1);
             }
             temp = ac.failure[temp];
         }

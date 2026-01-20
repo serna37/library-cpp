@@ -1,8 +1,7 @@
 #pragma once
 #include "library/segtree/fenwick_tree.hpp"
 #include "library/sequence/compressor.hpp"
-template <typename T>
-struct StaticRangeCountDistinct {
+template <typename T> struct StaticRangeCountDistinct {
   private:
     size_t m;
     vector<int> xs;
@@ -22,7 +21,7 @@ struct StaticRangeCountDistinct {
     vector<size_t> calclate_queries() const {
         int n = (int)xs.size();
         int q = (int)qs.size();
-        vector<vector<int> > ev(n);
+        vector<vector<int>> ev(n);
         for (int i = 0; i < q; ++i) {
             if (qs[i].first <= qs[i].second) {
                 ev[qs[i].second].emplace_back(i);

@@ -1,7 +1,6 @@
 #pragma once
 #include "library/sequence/compressor.hpp"
-template <typename T>
-struct StaticRangeFrequency {
+template <typename T> struct StaticRangeFrequency {
   private:
     Compressor<T> comp;
     vector<vector<int>> mp;
@@ -18,6 +17,7 @@ struct StaticRangeFrequency {
         int id = comp.get_id(x);
         if (id >= (int)comp.size() or comp.get_val(id) != x) return 0ll;
         const auto &pos = mp[id];
-        return lower_bound(pos.begin(), pos.end(), r) - lower_bound(pos.begin(), pos.end(), l);
+        return lower_bound(pos.begin(), pos.end(), r) -
+               lower_bound(pos.begin(), pos.end(), l);
     }
 };

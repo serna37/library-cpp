@@ -81,9 +81,7 @@ template <typename T, typename U> struct LazySegmentTree {
         }
         return prod_op(L, R);
     }
-    T top() {
-        return node[1];
-    }
+    T top() { return node[1]; }
     void apply(int l, int r, U a) {
         if (l == r) return;
         l += size, r += size;

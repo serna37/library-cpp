@@ -4,6 +4,5 @@ struct Edge {
     long long cost;
     int idx;
     Edge(int from, int to, long long cost = 1, int idx = -1)
-        : from(from), to(to), cost(cost), idx(idx) {
-    }
+        : from(from), to(to), cost(cost), idx(idx) {}
 };

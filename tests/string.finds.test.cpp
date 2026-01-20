@@ -10,7 +10,6 @@ void test_finds() {
         auto res = finds(T, P);
         assert(res["ana"] == vector<int>({1ll, 3ll}));
     }
-
     // ケース2: 単一パターン・長い
     {
         string T = "abracadabra_abracadabra";
@@ -19,7 +18,6 @@ void test_finds() {
         auto res = finds(T, P);
         assert(res[pattern] == vector<int>({0ll, 12ll}));
     }
-
     // ケース3: 複数パターン
     {
         string T = "abracadabra";
@@ -29,7 +27,6 @@ void test_finds() {
         assert(res["ra"] == vector<int>({2ll, 9ll}));
         assert(res["a"] == vector<int>({0ll, 3ll, 5ll, 7ll, 10ll}));
     }
-
     // ケース4: ヒットしない場合
     {
         string T = "hello";

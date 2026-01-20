@@ -3,11 +3,9 @@
 template <int char_size, int margin>
 struct AhoCorasick : Trie<char_size, margin> {
     using Trie<char_size, margin>::nodes;
-
     vector<int> failure; // 失敗リンク
     vector<int> count;   // そのノードでマッチするパターンの総数
     AhoCorasick() : Trie<char_size, margin>() {}
-
     // 失敗リンクの構築と遷移関数の最適化
     void build() {
         int n = (int)nodes.size();
@@ -28,7 +26,7 @@ struct AhoCorasick : Trie<char_size, margin> {
             int now = que.front();
             que.pop();
             for (int i = 0; i < char_size; i++) {
-                int& next_node = nodes[now].nxt[i];
+                int &next_node = nodes[now].nxt[i];
                 int fail_link = nodes[failure[now]].nxt[i];
                 if (next_node != -1) {
                     failure[next_node] = fail_link;
@@ -40,14 +38,10 @@ struct AhoCorasick : Trie<char_size, margin> {
             }
         }
     }
-
     // 次の状態へ遷移
-    int next(int now, char c) const {
-        return nodes[now].nxt[c - margin];
-    }
-
+    int next(int now, char c) const { return nodes[now].nxt[c - margin]; }
     // 文字列全体を走査して総ヒット数を返す
-    long long count_all(const string& s) const {
+    long long count_all(const string &s) const {
         long long res = 0;
         int now = 0;
         for (char c : s) {

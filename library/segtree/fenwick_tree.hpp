@@ -5,9 +5,7 @@ struct FenwickTree {
     vector<int> fwk;
 
   public:
-    FenwickTree(int N) : N(N) {
-        fwk.assign(N + 1, 0);
-    }
+    FenwickTree(int N) : N(N) { fwk.assign(N + 1, 0); }
     FenwickTree(const vector<int> &A) : N(A.size()) {
         fwk.assign(N + 1, 0);
         for (int i = 1; i <= N; ++i) {

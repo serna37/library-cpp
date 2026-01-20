@@ -1,12 +1,12 @@
 #pragma once
 #include "library/number/mod/montgomery_mod_int.hpp"
 #include "library/polynomial/fft/fast_fourier_transform.hpp"
-template <typename T>
-struct ConvolutionArbitraryMod {
+template <typename T> struct ConvolutionArbitraryMod {
     using real = FFT::real;
     using C = FFT::C;
     ConvolutionArbitraryMod() = default;
-    static vector<T> multiply(const vector<T>& a, const vector<T>& b, int need = -1) {
+    static vector<T> multiply(const vector<T> &a, const vector<T> &b,
+                              int need = -1) {
         if (need == -1) need = a.size() + b.size() - 1;
         int nbase = 0;
         while ((1 << nbase) < need) nbase++;

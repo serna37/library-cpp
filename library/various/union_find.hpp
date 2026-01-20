@@ -8,12 +8,8 @@ struct UnionFind {
         parent.assign(N, -1);
         size.assign(N, 1);
     }
-    int operator[](int p) {
-        return size[find(p)];
-    }
-    int find(int p) {
-        return !~parent[p] ? p : (parent[p] = find(parent[p]));
-    }
+    int operator[](int p) { return size[find(p)]; }
+    int find(int p) { return !~parent[p] ? p : (parent[p] = find(parent[p])); }
     bool unite(int a, int b) {
         int x = find(a), y = find(b);
         if (x == y) return false;

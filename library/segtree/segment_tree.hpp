@@ -15,9 +15,7 @@ template <typename T> struct SegmentTree {
     }
 
   public:
-    SegmentTree(F op, T e, int N) : op(op), e(e), N(N) {
-        init();
-    }
+    SegmentTree(F op, T e, int N) : op(op), e(e), N(N) { init(); }
     SegmentTree(F op, T e, const vector<T> &A) : op(op), e(e), N(A.size()) {
         init();
         for (int i = 0; i < N; ++i) node[i + size] = A[i];

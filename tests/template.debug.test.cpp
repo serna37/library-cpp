@@ -14,10 +14,7 @@ int main() {
     pair<int, string> p = {a, S};
     tuple<int, char, string> t = {a, c, S};
     vector<int> A = {a};
-    vector<vector<string>> G = {
-        {S, S},
-        {S, S}
-    };
+    vector<vector<string>> G = {{S, S}, {S, S}};
     debug(a);
     debug(c);
     debug(S);
