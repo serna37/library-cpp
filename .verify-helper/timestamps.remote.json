@@ -76,6 +76,7 @@
 "tests/template.debug.test.cpp": "2026-01-16 16:23:43 +0900",
 "tests/template.template.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/various.convert.test.cpp": "2026-01-19 13:31:13 +0900",
+"tests/various.mo.test.cpp": "2026-01-20 16:51:07 +0900",
 "tests/various.random.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/various.union_find.test.cpp": "2026-01-19 13:31:13 +0900"
 }
