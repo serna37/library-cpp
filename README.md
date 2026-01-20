@@ -61,8 +61,7 @@ sed -i '' '/^#line/d' ./bundle.cpp
 ## その他
 GitHub Codespace用
 ```sh
-TARGET=template.template.cpp
+TARGET=some_test.cpp
 cd /workspaces/library-cpp/tests
-g++ -D=LOCAL -std=c++23 -I /workspaces/library-cpp -Wall -Wextra -mtune=native -march=native -fconstexpr-depth=2147483647 -o compiled_file $TARGET
-./compiled_file
+g++ -D=LOCAL -std=c++23 -I /workspaces/library-cpp -Wall -Wextra -mtune=native -march=native -fconstexpr-depth=2147483647 -o compiled_file $TARGET && ./compiled_file
 ```
