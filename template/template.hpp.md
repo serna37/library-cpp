@@ -249,6 +249,9 @@ data:
     path: tests/various.convert.test.cpp
     title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/various.mo.test.cpp
+    title: "Mo's algorithm\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/various.random.test.cpp
     title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -318,6 +321,7 @@ data:
   - tests/graph.shortest_path.dijkstra.test.cpp
   - tests/dp.cumulative_sum.cumulative_sum_rev_diff.test.cpp
   - tests/various.convert.test.cpp
+  - tests/various.mo.test.cpp
   - tests/number.prime.prime_test.test.cpp
   - tests/polynomial.fft.convolution_fft.test.cpp
   - tests/string.z_algorithm.test.cpp

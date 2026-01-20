@@ -29,6 +29,9 @@ data:
     path: tests/sequence.static_range_frequency.test.cpp
     title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570\u306E\u30C6\u30B9\
       \u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/various.mo.test.cpp
+    title: "Mo's algorithm\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -69,6 +72,7 @@ data:
   timestamp: '2026-01-16 14:13:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/various.mo.test.cpp
   - tests/sequence.static_range_count_distinct.test.cpp
   - tests/sequence.inversion_number.test.cpp
   - tests/search.binary_search.wavelet_search_engine.test.cpp

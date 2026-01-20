@@ -340,6 +340,9 @@ data:
       path: library/various/convert.hpp
       title: "\u578B\u5909\u63DB"
     - icon: ':heavy_check_mark:'
+      path: library/various/mo.hpp
+      title: Mo's algorithm
+    - icon: ':heavy_check_mark:'
       path: library/various/monoid.hpp
       title: "\u30E2\u30CE\u30A4\u30C9"
     - icon: ':heavy_check_mark:'
@@ -610,6 +613,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/various.convert.test.cpp
       title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/various.mo.test.cpp
+      title: "Mo's algorithm\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/various.random.test.cpp
       title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
