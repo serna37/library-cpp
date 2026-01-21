@@ -19,6 +19,7 @@
 "tests/graph.shortest_path.warshall_froyd.test.cpp": "2026-01-20 20:11:22 +0900",
 "tests/graph.topological_sort.test.cpp": "2026-01-20 20:11:22 +0900",
 "tests/graph.tree.lca.test.cpp": "2026-01-20 20:11:22 +0900",
+"tests/graph.tree.tree_isomorphism.test.cpp": "2026-01-21 10:11:17 +0900",
 "tests/grid.bfs.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/grid.transpose.test.cpp": "2026-01-19 13:31:13 +0900",
 "tests/number.base_convert.test.cpp": "2026-01-19 13:31:13 +0900",
