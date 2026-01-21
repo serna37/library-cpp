@@ -22,6 +22,9 @@ data:
     title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: tests/graph.tree.centroid_decomposition.test.cpp
+    title: "\u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fft.convolution_fft.test.cpp
     title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -62,7 +65,21 @@ data:
     \ {\n        for (int i = 0; i < n; i += 2 * k) {\n            for (int j = 0;\
     \ j < k; j++) {\n                C z = a[i + j + k] * rts[j + k];\n          \
     \      a[i + j + k] = a[i + j] - z;\n                a[i + j] = a[i + j] + z;\n\
-    \            }\n        }\n    }\n}\n} // namespace FFT\n"
+    \            }\n        }\n    }\n}\nvector<int64_t> multiply(const vector<int>\
+    \ &a, const vector<int> &b) {\n    int need = (int)a.size() + (int)b.size() -\
+    \ 1;\n    int nbase = 1;\n    while ((1 << nbase) < need) ++nbase;\n    ensure_base(nbase);\n\
+    \    int sz = 1 << nbase;\n    vector<C> fa(sz);\n    for (int i = 0; i < sz;\
+    \ ++i) {\n        int x = (i < (int)a.size() ? a[i] : 0);\n        int y = (i\
+    \ < (int)b.size() ? b[i] : 0);\n        fa[i] = C(x, y);\n    }\n    fft(fa, sz);\n\
+    \    C r(0, -0.25 / (sz >> 1)), s(0, 1), t(0.5, 0);\n    for (int i = 0; i <=\
+    \ (sz >> 1); i++) {\n        int j = (sz - i) & (sz - 1);\n        C z = (fa[j]\
+    \ * fa[j] - (fa[i] * fa[i]).conj()) * r;\n        fa[j] = (fa[i] * fa[i] - (fa[j]\
+    \ * fa[j]).conj()) * r;\n        fa[i] = z;\n    }\n    for (int i = 0; i < (sz\
+    \ >> 1); i++) {\n        C A0 = (fa[i] + fa[i + (sz >> 1)]) * t;\n        C A1\
+    \ = (fa[i] - fa[i + (sz >> 1)]) * t * rts[(sz >> 1) + i];\n        fa[i] = A0\
+    \ + A1 * s;\n    }\n    fft(fa, sz >> 1);\n    vector<int64_t> ret(need);\n  \
+    \  for (int i = 0; i < need; i++) {\n        ret[i] = llround(i & 1 ? fa[i >>\
+    \ 1].y : fa[i >> 1].x);\n    }\n    return ret;\n}\n} // namespace FFT\n"
   code: "#pragma once\nnamespace FFT {\nusing real = double;\nstruct C {\n    real\
     \ x, y;\n    C() : x(0), y(0) {};\n    C(real x, real y) : x(x), y(y) {};\n  \
     \  inline C operator+(const C &c) const { return C(x + c.x, y + c.y); }\n    inline\
@@ -85,7 +102,21 @@ data:
     \ i += 2 * k) {\n            for (int j = 0; j < k; j++) {\n                C\
     \ z = a[i + j + k] * rts[j + k];\n                a[i + j + k] = a[i + j] - z;\n\
     \                a[i + j] = a[i + j] + z;\n            }\n        }\n    }\n}\n\
-    } // namespace FFT\n"
+    vector<int64_t> multiply(const vector<int> &a, const vector<int> &b) {\n    int\
+    \ need = (int)a.size() + (int)b.size() - 1;\n    int nbase = 1;\n    while ((1\
+    \ << nbase) < need) ++nbase;\n    ensure_base(nbase);\n    int sz = 1 << nbase;\n\
+    \    vector<C> fa(sz);\n    for (int i = 0; i < sz; ++i) {\n        int x = (i\
+    \ < (int)a.size() ? a[i] : 0);\n        int y = (i < (int)b.size() ? b[i] : 0);\n\
+    \        fa[i] = C(x, y);\n    }\n    fft(fa, sz);\n    C r(0, -0.25 / (sz >>\
+    \ 1)), s(0, 1), t(0.5, 0);\n    for (int i = 0; i <= (sz >> 1); i++) {\n     \
+    \   int j = (sz - i) & (sz - 1);\n        C z = (fa[j] * fa[j] - (fa[i] * fa[i]).conj())\
+    \ * r;\n        fa[j] = (fa[i] * fa[i] - (fa[j] * fa[j]).conj()) * r;\n      \
+    \  fa[i] = z;\n    }\n    for (int i = 0; i < (sz >> 1); i++) {\n        C A0\
+    \ = (fa[i] + fa[i + (sz >> 1)]) * t;\n        C A1 = (fa[i] - fa[i + (sz >> 1)])\
+    \ * t * rts[(sz >> 1) + i];\n        fa[i] = A0 + A1 * s;\n    }\n    fft(fa,\
+    \ sz >> 1);\n    vector<int64_t> ret(need);\n    for (int i = 0; i < need; i++)\
+    \ {\n        ret[i] = llround(i & 1 ? fa[i >> 1].y : fa[i >> 1].x);\n    }\n \
+    \   return ret;\n}\n} // namespace FFT\n"
   dependsOn: []
   isVerificationFile: false
   path: library/polynomial/fft/fast_fourier_transform.hpp
@@ -96,13 +127,14 @@ data:
   - library/polynomial/fps/formal_power_series.hpp
   - library/polynomial/fft/convolution_fft.hpp
   - library/polynomial/fft/convolution_arbitrary_mod.hpp
-  timestamp: '2026-01-20 20:11:22+09:00'
+  timestamp: '2026-01-21 11:49:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fps.bernoulli_number.test.cpp
   - tests/polynomial.fps.stirling_second_number.test.cpp
   - tests/polynomial.fps.stirling_first_number.test.cpp
   - tests/polynomial.fft.convolution_fft.test.cpp
+  - tests/graph.tree.centroid_decomposition.test.cpp
 documentation_of: library/polynomial/fft/fast_fourier_transform.hpp
 layout: document
 title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"

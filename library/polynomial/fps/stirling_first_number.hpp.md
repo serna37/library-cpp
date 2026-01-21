@@ -84,9 +84,24 @@ data:
     \ {\n        for (int i = 0; i < n; i += 2 * k) {\n            for (int j = 0;\
     \ j < k; j++) {\n                C z = a[i + j + k] * rts[j + k];\n          \
     \      a[i + j + k] = a[i + j] - z;\n                a[i + j] = a[i + j] + z;\n\
-    \            }\n        }\n    }\n}\n} // namespace FFT\n#line 4 \"library/polynomial/fft/convolution_arbitrary_mod.hpp\"\
-    \ntemplate <typename T> struct ConvolutionArbitraryMod {\n    using real = FFT::real;\n\
-    \    using C = FFT::C;\n    ConvolutionArbitraryMod() = default;\n    static vector<T>\
+    \            }\n        }\n    }\n}\nvector<int64_t> multiply(const vector<int>\
+    \ &a, const vector<int> &b) {\n    int need = (int)a.size() + (int)b.size() -\
+    \ 1;\n    int nbase = 1;\n    while ((1 << nbase) < need) ++nbase;\n    ensure_base(nbase);\n\
+    \    int sz = 1 << nbase;\n    vector<C> fa(sz);\n    for (int i = 0; i < sz;\
+    \ ++i) {\n        int x = (i < (int)a.size() ? a[i] : 0);\n        int y = (i\
+    \ < (int)b.size() ? b[i] : 0);\n        fa[i] = C(x, y);\n    }\n    fft(fa, sz);\n\
+    \    C r(0, -0.25 / (sz >> 1)), s(0, 1), t(0.5, 0);\n    for (int i = 0; i <=\
+    \ (sz >> 1); i++) {\n        int j = (sz - i) & (sz - 1);\n        C z = (fa[j]\
+    \ * fa[j] - (fa[i] * fa[i]).conj()) * r;\n        fa[j] = (fa[i] * fa[i] - (fa[j]\
+    \ * fa[j]).conj()) * r;\n        fa[i] = z;\n    }\n    for (int i = 0; i < (sz\
+    \ >> 1); i++) {\n        C A0 = (fa[i] + fa[i + (sz >> 1)]) * t;\n        C A1\
+    \ = (fa[i] - fa[i + (sz >> 1)]) * t * rts[(sz >> 1) + i];\n        fa[i] = A0\
+    \ + A1 * s;\n    }\n    fft(fa, sz >> 1);\n    vector<int64_t> ret(need);\n  \
+    \  for (int i = 0; i < need; i++) {\n        ret[i] = llround(i & 1 ? fa[i >>\
+    \ 1].y : fa[i >> 1].x);\n    }\n    return ret;\n}\n} // namespace FFT\n#line\
+    \ 4 \"library/polynomial/fft/convolution_arbitrary_mod.hpp\"\ntemplate <typename\
+    \ T> struct ConvolutionArbitraryMod {\n    using real = FFT::real;\n    using\
+    \ C = FFT::C;\n    ConvolutionArbitraryMod() = default;\n    static vector<T>\
     \ multiply(const vector<T> &a, const vector<T> &b,\n                         \
     \     int need = -1) {\n        if (need == -1) need = a.size() + b.size() - 1;\n\
     \        int nbase = 0;\n        while ((1 << nbase) < need) nbase++;\n      \
@@ -237,7 +252,7 @@ data:
   isVerificationFile: false
   path: library/polynomial/fps/stirling_first_number.hpp
   requiredBy: []
-  timestamp: '2026-01-20 20:11:22+09:00'
+  timestamp: '2026-01-21 11:49:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fps.stirling_first_number.test.cpp

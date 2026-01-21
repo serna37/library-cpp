@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
@@ -23,8 +23,8 @@ data:
   bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n    int from,\
     \ to;\n    long long cost;\n    int idx;\n    Edge(int from, int to, long long\
     \ cost = 1, int idx = -1)\n        : from(from), to(to), cost(cost), idx(idx)\
-    \ {}\n};\n#line 3 \"library/graph/base/graph.hpp\"\nstruct Graph {\n  private:\n\
-    \    int N;\n    vector<vector<Edge>> G;\n    int es;\n\n  public:\n    Graph(int\
+    \ {}\n};\n#line 3 \"library/graph/base/graph.hpp\"\nstruct Graph {\n    int N;\n\
+    \    vector<vector<Edge>> G;\n    int es;\n    Graph() = default;\n    Graph(int\
     \ N) : N(N), G(N), es(0) {}\n    const vector<Edge> &operator[](int v) const {\
     \ return G[v]; }\n    int size() const { return N; }\n    void add(int from, int\
     \ to, long long cost = 1) {\n        G[from].push_back(Edge(from, to, cost, es++));\n\
@@ -122,7 +122,7 @@ data:
   isVerificationFile: false
   path: library/graph/tree/tree_isomorphism.hpp
   requiredBy: []
-  timestamp: '2026-01-21 10:11:17+09:00'
+  timestamp: '2026-01-21 11:49:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.tree.tree_isomorphism.test.cpp

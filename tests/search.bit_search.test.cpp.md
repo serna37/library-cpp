@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/search/bit_search.hpp
     title: "bit\u5168\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []

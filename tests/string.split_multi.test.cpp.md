@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/string/split_multi.hpp
     title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []

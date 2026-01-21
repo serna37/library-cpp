@@ -39,10 +39,10 @@ data:
       title: "\u5E7E\u4F55Util"
   - name: library/graph/base
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/graph/base/edge.hpp
       title: "\u8FBA"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/graph/base/graph.hpp
       title: "\u30B0\u30E9\u30D5"
   - name: library/graph/connected_components
@@ -88,6 +88,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/graph/tree/centroid.hpp
       title: "\u6728\u306E\u91CD\u5FC3"
+    - icon: ':question:'
+      path: library/graph/tree/centroid_decomposition.hpp
+      title: "\u91CD\u5FC3\u5206\u89E3"
     - icon: ':heavy_check_mark:'
       path: library/graph/tree/lca.hpp
       title: LCA
@@ -368,7 +371,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   verificationCategories:
@@ -436,6 +439,12 @@ data:
       path: tests/graph.topological_sort.test.cpp
       title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\
         \u30C8\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.tree.centroid_decomposition.test.cpp
+      title: "\u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
+    - icon: ':x:'
+      path: tests/graph.tree.centroid_decomposition2.test.cpp
+      title: "\u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C82"
     - icon: ':heavy_check_mark:'
       path: tests/graph.tree.lca.test.cpp
       title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"

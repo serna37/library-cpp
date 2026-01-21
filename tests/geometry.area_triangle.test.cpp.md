@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/geometry/area_triangle.hpp
     title: "\u4E09\u89D2\u5F62\u306E\u9762\u7A4D"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []

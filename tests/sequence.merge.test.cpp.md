@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/sequence/merge.hpp
     title: "\u30DE\u30FC\u30B8\u30C6\u30AF"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []

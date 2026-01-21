@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
   - icon: ':heavy_check_mark:'

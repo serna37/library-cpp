@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/search/binary_search/binary_search_real.hpp
     title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []

@@ -66,6 +66,12 @@ data:
     title: "\u30B0\u30E9\u30D5 - \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\
       \u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/graph.tree.centroid_decomposition.test.cpp
+    title: "\u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
+  - icon: ':x:'
+    path: tests/graph.tree.centroid_decomposition2.test.cpp
+    title: "\u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C82"
+  - icon: ':heavy_check_mark:'
     path: tests/graph.tree.lca.test.cpp
     title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -263,9 +269,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/various.union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "\u0E05^>\u03C9<^\u0E05"
     links:
@@ -306,7 +312,7 @@ data:
   path: template/template.hpp
   requiredBy: []
   timestamp: '2026-01-19 13:31:13+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/polynomial.fps.bernoulli_number.test.cpp
   - tests/polynomial.fft.convolution_bitwise_or.test.cpp
@@ -350,6 +356,7 @@ data:
   - tests/segtree.fenwick_tree.test.cpp
   - tests/sequence.inversion_number.test.cpp
   - tests/sequence.dispersion.test.cpp
+  - tests/graph.tree.centroid_decomposition.test.cpp
   - tests/number.mod.mod_combination.test.cpp
   - tests/search.binary_search.wavelet_search_engine.test.cpp
   - tests/graph.route_restore.test.cpp
@@ -370,6 +377,7 @@ data:
   - tests/number.digit_sum.test.cpp
   - tests/sequence.collection_util.test.cpp
   - tests/grid.bfs.test.cpp
+  - tests/graph.tree.centroid_decomposition2.test.cpp
   - tests/string.aho_corasick.test.cpp
   - tests/dp.cumulative_sum.cumulative_sum_diff.test.cpp
   - tests/string.split.test.cpp
