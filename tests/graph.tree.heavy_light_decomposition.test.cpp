@@ -53,19 +53,16 @@ void solve() {
         cin >> com >> u >> v >> cost;
         --u, --v;
         if (com == 1ll) {
-            HLD.add(u, v, [&](int l, int r) {
-                seg.apply(l, r, cost);
-            });
+            HLD.add(u, v, [&](int l, int r) { seg.apply(l, r, cost); });
         }
         if (com == 2ll) {
-            Node res = HLD.query(u, v, Node(),
-                [&](int l, int r) { return seg.prod(l, r); },
+            Node res = HLD.query(
+                u, v, Node(), [&](int l, int r) { return seg.prod(l, r); },
                 [](const Node &a, const Node &b) { return a + b; },
                 [](Node l, const Node &r) {
                     swap(l.left, l.right);
                     return l + r;
-                }
-            );
+                });
             print(res.ans);
         }
     }

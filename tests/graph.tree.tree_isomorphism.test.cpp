@@ -1,5 +1,4 @@
-#define PROBLEM                                                                \
-    "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2821"
+#define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2821"
 #include "template/template.hpp"
 #include "library/graph/tree/tree_isomorphism.hpp"
 #include "library/various/union_find.hpp"
@@ -39,5 +38,5 @@ void solve() {
             ret += tree_isomorphism(t, g);
         }
     }
-  print(ret);
+    print(ret);
 }

@@ -2,8 +2,8 @@
 #include "library/graph/base/graph.hpp"
 struct CentroidDecomposition : Graph {
   public:
-    using Graph::Graph;
     using Graph::G;
+    using Graph::Graph;
     Graph tree;
     int build() {
         sub.assign(G.size(), 0ll);

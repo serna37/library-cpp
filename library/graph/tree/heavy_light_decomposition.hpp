@@ -2,8 +2,8 @@
 #include "library/graph/base/graph.hpp"
 struct HeavyLightDecomposition : Graph {
   public:
-    using Graph::Graph;
     using Graph::G;
+    using Graph::Graph;
     vector<int> sz, in, out, head, rev, par, dep;
     void build(int root = 0) {
         sz.assign(G.size(), 0);
