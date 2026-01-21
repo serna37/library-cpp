@@ -51,4 +51,36 @@ void fft(vector<C> &a, int n) {
         }
     }
 }
+vector<int64_t> multiply(const vector<int> &a, const vector<int> &b) {
+    int need = (int)a.size() + (int)b.size() - 1;
+    int nbase = 1;
+    while ((1 << nbase) < need) ++nbase;
+    ensure_base(nbase);
+    int sz = 1 << nbase;
+    vector<C> fa(sz);
+    for (int i = 0; i < sz; ++i) {
+        int x = (i < (int)a.size() ? a[i] : 0);
+        int y = (i < (int)b.size() ? b[i] : 0);
+        fa[i] = C(x, y);
+    }
+    fft(fa, sz);
+    C r(0, -0.25 / (sz >> 1)), s(0, 1), t(0.5, 0);
+    for (int i = 0; i <= (sz >> 1); i++) {
+        int j = (sz - i) & (sz - 1);
+        C z = (fa[j] * fa[j] - (fa[i] * fa[i]).conj()) * r;
+        fa[j] = (fa[i] * fa[i] - (fa[j] * fa[j]).conj()) * r;
+        fa[i] = z;
+    }
+    for (int i = 0; i < (sz >> 1); i++) {
+        C A0 = (fa[i] + fa[i + (sz >> 1)]) * t;
+        C A1 = (fa[i] - fa[i + (sz >> 1)]) * t * rts[(sz >> 1) + i];
+        fa[i] = A0 + A1 * s;
+    }
+    fft(fa, sz >> 1);
+    vector<int64_t> ret(need);
+    for (int i = 0; i < need; i++) {
+        ret[i] = llround(i & 1 ? fa[i >> 1].y : fa[i >> 1].x);
+    }
+    return ret;
+}
 } // namespace FFT
