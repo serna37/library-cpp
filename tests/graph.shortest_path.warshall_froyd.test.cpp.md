@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
@@ -13,7 +13,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/various/convert.hpp
     title: "\u578B\u5909\u63DB"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []

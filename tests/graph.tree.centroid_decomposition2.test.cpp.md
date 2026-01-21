@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/tree/centroid_decomposition.hpp
     title: "\u91CD\u5FC3\u5206\u89E3"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/no/1002
@@ -55,15 +55,16 @@ data:
     \ {\n            mp[minmax(a, b)]++;\n            mp3[a]++;\n            mp3[b]++;\n\
     \        }\n        for (auto &&e : G.G[idx]) {\n            if (e.to == par)\
     \ continue;\n            if (used[e.to]) continue;\n            if (a == e.cost)\
-    \ {\n                self(self, e.to, idx, e.cost, b);\n            } else {\n\
-    \                self(self, e.to, idx, a, e.cost);\n            }\n        }\n\
-    \    };\n    auto rec = [&](auto self, int idx) -> void {\n        used[idx] =\
-    \ true;\n        mp.clear();\n        mp2.clear();\n        mp3.clear();\n   \
-    \     all = 0;\n        for (auto &&e : G.G[idx]) {\n            if (used[e.to])\
-    \ continue;\n            get_vec(get_vec, e.to, idx, e.cost, -1);\n          \
-    \  add_vec(add_vec, e.to, idx, e.cost, -1);\n        }\n        for (auto &&e\
-    \ : G.tree.G[idx]) {\n            self(self, e.to);\n        }\n        used[idx]\
-    \ = false;\n    };\n    rec(rec, root);\n    print(ans);\n}\n"
+    \ {\n                self(self, e.to, idx, e.cost, b);\n            } else if\
+    \ (!~b or b == e.cost) {\n                self(self, e.to, idx, a, e.cost);\n\
+    \            }\n        }\n    };\n    auto rec = [&](auto self, int idx) -> void\
+    \ {\n        used[idx] = true;\n        mp.clear();\n        mp2.clear();\n  \
+    \      mp3.clear();\n        all = 0;\n        for (auto &&e : G.G[idx]) {\n \
+    \           if (used[e.to]) continue;\n            get_vec(get_vec, e.to, idx,\
+    \ e.cost, -1);\n            add_vec(add_vec, e.to, idx, e.cost, -1);\n       \
+    \ }\n        for (auto &&e : G.tree.G[idx]) {\n            self(self, e.to);\n\
+    \        }\n        used[idx] = false;\n    };\n    rec(rec, root);\n    print(ans);\n\
+    }\n"
   dependsOn:
   - template/template.hpp
   - library/graph/tree/centroid_decomposition.hpp
@@ -72,8 +73,8 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.centroid_decomposition2.test.cpp
   requiredBy: []
-  timestamp: '2026-01-21 11:49:22+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2026-01-21 03:07:02+00:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.centroid_decomposition2.test.cpp
 layout: document

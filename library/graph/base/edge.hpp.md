@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
@@ -35,7 +35,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/tree/centroid.hpp
     title: "\u6728\u306E\u91CD\u5FC3"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/tree/centroid_decomposition.hpp
     title: "\u91CD\u5FC3\u5206\u89E3"
   - icon: ':heavy_check_mark:'
@@ -82,7 +82,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph.tree.centroid_decomposition.test.cpp
     title: "\u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/graph.tree.centroid_decomposition2.test.cpp
     title: "\u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C82"
   - icon: ':heavy_check_mark:'
@@ -91,9 +91,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph.tree.tree_isomorphism.test.cpp
     title: "\u6728 - \u6728\u306E\u540C\u578B\u6027\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n    int from,\
@@ -122,7 +122,7 @@ data:
   - library/graph/tree/lca.hpp
   - library/graph/tree/centroid_decomposition.hpp
   timestamp: '2026-01-20 20:11:22+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.cycle_detect.test.cpp
   - tests/graph.shortest_path.dijkstra.test.cpp

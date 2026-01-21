@@ -10,7 +10,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/sequence/static_range_count_distinct.hpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []

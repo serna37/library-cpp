@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/string/range.hpp
     title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []

@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/sequence/static_range_frequency.hpp
     title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
