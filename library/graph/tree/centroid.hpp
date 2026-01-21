@@ -1,6 +1,6 @@
 #pragma once
 #include "library/graph/base/graph.hpp"
-template <typename T> vector<int> centroid(const Graph<T> &G) {
+vector<int> centroid(const Graph &G) {
     const int N = (int)G.size();
     stack<pair<int, int>> st;
     st.emplace(0ll, -1ll);
@@ -9,11 +9,11 @@ template <typename T> vector<int> centroid(const Graph<T> &G) {
         auto p = st.top();
         if (sz[p.first] == 0ll) {
             sz[p.first] = 1;
-            for (auto &to : G[p.first]) {
+            for (auto &&[from, to, cost, idx] : G[p.first]) {
                 if (to != p.second) st.emplace(to, p.first);
             }
         } else {
-            for (auto &to : G[p.first]) {
+            for (auto &&[from, to, cost, idx] : G[p.first]) {
                 if (to != p.second) sz[p.first] += sz[to];
             }
             par[p.first] = p.second;
@@ -24,7 +24,7 @@ template <typename T> vector<int> centroid(const Graph<T> &G) {
     int size = N;
     for (int i = 0; i < N; ++i) {
         int val = N - sz[i];
-        for (auto &to : G[i]) {
+        for (auto &&[from, to, cost, idx] : G[i]) {
             if (to != par[i]) val = max(val, sz[to]);
         }
         if (val < size) size = val, ret.clear();
