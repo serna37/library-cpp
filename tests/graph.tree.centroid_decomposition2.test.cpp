@@ -48,7 +48,7 @@ void solve() {
             if (used[e.to]) continue;
             if (a == e.cost) {
                 self(self, e.to, idx, e.cost, b);
-            } else {
+            } else if (!~b or b == e.cost) {
                 self(self, e.to, idx, a, e.cost);
             }
         }
