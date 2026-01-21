@@ -86,8 +86,14 @@ data:
   - name: library/graph/tree
     pages:
     - icon: ':heavy_check_mark:'
+      path: library/graph/tree/centroid.hpp
+      title: "\u6728\u306E\u91CD\u5FC3"
+    - icon: ':heavy_check_mark:'
       path: library/graph/tree/lca.hpp
       title: LCA
+    - icon: ':heavy_check_mark:'
+      path: library/graph/tree/tree_isomorphism.hpp
+      title: "\u6728\u306E\u540C\u578B\u6027\u5224\u5B9A"
   - name: library/grid
     pages:
     - icon: ':heavy_check_mark:'
@@ -433,6 +439,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/graph.tree.lca.test.cpp
       title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.tree.tree_isomorphism.test.cpp
+      title: "\u6728 - \u6728\u306E\u540C\u578B\u6027\u5224\u5B9A\u306E\u30C6\u30B9\
+        \u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/grid.bfs.test.cpp
       title: "\u30B0\u30EA\u30C3\u30C9BFS\u306E\u30C6\u30B9\u30C8"

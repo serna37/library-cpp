@@ -11,6 +11,9 @@ data:
     title: "\u6700\u5C0F\u5168\u57DF\u6728 - \u30AF\u30E9\u30B9\u30AB\u30EB\u306E\u30C6\
       \u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/graph.tree.tree_isomorphism.test.cpp
+    title: "\u6728 - \u6728\u306E\u540C\u578B\u6027\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/various.union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
@@ -43,6 +46,7 @@ data:
   verifiedWith:
   - tests/various.union_find.test.cpp
   - tests/graph.mst.kruskal.test.cpp
+  - tests/graph.tree.tree_isomorphism.test.cpp
 documentation_of: library/various/union_find.hpp
 layout: document
 title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"

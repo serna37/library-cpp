@@ -69,6 +69,9 @@ data:
     path: tests/graph.tree.lca.test.cpp
     title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
+    path: tests/graph.tree.tree_isomorphism.test.cpp
+    title: "\u6728 - \u6728\u306E\u540C\u578B\u6027\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/grid.bfs.test.cpp
     title: "\u30B0\u30EA\u30C3\u30C9BFS\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -363,6 +366,7 @@ data:
   - tests/string.join.test.cpp
   - tests/search.binary_search.binary_search_real.test.cpp
   - tests/number.base_convert.test.cpp
+  - tests/graph.tree.tree_isomorphism.test.cpp
   - tests/number.digit_sum.test.cpp
   - tests/sequence.collection_util.test.cpp
   - tests/grid.bfs.test.cpp
