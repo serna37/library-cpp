@@ -92,6 +92,9 @@ data:
       path: library/graph/tree/centroid_decomposition.hpp
       title: "\u91CD\u5FC3\u5206\u89E3"
     - icon: ':heavy_check_mark:'
+      path: library/graph/tree/convert_rooted_tree.hpp
+      title: "\u6839\u4ED8\u304D\u6728\u5909\u63DB"
+    - icon: ':heavy_check_mark:'
       path: library/graph/tree/heavy_light_decomposition.hpp
       title: "\u91CD\u8EFD\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -448,6 +451,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/graph.tree.centroid_decomposition2.test.cpp
       title: "\u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C82"
+    - icon: ':heavy_check_mark:'
+      path: tests/graph.tree.convert_rooted_tree.test.cpp
+      title: "\u6728 - \u6839\u4ED8\u304D\u6728\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/graph.tree.heavy_light_decomposition.test.cpp
       title: "\u6728 - HLD\u306E\u30C6\u30B9\u30C8 \u6728\u4E0A\u30AF\u30A8\u30EA\

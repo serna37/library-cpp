@@ -72,6 +72,9 @@ data:
     path: tests/graph.tree.centroid_decomposition2.test.cpp
     title: "\u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C82"
   - icon: ':heavy_check_mark:'
+    path: tests/graph.tree.convert_rooted_tree.test.cpp
+    title: "\u6728 - \u6839\u4ED8\u304D\u6728\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/graph.tree.heavy_light_decomposition.test.cpp
     title: "\u6728 - HLD\u306E\u30C6\u30B9\u30C8 \u6728\u4E0A\u30AF\u30A8\u30EA:\u6700\
       \u5927\u9023\u7D9A\u90E8\u5206\u5217\u548C"
@@ -361,6 +364,7 @@ data:
   - tests/segtree.fenwick_tree.test.cpp
   - tests/sequence.inversion_number.test.cpp
   - tests/sequence.dispersion.test.cpp
+  - tests/graph.tree.convert_rooted_tree.test.cpp
   - tests/graph.tree.centroid_decomposition.test.cpp
   - tests/number.mod.mod_combination.test.cpp
   - tests/search.binary_search.wavelet_search_engine.test.cpp
