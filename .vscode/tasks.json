@@ -5,6 +5,8 @@
             "label": "C/C++: g++ アクティブなファイルのビルド",
             "command": "/usr/bin/g++",
             "args": [
+                "-I",
+                "/workspaces/library-cpp/",
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
