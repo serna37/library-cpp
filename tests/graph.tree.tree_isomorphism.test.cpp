@@ -1,0 +1,43 @@
+#define PROBLEM                                                                \
+    "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2821"
+#include "template/template.hpp"
+#include "library/graph/tree/tree_isomorphism.hpp"
+#include "library/various/union_find.hpp"
+/**
+ * @brief 木 - 木の同型性判定のテスト
+ */
+void solve() {
+    int N, M;
+    cin >> N >> M;
+    vector<int> U(M), V(M);
+    UnionFind uf(N);
+    for (int i = 0; i < M; ++i) {
+        cin >> U[i] >> V[i];
+        --U[i], --V[i];
+        uf.unite(U[i], V[i]);
+    }
+    vector<vector<int>> belong_v(N), belong_e(N);
+    for (int i = 0; i < N; ++i) {
+        belong_v[uf.find(i)].emplace_back(i);
+    }
+    for (int i = 0; i < M; ++i) {
+        belong_e[uf.find(U[i])].emplace_back(i);
+    }
+    cin >> N;
+    Graph t(N);
+    t.read(N - 1);
+    int ret = 0;
+    vector<int> id(belong_v.size());
+    for (int i = 0; i < (int)belong_v.size(); ++i) {
+        if (uf.find(i) == i) {
+            Graph g(belong_v[i].size());
+            int ptr = 0;
+            for (auto &p : belong_v[i]) id[p] = ptr++;
+            for (auto &j : belong_e[i]) {
+                g.add_both(id[U[j]], id[V[j]]);
+            }
+            ret += tree_isomorphism(t, g);
+        }
+    }
+  print(ret);
+}

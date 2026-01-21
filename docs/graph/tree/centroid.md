@@ -1,6 +1,6 @@
 ---
 title: 木の重心
-documentation_of: //library/tree/centroid.hpp
+documentation_of: //library/graph/tree/centroid.hpp
 ---
 
 # 木の重心
