@@ -35,7 +35,7 @@ data:
     \           if (directed) {\n                add(u, v, cost);\n            } else\
     \ {\n                add_both(u, v, cost);\n            }\n        }\n    }\n\
     };\n#line 3 \"library/graph/tree/heavy_light_decomposition.hpp\"\nstruct HeavyLightDecomposition\
-    \ : Graph {\n  public:\n    using Graph::Graph;\n    using Graph::G;\n    vector<int>\
+    \ : Graph {\n  public:\n    using Graph::G;\n    using Graph::Graph;\n    vector<int>\
     \ sz, in, out, head, rev, par, dep;\n    void build(int root = 0) {\n        sz.assign(G.size(),\
     \ 0);\n        in.assign(G.size(), 0);\n        out.assign(G.size(), 0);\n   \
     \     head.assign(G.size(), 0);\n        rev.assign(G.size(), 0);\n        par.assign(G.size(),\
@@ -82,7 +82,7 @@ data:
     \ = (G[idx][0].to == edge.to ? head[idx] : edge.to);\n            dfs_hld(edge.to,\
     \ idx, times);\n        }\n        out[idx] = times;\n    }\n};\n"
   code: "#pragma once\n#include \"library/graph/base/graph.hpp\"\nstruct HeavyLightDecomposition\
-    \ : Graph {\n  public:\n    using Graph::Graph;\n    using Graph::G;\n    vector<int>\
+    \ : Graph {\n  public:\n    using Graph::G;\n    using Graph::Graph;\n    vector<int>\
     \ sz, in, out, head, rev, par, dep;\n    void build(int root = 0) {\n        sz.assign(G.size(),\
     \ 0);\n        in.assign(G.size(), 0);\n        out.assign(G.size(), 0);\n   \
     \     head.assign(G.size(), 0);\n        rev.assign(G.size(), 0);\n        par.assign(G.size(),\
@@ -134,7 +134,7 @@ data:
   isVerificationFile: false
   path: library/graph/tree/heavy_light_decomposition.hpp
   requiredBy: []
-  timestamp: '2026-01-21 14:35:39+09:00'
+  timestamp: '2026-01-21 19:52:16+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.tree.heavy_light_decomposition.test.cpp

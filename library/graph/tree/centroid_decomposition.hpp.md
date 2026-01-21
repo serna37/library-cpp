@@ -37,7 +37,7 @@ data:
     \           if (directed) {\n                add(u, v, cost);\n            } else\
     \ {\n                add_both(u, v, cost);\n            }\n        }\n    }\n\
     };\n#line 3 \"library/graph/tree/centroid_decomposition.hpp\"\nstruct CentroidDecomposition\
-    \ : Graph {\n  public:\n    using Graph::Graph;\n    using Graph::G;\n    Graph\
+    \ : Graph {\n  public:\n    using Graph::G;\n    using Graph::Graph;\n    Graph\
     \ tree;\n    int build() {\n        sub.assign(G.size(), 0ll);\n        v.assign(G.size(),\
     \ 0ll);\n        tree = Graph(G.size());\n        return build_dfs(0ll);\n   \
     \ }\n    explicit CentroidDecomposition(const Graph &G) : Graph(G) {}\n\n  private:\n\
@@ -53,7 +53,7 @@ data:
     \ &&edge : G[centroid]) {\n            if (!v[edge.to]) tree.add(centroid, build_dfs(edge.to));\n\
     \        }\n        v[centroid] = false;\n        return centroid;\n    }\n};\n"
   code: "#pragma once\n#include \"library/graph/base/graph.hpp\"\nstruct CentroidDecomposition\
-    \ : Graph {\n  public:\n    using Graph::Graph;\n    using Graph::G;\n    Graph\
+    \ : Graph {\n  public:\n    using Graph::G;\n    using Graph::Graph;\n    Graph\
     \ tree;\n    int build() {\n        sub.assign(G.size(), 0ll);\n        v.assign(G.size(),\
     \ 0ll);\n        tree = Graph(G.size());\n        return build_dfs(0ll);\n   \
     \ }\n    explicit CentroidDecomposition(const Graph &G) : Graph(G) {}\n\n  private:\n\
@@ -74,7 +74,7 @@ data:
   isVerificationFile: false
   path: library/graph/tree/centroid_decomposition.hpp
   requiredBy: []
-  timestamp: '2026-01-21 11:49:22+09:00'
+  timestamp: '2026-01-21 19:52:16+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.tree.centroid_decomposition.test.cpp

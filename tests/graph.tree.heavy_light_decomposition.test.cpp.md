@@ -71,13 +71,12 @@ data:
     \                                   A);\n    // \u30AF\u30A8\u30EA\n    while\
     \ (Q--) {\n        int com, u, v, cost;\n        cin >> com >> u >> v >> cost;\n\
     \        --u, --v;\n        if (com == 1ll) {\n            HLD.add(u, v, [&](int\
-    \ l, int r) {\n                seg.apply(l, r, cost);\n            });\n     \
-    \   }\n        if (com == 2ll) {\n            Node res = HLD.query(u, v, Node(),\n\
-    \                [&](int l, int r) { return seg.prod(l, r); },\n             \
-    \   [](const Node &a, const Node &b) { return a + b; },\n                [](Node\
-    \ l, const Node &r) {\n                    swap(l.left, l.right);\n          \
-    \          return l + r;\n                }\n            );\n            print(res.ans);\n\
-    \        }\n    }\n}\n"
+    \ l, int r) { seg.apply(l, r, cost); });\n        }\n        if (com == 2ll) {\n\
+    \            Node res = HLD.query(\n                u, v, Node(), [&](int l, int\
+    \ r) { return seg.prod(l, r); },\n                [](const Node &a, const Node\
+    \ &b) { return a + b; },\n                [](Node l, const Node &r) {\n      \
+    \              swap(l.left, l.right);\n                    return l + r;\n   \
+    \             });\n            print(res.ans);\n        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
   - library/graph/tree/heavy_light_decomposition.hpp
@@ -89,7 +88,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.heavy_light_decomposition.test.cpp
   requiredBy: []
-  timestamp: '2026-01-21 14:35:39+09:00'
+  timestamp: '2026-01-21 19:52:16+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.heavy_light_decomposition.test.cpp

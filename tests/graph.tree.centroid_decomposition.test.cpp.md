@@ -39,7 +39,8 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/frequency_table_of_tree_distance\"\
+  code: "#define PROBLEM                                                         \
+    \       \\\n    \"https://judge.yosupo.jp/problem/frequency_table_of_tree_distance\"\
     \n#include \"template/template.hpp\"\n#include \"library/graph/tree/centroid_decomposition.hpp\"\
     \n#include \"library/polynomial/fft/fast_fourier_transform.hpp\"\n/**\n * @brief\
     \ \u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C8\n */\nvoid solve()\
@@ -48,20 +49,20 @@ data:
     \ auto rec = [&](auto self, int centroid) -> void {\n        used[centroid] =\
     \ true;\n        vector<int> cnt{1};\n        for (auto &&edge : g.G[centroid])\
     \ {\n            if (used[edge.to]) continue;\n            vector<int> num;\n\
-    \            queue<tuple<int, int, int>> que;\n            que.emplace(edge.to\
-    \ , centroid, 1);\n            while(!que.empty()) {\n                int idx,\
+    \            queue<tuple<int, int, int>> que;\n            que.emplace(edge.to,\
+    \ centroid, 1);\n            while (!que.empty()) {\n                int idx,\
     \ par, dep;\n                tie(idx, par, dep) = que.front();\n             \
     \   que.pop();\n                if ((int)cnt.size() <= dep) cnt.resize(dep + 1,\
     \ 0);\n                if ((int)num.size() <= dep) num.resize(dep + 1, 0);\n \
     \               cnt[dep]++;\n                num[dep]++;\n                for\
-    \ (auto &&edge : g.G[idx]) {\n                    if(edge.to == par or used[edge.to])\
+    \ (auto &&edge : g.G[idx]) {\n                    if (edge.to == par or used[edge.to])\
     \ continue;\n                    que.emplace(edge.to, idx, dep + 1);\n       \
     \         }\n            }\n            auto ret = FFT::multiply(num, num);\n\
-    \            for(int i = 0; i < (int)ret.size(); i++) dist[i] -= ret[i];\n   \
-    \     }\n        auto ret = FFT::multiply(cnt, cnt);\n        for(int i = 0; i\
-    \ < (int)ret.size(); ++i) dist[i] += ret[i];\n        for(auto &&[from, to, cost,\
-    \ idx] : g.tree.G[centroid]) self(self, to);\n    };\n    rec(rec, root);\n  \
-    \  dist.erase(begin(dist));\n    for(auto &&p : dist) p /= 2ll;\n    print(dist);\n\
+    \            for (int i = 0; i < (int)ret.size(); i++) dist[i] -= ret[i];\n  \
+    \      }\n        auto ret = FFT::multiply(cnt, cnt);\n        for (int i = 0;\
+    \ i < (int)ret.size(); ++i) dist[i] += ret[i];\n        for (auto &&[from, to,\
+    \ cost, idx] : g.tree.G[centroid]) self(self, to);\n    };\n    rec(rec, root);\n\
+    \    dist.erase(begin(dist));\n    for (auto &&p : dist) p /= 2ll;\n    print(dist);\n\
     }\n"
   dependsOn:
   - template/template.hpp
@@ -72,7 +73,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.centroid_decomposition.test.cpp
   requiredBy: []
-  timestamp: '2026-01-21 11:49:22+09:00'
+  timestamp: '2026-01-21 19:52:16+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.centroid_decomposition.test.cpp

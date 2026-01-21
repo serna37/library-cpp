@@ -43,8 +43,7 @@ data:
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
     \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "#define PROBLEM                                                         \
-    \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2821\"\
+  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2821\"\
     \n#include \"template/template.hpp\"\n#include \"library/graph/tree/tree_isomorphism.hpp\"\
     \n#include \"library/various/union_find.hpp\"\n/**\n * @brief \u6728 - \u6728\u306E\
     \u540C\u578B\u6027\u5224\u5B9A\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n\
@@ -59,7 +58,7 @@ data:
     \            int ptr = 0;\n            for (auto &p : belong_v[i]) id[p] = ptr++;\n\
     \            for (auto &j : belong_e[i]) {\n                g.add_both(id[U[j]],\
     \ id[V[j]]);\n            }\n            ret += tree_isomorphism(t, g);\n    \
-    \    }\n    }\n  print(ret);\n}\n"
+    \    }\n    }\n    print(ret);\n}\n"
   dependsOn:
   - template/template.hpp
   - library/graph/tree/tree_isomorphism.hpp
@@ -70,7 +69,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.tree_isomorphism.test.cpp
   requiredBy: []
-  timestamp: '2026-01-21 11:49:22+09:00'
+  timestamp: '2026-01-21 19:52:16+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.tree_isomorphism.test.cpp
