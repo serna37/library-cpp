@@ -24,5 +24,18 @@ documentation_of: //library/segtree/lazy_segment_tree.hpp
 ## 使い方
 ```cpp
 // 演算op e 更新op e 作用op
-LazySegmentTree<int, int> seg(Monoid::Min::op, Monoid::Min::e, Monoid::Add::op, Monoid::Add::e, MonoidAct::MinAdd::op N);
+LazySegmentTree<int, int> seg(Monoid::Min::op, Monoid::Min::e, Monoid::Add::op, Monoid::Add::e, MonoidAct::MinAdd::op, N);
+
+// 独自定義の例
+vector<Node> A(N); // 初期配列
+auto prod_op = [](const Node &x, const Node &y) -> Node { return x + y; };
+auto prod_e = Node();
+auto apply_op = [](int f, int g) { return g; };
+auto apply_e = INF;
+auto act_op = [](const Node &x, int a, int sz) -> Node {
+    (void)sz;
+    return {a, x.length};
+};
+LazySegmentTree<Node, int> seg(prod_op, prod_e, apply_op, apply_e, act_op,
+                                A);
 ```
