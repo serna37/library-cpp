@@ -1,12 +1,10 @@
 #pragma once
 #include "library/graph/base/edge.hpp"
 struct Graph {
-  private:
     int N;
     vector<vector<Edge>> G;
     int es;
-
-  public:
+    Graph() = default;
     Graph(int N) : N(N), G(N), es(0) {}
     const vector<Edge> &operator[](int v) const { return G[v]; }
     int size() const { return N; }
