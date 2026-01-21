@@ -39,6 +39,9 @@ data:
     path: library/graph/tree/centroid_decomposition.hpp
     title: "\u91CD\u5FC3\u5206\u89E3"
   - icon: ':heavy_check_mark:'
+    path: library/graph/tree/heavy_light_decomposition.hpp
+    title: "\u91CD\u8EFD\u5206\u89E3"
+  - icon: ':heavy_check_mark:'
     path: library/graph/tree/lca.hpp
     title: LCA
   - icon: ':heavy_check_mark:'
@@ -86,6 +89,10 @@ data:
     path: tests/graph.tree.centroid_decomposition2.test.cpp
     title: "\u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C82"
   - icon: ':heavy_check_mark:'
+    path: tests/graph.tree.heavy_light_decomposition.test.cpp
+    title: "\u6728 - HLD\u306E\u30C6\u30B9\u30C8 \u6728\u4E0A\u30AF\u30A8\u30EA:\u6700\
+      \u5927\u9023\u7D9A\u90E8\u5206\u5217\u548C"
+  - icon: ':heavy_check_mark:'
     path: tests/graph.tree.lca.test.cpp
     title: "\u6728 - LCA\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -117,6 +124,7 @@ data:
   - library/graph/base/graph.hpp
   - library/graph/mst/kruskal.hpp
   - library/graph/cycle_detect.hpp
+  - library/graph/tree/heavy_light_decomposition.hpp
   - library/graph/tree/centroid.hpp
   - library/graph/tree/tree_isomorphism.hpp
   - library/graph/tree/lca.hpp
@@ -126,6 +134,7 @@ data:
   verifiedWith:
   - tests/graph.cycle_detect.test.cpp
   - tests/graph.shortest_path.dijkstra.test.cpp
+  - tests/graph.tree.heavy_light_decomposition.test.cpp
   - tests/graph.shortest_path.warshall_froyd.test.cpp
   - tests/graph.connected_components.connected_components.test.cpp
   - tests/graph.mst.kruskal.test.cpp

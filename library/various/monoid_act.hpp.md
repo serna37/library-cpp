@@ -13,6 +13,10 @@ data:
     title: "\u7D71\u5408\u30BB\u30B0\u6728"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: tests/graph.tree.heavy_light_decomposition.test.cpp
+    title: "\u6728 - HLD\u306E\u30C6\u30B9\u30C8 \u6728\u4E0A\u30AF\u30A8\u30EA:\u6700\
+      \u5927\u9023\u7D9A\u90E8\u5206\u5217\u548C"
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
   - icon: ':heavy_check_mark:'
@@ -147,6 +151,7 @@ data:
   timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/graph.tree.heavy_light_decomposition.test.cpp
   - tests/segtree.lazy_segment_tree.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp
 documentation_of: library/various/monoid_act.hpp

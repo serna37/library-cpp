@@ -19,6 +19,10 @@ data:
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: tests/graph.tree.heavy_light_decomposition.test.cpp
+    title: "\u6728 - HLD\u306E\u30C6\u30B9\u30C8 \u6728\u4E0A\u30AF\u30A8\u30EA:\u6700\
+      \u5927\u9023\u7D9A\u90E8\u5206\u5217\u548C"
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
   - icon: ':heavy_check_mark:'
@@ -85,6 +89,7 @@ data:
   verifiedWith:
   - tests/segtree.dual_segment_tree.test.cpp
   - tests/segtree.segment_tree.test.cpp
+  - tests/graph.tree.heavy_light_decomposition.test.cpp
   - tests/segtree.lazy_segment_tree.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp
 documentation_of: library/various/monoid.hpp
