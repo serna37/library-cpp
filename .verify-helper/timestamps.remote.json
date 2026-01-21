@@ -20,6 +20,7 @@
 "tests/graph.topological_sort.test.cpp": "2026-01-21 11:49:22 +0900",
 "tests/graph.tree.centroid_decomposition.test.cpp": "2026-01-21 11:49:22 +0900",
 "tests/graph.tree.centroid_decomposition2.test.cpp": "2026-01-21 03:07:02 +0000",
+"tests/graph.tree.convert_rooted_tree.test.cpp": "2026-01-21 14:59:16 +0900",
 "tests/graph.tree.heavy_light_decomposition.test.cpp": "2026-01-21 14:35:39 +0900",
 "tests/graph.tree.lca.test.cpp": "2026-01-21 11:49:22 +0900",
 "tests/graph.tree.tree_isomorphism.test.cpp": "2026-01-21 11:49:22 +0900",
