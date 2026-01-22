@@ -4,6 +4,10 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: tests/number.prime.eratosthenes.test.cpp
+    title: "\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\u306E\u30C6\u30B9\
+      \u30C8"
+  - icon: ':heavy_check_mark:'
     path: tests/number.prime.prime_test.test.cpp
     title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: false
@@ -25,6 +29,7 @@ data:
   timestamp: '2026-01-15 10:11:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/number.prime.eratosthenes.test.cpp
   - tests/number.prime.prime_test.test.cpp
 documentation_of: library/number/prime/prime_test.hpp
 layout: document

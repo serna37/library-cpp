@@ -129,9 +129,6 @@ data:
       path: library/number/divisors.hpp
       title: "\u7D04\u6570\u5217\u6319"
     - icon: ':heavy_check_mark:'
-      path: library/number/euler_phi.hpp
-      title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570"
-    - icon: ':heavy_check_mark:'
       path: library/number/ext_gcd.hpp
       title: "\u62E1\u5F35Euclid\u306E\u4E92\u9664\u6CD5"
     - icon: ':heavy_check_mark:'
@@ -159,6 +156,12 @@ data:
       title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
   - name: library/number/prime
     pages:
+    - icon: ':heavy_check_mark:'
+      path: library/number/prime/eratosthenes.hpp
+      title: "\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9"
+    - icon: ':heavy_check_mark:'
+      path: library/number/prime/euler_phi.hpp
+      title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570"
     - icon: ':heavy_check_mark:'
       path: library/number/prime/prime_fact.hpp
       title: "\u7D20\u56E0\u6570\u5206\u89E3"
@@ -498,6 +501,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: tests/number.mod.mod_tetration.test.cpp
       title: "MOD \u30C6\u30C8\u30EC\u30FC\u30B7\u30E7\u30F3\u306E\u30C6\u30B9\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: tests/number.prime.eratosthenes.test.cpp
+      title: "\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\u306E\u30C6\u30B9\
+        \u30C8"
     - icon: ':heavy_check_mark:'
       path: tests/number.prime.prime_fact.test.cpp
       title: "\u7D20\u56E0\u6570\u5206\u89E3\u306E\u30C6\u30B9\u30C8"

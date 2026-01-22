@@ -6,6 +6,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/number.divisors.test.cpp
     title: "\u7D04\u6570\u5217\u6319\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/number.prime.eratosthenes.test.cpp
+    title: "\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\u306E\u30C6\u30B9\
+      \u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -25,6 +29,7 @@ data:
   timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/number.prime.eratosthenes.test.cpp
   - tests/number.divisors.test.cpp
 documentation_of: library/number/divisors.hpp
 layout: document

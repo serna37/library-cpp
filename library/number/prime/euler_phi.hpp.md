@@ -9,15 +9,19 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/number.mod.mod_tetration.test.cpp
     title: "MOD \u30C6\u30C8\u30EC\u30FC\u30B7\u30E7\u30F3\u306E\u30C6\u30B9\u30C8"
+  - icon: ':heavy_check_mark:'
+    path: tests/number.prime.eratosthenes.test.cpp
+    title: "\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\u306E\u30C6\u30B9\
+      \u30C8"
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/number/euler_phi.hpp\"\ntemplate <typename T> T\
-    \ euler_phi(T n) {\n    T ret = n;\n    for (T i = 2; i * i <= n; ++i) {\n   \
-    \     if (n % i == 0) {\n            ret -= ret / i;\n            while (n % i\
-    \ == 0) n /= i;\n        }\n    }\n    if (n > 1) ret -= ret / n;\n    return\
+  bundledCode: "#line 2 \"library/number/prime/euler_phi.hpp\"\ntemplate <typename\
+    \ T> T euler_phi(T n) {\n    T ret = n;\n    for (T i = 2; i * i <= n; ++i) {\n\
+    \        if (n % i == 0) {\n            ret -= ret / i;\n            while (n\
+    \ % i == 0) n /= i;\n        }\n    }\n    if (n > 1) ret -= ret / n;\n    return\
     \ ret;\n}\n"
   code: "#pragma once\ntemplate <typename T> T euler_phi(T n) {\n    T ret = n;\n\
     \    for (T i = 2; i * i <= n; ++i) {\n        if (n % i == 0) {\n           \
@@ -25,14 +29,15 @@ data:
     \    if (n > 1) ret -= ret / n;\n    return ret;\n}\n"
   dependsOn: []
   isVerificationFile: false
-  path: library/number/euler_phi.hpp
+  path: library/number/prime/euler_phi.hpp
   requiredBy:
   - library/number/mod/mod_tetration.hpp
-  timestamp: '2026-01-19 13:29:11+09:00'
+  timestamp: '2026-01-22 14:26:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/number.prime.eratosthenes.test.cpp
   - tests/number.mod.mod_tetration.test.cpp
-documentation_of: library/number/euler_phi.hpp
+documentation_of: library/number/prime/euler_phi.hpp
 layout: document
 title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570"
 ---
