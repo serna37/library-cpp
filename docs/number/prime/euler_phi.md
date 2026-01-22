@@ -1,6 +1,6 @@
 ---
 title: オイラーのφ関数
-documentation_of: //library/number/euler_phi.hpp
+documentation_of: //library/number/prime/euler_phi.hpp
 ---
 
 # オイラーのφ関数
