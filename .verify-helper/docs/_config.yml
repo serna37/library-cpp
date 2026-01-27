@@ -11,16 +11,4 @@ title: serna37's Library
 description: C++ アルゴリズムとデータ構造のライブラリ
 exclude: ['bits', 'bundler']
 email: 37serna37serna37serna@gmial.com
-author: serna37
-atom:
-  buildCommand:
-    - jekyll
-    - build
-    - --option
-    - --this
-  buildEnv:
-    JEKYLL_ENV: development
-  postDirs:
-    - _newsletters
-  defaultPostDir: _drafts
-  
+author: serna37  
