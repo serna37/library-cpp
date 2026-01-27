@@ -1,0 +1,38 @@
+name: sync default html
+
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment"] # 監視対象のワークフロー名
+    types:
+      - completed # 完了したときに実行
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0 # 全履歴を取得（oj-verifyの「最終更新日」判定に必要）
+
+      - name: Get file from main branch
+        run: |
+          git checkout origin/main -- .verify-helper/docs/default.html
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --exit-code; then
+            git add .verify-helper/docs/default.html
+            git commit -m "chore: sync file from main [skip ci]"
+            git push origin gh-pages
+          else
+            echo "No changes to sync."
+          fi
