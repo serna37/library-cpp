@@ -4,7 +4,8 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/serna37/library-cpp?style=flat)
 
 # [C++ ライブラリ](https://serna37.github.io/library-cpp)
-C++での競技プログラミング向けに構築した、アルゴリズムとデータ構造のライブラリです。
+C++での競技プログラミング向けに構築した、アルゴリズムとデータ構造のライブラリです。  
+Pagesは`gh-pages`ブランチに直接[jekyll-theme-minimal](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html)を導入し、カスタムしています。
 
 ## ⬇️ 導入
 本リポジトリをクローンします。
