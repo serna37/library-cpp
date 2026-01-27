@@ -1,3 +1,14 @@
+atom:
+  buildCommand:
+  - jekyll
+  - build
+  - --option
+  - --this
+  buildEnv:
+    JEKYLL_ENV: development
+  defaultPostDir: _drafts
+  postDirs:
+  - _newsletters
 author: serna37
 baseurl: /library-cpp
 description: "C++ \u30A2\u30EB\u30B4\u30EA\u30BA\u30E0\u3068\u30C7\u30FC\u30BF\u69CB\
@@ -6,7 +17,6 @@ email: 37serna37serna37serna@gmial.com
 exclude:
 - bits
 - bundler
-favicon_ico: /.verify-helper/docs/assets/images/favicon.png
 logo: https://raw.githubusercontent.com/serna37/library-cpp/refs/heads/main/.verify-helper/docs/assets/images/serna37.jpg
 plugins:
 - jemoji
