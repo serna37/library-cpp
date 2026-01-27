@@ -4,7 +4,7 @@ description: "C++ \u30A2\u30EB\u30B4\u30EA\u30BA\u30E0\u3068\u30C7\u30FC\u30BF\u
 exclude:
 - bits
 - bundler
-favicon_ico: https://raw.githubusercontent.com/serna37/library-cpp/refs/heads/main/.verify-helper/docs/assets/images/serna37.jpg
+favicon_ico: https://raw.githubusercontent.com/serna37/library-cpp/refs/heads/main/.verify-helper/docs/assets/images/favicon.png
 logo: https://raw.githubusercontent.com/serna37/library-cpp/refs/heads/main/.verify-helper/docs/assets/images/serna37.jpg
 plugins:
 - jemoji
