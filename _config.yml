@@ -6,6 +6,7 @@ email: 37serna37serna37serna@gmial.com
 exclude:
 - bits
 - bundler
+lang: ja
 logo: https://raw.githubusercontent.com/serna37/library-cpp/refs/heads/main/.verify-helper/docs/assets/images/serna37.jpg
 plugins:
 - jemoji
