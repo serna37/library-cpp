@@ -1,10 +1,11 @@
 name: sync default html
 
 on:
-  workflow_run:
-    workflows: ["verify"] # 監視対象のワークフロー名
-    types:
-      - completed # 完了したときに実行
+  #workflow_run:
+  #  workflows: ["verify"] # 監視対象のワークフロー名
+  #  types:
+  #    - completed # 完了したときに実行
+  # 手動のみにする
   workflow_dispatch:
 
 permissions:

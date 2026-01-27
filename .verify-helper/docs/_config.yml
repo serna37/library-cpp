@@ -11,4 +11,5 @@ title: serna37's Library
 description: C++ アルゴリズムとデータ構造のライブラリ
 exclude: ['bits', 'bundler']
 email: 37serna37serna37serna@gmial.com
-author: serna37  
+author: serna37
+lang: ja
