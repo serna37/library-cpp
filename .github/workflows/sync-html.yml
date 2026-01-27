@@ -23,8 +23,7 @@ jobs:
 
       - name: Get file from main branch
         run: |
-          cd _layouts
-          git checkout origin/main -- .verify-helper/docs/default.html
+          git show origin/main:.verify-helper/docs/default.html > _layouts/default.html
 
       - name: Commit and Push
         run: |
