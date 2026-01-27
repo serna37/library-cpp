@@ -4,10 +4,14 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/serna37/library-cpp?style=flat)
 
 # [C++ ライブラリ](https://serna37.github.io/library-cpp)
+
 C++での競技プログラミング向けに構築した、アルゴリズムとデータ構造のライブラリです。  
-Pagesは`gh-pages`ブランチに直接[jekyll-theme-minimal](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html)を導入し、カスタムしています。
+`main`ブランチの`.verify-helper/docs/default.html`は[jekyll-theme-minimal](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html)を元にカスタムしたものです。  
+GitHub Actionsの「sync default html」を手動実行することで、`gh-pages`ブランチにhtmlをコピーしページがカスタムされます。  
+※ [こちら](https://online-judge-tools.github.io/verification-helper/installer.ja.html)のCI設定があるため、他Actionとの依存を持たせることが難しいため手動トリガとなっています。
 
 ## ⬇️ 導入
+
 本リポジトリをクローンします。
 ```sh
 git clone https://github.com/serna37/library-cpp
@@ -16,7 +20,9 @@ git clone https://github.com/serna37/library-cpp
 バンドルやojなどの関連コマンドが、私の[dotfiles](https://github.com/serna37/dotfiles/blob/master/cpp.zsh)にあります。
 
 ## 📂 include
+
 リポジトリを`~/git`にクローンしたものとしています。
+
 1. お目当てのコードを[Pages](https://serna37.github.io/library-cpp)からみつける
 1. `include`文をクリックしてコピーする
 1. 各ライブラリの説明文「`使い方`」を参考に、コードを書く
@@ -25,7 +31,9 @@ git clone https://github.com/serna37/library-cpp
 そのままコピペしても利用できます。
 
 ## 📽️ コンパイル
+
 プログラムファイルがライブラリを認識できるよう、`-I`にパスを追加します。
+
 - 🛠️ ビルドコマンド例
 ```sh
 g++ -D=LOCAL -std=c++23 \
@@ -41,6 +49,7 @@ g++ -D=LOCAL -std=c++23 \
 https://github.com/serna37/library-cpp/blob/86b0ee815e773af78733ff4c0f600e42db816d74/compile_flags.txt#L1-L6
 
 ## 💎 バンドル
+
 バンドラをビルドします
 ```sh
 cd ~/git/library-cpp/bundler
@@ -58,4 +67,3 @@ TARGET=./main.cpp
 sed -i '' '/^#line/d' ./bundle.cpp
 ```
 のようにできます。(Macで確認)
-
