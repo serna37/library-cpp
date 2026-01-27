@@ -2,7 +2,7 @@ name: sync default html
 
 on:
   workflow_run:
-    workflows: ["pages-build-deployment"] # 監視対象のワークフロー名
+    workflows: ["verify"] # 監視対象のワークフロー名
     types:
       - completed # 完了したときに実行
   workflow_dispatch:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  verify:
+  sync:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +23,7 @@ jobs:
 
       - name: Get file from main branch
         run: |
+          cd _layouts
           git checkout origin/main -- .verify-helper/docs/default.html
 
       - name: Commit and Push
