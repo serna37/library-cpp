@@ -7,9 +7,20 @@
 baseurl: "/library-cpp"
 theme: jekyll-theme-minimal
 logo: https://raw.githubusercontent.com/serna37/library-cpp/refs/heads/main/.verify-helper/docs/assets/images/serna37.jpg
-favicon_ico: /.verify-helper/docs/assets/images/favicon.png
 title: serna37's Library
 description: C++ アルゴリズムとデータ構造のライブラリ
 exclude: ['bits', 'bundler']
 email: 37serna37serna37serna@gmial.com
 author: serna37
+atom:
+  buildCommand:
+    - jekyll
+    - build
+    - --option
+    - --this
+  buildEnv:
+    JEKYLL_ENV: development
+  postDirs:
+    - _newsletters
+  defaultPostDir: _drafts
+  
