@@ -1,17 +1,24 @@
 {
+    "version": "2.0.0",
     "tasks": [
         {
+            "label": "アクティブなC++ファイルのビルド",
             "type": "cppbuild",
-            "label": "C/C++: g++ アクティブなファイルのビルド",
             "command": "/usr/bin/g++",
             "args": [
+                "-D=LOCAL",
+                "-std=c++23",
                 "-I",
-                "/workspaces/library-cpp/",
-                "-fdiagnostics-color=always",
+                "/workspaces/library-cpp",
+                "-Wall",
+                "-Wextra",
+                "-mtune=native",
+                "-march=native",
+                "-fconstexpr-depth=2147483647",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/a.out"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -23,8 +30,84 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "デバッガーによって生成されたタスク。"
+            "detail": "現在ファイルをビルドします。"
+        },
+        {
+            "label": "🛠️CodeSpacesのセットアップ",
+            "command": "sh",
+            "args": [
+                "scripts/init.sh"
+            ],
+            "problemMatcher": [],
+            "detail": "ライブラリやコマンドを導入します。"
+        },
+        {
+            "label": "🗂️コンテストフォルダを作成",
+            "command": "sh",
+            "args": [
+                "scripts/acc_new.sh",
+                "${fileDirname}",
+                "${input:contest_code}"
+            ],
+            "problemMatcher": [],
+            "detail": "現在フォルダに、コンテスト用フォルダを作成します。"
+        },
+        {
+            "label": "⬇️テストケースDL",
+            "command": "sh",
+            "args": [
+                "scripts/oj_d.sh",
+                "${fileDirname}",
+                "${input:problem_url}"
+            ],
+            "problemMatcher": [],
+            "detail": "現在ファイル用に、問題URLからテストケースをDLします。"
+        },
+        {
+            "label": "テスト実行",
+            "command": "sh",
+            "args": [
+                "scripts/oj_t.sh",
+                "${fileDirname}"
+            ],
+            "problemMatcher": [],
+            "detail": "oj tする"
+        },
+        {
+            "label": "✅ビルド＆テスト",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "アクティブなC++ファイルのビルド",
+                "テスト実行"
+            ],
+            "problemMatcher": [],
+            "detail": "ビルドしてからテストを実行します。"
+        },
+        {
+            "label": "💎ライブラリをバンドル",
+            "type": "shell",
+            "command": "sh",
+            "args": [
+                "scripts/bundle.sh",
+                "${file}",
+                "${fileDirname}"
+            ],
+            "problemMatcher": [],
+            "detail": "現在開いているファイルをバンドルしbundle.cppに書き出します"
         }
     ],
-    "version": "2.0.0"
+    "inputs": [
+        {
+            "id": "contest_code",
+            "type": "promptString",
+            "description": "コンテストコードを入力",
+            "default": "abc100"
+        },
+        {
+            "id": "problem_url",
+            "type": "promptString",
+            "description": "問題のURLを入力",
+            "default": "https://atcoder.jp/contests/abc100/tasks/abc100_a"
+        }
+    ]
 }
