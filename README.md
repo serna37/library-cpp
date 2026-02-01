@@ -17,7 +17,9 @@ GitHub Actionsの「sync default html」を手動実行することで、`gh-pag
 git clone https://github.com/serna37/library-cpp
 ```
 
-バンドルやojなどの関連コマンドが、私の[dotfiles](https://github.com/serna37/dotfiles/blob/master/cpp.zsh)にあります。
+バンドルやojなどの関連コマンドが、私の[dotfiles](https://github.com/serna37/dotfiles/blob/master/cpp.zsh)にあります。  
+同様のことが`tasks.json`に定義されています。  
+GitHub CodeSpaces等でdevcontainerから起動もできます。
 
 ## 📂 include
 
