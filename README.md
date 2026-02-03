@@ -1,4 +1,4 @@
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/serna37/template)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/serna37/library-cpp)
 
 [![Actions Status](https://github.com/serna37/library-cpp/workflows/verify/badge.svg)](https://github.com/serna37/library-cpp/actions)
 [![GitHub Pages](http://img.shields.io/badge/-GitHub_Pages-696969.svg?logo=github&logoColor=ffffff&style=flat)](https://serna37.github.io/library-cpp)  
