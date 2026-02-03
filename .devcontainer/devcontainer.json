@@ -3,6 +3,11 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "configureZshAsDefaultShell": true
+        }
+    },
     // 以下は権限エラーになるためDockerfileで実施
     // "image": "mcr.microsoft.com/devcontainers/cpp:1-debian-12",
     // "features": {
@@ -18,7 +23,10 @@
             "extensions": [
                 "ms-azuretools.vscode-containers",
                 "ms-vscode.cpptools-extension-pack"
-            ]
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh"
+            }
         }
     },
     // コンテナ作成後に init.sh を実行
