@@ -316,6 +316,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/sequence/static_range_frequency.hpp
       title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570"
+    - icon: ':warning:'
+      path: library/sequence/two_pointer_approach_memo.hpp
+      title: "\u5C3A\u53D6\u308A\u6CD5(\u30B3\u30D4\u30DA\u7528)"
     - icon: ':heavy_check_mark:'
       path: library/sequence/wavelet_matrix.hpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
