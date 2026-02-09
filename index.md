@@ -681,8 +681,7 @@ layout: toppage
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/serna37/library-cpp?style=flat)
 
-- 私の[dotfiles](https://github.com/serna37/dotfiles/blob/master/cpp.zsh)中に、バンドルやojなどの関連コマンドがあります
-- 同様のことが`tasks.json`に定義されており、CodeSpaces中のdevcontainerから実行できます
+- バンドルやojなどの関連コマンドが`.vscode/tasks.json`に定義されており、Codespaces中のdevcontainerから実行できます
 - VerifyとPagesに[online-judge-tools/verification-helper](https://github.com/online-judge-tools/verification-helper/blob/master/README.ja.md)を使用しています
 - テンプレートに`#define int long long`マクロありますがあくまで事故防止目的なので、ライブラリ中では**考慮せず**ちゃんと作ろうとしてます
 

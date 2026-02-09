@@ -19,13 +19,10 @@ GitHub Actionsの「sync default html」を手動実行することで、`gh-pag
 git clone https://github.com/serna37/library-cpp
 ```
 
-バンドルやojなどの関連コマンドが、私の[dotfiles](https://github.com/serna37/dotfiles/blob/master/cpp.zsh)にあります。  
-同様のことが`tasks.json`に定義されています。  
-GitHub CodeSpaces等でdevcontainerから起動もできます。
+バンドルやojなどの関連コマンドが、`.vscode/tasks.json`に定義されています。  
+GitHub Codespaces等でdevcontainerから起動もできます。
 
 ## 📂 include
-
-リポジトリを`~/git`にクローンしたものとしています。
 
 1. お目当てのコードを[Pages](https://serna37.github.io/library-cpp)からみつける
 1. `include`文をクリックしてコピーする
@@ -41,7 +38,7 @@ GitHub CodeSpaces等でdevcontainerから起動もできます。
 - 🛠️ ビルドコマンド例
 ```sh
 g++ -D=LOCAL -std=c++23 \
-  -I $HOME/git/library-cpp \
+  -I $PATH_TO_YOUR_REPO/library-cpp \
   -Wall -Wextra \
   -mtune=native -march=native \
   -fconstexpr-depth=2147483647 \
@@ -56,14 +53,14 @@ https://github.com/serna37/library-cpp/blob/86b0ee815e773af78733ff4c0f600e42db81
 
 バンドラをビルドします
 ```sh
-cd ~/git/library-cpp/bundler
+cd $PATH_TO_YOUR_REPO/library-cpp/bundler
 make build
 ```
 
 対象のプログラムファイルに対し、バンドラを実行します。includeしたものが全て1つのプログラムファイルにまとまるため、これを提出します
 ```sh
 TARGET=./main.cpp
-~/git/library-cpp/bundler/build/cpp-bundler -I ~/git/library-cpp $TARGET > ./bundle.cpp
+$PATH_TO_YOUR_REPO/library-cpp/bundler/build/cpp-bundler -I $PATH_TO_YOUR_REPO/library-cpp $TARGET > ./bundle.cpp
 ```
 
 なお、展開されたうち `#line 1 /Users/xxx/git/...` という行を削除するにはsedコマンドを用いる場合
