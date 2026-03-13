@@ -9,6 +9,8 @@ documentation_of: //library/graph/topological_sort.hpp
 - DAGをトポロジカルソートする
 - 閉路がある場合は空配列を返却
 
+行きがけ/帰りがけの順は[こちら](https://momoyama-usagi.com/entry/info-algo-tree-traverse)を参考
+
 ## 計算量
 $O(V+E)$
 - V: 頂点数
