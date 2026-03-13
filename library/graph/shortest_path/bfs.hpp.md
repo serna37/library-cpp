@@ -65,8 +65,8 @@ data:
   timestamp: '2026-01-21 11:49:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph.tree.lca.test.cpp
   - tests/graph.shortest_path.bfs.test.cpp
+  - tests/graph.tree.lca.test.cpp
 documentation_of: library/graph/shortest_path/bfs.hpp
 layout: document
 title: BFS

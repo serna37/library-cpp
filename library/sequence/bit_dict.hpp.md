@@ -83,8 +83,8 @@ data:
   isVerificationFile: false
   path: library/sequence/bit_dict.hpp
   requiredBy:
-  - library/sequence/wavelet_matrix.hpp
   - library/search/binary_search/wavelet_search_engine.hpp
+  - library/sequence/wavelet_matrix.hpp
   timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

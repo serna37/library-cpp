@@ -43,8 +43,8 @@ data:
   timestamp: '2026-01-14 14:43:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/string.rolling_hash.test.cpp
   - tests/string.finds.test.cpp
+  - tests/string.rolling_hash.test.cpp
   - tests/various.random.test.cpp
 documentation_of: library/various/random.hpp
 layout: document

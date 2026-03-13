@@ -91,6 +91,8 @@ title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
 - DAGをトポロジカルソートする
 - 閉路がある場合は空配列を返却
 
+行きがけ/帰りがけの順は[こちら](https://momoyama-usagi.com/entry/info-algo-tree-traverse)を参考
+
 ## 計算量
 $O(V+E)$
 - V: 頂点数

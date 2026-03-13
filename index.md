@@ -23,6 +23,9 @@ data:
       title: "\u4E8C\u9805\u5DEE\u3067\u306E\u7D2F\u7A4D\u548C \u53CD\u8EE2"
   - name: library/dp
     pages:
+    - icon: ':warning:'
+      path: library/dp/dfs_memo.hpp
+      title: "\u30E1\u30E2\u5316\u518D\u5E30(\u30B3\u30D4\u30DA\u7528)"
     - icon: ':heavy_check_mark:'
       path: library/dp/doubling.hpp
       title: "\u30C0\u30D6\u30EA\u30F3\u30B0"
@@ -261,9 +264,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/search/bit_search.hpp
       title: "bit\u5168\u63A2\u7D22"
-    - icon: ':warning:'
-      path: library/search/dfs_memo.hpp
-      title: "\u30E1\u30E2\u5316\u518D\u5E30(\u30B3\u30D4\u30DA\u7528)"
     - icon: ':heavy_check_mark:'
       path: library/search/permutation.hpp
       title: "\u9806\u5217\u5168\u63A2\u7D22"
@@ -358,6 +358,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/string/z_algorithm.hpp
       title: Z Algorithm
+  - name: library
+    pages:
+    - icon: ':warning:'
+      path: library/template.hpp
+      title: "\u0E05^>\u03C9<^\u0E05"
   - name: library/various
     pages:
     - icon: ':heavy_check_mark:'

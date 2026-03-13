@@ -372,15 +372,15 @@ data:
   isVerificationFile: false
   path: library/polynomial/fps/formal_power_series.hpp
   requiredBy:
+  - library/polynomial/fps/bernoulli_number.hpp
   - library/polynomial/fps/stirling_second_number.hpp
   - library/polynomial/fps/stirling_first_number.hpp
-  - library/polynomial/fps/bernoulli_number.hpp
   timestamp: '2026-01-21 11:49:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/polynomial.fps.bernoulli_number.test.cpp
-  - tests/polynomial.fps.stirling_second_number.test.cpp
   - tests/polynomial.fps.stirling_first_number.test.cpp
+  - tests/polynomial.fps.stirling_second_number.test.cpp
+  - tests/polynomial.fps.bernoulli_number.test.cpp
 documentation_of: library/polynomial/fps/formal_power_series.hpp
 layout: document
 title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"

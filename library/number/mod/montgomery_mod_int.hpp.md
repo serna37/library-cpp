@@ -120,20 +120,20 @@ data:
   isVerificationFile: false
   path: library/number/mod/montgomery_mod_int.hpp
   requiredBy:
+  - library/polynomial/fps/formal_power_series.hpp
+  - library/polynomial/fps/bernoulli_number.hpp
   - library/polynomial/fps/stirling_second_number.hpp
   - library/polynomial/fps/stirling_first_number.hpp
-  - library/polynomial/fps/bernoulli_number.hpp
-  - library/polynomial/fps/formal_power_series.hpp
   - library/polynomial/fft/convolution_arbitrary_mod.hpp
   timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/polynomial.fps.bernoulli_number.test.cpp
-  - tests/polynomial.fft.convolution_bitwise_or.test.cpp
-  - tests/polynomial.fft.convolution_bitwise_and.test.cpp
-  - tests/polynomial.fps.stirling_second_number.test.cpp
   - tests/polynomial.fps.stirling_first_number.test.cpp
   - tests/polynomial.fft.convolution_bitwise_xor.test.cpp
+  - tests/polynomial.fps.stirling_second_number.test.cpp
+  - tests/polynomial.fft.convolution_bitwise_or.test.cpp
+  - tests/polynomial.fft.convolution_bitwise_and.test.cpp
+  - tests/polynomial.fps.bernoulli_number.test.cpp
 documentation_of: library/number/mod/montgomery_mod_int.hpp
 layout: document
 title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"

@@ -175,16 +175,16 @@ data:
   isVerificationFile: false
   path: library/polynomial/fft/convolution_arbitrary_mod.hpp
   requiredBy:
+  - library/polynomial/fps/formal_power_series.hpp
+  - library/polynomial/fps/bernoulli_number.hpp
   - library/polynomial/fps/stirling_second_number.hpp
   - library/polynomial/fps/stirling_first_number.hpp
-  - library/polynomial/fps/bernoulli_number.hpp
-  - library/polynomial/fps/formal_power_series.hpp
   timestamp: '2026-01-21 11:49:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/polynomial.fps.bernoulli_number.test.cpp
-  - tests/polynomial.fps.stirling_second_number.test.cpp
   - tests/polynomial.fps.stirling_first_number.test.cpp
+  - tests/polynomial.fps.stirling_second_number.test.cpp
+  - tests/polynomial.fps.bernoulli_number.test.cpp
 documentation_of: library/polynomial/fft/convolution_arbitrary_mod.hpp
 layout: document
 title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"

@@ -121,19 +121,19 @@ data:
   isVerificationFile: false
   path: library/polynomial/fft/fast_fourier_transform.hpp
   requiredBy:
+  - library/polynomial/fps/formal_power_series.hpp
+  - library/polynomial/fps/bernoulli_number.hpp
   - library/polynomial/fps/stirling_second_number.hpp
   - library/polynomial/fps/stirling_first_number.hpp
-  - library/polynomial/fps/bernoulli_number.hpp
-  - library/polynomial/fps/formal_power_series.hpp
   - library/polynomial/fft/convolution_fft.hpp
   - library/polynomial/fft/convolution_arbitrary_mod.hpp
   timestamp: '2026-01-21 11:49:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/polynomial.fps.bernoulli_number.test.cpp
-  - tests/polynomial.fps.stirling_second_number.test.cpp
   - tests/polynomial.fps.stirling_first_number.test.cpp
   - tests/polynomial.fft.convolution_fft.test.cpp
+  - tests/polynomial.fps.stirling_second_number.test.cpp
+  - tests/polynomial.fps.bernoulli_number.test.cpp
   - tests/graph.tree.centroid_decomposition.test.cpp
 documentation_of: library/polynomial/fft/fast_fourier_transform.hpp
 layout: document

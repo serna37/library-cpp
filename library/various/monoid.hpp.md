@@ -79,19 +79,19 @@ data:
   isVerificationFile: false
   path: library/various/monoid.hpp
   requiredBy:
-  - library/segtree/segment_tree.hpp
   - library/segtree/unified_segment_tree.hpp
+  - library/segtree/segment_tree.hpp
   - library/segtree/lazy_segment_tree.hpp
   - library/segtree/dual_segment_tree.hpp
   - library/various/monoid_act.hpp
   timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/segtree.dual_segment_tree.test.cpp
-  - tests/segtree.segment_tree.test.cpp
-  - tests/graph.tree.heavy_light_decomposition.test.cpp
   - tests/segtree.lazy_segment_tree.test.cpp
+  - tests/segtree.dual_segment_tree.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp
+  - tests/graph.tree.heavy_light_decomposition.test.cpp
+  - tests/segtree.segment_tree.test.cpp
 documentation_of: library/various/monoid.hpp
 layout: document
 title: "\u30E2\u30CE\u30A4\u30C9"
