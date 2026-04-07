@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/various.mo.test.cpp
     title: "Mo's algorithm\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/various/mo.hpp\"\nstruct Mo {\nprivate:\n  int n,\
@@ -58,7 +58,7 @@ data:
   path: library/various/mo.hpp
   requiredBy: []
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/various.mo.test.cpp
 documentation_of: library/various/mo.hpp

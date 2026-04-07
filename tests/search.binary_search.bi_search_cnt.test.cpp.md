@@ -1,30 +1,30 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/search/binary_search/bi_ge_cnt.hpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u8981\u7D20\
       \u6570"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/search/binary_search/bi_gt_cnt.hpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\u8981\
       \u7D20\u6570"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/search/binary_search/bi_le_cnt.hpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u8981\u7D20\
       \u6570"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/search/binary_search/bi_lt_cnt.hpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u8981\u7D20\
       \u6570"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_B
@@ -69,7 +69,7 @@ data:
   path: tests/search.binary_search.bi_search_cnt.test.cpp
   requiredBy: []
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/search.binary_search.bi_search_cnt.test.cpp
 layout: document

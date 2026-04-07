@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/sequence.merge.test.cpp
     title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/merge.hpp\"\ntemplate <typename T> void\
@@ -30,7 +30,7 @@ data:
   path: library/sequence/merge.hpp
   requiredBy: []
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence.merge.test.cpp
 documentation_of: library/sequence/merge.hpp

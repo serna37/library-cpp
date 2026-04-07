@@ -2,27 +2,27 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/string/finds.hpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/string/rolling_hash.hpp
     title: Rolling Hash
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string.finds.test.cpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/string.rolling_hash.test.cpp
     title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/various.random.test.cpp
     title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/various/random.hpp\"\n#include <chrono>\n#include\
@@ -39,7 +39,7 @@ data:
   - library/string/rolling_hash.hpp
   - library/string/finds.hpp
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string.finds.test.cpp
   - tests/various.random.test.cpp

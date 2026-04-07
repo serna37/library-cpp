@@ -218,7 +218,7 @@ data:
       title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
   - name: library/search/binary_search
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search/bi_ge_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u8981\
         \u7D20\u6570"
@@ -226,164 +226,164 @@ data:
       path: library/search/binary_search/bi_ge_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\
         \u5C0F\u5024"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search/bi_gt_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
         \u8981\u7D20\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search/bi_gt_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
         \u6700\u5C0F\u5024"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search/bi_le_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u8981\
         \u7D20\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search/bi_le_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\
         \u5927\u5024"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search/bi_lt_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u8981\
         \u7D20\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search/bi_lt_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\
         \u5927\u5024"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search/binary_search.hpp
       title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search/binary_search_real.hpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/binary_search/wavelet_search_engine.hpp
       title: Wavelet Search Engine
   - name: library/search
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/bit_search.hpp
       title: "bit\u5168\u63A2\u7D22"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/search/permutation.hpp
       title: "\u9806\u5217\u5168\u63A2\u7D22"
   - name: library/segtree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/segtree/dual_segment_tree.hpp
       title: Dual Segment Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/segtree/fenwick_tree.hpp
       title: Fenwick Tree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/segtree/lazy_segment_tree.hpp
       title: Lazy Segment Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/segtree/segment_tree.hpp
       title: Segment Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/segtree/starry_sky_tree.hpp
       title: Starry Sky Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/segtree/unified_segment_tree.hpp
       title: "\u7D71\u5408\u30BB\u30B0\u6728"
   - name: library/sequence
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/bit_dict.hpp
       title: "\u5B8C\u5099\u8F9E\u66F8"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/collection_util.hpp
       title: "\u914D\u5217\u7CFBUtil"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/compressor.hpp
       title: "\u5EA7\u6A19\u5727\u7E2E"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/difference_sequence.hpp
       title: "\u968E\u5DEE\u6570\u5217"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/dispersion.hpp
       title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/inversion_number.hpp
       title: "\u8EE2\u5012\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/merge.hpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/static_range_count_distinct.hpp
       title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/static_range_frequency.hpp
       title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570"
     - icon: ':warning:'
       path: library/sequence/two_pointer_approach_memo.hpp
       title: "\u5C3A\u53D6\u308A\u6CD5(\u30B3\u30D4\u30DA\u7528)"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/sequence/wavelet_matrix.hpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - name: library/string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/aho_corasick.hpp
       title: Aho Corasick
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/finds.hpp
       title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
         \u30F3"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/join.hpp
       title: "\u6587\u5B57\u5217\u7D50\u5408"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/range.hpp
       title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/rolling_hash.hpp
       title: Rolling Hash
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/run_length.hpp
       title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/split.hpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/split_multi.hpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/trie.hpp
       title: "Trie\u6728"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/util.hpp
       title: "\u6587\u5B57\u5217Util"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/string/z_algorithm.hpp
       title: Z Algorithm
   - name: library/various
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/various/convert.hpp
       title: "\u578B\u5909\u63DB"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/various/mo.hpp
       title: Mo's algorithm
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/various/monoid.hpp
       title: "\u30E2\u30CE\u30A4\u30C9"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/various/monoid_act.hpp
       title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library/various/random.hpp
       title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: library/various/union_find.hpp
       title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
   - name: template
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: template/debug.hpp
       title: "\u3081\u3063\u3061\u3083\u898B\u3084\u3059\u3044debug\u51FA\u529B"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: template/template.hpp
       title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   verificationCategories:
@@ -541,133 +541,133 @@ data:
       path: tests/search.binary_search.bi_ge_val.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\
         \u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search.binary_search.bi_gt_val.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
         \u6700\u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search.binary_search.bi_le_val.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\
         \u5927\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search.binary_search.bi_lt_val.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\
         \u5927\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search.binary_search.bi_search_cnt.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search.binary_search.binary_search.test.cpp
       title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search.binary_search.binary_search_real.test.cpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search.binary_search.wavelet_search_engine.test.cpp
       title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search.bit_search.test.cpp
       title: "bit\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/search.permutation.test.cpp
       title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/segtree.dual_segment_tree.test.cpp
       title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/segtree.fenwick_tree.test.cpp
       title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/segtree.lazy_segment_tree.test.cpp
       title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/segtree.segment_tree.test.cpp
       title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/segtree.starry_sky_tree.test.cpp
       title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/segtree.starry_sky_tree_2.test.cpp
       title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/segtree.unified_segment_tree.test.cpp
       title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/sequence.collection_util.test.cpp
       title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/sequence.difference_sequence.test.cpp
       title: "\u968E\u5DEE\u6570\u5217\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/sequence.dispersion.test.cpp
       title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\u30C6\
         \u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/sequence.inversion_number.test.cpp
       title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u30FBFenwickTree\u306E\
         \u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/sequence.merge.test.cpp
       title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/sequence.static_range_count_distinct.test.cpp
       title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/sequence.static_range_frequency.test.cpp
       title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570\u306E\u30C6\u30B9\
         \u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/sequence.wavelet_matrix.test.cpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
         \u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.aho_corasick.test.cpp
       title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.finds.test.cpp
       title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
         \u30F3\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.join.test.cpp
       title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.range.test.cpp
       title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.rolling_hash.test.cpp
       title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.run_length.test.cpp
       title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.split.test.cpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.split_multi.test.cpp
       title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
         \u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.util.test.cpp
       title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/string.z_algorithm.test.cpp
       title: "Z Algorithm\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/template.debug.test.cpp
       title: "debug\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/template.template.test.cpp
       title: "template\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/various.convert.test.cpp
       title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/various.mo.test.cpp
       title: "Mo's algorithm\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/various.random.test.cpp
       title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tests/various.union_find.test.cpp
       title: "Union Find\u306E\u30C6\u30B9\u30C8"
 layout: toppage

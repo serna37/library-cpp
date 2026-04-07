@@ -13,12 +13,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph.tree.tree_isomorphism.test.cpp
     title: "\u6728 - \u6728\u306E\u540C\u578B\u6027\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/various.union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/various/union_find.hpp\"\nstruct UnionFind {\nprivate:\n\
@@ -41,7 +41,7 @@ data:
   requiredBy:
   - library/graph/mst/kruskal.hpp
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.tree.tree_isomorphism.test.cpp
   - tests/graph.mst.kruskal.test.cpp

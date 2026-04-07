@@ -10,7 +10,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/tree/convert_rooted_tree.hpp
     title: "\u6839\u4ED8\u304D\u6728\u5909\u63DB"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []

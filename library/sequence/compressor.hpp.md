@@ -2,39 +2,39 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/search/binary_search/wavelet_search_engine.hpp
     title: Wavelet Search Engine
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/sequence/inversion_number.hpp
     title: "\u8EE2\u5012\u6570"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/sequence/static_range_count_distinct.hpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/sequence/static_range_frequency.hpp
     title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.wavelet_search_engine.test.cpp
     title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/sequence.inversion_number.test.cpp
     title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u30FBFenwickTree\u306E\
       \u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/sequence.static_range_count_distinct.test.cpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/sequence.static_range_frequency.test.cpp
     title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570\u306E\u30C6\u30B9\
       \u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/various.mo.test.cpp
     title: "Mo's algorithm\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/compressor.hpp\"\ntemplate <typename T>\
@@ -68,7 +68,7 @@ data:
   - library/sequence/inversion_number.hpp
   - library/sequence/static_range_frequency.hpp
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence.inversion_number.test.cpp
   - tests/various.mo.test.cpp

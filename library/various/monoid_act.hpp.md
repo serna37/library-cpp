@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/lazy_segment_tree.hpp
     title: Lazy Segment Tree
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/unified_segment_tree.hpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728"
   _extendedVerifiedWith:
@@ -16,15 +16,15 @@ data:
     path: tests/graph.tree.heavy_light_decomposition.test.cpp
     title: "\u6728 - HLD\u306E\u30C6\u30B9\u30C8 \u6728\u4E0A\u30AF\u30A8\u30EA:\u6700\
       \u5927\u9023\u7D9A\u90E8\u5206\u5217\u548C"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.unified_segment_tree.test.cpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
     links: []
@@ -129,7 +129,7 @@ data:
   - library/segtree/lazy_segment_tree.hpp
   - library/segtree/unified_segment_tree.hpp
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.unified_segment_tree.test.cpp
   - tests/segtree.lazy_segment_tree.test.cpp

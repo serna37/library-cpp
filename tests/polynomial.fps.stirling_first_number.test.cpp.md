@@ -16,7 +16,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/polynomial/fps/stirling_first_number.hpp
     title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
