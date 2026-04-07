@@ -2,6 +2,7 @@
 #include "library/graph/base/graph.hpp"
 pair<vector<vector<long long>>, bool> warshall_froyd(const Graph &G) {
     int N = G.size();
+    const long long INF = 1e18;
     vector<vector<long long>> dis(N, vector<long long>(N, INF));
     for (int v = 0; v < N; ++v) {
         dis[v][v] = 0;

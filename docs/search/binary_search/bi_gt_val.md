@@ -16,7 +16,7 @@ documentation_of: //library/search/binary_search/bi_gt_val.hpp
 sort(A.begin(), A.end());
 int v = bi_gt_val(A, x);
 int v = bi_gt_val(st, x);
-if (v == INF) {
+if (v == 1e18) {
     // 値が存在しなかった
 }
 ```

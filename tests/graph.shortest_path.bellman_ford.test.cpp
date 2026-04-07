@@ -16,7 +16,7 @@ void solve() {
         return;
     }
     for (auto &&v : dis) {
-        if (v == INF) {
+        if (v == 1e18) {
             print("INF");
         } else {
             print(v);

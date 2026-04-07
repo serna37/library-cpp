@@ -9,7 +9,7 @@ documentation_of: //library/graph/mst/kruskal.hpp
 - 最小全域木（グラフ全頂点を満たす最小コスト木）を求める
 - edgesは中でソートしてる
 - 最小全域木の構造体
-  - `cost`: 全域の総コスト。全域に達しない場合、INF
+  - `cost`: 全域の総コスト。全域に達しない場合、`1e18`になる
   - `edges`: 全域に達するための`vector<Edge>`
 
 ## 計算量

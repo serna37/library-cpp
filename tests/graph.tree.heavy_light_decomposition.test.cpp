@@ -16,7 +16,7 @@ void solve() {
     // 載せる構造体
     struct Node {
         int ans, _all, left, right, length;
-        Node() : ans(-INF), _all(0), left(-INF), right(-INF), length(0) {}
+        Node() : ans(-1e18), _all(0), left(-1e18), right(-1e18), length(0) {}
         Node(int val, int len) {
             length = len;
             _all = val * len;
@@ -40,7 +40,7 @@ void solve() {
     auto prod_op = [](const Node &x, const Node &y) -> Node { return x + y; };
     auto prod_e = Node();
     auto apply_op = [](int f, int g) { return g; };
-    auto apply_e = INF;
+    auto apply_e = 1e18;
     auto act_op = [](const Node &x, int a, int sz) -> Node {
         (void)sz;
         return {a, x.length};

@@ -19,7 +19,7 @@ MinSpanTree kruskal(vector<Edge> edges, int v_cnt) {
     }
     // 全域に達しない場合
     if (uf[0] < v_cnt) {
-        total = INF;
+        total = 1e18;
     }
     return {total, es};
 }

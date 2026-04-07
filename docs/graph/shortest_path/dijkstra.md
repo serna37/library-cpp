@@ -20,4 +20,5 @@ $O(ElogV)$
 ## 使い方
 ```cpp
 auto [weight, route] = dijkstra(G, {r});
+// 無限の場合1e18
 ```

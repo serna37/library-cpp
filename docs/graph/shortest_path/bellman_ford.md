@@ -21,4 +21,5 @@ $O(VE)$
 ## 使い方
 ```cpp
 auto [dis, negativeCycle, route] = bellman_ford(G, s);
+// 無限の場合1e18
 ```

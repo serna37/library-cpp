@@ -17,4 +17,5 @@ $O(N^3)$
 ## 使い方
 ```cpp
 auto [dis, negativeCycle] = warshall_froyd(G);
+// 無限の場合1e18
 ```

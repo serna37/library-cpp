@@ -9,13 +9,13 @@ void test_bi_ge_val() {
     assert(bi_ge_val(v, 25ll) == 30);  // 25以上の最小値
     assert(bi_ge_val(v, 20ll) == 20);  // 20ちょうど
     assert(bi_ge_val(v, 5ll) == 10);   // 最小要素より小さい場合
-    assert(bi_ge_val(v, 55ll) == INF); // 最大要素より大きい場合
+    assert(bi_ge_val(v, 55ll) == 1e18); // 最大要素より大きい場合
     // --- Set版のテスト ---
     // setは内部で常にソートされている
     set<int> st = {10, 20, 30, 40, 50};
     assert(bi_ge_val(st, 25ll) == 30);
     assert(bi_ge_val(st, 20ll) == 20);
-    assert(bi_ge_val(st, 60ll) == INF);
+    assert(bi_ge_val(st, 60ll) == 1e18);
     // --- 型の柔軟性テスト (double) ---
     vector<double> vd = {1.1, 2.2, 3.3};
     // 2.0 以上の最小値は 2.2

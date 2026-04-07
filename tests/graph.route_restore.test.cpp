@@ -11,7 +11,7 @@ void solve() {
     Graph G(N);
     G.read(M, 0, true, true);
     auto [dis, route] = dijkstra(G, {s});
-    if (dis[t] == INF) {
+    if (dis[t] == 1e18) {
         print(-1);
         return;
     }

@@ -5,7 +5,7 @@ pair<vector<long long>, vector<int>> dijkstra(const Graph &G,
                                               const vector<int> &starts = {0}) {
     int N = G.size();
     rev_pq<pair<long long, int>> q; // コスト(小さい順), 頂点
-    vector<long long> weight(N, INF);
+    vector<long long> weight(N, 1e18);
     vector<int> route(N, -1);
     for (auto &&v : starts) q.emplace(0, v), weight[v] = 0;
     while (!q.empty()) {

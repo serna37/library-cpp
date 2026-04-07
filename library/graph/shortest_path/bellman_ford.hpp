@@ -3,6 +3,7 @@
 tuple<vector<long long>, bool, vector<int>> bellman_ford(const Graph &G,
                                                          int s = 0) {
     int N = G.size(), loop = 0;
+    const long long INF = 1e18;
     vector<long long> dis(N, INF);
     vector<int> route(N, -1);
     dis[s] = 0;

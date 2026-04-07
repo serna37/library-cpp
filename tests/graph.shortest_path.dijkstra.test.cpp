@@ -12,7 +12,7 @@ void solve() {
     G.read(E, 0, true, true);
     auto [dis, route] = dijkstra(G, {r});
     for (auto &&v : dis) {
-        if (v == INF) {
+        if (v == 1e18) {
             print("INF");
         } else {
             print(v);
