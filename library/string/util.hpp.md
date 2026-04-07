@@ -3,31 +3,31 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.util.test.cpp
     title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/string/util.hpp\"\nstring string_to_lower(string\
-    \ s) {\n    std::transform(all(s), s.begin(), ::tolower);\n    return s;\n}\n\
-    string string_to_upper(string s) {\n    std::transform(all(s), s.begin(), ::toupper);\n\
-    \    return s;\n}\nbool char_is_lower(char c) { // bool\u3067\u8FD4\u3059\n  \
-    \  return islower(c) != 0;\n}\nbool char_is_upper(char c) { // bool\u3067\u8FD4\
-    \u3059\n    return isupper(c) != 0;\n}\n"
-  code: "#pragma once\nstring string_to_lower(string s) {\n    std::transform(all(s),\
-    \ s.begin(), ::tolower);\n    return s;\n}\nstring string_to_upper(string s) {\n\
-    \    std::transform(all(s), s.begin(), ::toupper);\n    return s;\n}\nbool char_is_lower(char\
-    \ c) { // bool\u3067\u8FD4\u3059\n    return islower(c) != 0;\n}\nbool char_is_upper(char\
-    \ c) { // bool\u3067\u8FD4\u3059\n    return isupper(c) != 0;\n}\n"
+    \ s) {\n  std::transform(all(s), s.begin(), ::tolower);\n  return s;\n}\nstring\
+    \ string_to_upper(string s) {\n  std::transform(all(s), s.begin(), ::toupper);\n\
+    \  return s;\n}\nbool char_is_lower(char c) { // bool\u3067\u8FD4\u3059\n  return\
+    \ islower(c) != 0;\n}\nbool char_is_upper(char c) { // bool\u3067\u8FD4\u3059\n\
+    \  return isupper(c) != 0;\n}\n"
+  code: "#pragma once\nstring string_to_lower(string s) {\n  std::transform(all(s),\
+    \ s.begin(), ::tolower);\n  return s;\n}\nstring string_to_upper(string s) {\n\
+    \  std::transform(all(s), s.begin(), ::toupper);\n  return s;\n}\nbool char_is_lower(char\
+    \ c) { // bool\u3067\u8FD4\u3059\n  return islower(c) != 0;\n}\nbool char_is_upper(char\
+    \ c) { // bool\u3067\u8FD4\u3059\n  return isupper(c) != 0;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/string/util.hpp
   requiredBy: []
-  timestamp: '2026-01-14 14:43:43+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/string.util.test.cpp
 documentation_of: library/string/util.hpp

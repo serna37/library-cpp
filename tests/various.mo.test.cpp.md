@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/segtree/fenwick_tree.hpp
     title: Fenwick Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/sequence/compressor.hpp
     title: "\u5EA7\u6A19\u5727\u7E2E"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/various/mo.hpp
     title: Mo's algorithm
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/static_range_inversions_query
@@ -62,8 +62,8 @@ data:
   isVerificationFile: true
   path: tests/various.mo.test.cpp
   requiredBy: []
-  timestamp: '2026-01-20 20:11:22+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/various.mo.test.cpp
 layout: document

@@ -12,15 +12,14 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/factorial.hpp\"\nlong long factorial(int\
-    \ N) {\n    long long res = 1;\n    while (N > 0) res *= N--;\n    return res;\n\
-    }\n"
-  code: "#pragma once\nlong long factorial(int N) {\n    long long res = 1;\n    while\
-    \ (N > 0) res *= N--;\n    return res;\n}\n"
+    \ N) {\n  long long res = 1;\n  while (N > 0) res *= N--;\n  return res;\n}\n"
+  code: "#pragma once\nlong long factorial(int N) {\n  long long res = 1;\n  while\
+    \ (N > 0) res *= N--;\n  return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/factorial.hpp
   requiredBy: []
-  timestamp: '2026-01-07 21:05:45+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.factorial.test.cpp

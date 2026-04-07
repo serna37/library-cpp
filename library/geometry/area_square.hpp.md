@@ -12,16 +12,16 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/geometry/area_square.hpp\"\ntemplate <typename T>\n\
-    double area_square(T x1, T y1, T x2, T y2, T x3, T y3, T x4, T y4) {\n    return\
+    double area_square(T x1, T y1, T x2, T y2, T x3, T y3, T x4, T y4) {\n  return\
     \ hypot(x1 - x3, y1 - y3) * hypot(x2 - x4, y2 - y4) / 2.0;\n}\n"
   code: "#pragma once\ntemplate <typename T>\ndouble area_square(T x1, T y1, T x2,\
-    \ T y2, T x3, T y3, T x4, T y4) {\n    return hypot(x1 - x3, y1 - y3) * hypot(x2\
+    \ T y2, T x3, T y3, T x4, T y4) {\n  return hypot(x1 - x3, y1 - y3) * hypot(x2\
     \ - x4, y2 - y4) / 2.0;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/geometry/area_square.hpp
   requiredBy: []
-  timestamp: '2026-01-07 21:05:45+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/geometry.area_square.test.cpp

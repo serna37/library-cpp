@@ -11,10 +11,10 @@ data:
     path: library/polynomial/fft/subset_zeta_moebius_transform.hpp
     title: "\u4E0B\u4F4D\u96C6\u5408\u306E\u30BC\u30FC\u30BF\u30FB\u30E1\u30D3\u30A6\
       \u30B9\u5909\u63DB"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/sequence/collection_util.hpp
     title: "\u914D\u5217\u7CFBUtil"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -58,7 +58,7 @@ data:
   isVerificationFile: true
   path: tests/polynomial.fft.convolution_bitwise_or.test.cpp
   requiredBy: []
-  timestamp: '2026-01-20 20:11:22+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/polynomial.fft.convolution_bitwise_or.test.cpp

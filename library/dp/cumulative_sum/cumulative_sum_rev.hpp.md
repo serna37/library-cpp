@@ -12,17 +12,17 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/dp/cumulative_sum/cumulative_sum_rev.hpp\"\ntemplate\
-    \ <typename T> vector<long long> cumulative_sum_rev(const vector<T> &A) {\n  \
-    \  int N = A.size();\n    vector<long long> R(N + 1);\n    for (int i = N - 1;\
-    \ i >= 0; --i) R[i] = R[i + 1] + A[i];\n    return R;\n}\n"
+    \ <typename T> vector<long long> cumulative_sum_rev(const vector<T> &A) {\n  int\
+    \ N = A.size();\n  vector<long long> R(N + 1);\n  for (int i = N - 1; i >= 0;\
+    \ --i) R[i] = R[i + 1] + A[i];\n  return R;\n}\n"
   code: "#pragma once\ntemplate <typename T> vector<long long> cumulative_sum_rev(const\
-    \ vector<T> &A) {\n    int N = A.size();\n    vector<long long> R(N + 1);\n  \
-    \  for (int i = N - 1; i >= 0; --i) R[i] = R[i + 1] + A[i];\n    return R;\n}\n"
+    \ vector<T> &A) {\n  int N = A.size();\n  vector<long long> R(N + 1);\n  for (int\
+    \ i = N - 1; i >= 0; --i) R[i] = R[i + 1] + A[i];\n  return R;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/dp/cumulative_sum/cumulative_sum_rev.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/dp.cumulative_sum.cumulative_sum_rev.test.cpp

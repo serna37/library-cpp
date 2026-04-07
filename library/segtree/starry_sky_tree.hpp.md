@@ -2,82 +2,78 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/segtree/unified_segment_tree.hpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.starry_sky_tree.test.cpp
     title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.starry_sky_tree_2.test.cpp
     title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.unified_segment_tree.test.cpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/segtree/starry_sky_tree.hpp\"\ntemplate <bool is_min_mode\
-    \ = true> struct StarrySkyTree {\n  private:\n    int N, sz, log = 1;\n    const\
-    \ int INF = 1e9;\n    vector<int> node;\n    int compare(int a, int b) {\n   \
-    \     if constexpr (is_min_mode) {\n            return min(a, b);\n        } else\
-    \ {\n            return max(a, b);\n        }\n    }\n    int unit_element() {\
-    \ return is_min_mode ? INF : -INF; }\n    void init() {\n        while ((1ll <<\
-    \ log) < N) ++log;\n        node.assign((sz = 1ll << log) << 1, 0);\n    }\n \
-    \   int _star(int i) {\n        int val = compare(node[i << 1 | 0], node[i <<\
-    \ 1 | 1]);\n        node[i << 1 | 0] -= val;\n        node[i << 1 | 1] -= val;\n\
-    \        return val;\n    }\n    void star(int i) { node[i] += _star(i); }\n \
-    \   int sum(int i) {\n        int ans = node[i];\n        while (i >>= 1) ans\
-    \ += node[i];\n        return ans;\n    }\n\n  public:\n    StarrySkyTree(int\
-    \ n) : N(n) { init(); }\n    StarrySkyTree(const vector<int> &a) : N(a.size())\
-    \ {\n        init();\n        for (int i = 0; i < N; ++i) node[i + sz] = a[i];\n\
-    \        for (int i = sz - 1; i >= 1; --i) node[i] = _star(i);\n    }\n    int\
-    \ operator[](int i) { return sum(i + sz); }\n    void apply(int l, int r, const\
-    \ int &v) {\n        if (l >= r) return;\n        int l_bak = l + sz, r_bak =\
-    \ r + sz - 1;\n        for (l += sz, r += sz; l < r; l >>= 1, r >>= 1) {\n   \
-    \         if (l & 1) node[l++] += v;\n            if (r & 1) node[--r] += v;\n\
-    \        }\n        for (int i = l_bak >> 1; i >= 1; i >>= 1) star(i);\n     \
-    \   for (int i = r_bak >> 1; i >= 1; i >>= 1) star(i);\n    }\n    void set(int\
-    \ p, const int &x) { apply(p, p + 1, x - sum(p + sz)); }\n    int prod(int l,\
-    \ int r) {\n        if (l >= r) return unit_element();\n        int ans = unit_element();\n\
-    \        for (l += sz, r += sz; l < r; l >>= 1, r >>= 1) {\n            if (l\
-    \ & 1) ans = compare(ans, sum(l++));\n            if (r & 1) ans = compare(ans,\
-    \ sum(--r));\n        }\n        return ans;\n    }\n};\n"
+    \ = true> struct StarrySkyTree {\nprivate:\n  int N, sz, log = 1;\n  const int\
+    \ INF = 1e9;\n  vector<int> node;\n  int compare(int a, int b) {\n    if constexpr\
+    \ (is_min_mode) {\n      return min(a, b);\n    } else {\n      return max(a,\
+    \ b);\n    }\n  }\n  int unit_element() { return is_min_mode ? INF : -INF; }\n\
+    \  void init() {\n    while ((1ll << log) < N) ++log;\n    node.assign((sz = 1ll\
+    \ << log) << 1, 0);\n  }\n  int _star(int i) {\n    int val = compare(node[i <<\
+    \ 1 | 0], node[i << 1 | 1]);\n    node[i << 1 | 0] -= val;\n    node[i << 1 |\
+    \ 1] -= val;\n    return val;\n  }\n  void star(int i) { node[i] += _star(i);\
+    \ }\n  int sum(int i) {\n    int ans = node[i];\n    while (i >>= 1) ans += node[i];\n\
+    \    return ans;\n  }\n\npublic:\n  StarrySkyTree(int n) : N(n) { init(); }\n\
+    \  StarrySkyTree(const vector<int> &a) : N(a.size()) {\n    init();\n    for (int\
+    \ i = 0; i < N; ++i) node[i + sz] = a[i];\n    for (int i = sz - 1; i >= 1; --i)\
+    \ node[i] = _star(i);\n  }\n  int operator[](int i) { return sum(i + sz); }\n\
+    \  void apply(int l, int r, const int &v) {\n    if (l >= r) return;\n    int\
+    \ l_bak = l + sz, r_bak = r + sz - 1;\n    for (l += sz, r += sz; l < r; l >>=\
+    \ 1, r >>= 1) {\n      if (l & 1) node[l++] += v;\n      if (r & 1) node[--r]\
+    \ += v;\n    }\n    for (int i = l_bak >> 1; i >= 1; i >>= 1) star(i);\n    for\
+    \ (int i = r_bak >> 1; i >= 1; i >>= 1) star(i);\n  }\n  void set(int p, const\
+    \ int &x) { apply(p, p + 1, x - sum(p + sz)); }\n  int prod(int l, int r) {\n\
+    \    if (l >= r) return unit_element();\n    int ans = unit_element();\n    for\
+    \ (l += sz, r += sz; l < r; l >>= 1, r >>= 1) {\n      if (l & 1) ans = compare(ans,\
+    \ sum(l++));\n      if (r & 1) ans = compare(ans, sum(--r));\n    }\n    return\
+    \ ans;\n  }\n};\n"
   code: "#pragma once\ntemplate <bool is_min_mode = true> struct StarrySkyTree {\n\
-    \  private:\n    int N, sz, log = 1;\n    const int INF = 1e9;\n    vector<int>\
-    \ node;\n    int compare(int a, int b) {\n        if constexpr (is_min_mode) {\n\
-    \            return min(a, b);\n        } else {\n            return max(a, b);\n\
-    \        }\n    }\n    int unit_element() { return is_min_mode ? INF : -INF; }\n\
-    \    void init() {\n        while ((1ll << log) < N) ++log;\n        node.assign((sz\
-    \ = 1ll << log) << 1, 0);\n    }\n    int _star(int i) {\n        int val = compare(node[i\
-    \ << 1 | 0], node[i << 1 | 1]);\n        node[i << 1 | 0] -= val;\n        node[i\
-    \ << 1 | 1] -= val;\n        return val;\n    }\n    void star(int i) { node[i]\
-    \ += _star(i); }\n    int sum(int i) {\n        int ans = node[i];\n        while\
-    \ (i >>= 1) ans += node[i];\n        return ans;\n    }\n\n  public:\n    StarrySkyTree(int\
-    \ n) : N(n) { init(); }\n    StarrySkyTree(const vector<int> &a) : N(a.size())\
-    \ {\n        init();\n        for (int i = 0; i < N; ++i) node[i + sz] = a[i];\n\
-    \        for (int i = sz - 1; i >= 1; --i) node[i] = _star(i);\n    }\n    int\
-    \ operator[](int i) { return sum(i + sz); }\n    void apply(int l, int r, const\
-    \ int &v) {\n        if (l >= r) return;\n        int l_bak = l + sz, r_bak =\
-    \ r + sz - 1;\n        for (l += sz, r += sz; l < r; l >>= 1, r >>= 1) {\n   \
-    \         if (l & 1) node[l++] += v;\n            if (r & 1) node[--r] += v;\n\
-    \        }\n        for (int i = l_bak >> 1; i >= 1; i >>= 1) star(i);\n     \
-    \   for (int i = r_bak >> 1; i >= 1; i >>= 1) star(i);\n    }\n    void set(int\
-    \ p, const int &x) { apply(p, p + 1, x - sum(p + sz)); }\n    int prod(int l,\
-    \ int r) {\n        if (l >= r) return unit_element();\n        int ans = unit_element();\n\
-    \        for (l += sz, r += sz; l < r; l >>= 1, r >>= 1) {\n            if (l\
-    \ & 1) ans = compare(ans, sum(l++));\n            if (r & 1) ans = compare(ans,\
-    \ sum(--r));\n        }\n        return ans;\n    }\n};\n"
+    private:\n  int N, sz, log = 1;\n  const int INF = 1e9;\n  vector<int> node;\n\
+    \  int compare(int a, int b) {\n    if constexpr (is_min_mode) {\n      return\
+    \ min(a, b);\n    } else {\n      return max(a, b);\n    }\n  }\n  int unit_element()\
+    \ { return is_min_mode ? INF : -INF; }\n  void init() {\n    while ((1ll << log)\
+    \ < N) ++log;\n    node.assign((sz = 1ll << log) << 1, 0);\n  }\n  int _star(int\
+    \ i) {\n    int val = compare(node[i << 1 | 0], node[i << 1 | 1]);\n    node[i\
+    \ << 1 | 0] -= val;\n    node[i << 1 | 1] -= val;\n    return val;\n  }\n  void\
+    \ star(int i) { node[i] += _star(i); }\n  int sum(int i) {\n    int ans = node[i];\n\
+    \    while (i >>= 1) ans += node[i];\n    return ans;\n  }\n\npublic:\n  StarrySkyTree(int\
+    \ n) : N(n) { init(); }\n  StarrySkyTree(const vector<int> &a) : N(a.size()) {\n\
+    \    init();\n    for (int i = 0; i < N; ++i) node[i + sz] = a[i];\n    for (int\
+    \ i = sz - 1; i >= 1; --i) node[i] = _star(i);\n  }\n  int operator[](int i) {\
+    \ return sum(i + sz); }\n  void apply(int l, int r, const int &v) {\n    if (l\
+    \ >= r) return;\n    int l_bak = l + sz, r_bak = r + sz - 1;\n    for (l += sz,\
+    \ r += sz; l < r; l >>= 1, r >>= 1) {\n      if (l & 1) node[l++] += v;\n    \
+    \  if (r & 1) node[--r] += v;\n    }\n    for (int i = l_bak >> 1; i >= 1; i >>=\
+    \ 1) star(i);\n    for (int i = r_bak >> 1; i >= 1; i >>= 1) star(i);\n  }\n \
+    \ void set(int p, const int &x) { apply(p, p + 1, x - sum(p + sz)); }\n  int prod(int\
+    \ l, int r) {\n    if (l >= r) return unit_element();\n    int ans = unit_element();\n\
+    \    for (l += sz, r += sz; l < r; l >>= 1, r >>= 1) {\n      if (l & 1) ans =\
+    \ compare(ans, sum(l++));\n      if (r & 1) ans = compare(ans, sum(--r));\n  \
+    \  }\n    return ans;\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/segtree/starry_sky_tree.hpp
   requiredBy:
   - library/segtree/unified_segment_tree.hpp
-  timestamp: '2026-01-20 20:11:22+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/segtree.starry_sky_tree.test.cpp
   - tests/segtree.starry_sky_tree_2.test.cpp

@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/number/ext_gcd.hpp
     title: "\u62E1\u5F35Euclid\u306E\u4E92\u9664\u6CD5"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -42,7 +42,7 @@ data:
   isVerificationFile: true
   path: tests/number.ext_gcd.test.cpp
   requiredBy: []
-  timestamp: '2026-01-20 19:53:58+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/number.ext_gcd.test.cpp

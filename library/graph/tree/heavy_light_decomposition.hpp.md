@@ -18,123 +18,112 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n    int from,\
-    \ to;\n    long long cost;\n    int idx;\n    Edge(int from, int to, long long\
-    \ cost = 1, int idx = -1)\n        : from(from), to(to), cost(cost), idx(idx)\
-    \ {}\n};\n#line 3 \"library/graph/base/graph.hpp\"\nstruct Graph {\n    int N;\n\
-    \    vector<vector<Edge>> G;\n    int es;\n    Graph() = default;\n    Graph(int\
-    \ N) : N(N), G(N), es(0) {}\n    const vector<Edge> &operator[](int v) const {\
-    \ return G[v]; }\n    int size() const { return N; }\n    void add(int from, int\
-    \ to, long long cost = 1) {\n        G[from].push_back(Edge(from, to, cost, es++));\n\
-    \    }\n    void add_both(int from, int to, long long cost = 1) {\n        G[from].push_back(Edge(from,\
-    \ to, cost, es));\n        G[to].push_back(Edge(to, from, cost, es++));\n    }\n\
-    \    void read(int M, int padding = -1, bool weighted = false,\n             \
-    \ bool directed = false) {\n        for (int i = 0; i < M; i++) {\n          \
-    \  int u, v;\n            cin >> u >> v;\n            u += padding, v += padding;\n\
-    \            long long cost = 1ll;\n            if (weighted) cin >> cost;\n \
-    \           if (directed) {\n                add(u, v, cost);\n            } else\
-    \ {\n                add_both(u, v, cost);\n            }\n        }\n    }\n\
-    };\n#line 3 \"library/graph/tree/heavy_light_decomposition.hpp\"\nstruct HeavyLightDecomposition\
-    \ : Graph {\n  public:\n    using Graph::G;\n    using Graph::Graph;\n    vector<int>\
-    \ sz, in, out, head, rev, par, dep;\n    void build(int root = 0) {\n        sz.assign(G.size(),\
-    \ 0);\n        in.assign(G.size(), 0);\n        out.assign(G.size(), 0);\n   \
-    \     head.assign(G.size(), 0);\n        rev.assign(G.size(), 0);\n        par.assign(G.size(),\
-    \ 0);\n        dep.assign(G.size(), 0);\n        dfs_sz(root, -1, 0);\n      \
-    \  int t = 0;\n        head[root] = root;\n        dfs_hld(root, -1, t);\n   \
-    \ }\n    /* k: 0-indexed */\n    int la(int v, int k) {\n        while (1) {\n\
-    \            int u = head[v];\n            if (in[v] - k >= in[u]) return rev[in[v]\
-    \ - k];\n            k -= in[v] - in[u] + 1;\n            v = par[u];\n      \
-    \  }\n    }\n    int lca(int u, int v) const {\n        for (;; v = par[head[v]])\
-    \ {\n            if (in[u] > in[v]) swap(u, v);\n            if (head[u] == head[v])\
-    \ return u;\n        }\n    }\n    int dist(int u, int v) const {\n        return\
-    \ dep[u] + dep[v] - 2 * dep[lca(u, v)];\n    }\n    template <typename E, typename\
-    \ Q, typename F, typename S>\n    E query(int u, int v, const E &ti, const Q &q,\
-    \ const F &f, const S &s,\n            bool edge = false) {\n        E l = ti,\
-    \ r = ti;\n        for (;; v = par[head[v]]) {\n            if (in[u] > in[v])\
-    \ swap(u, v), swap(l, r);\n            if (head[u] == head[v]) break;\n      \
-    \      l = f(q(in[head[v]], in[v] + 1), l);\n        }\n        return s(f(q(in[u]\
-    \ + edge, in[v] + 1), l), r);\n    }\n    template <typename E, typename Q, typename\
-    \ F>\n    E query(int u, int v, const E &ti, const Q &q, const F &f,\n       \
-    \     bool edge = false) {\n        return query(u, v, ti, q, f, f, edge);\n \
-    \   }\n    template <typename Q>\n    void add(int u, int v, const Q &q, bool\
-    \ edge = false) {\n        for (;; v = par[head[v]]) {\n            if (in[u]\
-    \ > in[v]) swap(u, v);\n            if (head[u] == head[v]) break;\n         \
-    \   q(in[head[v]], in[v] + 1);\n        }\n        q(in[u] + edge, in[v] + 1);\n\
-    \    }\n    /* {parent, child} */\n    vector<pair<int, int>> compress(vector<int>\
-    \ &remark) {\n        auto cmp = [&](int a, int b) { return in[a] < in[b]; };\n\
-    \        sort(begin(remark), end(remark), cmp);\n        remark.erase(unique(begin(remark),\
-    \ end(remark)), end(remark));\n        int K = (int)remark.size();\n        for\
-    \ (int k = 1; k < K; k++)\n            remark.emplace_back(lca(remark[k - 1],\
-    \ remark[k]));\n        sort(begin(remark), end(remark), cmp);\n        remark.erase(unique(begin(remark),\
-    \ end(remark)), end(remark));\n        vector<pair<int, int>> es;\n        stack<int>\
-    \ st;\n        for (auto &k : remark) {\n            while (!st.empty() && out[st.top()]\
-    \ <= in[k]) st.pop();\n            if (!st.empty()) es.emplace_back(st.top(),\
-    \ k);\n            st.emplace(k);\n        }\n        return es;\n    }\n    explicit\
-    \ HeavyLightDecomposition(const Graph &G) : Graph(G) {}\n\n  private:\n    void\
-    \ dfs_sz(int idx, int p, int d) {\n        dep[idx] = d;\n        par[idx] = p;\n\
-    \        sz[idx] = 1;\n        if (G[idx].size() && G[idx][0].to == p) swap(G[idx][0],\
-    \ G[idx].back());\n        for (auto &&edge : G[idx]) {\n            if (edge.to\
-    \ == p) continue;\n            dfs_sz(edge.to, idx, d + 1);\n            sz[idx]\
-    \ += sz[edge.to];\n            if (sz[G[idx][0].to] < sz[edge.to]) swap(G[idx][0].to,\
-    \ edge.to);\n        }\n    }\n    void dfs_hld(int idx, int p, int &times) {\n\
-    \        in[idx] = times++;\n        rev[in[idx]] = idx;\n        for (auto &&edge\
-    \ : G[idx]) {\n            if (edge.to == p) continue;\n            head[edge.to]\
-    \ = (G[idx][0].to == edge.to ? head[idx] : edge.to);\n            dfs_hld(edge.to,\
-    \ idx, times);\n        }\n        out[idx] = times;\n    }\n};\n"
+  bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n  int from,\
+    \ to;\n  long long cost;\n  int idx;\n  Edge(int from, int to, long long cost\
+    \ = 1, int idx = -1)\n      : from(from), to(to), cost(cost), idx(idx) {}\n};\n\
+    #line 3 \"library/graph/base/graph.hpp\"\nstruct Graph {\n  int N;\n  vector<vector<Edge>>\
+    \ G;\n  int es;\n  Graph() = default;\n  Graph(int N) : N(N), G(N), es(0) {}\n\
+    \  const vector<Edge> &operator[](int v) const { return G[v]; }\n  int size()\
+    \ const { return N; }\n  void add(int from, int to, long long cost = 1) {\n  \
+    \  G[from].push_back(Edge(from, to, cost, es++));\n  }\n  void add_both(int from,\
+    \ int to, long long cost = 1) {\n    G[from].push_back(Edge(from, to, cost, es));\n\
+    \    G[to].push_back(Edge(to, from, cost, es++));\n  }\n  void read(int M, int\
+    \ padding = -1, bool weighted = false,\n            bool directed = false) {\n\
+    \    for (int i = 0; i < M; i++) {\n      int u, v;\n      cin >> u >> v;\n  \
+    \    u += padding, v += padding;\n      long long cost = 1ll;\n      if (weighted)\
+    \ cin >> cost;\n      if (directed) {\n        add(u, v, cost);\n      } else\
+    \ {\n        add_both(u, v, cost);\n      }\n    }\n  }\n};\n#line 3 \"library/graph/tree/heavy_light_decomposition.hpp\"\
+    \nstruct HeavyLightDecomposition : Graph {\npublic:\n  using Graph::G;\n  using\
+    \ Graph::Graph;\n  vector<int> sz, in, out, head, rev, par, dep;\n  void build(int\
+    \ root = 0) {\n    sz.assign(G.size(), 0);\n    in.assign(G.size(), 0);\n    out.assign(G.size(),\
+    \ 0);\n    head.assign(G.size(), 0);\n    rev.assign(G.size(), 0);\n    par.assign(G.size(),\
+    \ 0);\n    dep.assign(G.size(), 0);\n    dfs_sz(root, -1, 0);\n    int t = 0;\n\
+    \    head[root] = root;\n    dfs_hld(root, -1, t);\n  }\n  /* k: 0-indexed */\n\
+    \  int la(int v, int k) {\n    while (1) {\n      int u = head[v];\n      if (in[v]\
+    \ - k >= in[u]) return rev[in[v] - k];\n      k -= in[v] - in[u] + 1;\n      v\
+    \ = par[u];\n    }\n  }\n  int lca(int u, int v) const {\n    for (;; v = par[head[v]])\
+    \ {\n      if (in[u] > in[v]) swap(u, v);\n      if (head[u] == head[v]) return\
+    \ u;\n    }\n  }\n  int dist(int u, int v) const { return dep[u] + dep[v] - 2\
+    \ * dep[lca(u, v)]; }\n  template <typename E, typename Q, typename F, typename\
+    \ S>\n  E query(int u, int v, const E &ti, const Q &q, const F &f, const S &s,\n\
+    \          bool edge = false) {\n    E l = ti, r = ti;\n    for (;; v = par[head[v]])\
+    \ {\n      if (in[u] > in[v]) swap(u, v), swap(l, r);\n      if (head[u] == head[v])\
+    \ break;\n      l = f(q(in[head[v]], in[v] + 1), l);\n    }\n    return s(f(q(in[u]\
+    \ + edge, in[v] + 1), l), r);\n  }\n  template <typename E, typename Q, typename\
+    \ F>\n  E query(int u, int v, const E &ti, const Q &q, const F &f,\n         \
+    \ bool edge = false) {\n    return query(u, v, ti, q, f, f, edge);\n  }\n  template\
+    \ <typename Q> void add(int u, int v, const Q &q, bool edge = false) {\n    for\
+    \ (;; v = par[head[v]]) {\n      if (in[u] > in[v]) swap(u, v);\n      if (head[u]\
+    \ == head[v]) break;\n      q(in[head[v]], in[v] + 1);\n    }\n    q(in[u] + edge,\
+    \ in[v] + 1);\n  }\n  /* {parent, child} */\n  vector<pair<int, int>> compress(vector<int>\
+    \ &remark) {\n    auto cmp = [&](int a, int b) { return in[a] < in[b]; };\n  \
+    \  sort(begin(remark), end(remark), cmp);\n    remark.erase(unique(begin(remark),\
+    \ end(remark)), end(remark));\n    int K = (int)remark.size();\n    for (int k\
+    \ = 1; k < K; k++)\n      remark.emplace_back(lca(remark[k - 1], remark[k]));\n\
+    \    sort(begin(remark), end(remark), cmp);\n    remark.erase(unique(begin(remark),\
+    \ end(remark)), end(remark));\n    vector<pair<int, int>> es;\n    stack<int>\
+    \ st;\n    for (auto &k : remark) {\n      while (!st.empty() && out[st.top()]\
+    \ <= in[k]) st.pop();\n      if (!st.empty()) es.emplace_back(st.top(), k);\n\
+    \      st.emplace(k);\n    }\n    return es;\n  }\n  explicit HeavyLightDecomposition(const\
+    \ Graph &G) : Graph(G) {}\n\nprivate:\n  void dfs_sz(int idx, int p, int d) {\n\
+    \    dep[idx] = d;\n    par[idx] = p;\n    sz[idx] = 1;\n    if (G[idx].size()\
+    \ && G[idx][0].to == p) swap(G[idx][0], G[idx].back());\n    for (auto &&edge\
+    \ : G[idx]) {\n      if (edge.to == p) continue;\n      dfs_sz(edge.to, idx, d\
+    \ + 1);\n      sz[idx] += sz[edge.to];\n      if (sz[G[idx][0].to] < sz[edge.to])\
+    \ swap(G[idx][0].to, edge.to);\n    }\n  }\n  void dfs_hld(int idx, int p, int\
+    \ &times) {\n    in[idx] = times++;\n    rev[in[idx]] = idx;\n    for (auto &&edge\
+    \ : G[idx]) {\n      if (edge.to == p) continue;\n      head[edge.to] = (G[idx][0].to\
+    \ == edge.to ? head[idx] : edge.to);\n      dfs_hld(edge.to, idx, times);\n  \
+    \  }\n    out[idx] = times;\n  }\n};\n"
   code: "#pragma once\n#include \"library/graph/base/graph.hpp\"\nstruct HeavyLightDecomposition\
-    \ : Graph {\n  public:\n    using Graph::G;\n    using Graph::Graph;\n    vector<int>\
-    \ sz, in, out, head, rev, par, dep;\n    void build(int root = 0) {\n        sz.assign(G.size(),\
-    \ 0);\n        in.assign(G.size(), 0);\n        out.assign(G.size(), 0);\n   \
-    \     head.assign(G.size(), 0);\n        rev.assign(G.size(), 0);\n        par.assign(G.size(),\
-    \ 0);\n        dep.assign(G.size(), 0);\n        dfs_sz(root, -1, 0);\n      \
-    \  int t = 0;\n        head[root] = root;\n        dfs_hld(root, -1, t);\n   \
-    \ }\n    /* k: 0-indexed */\n    int la(int v, int k) {\n        while (1) {\n\
-    \            int u = head[v];\n            if (in[v] - k >= in[u]) return rev[in[v]\
-    \ - k];\n            k -= in[v] - in[u] + 1;\n            v = par[u];\n      \
-    \  }\n    }\n    int lca(int u, int v) const {\n        for (;; v = par[head[v]])\
-    \ {\n            if (in[u] > in[v]) swap(u, v);\n            if (head[u] == head[v])\
-    \ return u;\n        }\n    }\n    int dist(int u, int v) const {\n        return\
-    \ dep[u] + dep[v] - 2 * dep[lca(u, v)];\n    }\n    template <typename E, typename\
-    \ Q, typename F, typename S>\n    E query(int u, int v, const E &ti, const Q &q,\
-    \ const F &f, const S &s,\n            bool edge = false) {\n        E l = ti,\
-    \ r = ti;\n        for (;; v = par[head[v]]) {\n            if (in[u] > in[v])\
-    \ swap(u, v), swap(l, r);\n            if (head[u] == head[v]) break;\n      \
-    \      l = f(q(in[head[v]], in[v] + 1), l);\n        }\n        return s(f(q(in[u]\
-    \ + edge, in[v] + 1), l), r);\n    }\n    template <typename E, typename Q, typename\
-    \ F>\n    E query(int u, int v, const E &ti, const Q &q, const F &f,\n       \
-    \     bool edge = false) {\n        return query(u, v, ti, q, f, f, edge);\n \
-    \   }\n    template <typename Q>\n    void add(int u, int v, const Q &q, bool\
-    \ edge = false) {\n        for (;; v = par[head[v]]) {\n            if (in[u]\
-    \ > in[v]) swap(u, v);\n            if (head[u] == head[v]) break;\n         \
-    \   q(in[head[v]], in[v] + 1);\n        }\n        q(in[u] + edge, in[v] + 1);\n\
-    \    }\n    /* {parent, child} */\n    vector<pair<int, int>> compress(vector<int>\
-    \ &remark) {\n        auto cmp = [&](int a, int b) { return in[a] < in[b]; };\n\
-    \        sort(begin(remark), end(remark), cmp);\n        remark.erase(unique(begin(remark),\
-    \ end(remark)), end(remark));\n        int K = (int)remark.size();\n        for\
-    \ (int k = 1; k < K; k++)\n            remark.emplace_back(lca(remark[k - 1],\
-    \ remark[k]));\n        sort(begin(remark), end(remark), cmp);\n        remark.erase(unique(begin(remark),\
-    \ end(remark)), end(remark));\n        vector<pair<int, int>> es;\n        stack<int>\
-    \ st;\n        for (auto &k : remark) {\n            while (!st.empty() && out[st.top()]\
-    \ <= in[k]) st.pop();\n            if (!st.empty()) es.emplace_back(st.top(),\
-    \ k);\n            st.emplace(k);\n        }\n        return es;\n    }\n    explicit\
-    \ HeavyLightDecomposition(const Graph &G) : Graph(G) {}\n\n  private:\n    void\
-    \ dfs_sz(int idx, int p, int d) {\n        dep[idx] = d;\n        par[idx] = p;\n\
-    \        sz[idx] = 1;\n        if (G[idx].size() && G[idx][0].to == p) swap(G[idx][0],\
-    \ G[idx].back());\n        for (auto &&edge : G[idx]) {\n            if (edge.to\
-    \ == p) continue;\n            dfs_sz(edge.to, idx, d + 1);\n            sz[idx]\
-    \ += sz[edge.to];\n            if (sz[G[idx][0].to] < sz[edge.to]) swap(G[idx][0].to,\
-    \ edge.to);\n        }\n    }\n    void dfs_hld(int idx, int p, int &times) {\n\
-    \        in[idx] = times++;\n        rev[in[idx]] = idx;\n        for (auto &&edge\
-    \ : G[idx]) {\n            if (edge.to == p) continue;\n            head[edge.to]\
-    \ = (G[idx][0].to == edge.to ? head[idx] : edge.to);\n            dfs_hld(edge.to,\
-    \ idx, times);\n        }\n        out[idx] = times;\n    }\n};\n"
+    \ : Graph {\npublic:\n  using Graph::G;\n  using Graph::Graph;\n  vector<int>\
+    \ sz, in, out, head, rev, par, dep;\n  void build(int root = 0) {\n    sz.assign(G.size(),\
+    \ 0);\n    in.assign(G.size(), 0);\n    out.assign(G.size(), 0);\n    head.assign(G.size(),\
+    \ 0);\n    rev.assign(G.size(), 0);\n    par.assign(G.size(), 0);\n    dep.assign(G.size(),\
+    \ 0);\n    dfs_sz(root, -1, 0);\n    int t = 0;\n    head[root] = root;\n    dfs_hld(root,\
+    \ -1, t);\n  }\n  /* k: 0-indexed */\n  int la(int v, int k) {\n    while (1)\
+    \ {\n      int u = head[v];\n      if (in[v] - k >= in[u]) return rev[in[v] -\
+    \ k];\n      k -= in[v] - in[u] + 1;\n      v = par[u];\n    }\n  }\n  int lca(int\
+    \ u, int v) const {\n    for (;; v = par[head[v]]) {\n      if (in[u] > in[v])\
+    \ swap(u, v);\n      if (head[u] == head[v]) return u;\n    }\n  }\n  int dist(int\
+    \ u, int v) const { return dep[u] + dep[v] - 2 * dep[lca(u, v)]; }\n  template\
+    \ <typename E, typename Q, typename F, typename S>\n  E query(int u, int v, const\
+    \ E &ti, const Q &q, const F &f, const S &s,\n          bool edge = false) {\n\
+    \    E l = ti, r = ti;\n    for (;; v = par[head[v]]) {\n      if (in[u] > in[v])\
+    \ swap(u, v), swap(l, r);\n      if (head[u] == head[v]) break;\n      l = f(q(in[head[v]],\
+    \ in[v] + 1), l);\n    }\n    return s(f(q(in[u] + edge, in[v] + 1), l), r);\n\
+    \  }\n  template <typename E, typename Q, typename F>\n  E query(int u, int v,\
+    \ const E &ti, const Q &q, const F &f,\n          bool edge = false) {\n    return\
+    \ query(u, v, ti, q, f, f, edge);\n  }\n  template <typename Q> void add(int u,\
+    \ int v, const Q &q, bool edge = false) {\n    for (;; v = par[head[v]]) {\n \
+    \     if (in[u] > in[v]) swap(u, v);\n      if (head[u] == head[v]) break;\n \
+    \     q(in[head[v]], in[v] + 1);\n    }\n    q(in[u] + edge, in[v] + 1);\n  }\n\
+    \  /* {parent, child} */\n  vector<pair<int, int>> compress(vector<int> &remark)\
+    \ {\n    auto cmp = [&](int a, int b) { return in[a] < in[b]; };\n    sort(begin(remark),\
+    \ end(remark), cmp);\n    remark.erase(unique(begin(remark), end(remark)), end(remark));\n\
+    \    int K = (int)remark.size();\n    for (int k = 1; k < K; k++)\n      remark.emplace_back(lca(remark[k\
+    \ - 1], remark[k]));\n    sort(begin(remark), end(remark), cmp);\n    remark.erase(unique(begin(remark),\
+    \ end(remark)), end(remark));\n    vector<pair<int, int>> es;\n    stack<int>\
+    \ st;\n    for (auto &k : remark) {\n      while (!st.empty() && out[st.top()]\
+    \ <= in[k]) st.pop();\n      if (!st.empty()) es.emplace_back(st.top(), k);\n\
+    \      st.emplace(k);\n    }\n    return es;\n  }\n  explicit HeavyLightDecomposition(const\
+    \ Graph &G) : Graph(G) {}\n\nprivate:\n  void dfs_sz(int idx, int p, int d) {\n\
+    \    dep[idx] = d;\n    par[idx] = p;\n    sz[idx] = 1;\n    if (G[idx].size()\
+    \ && G[idx][0].to == p) swap(G[idx][0], G[idx].back());\n    for (auto &&edge\
+    \ : G[idx]) {\n      if (edge.to == p) continue;\n      dfs_sz(edge.to, idx, d\
+    \ + 1);\n      sz[idx] += sz[edge.to];\n      if (sz[G[idx][0].to] < sz[edge.to])\
+    \ swap(G[idx][0].to, edge.to);\n    }\n  }\n  void dfs_hld(int idx, int p, int\
+    \ &times) {\n    in[idx] = times++;\n    rev[in[idx]] = idx;\n    for (auto &&edge\
+    \ : G[idx]) {\n      if (edge.to == p) continue;\n      head[edge.to] = (G[idx][0].to\
+    \ == edge.to ? head[idx] : edge.to);\n      dfs_hld(edge.to, idx, times);\n  \
+    \  }\n    out[idx] = times;\n  }\n};\n"
   dependsOn:
   - library/graph/base/graph.hpp
   - library/graph/base/edge.hpp
   isVerificationFile: false
   path: library/graph/tree/heavy_light_decomposition.hpp
   requiredBy: []
-  timestamp: '2026-01-21 19:52:16+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.tree.heavy_light_decomposition.test.cpp

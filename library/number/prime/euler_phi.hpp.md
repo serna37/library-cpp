@@ -19,20 +19,19 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/prime/euler_phi.hpp\"\ntemplate <typename\
-    \ T> T euler_phi(T n) {\n    T ret = n;\n    for (T i = 2; i * i <= n; ++i) {\n\
-    \        if (n % i == 0) {\n            ret -= ret / i;\n            while (n\
-    \ % i == 0) n /= i;\n        }\n    }\n    if (n > 1) ret -= ret / n;\n    return\
-    \ ret;\n}\n"
-  code: "#pragma once\ntemplate <typename T> T euler_phi(T n) {\n    T ret = n;\n\
-    \    for (T i = 2; i * i <= n; ++i) {\n        if (n % i == 0) {\n           \
-    \ ret -= ret / i;\n            while (n % i == 0) n /= i;\n        }\n    }\n\
-    \    if (n > 1) ret -= ret / n;\n    return ret;\n}\n"
+    \ T> T euler_phi(T n) {\n  T ret = n;\n  for (T i = 2; i * i <= n; ++i) {\n  \
+    \  if (n % i == 0) {\n      ret -= ret / i;\n      while (n % i == 0) n /= i;\n\
+    \    }\n  }\n  if (n > 1) ret -= ret / n;\n  return ret;\n}\n"
+  code: "#pragma once\ntemplate <typename T> T euler_phi(T n) {\n  T ret = n;\n  for\
+    \ (T i = 2; i * i <= n; ++i) {\n    if (n % i == 0) {\n      ret -= ret / i;\n\
+    \      while (n % i == 0) n /= i;\n    }\n  }\n  if (n > 1) ret -= ret / n;\n\
+    \  return ret;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/prime/euler_phi.hpp
   requiredBy:
   - library/number/mod/mod_tetration.hpp
-  timestamp: '2026-01-22 14:26:48+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.mod.mod_tetration.test.cpp

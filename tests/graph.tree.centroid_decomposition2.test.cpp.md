@@ -10,7 +10,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/tree/centroid_decomposition.hpp
     title: "\u91CD\u5FC3\u5206\u89E3"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -73,7 +73,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.centroid_decomposition2.test.cpp
   requiredBy: []
-  timestamp: '2026-01-21 19:52:16+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.centroid_decomposition2.test.cpp

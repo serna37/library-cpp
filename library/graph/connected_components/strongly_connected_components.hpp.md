@@ -18,62 +18,57 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n    int from,\
-    \ to;\n    long long cost;\n    int idx;\n    Edge(int from, int to, long long\
-    \ cost = 1, int idx = -1)\n        : from(from), to(to), cost(cost), idx(idx)\
-    \ {}\n};\n#line 3 \"library/graph/base/graph.hpp\"\nstruct Graph {\n    int N;\n\
-    \    vector<vector<Edge>> G;\n    int es;\n    Graph() = default;\n    Graph(int\
-    \ N) : N(N), G(N), es(0) {}\n    const vector<Edge> &operator[](int v) const {\
-    \ return G[v]; }\n    int size() const { return N; }\n    void add(int from, int\
-    \ to, long long cost = 1) {\n        G[from].push_back(Edge(from, to, cost, es++));\n\
-    \    }\n    void add_both(int from, int to, long long cost = 1) {\n        G[from].push_back(Edge(from,\
-    \ to, cost, es));\n        G[to].push_back(Edge(to, from, cost, es++));\n    }\n\
-    \    void read(int M, int padding = -1, bool weighted = false,\n             \
-    \ bool directed = false) {\n        for (int i = 0; i < M; i++) {\n          \
-    \  int u, v;\n            cin >> u >> v;\n            u += padding, v += padding;\n\
-    \            long long cost = 1ll;\n            if (weighted) cin >> cost;\n \
-    \           if (directed) {\n                add(u, v, cost);\n            } else\
-    \ {\n                add_both(u, v, cost);\n            }\n        }\n    }\n\
-    };\n#line 3 \"library/graph/connected_components/strongly_connected_components.hpp\"\
-    \npair<vector<vector<int>>, vector<int>> scc(const Graph &G) {\n    int N = G.size(),\
-    \ cnt = 0, now = 0;\n    vector<int> ids(N), low(N), ord(N, -1), pth;\n    auto\
-    \ dfs = [&](auto &f, int v) -> void {\n        low[v] = ord[v] = now++;\n    \
-    \    pth.emplace_back(v);\n        // lowlink\n        for (auto &&[from, to,\
-    \ cost, idx] : G[v]) {\n            if (ord[to] == -1) {\n                f(f,\
-    \ to);\n                low[v] = min(low[v], low[to]);\n            } else {\n\
-    \                low[v] = min(low[v], ord[to]);\n            }\n        }\n  \
-    \      if (low[v] == ord[v]) {\n            while (1) {\n                int u\
-    \ = pth.back();\n                pth.pop_back();\n                ord[u] = N,\
-    \ ids[u] = cnt;\n                if (u == v) break;\n            }\n         \
-    \   ++cnt;\n        }\n    };\n    for (int v = 0; v < N; ++v) {\n        if (ord[v]\
-    \ == -1) dfs(dfs, v);\n    }\n    for (int v = 0; v < N; ++v) {\n        ids[v]\
-    \ = cnt - 1 - ids[v];\n    }\n    vector<int> c(cnt);\n    vector<vector<int>>\
-    \ groups(cnt);\n    for (auto &&v : ids) ++c[v];\n    for (int i = 0; i < cnt;\
-    \ ++i) groups[i].reserve(c[i]);\n    for (int i = 0; i < N; ++i) groups[ids[i]].push_back(i);\n\
-    \    return {groups, ids};\n}\n"
+  bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n  int from,\
+    \ to;\n  long long cost;\n  int idx;\n  Edge(int from, int to, long long cost\
+    \ = 1, int idx = -1)\n      : from(from), to(to), cost(cost), idx(idx) {}\n};\n\
+    #line 3 \"library/graph/base/graph.hpp\"\nstruct Graph {\n  int N;\n  vector<vector<Edge>>\
+    \ G;\n  int es;\n  Graph() = default;\n  Graph(int N) : N(N), G(N), es(0) {}\n\
+    \  const vector<Edge> &operator[](int v) const { return G[v]; }\n  int size()\
+    \ const { return N; }\n  void add(int from, int to, long long cost = 1) {\n  \
+    \  G[from].push_back(Edge(from, to, cost, es++));\n  }\n  void add_both(int from,\
+    \ int to, long long cost = 1) {\n    G[from].push_back(Edge(from, to, cost, es));\n\
+    \    G[to].push_back(Edge(to, from, cost, es++));\n  }\n  void read(int M, int\
+    \ padding = -1, bool weighted = false,\n            bool directed = false) {\n\
+    \    for (int i = 0; i < M; i++) {\n      int u, v;\n      cin >> u >> v;\n  \
+    \    u += padding, v += padding;\n      long long cost = 1ll;\n      if (weighted)\
+    \ cin >> cost;\n      if (directed) {\n        add(u, v, cost);\n      } else\
+    \ {\n        add_both(u, v, cost);\n      }\n    }\n  }\n};\n#line 3 \"library/graph/connected_components/strongly_connected_components.hpp\"\
+    \npair<vector<vector<int>>, vector<int>> scc(const Graph &G) {\n  int N = G.size(),\
+    \ cnt = 0, now = 0;\n  vector<int> ids(N), low(N), ord(N, -1), pth;\n  auto dfs\
+    \ = [&](auto &f, int v) -> void {\n    low[v] = ord[v] = now++;\n    pth.emplace_back(v);\n\
+    \    // lowlink\n    for (auto &&[from, to, cost, idx] : G[v]) {\n      if (ord[to]\
+    \ == -1) {\n        f(f, to);\n        low[v] = min(low[v], low[to]);\n      }\
+    \ else {\n        low[v] = min(low[v], ord[to]);\n      }\n    }\n    if (low[v]\
+    \ == ord[v]) {\n      while (1) {\n        int u = pth.back();\n        pth.pop_back();\n\
+    \        ord[u] = N, ids[u] = cnt;\n        if (u == v) break;\n      }\n    \
+    \  ++cnt;\n    }\n  };\n  for (int v = 0; v < N; ++v) {\n    if (ord[v] == -1)\
+    \ dfs(dfs, v);\n  }\n  for (int v = 0; v < N; ++v) {\n    ids[v] = cnt - 1 - ids[v];\n\
+    \  }\n  vector<int> c(cnt);\n  vector<vector<int>> groups(cnt);\n  for (auto &&v\
+    \ : ids) ++c[v];\n  for (int i = 0; i < cnt; ++i) groups[i].reserve(c[i]);\n \
+    \ for (int i = 0; i < N; ++i) groups[ids[i]].push_back(i);\n  return {groups,\
+    \ ids};\n}\n"
   code: "#pragma once\n#include \"library/graph/base/graph.hpp\"\npair<vector<vector<int>>,\
-    \ vector<int>> scc(const Graph &G) {\n    int N = G.size(), cnt = 0, now = 0;\n\
-    \    vector<int> ids(N), low(N), ord(N, -1), pth;\n    auto dfs = [&](auto &f,\
-    \ int v) -> void {\n        low[v] = ord[v] = now++;\n        pth.emplace_back(v);\n\
-    \        // lowlink\n        for (auto &&[from, to, cost, idx] : G[v]) {\n   \
-    \         if (ord[to] == -1) {\n                f(f, to);\n                low[v]\
-    \ = min(low[v], low[to]);\n            } else {\n                low[v] = min(low[v],\
-    \ ord[to]);\n            }\n        }\n        if (low[v] == ord[v]) {\n     \
-    \       while (1) {\n                int u = pth.back();\n                pth.pop_back();\n\
-    \                ord[u] = N, ids[u] = cnt;\n                if (u == v) break;\n\
-    \            }\n            ++cnt;\n        }\n    };\n    for (int v = 0; v <\
-    \ N; ++v) {\n        if (ord[v] == -1) dfs(dfs, v);\n    }\n    for (int v = 0;\
-    \ v < N; ++v) {\n        ids[v] = cnt - 1 - ids[v];\n    }\n    vector<int> c(cnt);\n\
-    \    vector<vector<int>> groups(cnt);\n    for (auto &&v : ids) ++c[v];\n    for\
-    \ (int i = 0; i < cnt; ++i) groups[i].reserve(c[i]);\n    for (int i = 0; i <\
-    \ N; ++i) groups[ids[i]].push_back(i);\n    return {groups, ids};\n}\n"
+    \ vector<int>> scc(const Graph &G) {\n  int N = G.size(), cnt = 0, now = 0;\n\
+    \  vector<int> ids(N), low(N), ord(N, -1), pth;\n  auto dfs = [&](auto &f, int\
+    \ v) -> void {\n    low[v] = ord[v] = now++;\n    pth.emplace_back(v);\n    //\
+    \ lowlink\n    for (auto &&[from, to, cost, idx] : G[v]) {\n      if (ord[to]\
+    \ == -1) {\n        f(f, to);\n        low[v] = min(low[v], low[to]);\n      }\
+    \ else {\n        low[v] = min(low[v], ord[to]);\n      }\n    }\n    if (low[v]\
+    \ == ord[v]) {\n      while (1) {\n        int u = pth.back();\n        pth.pop_back();\n\
+    \        ord[u] = N, ids[u] = cnt;\n        if (u == v) break;\n      }\n    \
+    \  ++cnt;\n    }\n  };\n  for (int v = 0; v < N; ++v) {\n    if (ord[v] == -1)\
+    \ dfs(dfs, v);\n  }\n  for (int v = 0; v < N; ++v) {\n    ids[v] = cnt - 1 - ids[v];\n\
+    \  }\n  vector<int> c(cnt);\n  vector<vector<int>> groups(cnt);\n  for (auto &&v\
+    \ : ids) ++c[v];\n  for (int i = 0; i < cnt; ++i) groups[i].reserve(c[i]);\n \
+    \ for (int i = 0; i < N; ++i) groups[ids[i]].push_back(i);\n  return {groups,\
+    \ ids};\n}\n"
   dependsOn:
   - library/graph/base/graph.hpp
   - library/graph/base/edge.hpp
   isVerificationFile: false
   path: library/graph/connected_components/strongly_connected_components.hpp
   requiredBy: []
-  timestamp: '2026-01-21 11:49:22+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.connected_components.strongly_connected_components.test.cpp

@@ -109,13 +109,12 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n    int from,\
-    \ to;\n    long long cost;\n    int idx;\n    Edge(int from, int to, long long\
-    \ cost = 1, int idx = -1)\n        : from(from), to(to), cost(cost), idx(idx)\
-    \ {}\n};\n"
-  code: "#pragma once\nstruct Edge {\n    int from, to;\n    long long cost;\n   \
-    \ int idx;\n    Edge(int from, int to, long long cost = 1, int idx = -1)\n   \
-    \     : from(from), to(to), cost(cost), idx(idx) {}\n};\n"
+  bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n  int from,\
+    \ to;\n  long long cost;\n  int idx;\n  Edge(int from, int to, long long cost\
+    \ = 1, int idx = -1)\n      : from(from), to(to), cost(cost), idx(idx) {}\n};\n"
+  code: "#pragma once\nstruct Edge {\n  int from, to;\n  long long cost;\n  int idx;\n\
+    \  Edge(int from, int to, long long cost = 1, int idx = -1)\n      : from(from),\
+    \ to(to), cost(cost), idx(idx) {}\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/graph/base/edge.hpp
@@ -136,7 +135,7 @@ data:
   - library/graph/shortest_path/bellman_ford.hpp
   - library/graph/shortest_path/warshall_froyd.hpp
   - library/graph/cycle_detect.hpp
-  timestamp: '2026-01-20 20:11:22+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.tree.tree_isomorphism.test.cpp

@@ -16,7 +16,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/number/prime/prime_test.hpp
     title: "\u7D20\u6570\u5224\u5B9A"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -71,7 +71,7 @@ data:
   isVerificationFile: true
   path: tests/number.prime.eratosthenes.test.cpp
   requiredBy: []
-  timestamp: '2026-01-22 14:26:48+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/number.prime.eratosthenes.test.cpp

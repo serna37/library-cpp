@@ -3,31 +3,31 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/search.binary_search.bi_le_val.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\u5927\
       \u5024\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/search/binary_search/bi_le_val.hpp\"\ntemplate <typename\
-    \ T> T bi_le_val(vector<T> &v, const T &x) {\n    auto it = upper_bound(v.begin(),\
-    \ v.end(), x);\n    return (it == v.begin() ? -1e18 : *--it);\n}\ntemplate <typename\
-    \ T> T bi_le_val(const set<T> &st, const T &x) {\n    auto it = st.upper_bound(x);\n\
-    \    return (it == st.begin() ? -1e18 : *--it);\n}\n"
+    \ T> T bi_le_val(vector<T> &v, const T &x) {\n  auto it = upper_bound(v.begin(),\
+    \ v.end(), x);\n  return (it == v.begin() ? -1e18 : *--it);\n}\ntemplate <typename\
+    \ T> T bi_le_val(const set<T> &st, const T &x) {\n  auto it = st.upper_bound(x);\n\
+    \  return (it == st.begin() ? -1e18 : *--it);\n}\n"
   code: "#pragma once\ntemplate <typename T> T bi_le_val(vector<T> &v, const T &x)\
-    \ {\n    auto it = upper_bound(v.begin(), v.end(), x);\n    return (it == v.begin()\
+    \ {\n  auto it = upper_bound(v.begin(), v.end(), x);\n  return (it == v.begin()\
     \ ? -1e18 : *--it);\n}\ntemplate <typename T> T bi_le_val(const set<T> &st, const\
-    \ T &x) {\n    auto it = st.upper_bound(x);\n    return (it == st.begin() ? -1e18\
+    \ T &x) {\n  auto it = st.upper_bound(x);\n  return (it == st.begin() ? -1e18\
     \ : *--it);\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/search/binary_search/bi_le_val.hpp
   requiredBy: []
-  timestamp: '2026-04-07 03:17:27+00:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/search.binary_search.bi_le_val.test.cpp
 documentation_of: library/search/binary_search/bi_le_val.hpp

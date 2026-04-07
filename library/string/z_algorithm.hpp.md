@@ -3,65 +3,59 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.z_algorithm.test.cpp
     title: "Z Algorithm\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/string/z_algorithm.hpp\"\ntemplate <typename T =\
-    \ char> struct ZAlgorithm {\n  private:\n    vector<T> s;\n    vector<int> deleted;\n\
-    \    vector<vector<int>> delete_hist;\n    vector<int> z;\n    queue<int> cur;\n\
-    \n  public:\n    ZAlgorithm() : delete_hist{{}} {}\n    template <typename S>\
-    \ ZAlgorithm(const S &s) : ZAlgorithm() {\n        for (auto &c : s) add(c);\n\
-    \    }\n    void add(const T &c) {\n        s.emplace_back(c);\n        delete_hist.emplace_back();\n\
-    \        deleted.emplace_back(0ll);\n        z.emplace_back(0ll);\n        z[0ll]++;\n\
-    \        int len = (int)s.size();\n        if (len == 1ll) return;\n        if\
-    \ (s[0ll] == c) {\n            cur.emplace(len - 1ll);\n        } else {\n   \
-    \         deleted[len - 1ll] = 1ll;\n        }\n        auto set = [&](int t,\
-    \ int len) {\n            deleted[t] = 1ll;\n            delete_hist[len].emplace_back(t);\n\
-    \            z[t] = len - t - 1ll;\n        };\n        while (not cur.empty())\
-    \ {\n            int t = cur.front();\n            if (deleted[t]) {\n       \
-    \         cur.pop();\n            } else if (s[len - t - 1ll] == s.back()) {\n\
-    \                break;\n            } else {\n                set(t, len);\n\
-    \                cur.pop();\n            }\n        }\n        if (not cur.empty())\
-    \ {\n            int t = cur.front();\n            for (auto &p : delete_hist[len\
-    \ - t]) {\n                set(p + t, len);\n            }\n        }\n    }\n\
-    \    int get(int k) const { return deleted[k] ? z[k] : (int)s.size() - k; }\n\
-    \    int operator[](int k) const { return get(k); }\n    vector<int> get() {\n\
-    \        vector<int> ret(s.size());\n        for (int i = 0; i < (int)s.size();\
-    \ i++) {\n            ret[i] = get(i);\n        }\n        return ret;\n    }\n\
-    };\n"
-  code: "#pragma once\ntemplate <typename T = char> struct ZAlgorithm {\n  private:\n\
-    \    vector<T> s;\n    vector<int> deleted;\n    vector<vector<int>> delete_hist;\n\
-    \    vector<int> z;\n    queue<int> cur;\n\n  public:\n    ZAlgorithm() : delete_hist{{}}\
-    \ {}\n    template <typename S> ZAlgorithm(const S &s) : ZAlgorithm() {\n    \
-    \    for (auto &c : s) add(c);\n    }\n    void add(const T &c) {\n        s.emplace_back(c);\n\
-    \        delete_hist.emplace_back();\n        deleted.emplace_back(0ll);\n   \
-    \     z.emplace_back(0ll);\n        z[0ll]++;\n        int len = (int)s.size();\n\
-    \        if (len == 1ll) return;\n        if (s[0ll] == c) {\n            cur.emplace(len\
-    \ - 1ll);\n        } else {\n            deleted[len - 1ll] = 1ll;\n        }\n\
-    \        auto set = [&](int t, int len) {\n            deleted[t] = 1ll;\n   \
-    \         delete_hist[len].emplace_back(t);\n            z[t] = len - t - 1ll;\n\
-    \        };\n        while (not cur.empty()) {\n            int t = cur.front();\n\
-    \            if (deleted[t]) {\n                cur.pop();\n            } else\
-    \ if (s[len - t - 1ll] == s.back()) {\n                break;\n            } else\
-    \ {\n                set(t, len);\n                cur.pop();\n            }\n\
-    \        }\n        if (not cur.empty()) {\n            int t = cur.front();\n\
-    \            for (auto &p : delete_hist[len - t]) {\n                set(p + t,\
-    \ len);\n            }\n        }\n    }\n    int get(int k) const { return deleted[k]\
-    \ ? z[k] : (int)s.size() - k; }\n    int operator[](int k) const { return get(k);\
-    \ }\n    vector<int> get() {\n        vector<int> ret(s.size());\n        for\
-    \ (int i = 0; i < (int)s.size(); i++) {\n            ret[i] = get(i);\n      \
-    \  }\n        return ret;\n    }\n};\n"
+    \ char> struct ZAlgorithm {\nprivate:\n  vector<T> s;\n  vector<int> deleted;\n\
+    \  vector<vector<int>> delete_hist;\n  vector<int> z;\n  queue<int> cur;\n\npublic:\n\
+    \  ZAlgorithm() : delete_hist{{}} {}\n  template <typename S> ZAlgorithm(const\
+    \ S &s) : ZAlgorithm() {\n    for (auto &c : s) add(c);\n  }\n  void add(const\
+    \ T &c) {\n    s.emplace_back(c);\n    delete_hist.emplace_back();\n    deleted.emplace_back(0ll);\n\
+    \    z.emplace_back(0ll);\n    z[0ll]++;\n    int len = (int)s.size();\n    if\
+    \ (len == 1ll) return;\n    if (s[0ll] == c) {\n      cur.emplace(len - 1ll);\n\
+    \    } else {\n      deleted[len - 1ll] = 1ll;\n    }\n    auto set = [&](int\
+    \ t, int len) {\n      deleted[t] = 1ll;\n      delete_hist[len].emplace_back(t);\n\
+    \      z[t] = len - t - 1ll;\n    };\n    while (not cur.empty()) {\n      int\
+    \ t = cur.front();\n      if (deleted[t]) {\n        cur.pop();\n      } else\
+    \ if (s[len - t - 1ll] == s.back()) {\n        break;\n      } else {\n      \
+    \  set(t, len);\n        cur.pop();\n      }\n    }\n    if (not cur.empty())\
+    \ {\n      int t = cur.front();\n      for (auto &p : delete_hist[len - t]) {\n\
+    \        set(p + t, len);\n      }\n    }\n  }\n  int get(int k) const { return\
+    \ deleted[k] ? z[k] : (int)s.size() - k; }\n  int operator[](int k) const { return\
+    \ get(k); }\n  vector<int> get() {\n    vector<int> ret(s.size());\n    for (int\
+    \ i = 0; i < (int)s.size(); i++) {\n      ret[i] = get(i);\n    }\n    return\
+    \ ret;\n  }\n};\n"
+  code: "#pragma once\ntemplate <typename T = char> struct ZAlgorithm {\nprivate:\n\
+    \  vector<T> s;\n  vector<int> deleted;\n  vector<vector<int>> delete_hist;\n\
+    \  vector<int> z;\n  queue<int> cur;\n\npublic:\n  ZAlgorithm() : delete_hist{{}}\
+    \ {}\n  template <typename S> ZAlgorithm(const S &s) : ZAlgorithm() {\n    for\
+    \ (auto &c : s) add(c);\n  }\n  void add(const T &c) {\n    s.emplace_back(c);\n\
+    \    delete_hist.emplace_back();\n    deleted.emplace_back(0ll);\n    z.emplace_back(0ll);\n\
+    \    z[0ll]++;\n    int len = (int)s.size();\n    if (len == 1ll) return;\n  \
+    \  if (s[0ll] == c) {\n      cur.emplace(len - 1ll);\n    } else {\n      deleted[len\
+    \ - 1ll] = 1ll;\n    }\n    auto set = [&](int t, int len) {\n      deleted[t]\
+    \ = 1ll;\n      delete_hist[len].emplace_back(t);\n      z[t] = len - t - 1ll;\n\
+    \    };\n    while (not cur.empty()) {\n      int t = cur.front();\n      if (deleted[t])\
+    \ {\n        cur.pop();\n      } else if (s[len - t - 1ll] == s.back()) {\n  \
+    \      break;\n      } else {\n        set(t, len);\n        cur.pop();\n    \
+    \  }\n    }\n    if (not cur.empty()) {\n      int t = cur.front();\n      for\
+    \ (auto &p : delete_hist[len - t]) {\n        set(p + t, len);\n      }\n    }\n\
+    \  }\n  int get(int k) const { return deleted[k] ? z[k] : (int)s.size() - k; }\n\
+    \  int operator[](int k) const { return get(k); }\n  vector<int> get() {\n   \
+    \ vector<int> ret(s.size());\n    for (int i = 0; i < (int)s.size(); i++) {\n\
+    \      ret[i] = get(i);\n    }\n    return ret;\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/string/z_algorithm.hpp
   requiredBy: []
-  timestamp: '2026-01-20 20:11:22+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/string.z_algorithm.test.cpp
 documentation_of: library/string/z_algorithm.hpp

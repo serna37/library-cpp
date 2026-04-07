@@ -12,21 +12,20 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/base_convert.hpp\"\nvector<int> base_convert(long\
-    \ long x, int to) {\n    vector<int> ret;\n    long long t = 1, k = abs(to);\n\
-    \    while (x) {\n        ret.emplace_back((x * t) % k);\n        if (ret.back()\
-    \ < 0) ret.back() += k;\n        x -= ret.back() * t;\n        x /= k;\n     \
-    \   t *= to / k;\n    }\n    if (ret.empty()) ret.emplace_back(0);\n    reverse(ret.begin(),\
-    \ ret.end());\n    return ret;\n}\n"
-  code: "#pragma once\nvector<int> base_convert(long long x, int to) {\n    vector<int>\
-    \ ret;\n    long long t = 1, k = abs(to);\n    while (x) {\n        ret.emplace_back((x\
-    \ * t) % k);\n        if (ret.back() < 0) ret.back() += k;\n        x -= ret.back()\
-    \ * t;\n        x /= k;\n        t *= to / k;\n    }\n    if (ret.empty()) ret.emplace_back(0);\n\
-    \    reverse(ret.begin(), ret.end());\n    return ret;\n}\n"
+    \ long x, int to) {\n  vector<int> ret;\n  long long t = 1, k = abs(to);\n  while\
+    \ (x) {\n    ret.emplace_back((x * t) % k);\n    if (ret.back() < 0) ret.back()\
+    \ += k;\n    x -= ret.back() * t;\n    x /= k;\n    t *= to / k;\n  }\n  if (ret.empty())\
+    \ ret.emplace_back(0);\n  reverse(ret.begin(), ret.end());\n  return ret;\n}\n"
+  code: "#pragma once\nvector<int> base_convert(long long x, int to) {\n  vector<int>\
+    \ ret;\n  long long t = 1, k = abs(to);\n  while (x) {\n    ret.emplace_back((x\
+    \ * t) % k);\n    if (ret.back() < 0) ret.back() += k;\n    x -= ret.back() *\
+    \ t;\n    x /= k;\n    t *= to / k;\n  }\n  if (ret.empty()) ret.emplace_back(0);\n\
+    \  reverse(ret.begin(), ret.end());\n  return ret;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/base_convert.hpp
   requiredBy: []
-  timestamp: '2026-01-08 10:19:27+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.base_convert.test.cpp

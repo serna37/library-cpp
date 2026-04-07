@@ -2,46 +2,44 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/string/finds.hpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/string/rolling_hash.hpp
     title: Rolling Hash
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.finds.test.cpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.rolling_hash.test.cpp
     title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.random.test.cpp
     title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/various/random.hpp\"\n#include <chrono>\n#include\
-    \ <random>\ninline long long random(long long a, long long b) {\n    if (a >=\
-    \ b) return a;\n    static mt19937 mt(chrono::steady_clock::now().time_since_epoch().count());\n\
-    \    uniform_int_distribution<long long> dist(a, b - 1);\n    return dist(mt);\n\
-    }\n"
+    \ <random>\ninline long long random(long long a, long long b) {\n  if (a >= b)\
+    \ return a;\n  static mt19937 mt(chrono::steady_clock::now().time_since_epoch().count());\n\
+    \  uniform_int_distribution<long long> dist(a, b - 1);\n  return dist(mt);\n}\n"
   code: "#pragma once\n#include <chrono>\n#include <random>\ninline long long random(long\
-    \ long a, long long b) {\n    if (a >= b) return a;\n    static mt19937 mt(chrono::steady_clock::now().time_since_epoch().count());\n\
-    \    uniform_int_distribution<long long> dist(a, b - 1);\n    return dist(mt);\n\
-    }\n"
+    \ long a, long long b) {\n  if (a >= b) return a;\n  static mt19937 mt(chrono::steady_clock::now().time_since_epoch().count());\n\
+    \  uniform_int_distribution<long long> dist(a, b - 1);\n  return dist(mt);\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/various/random.hpp
   requiredBy:
   - library/string/rolling_hash.hpp
   - library/string/finds.hpp
-  timestamp: '2026-01-14 14:43:43+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/string.finds.test.cpp
   - tests/various.random.test.cpp

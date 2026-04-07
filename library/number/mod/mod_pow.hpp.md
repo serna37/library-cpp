@@ -24,13 +24,12 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/mod/mod_pow.hpp\"\nlong long mod_pow(long\
-    \ long a, long long n, long long m) {\n    long long res = 1ll;\n    while (n\
-    \ > 0) {\n        if (n & 1) res = res * a % m;\n        a = a * a % m;\n    \
-    \    n >>= 1ll;\n    }\n    return res;\n}\n"
+    \ long a, long long n, long long m) {\n  long long res = 1ll;\n  while (n > 0)\
+    \ {\n    if (n & 1) res = res * a % m;\n    a = a * a % m;\n    n >>= 1ll;\n \
+    \ }\n  return res;\n}\n"
   code: "#pragma once\nlong long mod_pow(long long a, long long n, long long m) {\n\
-    \    long long res = 1ll;\n    while (n > 0) {\n        if (n & 1) res = res *\
-    \ a % m;\n        a = a * a % m;\n        n >>= 1ll;\n    }\n    return res;\n\
-    }\n"
+    \  long long res = 1ll;\n  while (n > 0) {\n    if (n & 1) res = res * a % m;\n\
+    \    a = a * a % m;\n    n >>= 1ll;\n  }\n  return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/mod/mod_pow.hpp
@@ -38,7 +37,7 @@ data:
   - library/number/mod/mod_tetration.hpp
   - library/number/mod/mod_combination.hpp
   - library/number/mod/mod_inverse.hpp
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.mod.mod_combination.test.cpp

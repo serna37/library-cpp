@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/sequence/compressor.hpp
     title: "\u5EA7\u6A19\u5727\u7E2E"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/sequence/static_range_frequency.hpp
     title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/static_range_frequency
@@ -48,8 +48,8 @@ data:
   isVerificationFile: true
   path: tests/sequence.static_range_frequency.test.cpp
   requiredBy: []
-  timestamp: '2026-01-20 20:11:22+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/sequence.static_range_frequency.test.cpp
 layout: document

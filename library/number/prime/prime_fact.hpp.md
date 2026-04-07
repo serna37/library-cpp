@@ -16,18 +16,17 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/prime/prime_fact.hpp\"\nmap<int, int> prime_fact(int\
-    \ N) {\n    map<int, int> P;\n    for (int i = 2; i * i <= N; ++i) {\n       \
-    \ while (N % i == 0) {\n            ++P[i];\n            N /= i;\n        }\n\
-    \    }\n    if (N > 1) ++P[N];\n    return P;\n}\n"
-  code: "#pragma once\nmap<int, int> prime_fact(int N) {\n    map<int, int> P;\n \
-    \   for (int i = 2; i * i <= N; ++i) {\n        while (N % i == 0) {\n       \
-    \     ++P[i];\n            N /= i;\n        }\n    }\n    if (N > 1) ++P[N];\n\
-    \    return P;\n}\n"
+    \ N) {\n  map<int, int> P;\n  for (int i = 2; i * i <= N; ++i) {\n    while (N\
+    \ % i == 0) {\n      ++P[i];\n      N /= i;\n    }\n  }\n  if (N > 1) ++P[N];\n\
+    \  return P;\n}\n"
+  code: "#pragma once\nmap<int, int> prime_fact(int N) {\n  map<int, int> P;\n  for\
+    \ (int i = 2; i * i <= N; ++i) {\n    while (N % i == 0) {\n      ++P[i];\n  \
+    \    N /= i;\n    }\n  }\n  if (N > 1) ++P[N];\n  return P;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/prime/prime_fact.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.prime.prime_fact.test.cpp

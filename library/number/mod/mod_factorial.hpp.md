@@ -15,21 +15,20 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/mod/mod_factorial.hpp\"\nvector<long long>\
-    \ _mf_memo;\nlong long mod_factorial(int x, long long m) {\n    if ((int)_mf_memo.size()\
-    \ > x) return _mf_memo[x];\n    if (_mf_memo.empty()) _mf_memo.push_back(1);\n\
-    \    for (int i = _mf_memo.size(); i <= x; ++i)\n        _mf_memo.push_back(_mf_memo.back()\
-    \ * i % m);\n    return _mf_memo[x];\n}\n"
+    \ _mf_memo;\nlong long mod_factorial(int x, long long m) {\n  if ((int)_mf_memo.size()\
+    \ > x) return _mf_memo[x];\n  if (_mf_memo.empty()) _mf_memo.push_back(1);\n \
+    \ for (int i = _mf_memo.size(); i <= x; ++i)\n    _mf_memo.push_back(_mf_memo.back()\
+    \ * i % m);\n  return _mf_memo[x];\n}\n"
   code: "#pragma once\nvector<long long> _mf_memo;\nlong long mod_factorial(int x,\
-    \ long long m) {\n    if ((int)_mf_memo.size() > x) return _mf_memo[x];\n    if\
-    \ (_mf_memo.empty()) _mf_memo.push_back(1);\n    for (int i = _mf_memo.size();\
-    \ i <= x; ++i)\n        _mf_memo.push_back(_mf_memo.back() * i % m);\n    return\
-    \ _mf_memo[x];\n}\n"
+    \ long long m) {\n  if ((int)_mf_memo.size() > x) return _mf_memo[x];\n  if (_mf_memo.empty())\
+    \ _mf_memo.push_back(1);\n  for (int i = _mf_memo.size(); i <= x; ++i)\n    _mf_memo.push_back(_mf_memo.back()\
+    \ * i % m);\n  return _mf_memo[x];\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/mod/mod_factorial.hpp
   requiredBy:
   - library/number/mod/mod_combination.hpp
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.mod.mod_combination.test.cpp

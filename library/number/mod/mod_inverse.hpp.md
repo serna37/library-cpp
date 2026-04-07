@@ -18,11 +18,10 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/mod/mod_pow.hpp\"\nlong long mod_pow(long\
-    \ long a, long long n, long long m) {\n    long long res = 1ll;\n    while (n\
-    \ > 0) {\n        if (n & 1) res = res * a % m;\n        a = a * a % m;\n    \
-    \    n >>= 1ll;\n    }\n    return res;\n}\n#line 3 \"library/number/mod/mod_inverse.hpp\"\
-    \nlong long mod_inverse(long long a, long long m) { return mod_pow(a, m - 2, m);\
-    \ }\n"
+    \ long a, long long n, long long m) {\n  long long res = 1ll;\n  while (n > 0)\
+    \ {\n    if (n & 1) res = res * a % m;\n    a = a * a % m;\n    n >>= 1ll;\n \
+    \ }\n  return res;\n}\n#line 3 \"library/number/mod/mod_inverse.hpp\"\nlong long\
+    \ mod_inverse(long long a, long long m) { return mod_pow(a, m - 2, m); }\n"
   code: '#pragma once
 
     #include "library/number/mod/mod_pow.hpp"
@@ -37,7 +36,7 @@ data:
   path: library/number/mod/mod_inverse.hpp
   requiredBy:
   - library/number/mod/mod_combination.hpp
-  timestamp: '2026-01-20 20:11:22+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.mod.mod_combination.test.cpp

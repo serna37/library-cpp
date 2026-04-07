@@ -20,61 +20,58 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n    int from,\
-    \ to;\n    long long cost;\n    int idx;\n    Edge(int from, int to, long long\
-    \ cost = 1, int idx = -1)\n        : from(from), to(to), cost(cost), idx(idx)\
-    \ {}\n};\n#line 3 \"library/graph/base/graph.hpp\"\nstruct Graph {\n    int N;\n\
-    \    vector<vector<Edge>> G;\n    int es;\n    Graph() = default;\n    Graph(int\
-    \ N) : N(N), G(N), es(0) {}\n    const vector<Edge> &operator[](int v) const {\
-    \ return G[v]; }\n    int size() const { return N; }\n    void add(int from, int\
-    \ to, long long cost = 1) {\n        G[from].push_back(Edge(from, to, cost, es++));\n\
-    \    }\n    void add_both(int from, int to, long long cost = 1) {\n        G[from].push_back(Edge(from,\
-    \ to, cost, es));\n        G[to].push_back(Edge(to, from, cost, es++));\n    }\n\
-    \    void read(int M, int padding = -1, bool weighted = false,\n             \
-    \ bool directed = false) {\n        for (int i = 0; i < M; i++) {\n          \
-    \  int u, v;\n            cin >> u >> v;\n            u += padding, v += padding;\n\
-    \            long long cost = 1ll;\n            if (weighted) cin >> cost;\n \
-    \           if (directed) {\n                add(u, v, cost);\n            } else\
-    \ {\n                add_both(u, v, cost);\n            }\n        }\n    }\n\
-    };\n#line 3 \"library/graph/tree/centroid_decomposition.hpp\"\nstruct CentroidDecomposition\
-    \ : Graph {\n  public:\n    using Graph::G;\n    using Graph::Graph;\n    Graph\
-    \ tree;\n    int build() {\n        sub.assign(G.size(), 0ll);\n        v.assign(G.size(),\
-    \ 0ll);\n        tree = Graph(G.size());\n        return build_dfs(0ll);\n   \
-    \ }\n    explicit CentroidDecomposition(const Graph &G) : Graph(G) {}\n\n  private:\n\
-    \    vector<int> sub;\n    vector<int> v;\n    inline int build_dfs(int idx, int\
-    \ par) {\n        sub[idx] = 1;\n        for (auto &&edge : G[idx]) {\n      \
-    \      if (edge.to == par or v[edge.to]) continue;\n            sub[idx] += build_dfs(edge.to,\
-    \ idx);\n        }\n        return sub[idx];\n    }\n    inline int search_centroid(int\
-    \ idx, int par, const int mid) {\n        for (auto &&edge : G[idx]) {\n     \
-    \       if (edge.to == par or v[edge.to]) continue;\n            if (sub[edge.to]\
-    \ > mid) return search_centroid(edge.to, idx, mid);\n        }\n        return\
-    \ idx;\n    }\n    inline int build_dfs(int idx) {\n        int centroid = search_centroid(idx,\
-    \ -1, build_dfs(idx, -1) / 2ll);\n        v[centroid] = true;\n        for (auto\
-    \ &&edge : G[centroid]) {\n            if (!v[edge.to]) tree.add(centroid, build_dfs(edge.to));\n\
-    \        }\n        v[centroid] = false;\n        return centroid;\n    }\n};\n"
+  bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n  int from,\
+    \ to;\n  long long cost;\n  int idx;\n  Edge(int from, int to, long long cost\
+    \ = 1, int idx = -1)\n      : from(from), to(to), cost(cost), idx(idx) {}\n};\n\
+    #line 3 \"library/graph/base/graph.hpp\"\nstruct Graph {\n  int N;\n  vector<vector<Edge>>\
+    \ G;\n  int es;\n  Graph() = default;\n  Graph(int N) : N(N), G(N), es(0) {}\n\
+    \  const vector<Edge> &operator[](int v) const { return G[v]; }\n  int size()\
+    \ const { return N; }\n  void add(int from, int to, long long cost = 1) {\n  \
+    \  G[from].push_back(Edge(from, to, cost, es++));\n  }\n  void add_both(int from,\
+    \ int to, long long cost = 1) {\n    G[from].push_back(Edge(from, to, cost, es));\n\
+    \    G[to].push_back(Edge(to, from, cost, es++));\n  }\n  void read(int M, int\
+    \ padding = -1, bool weighted = false,\n            bool directed = false) {\n\
+    \    for (int i = 0; i < M; i++) {\n      int u, v;\n      cin >> u >> v;\n  \
+    \    u += padding, v += padding;\n      long long cost = 1ll;\n      if (weighted)\
+    \ cin >> cost;\n      if (directed) {\n        add(u, v, cost);\n      } else\
+    \ {\n        add_both(u, v, cost);\n      }\n    }\n  }\n};\n#line 3 \"library/graph/tree/centroid_decomposition.hpp\"\
+    \nstruct CentroidDecomposition : Graph {\npublic:\n  using Graph::G;\n  using\
+    \ Graph::Graph;\n  Graph tree;\n  int build() {\n    sub.assign(G.size(), 0ll);\n\
+    \    v.assign(G.size(), 0ll);\n    tree = Graph(G.size());\n    return build_dfs(0ll);\n\
+    \  }\n  explicit CentroidDecomposition(const Graph &G) : Graph(G) {}\n\nprivate:\n\
+    \  vector<int> sub;\n  vector<int> v;\n  inline int build_dfs(int idx, int par)\
+    \ {\n    sub[idx] = 1;\n    for (auto &&edge : G[idx]) {\n      if (edge.to ==\
+    \ par or v[edge.to]) continue;\n      sub[idx] += build_dfs(edge.to, idx);\n \
+    \   }\n    return sub[idx];\n  }\n  inline int search_centroid(int idx, int par,\
+    \ const int mid) {\n    for (auto &&edge : G[idx]) {\n      if (edge.to == par\
+    \ or v[edge.to]) continue;\n      if (sub[edge.to] > mid) return search_centroid(edge.to,\
+    \ idx, mid);\n    }\n    return idx;\n  }\n  inline int build_dfs(int idx) {\n\
+    \    int centroid = search_centroid(idx, -1, build_dfs(idx, -1) / 2ll);\n    v[centroid]\
+    \ = true;\n    for (auto &&edge : G[centroid]) {\n      if (!v[edge.to]) tree.add(centroid,\
+    \ build_dfs(edge.to));\n    }\n    v[centroid] = false;\n    return centroid;\n\
+    \  }\n};\n"
   code: "#pragma once\n#include \"library/graph/base/graph.hpp\"\nstruct CentroidDecomposition\
-    \ : Graph {\n  public:\n    using Graph::G;\n    using Graph::Graph;\n    Graph\
-    \ tree;\n    int build() {\n        sub.assign(G.size(), 0ll);\n        v.assign(G.size(),\
-    \ 0ll);\n        tree = Graph(G.size());\n        return build_dfs(0ll);\n   \
-    \ }\n    explicit CentroidDecomposition(const Graph &G) : Graph(G) {}\n\n  private:\n\
-    \    vector<int> sub;\n    vector<int> v;\n    inline int build_dfs(int idx, int\
-    \ par) {\n        sub[idx] = 1;\n        for (auto &&edge : G[idx]) {\n      \
-    \      if (edge.to == par or v[edge.to]) continue;\n            sub[idx] += build_dfs(edge.to,\
-    \ idx);\n        }\n        return sub[idx];\n    }\n    inline int search_centroid(int\
-    \ idx, int par, const int mid) {\n        for (auto &&edge : G[idx]) {\n     \
-    \       if (edge.to == par or v[edge.to]) continue;\n            if (sub[edge.to]\
-    \ > mid) return search_centroid(edge.to, idx, mid);\n        }\n        return\
-    \ idx;\n    }\n    inline int build_dfs(int idx) {\n        int centroid = search_centroid(idx,\
-    \ -1, build_dfs(idx, -1) / 2ll);\n        v[centroid] = true;\n        for (auto\
-    \ &&edge : G[centroid]) {\n            if (!v[edge.to]) tree.add(centroid, build_dfs(edge.to));\n\
-    \        }\n        v[centroid] = false;\n        return centroid;\n    }\n};\n"
+    \ : Graph {\npublic:\n  using Graph::G;\n  using Graph::Graph;\n  Graph tree;\n\
+    \  int build() {\n    sub.assign(G.size(), 0ll);\n    v.assign(G.size(), 0ll);\n\
+    \    tree = Graph(G.size());\n    return build_dfs(0ll);\n  }\n  explicit CentroidDecomposition(const\
+    \ Graph &G) : Graph(G) {}\n\nprivate:\n  vector<int> sub;\n  vector<int> v;\n\
+    \  inline int build_dfs(int idx, int par) {\n    sub[idx] = 1;\n    for (auto\
+    \ &&edge : G[idx]) {\n      if (edge.to == par or v[edge.to]) continue;\n    \
+    \  sub[idx] += build_dfs(edge.to, idx);\n    }\n    return sub[idx];\n  }\n  inline\
+    \ int search_centroid(int idx, int par, const int mid) {\n    for (auto &&edge\
+    \ : G[idx]) {\n      if (edge.to == par or v[edge.to]) continue;\n      if (sub[edge.to]\
+    \ > mid) return search_centroid(edge.to, idx, mid);\n    }\n    return idx;\n\
+    \  }\n  inline int build_dfs(int idx) {\n    int centroid = search_centroid(idx,\
+    \ -1, build_dfs(idx, -1) / 2ll);\n    v[centroid] = true;\n    for (auto &&edge\
+    \ : G[centroid]) {\n      if (!v[edge.to]) tree.add(centroid, build_dfs(edge.to));\n\
+    \    }\n    v[centroid] = false;\n    return centroid;\n  }\n};\n"
   dependsOn:
   - library/graph/base/graph.hpp
   - library/graph/base/edge.hpp
   isVerificationFile: false
   path: library/graph/tree/centroid_decomposition.hpp
   requiredBy: []
-  timestamp: '2026-01-21 19:52:16+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.tree.centroid_decomposition.test.cpp

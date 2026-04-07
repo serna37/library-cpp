@@ -13,10 +13,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/tree/tree_isomorphism.hpp
     title: "\u6728\u306E\u540C\u578B\u6027\u5224\u5B9A"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/various/union_find.hpp
     title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -69,7 +69,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.tree_isomorphism.test.cpp
   requiredBy: []
-  timestamp: '2026-01-21 19:52:16+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.tree_isomorphism.test.cpp

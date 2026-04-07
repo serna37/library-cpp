@@ -1,18 +1,18 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/search/binary_search/bi_lt_val.hpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\u5927\
       \u5024"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
@@ -61,8 +61,8 @@ data:
   isVerificationFile: true
   path: tests/search.binary_search.bi_lt_val.test.cpp
   requiredBy: []
-  timestamp: '2026-04-07 03:17:27+00:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/search.binary_search.bi_lt_val.test.cpp
 layout: document

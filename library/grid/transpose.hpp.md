@@ -12,19 +12,19 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/grid/transpose.hpp\"\ntemplate <typename T> vector<vector<T>>\
-    \ transpose(const vector<vector<T>> &G) {\n    int H = G.size(), W = G[0].size();\n\
-    \    vector<vector<T>> _G(W, vector<T>(H));\n    for (int i = 0; i < H; ++i) {\n\
-    \        for (int j = 0; j < W; ++j) {\n            _G[j][i] = G[i][j];\n    \
-    \    }\n    }\n    return _G;\n}\n"
+    \ transpose(const vector<vector<T>> &G) {\n  int H = G.size(), W = G[0].size();\n\
+    \  vector<vector<T>> _G(W, vector<T>(H));\n  for (int i = 0; i < H; ++i) {\n \
+    \   for (int j = 0; j < W; ++j) {\n      _G[j][i] = G[i][j];\n    }\n  }\n  return\
+    \ _G;\n}\n"
   code: "#pragma once\ntemplate <typename T> vector<vector<T>> transpose(const vector<vector<T>>\
-    \ &G) {\n    int H = G.size(), W = G[0].size();\n    vector<vector<T>> _G(W, vector<T>(H));\n\
-    \    for (int i = 0; i < H; ++i) {\n        for (int j = 0; j < W; ++j) {\n  \
-    \          _G[j][i] = G[i][j];\n        }\n    }\n    return _G;\n}\n"
+    \ &G) {\n  int H = G.size(), W = G[0].size();\n  vector<vector<T>> _G(W, vector<T>(H));\n\
+    \  for (int i = 0; i < H; ++i) {\n    for (int j = 0; j < W; ++j) {\n      _G[j][i]\
+    \ = G[i][j];\n    }\n  }\n  return _G;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/grid/transpose.hpp
   requiredBy: []
-  timestamp: '2026-01-07 21:05:45+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/grid.transpose.test.cpp

@@ -13,36 +13,35 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph.tree.tree_isomorphism.test.cpp
     title: "\u6728 - \u6728\u306E\u540C\u578B\u6027\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"library/various/union_find.hpp\"\nstruct UnionFind {\n \
-    \ private:\n    vector<int> parent, size;\n\n  public:\n    UnionFind(int N) {\n\
-    \        parent.assign(N, -1);\n        size.assign(N, 1);\n    }\n    int operator[](int\
-    \ p) { return size[find(p)]; }\n    int find(int p) { return !~parent[p] ? p :\
-    \ (parent[p] = find(parent[p])); }\n    bool unite(int a, int b) {\n        int\
-    \ x = find(a), y = find(b);\n        if (x == y) return false;\n        if (size[x]\
-    \ > size[y]) swap(x, y);\n        parent[x] = y, size[y] += size[x];\n       \
-    \ return true;\n    }\n};\n"
-  code: "#pragma once\nstruct UnionFind {\n  private:\n    vector<int> parent, size;\n\
-    \n  public:\n    UnionFind(int N) {\n        parent.assign(N, -1);\n        size.assign(N,\
-    \ 1);\n    }\n    int operator[](int p) { return size[find(p)]; }\n    int find(int\
-    \ p) { return !~parent[p] ? p : (parent[p] = find(parent[p])); }\n    bool unite(int\
-    \ a, int b) {\n        int x = find(a), y = find(b);\n        if (x == y) return\
-    \ false;\n        if (size[x] > size[y]) swap(x, y);\n        parent[x] = y, size[y]\
-    \ += size[x];\n        return true;\n    }\n};\n"
+  bundledCode: "#line 2 \"library/various/union_find.hpp\"\nstruct UnionFind {\nprivate:\n\
+    \  vector<int> parent, size;\n\npublic:\n  UnionFind(int N) {\n    parent.assign(N,\
+    \ -1);\n    size.assign(N, 1);\n  }\n  int operator[](int p) { return size[find(p)];\
+    \ }\n  int find(int p) { return !~parent[p] ? p : (parent[p] = find(parent[p]));\
+    \ }\n  bool unite(int a, int b) {\n    int x = find(a), y = find(b);\n    if (x\
+    \ == y) return false;\n    if (size[x] > size[y]) swap(x, y);\n    parent[x] =\
+    \ y, size[y] += size[x];\n    return true;\n  }\n};\n"
+  code: "#pragma once\nstruct UnionFind {\nprivate:\n  vector<int> parent, size;\n\
+    \npublic:\n  UnionFind(int N) {\n    parent.assign(N, -1);\n    size.assign(N,\
+    \ 1);\n  }\n  int operator[](int p) { return size[find(p)]; }\n  int find(int\
+    \ p) { return !~parent[p] ? p : (parent[p] = find(parent[p])); }\n  bool unite(int\
+    \ a, int b) {\n    int x = find(a), y = find(b);\n    if (x == y) return false;\n\
+    \    if (size[x] > size[y]) swap(x, y);\n    parent[x] = y, size[y] += size[x];\n\
+    \    return true;\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/various/union_find.hpp
   requiredBy:
   - library/graph/mst/kruskal.hpp
-  timestamp: '2026-01-20 20:11:22+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/graph.tree.tree_isomorphism.test.cpp
   - tests/graph.mst.kruskal.test.cpp

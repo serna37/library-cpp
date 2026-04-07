@@ -13,18 +13,18 @@ data:
     links: []
   bundledCode: "#line 2 \"library/dp/cumulative_sum/cumulative_sum_diff.hpp\"\ntemplate\
     \ <typename T>\nvector<long long> cumulative_sum_diff(const vector<T> &A) {\n\
-    \    int N = A.size();\n    vector<long long> S(N + 1);\n    for (int i = 0; i\
-    \ < N; ++i) {\n        S[i + 1] = S[i];\n        if (i & 1) S[i + 1] += abs(A[i]\
-    \ - A[i - 1]);\n    }\n    return S;\n}\n"
+    \  int N = A.size();\n  vector<long long> S(N + 1);\n  for (int i = 0; i < N;\
+    \ ++i) {\n    S[i + 1] = S[i];\n    if (i & 1) S[i + 1] += abs(A[i] - A[i - 1]);\n\
+    \  }\n  return S;\n}\n"
   code: "#pragma once\ntemplate <typename T>\nvector<long long> cumulative_sum_diff(const\
-    \ vector<T> &A) {\n    int N = A.size();\n    vector<long long> S(N + 1);\n  \
-    \  for (int i = 0; i < N; ++i) {\n        S[i + 1] = S[i];\n        if (i & 1)\
-    \ S[i + 1] += abs(A[i] - A[i - 1]);\n    }\n    return S;\n}\n"
+    \ vector<T> &A) {\n  int N = A.size();\n  vector<long long> S(N + 1);\n  for (int\
+    \ i = 0; i < N; ++i) {\n    S[i + 1] = S[i];\n    if (i & 1) S[i + 1] += abs(A[i]\
+    \ - A[i - 1]);\n  }\n  return S;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/dp/cumulative_sum/cumulative_sum_diff.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/dp.cumulative_sum.cumulative_sum_diff.test.cpp

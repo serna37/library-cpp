@@ -2,64 +2,63 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/search/binary_search/wavelet_search_engine.hpp
     title: Wavelet Search Engine
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/sequence/inversion_number.hpp
     title: "\u8EE2\u5012\u6570"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/sequence/static_range_count_distinct.hpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/sequence/static_range_frequency.hpp
     title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/search.binary_search.wavelet_search_engine.test.cpp
     title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.inversion_number.test.cpp
     title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u30FBFenwickTree\u306E\
       \u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.static_range_count_distinct.test.cpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.static_range_frequency.test.cpp
     title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570\u306E\u30C6\u30B9\
       \u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.mo.test.cpp
     title: "Mo's algorithm\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/compressor.hpp\"\ntemplate <typename T>\
-    \ struct Compressor {\n    vector<T> origin, dict;\n    Compressor(const vector<T>\
-    \ &v) : origin(v), dict(v) {\n        sort(dict.begin(), dict.end());\n      \
-    \  dict.erase(unique(dict.begin(), dict.end()), dict.end());\n    }\n    int size()\
-    \ const { return dict.size(); }\n    // \u5024 -> ID (\u5727\u7E2E)\n    int get_id(T\
-    \ x) const {\n        return lower_bound(dict.begin(), dict.end(), x) - dict.begin();\n\
-    \    }\n    // \u5024 -> ID (upper_bound\u7248)\n    int get_upper_id(T x) const\
-    \ {\n        return upper_bound(dict.begin(), dict.end(), x) - dict.begin();\n\
-    \    }\n    // ID -> \u5024 (\u5FA9\u5143)\n    T get_val(int id) const { return\
-    \ dict[id]; }\n    // \u3059\u3079\u3066\u5727\u7E2E\n    vector<int> get_all()\
-    \ {\n        vector<int> res;\n        for (auto &&x : origin) res.emplace_back(get_id(x));\n\
-    \        return res;\n    }\n};\n"
-  code: "#pragma once\ntemplate <typename T> struct Compressor {\n    vector<T> origin,\
-    \ dict;\n    Compressor(const vector<T> &v) : origin(v), dict(v) {\n        sort(dict.begin(),\
-    \ dict.end());\n        dict.erase(unique(dict.begin(), dict.end()), dict.end());\n\
-    \    }\n    int size() const { return dict.size(); }\n    // \u5024 -> ID (\u5727\
-    \u7E2E)\n    int get_id(T x) const {\n        return lower_bound(dict.begin(),\
-    \ dict.end(), x) - dict.begin();\n    }\n    // \u5024 -> ID (upper_bound\u7248\
-    )\n    int get_upper_id(T x) const {\n        return upper_bound(dict.begin(),\
-    \ dict.end(), x) - dict.begin();\n    }\n    // ID -> \u5024 (\u5FA9\u5143)\n\
-    \    T get_val(int id) const { return dict[id]; }\n    // \u3059\u3079\u3066\u5727\
-    \u7E2E\n    vector<int> get_all() {\n        vector<int> res;\n        for (auto\
-    \ &&x : origin) res.emplace_back(get_id(x));\n        return res;\n    }\n};\n"
+    \ struct Compressor {\n  vector<T> origin, dict;\n  Compressor(const vector<T>\
+    \ &v) : origin(v), dict(v) {\n    sort(dict.begin(), dict.end());\n    dict.erase(unique(dict.begin(),\
+    \ dict.end()), dict.end());\n  }\n  int size() const { return dict.size(); }\n\
+    \  // \u5024 -> ID (\u5727\u7E2E)\n  int get_id(T x) const {\n    return lower_bound(dict.begin(),\
+    \ dict.end(), x) - dict.begin();\n  }\n  // \u5024 -> ID (upper_bound\u7248)\n\
+    \  int get_upper_id(T x) const {\n    return upper_bound(dict.begin(), dict.end(),\
+    \ x) - dict.begin();\n  }\n  // ID -> \u5024 (\u5FA9\u5143)\n  T get_val(int id)\
+    \ const { return dict[id]; }\n  // \u3059\u3079\u3066\u5727\u7E2E\n  vector<int>\
+    \ get_all() {\n    vector<int> res;\n    for (auto &&x : origin) res.emplace_back(get_id(x));\n\
+    \    return res;\n  }\n};\n"
+  code: "#pragma once\ntemplate <typename T> struct Compressor {\n  vector<T> origin,\
+    \ dict;\n  Compressor(const vector<T> &v) : origin(v), dict(v) {\n    sort(dict.begin(),\
+    \ dict.end());\n    dict.erase(unique(dict.begin(), dict.end()), dict.end());\n\
+    \  }\n  int size() const { return dict.size(); }\n  // \u5024 -> ID (\u5727\u7E2E\
+    )\n  int get_id(T x) const {\n    return lower_bound(dict.begin(), dict.end(),\
+    \ x) - dict.begin();\n  }\n  // \u5024 -> ID (upper_bound\u7248)\n  int get_upper_id(T\
+    \ x) const {\n    return upper_bound(dict.begin(), dict.end(), x) - dict.begin();\n\
+    \  }\n  // ID -> \u5024 (\u5FA9\u5143)\n  T get_val(int id) const { return dict[id];\
+    \ }\n  // \u3059\u3079\u3066\u5727\u7E2E\n  vector<int> get_all() {\n    vector<int>\
+    \ res;\n    for (auto &&x : origin) res.emplace_back(get_id(x));\n    return res;\n\
+    \  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/compressor.hpp
@@ -68,8 +67,8 @@ data:
   - library/sequence/static_range_count_distinct.hpp
   - library/sequence/inversion_number.hpp
   - library/sequence/static_range_frequency.hpp
-  timestamp: '2026-01-20 20:11:22+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/sequence.inversion_number.test.cpp
   - tests/various.mo.test.cpp

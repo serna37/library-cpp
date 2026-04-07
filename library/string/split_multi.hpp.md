@@ -3,30 +3,29 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.split_multi.test.cpp
     title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
       \u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/string/split_multi.hpp\"\nvector<string> split_multi(const\
-    \ string &S, const string &seps) {\n    vector<string> res = {\"\"};\n    for\
-    \ (auto &&v : S) {\n        if (count(all(seps), v)) {\n            res.emplace_back(\"\
-    \");\n        } else {\n            res.back() += v;\n        }\n    }\n    return\
-    \ res;\n}\n"
+    \ string &S, const string &seps) {\n  vector<string> res = {\"\"};\n  for (auto\
+    \ &&v : S) {\n    if (count(all(seps), v)) {\n      res.emplace_back(\"\");\n\
+    \    } else {\n      res.back() += v;\n    }\n  }\n  return res;\n}\n"
   code: "#pragma once\nvector<string> split_multi(const string &S, const string &seps)\
-    \ {\n    vector<string> res = {\"\"};\n    for (auto &&v : S) {\n        if (count(all(seps),\
-    \ v)) {\n            res.emplace_back(\"\");\n        } else {\n            res.back()\
-    \ += v;\n        }\n    }\n    return res;\n}\n"
+    \ {\n  vector<string> res = {\"\"};\n  for (auto &&v : S) {\n    if (count(all(seps),\
+    \ v)) {\n      res.emplace_back(\"\");\n    } else {\n      res.back() += v;\n\
+    \    }\n  }\n  return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/string/split_multi.hpp
   requiredBy: []
-  timestamp: '2026-01-07 21:05:45+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/string.split_multi.test.cpp
 documentation_of: library/string/split_multi.hpp

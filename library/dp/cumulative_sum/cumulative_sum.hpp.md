@@ -12,17 +12,17 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/dp/cumulative_sum/cumulative_sum.hpp\"\nvector<long\
-    \ long> cumulative_sum(const vector<long long> &A) {\n    int N = A.size();\n\
-    \    vector<long long> S(N + 1);\n    for (int i = 0; i < N; ++i) S[i + 1] = S[i]\
-    \ + A[i];\n    return S;\n}\n"
+    \ long> cumulative_sum(const vector<long long> &A) {\n  int N = A.size();\n  vector<long\
+    \ long> S(N + 1);\n  for (int i = 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n  return\
+    \ S;\n}\n"
   code: "#pragma once\nvector<long long> cumulative_sum(const vector<long long> &A)\
-    \ {\n    int N = A.size();\n    vector<long long> S(N + 1);\n    for (int i =\
-    \ 0; i < N; ++i) S[i + 1] = S[i] + A[i];\n    return S;\n}\n"
+    \ {\n  int N = A.size();\n  vector<long long> S(N + 1);\n  for (int i = 0; i <\
+    \ N; ++i) S[i + 1] = S[i] + A[i];\n  return S;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/dp/cumulative_sum/cumulative_sum.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/dp.cumulative_sum.cumulative_sum.test.cpp

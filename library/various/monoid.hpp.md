@@ -2,19 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/segtree/dual_segment_tree.hpp
     title: Dual Segment Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/segtree/lazy_segment_tree.hpp
     title: Lazy Segment Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/segtree/segment_tree.hpp
     title: Segment Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/segtree/unified_segment_tree.hpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/various/monoid_act.hpp
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
   _extendedVerifiedWith:
@@ -22,59 +22,56 @@ data:
     path: tests/graph.tree.heavy_light_decomposition.test.cpp
     title: "\u6728 - HLD\u306E\u30C6\u30B9\u30C8 \u6728\u4E0A\u30AF\u30A8\u30EA:\u6700\
       \u5927\u9023\u7D9A\u90E8\u5206\u5217\u548C"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.segment_tree.test.cpp
     title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.unified_segment_tree.test.cpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "\u30E2\u30CE\u30A4\u30C9"
     links: []
   bundledCode: "#line 2 \"library/various/monoid.hpp\"\n/**\n * @brief \u30E2\u30CE\
-    \u30A4\u30C9\n */\nstruct Monoid {\n    // \u6700\u5C0F\u5024\n    struct Min\
-    \ {\n        static constexpr int e = INT_MAX;\n        static int op(int x, int\
-    \ y) { return min(x, y); }\n    };\n    // \u6700\u5927\u5024\n    struct Max\
-    \ {\n        static constexpr int e = -INT_MAX;\n        static int op(int x,\
-    \ int y) { return max(x, y); }\n    };\n    // \u52A0\u7B97\n    struct Add {\n\
-    \        static constexpr int e = 0;\n        static int op(int x, int y) { return\
-    \ x + y; }\n    };\n    // \u4E57\u7B97\n    struct Mul {\n        static constexpr\
-    \ int e = 1;\n        static int op(int x, int y) { return x * y; }\n    };\n\
-    \    // \u4EE3\u5165\n    struct Set {\n        static constexpr int e = INT_MAX;\n\
-    \        static int op(int x, int y) { return y == INT_MAX ? x : y; }\n    };\n\
-    \    // \u6700\u5927\u516C\u7D04\u6570\n    struct Gcd {\n        static constexpr\
-    \ int e = 0;\n        static int op(int x, int y) { return gcd(x, y); }\n    };\n\
-    \    // \u6700\u5C0F\u516C\u500D\u6570\n    struct Lcm {\n        static constexpr\
-    \ int e = 1;\n        static int op(int x, int y) { return lcm(x, y); }\n    };\n\
-    \    // \u6392\u4ED6\u7684\u8AD6\u7406\u548C\n    struct Xor {\n        static\
-    \ constexpr int e = 0;\n        static int op(int x, int y) { return x ^ y; }\n\
-    \    };\n};\n"
+    \u30A4\u30C9\n */\nstruct Monoid {\n  // \u6700\u5C0F\u5024\n  struct Min {\n\
+    \    static constexpr int e = INT_MAX;\n    static int op(int x, int y) { return\
+    \ min(x, y); }\n  };\n  // \u6700\u5927\u5024\n  struct Max {\n    static constexpr\
+    \ int e = -INT_MAX;\n    static int op(int x, int y) { return max(x, y); }\n \
+    \ };\n  // \u52A0\u7B97\n  struct Add {\n    static constexpr int e = 0;\n   \
+    \ static int op(int x, int y) { return x + y; }\n  };\n  // \u4E57\u7B97\n  struct\
+    \ Mul {\n    static constexpr int e = 1;\n    static int op(int x, int y) { return\
+    \ x * y; }\n  };\n  // \u4EE3\u5165\n  struct Set {\n    static constexpr int\
+    \ e = INT_MAX;\n    static int op(int x, int y) { return y == INT_MAX ? x : y;\
+    \ }\n  };\n  // \u6700\u5927\u516C\u7D04\u6570\n  struct Gcd {\n    static constexpr\
+    \ int e = 0;\n    static int op(int x, int y) { return gcd(x, y); }\n  };\n  //\
+    \ \u6700\u5C0F\u516C\u500D\u6570\n  struct Lcm {\n    static constexpr int e =\
+    \ 1;\n    static int op(int x, int y) { return lcm(x, y); }\n  };\n  // \u6392\
+    \u4ED6\u7684\u8AD6\u7406\u548C\n  struct Xor {\n    static constexpr int e = 0;\n\
+    \    static int op(int x, int y) { return x ^ y; }\n  };\n};\n"
   code: "#pragma once\n/**\n * @brief \u30E2\u30CE\u30A4\u30C9\n */\nstruct Monoid\
-    \ {\n    // \u6700\u5C0F\u5024\n    struct Min {\n        static constexpr int\
-    \ e = INT_MAX;\n        static int op(int x, int y) { return min(x, y); }\n  \
-    \  };\n    // \u6700\u5927\u5024\n    struct Max {\n        static constexpr int\
-    \ e = -INT_MAX;\n        static int op(int x, int y) { return max(x, y); }\n \
-    \   };\n    // \u52A0\u7B97\n    struct Add {\n        static constexpr int e\
-    \ = 0;\n        static int op(int x, int y) { return x + y; }\n    };\n    //\
-    \ \u4E57\u7B97\n    struct Mul {\n        static constexpr int e = 1;\n      \
-    \  static int op(int x, int y) { return x * y; }\n    };\n    // \u4EE3\u5165\n\
-    \    struct Set {\n        static constexpr int e = INT_MAX;\n        static int\
-    \ op(int x, int y) { return y == INT_MAX ? x : y; }\n    };\n    // \u6700\u5927\
-    \u516C\u7D04\u6570\n    struct Gcd {\n        static constexpr int e = 0;\n  \
-    \      static int op(int x, int y) { return gcd(x, y); }\n    };\n    // \u6700\
-    \u5C0F\u516C\u500D\u6570\n    struct Lcm {\n        static constexpr int e = 1;\n\
-    \        static int op(int x, int y) { return lcm(x, y); }\n    };\n    // \u6392\
-    \u4ED6\u7684\u8AD6\u7406\u548C\n    struct Xor {\n        static constexpr int\
-    \ e = 0;\n        static int op(int x, int y) { return x ^ y; }\n    };\n};\n"
+    \ {\n  // \u6700\u5C0F\u5024\n  struct Min {\n    static constexpr int e = INT_MAX;\n\
+    \    static int op(int x, int y) { return min(x, y); }\n  };\n  // \u6700\u5927\
+    \u5024\n  struct Max {\n    static constexpr int e = -INT_MAX;\n    static int\
+    \ op(int x, int y) { return max(x, y); }\n  };\n  // \u52A0\u7B97\n  struct Add\
+    \ {\n    static constexpr int e = 0;\n    static int op(int x, int y) { return\
+    \ x + y; }\n  };\n  // \u4E57\u7B97\n  struct Mul {\n    static constexpr int\
+    \ e = 1;\n    static int op(int x, int y) { return x * y; }\n  };\n  // \u4EE3\
+    \u5165\n  struct Set {\n    static constexpr int e = INT_MAX;\n    static int\
+    \ op(int x, int y) { return y == INT_MAX ? x : y; }\n  };\n  // \u6700\u5927\u516C\
+    \u7D04\u6570\n  struct Gcd {\n    static constexpr int e = 0;\n    static int\
+    \ op(int x, int y) { return gcd(x, y); }\n  };\n  // \u6700\u5C0F\u516C\u500D\u6570\
+    \n  struct Lcm {\n    static constexpr int e = 1;\n    static int op(int x, int\
+    \ y) { return lcm(x, y); }\n  };\n  // \u6392\u4ED6\u7684\u8AD6\u7406\u548C\n\
+    \  struct Xor {\n    static constexpr int e = 0;\n    static int op(int x, int\
+    \ y) { return x ^ y; }\n  };\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/various/monoid.hpp
@@ -84,8 +81,8 @@ data:
   - library/segtree/unified_segment_tree.hpp
   - library/segtree/segment_tree.hpp
   - library/segtree/dual_segment_tree.hpp
-  timestamp: '2026-01-20 20:11:22+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/segtree.segment_tree.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp

@@ -13,20 +13,20 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/search/binary_search/bi_ge_val.hpp\"\ntemplate <typename\
-    \ T> T bi_ge_val(vector<T> &v, const T &x) {\n    auto it = lower_bound(v.begin(),\
-    \ v.end(), x);\n    return (it == v.end() ? 1e18 : *it);\n}\ntemplate <typename\
-    \ T> T bi_ge_val(const set<T> &st, const T &x) {\n    auto it = st.lower_bound(x);\n\
-    \    return (it == st.end() ? 1e18 : *it);\n}\n"
+    \ T> T bi_ge_val(vector<T> &v, const T &x) {\n  auto it = lower_bound(v.begin(),\
+    \ v.end(), x);\n  return (it == v.end() ? 1e18 : *it);\n}\ntemplate <typename\
+    \ T> T bi_ge_val(const set<T> &st, const T &x) {\n  auto it = st.lower_bound(x);\n\
+    \  return (it == st.end() ? 1e18 : *it);\n}\n"
   code: "#pragma once\ntemplate <typename T> T bi_ge_val(vector<T> &v, const T &x)\
-    \ {\n    auto it = lower_bound(v.begin(), v.end(), x);\n    return (it == v.end()\
+    \ {\n  auto it = lower_bound(v.begin(), v.end(), x);\n  return (it == v.end()\
     \ ? 1e18 : *it);\n}\ntemplate <typename T> T bi_ge_val(const set<T> &st, const\
-    \ T &x) {\n    auto it = st.lower_bound(x);\n    return (it == st.end() ? 1e18\
-    \ : *it);\n}\n"
+    \ T &x) {\n  auto it = st.lower_bound(x);\n  return (it == st.end() ? 1e18 : *it);\n\
+    }\n"
   dependsOn: []
   isVerificationFile: false
   path: library/search/binary_search/bi_ge_val.hpp
   requiredBy: []
-  timestamp: '2026-04-07 03:17:27+00:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/search.binary_search.bi_ge_val.test.cpp

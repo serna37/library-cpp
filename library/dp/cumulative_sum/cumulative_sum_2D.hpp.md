@@ -13,25 +13,24 @@ data:
     links: []
   bundledCode: "#line 2 \"library/dp/cumulative_sum/cumulative_sum_2D.hpp\"\ntemplate\
     \ <typename T>\nvector<vector<long long>> cumulative_sum_2D(const vector<T> &G)\
-    \ {\n    int H = G.size(), W = G[0].size();\n    vector<vector<long long>> S(H\
-    \ + 1, vector<long long>(W + 1));\n    for (int i = 0; i < H; ++i) { // \u6A2A\
-    \u5411\u304D\n        for (int j = 0; j < W; ++j) {\n            S[i + 1][j +\
-    \ 1] = S[i + 1][j] + G[i][j];\n        }\n    }\n    for (int i = 0; i < H; ++i)\
-    \ { // \u7E26\u5411\u304D\n        for (int j = 0; j < W; ++j) {\n           \
-    \ S[i + 1][j + 1] += S[i][j + 1];\n        }\n    }\n    return S;\n}\n"
-  code: "#pragma once\ntemplate <typename T>\nvector<vector<long long>> cumulative_sum_2D(const\
-    \ vector<T> &G) {\n    int H = G.size(), W = G[0].size();\n    vector<vector<long\
-    \ long>> S(H + 1, vector<long long>(W + 1));\n    for (int i = 0; i < H; ++i)\
-    \ { // \u6A2A\u5411\u304D\n        for (int j = 0; j < W; ++j) {\n           \
-    \ S[i + 1][j + 1] = S[i + 1][j] + G[i][j];\n        }\n    }\n    for (int i =\
-    \ 0; i < H; ++i) { // \u7E26\u5411\u304D\n        for (int j = 0; j < W; ++j)\
-    \ {\n            S[i + 1][j + 1] += S[i][j + 1];\n        }\n    }\n    return\
+    \ {\n  int H = G.size(), W = G[0].size();\n  vector<vector<long long>> S(H + 1,\
+    \ vector<long long>(W + 1));\n  for (int i = 0; i < H; ++i) { // \u6A2A\u5411\u304D\
+    \n    for (int j = 0; j < W; ++j) {\n      S[i + 1][j + 1] = S[i + 1][j] + G[i][j];\n\
+    \    }\n  }\n  for (int i = 0; i < H; ++i) { // \u7E26\u5411\u304D\n    for (int\
+    \ j = 0; j < W; ++j) {\n      S[i + 1][j + 1] += S[i][j + 1];\n    }\n  }\n  return\
     \ S;\n}\n"
+  code: "#pragma once\ntemplate <typename T>\nvector<vector<long long>> cumulative_sum_2D(const\
+    \ vector<T> &G) {\n  int H = G.size(), W = G[0].size();\n  vector<vector<long\
+    \ long>> S(H + 1, vector<long long>(W + 1));\n  for (int i = 0; i < H; ++i) {\
+    \ // \u6A2A\u5411\u304D\n    for (int j = 0; j < W; ++j) {\n      S[i + 1][j +\
+    \ 1] = S[i + 1][j] + G[i][j];\n    }\n  }\n  for (int i = 0; i < H; ++i) { //\
+    \ \u7E26\u5411\u304D\n    for (int j = 0; j < W; ++j) {\n      S[i + 1][j + 1]\
+    \ += S[i][j + 1];\n    }\n  }\n  return S;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/dp/cumulative_sum/cumulative_sum_2D.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/dp.cumulative_sum.cumulative_sum_2D.test.cpp

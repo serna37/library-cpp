@@ -16,26 +16,25 @@ data:
     links: []
   bundledCode: "#line 2 \"library/polynomial/fft/fast_walsh_hadamard_transform.hpp\"\
     \ntemplate <typename T>\nvoid fast_walsh_hadamard_transform(vector<T> &f, bool\
-    \ inv = false) {\n    const int n = (int)f.size();\n    assert((n & (n - 1)) ==\
-    \ 0);\n    for (int i = 1; i < n; i <<= 1) {\n        for (int j = 0; j < n; j\
-    \ += i << 1) {\n            for (int k = 0; k < i; k++) {\n                T s\
-    \ = f[j + k], t = f[j + k + i];\n                f[j + k] = s + t;\n         \
-    \       f[j + k + i] = s - t;\n            }\n        }\n    }\n    if (inv) {\n\
-    \        T inv_n = T(1) / n;\n        for (auto &x : f) x *= inv_n;\n    }\n}\n"
+    \ inv = false) {\n  const int n = (int)f.size();\n  assert((n & (n - 1)) == 0);\n\
+    \  for (int i = 1; i < n; i <<= 1) {\n    for (int j = 0; j < n; j += i << 1)\
+    \ {\n      for (int k = 0; k < i; k++) {\n        T s = f[j + k], t = f[j + k\
+    \ + i];\n        f[j + k] = s + t;\n        f[j + k + i] = s - t;\n      }\n \
+    \   }\n  }\n  if (inv) {\n    T inv_n = T(1) / n;\n    for (auto &x : f) x *=\
+    \ inv_n;\n  }\n}\n"
   code: "#pragma once\ntemplate <typename T>\nvoid fast_walsh_hadamard_transform(vector<T>\
-    \ &f, bool inv = false) {\n    const int n = (int)f.size();\n    assert((n & (n\
-    \ - 1)) == 0);\n    for (int i = 1; i < n; i <<= 1) {\n        for (int j = 0;\
-    \ j < n; j += i << 1) {\n            for (int k = 0; k < i; k++) {\n         \
-    \       T s = f[j + k], t = f[j + k + i];\n                f[j + k] = s + t;\n\
-    \                f[j + k + i] = s - t;\n            }\n        }\n    }\n    if\
-    \ (inv) {\n        T inv_n = T(1) / n;\n        for (auto &x : f) x *= inv_n;\n\
-    \    }\n}\n"
+    \ &f, bool inv = false) {\n  const int n = (int)f.size();\n  assert((n & (n -\
+    \ 1)) == 0);\n  for (int i = 1; i < n; i <<= 1) {\n    for (int j = 0; j < n;\
+    \ j += i << 1) {\n      for (int k = 0; k < i; k++) {\n        T s = f[j + k],\
+    \ t = f[j + k + i];\n        f[j + k] = s + t;\n        f[j + k + i] = s - t;\n\
+    \      }\n    }\n  }\n  if (inv) {\n    T inv_n = T(1) / n;\n    for (auto &x\
+    \ : f) x *= inv_n;\n  }\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/polynomial/fft/fast_walsh_hadamard_transform.hpp
   requiredBy:
   - library/polynomial/fft/convolution_bitwise_xor.hpp
-  timestamp: '2026-01-19 13:29:11+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fft.convolution_bitwise_xor.test.cpp

@@ -13,83 +13,73 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/prime/eratosthenes.hpp\"\nstruct Eratosthenes\
-    \ {\n  private:\n    int N;         // \u4E0A\u9650\n    vector<int> D; // \u6700\
-    \u5C0F\u7D20\u56E0\u6570 (least prime factor)\n  public:\n    Eratosthenes(int\
-    \ N) : N(N) {\n        D.resize(N + 1);\n        iota(D.begin(), D.end(), 0ll);\n\
-    \        vector<int> known_prime = {2ll, 3ll, 5ll};\n        for (int p : known_prime)\
-    \ {\n            for (int i = p * p; i <= N; i += p) {\n                if (D[i]\
-    \ == i) D[i] = p;\n            }\n        }\n        vector<int> inc = {4, 2,\
-    \ 4, 2, 4, 6, 2, 6};\n        int p = 7, idx = 0;\n        int root = floor(sqrt(N)\
-    \ + 0.5);\n        while (p <= root) {\n            if (D[p] == p) {\n       \
-    \         for (int i = p * p; i <= N; i += p) {\n                    if (D[i]\
-    \ == i) D[i] = p;\n                }\n            }\n            p += inc[idx++];\n\
-    \            if (idx == 8) idx = 0;\n        }\n    }\n    bool is_prime(int x)\
-    \ const {\n        assert(1 <= x and x <= N);\n        return x == 1ll ? false\
-    \ : D[x] == x;\n    }\n    vector<pair<int, int>> factorize(int x) const {\n \
-    \       assert(1 <= x and x <= N);\n        vector<pair<int, int>> F;\n      \
-    \  while (x != 1) {\n            int p = D[x], e = 0;\n            while (x %\
-    \ p == 0ll) x /= p, e++;\n            F.emplace_back(p, e);\n        }\n     \
-    \   return F;\n    }\n    vector<int> calc_divisors(int x) const {\n        assert(1\
-    \ <= x and x <= N);\n        int n = 1; // \u7D04\u6570\u306E\u500B\u6570\n  \
-    \      vector<pair<int, int>> F;\n        while (x != 1ll) {\n            int\
-    \ p = D[x], e = 0;\n            while (x % p == 0ll) x /= p, e++;\n          \
-    \  F.emplace_back(p, e);\n            n *= (1 + e);\n        }\n        vector<int>\
-    \ divisors(n, 1);\n        int sz = 1; // \u73FE\u5728\u306E\u7D04\u6570\u306E\
-    \u500B\u6570\n        for (const auto &[p, e] : F) {\n            for (int i =\
-    \ 0; i < sz * e; i++) {\n                divisors[sz + i] = divisors[i] * p;\n\
-    \            }\n            sz *= (1 + e);\n        }\n        return divisors;\n\
-    \    }\n    // \u6700\u5C0F\u7D20\u56E0\u6570 (least prime factor)\n    int lpf(int\
-    \ x) const {\n        assert(1 <= x and x <= N);\n        return D[x];\n    }\n\
-    \    int euler_phi(int x) const {\n        assert(1 <= x and x <= N);\n      \
-    \  int res = x;\n        while (x != 1ll) {\n            int p = D[x];\n     \
-    \       res -= res / p;\n            while (x % p == 0ll) x /= p;\n        }\n\
-    \        return res;\n    }\n    // \u30E1\u30D3\u30A6\u30B9\u95A2\u6570\u306E\
-    \u30C6\u30FC\u30D6\u30EB\u3092\u8A08\u7B97\u3059\u308B\n    vector<int> calc_moebius()\
-    \ const {\n        vector<int> moebius(N + 1, 0);\n        moebius[1] = 1;\n \
-    \       for (int x = 2; x <= N; x++) {\n            int y = x / D[x];\n      \
-    \      if (D[x] != D[y]) moebius[x] = -moebius[y];\n        }\n        return\
-    \ moebius;\n    }\n};\n"
-  code: "#pragma once\nstruct Eratosthenes {\n  private:\n    int N;         // \u4E0A\
-    \u9650\n    vector<int> D; // \u6700\u5C0F\u7D20\u56E0\u6570 (least prime factor)\n\
-    \  public:\n    Eratosthenes(int N) : N(N) {\n        D.resize(N + 1);\n     \
-    \   iota(D.begin(), D.end(), 0ll);\n        vector<int> known_prime = {2ll, 3ll,\
-    \ 5ll};\n        for (int p : known_prime) {\n            for (int i = p * p;\
-    \ i <= N; i += p) {\n                if (D[i] == i) D[i] = p;\n            }\n\
-    \        }\n        vector<int> inc = {4, 2, 4, 2, 4, 6, 2, 6};\n        int p\
-    \ = 7, idx = 0;\n        int root = floor(sqrt(N) + 0.5);\n        while (p <=\
-    \ root) {\n            if (D[p] == p) {\n                for (int i = p * p; i\
-    \ <= N; i += p) {\n                    if (D[i] == i) D[i] = p;\n            \
-    \    }\n            }\n            p += inc[idx++];\n            if (idx == 8)\
-    \ idx = 0;\n        }\n    }\n    bool is_prime(int x) const {\n        assert(1\
-    \ <= x and x <= N);\n        return x == 1ll ? false : D[x] == x;\n    }\n   \
-    \ vector<pair<int, int>> factorize(int x) const {\n        assert(1 <= x and x\
-    \ <= N);\n        vector<pair<int, int>> F;\n        while (x != 1) {\n      \
-    \      int p = D[x], e = 0;\n            while (x % p == 0ll) x /= p, e++;\n \
-    \           F.emplace_back(p, e);\n        }\n        return F;\n    }\n    vector<int>\
-    \ calc_divisors(int x) const {\n        assert(1 <= x and x <= N);\n        int\
-    \ n = 1; // \u7D04\u6570\u306E\u500B\u6570\n        vector<pair<int, int>> F;\n\
-    \        while (x != 1ll) {\n            int p = D[x], e = 0;\n            while\
-    \ (x % p == 0ll) x /= p, e++;\n            F.emplace_back(p, e);\n           \
-    \ n *= (1 + e);\n        }\n        vector<int> divisors(n, 1);\n        int sz\
-    \ = 1; // \u73FE\u5728\u306E\u7D04\u6570\u306E\u500B\u6570\n        for (const\
-    \ auto &[p, e] : F) {\n            for (int i = 0; i < sz * e; i++) {\n      \
-    \          divisors[sz + i] = divisors[i] * p;\n            }\n            sz\
-    \ *= (1 + e);\n        }\n        return divisors;\n    }\n    // \u6700\u5C0F\
-    \u7D20\u56E0\u6570 (least prime factor)\n    int lpf(int x) const {\n        assert(1\
-    \ <= x and x <= N);\n        return D[x];\n    }\n    int euler_phi(int x) const\
-    \ {\n        assert(1 <= x and x <= N);\n        int res = x;\n        while (x\
-    \ != 1ll) {\n            int p = D[x];\n            res -= res / p;\n        \
-    \    while (x % p == 0ll) x /= p;\n        }\n        return res;\n    }\n   \
-    \ // \u30E1\u30D3\u30A6\u30B9\u95A2\u6570\u306E\u30C6\u30FC\u30D6\u30EB\u3092\u8A08\
-    \u7B97\u3059\u308B\n    vector<int> calc_moebius() const {\n        vector<int>\
-    \ moebius(N + 1, 0);\n        moebius[1] = 1;\n        for (int x = 2; x <= N;\
-    \ x++) {\n            int y = x / D[x];\n            if (D[x] != D[y]) moebius[x]\
-    \ = -moebius[y];\n        }\n        return moebius;\n    }\n};\n"
+    \ {\nprivate:\n  int N;         // \u4E0A\u9650\n  vector<int> D; // \u6700\u5C0F\
+    \u7D20\u56E0\u6570 (least prime factor)\npublic:\n  Eratosthenes(int N) : N(N)\
+    \ {\n    D.resize(N + 1);\n    iota(D.begin(), D.end(), 0ll);\n    vector<int>\
+    \ known_prime = {2ll, 3ll, 5ll};\n    for (int p : known_prime) {\n      for (int\
+    \ i = p * p; i <= N; i += p) {\n        if (D[i] == i) D[i] = p;\n      }\n  \
+    \  }\n    vector<int> inc = {4, 2, 4, 2, 4, 6, 2, 6};\n    int p = 7, idx = 0;\n\
+    \    int root = floor(sqrt(N) + 0.5);\n    while (p <= root) {\n      if (D[p]\
+    \ == p) {\n        for (int i = p * p; i <= N; i += p) {\n          if (D[i] ==\
+    \ i) D[i] = p;\n        }\n      }\n      p += inc[idx++];\n      if (idx == 8)\
+    \ idx = 0;\n    }\n  }\n  bool is_prime(int x) const {\n    assert(1 <= x and\
+    \ x <= N);\n    return x == 1ll ? false : D[x] == x;\n  }\n  vector<pair<int,\
+    \ int>> factorize(int x) const {\n    assert(1 <= x and x <= N);\n    vector<pair<int,\
+    \ int>> F;\n    while (x != 1) {\n      int p = D[x], e = 0;\n      while (x %\
+    \ p == 0ll) x /= p, e++;\n      F.emplace_back(p, e);\n    }\n    return F;\n\
+    \  }\n  vector<int> calc_divisors(int x) const {\n    assert(1 <= x and x <= N);\n\
+    \    int n = 1; // \u7D04\u6570\u306E\u500B\u6570\n    vector<pair<int, int>>\
+    \ F;\n    while (x != 1ll) {\n      int p = D[x], e = 0;\n      while (x % p ==\
+    \ 0ll) x /= p, e++;\n      F.emplace_back(p, e);\n      n *= (1 + e);\n    }\n\
+    \    vector<int> divisors(n, 1);\n    int sz = 1; // \u73FE\u5728\u306E\u7D04\u6570\
+    \u306E\u500B\u6570\n    for (const auto &[p, e] : F) {\n      for (int i = 0;\
+    \ i < sz * e; i++) {\n        divisors[sz + i] = divisors[i] * p;\n      }\n \
+    \     sz *= (1 + e);\n    }\n    return divisors;\n  }\n  // \u6700\u5C0F\u7D20\
+    \u56E0\u6570 (least prime factor)\n  int lpf(int x) const {\n    assert(1 <= x\
+    \ and x <= N);\n    return D[x];\n  }\n  int euler_phi(int x) const {\n    assert(1\
+    \ <= x and x <= N);\n    int res = x;\n    while (x != 1ll) {\n      int p = D[x];\n\
+    \      res -= res / p;\n      while (x % p == 0ll) x /= p;\n    }\n    return\
+    \ res;\n  }\n  // \u30E1\u30D3\u30A6\u30B9\u95A2\u6570\u306E\u30C6\u30FC\u30D6\
+    \u30EB\u3092\u8A08\u7B97\u3059\u308B\n  vector<int> calc_moebius() const {\n \
+    \   vector<int> moebius(N + 1, 0);\n    moebius[1] = 1;\n    for (int x = 2; x\
+    \ <= N; x++) {\n      int y = x / D[x];\n      if (D[x] != D[y]) moebius[x] =\
+    \ -moebius[y];\n    }\n    return moebius;\n  }\n};\n"
+  code: "#pragma once\nstruct Eratosthenes {\nprivate:\n  int N;         // \u4E0A\
+    \u9650\n  vector<int> D; // \u6700\u5C0F\u7D20\u56E0\u6570 (least prime factor)\n\
+    public:\n  Eratosthenes(int N) : N(N) {\n    D.resize(N + 1);\n    iota(D.begin(),\
+    \ D.end(), 0ll);\n    vector<int> known_prime = {2ll, 3ll, 5ll};\n    for (int\
+    \ p : known_prime) {\n      for (int i = p * p; i <= N; i += p) {\n        if\
+    \ (D[i] == i) D[i] = p;\n      }\n    }\n    vector<int> inc = {4, 2, 4, 2, 4,\
+    \ 6, 2, 6};\n    int p = 7, idx = 0;\n    int root = floor(sqrt(N) + 0.5);\n \
+    \   while (p <= root) {\n      if (D[p] == p) {\n        for (int i = p * p; i\
+    \ <= N; i += p) {\n          if (D[i] == i) D[i] = p;\n        }\n      }\n  \
+    \    p += inc[idx++];\n      if (idx == 8) idx = 0;\n    }\n  }\n  bool is_prime(int\
+    \ x) const {\n    assert(1 <= x and x <= N);\n    return x == 1ll ? false : D[x]\
+    \ == x;\n  }\n  vector<pair<int, int>> factorize(int x) const {\n    assert(1\
+    \ <= x and x <= N);\n    vector<pair<int, int>> F;\n    while (x != 1) {\n   \
+    \   int p = D[x], e = 0;\n      while (x % p == 0ll) x /= p, e++;\n      F.emplace_back(p,\
+    \ e);\n    }\n    return F;\n  }\n  vector<int> calc_divisors(int x) const {\n\
+    \    assert(1 <= x and x <= N);\n    int n = 1; // \u7D04\u6570\u306E\u500B\u6570\
+    \n    vector<pair<int, int>> F;\n    while (x != 1ll) {\n      int p = D[x], e\
+    \ = 0;\n      while (x % p == 0ll) x /= p, e++;\n      F.emplace_back(p, e);\n\
+    \      n *= (1 + e);\n    }\n    vector<int> divisors(n, 1);\n    int sz = 1;\
+    \ // \u73FE\u5728\u306E\u7D04\u6570\u306E\u500B\u6570\n    for (const auto &[p,\
+    \ e] : F) {\n      for (int i = 0; i < sz * e; i++) {\n        divisors[sz + i]\
+    \ = divisors[i] * p;\n      }\n      sz *= (1 + e);\n    }\n    return divisors;\n\
+    \  }\n  // \u6700\u5C0F\u7D20\u56E0\u6570 (least prime factor)\n  int lpf(int\
+    \ x) const {\n    assert(1 <= x and x <= N);\n    return D[x];\n  }\n  int euler_phi(int\
+    \ x) const {\n    assert(1 <= x and x <= N);\n    int res = x;\n    while (x !=\
+    \ 1ll) {\n      int p = D[x];\n      res -= res / p;\n      while (x % p == 0ll)\
+    \ x /= p;\n    }\n    return res;\n  }\n  // \u30E1\u30D3\u30A6\u30B9\u95A2\u6570\
+    \u306E\u30C6\u30FC\u30D6\u30EB\u3092\u8A08\u7B97\u3059\u308B\n  vector<int> calc_moebius()\
+    \ const {\n    vector<int> moebius(N + 1, 0);\n    moebius[1] = 1;\n    for (int\
+    \ x = 2; x <= N; x++) {\n      int y = x / D[x];\n      if (D[x] != D[y]) moebius[x]\
+    \ = -moebius[y];\n    }\n    return moebius;\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/prime/eratosthenes.hpp
   requiredBy: []
-  timestamp: '2026-01-22 14:26:48+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.prime.eratosthenes.test.cpp

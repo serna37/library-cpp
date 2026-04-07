@@ -3,26 +3,26 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.dispersion.test.cpp
     title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\u30C6\
       \u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/dispersion.hpp\"\nvector<int> dispersion(const\
-    \ vector<int> &A) {\n    vector<int> res(2e6);\n    for (auto &&v : A) ++res[v];\n\
-    \    return res;\n}\n"
-  code: "#pragma once\nvector<int> dispersion(const vector<int> &A) {\n    vector<int>\
-    \ res(2e6);\n    for (auto &&v : A) ++res[v];\n    return res;\n}\n"
+    \ vector<int> &A) {\n  vector<int> res(2e6);\n  for (auto &&v : A) ++res[v];\n\
+    \  return res;\n}\n"
+  code: "#pragma once\nvector<int> dispersion(const vector<int> &A) {\n  vector<int>\
+    \ res(2e6);\n  for (auto &&v : A) ++res[v];\n  return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/dispersion.hpp
   requiredBy: []
-  timestamp: '2026-01-07 21:05:45+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/sequence.dispersion.test.cpp
 documentation_of: library/sequence/dispersion.hpp

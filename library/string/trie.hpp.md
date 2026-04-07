@@ -2,79 +2,76 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/string/aho_corasick.hpp
     title: Aho Corasick
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/string/finds.hpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.aho_corasick.test.cpp
     title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.finds.test.cpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/string/trie.hpp\"\ntemplate <int char_size, int\
-    \ margin> struct Trie {\n    struct Node {\n        vector<int> nxt;\n       \
-    \ vector<int> accept; // \u305D\u306E\u5730\u70B9\u3067\u7D42\u308F\u308B\u5358\
-    \u8A9E\u306EID\u30EA\u30B9\u30C8\n        int exist;          // \u305D\u306E\u5730\
-    \u70B9\u3092\u63A5\u982D\u8F9E\u3068\u3057\u3066\u6301\u3064\u5358\u8A9E\u306E\
-    \u6570\n        Node() : nxt(char_size, -1), exist(0) {}\n    };\n    vector<Node>\
-    \ nodes;\n    Trie() { nodes.emplace_back(); }\n    int size() const { return\
-    \ (int)nodes.size(); }\n    // \u5358\u8A9E\u306E\u8FFD\u52A0\n    virtual void\
-    \ add(const string &s, int id = -1) {\n        int now = 0;\n        for (char\
-    \ c : s) {\n            int x = c - margin;\n            if (nodes[now].nxt[x]\
-    \ == -1) {\n                nodes[now].nxt[x] = (int)nodes.size();\n         \
-    \       nodes.emplace_back();\n            }\n            now = nodes[now].nxt[x];\n\
-    \            nodes[now].exist++;\n        }\n        if (id != -1) nodes[now].accept.push_back(id);\n\
-    \    }\n    // \u5358\u4E00\u306E\u5358\u8A9E\u306E\u691C\u7D22 (\u5B8C\u5168\u4E00\
-    \u81F4)\n    bool search(const string &s) const {\n        int now = 0;\n    \
-    \    for (char c : s) {\n            int x = c - margin;\n            if (nodes[now].nxt[x]\
-    \ == -1) return false;\n            now = nodes[now].nxt[x];\n        }\n    \
-    \    return !nodes[now].accept.empty();\n    }\n    // \u63A5\u982D\u8F9E\u691C\
+    \ margin> struct Trie {\n  struct Node {\n    vector<int> nxt;\n    vector<int>\
+    \ accept; // \u305D\u306E\u5730\u70B9\u3067\u7D42\u308F\u308B\u5358\u8A9E\u306E\
+    ID\u30EA\u30B9\u30C8\n    int exist;          // \u305D\u306E\u5730\u70B9\u3092\
+    \u63A5\u982D\u8F9E\u3068\u3057\u3066\u6301\u3064\u5358\u8A9E\u306E\u6570\n   \
+    \ Node() : nxt(char_size, -1), exist(0) {}\n  };\n  vector<Node> nodes;\n  Trie()\
+    \ { nodes.emplace_back(); }\n  int size() const { return (int)nodes.size(); }\n\
+    \  // \u5358\u8A9E\u306E\u8FFD\u52A0\n  virtual void add(const string &s, int\
+    \ id = -1) {\n    int now = 0;\n    for (char c : s) {\n      int x = c - margin;\n\
+    \      if (nodes[now].nxt[x] == -1) {\n        nodes[now].nxt[x] = (int)nodes.size();\n\
+    \        nodes.emplace_back();\n      }\n      now = nodes[now].nxt[x];\n    \
+    \  nodes[now].exist++;\n    }\n    if (id != -1) nodes[now].accept.push_back(id);\n\
+    \  }\n  // \u5358\u4E00\u306E\u5358\u8A9E\u306E\u691C\u7D22 (\u5B8C\u5168\u4E00\
+    \u81F4)\n  bool search(const string &s) const {\n    int now = 0;\n    for (char\
+    \ c : s) {\n      int x = c - margin;\n      if (nodes[now].nxt[x] == -1) return\
+    \ false;\n      now = nodes[now].nxt[x];\n    }\n    return !nodes[now].accept.empty();\n\
+    \  }\n  // \u63A5\u982D\u8F9E\u691C\u7D22\uFF1As \u3092\u63A5\u982D\u8F9E\u3068\
+    \u3057\u3066\u6301\u3064\u5358\u8A9E\u306E\u6570\u3092\u8FD4\u3059\n  int count_prefix(const\
+    \ string &s) const {\n    int now = 0;\n    for (char c : s) {\n      int x =\
+    \ c - margin;\n      if (nodes[now].nxt[x] == -1) return 0;\n      now = nodes[now].nxt[x];\n\
+    \    }\n    return nodes[now].exist;\n  }\n};\n"
+  code: "#pragma once\ntemplate <int char_size, int margin> struct Trie {\n  struct\
+    \ Node {\n    vector<int> nxt;\n    vector<int> accept; // \u305D\u306E\u5730\u70B9\
+    \u3067\u7D42\u308F\u308B\u5358\u8A9E\u306EID\u30EA\u30B9\u30C8\n    int exist;\
+    \          // \u305D\u306E\u5730\u70B9\u3092\u63A5\u982D\u8F9E\u3068\u3057\u3066\
+    \u6301\u3064\u5358\u8A9E\u306E\u6570\n    Node() : nxt(char_size, -1), exist(0)\
+    \ {}\n  };\n  vector<Node> nodes;\n  Trie() { nodes.emplace_back(); }\n  int size()\
+    \ const { return (int)nodes.size(); }\n  // \u5358\u8A9E\u306E\u8FFD\u52A0\n \
+    \ virtual void add(const string &s, int id = -1) {\n    int now = 0;\n    for\
+    \ (char c : s) {\n      int x = c - margin;\n      if (nodes[now].nxt[x] == -1)\
+    \ {\n        nodes[now].nxt[x] = (int)nodes.size();\n        nodes.emplace_back();\n\
+    \      }\n      now = nodes[now].nxt[x];\n      nodes[now].exist++;\n    }\n \
+    \   if (id != -1) nodes[now].accept.push_back(id);\n  }\n  // \u5358\u4E00\u306E\
+    \u5358\u8A9E\u306E\u691C\u7D22 (\u5B8C\u5168\u4E00\u81F4)\n  bool search(const\
+    \ string &s) const {\n    int now = 0;\n    for (char c : s) {\n      int x =\
+    \ c - margin;\n      if (nodes[now].nxt[x] == -1) return false;\n      now = nodes[now].nxt[x];\n\
+    \    }\n    return !nodes[now].accept.empty();\n  }\n  // \u63A5\u982D\u8F9E\u691C\
     \u7D22\uFF1As \u3092\u63A5\u982D\u8F9E\u3068\u3057\u3066\u6301\u3064\u5358\u8A9E\
-    \u306E\u6570\u3092\u8FD4\u3059\n    int count_prefix(const string &s) const {\n\
-    \        int now = 0;\n        for (char c : s) {\n            int x = c - margin;\n\
-    \            if (nodes[now].nxt[x] == -1) return 0;\n            now = nodes[now].nxt[x];\n\
-    \        }\n        return nodes[now].exist;\n    }\n};\n"
-  code: "#pragma once\ntemplate <int char_size, int margin> struct Trie {\n    struct\
-    \ Node {\n        vector<int> nxt;\n        vector<int> accept; // \u305D\u306E\
-    \u5730\u70B9\u3067\u7D42\u308F\u308B\u5358\u8A9E\u306EID\u30EA\u30B9\u30C8\n \
-    \       int exist;          // \u305D\u306E\u5730\u70B9\u3092\u63A5\u982D\u8F9E\
-    \u3068\u3057\u3066\u6301\u3064\u5358\u8A9E\u306E\u6570\n        Node() : nxt(char_size,\
-    \ -1), exist(0) {}\n    };\n    vector<Node> nodes;\n    Trie() { nodes.emplace_back();\
-    \ }\n    int size() const { return (int)nodes.size(); }\n    // \u5358\u8A9E\u306E\
-    \u8FFD\u52A0\n    virtual void add(const string &s, int id = -1) {\n        int\
-    \ now = 0;\n        for (char c : s) {\n            int x = c - margin;\n    \
-    \        if (nodes[now].nxt[x] == -1) {\n                nodes[now].nxt[x] = (int)nodes.size();\n\
-    \                nodes.emplace_back();\n            }\n            now = nodes[now].nxt[x];\n\
-    \            nodes[now].exist++;\n        }\n        if (id != -1) nodes[now].accept.push_back(id);\n\
-    \    }\n    // \u5358\u4E00\u306E\u5358\u8A9E\u306E\u691C\u7D22 (\u5B8C\u5168\u4E00\
-    \u81F4)\n    bool search(const string &s) const {\n        int now = 0;\n    \
-    \    for (char c : s) {\n            int x = c - margin;\n            if (nodes[now].nxt[x]\
-    \ == -1) return false;\n            now = nodes[now].nxt[x];\n        }\n    \
-    \    return !nodes[now].accept.empty();\n    }\n    // \u63A5\u982D\u8F9E\u691C\
-    \u7D22\uFF1As \u3092\u63A5\u982D\u8F9E\u3068\u3057\u3066\u6301\u3064\u5358\u8A9E\
-    \u306E\u6570\u3092\u8FD4\u3059\n    int count_prefix(const string &s) const {\n\
-    \        int now = 0;\n        for (char c : s) {\n            int x = c - margin;\n\
-    \            if (nodes[now].nxt[x] == -1) return 0;\n            now = nodes[now].nxt[x];\n\
-    \        }\n        return nodes[now].exist;\n    }\n};\n"
+    \u306E\u6570\u3092\u8FD4\u3059\n  int count_prefix(const string &s) const {\n\
+    \    int now = 0;\n    for (char c : s) {\n      int x = c - margin;\n      if\
+    \ (nodes[now].nxt[x] == -1) return 0;\n      now = nodes[now].nxt[x];\n    }\n\
+    \    return nodes[now].exist;\n  }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: library/string/trie.hpp
   requiredBy:
   - library/string/aho_corasick.hpp
   - library/string/finds.hpp
-  timestamp: '2026-01-20 20:11:22+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/string.finds.test.cpp
   - tests/string.aho_corasick.test.cpp

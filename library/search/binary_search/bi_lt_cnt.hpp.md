@@ -3,25 +3,25 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/search.binary_search.bi_search_cnt.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/search/binary_search/bi_lt_cnt.hpp\"\ntemplate <typename\
-    \ T> int bi_lt_cnt(vector<T> &v, const T &x) {\n    return lower_bound(v.begin(),\
+    \ T> int bi_lt_cnt(vector<T> &v, const T &x) {\n  return lower_bound(v.begin(),\
     \ v.end(), x) - v.begin();\n}\n"
   code: "#pragma once\ntemplate <typename T> int bi_lt_cnt(vector<T> &v, const T &x)\
-    \ {\n    return lower_bound(v.begin(), v.end(), x) - v.begin();\n}\n"
+    \ {\n  return lower_bound(v.begin(), v.end(), x) - v.begin();\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/search/binary_search/bi_lt_cnt.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/search.binary_search.bi_search_cnt.test.cpp
 documentation_of: library/search/binary_search/bi_lt_cnt.hpp

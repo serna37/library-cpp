@@ -3,32 +3,32 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/search.binary_search.binary_search_real.test.cpp
     title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/search/binary_search/binary_search_real.hpp\"\n\
     #include <functional>\nconst long double EPS = 1e-14;\npair<double, double> binary_search_real(function<bool(double)>\
-    \ f) {\n    double L = 0, R = 1, MID = 0;\n    while (!f(R)) R *= 2;\n    auto\
-    \ ABS = [&]() { return abs(R - L) > EPS; };\n    auto REL = [&]() { return abs(R\
-    \ - L) / max(R, L) > EPS; };\n    while (ABS() and REL()) {\n        MID = L +\
-    \ (R - L) / 2;\n        (f(MID) ? R : L) = MID;\n    }\n    return {L, R};\n}\n"
+    \ f) {\n  double L = 0, R = 1, MID = 0;\n  while (!f(R)) R *= 2;\n  auto ABS =\
+    \ [&]() { return abs(R - L) > EPS; };\n  auto REL = [&]() { return abs(R - L)\
+    \ / max(R, L) > EPS; };\n  while (ABS() and REL()) {\n    MID = L + (R - L) /\
+    \ 2;\n    (f(MID) ? R : L) = MID;\n  }\n  return {L, R};\n}\n"
   code: "#pragma once\n#include <functional>\nconst long double EPS = 1e-14;\npair<double,\
-    \ double> binary_search_real(function<bool(double)> f) {\n    double L = 0, R\
-    \ = 1, MID = 0;\n    while (!f(R)) R *= 2;\n    auto ABS = [&]() { return abs(R\
-    \ - L) > EPS; };\n    auto REL = [&]() { return abs(R - L) / max(R, L) > EPS;\
-    \ };\n    while (ABS() and REL()) {\n        MID = L + (R - L) / 2;\n        (f(MID)\
-    \ ? R : L) = MID;\n    }\n    return {L, R};\n}\n"
+    \ double> binary_search_real(function<bool(double)> f) {\n  double L = 0, R =\
+    \ 1, MID = 0;\n  while (!f(R)) R *= 2;\n  auto ABS = [&]() { return abs(R - L)\
+    \ > EPS; };\n  auto REL = [&]() { return abs(R - L) / max(R, L) > EPS; };\n  while\
+    \ (ABS() and REL()) {\n    MID = L + (R - L) / 2;\n    (f(MID) ? R : L) = MID;\n\
+    \  }\n  return {L, R};\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/search/binary_search/binary_search_real.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-04-07 03:37:28+00:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/search.binary_search.binary_search_real.test.cpp
 documentation_of: library/search/binary_search/binary_search_real.hpp

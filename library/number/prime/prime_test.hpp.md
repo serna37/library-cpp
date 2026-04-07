@@ -16,17 +16,17 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/prime/prime_test.hpp\"\nbool prime_test(int\
-    \ N) {\n    if (N == 2) return true;\n    if (N == 1 or N % 2 == 0) return false;\n\
-    \    for (int i = 3; i * i <= N; i += 2) {\n        if (N % i == 0) return false;\n\
-    \    }\n    return true;\n}\n"
-  code: "#pragma once\nbool prime_test(int N) {\n    if (N == 2) return true;\n  \
-    \  if (N == 1 or N % 2 == 0) return false;\n    for (int i = 3; i * i <= N; i\
-    \ += 2) {\n        if (N % i == 0) return false;\n    }\n    return true;\n}\n"
+    \ N) {\n  if (N == 2) return true;\n  if (N == 1 or N % 2 == 0) return false;\n\
+    \  for (int i = 3; i * i <= N; i += 2) {\n    if (N % i == 0) return false;\n\
+    \  }\n  return true;\n}\n"
+  code: "#pragma once\nbool prime_test(int N) {\n  if (N == 2) return true;\n  if\
+    \ (N == 1 or N % 2 == 0) return false;\n  for (int i = 3; i * i <= N; i += 2)\
+    \ {\n    if (N % i == 0) return false;\n  }\n  return true;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/prime/prime_test.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.prime.prime_test.test.cpp

@@ -12,18 +12,17 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"library/number/ext_gcd.hpp\"\ntemplate <typename T> T ext_gcd(T\
-    \ a, T b, T &x, T &y) {\n    T d = a;\n    if (b != 0ll) {\n        d = ext_gcd(b,\
-    \ a % b, y, x);\n        y -= (a / b) * x;\n    } else {\n        x = 1ll;\n \
-    \       y = 0ll;\n    }\n    return d;\n}\n"
+    \ a, T b, T &x, T &y) {\n  T d = a;\n  if (b != 0ll) {\n    d = ext_gcd(b, a %\
+    \ b, y, x);\n    y -= (a / b) * x;\n  } else {\n    x = 1ll;\n    y = 0ll;\n \
+    \ }\n  return d;\n}\n"
   code: "#pragma once\ntemplate <typename T> T ext_gcd(T a, T b, T &x, T &y) {\n \
-    \   T d = a;\n    if (b != 0ll) {\n        d = ext_gcd(b, a % b, y, x);\n    \
-    \    y -= (a / b) * x;\n    } else {\n        x = 1ll;\n        y = 0ll;\n   \
-    \ }\n    return d;\n}\n"
+    \ T d = a;\n  if (b != 0ll) {\n    d = ext_gcd(b, a % b, y, x);\n    y -= (a /\
+    \ b) * x;\n  } else {\n    x = 1ll;\n    y = 0ll;\n  }\n  return d;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/number/ext_gcd.hpp
   requiredBy: []
-  timestamp: '2026-01-20 19:53:58+09:00'
+  timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/number.ext_gcd.test.cpp
