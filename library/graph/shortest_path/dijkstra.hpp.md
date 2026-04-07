@@ -41,7 +41,7 @@ data:
     \ vector<int>> dijkstra(const Graph &G,\n                                    \
     \          const vector<int> &starts = {0}) {\n    int N = G.size();\n    rev_pq<pair<long\
     \ long, int>> q; // \u30B3\u30B9\u30C8(\u5C0F\u3055\u3044\u9806), \u9802\u70B9\
-    \n    vector<long long> weight(N, INF);\n    vector<int> route(N, -1);\n    for\
+    \n    vector<long long> weight(N, 1e18);\n    vector<int> route(N, -1);\n    for\
     \ (auto &&v : starts) q.emplace(0, v), weight[v] = 0;\n    while (!q.empty())\
     \ {\n        auto [w, v] = q.top();\n        q.pop();\n        if (weight[v] <\
     \ w) continue;\n        for (auto &&[from, to, cost, idx] : G[v]) {\n        \
@@ -53,7 +53,7 @@ data:
     \ long>, vector<int>> dijkstra(const Graph &G,\n                             \
     \                 const vector<int> &starts = {0}) {\n    int N = G.size();\n\
     \    rev_pq<pair<long long, int>> q; // \u30B3\u30B9\u30C8(\u5C0F\u3055\u3044\u9806\
-    ), \u9802\u70B9\n    vector<long long> weight(N, INF);\n    vector<int> route(N,\
+    ), \u9802\u70B9\n    vector<long long> weight(N, 1e18);\n    vector<int> route(N,\
     \ -1);\n    for (auto &&v : starts) q.emplace(0, v), weight[v] = 0;\n    while\
     \ (!q.empty()) {\n        auto [w, v] = q.top();\n        q.pop();\n        if\
     \ (weight[v] < w) continue;\n        for (auto &&[from, to, cost, idx] : G[v])\
@@ -67,7 +67,7 @@ data:
   isVerificationFile: false
   path: library/graph/shortest_path/dijkstra.hpp
   requiredBy: []
-  timestamp: '2026-01-21 11:49:22+09:00'
+  timestamp: '2026-04-07 03:17:27+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.route_restore.test.cpp
@@ -94,4 +94,5 @@ $O(ElogV)$
 ## 使い方
 ```cpp
 auto [weight, route] = dijkstra(G, {r});
+// 無限の場合1e18
 ```

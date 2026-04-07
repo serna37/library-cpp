@@ -43,7 +43,7 @@ data:
     void solve() {\n    int V, E, r;\n    cin >> V >> E >> r;\n    Graph G(V);\n \
     \   G.read(E, 0, true, true);\n    auto [dis, negativeCycle, route] = bellman_ford(G,\
     \ r);\n    if (negativeCycle) {\n        print(\"NEGATIVE CYCLE\");\n        return;\n\
-    \    }\n    for (auto &&v : dis) {\n        if (v == INF) {\n            print(\"\
+    \    }\n    for (auto &&v : dis) {\n        if (v == 1e18) {\n            print(\"\
     INF\");\n        } else {\n            print(v);\n        }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
@@ -53,7 +53,7 @@ data:
   isVerificationFile: true
   path: tests/graph.shortest_path.bellman_ford.test.cpp
   requiredBy: []
-  timestamp: '2026-01-21 11:49:22+09:00'
+  timestamp: '2026-04-07 03:17:27+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.shortest_path.bellman_ford.test.cpp

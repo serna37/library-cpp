@@ -65,8 +65,8 @@ data:
   timestamp: '2026-01-21 11:49:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph.shortest_path.bfs.test.cpp
   - tests/graph.tree.lca.test.cpp
+  - tests/graph.shortest_path.bfs.test.cpp
 documentation_of: library/graph/shortest_path/bfs.hpp
 layout: document
 title: BFS
@@ -89,4 +89,5 @@ $O(V+E)$
 ## 使い方
 ```cpp
 auto [dis, route] = bfs(G, {0});
+// 無限の場合-1
 ```

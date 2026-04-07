@@ -54,29 +54,30 @@ data:
     \ N >> Q;\n    vector<int> S(N);\n    cin >> S;\n    HeavyLightDecomposition HLD(N);\n\
     \    HLD.read(N - 1);\n    HLD.build();\n    // \u8F09\u305B\u308B\u69CB\u9020\
     \u4F53\n    struct Node {\n        int ans, _all, left, right, length;\n     \
-    \   Node() : ans(-INF), _all(0), left(-INF), right(-INF), length(0) {}\n     \
-    \   Node(int val, int len) {\n            length = len;\n            _all = val\
-    \ * len;\n            ans = left = right = (0 < val ? _all : val);\n        }\n\
-    \        Node operator+(const Node &s) const {\n            Node res;\n      \
-    \      res.length = length + s.length;\n            res.ans = max({ans, s.ans,\
-    \ right + s.left});\n            res._all = _all + s._all;\n            res.left\
-    \ = max(left, _all + s.left);\n            res.right = max(s.right, right + s._all);\n\
-    \            return res;\n        }\n    };\n    // \u30BB\u30B0\u6728\n    vector<Node>\
-    \ A(N);\n    for (int i = 0; i < N; ++i) {\n        A[i] = {S[HLD.rev[i]], 1ll};\n\
-    \    }\n    auto prod_op = [](const Node &x, const Node &y) -> Node { return x\
-    \ + y; };\n    auto prod_e = Node();\n    auto apply_op = [](int f, int g) { return\
-    \ g; };\n    auto apply_e = INF;\n    auto act_op = [](const Node &x, int a, int\
-    \ sz) -> Node {\n        (void)sz;\n        return {a, x.length};\n    };\n  \
-    \  LazySegmentTree<Node, int> seg(prod_op, prod_e, apply_op, apply_e, act_op,\n\
-    \                                   A);\n    // \u30AF\u30A8\u30EA\n    while\
-    \ (Q--) {\n        int com, u, v, cost;\n        cin >> com >> u >> v >> cost;\n\
-    \        --u, --v;\n        if (com == 1ll) {\n            HLD.add(u, v, [&](int\
-    \ l, int r) { seg.apply(l, r, cost); });\n        }\n        if (com == 2ll) {\n\
-    \            Node res = HLD.query(\n                u, v, Node(), [&](int l, int\
-    \ r) { return seg.prod(l, r); },\n                [](const Node &a, const Node\
-    \ &b) { return a + b; },\n                [](Node l, const Node &r) {\n      \
-    \              swap(l.left, l.right);\n                    return l + r;\n   \
-    \             });\n            print(res.ans);\n        }\n    }\n}\n"
+    \   Node() : ans(-1e18), _all(0), left(-1e18), right(-1e18), length(0) {}\n  \
+    \      Node(int val, int len) {\n            length = len;\n            _all =\
+    \ val * len;\n            ans = left = right = (0 < val ? _all : val);\n     \
+    \   }\n        Node operator+(const Node &s) const {\n            Node res;\n\
+    \            res.length = length + s.length;\n            res.ans = max({ans,\
+    \ s.ans, right + s.left});\n            res._all = _all + s._all;\n          \
+    \  res.left = max(left, _all + s.left);\n            res.right = max(s.right,\
+    \ right + s._all);\n            return res;\n        }\n    };\n    // \u30BB\u30B0\
+    \u6728\n    vector<Node> A(N);\n    for (int i = 0; i < N; ++i) {\n        A[i]\
+    \ = {S[HLD.rev[i]], 1ll};\n    }\n    auto prod_op = [](const Node &x, const Node\
+    \ &y) -> Node { return x + y; };\n    auto prod_e = Node();\n    auto apply_op\
+    \ = [](int f, int g) { return g; };\n    auto apply_e = 1e18;\n    auto act_op\
+    \ = [](const Node &x, int a, int sz) -> Node {\n        (void)sz;\n        return\
+    \ {a, x.length};\n    };\n    LazySegmentTree<Node, int> seg(prod_op, prod_e,\
+    \ apply_op, apply_e, act_op,\n                                   A);\n    // \u30AF\
+    \u30A8\u30EA\n    while (Q--) {\n        int com, u, v, cost;\n        cin >>\
+    \ com >> u >> v >> cost;\n        --u, --v;\n        if (com == 1ll) {\n     \
+    \       HLD.add(u, v, [&](int l, int r) { seg.apply(l, r, cost); });\n       \
+    \ }\n        if (com == 2ll) {\n            Node res = HLD.query(\n          \
+    \      u, v, Node(), [&](int l, int r) { return seg.prod(l, r); },\n         \
+    \       [](const Node &a, const Node &b) { return a + b; },\n                [](Node\
+    \ l, const Node &r) {\n                    swap(l.left, l.right);\n          \
+    \          return l + r;\n                });\n            print(res.ans);\n \
+    \       }\n    }\n}\n"
   dependsOn:
   - template/template.hpp
   - library/graph/tree/heavy_light_decomposition.hpp
@@ -88,7 +89,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.heavy_light_decomposition.test.cpp
   requiredBy: []
-  timestamp: '2026-01-21 19:52:16+09:00'
+  timestamp: '2026-04-07 03:17:27+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.heavy_light_decomposition.test.cpp

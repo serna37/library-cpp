@@ -38,14 +38,14 @@ data:
   isVerificationFile: false
   path: library/various/random.hpp
   requiredBy:
-  - library/string/finds.hpp
   - library/string/rolling_hash.hpp
+  - library/string/finds.hpp
   timestamp: '2026-01-14 14:43:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/string.finds.test.cpp
-  - tests/string.rolling_hash.test.cpp
   - tests/various.random.test.cpp
+  - tests/string.rolling_hash.test.cpp
 documentation_of: library/various/random.hpp
 layout: document
 title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"

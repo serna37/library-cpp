@@ -14,19 +14,19 @@ data:
     links: []
   bundledCode: "#line 2 \"library/search/binary_search/bi_ge_val.hpp\"\ntemplate <typename\
     \ T> T bi_ge_val(vector<T> &v, const T &x) {\n    auto it = lower_bound(v.begin(),\
-    \ v.end(), x);\n    return (it == v.end() ? INF : *it);\n}\ntemplate <typename\
+    \ v.end(), x);\n    return (it == v.end() ? 1e18 : *it);\n}\ntemplate <typename\
     \ T> T bi_ge_val(const set<T> &st, const T &x) {\n    auto it = st.lower_bound(x);\n\
-    \    return (it == st.end() ? INF : *it);\n}\n"
+    \    return (it == st.end() ? 1e18 : *it);\n}\n"
   code: "#pragma once\ntemplate <typename T> T bi_ge_val(vector<T> &v, const T &x)\
     \ {\n    auto it = lower_bound(v.begin(), v.end(), x);\n    return (it == v.end()\
-    \ ? INF : *it);\n}\ntemplate <typename T> T bi_ge_val(const set<T> &st, const\
-    \ T &x) {\n    auto it = st.lower_bound(x);\n    return (it == st.end() ? INF\
+    \ ? 1e18 : *it);\n}\ntemplate <typename T> T bi_ge_val(const set<T> &st, const\
+    \ T &x) {\n    auto it = st.lower_bound(x);\n    return (it == st.end() ? 1e18\
     \ : *it);\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/search/binary_search/bi_ge_val.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-04-07 03:17:27+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/search.binary_search.bi_ge_val.test.cpp
@@ -49,7 +49,7 @@ title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\u5C
 sort(A.begin(), A.end());
 int v = bi_ge_val(A, x);
 int v = bi_ge_val(st, x);
-if (v == INF) {
+if (v == 1e18) {
     // 値が存在しなかった
 }
 ```

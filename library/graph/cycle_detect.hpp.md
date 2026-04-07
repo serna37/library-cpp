@@ -88,8 +88,8 @@ data:
   timestamp: '2026-01-21 11:49:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph.cycle_detect.test.cpp
   - tests/graph.topological_sort.test.cpp
+  - tests/graph.cycle_detect.test.cpp
 documentation_of: library/graph/cycle_detect.hpp
 layout: document
 title: "\u9589\u8DEF\u691C\u51FA"

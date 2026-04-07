@@ -46,7 +46,7 @@ data:
     \ - \u7D4C\u8DEF\u5FA9\u5143\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n  \
     \  int N, M, s, t;\n    cin >> N >> M >> s >> t;\n    Graph G(N);\n    G.read(M,\
     \ 0, true, true);\n    auto [dis, route] = dijkstra(G, {s});\n    if (dis[t] ==\
-    \ INF) {\n        print(-1);\n        return;\n    }\n    vector<int> pth = route_restore(route,\
+    \ 1e18) {\n        print(-1);\n        return;\n    }\n    vector<int> pth = route_restore(route,\
     \ t);\n    cout << dis[t] << \" \" << pth.size() - 1 << endl;\n    for (int i\
     \ = 0; i < (int)pth.size() - 1; ++i) {\n        cout << pth[i] << \" \" << pth[i\
     \ + 1] << endl;\n    }\n}\n"
@@ -59,7 +59,7 @@ data:
   isVerificationFile: true
   path: tests/graph.route_restore.test.cpp
   requiredBy: []
-  timestamp: '2026-01-21 11:49:22+09:00'
+  timestamp: '2026-04-07 03:17:27+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.route_restore.test.cpp

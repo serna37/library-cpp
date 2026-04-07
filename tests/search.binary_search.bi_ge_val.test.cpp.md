@@ -42,11 +42,11 @@ data:
     \  // 25\u4EE5\u4E0A\u306E\u6700\u5C0F\u5024\n    assert(bi_ge_val(v, 20ll) ==\
     \ 20);  // 20\u3061\u3087\u3046\u3069\n    assert(bi_ge_val(v, 5ll) == 10);  \
     \ // \u6700\u5C0F\u8981\u7D20\u3088\u308A\u5C0F\u3055\u3044\u5834\u5408\n    assert(bi_ge_val(v,\
-    \ 55ll) == INF); // \u6700\u5927\u8981\u7D20\u3088\u308A\u5927\u304D\u3044\u5834\
+    \ 55ll) == 1e18); // \u6700\u5927\u8981\u7D20\u3088\u308A\u5927\u304D\u3044\u5834\
     \u5408\n    // --- Set\u7248\u306E\u30C6\u30B9\u30C8 ---\n    // set\u306F\u5185\
     \u90E8\u3067\u5E38\u306B\u30BD\u30FC\u30C8\u3055\u308C\u3066\u3044\u308B\n   \
     \ set<int> st = {10, 20, 30, 40, 50};\n    assert(bi_ge_val(st, 25ll) == 30);\n\
-    \    assert(bi_ge_val(st, 20ll) == 20);\n    assert(bi_ge_val(st, 60ll) == INF);\n\
+    \    assert(bi_ge_val(st, 20ll) == 20);\n    assert(bi_ge_val(st, 60ll) == 1e18);\n\
     \    // --- \u578B\u306E\u67D4\u8EDF\u6027\u30C6\u30B9\u30C8 (double) ---\n  \
     \  vector<double> vd = {1.1, 2.2, 3.3};\n    // 2.0 \u4EE5\u4E0A\u306E\u6700\u5C0F\
     \u5024\u306F 2.2\n    assert(abs(bi_ge_val(vd, 2.0) - 2.2) < 1e-9);\n}\n/**\n\
@@ -59,7 +59,7 @@ data:
   isVerificationFile: true
   path: tests/search.binary_search.bi_ge_val.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-04-07 03:17:27+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/search.binary_search.bi_ge_val.test.cpp

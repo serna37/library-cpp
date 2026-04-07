@@ -77,8 +77,8 @@ data:
   timestamp: '2026-01-21 19:52:16+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph.tree.centroid_decomposition2.test.cpp
   - tests/graph.tree.centroid_decomposition.test.cpp
+  - tests/graph.tree.centroid_decomposition2.test.cpp
 documentation_of: library/graph/tree/centroid_decomposition.hpp
 layout: document
 title: "\u91CD\u5FC3\u5206\u89E3"

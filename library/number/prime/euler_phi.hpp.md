@@ -35,8 +35,8 @@ data:
   timestamp: '2026-01-22 14:26:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/number.prime.eratosthenes.test.cpp
   - tests/number.mod.mod_tetration.test.cpp
+  - tests/number.prime.eratosthenes.test.cpp
 documentation_of: library/number/prime/euler_phi.hpp
 layout: document
 title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570"

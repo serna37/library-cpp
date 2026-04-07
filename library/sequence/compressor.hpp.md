@@ -65,17 +65,17 @@ data:
   path: library/sequence/compressor.hpp
   requiredBy:
   - library/search/binary_search/wavelet_search_engine.hpp
-  - library/sequence/static_range_frequency.hpp
-  - library/sequence/inversion_number.hpp
   - library/sequence/static_range_count_distinct.hpp
+  - library/sequence/inversion_number.hpp
+  - library/sequence/static_range_frequency.hpp
   timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/search.binary_search.wavelet_search_engine.test.cpp
   - tests/sequence.inversion_number.test.cpp
-  - tests/sequence.static_range_frequency.test.cpp
-  - tests/sequence.static_range_count_distinct.test.cpp
   - tests/various.mo.test.cpp
+  - tests/search.binary_search.wavelet_search_engine.test.cpp
+  - tests/sequence.static_range_count_distinct.test.cpp
+  - tests/sequence.static_range_frequency.test.cpp
 documentation_of: library/sequence/compressor.hpp
 layout: document
 title: "\u5EA7\u6A19\u5727\u7E2E"

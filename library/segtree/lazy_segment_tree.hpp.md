@@ -226,8 +226,8 @@ data:
   timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/segtree.lazy_segment_tree.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp
+  - tests/segtree.lazy_segment_tree.test.cpp
   - tests/graph.tree.heavy_light_decomposition.test.cpp
 documentation_of: library/segtree/lazy_segment_tree.hpp
 layout: document
@@ -262,7 +262,7 @@ vector<Node> A(N); // 初期配列
 auto prod_op = [](const Node &x, const Node &y) -> Node { return x + y; };
 auto prod_e = Node();
 auto apply_op = [](int f, int g) { return g; };
-auto apply_e = INF;
+auto apply_e = 1e18;
 auto act_op = [](const Node &x, int a, int sz) -> Node {
     (void)sz;
     return {a, x.length};

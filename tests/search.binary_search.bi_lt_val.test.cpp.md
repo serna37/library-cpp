@@ -42,26 +42,26 @@ data:
     \u3044\u6700\u5927\u5024\u306F 10 (\u3061\u3087\u3046\u3069\u3092\u542B\u307E\u306A\
     \u3044)\n    assert(bi_lt_val(v, 20ll) == 10);\n    // \u6700\u5C0F\u8981\u7D20\
     \u3068\u540C\u3058\u3001\u307E\u305F\u306F\u305D\u308C\u3088\u308A\u5C0F\u3055\
-    \u3044\u5834\u5408\u306F -INF\n    assert(bi_lt_val(v, 10ll) == -INF);\n    assert(bi_lt_val(v,\
-    \ 5ll) == -INF);\n    // \u6700\u5927\u8981\u7D20\u3088\u308A\u5927\u304D\u3044\
-    \u5834\u5408\u3001\u6700\u5927\u8981\u7D20\u304C\u8FD4\u308B\n    assert(bi_lt_val(v,\
-    \ 100ll) == 50);\n    // --- Set\u7248\u306E\u30C6\u30B9\u30C8 ---\n    set<int>\
-    \ st = {10, 20, 30, 40, 50};\n    assert(bi_lt_val(st, 30ll) == 20);\n    assert(bi_lt_val(st,\
-    \ 31ll) == 30);\n    assert(bi_lt_val(st, 10ll) == -INF);\n    // --- \u91CD\u8907\
-    \u8981\u7D20\u304C\u3042\u308B\u5834\u5408\u306E\u6319\u52D5\u78BA\u8A8D ---\n\
-    \    vector<int> v_dup = {10, 20, 20, 20, 30};\n    // lower_bound\u306F\u6700\
-    \u521D\u306E20\u3092\u6307\u3057\u3001\u305D\u306E\u4E00\u3064\u524D\u306F10\n\
-    \    assert(bi_lt_val(v_dup, 20ll) == 10);\n}\n/**\n * @brief \u4E8C\u5206\u63A2\
-    \u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\u5927\u5024\u306E\u30C6\u30B9\
-    \u30C8\n */\nvoid solve() {\n    print(\"Hello World\");\n    test_bi_lt_val();\n\
-    }\n"
+    \u3044\u5834\u5408\u306F -1e18\n    assert(bi_lt_val(v, 10ll) == -1e18);\n   \
+    \ assert(bi_lt_val(v, 5ll) == -1e18);\n    // \u6700\u5927\u8981\u7D20\u3088\u308A\
+    \u5927\u304D\u3044\u5834\u5408\u3001\u6700\u5927\u8981\u7D20\u304C\u8FD4\u308B\
+    \n    assert(bi_lt_val(v, 100ll) == 50);\n    // --- Set\u7248\u306E\u30C6\u30B9\
+    \u30C8 ---\n    set<int> st = {10, 20, 30, 40, 50};\n    assert(bi_lt_val(st,\
+    \ 30ll) == 20);\n    assert(bi_lt_val(st, 31ll) == 30);\n    assert(bi_lt_val(st,\
+    \ 10ll) == -1e18);\n    // --- \u91CD\u8907\u8981\u7D20\u304C\u3042\u308B\u5834\
+    \u5408\u306E\u6319\u52D5\u78BA\u8A8D ---\n    vector<int> v_dup = {10, 20, 20,\
+    \ 20, 30};\n    // lower_bound\u306F\u6700\u521D\u306E20\u3092\u6307\u3057\u3001\
+    \u305D\u306E\u4E00\u3064\u524D\u306F10\n    assert(bi_lt_val(v_dup, 20ll) == 10);\n\
+    }\n/**\n * @brief \u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\
+    \u6700\u5927\u5024\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n    print(\"\
+    Hello World\");\n    test_bi_lt_val();\n}\n"
   dependsOn:
   - template/template.hpp
   - library/search/binary_search/bi_lt_val.hpp
   isVerificationFile: true
   path: tests/search.binary_search.bi_lt_val.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-04-07 03:17:27+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/search.binary_search.bi_lt_val.test.cpp

@@ -36,8 +36,8 @@ data:
   path: library/number/mod/mod_pow.hpp
   requiredBy:
   - library/number/mod/mod_tetration.hpp
-  - library/number/mod/mod_inverse.hpp
   - library/number/mod/mod_combination.hpp
+  - library/number/mod/mod_inverse.hpp
   timestamp: '2026-01-15 10:11:56+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

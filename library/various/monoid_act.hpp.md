@@ -146,13 +146,13 @@ data:
   isVerificationFile: false
   path: library/various/monoid_act.hpp
   requiredBy:
-  - library/segtree/unified_segment_tree.hpp
   - library/segtree/lazy_segment_tree.hpp
+  - library/segtree/unified_segment_tree.hpp
   timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/segtree.lazy_segment_tree.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp
+  - tests/segtree.lazy_segment_tree.test.cpp
   - tests/graph.tree.heavy_light_decomposition.test.cpp
 documentation_of: library/various/monoid_act.hpp
 layout: document

@@ -43,10 +43,10 @@ data:
     \ == 30);\n    // \u6700\u5C0F\u8981\u7D20\u3088\u308A\u5C0F\u3055\u3044\u5834\
     \u5408\n    assert(bi_gt_val(v, 5ll) == 10);\n    // \u6700\u5927\u8981\u7D20\u3068\
     \u540C\u3058\u3001\u307E\u305F\u306F\u305D\u308C\u3088\u308A\u5927\u304D\u3044\
-    \u5834\u5408\u306F INF\n    assert(bi_gt_val(v, 50ll) == INF);\n    assert(bi_gt_val(v,\
-    \ 100ll) == INF);\n    // --- Set\u7248\u306E\u30C6\u30B9\u30C8 ---\n    set<int>\
+    \u5834\u5408\u306F 1e18\n    assert(bi_gt_val(v, 50ll) == 1e18);\n    assert(bi_gt_val(v,\
+    \ 100ll) == 1e18);\n    // --- Set\u7248\u306E\u30C6\u30B9\u30C8 ---\n    set<int>\
     \ st = {10, 20, 30, 40, 50};\n    assert(bi_gt_val(st, 20ll) == 30);\n    assert(bi_gt_val(st,\
-    \ 45ll) == 50);\n    assert(bi_gt_val(st, 50ll) == INF);\n    // --- \u91CD\u8907\
+    \ 45ll) == 50);\n    assert(bi_gt_val(st, 50ll) == 1e18);\n    // --- \u91CD\u8907\
     \u8981\u7D20\u304C\u3042\u308B\u5834\u5408\u306E\u6319\u52D5\u78BA\u8A8D ---\n\
     \    vector<int> v_dup = {10, 20, 20, 20, 30};\n    // upper_bound \u306F\u91CD\
     \u8907\u3059\u308B 20 \u3092\u3059\u3079\u3066\u98DB\u3073\u8D8A\u3048\u3066 30\
@@ -60,7 +60,7 @@ data:
   isVerificationFile: true
   path: tests/search.binary_search.bi_gt_val.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-04-07 03:17:27+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/search.binary_search.bi_gt_val.test.cpp

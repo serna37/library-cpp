@@ -14,19 +14,19 @@ data:
     links: []
   bundledCode: "#line 2 \"library/search/binary_search/bi_le_val.hpp\"\ntemplate <typename\
     \ T> T bi_le_val(vector<T> &v, const T &x) {\n    auto it = upper_bound(v.begin(),\
-    \ v.end(), x);\n    return (it == v.begin() ? -INF : *--it);\n}\ntemplate <typename\
+    \ v.end(), x);\n    return (it == v.begin() ? -1e18 : *--it);\n}\ntemplate <typename\
     \ T> T bi_le_val(const set<T> &st, const T &x) {\n    auto it = st.upper_bound(x);\n\
-    \    return (it == st.begin() ? -INF : *--it);\n}\n"
+    \    return (it == st.begin() ? -1e18 : *--it);\n}\n"
   code: "#pragma once\ntemplate <typename T> T bi_le_val(vector<T> &v, const T &x)\
     \ {\n    auto it = upper_bound(v.begin(), v.end(), x);\n    return (it == v.begin()\
-    \ ? -INF : *--it);\n}\ntemplate <typename T> T bi_le_val(const set<T> &st, const\
-    \ T &x) {\n    auto it = st.upper_bound(x);\n    return (it == st.begin() ? -INF\
+    \ ? -1e18 : *--it);\n}\ntemplate <typename T> T bi_le_val(const set<T> &st, const\
+    \ T &x) {\n    auto it = st.upper_bound(x);\n    return (it == st.begin() ? -1e18\
     \ : *--it);\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: library/search/binary_search/bi_le_val.hpp
   requiredBy: []
-  timestamp: '2026-01-15 10:11:56+09:00'
+  timestamp: '2026-04-07 03:17:27+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/search.binary_search.bi_le_val.test.cpp
@@ -49,7 +49,7 @@ title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\u59
 sort(A.begin(), A.end());
 int v = bi_le_val(A, x);
 int v = bi_le_val(st, x);
-if (v == -INF) {
+if (v == -1e18) {
     // 値が存在しなかった
 }
 ```

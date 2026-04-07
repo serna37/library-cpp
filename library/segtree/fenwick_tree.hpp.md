@@ -56,16 +56,16 @@ data:
   path: library/segtree/fenwick_tree.hpp
   requiredBy:
   - library/segtree/unified_segment_tree.hpp
-  - library/sequence/inversion_number.hpp
   - library/sequence/static_range_count_distinct.hpp
+  - library/sequence/inversion_number.hpp
   timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/sequence.inversion_number.test.cpp
   - tests/segtree.fenwick_tree.test.cpp
+  - tests/sequence.inversion_number.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp
-  - tests/sequence.static_range_count_distinct.test.cpp
   - tests/various.mo.test.cpp
+  - tests/sequence.static_range_count_distinct.test.cpp
 documentation_of: library/segtree/fenwick_tree.hpp
 layout: document
 title: Fenwick Tree

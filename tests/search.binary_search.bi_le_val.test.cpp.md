@@ -43,10 +43,10 @@ data:
     \ 20ll) == 20);\n    // \u6700\u5927\u8981\u7D20\u3088\u308A\u5927\u304D\u3044\
     \u5834\u5408\u3001\u6700\u5927\u8981\u7D20\u304C\u8FD4\u308B\n    assert(bi_le_val(v,\
     \ 100ll) == 50);\n    // \u6700\u5C0F\u8981\u7D20\u3088\u308A\u5C0F\u3055\u3044\
-    \u5834\u5408\u3001-INF \u304C\u8FD4\u308B\n    assert(bi_le_val(v, 5ll) == -INF);\n\
+    \u5834\u5408\u3001-1e18 \u304C\u8FD4\u308B\n    assert(bi_le_val(v, 5ll) == -1e18);\n\
     \    // --- Set\u7248\u306E\u30C6\u30B9\u30C8 ---\n    set<int> st = {10, 20,\
     \ 30, 40, 50};\n    assert(bi_le_val(st, 30ll) == 30);\n    assert(bi_le_val(st,\
-    \ 39ll) == 30);\n    assert(bi_le_val(st, 9ll) == -INF);\n    // --- \u91CD\u8907\
+    \ 39ll) == 30);\n    assert(bi_le_val(st, 9ll) == -1e18);\n    // --- \u91CD\u8907\
     \u8981\u7D20\u304C\u3042\u308B\u5834\u5408\u306E\u6319\u52D5\u78BA\u8A8D ---\n\
     \    vector<int> v_dup = {10, 20, 20, 20, 30};\n    // upper_bound\u306F20\u3092\
     \u8D85\u3048\u308B\u6700\u521D\u306E\u4F4D\u7F6E(30\u306E\u4F4D\u7F6E)\u3092\u6307\
@@ -60,7 +60,7 @@ data:
   isVerificationFile: true
   path: tests/search.binary_search.bi_le_val.test.cpp
   requiredBy: []
-  timestamp: '2026-01-19 13:31:13+09:00'
+  timestamp: '2026-04-07 03:17:27+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/search.binary_search.bi_le_val.test.cpp

@@ -29,8 +29,8 @@ data:
   timestamp: '2026-01-07 21:05:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/number.prime.eratosthenes.test.cpp
   - tests/number.divisors.test.cpp
+  - tests/number.prime.eratosthenes.test.cpp
 documentation_of: library/number/divisors.hpp
 layout: document
 title: "\u7D04\u6570\u5217\u6319"

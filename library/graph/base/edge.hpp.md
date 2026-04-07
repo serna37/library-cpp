@@ -120,41 +120,41 @@ data:
   isVerificationFile: false
   path: library/graph/base/edge.hpp
   requiredBy:
-  - library/graph/topological_sort.hpp
-  - library/graph/cycle_detect.hpp
-  - library/graph/mst/kruskal.hpp
-  - library/graph/connected_components/connected_components.hpp
   - library/graph/connected_components/strongly_connected_components.hpp
+  - library/graph/connected_components/connected_components.hpp
+  - library/graph/mst/kruskal.hpp
+  - library/graph/base/graph.hpp
   - library/graph/tree/lca.hpp
-  - library/graph/tree/tree_isomorphism.hpp
   - library/graph/tree/heavy_light_decomposition.hpp
   - library/graph/tree/centroid_decomposition.hpp
-  - library/graph/tree/convert_rooted_tree.hpp
   - library/graph/tree/centroid.hpp
+  - library/graph/tree/convert_rooted_tree.hpp
+  - library/graph/tree/tree_isomorphism.hpp
+  - library/graph/topological_sort.hpp
   - library/graph/shortest_path/bfs.hpp
+  - library/graph/shortest_path/dijkstra.hpp
   - library/graph/shortest_path/bellman_ford.hpp
   - library/graph/shortest_path/warshall_froyd.hpp
-  - library/graph/shortest_path/dijkstra.hpp
-  - library/graph/base/graph.hpp
+  - library/graph/cycle_detect.hpp
   timestamp: '2026-01-20 20:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph.connected_components.strongly_connected_components.test.cpp
-  - tests/graph.cycle_detect.test.cpp
-  - tests/graph.route_restore.test.cpp
-  - tests/graph.shortest_path.bellman_ford.test.cpp
   - tests/graph.tree.tree_isomorphism.test.cpp
-  - tests/graph.shortest_path.warshall_froyd.test.cpp
+  - tests/graph.tree.centroid_decomposition.test.cpp
+  - tests/graph.tree.lca.test.cpp
+  - tests/graph.shortest_path.bellman_ford.test.cpp
   - tests/graph.shortest_path.bfs.test.cpp
   - tests/graph.tree.convert_rooted_tree.test.cpp
-  - tests/graph.tree.centroid_decomposition2.test.cpp
-  - tests/graph.shortest_path.dijkstra.test.cpp
+  - tests/graph.connected_components.strongly_connected_components.test.cpp
+  - tests/graph.route_restore.test.cpp
+  - tests/graph.shortest_path.warshall_froyd.test.cpp
   - tests/graph.topological_sort.test.cpp
+  - tests/graph.mst.kruskal.test.cpp
+  - tests/graph.shortest_path.dijkstra.test.cpp
   - tests/graph.connected_components.connected_components.test.cpp
   - tests/graph.tree.heavy_light_decomposition.test.cpp
-  - tests/graph.mst.kruskal.test.cpp
-  - tests/graph.tree.lca.test.cpp
-  - tests/graph.tree.centroid_decomposition.test.cpp
+  - tests/graph.tree.centroid_decomposition2.test.cpp
+  - tests/graph.cycle_detect.test.cpp
 documentation_of: library/graph/base/edge.hpp
 layout: document
 title: "\u8FBA"
