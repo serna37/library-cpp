@@ -1,9 +1,9 @@
 #pragma once
 template <typename T> T bi_le_val(vector<T> &v, const T &x) {
-    auto it = upper_bound(v.begin(), v.end(), x);
-    return (it == v.begin() ? -1e18 : *--it);
+  auto it = upper_bound(v.begin(), v.end(), x);
+  return (it == v.begin() ? -1e18 : *--it);
 }
 template <typename T> T bi_le_val(const set<T> &st, const T &x) {
-    auto it = st.upper_bound(x);
-    return (it == st.begin() ? -1e18 : *--it);
+  auto it = st.upper_bound(x);
+  return (it == st.begin() ? -1e18 : *--it);
 }

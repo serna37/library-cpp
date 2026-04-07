@@ -21,19 +21,19 @@ constexpr long long MOD = 998244353;
 constexpr long long MOD7 = 1e9 + 7;
 const long double PI = acosl(-1);
 struct IoSetup {
-    IoSetup() {
-        cin.tie(0)->sync_with_stdio(0);
-        cout << fixed << setprecision(20);
-        cerr << fixed << setprecision(10);
-    }
+  IoSetup() {
+    cin.tie(0)->sync_with_stdio(0);
+    cout << fixed << setprecision(20);
+    cerr << fixed << setprecision(10);
+  }
 } iosetup;
 template <typename T> istream &operator>>(istream &s, vector<T> &v) {
-    for (auto &&e : v) s >> e;
-    return s;
+  for (auto &&e : v) s >> e;
+  return s;
 }
 template <typename T> ostream &operator<<(ostream &s, const vector<T> &v) {
-    for (int i = 0; i < (int)v.size(); ++i) s << (i ? " " : "") << v[i];
-    return s;
+  for (int i = 0; i < (int)v.size(); ++i) s << (i ? " " : "") << v[i];
+  return s;
 }
 template <typename T> void print(const T &v) { cout << v << endl; }
 template <typename T> void print(const vector<vector<T>> &G) { for (auto &&v : G) cout << v << endl; }

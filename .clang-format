@@ -2,6 +2,6 @@ AllowShortBlocksOnASingleLine: false
 AllowShortFunctionsOnASingleLine: true
 AllowShortLoopsOnASingleLine: true
 AllowShortIfStatementsOnASingleLine: true
-IndentWidth: 4
+IndentWidth: 2
 MaxEmptyLinesToKeep: 0
 SortIncludes: false
