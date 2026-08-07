@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/polynomial.fft.convolution_bitwise_or.test.cpp
     title: "Bitwise\u7573\u307F\u8FBC\u307FOR\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/sequence.collection_util.test.cpp
     title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/collection_util.hpp\"\nclass CollectionUtil\
@@ -28,8 +28,8 @@ data:
     \ f(v[i], i);\n    return b;\n  }\n  template <typename T> void distinct(vector<T>\
     \ &v) {\n    sort(v.begin(), v.end());\n    v.erase(unique(v.begin(), v.end()),\
     \ v.end());\n  }\n  template <typename T> void asc(vector<T> &v) { sort(v.begin(),\
-    \ v.end()); }\n  template <typename T> void desc(vector<T> &v) { sort(v.begin(),\
-    \ v.end()); }\n  template <typename T> void reverse(vector<T> &v) { std::reverse(v.begin(),\
+    \ v.end()); }\n  template <typename T> void desc(vector<T> &v) { sort(v.rbegin(),\
+    \ v.rend()); }\n  template <typename T> void reverse(vector<T> &v) { std::reverse(v.begin(),\
     \ v.end()); }\n  template <typename T> void sequence(vector<T> &v, T start = 0)\
     \ {\n    iota(v.begin(), v.end(), start);\n  }\n  template <typename T> void erase(set<T>\
     \ &st, const T &v) {\n    st.erase(st.find(v));\n  }\n  template <typename T>\
@@ -49,7 +49,7 @@ data:
     \ <typename T> void distinct(vector<T> &v) {\n    sort(v.begin(), v.end());\n\
     \    v.erase(unique(v.begin(), v.end()), v.end());\n  }\n  template <typename\
     \ T> void asc(vector<T> &v) { sort(v.begin(), v.end()); }\n  template <typename\
-    \ T> void desc(vector<T> &v) { sort(v.begin(), v.end()); }\n  template <typename\
+    \ T> void desc(vector<T> &v) { sort(v.rbegin(), v.rend()); }\n  template <typename\
     \ T> void reverse(vector<T> &v) { std::reverse(v.begin(), v.end()); }\n  template\
     \ <typename T> void sequence(vector<T> &v, T start = 0) {\n    iota(v.begin(),\
     \ v.end(), start);\n  }\n  template <typename T> void erase(set<T> &st, const\
@@ -59,8 +59,8 @@ data:
   isVerificationFile: false
   path: library/sequence/collection_util.hpp
   requiredBy: []
-  timestamp: '2026-08-07 23:17:11+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2026-08-07 23:39:09+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/sequence.collection_util.test.cpp
   - tests/polynomial.fft.convolution_bitwise_or.test.cpp
