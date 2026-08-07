@@ -28,7 +28,7 @@ public:
     v.erase(unique(v.begin(), v.end()), v.end());
   }
   template <typename T> void asc(vector<T> &v) { sort(v.begin(), v.end()); }
-  template <typename T> void desc(vector<T> &v) { sort(v.begin(), v.end()); }
+  template <typename T> void desc(vector<T> &v) { sort(v.rbegin(), v.rend()); }
   template <typename T> void reverse(vector<T> &v) { std::reverse(v.begin(), v.end()); }
   template <typename T> void sequence(vector<T> &v, T start = 0) {
     iota(v.begin(), v.end(), start);
