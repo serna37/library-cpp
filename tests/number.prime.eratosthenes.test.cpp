@@ -25,8 +25,8 @@ void test() {
     // 約数列挙 (ソートされてないよ)
     vector<int> divs = er.calc_divisors(x);
     vector<int> exp = divisors(x);
-    sort(all(divs));
-    sort(all(exp));
+    sort(divs.begin(), divs.end());
+    sort(exp.begin(), exp.end());
     assert(divs == exp);
     // 最小素因数
     int lpf = er.lpf(x);

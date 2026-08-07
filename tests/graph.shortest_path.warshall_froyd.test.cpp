@@ -16,7 +16,7 @@ void solve() {
         print("NEGATIVE CYCLE");
         return;
     }
-    vec2<string> ans = make_vec2<string>(V, V, "");
+    vector<vector<string>> ans(V, vector<string>(V, ""));
     for (int i = 0; i < V; ++i) {
         for (int j = 0; j < V; ++j) {
             ans[i][j] = dis[i][j] == 1e18 ? "INF" : int_to_string(dis[i][j]);

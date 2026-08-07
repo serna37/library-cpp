@@ -1,10 +1,10 @@
 #pragma once
 string string_to_lower(string s) {
-  std::transform(all(s), s.begin(), ::tolower);
+  std::transform(s.begin(), s.end(), s.begin(), ::tolower);
   return s;
 }
 string string_to_upper(string s) {
-  std::transform(all(s), s.begin(), ::toupper);
+  std::transform(s.begin(), s.end(), s.begin(), ::toupper);
   return s;
 }
 bool char_is_lower(char c) { // boolで返す

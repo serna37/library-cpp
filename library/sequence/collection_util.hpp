@@ -2,13 +2,13 @@
 class CollectionUtil {
 public:
   template <typename T> T min(const vector<T> &v) {
-    return *min_element(all(v));
+    return *min_element(v.begin(), v.end());
   }
   template <typename T> T max(const vector<T> &v) {
-    return *max_element(all(v));
+    return *max_element(v.begin(), v.end());
   }
   template <typename T> long long sum(const vector<T> &v) {
-    return accumulate(all(v), 0ll);
+    return accumulate(v.begin(), v.end(), 0ll);
   }
   template <typename T, typename F> bool all_match(const vector<T> &v, F f) {
     bool b = true;
@@ -24,14 +24,14 @@ public:
     return b;
   }
   template <typename T> void distinct(vector<T> &v) {
-    sort(all(v));
-    v.erase(unique(all(v)), v.end());
+    sort(v.begin(), v.end());
+    v.erase(unique(v.begin(), v.end()), v.end());
   }
-  template <typename T> void asc(vector<T> &v) { sort(all(v)); }
-  template <typename T> void desc(vector<T> &v) { sort(rall(v)); }
-  template <typename T> void reverse(vector<T> &v) { std::reverse(all(v)); }
+  template <typename T> void asc(vector<T> &v) { sort(v.begin(), v.end()); }
+  template <typename T> void desc(vector<T> &v) { sort(v.begin(), v.end()); }
+  template <typename T> void reverse(vector<T> &v) { std::reverse(v.begin(), v.end()); }
   template <typename T> void sequence(vector<T> &v, T start = 0) {
-    iota(all(v), start);
+    iota(v.begin(), v.end(), start);
   }
   template <typename T> void erase(set<T> &st, const T &v) {
     st.erase(st.find(v));

@@ -6,9 +6,6 @@
  */
 void solve() {
     print("Hello World");
-    auto G = make_vec2<string>(3, 2, "tmp");
-    vec2<string> T = {{"tmp", "tmp"}, {"tmp", "tmp"}, {"tmp", "tmp"}};
-    assert(G == T);
     int A = 5, B = 7;
     chmin(A, B);
     assert(A == 5ll);

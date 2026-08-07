@@ -11,14 +11,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
-#define all(x) begin(x), end(x)
-#define rall(x) rbegin(x), rend(x)
 #define endl "\n"
-template <typename T> using vec2 = vector<vector<T>>;
-template <typename T> using reverse_queue = priority_queue<T, vector<T>, greater<T>>;
 constexpr long long INF = 1e18;
-constexpr long long MOD = 998244353;
-constexpr long long MOD7 = 1e9 + 7;
+constexpr long long MOD = 1e9 + 7;
+constexpr long long MOD998 = 998244353;
 const long double PI = acosl(-1);
 struct IoSetup {
   IoSetup() {
@@ -37,9 +33,8 @@ template <typename T> ostream &operator<<(ostream &s, const vector<T> &v) {
 }
 template <typename T> void print(const T &v) { cout << v << endl; }
 template <typename T> void print(const vector<vector<T>> &G) { for (auto &&v : G) cout << v << endl; }
-template <typename T> vec2<T> make_vec2(int H, int W, T init = 0) { return vector<vector<T>>(H, vector<T>(W, init)); }
-template <typename T> bool chmin(T &i, const T &j) { return i > j && (i = j, true); }
-template <typename T> bool chmax(T &i, const T &j) { return i < j && (i = j, true); }
+auto chmax = []<class T>(T &i, const T &j) { return i < j && (i = j, true); };
+auto chmin = []<class T>(T &i, const T &j) { return i > j && (i = j, true); };
 void solve();
 signed main() { solve(); }
 // ----------------------------------------
