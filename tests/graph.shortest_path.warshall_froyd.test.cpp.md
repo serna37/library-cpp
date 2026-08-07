@@ -10,10 +10,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/warshall_froyd.hpp
     title: Warshall Froyd
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/various/convert.hpp
     title: "\u578B\u5909\u63DB"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -46,10 +46,10 @@ data:
     \ - WarshallFroyd\u306E\u30C6\u30B9\u30C8\n */\nvoid solve() {\n    int V, E;\n\
     \    cin >> V >> E;\n    Graph G(V);\n    G.read(E, 0, true, true);\n    auto\
     \ [dis, negativeCycle] = warshall_froyd(G);\n    if (negativeCycle) {\n      \
-    \  print(\"NEGATIVE CYCLE\");\n        return;\n    }\n    vec2<string> ans =\
-    \ make_vec2<string>(V, V, \"\");\n    for (int i = 0; i < V; ++i) {\n        for\
-    \ (int j = 0; j < V; ++j) {\n            ans[i][j] = dis[i][j] == 1e18 ? \"INF\"\
-    \ : int_to_string(dis[i][j]);\n        }\n    }\n    print(ans);\n}\n"
+    \  print(\"NEGATIVE CYCLE\");\n        return;\n    }\n    vector<vector<string>>\
+    \ ans(V, vector<string>(V, \"\"));\n    for (int i = 0; i < V; ++i) {\n      \
+    \  for (int j = 0; j < V; ++j) {\n            ans[i][j] = dis[i][j] == 1e18 ?\
+    \ \"INF\" : int_to_string(dis[i][j]);\n        }\n    }\n    print(ans);\n}\n"
   dependsOn:
   - template/template.hpp
   - library/graph/shortest_path/warshall_froyd.hpp
@@ -59,7 +59,7 @@ data:
   isVerificationFile: true
   path: tests/graph.shortest_path.warshall_froyd.test.cpp
   requiredBy: []
-  timestamp: '2026-04-07 03:37:28+00:00'
+  timestamp: '2026-08-07 23:17:11+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.shortest_path.warshall_froyd.test.cpp

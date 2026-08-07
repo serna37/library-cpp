@@ -75,9 +75,9 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/segtree.unified_segment_tree.test.cpp
   - tests/segtree.starry_sky_tree.test.cpp
   - tests/segtree.starry_sky_tree_2.test.cpp
-  - tests/segtree.unified_segment_tree.test.cpp
 documentation_of: library/segtree/starry_sky_tree.hpp
 layout: document
 title: Starry Sky Tree

@@ -29,8 +29,8 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/number.prime.prime_test.test.cpp
   - tests/number.prime.eratosthenes.test.cpp
+  - tests/number.prime.prime_test.test.cpp
 documentation_of: library/number/prime/prime_test.hpp
 layout: document
 title: "\u7D20\u6570\u5224\u5B9A"

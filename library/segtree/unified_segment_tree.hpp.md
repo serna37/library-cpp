@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/segtree/dual_segment_tree.hpp
     title: Dual Segment Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/segtree/fenwick_tree.hpp
     title: Fenwick Tree
   - icon: ':heavy_check_mark:'

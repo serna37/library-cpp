@@ -71,8 +71,8 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/segtree.segment_tree.test.cpp
   - tests/segtree.unified_segment_tree.test.cpp
+  - tests/segtree.segment_tree.test.cpp
 documentation_of: library/segtree/segment_tree.hpp
 layout: document
 title: Segment Tree

@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
@@ -30,19 +30,17 @@ data:
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
     \n#include \"template/template.hpp\"\n/**\n * @brief template\u306E\u30C6\u30B9\
-    \u30C8\n */\nvoid solve() {\n    print(\"Hello World\");\n    auto G = make_vec2<string>(3,\
-    \ 2, \"tmp\");\n    vec2<string> T = {{\"tmp\", \"tmp\"}, {\"tmp\", \"tmp\"},\
-    \ {\"tmp\", \"tmp\"}};\n    assert(G == T);\n    int A = 5, B = 7;\n    chmin(A,\
-    \ B);\n    assert(A == 5ll);\n    A = 7, B = 5;\n    chmin(A, B);\n    assert(A\
-    \ == 5ll);\n    A = 7, B = 5;\n    chmax(A, B);\n    assert(A == 7ll);\n    A\
-    \ = 5, B = 7;\n    chmax(A, B);\n    assert(A == 7ll);\n}\n"
+    \u30C8\n */\nvoid solve() {\n    print(\"Hello World\");\n    int A = 5, B = 7;\n\
+    \    chmin(A, B);\n    assert(A == 5ll);\n    A = 7, B = 5;\n    chmin(A, B);\n\
+    \    assert(A == 5ll);\n    A = 7, B = 5;\n    chmax(A, B);\n    assert(A == 7ll);\n\
+    \    A = 5, B = 7;\n    chmax(A, B);\n    assert(A == 7ll);\n}\n"
   dependsOn:
   - template/template.hpp
   isVerificationFile: true
   path: tests/template.template.test.cpp
   requiredBy: []
-  timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-08-07 23:17:11+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/template.template.test.cpp
 layout: document

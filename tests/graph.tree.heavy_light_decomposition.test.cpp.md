@@ -19,7 +19,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/various/monoid_act.hpp
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -89,7 +89,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.heavy_light_decomposition.test.cpp
   requiredBy: []
-  timestamp: '2026-04-07 03:37:28+00:00'
+  timestamp: '2026-08-07 23:17:11+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.heavy_light_decomposition.test.cpp

@@ -16,7 +16,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/number/prime/prime_test.hpp
     title: "\u7D20\u6570\u5224\u5B9A"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -56,11 +56,11 @@ data:
     \    map<int, int> mp = prime_fact(x);\n    for (auto &&[p, cnt] : factors) {\n\
     \        assert(mp[p] == cnt);\n    }\n    // \u7D04\u6570\u5217\u6319 (\u30BD\
     \u30FC\u30C8\u3055\u308C\u3066\u306A\u3044\u3088)\n    vector<int> divs = er.calc_divisors(x);\n\
-    \    vector<int> exp = divisors(x);\n    sort(all(divs));\n    sort(all(exp));\n\
-    \    assert(divs == exp);\n    // \u6700\u5C0F\u7D20\u56E0\u6570\n    int lpf\
-    \ = er.lpf(x);\n    assert(lpf == 2ll);\n    // \u03C6(x)\n    int phi = er.euler_phi(x);\n\
-    \    assert(phi == euler_phi(x));\n}\nvoid solve() {\n    print(\"Hello World\"\
-    );\n    test();\n}\n"
+    \    vector<int> exp = divisors(x);\n    sort(divs.begin(), divs.end());\n   \
+    \ sort(exp.begin(), exp.end());\n    assert(divs == exp);\n    // \u6700\u5C0F\
+    \u7D20\u56E0\u6570\n    int lpf = er.lpf(x);\n    assert(lpf == 2ll);\n    //\
+    \ \u03C6(x)\n    int phi = er.euler_phi(x);\n    assert(phi == euler_phi(x));\n\
+    }\nvoid solve() {\n    print(\"Hello World\");\n    test();\n}\n"
   dependsOn:
   - template/template.hpp
   - library/number/prime/eratosthenes.hpp
@@ -71,7 +71,7 @@ data:
   isVerificationFile: true
   path: tests/number.prime.eratosthenes.test.cpp
   requiredBy: []
-  timestamp: '2026-04-07 03:37:28+00:00'
+  timestamp: '2026-08-07 23:17:11+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/number.prime.eratosthenes.test.cpp

@@ -205,7 +205,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/segtree.unified_segment_tree.test.cpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.collection_util.test.cpp
     title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -222,67 +222,67 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/sequence.merge.test.cpp
     title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.static_range_count_distinct.test.cpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.static_range_frequency.test.cpp
     title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570\u306E\u30C6\u30B9\
       \u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.wavelet_matrix.test.cpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
       \u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.aho_corasick.test.cpp
     title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.finds.test.cpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.join.test.cpp
     title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.range.test.cpp
     title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.rolling_hash.test.cpp
     title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.run_length.test.cpp
     title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.split.test.cpp
     title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.split_multi.test.cpp
     title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
       \u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.util.test.cpp
     title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.z_algorithm.test.cpp
     title: "Z Algorithm\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/template.template.test.cpp
     title: "template\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.convert.test.cpp
     title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.mo.test.cpp
     title: "Mo's algorithm\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.random.test.cpp
     title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "\u0E05^>\u03C9<^\u0E05"
     links:
@@ -300,117 +300,113 @@ data:
   code: "/**\n * @brief \u0E05^>\u03C9<^\u0E05\n * @author serna37\n * @note https://serna37.github.io/library-cpp/\n\
     \ */\n#ifdef LOCAL\n#include \"template/debug.hpp\"\n#else\n#define debug(...)\n\
     #endif\n#include <bits/stdc++.h>\nusing namespace std;\n#define int long long\n\
-    #define all(x) begin(x), end(x)\n#define rall(x) rbegin(x), rend(x)\n#define endl\
-    \ \"\\n\"\ntemplate <typename T> using vec2 = vector<vector<T>>;\ntemplate <typename\
-    \ T> using reverse_queue = priority_queue<T, vector<T>, greater<T>>;\nconstexpr\
-    \ long long INF = 1e18;\nconstexpr long long MOD = 998244353;\nconstexpr long\
-    \ long MOD7 = 1e9 + 7;\nconst long double PI = acosl(-1);\nstruct IoSetup {\n\
-    \  IoSetup() {\n    cin.tie(0)->sync_with_stdio(0);\n    cout << fixed << setprecision(20);\n\
-    \    cerr << fixed << setprecision(10);\n  }\n} iosetup;\ntemplate <typename T>\
-    \ istream &operator>>(istream &s, vector<T> &v) {\n  for (auto &&e : v) s >> e;\n\
-    \  return s;\n}\ntemplate <typename T> ostream &operator<<(ostream &s, const vector<T>\
-    \ &v) {\n  for (int i = 0; i < (int)v.size(); ++i) s << (i ? \" \" : \"\") <<\
-    \ v[i];\n  return s;\n}\ntemplate <typename T> void print(const T &v) { cout <<\
-    \ v << endl; }\ntemplate <typename T> void print(const vector<vector<T>> &G) {\
-    \ for (auto &&v : G) cout << v << endl; }\ntemplate <typename T> vec2<T> make_vec2(int\
-    \ H, int W, T init = 0) { return vector<vector<T>>(H, vector<T>(W, init)); }\n\
-    template <typename T> bool chmin(T &i, const T &j) { return i > j && (i = j, true);\
-    \ }\ntemplate <typename T> bool chmax(T &i, const T &j) { return i < j && (i =\
-    \ j, true); }\nvoid solve();\nsigned main() { solve(); }\n// ----------------------------------------\n\
-    // #include \"template/template.hpp\" is done.\n// ----------------------------------------\n"
+    #define endl \"\\n\"\nconstexpr long long INF = 1e18;\nconstexpr long long MOD\
+    \ = 1e9 + 7;\nconstexpr long long MOD998 = 998244353;\nconst long double PI =\
+    \ acosl(-1);\nstruct IoSetup {\n  IoSetup() {\n    cin.tie(0)->sync_with_stdio(0);\n\
+    \    cout << fixed << setprecision(20);\n    cerr << fixed << setprecision(10);\n\
+    \  }\n} iosetup;\ntemplate <typename T> istream &operator>>(istream &s, vector<T>\
+    \ &v) {\n  for (auto &&e : v) s >> e;\n  return s;\n}\ntemplate <typename T> ostream\
+    \ &operator<<(ostream &s, const vector<T> &v) {\n  for (int i = 0; i < (int)v.size();\
+    \ ++i) s << (i ? \" \" : \"\") << v[i];\n  return s;\n}\ntemplate <typename T>\
+    \ void print(const T &v) { cout << v << endl; }\ntemplate <typename T> void print(const\
+    \ vector<vector<T>> &G) { for (auto &&v : G) cout << v << endl; }\nauto chmax\
+    \ = []<class T>(T &i, const T &j) { return i < j && (i = j, true); };\nauto chmin\
+    \ = []<class T>(T &i, const T &j) { return i > j && (i = j, true); };\nvoid solve();\n\
+    signed main() { solve(); }\n// ----------------------------------------\n// #include\
+    \ \"template/template.hpp\" is done.\n// ----------------------------------------\n"
   dependsOn: []
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-08-07 23:17:11+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/graph.tree.tree_isomorphism.test.cpp
-  - tests/template.template.test.cpp
-  - tests/polynomial.fft.convolution_bitwise_xor.test.cpp
-  - tests/search.binary_search.bi_search_cnt.test.cpp
-  - tests/dp.cumulative_sum.cumulative_sum_3D.test.cpp
-  - tests/graph.tree.centroid_decomposition.test.cpp
-  - tests/string.range.test.cpp
-  - tests/graph.tree.lca.test.cpp
-  - tests/segtree.starry_sky_tree.test.cpp
-  - tests/number.prime.prime_test.test.cpp
-  - tests/number.digit_sum.test.cpp
-  - tests/graph.shortest_path.bellman_ford.test.cpp
-  - tests/graph.shortest_path.bfs.test.cpp
-  - tests/string.finds.test.cpp
-  - tests/sequence.wavelet_matrix.test.cpp
-  - tests/string.join.test.cpp
-  - tests/sequence.dispersion.test.cpp
-  - tests/string.util.test.cpp
-  - tests/segtree.segment_tree.test.cpp
-  - tests/string.split.test.cpp
-  - tests/graph.tree.convert_rooted_tree.test.cpp
-  - tests/string.run_length.test.cpp
-  - tests/geometry.area_square.test.cpp
-  - tests/search.binary_search.binary_search.test.cpp
-  - tests/sequence.merge.test.cpp
-  - tests/segtree.starry_sky_tree_2.test.cpp
-  - tests/polynomial.fft.convolution_fft.test.cpp
-  - tests/graph.connected_components.strongly_connected_components.test.cpp
-  - tests/number.prime.prime_fact.test.cpp
-  - tests/graph.route_restore.test.cpp
-  - tests/search.permutation.test.cpp
-  - tests/segtree.fenwick_tree.test.cpp
-  - tests/graph.shortest_path.warshall_froyd.test.cpp
-  - tests/sequence.inversion_number.test.cpp
-  - tests/sequence.difference_sequence.test.cpp
-  - tests/geometry.area_triangle.test.cpp
-  - tests/number.ext_gcd.test.cpp
-  - tests/polynomial.fft.convolution_bitwise_and.test.cpp
-  - tests/number.base_convert.test.cpp
-  - tests/graph.topological_sort.test.cpp
-  - tests/polynomial.fft.convolution_bitwise_or.test.cpp
-  - tests/search.binary_search.bi_ge_val.test.cpp
-  - tests/search.binary_search.bi_lt_val.test.cpp
-  - tests/graph.mst.kruskal.test.cpp
-  - tests/segtree.unified_segment_tree.test.cpp
-  - tests/various.union_find.test.cpp
   - tests/various.convert.test.cpp
-  - tests/number.mod.mod_combination.test.cpp
-  - tests/number.div.test.cpp
-  - tests/various.random.test.cpp
-  - tests/dp.cumulative_sum.cumulative_sum_rev.test.cpp
-  - tests/search.binary_search.binary_search_real.test.cpp
-  - tests/polynomial.fps.stirling_second_number.test.cpp
-  - tests/graph.shortest_path.dijkstra.test.cpp
-  - tests/number.combination.test.cpp
-  - tests/dp.cumulative_sum.cumulative_sum_rev_diff.test.cpp
-  - tests/graph.connected_components.connected_components.test.cpp
-  - tests/sequence.collection_util.test.cpp
-  - tests/geometry.util.test.cpp
-  - tests/segtree.lazy_segment_tree.test.cpp
-  - tests/various.mo.test.cpp
-  - tests/string.z_algorithm.test.cpp
-  - tests/polynomial.fps.bernoulli_number.test.cpp
   - tests/search.binary_search.bi_le_val.test.cpp
-  - tests/number.mod.mod_tetration.test.cpp
-  - tests/search.binary_search.bi_gt_val.test.cpp
-  - tests/number.divisors.test.cpp
-  - tests/number.factorial.test.cpp
-  - tests/search.bit_search.test.cpp
-  - tests/string.aho_corasick.test.cpp
-  - tests/number.prime.eratosthenes.test.cpp
+  - tests/sequence.collection_util.test.cpp
+  - tests/polynomial.fps.bernoulli_number.test.cpp
+  - tests/sequence.wavelet_matrix.test.cpp
+  - tests/geometry.area_triangle.test.cpp
+  - tests/sequence.merge.test.cpp
+  - tests/dp.cumulative_sum.cumulative_sum_rev.test.cpp
+  - tests/segtree.unified_segment_tree.test.cpp
   - tests/grid.transpose.test.cpp
-  - tests/string.split_multi.test.cpp
-  - tests/grid.bfs.test.cpp
-  - tests/search.binary_search.wavelet_search_engine.test.cpp
-  - tests/string.rolling_hash.test.cpp
-  - tests/graph.tree.heavy_light_decomposition.test.cpp
-  - tests/sequence.static_range_count_distinct.test.cpp
-  - tests/graph.tree.centroid_decomposition2.test.cpp
+  - tests/string.util.test.cpp
+  - tests/string.aho_corasick.test.cpp
   - tests/dp.cumulative_sum.cumulative_sum.test.cpp
+  - tests/graph.shortest_path.dijkstra.test.cpp
+  - tests/search.permutation.test.cpp
+  - tests/sequence.inversion_number.test.cpp
+  - tests/string.z_algorithm.test.cpp
+  - tests/string.rolling_hash.test.cpp
   - tests/segtree.dual_segment_tree.test.cpp
-  - tests/dp.cumulative_sum.cumulative_sum_2D.test.cpp
-  - tests/polynomial.fps.stirling_first_number.test.cpp
-  - tests/graph.cycle_detect.test.cpp
+  - tests/geometry.area_square.test.cpp
+  - tests/graph.topological_sort.test.cpp
+  - tests/string.finds.test.cpp
+  - tests/segtree.starry_sky_tree.test.cpp
+  - tests/polynomial.fft.convolution_fft.test.cpp
+  - tests/graph.route_restore.test.cpp
+  - tests/graph.tree.centroid_decomposition.test.cpp
+  - tests/polynomial.fft.convolution_bitwise_or.test.cpp
+  - tests/polynomial.fft.convolution_bitwise_and.test.cpp
+  - tests/graph.connected_components.connected_components.test.cpp
+  - tests/various.union_find.test.cpp
+  - tests/number.prime.prime_fact.test.cpp
+  - tests/number.prime.eratosthenes.test.cpp
+  - tests/string.run_length.test.cpp
+  - tests/string.join.test.cpp
+  - tests/search.binary_search.binary_search.test.cpp
+  - tests/search.bit_search.test.cpp
   - tests/dp.cumulative_sum.cumulative_sum_diff.test.cpp
+  - tests/dp.cumulative_sum.cumulative_sum_2D.test.cpp
+  - tests/number.combination.test.cpp
+  - tests/segtree.segment_tree.test.cpp
+  - tests/graph.shortest_path.bellman_ford.test.cpp
+  - tests/number.factorial.test.cpp
+  - tests/graph.tree.centroid_decomposition2.test.cpp
+  - tests/geometry.util.test.cpp
+  - tests/grid.bfs.test.cpp
+  - tests/segtree.starry_sky_tree_2.test.cpp
+  - tests/various.random.test.cpp
+  - tests/graph.connected_components.strongly_connected_components.test.cpp
+  - tests/number.mod.mod_tetration.test.cpp
+  - tests/number.digit_sum.test.cpp
+  - tests/sequence.dispersion.test.cpp
+  - tests/string.split.test.cpp
+  - tests/segtree.lazy_segment_tree.test.cpp
+  - tests/polynomial.fft.convolution_bitwise_xor.test.cpp
+  - tests/graph.tree.lca.test.cpp
+  - tests/graph.shortest_path.warshall_froyd.test.cpp
+  - tests/search.binary_search.wavelet_search_engine.test.cpp
+  - tests/string.split_multi.test.cpp
+  - tests/search.binary_search.bi_lt_val.test.cpp
+  - tests/number.base_convert.test.cpp
+  - tests/sequence.difference_sequence.test.cpp
+  - tests/search.binary_search.bi_ge_val.test.cpp
+  - tests/search.binary_search.binary_search_real.test.cpp
+  - tests/various.mo.test.cpp
+  - tests/graph.tree.convert_rooted_tree.test.cpp
+  - tests/graph.mst.kruskal.test.cpp
+  - tests/graph.cycle_detect.test.cpp
+  - tests/dp.cumulative_sum.cumulative_sum_rev_diff.test.cpp
+  - tests/number.mod.mod_combination.test.cpp
+  - tests/number.prime.prime_test.test.cpp
+  - tests/number.ext_gcd.test.cpp
+  - tests/sequence.static_range_count_distinct.test.cpp
+  - tests/graph.tree.heavy_light_decomposition.test.cpp
+  - tests/string.range.test.cpp
+  - tests/search.binary_search.bi_search_cnt.test.cpp
+  - tests/number.div.test.cpp
+  - tests/template.template.test.cpp
+  - tests/dp.cumulative_sum.cumulative_sum_3D.test.cpp
   - tests/sequence.static_range_frequency.test.cpp
+  - tests/graph.shortest_path.bfs.test.cpp
+  - tests/number.divisors.test.cpp
+  - tests/search.binary_search.bi_gt_val.test.cpp
+  - tests/polynomial.fps.stirling_second_number.test.cpp
+  - tests/segtree.fenwick_tree.test.cpp
+  - tests/polynomial.fps.stirling_first_number.test.cpp
 documentation_of: template/template.hpp
 layout: document
 title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"

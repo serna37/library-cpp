@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/segtree/fenwick_tree.hpp
     title: Fenwick Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -45,7 +45,7 @@ data:
   isVerificationFile: true
   path: tests/segtree.fenwick_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-04-07 03:37:28+00:00'
+  timestamp: '2026-08-07 23:17:11+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/segtree.fenwick_tree.test.cpp

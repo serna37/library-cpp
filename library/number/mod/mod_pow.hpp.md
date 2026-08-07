@@ -34,14 +34,14 @@ data:
   isVerificationFile: false
   path: library/number/mod/mod_pow.hpp
   requiredBy:
-  - library/number/mod/mod_tetration.hpp
   - library/number/mod/mod_combination.hpp
   - library/number/mod/mod_inverse.hpp
+  - library/number/mod/mod_tetration.hpp
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/number.mod.mod_combination.test.cpp
   - tests/number.mod.mod_tetration.test.cpp
+  - tests/number.mod.mod_combination.test.cpp
 documentation_of: library/number/mod/mod_pow.hpp
 layout: document
 title: "MOD \u4E8C\u5206\u7D2F\u4E57"
