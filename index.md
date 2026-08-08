@@ -358,6 +358,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/string/z_algorithm.hpp
       title: Z Algorithm
+  - name: library/util
+    pages:
+    - icon: ':warning:'
+      path: library/util/util.hpp
+      title: library/util/util.hpp
   - name: library/various
     pages:
     - icon: ':heavy_check_mark:'
