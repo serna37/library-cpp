@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: library/util/util.hpp
-    title: library/util/util.hpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/geometry.area_triangle.test.cpp
@@ -23,8 +20,7 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/geometry/area_triangle.hpp
-  requiredBy:
-  - library/util/util.hpp
+  requiredBy: []
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

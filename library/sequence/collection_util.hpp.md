@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: library/util/util.hpp
-    title: library/util/util.hpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/polynomial.fft.convolution_bitwise_or.test.cpp
@@ -61,8 +58,7 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: library/sequence/collection_util.hpp
-  requiredBy:
-  - library/util/util.hpp
+  requiredBy: []
   timestamp: '2026-08-07 23:39:09+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
