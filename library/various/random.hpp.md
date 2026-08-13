@@ -41,9 +41,9 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - tests/string.rolling_hash.test.cpp
   - tests/string.finds.test.cpp
   - tests/various.random.test.cpp
-  - tests/string.rolling_hash.test.cpp
 documentation_of: library/various/random.hpp
 layout: document
 title: "\u64EC\u4F3C\u4E71\u6570\u751F\u6210"

@@ -64,16 +64,16 @@ data:
   path: library/sequence/compressor.hpp
   requiredBy:
   - library/search/binary_search/wavelet_search_engine.hpp
-  - library/sequence/static_range_frequency.hpp
   - library/sequence/static_range_count_distinct.hpp
+  - library/sequence/static_range_frequency.hpp
   - library/sequence/inversion_number.hpp
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/sequence.static_range_count_distinct.test.cpp
   - tests/sequence.inversion_number.test.cpp
-  - tests/various.mo.test.cpp
   - tests/search.binary_search.wavelet_search_engine.test.cpp
+  - tests/various.mo.test.cpp
+  - tests/sequence.static_range_count_distinct.test.cpp
   - tests/sequence.static_range_frequency.test.cpp
 documentation_of: library/sequence/compressor.hpp
 layout: document

@@ -97,8 +97,8 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/string.finds.test.cpp
   - tests/string.aho_corasick.test.cpp
+  - tests/string.finds.test.cpp
 documentation_of: library/string/aho_corasick.hpp
 layout: document
 title: Aho Corasick

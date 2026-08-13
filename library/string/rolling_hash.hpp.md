@@ -83,8 +83,8 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/string.finds.test.cpp
   - tests/string.rolling_hash.test.cpp
+  - tests/string.finds.test.cpp
 documentation_of: library/string/rolling_hash.hpp
 layout: document
 title: Rolling Hash

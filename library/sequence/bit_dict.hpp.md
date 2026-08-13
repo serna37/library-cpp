@@ -84,8 +84,8 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/search.binary_search.wavelet_search_engine.test.cpp
   - tests/sequence.wavelet_matrix.test.cpp
+  - tests/search.binary_search.wavelet_search_engine.test.cpp
 documentation_of: library/sequence/bit_dict.hpp
 layout: document
 title: "\u5B8C\u5099\u8F9E\u66F8"

@@ -43,9 +43,9 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph.mst.kruskal.test.cpp
   - tests/graph.tree.tree_isomorphism.test.cpp
   - tests/various.union_find.test.cpp
+  - tests/graph.mst.kruskal.test.cpp
 documentation_of: library/various/union_find.hpp
 layout: document
 title: "UnionFind \u7D20\u96C6\u5408\u30C7\u30FC\u30BF\u69CB\u9020"

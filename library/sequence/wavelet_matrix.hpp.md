@@ -160,8 +160,8 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/search.binary_search.wavelet_search_engine.test.cpp
   - tests/sequence.wavelet_matrix.test.cpp
+  - tests/search.binary_search.wavelet_search_engine.test.cpp
 documentation_of: library/sequence/wavelet_matrix.hpp
 layout: document
 title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
