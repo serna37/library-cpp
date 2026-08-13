@@ -1,3 +1,4 @@
+#pragma once
 /** ----- start include utility ----- */
 #include "library/sequence/collection_util.hpp"
 #include "library/string/util.hpp"
