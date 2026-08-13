@@ -12,7 +12,7 @@ data:
     path: library/sequence/static_range_count_distinct.hpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.fenwick_tree.test.cpp
     title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
   - icon: ':x:'
@@ -30,7 +30,7 @@ data:
     title: "Mo's algorithm\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/segtree/fenwick_tree.hpp\"\nstruct FenwickTree {\n\
@@ -56,7 +56,7 @@ data:
   - library/sequence/inversion_number.hpp
   - library/segtree/unified_segment_tree.hpp
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/segtree.unified_segment_tree.test.cpp
   - tests/sequence.inversion_number.test.cpp

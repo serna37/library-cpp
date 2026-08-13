@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/search/binary_search/binary_search_real.hpp
     title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
@@ -63,8 +63,8 @@ data:
   isVerificationFile: true
   path: tests/search.binary_search.binary_search_real.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 14:16:08+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-08-13 15:26:32+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/search.binary_search.binary_search_real.test.cpp
 layout: document

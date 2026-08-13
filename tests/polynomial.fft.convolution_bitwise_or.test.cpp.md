@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/number/mod/montgomery_mod_int.hpp
     title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
   - icon: ':heavy_check_mark:'
@@ -58,7 +58,7 @@ data:
   isVerificationFile: true
   path: tests/polynomial.fft.convolution_bitwise_or.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 14:16:08+09:00'
+  timestamp: '2026-08-13 15:26:32+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/polynomial.fft.convolution_bitwise_or.test.cpp

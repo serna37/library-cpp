@@ -56,7 +56,7 @@ data:
   isVerificationFile: true
   path: tests/sequence.difference_sequence.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 14:16:08+09:00'
+  timestamp: '2026-08-13 15:26:32+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/sequence.difference_sequence.test.cpp

@@ -154,7 +154,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/number/mod/mod_tetration.hpp
       title: "\u30C6\u30C8\u30EC\u30FC\u30B7\u30E7\u30F3"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/number/mod/montgomery_mod_int.hpp
       title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
   - name: library/number/prime
@@ -173,7 +173,7 @@ data:
       title: "\u7D20\u6570\u5224\u5B9A"
   - name: library/polynomial/fft
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/polynomial/fft/convolution_arbitrary_mod.hpp
       title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
     - icon: ':heavy_check_mark:'
@@ -188,7 +188,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/polynomial/fft/convolution_fft.hpp
       title: "\u7573\u307F\u8FBC\u307F FFT"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/polynomial/fft/fast_fourier_transform.hpp
       title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
     - icon: ':heavy_check_mark:'
@@ -207,72 +207,72 @@ data:
     - icon: ':heavy_check_mark:'
       path: library/polynomial/fps/bernoulli_number.hpp
       title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: library/polynomial/fps/formal_power_series.hpp
       title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
     - icon: ':heavy_check_mark:'
       path: library/polynomial/fps/stirling_first_number.hpp
       title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/polynomial/fps/stirling_second_number.hpp
       title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
   - name: library/search/binary_search
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search/bi_ge_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u8981\
         \u7D20\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search/bi_ge_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\
         \u5C0F\u5024"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search/bi_gt_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
         \u8981\u7D20\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search/bi_gt_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
         \u6700\u5C0F\u5024"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search/bi_le_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u8981\
         \u7D20\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search/bi_le_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\
         \u5927\u5024"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search/bi_lt_cnt.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u8981\
         \u7D20\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search/bi_lt_val.hpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\
         \u5927\u5024"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search/binary_search.hpp
       title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search/binary_search_real.hpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/binary_search/wavelet_search_engine.hpp
       title: Wavelet Search Engine
   - name: library/search
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/bit_search.hpp
       title: "bit\u5168\u63A2\u7D22"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library/search/permutation.hpp
       title: "\u9806\u5217\u5168\u63A2\u7D22"
   - name: library/segtree
     pages:
-    - icon: ':question:'
+    - icon: ':x:'
       path: library/segtree/dual_segment_tree.hpp
       title: Dual Segment Tree
-    - icon: ':question:'
+    - icon: ':x:'
       path: library/segtree/fenwick_tree.hpp
       title: Fenwick Tree
     - icon: ':question:'
@@ -289,13 +289,13 @@ data:
       title: "\u7D71\u5408\u30BB\u30B0\u6728"
   - name: library/sequence
     pages:
-    - icon: ':question:'
+    - icon: ':x:'
       path: library/sequence/bit_dict.hpp
       title: "\u5B8C\u5099\u8F9E\u66F8"
     - icon: ':question:'
       path: library/sequence/collection_util.hpp
       title: "\u914D\u5217\u7CFBUtil"
-    - icon: ':question:'
+    - icon: ':x:'
       path: library/sequence/compressor.hpp
       title: "\u5EA7\u6A19\u5727\u7E2E"
     - icon: ':x:'
@@ -319,7 +319,7 @@ data:
     - icon: ':warning:'
       path: library/sequence/two_pointer_approach_memo.hpp
       title: "\u5C3A\u53D6\u308A\u6CD5(\u30B3\u30D4\u30DA\u7528)"
-    - icon: ':question:'
+    - icon: ':x:'
       path: library/sequence/wavelet_matrix.hpp
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - name: library/string
@@ -533,51 +533,51 @@ data:
       path: tests/polynomial.fps.stirling_first_number.test.cpp
       title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
         \u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/polynomial.fps.stirling_second_number.test.cpp
       title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
         \u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search.binary_search.bi_ge_val.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\
         \u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search.binary_search.bi_gt_val.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\
         \u6700\u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search.binary_search.bi_le_val.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\
         \u5927\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search.binary_search.bi_lt_val.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\
         \u5927\u5024\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search.binary_search.bi_search_cnt.test.cpp
       title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search.binary_search.binary_search.test.cpp
       title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search.binary_search.binary_search_real.test.cpp
       title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search.binary_search.wavelet_search_engine.test.cpp
       title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search.bit_search.test.cpp
       title: "bit\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/search.permutation.test.cpp
       title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/segtree.dual_segment_tree.test.cpp
       title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/segtree.fenwick_tree.test.cpp
       title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: tests/segtree.lazy_segment_tree.test.cpp
       title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
     - icon: ':x:'

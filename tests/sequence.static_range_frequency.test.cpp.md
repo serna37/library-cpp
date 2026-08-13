@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/sequence/compressor.hpp
     title: "\u5EA7\u6A19\u5727\u7E2E"
   - icon: ':x:'
@@ -48,7 +48,7 @@ data:
   isVerificationFile: true
   path: tests/sequence.static_range_frequency.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 14:16:08+09:00'
+  timestamp: '2026-08-13 15:26:32+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/sequence.static_range_frequency.test.cpp

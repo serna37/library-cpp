@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/segtree/dual_segment_tree.hpp
     title: Dual Segment Tree
   - icon: ':question:'
@@ -22,10 +22,10 @@ data:
     path: tests/graph.tree.heavy_light_decomposition.test.cpp
     title: "\u6728 - HLD\u306E\u30C6\u30B9\u30C8 \u6728\u4E0A\u30AF\u30A8\u30EA:\u6700\
       \u5927\u9023\u7D9A\u90E8\u5206\u5217\u548C"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
   - icon: ':x:'

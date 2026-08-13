@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/segtree/fenwick_tree.hpp
     title: Fenwick Tree
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_B
@@ -45,8 +45,8 @@ data:
   isVerificationFile: true
   path: tests/segtree.fenwick_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 14:16:08+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-08-13 15:26:32+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/segtree.fenwick_tree.test.cpp
 layout: document
