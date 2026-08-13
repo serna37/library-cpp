@@ -1,3 +1,4 @@
+#pragma once
 /**
  * @brief ฅ^>ω<^ฅ
  * @author serna37
