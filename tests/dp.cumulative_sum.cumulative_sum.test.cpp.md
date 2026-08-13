@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/dp/cumulative_sum/cumulative_sum.hpp
     title: "\u7D2F\u7A4D\u548C"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []

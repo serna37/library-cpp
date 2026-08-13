@@ -36,13 +36,13 @@ data:
     \        }\n      }\n    }\n  }\n  T query(int v, long long steps) const {\n \
     \   T res;\n    res.to = v;\n    for (int k = 0; k < log; ++k) {\n      if ((steps\
     \ >> k) & 1) {\n        if (res.to == T::e) break;\n        res = res + table[k][res.to];\n\
-    \      }\n    }\n    return res;\n  }\n};\n"
+    \      }\n    }\n    return res;\n  }\n};"
   dependsOn: []
   isVerificationFile: false
   path: library/dp/doubling.hpp
   requiredBy:
   - library/graph/tree/lca.hpp
-  timestamp: '2026-04-07 03:37:28+00:00'
+  timestamp: '2026-08-13 17:27:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/graph.tree.lca.test.cpp

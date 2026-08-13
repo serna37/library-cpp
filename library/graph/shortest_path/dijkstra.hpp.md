@@ -66,8 +66,8 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph.shortest_path.dijkstra.test.cpp
   - tests/graph.route_restore.test.cpp
+  - tests/graph.shortest_path.dijkstra.test.cpp
 documentation_of: library/graph/shortest_path/dijkstra.hpp
 layout: document
 title: Dijkstra
