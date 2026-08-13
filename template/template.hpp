@@ -9,6 +9,7 @@
 #else
 #define debug(...)
 #endif
+
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
