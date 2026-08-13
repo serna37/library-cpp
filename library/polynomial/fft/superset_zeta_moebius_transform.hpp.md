@@ -2,16 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fft/convolution_bitwise_and.hpp
     title: "Bitwise\u7573\u307F\u8FBC\u307FAND"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fft.convolution_bitwise_and.test.cpp
     title: "Bitwise\u7573\u307F\u8FBC\u307FAND\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/polynomial/fft/superset_zeta_moebius_transform.hpp\"\
@@ -39,7 +39,7 @@ data:
   requiredBy:
   - library/polynomial/fft/convolution_bitwise_and.hpp
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/polynomial.fft.convolution_bitwise_and.test.cpp
 documentation_of: library/polynomial/fft/superset_zeta_moebius_transform.hpp

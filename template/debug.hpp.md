@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/template.debug.test.cpp
     title: "debug\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links:
     - https://zenn.dev/sassan/articles/19db660e4da0a4
@@ -229,13 +229,13 @@ data:
     \ << \"\\033[90m[debug]\\033[36m \" << name << \"\\033[m => \";\n  _print(v);\n\
     \  _print_LF();\n}\n#define debug(...) print_debug(__VA_ARGS__, #__VA_ARGS__)\n\
     // cpp_dump\n// https://zenn.dev/sassan/articles/19db660e4da0a4\n// #include \"\
-    cpp-dump.hpp\"\n// #define debug(...) cpp_dump(__VA_ARGS__)\n"
+    cpp-dump.hpp\"\n// #define debug(...) cpp_dump(__VA_ARGS__)"
   dependsOn: []
   isVerificationFile: false
   path: template/debug.hpp
   requiredBy: []
-  timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-08-13 16:29:51+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/template.debug.test.cpp
 documentation_of: template/debug.hpp

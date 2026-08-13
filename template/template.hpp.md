@@ -124,29 +124,29 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/number.prime.prime_fact.test.cpp
     title: "\u7D20\u56E0\u6570\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/number.prime.prime_test.test.cpp
     title: "\u7D20\u6570\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fft.convolution_bitwise_and.test.cpp
     title: "Bitwise\u7573\u307F\u8FBC\u307FAND\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fft.convolution_bitwise_or.test.cpp
     title: "Bitwise\u7573\u307F\u8FBC\u307FOR\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fft.convolution_bitwise_xor.test.cpp
     title: "Bitwise\u7573\u307F\u8FBC\u307FXOR\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fft.convolution_fft.test.cpp
     title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fps.bernoulli_number.test.cpp
     title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fps.stirling_first_number.test.cpp
     title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
       \u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fps.stirling_second_number.test.cpp
     title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
       \u30B9\u30C8"
@@ -314,12 +314,12 @@ data:
     \ T &j) { return i < j && (i = j, true); };\nauto chmin = []<class T>(T &i, const\
     \ T &j) { return i > j && (i = j, true); };\nvoid solve();\nsigned main() { solve();\
     \ }\n// ----------------------------------------\n// #include \"template/template.hpp\"\
-    \ is done.\n// ----------------------------------------\n"
+    \ is done.\n// ----------------------------------------"
   dependsOn: []
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-08-13 15:50:20+09:00'
+  timestamp: '2026-08-13 16:29:51+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/graph.tree.tree_isomorphism.test.cpp

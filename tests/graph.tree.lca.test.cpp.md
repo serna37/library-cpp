@@ -62,7 +62,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.lca.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 15:50:20+09:00'
+  timestamp: '2026-08-13 16:29:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.lca.test.cpp
