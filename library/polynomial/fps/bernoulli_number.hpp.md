@@ -1,26 +1,26 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/number/mod/montgomery_mod_int.hpp
     title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/polynomial/fft/convolution_arbitrary_mod.hpp
     title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
   - icon: ':question:'
     path: library/polynomial/fft/fast_fourier_transform.hpp
     title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/polynomial/fps/formal_power_series.hpp
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/polynomial.fps.bernoulli_number.test.cpp
     title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/polynomial/fps/formal_power_series.hpp\"\n#include\
@@ -231,7 +231,7 @@ data:
   path: library/polynomial/fps/bernoulli_number.hpp
   requiredBy: []
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/polynomial.fps.bernoulli_number.test.cpp
 documentation_of: library/polynomial/fps/bernoulli_number.hpp

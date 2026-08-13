@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/sequence/collection_util.hpp
     title: "\u914D\u5217\u7CFBUtil"
   - icon: ':question:'
@@ -56,7 +56,7 @@ data:
   isVerificationFile: true
   path: tests/sequence.collection_util.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 15:26:32+09:00'
+  timestamp: '2026-08-13 15:50:20+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/sequence.collection_util.test.cpp

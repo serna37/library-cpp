@@ -2,19 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/polynomial/fft/convolution_arbitrary_mod.hpp
     title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/polynomial/fft/convolution_fft.hpp
     title: "\u7573\u307F\u8FBC\u307F FFT"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/polynomial/fps/bernoulli_number.hpp
     title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570"
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/polynomial/fps/formal_power_series.hpp
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/polynomial/fps/stirling_first_number.hpp
     title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
   - icon: ':x:'
@@ -24,13 +24,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph.tree.centroid_decomposition.test.cpp
     title: "\u6728 - \u91CD\u5FC3\u5206\u89E3\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/polynomial.fft.convolution_fft.test.cpp
     title: "\u7573\u307F\u8FBC\u307FFFT\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/polynomial.fps.bernoulli_number.test.cpp
     title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/polynomial.fps.stirling_first_number.test.cpp
     title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
       \u30B9\u30C8"

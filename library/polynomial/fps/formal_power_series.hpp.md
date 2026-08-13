@@ -1,30 +1,30 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/number/mod/montgomery_mod_int.hpp
     title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/polynomial/fft/convolution_arbitrary_mod.hpp
     title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
   - icon: ':question:'
     path: library/polynomial/fft/fast_fourier_transform.hpp
     title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/polynomial/fps/bernoulli_number.hpp
     title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/polynomial/fps/stirling_first_number.hpp
     title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
   - icon: ':x:'
     path: library/polynomial/fps/stirling_second_number.hpp
     title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/polynomial.fps.bernoulli_number.test.cpp
     title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/polynomial.fps.stirling_first_number.test.cpp
     title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
       \u30B9\u30C8"
@@ -34,7 +34,7 @@ data:
       \u30B9\u30C8"
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links:
     - https://judge.yosupo.jp/problem/convolution_mod
@@ -341,7 +341,7 @@ data:
   - library/polynomial/fps/stirling_first_number.hpp
   - library/polynomial/fps/bernoulli_number.hpp
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/polynomial.fps.bernoulli_number.test.cpp
   - tests/polynomial.fps.stirling_second_number.test.cpp

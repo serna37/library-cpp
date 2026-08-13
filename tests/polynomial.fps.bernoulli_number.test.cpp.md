@@ -1,19 +1,19 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/number/mod/montgomery_mod_int.hpp
     title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/polynomial/fft/convolution_arbitrary_mod.hpp
     title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
   - icon: ':question:'
     path: library/polynomial/fft/fast_fourier_transform.hpp
     title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/polynomial/fps/bernoulli_number.hpp
     title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570"
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/polynomial/fps/formal_power_series.hpp
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   - icon: ':question:'
@@ -21,9 +21,9 @@ data:
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/bernoulli_number
@@ -57,8 +57,8 @@ data:
   isVerificationFile: true
   path: tests/polynomial.fps.bernoulli_number.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 15:26:32+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-08-13 15:50:20+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/polynomial.fps.bernoulli_number.test.cpp
 layout: document

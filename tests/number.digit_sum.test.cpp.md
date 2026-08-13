@@ -57,7 +57,7 @@ data:
   isVerificationFile: true
   path: tests/number.digit_sum.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 15:26:32+09:00'
+  timestamp: '2026-08-13 15:50:20+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/number.digit_sum.test.cpp

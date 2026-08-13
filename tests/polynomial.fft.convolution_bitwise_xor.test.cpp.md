@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':x:'
     path: library/number/mod/montgomery_mod_int.hpp
     title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/polynomial/fft/convolution_bitwise_xor.hpp
     title: "Bitwise\u7573\u307F\u8FBC\u307FXOR"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/polynomial/fft/fast_walsh_hadamard_transform.hpp
     title: "\u9AD8\u901FWalshHadamard\u5909\u63DB"
   - icon: ':question:'
@@ -15,9 +15,9 @@ data:
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/bitwise_xor_convolution
@@ -51,8 +51,8 @@ data:
   isVerificationFile: true
   path: tests/polynomial.fft.convolution_bitwise_xor.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 15:26:32+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2026-08-13 15:50:20+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/polynomial.fft.convolution_bitwise_xor.test.cpp
 layout: document

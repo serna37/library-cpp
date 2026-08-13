@@ -3,7 +3,7 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/polynomial.fft.convolution_bitwise_or.test.cpp
     title: "Bitwise\u7573\u307F\u8FBC\u307FOR\u306E\u30C6\u30B9\u30C8"
   - icon: ':x:'
@@ -11,7 +11,7 @@ data:
     title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/collection_util.hpp\"\nclass CollectionUtil\
@@ -60,7 +60,7 @@ data:
   path: library/sequence/collection_util.hpp
   requiredBy: []
   timestamp: '2026-08-07 23:39:09+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - tests/sequence.collection_util.test.cpp
   - tests/polynomial.fft.convolution_bitwise_or.test.cpp
