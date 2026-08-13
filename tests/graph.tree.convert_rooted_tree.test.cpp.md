@@ -10,7 +10,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/tree/convert_rooted_tree.hpp
     title: "\u6839\u4ED8\u304D\u6728\u5909\u63DB"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -35,7 +35,7 @@ data:
     \  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 400, in update\n    raise BundleErrorAt(path, i + 1, \"unable to process\
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
-    \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
+    \ template/template.hpp: line 8: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM                                                         \
     \       \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A\"\
@@ -75,7 +75,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.convert_rooted_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-08-07 23:17:11+09:00'
+  timestamp: '2026-08-13 14:16:08+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.convert_rooted_tree.test.cpp

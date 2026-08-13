@@ -5,20 +5,20 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/search/binary_search/wavelet_search_engine.hpp
     title: Wavelet Search Engine
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/sequence/wavelet_matrix.hpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.wavelet_search_engine.test.cpp
     title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.wavelet_matrix.test.cpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
       \u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/sequence/bit_dict.hpp\"\nstruct BitDict {\n  using\
@@ -82,7 +82,7 @@ data:
   - library/search/binary_search/wavelet_search_engine.hpp
   - library/sequence/wavelet_matrix.hpp
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/sequence.wavelet_matrix.test.cpp
   - tests/search.binary_search.wavelet_search_engine.test.cpp

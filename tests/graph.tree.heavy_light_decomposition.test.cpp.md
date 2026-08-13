@@ -10,16 +10,16 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/tree/heavy_light_decomposition.hpp
     title: "\u91CD\u8EFD\u5206\u89E3"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/segtree/lazy_segment_tree.hpp
     title: Lazy Segment Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/various/monoid_act.hpp
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -44,7 +44,7 @@ data:
     \  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 400, in update\n    raise BundleErrorAt(path, i + 1, \"unable to process\
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
-    \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
+    \ template/template.hpp: line 8: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2450\"\
     \n#include \"template/template.hpp\"\n#include \"library/graph/tree/heavy_light_decomposition.hpp\"\
@@ -89,7 +89,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.heavy_light_decomposition.test.cpp
   requiredBy: []
-  timestamp: '2026-08-07 23:17:11+09:00'
+  timestamp: '2026-08-13 14:16:08+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.heavy_light_decomposition.test.cpp

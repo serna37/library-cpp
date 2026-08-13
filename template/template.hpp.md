@@ -193,96 +193,96 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/segtree.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.segment_tree.test.cpp
     title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.starry_sky_tree.test.cpp
     title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.starry_sky_tree_2.test.cpp
     title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/segtree.unified_segment_tree.test.cpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.collection_util.test.cpp
     title: "\u914D\u5217\u7CFBUtil\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.difference_sequence.test.cpp
     title: "\u968E\u5DEE\u6570\u5217\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.dispersion.test.cpp
     title: "\u6570\u76F4\u7DDA\u4E0A\u3067\u306E\u500B\u6570\u5206\u5E03\u306E\u30C6\
       \u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.inversion_number.test.cpp
     title: "\u8EE2\u5012\u6570\u30FB\u5EA7\u6A19\u5727\u7E2E\u30FBFenwickTree\u306E\
       \u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.merge.test.cpp
     title: "\u30DE\u30FC\u30B8\u30C6\u30AF\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.static_range_count_distinct.test.cpp
     title: "\u533A\u9593\u306E\u5024\u306E\u7A2E\u985E\u6570\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.static_range_frequency.test.cpp
     title: "\u533A\u9593\u306E\u5024\u306E\u51FA\u73FE\u56DE\u6570\u306E\u30C6\u30B9\
       \u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/sequence.wavelet_matrix.test.cpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217\u306E\u30C6\u30B9\
       \u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.aho_corasick.test.cpp
     title: "Aho Corasick\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.finds.test.cpp
     title: "\u6587\u5B57\u5217\u8907\u6570 \u7D71\u5408\u691C\u7D22\u30A8\u30F3\u30B8\
       \u30F3\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.join.test.cpp
     title: "\u6587\u5B57\u5217\u7D50\u5408\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.range.test.cpp
     title: "\u6587\u5B57\u5217\u306E\u533A\u9593\u53D6\u5F97\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.rolling_hash.test.cpp
     title: "\u30ED\u30EA\u30CF\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.run_length.test.cpp
     title: "\u30E9\u30F3\u30EC\u30F3\u30B0\u30B9\u5727\u7E2E\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.split.test.cpp
     title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.split_multi.test.cpp
     title: "\u6587\u5B57\u5217\u3092\u533A\u5207\u308B \u8907\u6570\u306E\u30C6\u30B9\
       \u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.util.test.cpp
     title: "\u6587\u5B57\u5217Util\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/string.z_algorithm.test.cpp
     title: "Z Algorithm\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/template.template.test.cpp
     title: "template\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.convert.test.cpp
     title: "\u578B\u5909\u63DB\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.mo.test.cpp
     title: "Mo's algorithm\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.random.test.cpp
     title: "\u4E71\u6570\u751F\u6210\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/various.union_find.test.cpp
     title: "Union Find\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     document_title: "\u0E05^>\u03C9<^\u0E05"
     links:
@@ -295,31 +295,32 @@ data:
     , line 187, in bundle\n    bundler.update(path)\n  File \"/home/runner/.local/lib/python3.12/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 400, in update\n    raise BundleErrorAt(path, i + 1, \"unable to process\
     \ #include in #if / #ifdef / #ifndef other than include guards\")\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt:\
-    \ template/template.hpp: line 7: unable to process #include in #if / #ifdef /\
+    \ template/template.hpp: line 8: unable to process #include in #if / #ifdef /\
     \ #ifndef other than include guards\n"
-  code: "/**\n * @brief \u0E05^>\u03C9<^\u0E05\n * @author serna37\n * @note https://serna37.github.io/library-cpp/\n\
-    \ */\n#ifdef LOCAL\n#include \"template/debug.hpp\"\n#else\n#define debug(...)\n\
-    #endif\n#include <bits/stdc++.h>\nusing namespace std;\n#define int long long\n\
-    #define endl \"\\n\"\nconstexpr long long INF = 1e18;\nconstexpr long long MOD\
-    \ = 1e9 + 7;\nconstexpr long long MOD998 = 998244353;\nconst long double PI =\
-    \ acosl(-1);\nstruct IoSetup {\n  IoSetup() {\n    cin.tie(0)->sync_with_stdio(0);\n\
-    \    cout << fixed << setprecision(20);\n    cerr << fixed << setprecision(10);\n\
-    \  }\n} iosetup;\ntemplate <typename T> istream &operator>>(istream &s, vector<T>\
-    \ &v) {\n  for (auto &&e : v) s >> e;\n  return s;\n}\ntemplate <typename T> ostream\
-    \ &operator<<(ostream &s, const vector<T> &v) {\n  for (int i = 0; i < (int)v.size();\
-    \ ++i) s << (i ? \" \" : \"\") << v[i];\n  return s;\n}\ntemplate <typename T>\
-    \ void print(const T &v) { cout << v << endl; }\ntemplate <typename T> void print(const\
-    \ vector<vector<T>> &G) { for (auto &&v : G) cout << v << endl; }\nauto chmax\
-    \ = []<class T>(T &i, const T &j) { return i < j && (i = j, true); };\nauto chmin\
-    \ = []<class T>(T &i, const T &j) { return i > j && (i = j, true); };\nvoid solve();\n\
-    signed main() { solve(); }\n// ----------------------------------------\n// #include\
-    \ \"template/template.hpp\" is done.\n// ----------------------------------------\n"
+  code: "#pragma once\n/**\n * @brief \u0E05^>\u03C9<^\u0E05\n * @author serna37\n\
+    \ * @note https://serna37.github.io/library-cpp/\n */\n#ifdef LOCAL\n#include\
+    \ \"template/debug.hpp\"\n#else\n#define debug(...)\n#endif\n#include <bits/stdc++.h>\n\
+    using namespace std;\n#define int long long\n#define endl \"\\n\"\nconstexpr long\
+    \ long INF = 1e18;\nconstexpr long long MOD = 1e9 + 7;\nconstexpr long long MOD998\
+    \ = 998244353;\nconst long double PI = acosl(-1);\nstruct IoSetup {\n  IoSetup()\
+    \ {\n    cin.tie(0)->sync_with_stdio(0);\n    cout << fixed << setprecision(20);\n\
+    \    cerr << fixed << setprecision(10);\n  }\n} iosetup;\ntemplate <typename T>\
+    \ istream &operator>>(istream &s, vector<T> &v) {\n  for (auto &&e : v) s >> e;\n\
+    \  return s;\n}\ntemplate <typename T> ostream &operator<<(ostream &s, const vector<T>\
+    \ &v) {\n  for (int i = 0; i < (int)v.size(); ++i) s << (i ? \" \" : \"\") <<\
+    \ v[i];\n  return s;\n}\ntemplate <typename T> void print(const T &v) { cout <<\
+    \ v << endl; }\ntemplate <typename T> void print(const vector<vector<T>> &G) {\
+    \ for (auto &&v : G) cout << v << endl; }\nauto chmax = []<class T>(T &i, const\
+    \ T &j) { return i < j && (i = j, true); };\nauto chmin = []<class T>(T &i, const\
+    \ T &j) { return i > j && (i = j, true); };\nvoid solve();\nsigned main() { solve();\
+    \ }\n// ----------------------------------------\n// #include \"template/template.hpp\"\
+    \ is done.\n// ----------------------------------------\n"
   dependsOn: []
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-08-07 23:17:11+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2026-08-13 14:16:08+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/graph.tree.tree_isomorphism.test.cpp
   - tests/various.convert.test.cpp
