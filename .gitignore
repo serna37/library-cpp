@@ -1,3 +1,2 @@
 bundler/build/cpp-bundler
-main.cpp
-main
+*.gch
