@@ -53,7 +53,7 @@ data:
     \ i = log; i >= 1; --i) {\n      if (((l >> i) << i) != l) propagate(l >> i);\n\
     \      if (((r >> i) << i) != r) propagate((r - 1) >> i);\n    }\n    while (l\
     \ < r) {\n      if (l & 1) apply_at(l++, a);\n      if (r & 1) apply_at(--r, a);\n\
-    \      l >>= 1, r >>= 1;\n    }\n  }\n};\n"
+    \      l >>= 1, r >>= 1;\n    }\n  }\n};\n\n"
   code: "#pragma once\n#include <functional>\n#include \"library/various/monoid.hpp\"\
     \ntemplate <typename T> struct DualSegmentTree {\n  using F = function<T(T, T)>;\n\
     \nprivate:\n  F op;\n  T e;\n  int N, size, log = 1;\n  vector<T> node;\n  void\
@@ -71,14 +71,14 @@ data:
     \ i = log; i >= 1; --i) {\n      if (((l >> i) << i) != l) propagate(l >> i);\n\
     \      if (((r >> i) << i) != r) propagate((r - 1) >> i);\n    }\n    while (l\
     \ < r) {\n      if (l & 1) apply_at(l++, a);\n      if (r & 1) apply_at(--r, a);\n\
-    \      l >>= 1, r >>= 1;\n    }\n  }\n};\n"
+    \      l >>= 1, r >>= 1;\n    }\n  }\n};\n\n"
   dependsOn:
   - library/various/monoid.hpp
   isVerificationFile: false
   path: library/segtree/dual_segment_tree.hpp
   requiredBy:
   - library/segtree/unified_segment_tree.hpp
-  timestamp: '2026-04-07 03:37:28+00:00'
+  timestamp: '2026-08-14 22:55:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.unified_segment_tree.test.cpp

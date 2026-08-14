@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/segtree/dual_segment_tree.hpp
     title: Dual Segment Tree
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/segtree/fenwick_tree.hpp
     title: Fenwick Tree
   - icon: ':heavy_check_mark:'
@@ -66,7 +66,7 @@ data:
     \ log; i >= 1; --i) {\n      if (((l >> i) << i) != l) propagate(l >> i);\n  \
     \    if (((r >> i) << i) != r) propagate((r - 1) >> i);\n    }\n    while (l <\
     \ r) {\n      if (l & 1) apply_at(l++, a);\n      if (r & 1) apply_at(--r, a);\n\
-    \      l >>= 1, r >>= 1;\n    }\n  }\n};\n#line 2 \"library/segtree/fenwick_tree.hpp\"\
+    \      l >>= 1, r >>= 1;\n    }\n  }\n};\n\n#line 2 \"library/segtree/fenwick_tree.hpp\"\
     \nstruct FenwickTree {\nprivate:\n  int N;\n  vector<int> fwk;\n\npublic:\n  FenwickTree(int\
     \ N) : N(N) { fwk.assign(N + 1, 0); }\n  FenwickTree(const vector<int> &A) : N(A.size())\
     \ {\n    fwk.assign(N + 1, 0);\n    for (int i = 1; i <= N; ++i) {\n      fwk[i]\
@@ -362,7 +362,7 @@ data:
   isVerificationFile: false
   path: library/segtree/unified_segment_tree.hpp
   requiredBy: []
-  timestamp: '2026-04-07 03:37:28+00:00'
+  timestamp: '2026-08-14 22:55:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - tests/segtree.unified_segment_tree.test.cpp
