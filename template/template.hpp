@@ -36,7 +36,7 @@ template <typename T> ostream &operator<<(ostream &s, const vector<T> &v) {
   return s;
 }
 template <typename T> void print(const T &v) { cout << v << endl; }
-template <typename T> void print(const vector<vector<T>> &G) { for (T &v : G) cout << v << endl; }
+template <typename T> void print(const vector<vector<T>> &G) { for (auto &v : G) cout << v << endl; }
 auto chmax = []<class T>(T &i, const T &j) { return i < j && (i = j, true); };
 auto chmin = []<class T>(T &i, const T &j) { return i > j && (i = j, true); };
 void solve();
