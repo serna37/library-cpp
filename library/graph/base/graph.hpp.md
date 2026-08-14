@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
   _extendedRequiredBy:
@@ -23,7 +23,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/dijkstra.hpp
     title: Dijkstra
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: library/graph/shortest_path/warshall_froyd.hpp
     title: Warshall Froyd
   - icon: ':heavy_check_mark:'
@@ -71,7 +71,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph.shortest_path.dijkstra.test.cpp
     title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tests/graph.shortest_path.warshall_froyd.test.cpp
     title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -97,9 +97,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph.tree.tree_isomorphism.test.cpp
     title: "\u6728 - \u6728\u306E\u540C\u578B\u6027\u5224\u5B9A\u306E\u30C6\u30B9\u30C8"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"library/graph/base/edge.hpp\"\nstruct Edge {\n  int from,\
@@ -134,38 +134,38 @@ data:
   isVerificationFile: false
   path: library/graph/base/graph.hpp
   requiredBy:
-  - library/graph/cycle_detect.hpp
-  - library/graph/tree/lca.hpp
-  - library/graph/tree/convert_rooted_tree.hpp
-  - library/graph/tree/tree_isomorphism.hpp
-  - library/graph/tree/centroid_decomposition.hpp
-  - library/graph/tree/centroid.hpp
-  - library/graph/tree/heavy_light_decomposition.hpp
-  - library/graph/shortest_path/warshall_froyd.hpp
+  - library/graph/topological_sort.hpp
   - library/graph/shortest_path/bellman_ford.hpp
   - library/graph/shortest_path/bfs.hpp
   - library/graph/shortest_path/dijkstra.hpp
-  - library/graph/topological_sort.hpp
+  - library/graph/shortest_path/warshall_froyd.hpp
   - library/graph/connected_components/strongly_connected_components.hpp
   - library/graph/connected_components/connected_components.hpp
+  - library/graph/cycle_detect.hpp
+  - library/graph/tree/lca.hpp
+  - library/graph/tree/heavy_light_decomposition.hpp
+  - library/graph/tree/centroid_decomposition.hpp
+  - library/graph/tree/tree_isomorphism.hpp
+  - library/graph/tree/convert_rooted_tree.hpp
+  - library/graph/tree/centroid.hpp
   timestamp: '2026-04-07 03:37:28+00:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - tests/graph.tree.tree_isomorphism.test.cpp
-  - tests/graph.shortest_path.dijkstra.test.cpp
   - tests/graph.topological_sort.test.cpp
-  - tests/graph.route_restore.test.cpp
-  - tests/graph.tree.centroid_decomposition.test.cpp
-  - tests/graph.connected_components.connected_components.test.cpp
-  - tests/graph.shortest_path.bellman_ford.test.cpp
-  - tests/graph.tree.centroid_decomposition2.test.cpp
-  - tests/graph.connected_components.strongly_connected_components.test.cpp
   - tests/graph.tree.lca.test.cpp
+  - tests/graph.tree.centroid_decomposition2.test.cpp
+  - tests/graph.tree.centroid_decomposition.test.cpp
+  - tests/graph.connected_components.strongly_connected_components.test.cpp
   - tests/graph.shortest_path.warshall_froyd.test.cpp
-  - tests/graph.tree.convert_rooted_tree.test.cpp
   - tests/graph.cycle_detect.test.cpp
   - tests/graph.tree.heavy_light_decomposition.test.cpp
+  - tests/graph.tree.convert_rooted_tree.test.cpp
+  - tests/graph.route_restore.test.cpp
+  - tests/graph.connected_components.connected_components.test.cpp
+  - tests/graph.shortest_path.dijkstra.test.cpp
   - tests/graph.shortest_path.bfs.test.cpp
+  - tests/graph.tree.tree_isomorphism.test.cpp
+  - tests/graph.shortest_path.bellman_ford.test.cpp
 documentation_of: library/graph/base/graph.hpp
 layout: document
 title: "\u30B0\u30E9\u30D5"

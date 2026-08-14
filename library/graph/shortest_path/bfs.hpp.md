@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   _extendedRequiredBy:

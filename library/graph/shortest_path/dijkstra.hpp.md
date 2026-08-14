@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   _extendedRequiredBy: []
@@ -66,8 +66,8 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph.shortest_path.dijkstra.test.cpp
   - tests/graph.route_restore.test.cpp
+  - tests/graph.shortest_path.dijkstra.test.cpp
 documentation_of: library/graph/shortest_path/dijkstra.hpp
 layout: document
 title: Dijkstra

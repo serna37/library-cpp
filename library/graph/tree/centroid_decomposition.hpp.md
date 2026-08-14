@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   _extendedRequiredBy: []
@@ -74,8 +74,8 @@ data:
   timestamp: '2026-04-07 03:37:28+00:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - tests/graph.tree.centroid_decomposition.test.cpp
   - tests/graph.tree.centroid_decomposition2.test.cpp
+  - tests/graph.tree.centroid_decomposition.test.cpp
 documentation_of: library/graph/tree/centroid_decomposition.hpp
 layout: document
 title: "\u91CD\u5FC3\u5206\u89E3"
