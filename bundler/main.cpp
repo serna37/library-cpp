@@ -61,47 +61,55 @@ void read_file(Path file, const deque<Path>& include_path, set<Path>& skip_targe
     string s;
     getline(src_file_reader, s);
 
-    if(s.starts_with(if_token)) {
-      if_stack.push(true);
-      cout << s << "\n";
-      continue;
-    } else if(s.starts_with(ifdef_token)) {
-      if_stack.push(define_set.count(s.substr(ifdef_token.size())));
-      cout << s << "\n";
-      continue;
-    } else if(s.starts_with(ifndef_token)) {
-      if_stack.push(!define_set.count(s.substr(ifndef_token.size())));
-      cout << s << "\n";
-      continue;
-    } else if(s.starts_with(endif_token)) {
-      if(if_stack.empty()) {
-        throw runtime_error(file.string() + "の処理中、" + endif_token + "が余分に存在します。");
-      }
-      if_stack.pop();
-      cout << s << "\n";
-      continue;
-    } else if(s.starts_with(else_token)) {
-      if(if_stack.empty()) {
-        throw runtime_error(file.string() + "{}の処理中、" + else_token + "が余分に存在します。");
-      }
-      if_stack.top() = !if_stack.top();
-      cout << s << "\n";
-      continue;
-    }
+    // ifdefの中を消さないようにする
+    // if(s.starts_with(if_token)) {
+    //   if_stack.push(true);
+    //   cout << s << "\n";
+    //   continue;
+    // } else if(s.starts_with(ifdef_token)) {
+    //   if_stack.push(define_set.count(s.substr(ifdef_token.size())));
+    //   cout << s << "\n";
+    //   continue;
+    // } else if(s.starts_with(ifndef_token)) {
+    //   if_stack.push(!define_set.count(s.substr(ifndef_token.size())));
+    //   cout << s << "\n";
+    //   continue;
+    // } else if(s.starts_with(endif_token)) {
+    //   if(if_stack.empty()) {
+    //     throw runtime_error(file.string() + "の処理中、" + endif_token + "が余分に存在します。");
+    //   }
+    //   if_stack.pop();
+    //   cout << s << "\n";
+    //   continue;
+    // } else if(s.starts_with(else_token)) {
+    //   if(if_stack.empty()) {
+    //     throw runtime_error(file.string() + "{}の処理中、" + else_token + "が余分に存在します。");
+    //   }
+    //   if_stack.top() = !if_stack.top();
+    //   cout << s << "\n";
+    //   continue;
+    // }
 
-    if(!if_stack.empty() && !if_stack.top()) {
-      cout << "\n";
-      continue;
-    }
+    // if(!if_stack.empty() && !if_stack.top()) {
+    //   cout << "\n";
+    //   continue;
+    // }
 
     if(s.starts_with(include_token)) {
-      const Path include_file = lookup_header(s.substr(include_token.size(), s.size()-(include_token.size()+1)), file, include_path);
-      if(skip_target.count(include_file)) {
-        cout << "\n";
+      // インクルードファイル名の文字列を抽出
+      string include_str = s.substr(include_token.size(), s.size()-(include_token.size()+1));
+      // template/debug.hpp の場合は展開せずにそのまま出力する
+      if (include_str == "template/debug.hpp" || Path(include_str).filename() == "debug.hpp") {
+        cout << s << "\n";
       } else {
-        cout << "#line 1 \"" << include_file.string() << "\"\n";
-        read_file(include_file, include_path, skip_target, default_define_set);
-        cout << "#line " << line + 1 << " \"" << file.string() << "\"\n";
+        const Path include_file = lookup_header(include_str, file, include_path);
+        if(skip_target.count(include_file)) {
+          cout << "\n";
+        } else {
+          cout << "#line 1 \"" << include_file.string() << "\"\n";
+          read_file(include_file, include_path, skip_target, default_define_set);
+          cout << "#line " << line + 1 << " \"" << file.string() << "\"\n";
+        }
       }
     } else if(s.starts_with(define_token)) {
       define_set.insert(s.substr(define_token.size()));
