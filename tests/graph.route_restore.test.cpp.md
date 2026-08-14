@@ -13,7 +13,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/shortest_path/dijkstra.hpp
     title: Dijkstra
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -59,7 +59,7 @@ data:
   isVerificationFile: true
   path: tests/graph.route_restore.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 16:29:51+09:00'
+  timestamp: '2026-08-14 17:19:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.route_restore.test.cpp

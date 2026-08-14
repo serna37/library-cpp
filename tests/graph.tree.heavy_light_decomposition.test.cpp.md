@@ -10,16 +10,16 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/graph/tree/heavy_light_decomposition.hpp
     title: "\u91CD\u8EFD\u5206\u89E3"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/segtree/lazy_segment_tree.hpp
     title: Lazy Segment Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/various/monoid.hpp
     title: "\u30E2\u30CE\u30A4\u30C9"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: library/various/monoid_act.hpp
     title: "\u30E2\u30CE\u30A4\u30C9\u4F5C\u7528\u7D20"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -89,7 +89,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.heavy_light_decomposition.test.cpp
   requiredBy: []
-  timestamp: '2026-08-13 16:29:51+09:00'
+  timestamp: '2026-08-14 17:19:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.heavy_light_decomposition.test.cpp
