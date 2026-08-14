@@ -24,12 +24,11 @@ struct IoSetup {
     cerr << fixed << setprecision(10);
   }
 } iosetup;
-template <typename T> istream &operator>>(istream &s, vector<T> &v) {
-  for (auto &&e : v) s >> e;
-  return s;
+template <typename U, typename R> istream &operator>>(istream &s, pair<U, R> &p) {
+  return s >> p.first >> p.second;
 }
-template <typename T, typename U> istream &operator>>(istream &s, vector<pair<T, U>> &vp) {
-  for (auto &&p : vp) s >> p.first >> p.second;
+template <typename T> istream &operator>>(istream &s, vector<T> &v) {
+  for (T &e : v) s >> e;
   return s;
 }
 template <typename T> ostream &operator<<(ostream &s, const vector<T> &v) {
@@ -37,7 +36,7 @@ template <typename T> ostream &operator<<(ostream &s, const vector<T> &v) {
   return s;
 }
 template <typename T> void print(const T &v) { cout << v << endl; }
-template <typename T> void print(const vector<vector<T>> &G) { for (auto &&v : G) cout << v << endl; }
+template <typename T> void print(const vector<vector<T>> &G) { for (T &v : G) cout << v << endl; }
 auto chmax = []<class T>(T &i, const T &j) { return i < j && (i = j, true); };
 auto chmin = []<class T>(T &i, const T &j) { return i > j && (i = j, true); };
 void solve();
