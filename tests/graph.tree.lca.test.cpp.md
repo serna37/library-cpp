@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: library/dp/doubling.hpp
     title: "\u30C0\u30D6\u30EA\u30F3\u30B0"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
@@ -62,7 +62,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.lca.test.cpp
   requiredBy: []
-  timestamp: '2026-08-14 18:31:19+09:00'
+  timestamp: '2026-08-14 13:37:38+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.lca.test.cpp

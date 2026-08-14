@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: library/sequence/bit_dict.hpp
     title: "\u5B8C\u5099\u8F9E\u66F8"
-  - icon: ':x:'
+  - icon: ':question:'
     path: library/sequence/wavelet_matrix.hpp
     title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - icon: ':question:'
@@ -48,7 +48,7 @@ data:
   isVerificationFile: true
   path: tests/sequence.wavelet_matrix.test.cpp
   requiredBy: []
-  timestamp: '2026-08-14 18:31:19+09:00'
+  timestamp: '2026-08-14 13:37:38+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/sequence.wavelet_matrix.test.cpp

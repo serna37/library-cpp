@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: library/various/convert.hpp
     title: "\u578B\u5909\u63DB"
   - icon: ':question:'
@@ -47,7 +47,7 @@ data:
   isVerificationFile: true
   path: tests/various.convert.test.cpp
   requiredBy: []
-  timestamp: '2026-08-14 18:31:19+09:00'
+  timestamp: '2026-08-14 13:37:38+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/various.convert.test.cpp

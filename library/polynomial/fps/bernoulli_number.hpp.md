@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/number/mod/montgomery_mod_int.hpp
     title: "\u30E2\u30B8\u30E5\u30ED\u6F14\u7B97"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fft/convolution_arbitrary_mod.hpp
     title: "\u7573\u307F\u8FBC\u307F \u4EFB\u610FMOD"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fft/fast_fourier_transform.hpp
     title: "\u9AD8\u901F\u30D5\u30FC\u30EA\u30A8\u5909\u63DB"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/polynomial/fps/formal_power_series.hpp
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []

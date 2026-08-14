@@ -56,7 +56,7 @@ data:
   isVerificationFile: true
   path: tests/sequence.collection_util.test.cpp
   requiredBy: []
-  timestamp: '2026-08-14 18:31:19+09:00'
+  timestamp: '2026-08-14 13:37:38+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: tests/sequence.collection_util.test.cpp

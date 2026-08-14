@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library/search/binary_search/bi_gt_val.hpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\u6700\
       \u5C0F\u5024"
@@ -10,9 +10,9 @@ data:
     title: "\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_A
@@ -60,8 +60,8 @@ data:
   isVerificationFile: true
   path: tests/search.binary_search.bi_gt_val.test.cpp
   requiredBy: []
-  timestamp: '2026-08-14 18:31:19+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2026-08-14 13:37:38+00:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/search.binary_search.bi_gt_val.test.cpp
 layout: document

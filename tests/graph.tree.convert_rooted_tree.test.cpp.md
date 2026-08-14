@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/edge.hpp
     title: "\u8FBA"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: library/graph/base/graph.hpp
     title: "\u30B0\u30E9\u30D5"
   - icon: ':heavy_check_mark:'
@@ -75,7 +75,7 @@ data:
   isVerificationFile: true
   path: tests/graph.tree.convert_rooted_tree.test.cpp
   requiredBy: []
-  timestamp: '2026-08-14 18:31:19+09:00'
+  timestamp: '2026-08-14 13:37:38+00:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/graph.tree.convert_rooted_tree.test.cpp

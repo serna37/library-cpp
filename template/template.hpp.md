@@ -58,7 +58,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/graph.shortest_path.dijkstra.test.cpp
     title: "\u30B0\u30E9\u30D5 - Dijkstra\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/graph.shortest_path.warshall_froyd.test.cpp
     title: "\u30B0\u30E9\u30D5 - WarshallFroyd\u306E\u30C6\u30B9\u30C8"
   - icon: ':heavy_check_mark:'
@@ -142,67 +142,67 @@ data:
   - icon: ':heavy_check_mark:'
     path: tests/polynomial.fps.bernoulli_number.test.cpp
     title: "\u30D9\u30EB\u30CC\u30FC\u30A4\u6570\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fps.stirling_first_number.test.cpp
     title: "\u7B2C\u4E00\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
       \u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/polynomial.fps.stirling_second_number.test.cpp
     title: "\u7B2C\u4E8C\u7A2E\u30B9\u30BF\u30FC\u30EA\u30F3\u30B0\u6570\u306E\u30C6\
       \u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.bi_ge_val.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0A\u306E\u6700\u5C0F\
       \u5024\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.bi_gt_val.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u3088\u308A\u4E0A\u306E\u6700\
       \u5C0F\u5024\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.bi_le_val.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u4EE5\u4E0B\u306E\u6700\u5927\
       \u5024\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.bi_lt_val.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u914D\u5217\u4E2D \u672A\u6E80\u306E\u6700\u5927\
       \u5024\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.bi_search_cnt.test.cpp
     title: "\u4E8C\u5206\u63A2\u7D22 \u8981\u7D20\u6570\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.binary_search.test.cpp
     title: "\u6574\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.binary_search_real.test.cpp
     title: "\u5B9F\u6570\u4E0A\u306E\u4E8C\u5206\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search.binary_search.wavelet_search_engine.test.cpp
     title: "WaveletSearchEngine\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search.bit_search.test.cpp
     title: "bit\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/search.permutation.test.cpp
     title: "\u9806\u5217\u5168\u63A2\u7D22\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.dual_segment_tree.test.cpp
     title: "\u53CC\u5BFE\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RUQ"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.fenwick_tree.test.cpp
     title: "Fenwick Tree\u306E\u30C6\u30B9\u30C8:RSQ"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.lazy_segment_tree.test.cpp
     title: "\u9045\u5EF6\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RUQ"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.segment_tree.test.cpp
     title: "\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.starry_sky_tree.test.cpp
     title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.starry_sky_tree_2.test.cpp
     title: "\u661F\u7A7A\u6728\u306E\u30C6\u30B9\u30C8"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tests/segtree.unified_segment_tree.test.cpp
     title: "\u7D71\u5408\u30BB\u30B0\u6728\u306E\u30C6\u30B9\u30C8:RMQ RAQ"
   - icon: ':x:'
@@ -311,7 +311,7 @@ data:
     \ T> ostream &operator<<(ostream &s, const vector<T> &v) {\n  for (int i = 0;\
     \ i < (int)v.size(); ++i) s << (i ? \" \" : \"\") << v[i];\n  return s;\n}\ntemplate\
     \ <typename T> void print(const T &v) { cout << v << endl; }\ntemplate <typename\
-    \ T> void print(const vector<vector<T>> &G) { for (T &v : G) cout << v << endl;\
+    \ T> void print(const vector<vector<T>> &G) { for (auto &v : G) cout << v << endl;\
     \ }\nauto chmax = []<class T>(T &i, const T &j) { return i < j && (i = j, true);\
     \ };\nauto chmin = []<class T>(T &i, const T &j) { return i > j && (i = j, true);\
     \ };\nvoid solve();\nsigned main() { solve(); }\n// ----------------------------------------\n\
@@ -320,7 +320,7 @@ data:
   isVerificationFile: false
   path: template/template.hpp
   requiredBy: []
-  timestamp: '2026-08-14 18:31:19+09:00'
+  timestamp: '2026-08-14 13:37:38+00:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - tests/search.bit_search.test.cpp
