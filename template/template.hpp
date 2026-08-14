@@ -28,6 +28,10 @@ template <typename T> istream &operator>>(istream &s, vector<T> &v) {
   for (auto &&e : v) s >> e;
   return s;
 }
+template <typename T, typename U> istream &operator>>(istream &s, pair<T, U> &p) {
+  s >> p.first >> p.second;
+  return s;
+}
 template <typename T> ostream &operator<<(ostream &s, const vector<T> &v) {
   for (int i = 0; i < (int)v.size(); ++i) s << (i ? " " : "") << v[i];
   return s;
