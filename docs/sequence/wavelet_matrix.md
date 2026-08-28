@@ -31,3 +31,6 @@ int val = wm.kth_smallest(0, 4, 0); // 2
 // 0〜6番目の範囲で、3以上6未満の値が何個あるか
 int count = wm.range_freq(0, 6, 3, 6); // 5, 5, 3 の3個
 ```
+
+上限値に`1e18`食わせるとバグる。（[参考](https://atcoder.jp/contests/abc353/submissions/78714098)）  
+> 理由：WaveletMatrix::count_less のビット判定ロジック（max_log = 32）において、INF (1e18) を渡すと最上位ビット（d=31）が立つためビットが正しく判定されず、意図した要素数が取得できない
